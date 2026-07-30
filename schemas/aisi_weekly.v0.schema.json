@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aisi_weekly.v0.schema.json",
+  "title": "AISI weekly raw steel production",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source",
+    "fetched_at",
+    "week_ending",
+    "production_net_tons",
+    "capability_utilization_pct"
+  ],
+  "properties": {
+    "schema_version": { "const": 0 },
+    "source": { "type": "string" },
+    "fetched_at": { "type": "string" },
+    "week_ending": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "production_net_tons": { "type": "integer" },
+    "capability_utilization_pct": { "type": "number" },
+    "yoy": { "type": "object" },
+    "wow": { "type": "object" },
+    "ytd": { "type": "object" },
+    "districts_000_net_tons": { "type": "object" }
+  }
+}
