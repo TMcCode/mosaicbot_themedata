@@ -4,10 +4,12 @@ __pycache__/
 .venv/
 venv/
 .env
+*.egg-info/
 .DS_Store
 data/**/*.json
 data/**/*.jsonl
 data/**/*.csv
 data/**/*.html
 data/**/*.xlsx
+data/**/*.lock
 !data/**/.gitkeep

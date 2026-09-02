@@ -1,0 +1,62 @@
+{
+  "schema_version": 0,
+  "description": "Attach themedata series to themes and/or tickers. scope=theme is broad industry context; scope=ticker is company-local.",
+  "attachments": [
+    {
+      "series_key": "lab_supplies_ppi",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_wages_ahe",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_comp_eci",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_headcount",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_services_ppi",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "qcew_621511_us_emp",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "qcew_621511_us_aww",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "qcew_621511_tx_emp",
+      "scope": "ticker",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": "CSTL",
+      "note": "Texas statewide NAICS 621511 proxy for Castle Biosciences HQ footprint"
+    },
+    {
+      "series_key": "qcew_621511_tx_aww",
+      "scope": "ticker",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": "CSTL",
+      "note": "Texas statewide NAICS 621511 proxy for Castle Biosciences HQ footprint"
+    }
+  ]
+}

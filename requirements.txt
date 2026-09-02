@@ -1,1 +1,2 @@
-# stdlib-only for current jobs; add deps here when needed
+# stdlib for most jobs; boto3 for R2 publish
+boto3>=1.34.0

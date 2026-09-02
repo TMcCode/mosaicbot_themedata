@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lab_economics.v0.schema.json",
+  "title": "Lab economics pack (BLS Phase A)",
+  "type": "object",
+  "required": ["schema_version", "pack", "source", "fetched_at", "as_of", "series"],
+  "properties": {
+    "schema_version": { "const": 0 },
+    "pack": { "const": "lab_economics" },
+    "source": { "type": "string" },
+    "fetched_at": { "type": "string" },
+    "as_of": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "series": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["bls_id", "label", "frequency", "unit", "raw", "derived"],
+        "properties": {
+          "bls_id": { "type": "string" },
+          "label": { "type": "string" },
+          "frequency": { "enum": ["monthly", "quarterly"] },
+          "unit": { "type": "string" },
+          "raw": {
+            "type": "object",
+            "required": ["points", "latest"]
+          },
+          "derived": { "type": "object" }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

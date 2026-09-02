@@ -1,0 +1,61 @@
+{
+  "schema_version": 0,
+  "description": "Cadence registry for mosaicbot_themedata packs. Daily dispatcher runs packs that are due on this host.",
+  "timezone": "America/New_York",
+  "notes": [
+    "VPS is a temporary host for API packs; Mac Mini will own scrapes (AISI) and eventually the whole repo.",
+    "Jobs must be idempotent. Dispatcher skips when not due unless --force."
+  ],
+  "packs": [
+    {
+      "id": "lab_economics",
+      "job": "jobs/lab_economics_bls.py",
+      "enabled": true,
+      "hosts": ["vps", "any"],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 5,
+        "day_of_month_to": 20,
+        "max_age_days": 25
+      },
+      "freshness": {
+        "r2_key": "themedata/lab_economics/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "BLS PPI/CES/ECI + QCEW open data (theme + CSTL TX)"
+    },
+    {
+      "id": "census_construction",
+      "job": "jobs/census_construction.py",
+      "enabled": true,
+      "hosts": ["vps", "any"],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 1,
+        "day_of_month_to": 12,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "local_relative": "data/census/construction_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "Census C-30 via FRED"
+    },
+    {
+      "id": "aisi_weekly",
+      "job": "jobs/aisi_weekly.py",
+      "enabled": true,
+      "hosts": ["macmini"],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": ["Mon"],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "local_relative": "data/aisi/weekly_latest.json",
+        "as_of_field": "week_ending"
+      },
+      "description": "AISI weekly steel — residential IP / Mac Mini (Cloudflare)"
+    }
+  ]
+}
