@@ -22,7 +22,7 @@
         "r2_key": "themedata/lab_economics/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "BLS PPI/CES/ECI + QCEW open data (theme + CSTL TX)"
+      "description": "BLS PPI/CES/ECI + QCEW + Census HS 382219 trade (theme + CSTL TX)"
     },
     {
       "id": "census_construction",

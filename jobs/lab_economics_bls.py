@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Fetch lab-economics BLS series (Phase A); derive YoY metrics; publish to R2.
+"""Fetch lab-economics pack (Phase A BLS/QCEW + Phase B Census HS trade); publish to R2.
 
-Series: PPI supplies/services, CES wages/headcount, ECI compensation,
-QCEW NAICS 621511 (US theme + TX ticker proxy for CSTL).
+Phase A: PPI supplies/services, CES wages/headcount, ECI, QCEW NAICS 621511 (US + TX).
+Phase B: Census HS 382219 import value, kg, and $/kg (3M-avg YoY).
 
-Stores native-frequency raw levels, then model metrics from the catalog
-(m3_avg_yoy_pct, yoy_pct, m3_net_change).
+Stores native-frequency raw levels, then model metrics from the catalog.
 """
 
 from __future__ import annotations
@@ -29,15 +28,17 @@ if str(_ROOT) not in sys.path:
 from lib.env import load_env, require_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import transforms as tx  # noqa: E402
+from lib import census_trade as census  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "lab_economics"
 R2_PREFIX = f"themedata/{PACK}"
-UA = "mosaicbot_themedata/0.1 (+lab_economics_bls)"
+UA = "mosaicbot_themedata/0.1 (+lab_economics)"
 BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _DEFAULT_OUT = _ROOT / "data" / "lab_economics"
 _CATALOG = _ROOT / "config" / "lab_economics_catalog.json"
 _ATTACHMENTS = _ROOT / "config" / "series_attachments.json"
+HS_LAB_REAGENTS = "382219"
 
 
 def _load_json(path: Path) -> dict:
@@ -263,10 +264,11 @@ def build_pack(
     catalog: dict,
     attachments: dict,
 ) -> dict[str, Any]:
-    api_key = require_env("BLS_API_KEY")["BLS_API_KEY"]
+    bls_key = require_env("BLS_API_KEY")["BLS_API_KEY"]
     series_meta = catalog["series"]
     timeseries_meta = [s for s in series_meta if s.get("source") == "bls"]
     qcew_meta = [s for s in series_meta if s.get("source") == "bls_qcew_open"]
+    census_meta = [s for s in series_meta if s.get("source") == "census_trade"]
 
     bls_ids = [s["bls_id"] for s in timeseries_meta]
     raw_by_id: dict[str, list] = {}
@@ -276,7 +278,7 @@ def build_pack(
             bls_ids[i : i + chunk],
             start_year=start_year,
             end_year=end_year,
-            api_key=api_key,
+            api_key=bls_key,
         )
         raw_by_id.update(part)
 
@@ -294,6 +296,38 @@ def build_pack(
             qcew_points[f"{area}:employment"] = emp_pts
             qcew_points[f"{area}:avg_weekly_wage"] = aww_pts
 
+    # Census HS trade (Phase B)
+    census_points: dict[str, list[dict[str, float]]] = {}
+    census_notes: list[str] = []
+    if census_meta:
+        census_key = require_env("CENSUS_API_KEY")["CENSUS_API_KEY"]
+        hs = HS_LAB_REAGENTS
+        try:
+            val_pts, qty_hs6, unit_hs6 = census.fetch_hs6_world_monthly(
+                hs, start_year=start_year, end_year=end_year, api_key=census_key
+            )
+            census_points["import_value_usd"] = val_pts
+            kg_pts: list[dict[str, float]] = []
+            unit_u = (unit_hs6 or "").upper()
+            if qty_hs6 and unit_u in ("KG", "KGS", "KILOGRAM", "KILOGRAMS"):
+                kg_pts = qty_hs6
+                census_notes.append(f"HS6 qty unit={unit_hs6}")
+            else:
+                # Quantity in kg is usually only at HS10 — sum children
+                kg_pts = census.fetch_hs10_world_kg_monthly(
+                    hs, start_year=start_year, end_year=end_year, api_key=census_key
+                )
+                census_notes.append("kg from sum of HS10 children with UNIT_QY1=KG")
+            census_points["import_kg"] = kg_pts
+            census_points["import_unit_value_usd_per_kg"] = census.unit_value_usd_per_kg(
+                val_pts, kg_pts
+            )
+        except census.CensusApiError as e:
+            census_notes.append(str(e))
+            for s in census_meta:
+                # leave empty; errors recorded per series below
+                pass
+
     fetched_at = datetime.now(timezone.utc).isoformat()
     series_out: dict[str, Any] = {}
     errors: list[str] = []
@@ -301,7 +335,7 @@ def build_pack(
 
     for meta in series_meta:
         key = meta["key"]
-        sid = meta["bls_id"]
+        sid = meta.get("bls_id") or meta.get("series_id") or key
         freq = meta["frequency"]
         points: list[dict[str, float]] = []
 
@@ -309,16 +343,22 @@ def build_pack(
             area = meta["area_fips"]
             metric = meta["qcew_metric"]
             points = qcew_points.get(f"{area}:{metric}", [])
+        elif meta.get("source") == "census_trade":
+            points = census_points.get(meta["census_metric"], [])
         else:
             rows = raw_by_id.get(sid, [])
             points = rows_to_points(rows, frequency=freq)
 
         if not points:
-            errors.append(f"{key} ({sid}): no observations")
+            extra = ""
+            if meta.get("source") == "census_trade" and census_notes:
+                extra = f" ({'; '.join(census_notes)})"
+            errors.append(f"{key} ({sid}): no observations{extra}")
             continue
         derived = derive_metrics(points, meta.get("derived") or [], frequency=freq)
         series_out[key] = {
             "bls_id": sid,
+            "source": meta.get("source"),
             "label": meta["label"],
             "frequency": freq,
             "seasonal": meta.get("seasonal"),
@@ -333,10 +373,13 @@ def build_pack(
         if latest_date > as_of:
             as_of = latest_date
 
+    sources = ["BLS Public Data API v2", "QCEW open data"]
+    if census_meta:
+        sources.append("Census intltrade imports/hs")
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
-        "source": "BLS Public Data API v2 + QCEW open data",
+        "source": " + ".join(sources),
         "fetched_at": fetched_at,
         "as_of": as_of,
         "start_year": start_year,
@@ -345,6 +388,7 @@ def build_pack(
         "attachments": attachments,
         "series": series_out,
         "errors": errors,
+        "notes": census_notes,
     }
 
 

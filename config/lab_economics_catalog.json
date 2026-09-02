@@ -127,6 +127,51 @@
       "derived": ["yoy_pct"],
       "scope_default": "ticker",
       "usefulness": 4
+    },
+    {
+      "key": "lab_supplies_import_value",
+      "source": "census_trade",
+      "series_id": "CENSUS:HS6:382219:GEN_VAL_MO",
+      "census_metric": "import_value_usd",
+      "hs_code": "382219",
+      "label": "Census trade — HS 382219 import value (world, general imports)",
+      "frequency": "monthly",
+      "seasonal": "NSA",
+      "unit": "usd",
+      "raw_metric": "monthly_nsa_import_value",
+      "derived": ["m3_avg_yoy_pct"],
+      "scope_default": "theme",
+      "usefulness": 4
+    },
+    {
+      "key": "lab_supplies_import_kg",
+      "source": "census_trade",
+      "series_id": "CENSUS:HS:382219:KG",
+      "census_metric": "import_kg",
+      "hs_code": "382219",
+      "label": "Census trade — HS 382219 import quantity (kg)",
+      "frequency": "monthly",
+      "seasonal": "NSA",
+      "unit": "kg",
+      "raw_metric": "monthly_nsa_import_kg",
+      "derived": ["m3_avg_yoy_pct"],
+      "scope_default": "theme",
+      "usefulness": 4
+    },
+    {
+      "key": "lab_supplies_import_unit_value",
+      "source": "census_trade",
+      "series_id": "CENSUS:HS:382219:USD_PER_KG",
+      "census_metric": "import_unit_value_usd_per_kg",
+      "hs_code": "382219",
+      "label": "Census trade — HS 382219 import unit value ($/kg)",
+      "frequency": "monthly",
+      "seasonal": "NSA",
+      "unit": "usd_per_kg",
+      "raw_metric": "monthly_nsa_unit_value",
+      "derived": ["m3_avg_yoy_pct"],
+      "scope_default": "theme",
+      "usefulness": 4
     }
   ]
 }

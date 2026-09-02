@@ -6,7 +6,7 @@ Series that **inform themes** (macro / industry), not ticker text tables.
 
 1. **AISI weekly raw steel** — production + capability utilization (+ districts). Public page = latest week only; history is whatever we append.
 2. **Census C-30 construction** — manufacturing, highway/street (and later power / other end markets) via FRED.
-3. **Lab economics (Phase A)** — BLS PPI / CES / ECI / QCEW for medical laboratories; attaches to **MedTech Long '26: Diagnostics & Early Detection** (theme) and **CSTL** (TX QCEW ticker proxy). Phase B = Census trade HS `382219`.
+3. **Lab economics** — BLS PPI / CES / ECI / QCEW + Census HS `382219` import value/kg/$/kg. Attaches to **MedTech Long '26: Diagnostics & Early Detection** (theme) and **CSTL** (TX QCEW ticker proxy).
 
 ## Runtime
 

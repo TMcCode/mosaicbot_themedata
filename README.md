@@ -67,4 +67,4 @@ themedata/lab_economics/
 
 ## Status
 
-Phase A lab economics live. Phase B = Census HS `382219` trade. Theme ↔ dataset attachment editable via `config/series_attachments.json`.
+Phase A lab economics + Phase B Census HS `382219` trade live. Theme ↔ dataset attachment editable via `config/series_attachments.json`.

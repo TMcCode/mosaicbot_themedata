@@ -57,6 +57,24 @@
       "theme": "MedTech Long '26: Diagnostics & Early Detection",
       "ticker": "CSTL",
       "note": "Texas statewide NAICS 621511 proxy for Castle Biosciences HQ footprint"
+    },
+    {
+      "series_key": "lab_supplies_import_value",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_supplies_import_kg",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_supplies_import_unit_value",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null
     }
   ]
 }
