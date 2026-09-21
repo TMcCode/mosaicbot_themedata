@@ -28,6 +28,11 @@ def _get_json(params: dict[str, str], *, timeout: int = 120) -> list[list[str]]:
         detail = e.read().decode("utf-8", errors="replace")[:400]
         raise CensusApiError(f"Census HTTP {e.code}: {detail}") from e
 
+    # Census sometimes returns HTTP 200 with an empty body for years where a
+    # commodity code did not exist yet (e.g. HS 382219 pre-~2022).
+    if not raw.strip():
+        return []
+
     if raw.lstrip().lower().startswith("<!DOCTYPE") or raw.lstrip().lower().startswith(
         "<html"
     ):
@@ -68,6 +73,8 @@ def fetch_hs6_world_monthly(
         "key": api_key,
     }
     rows = _get_json(params)
+    if not rows:
+        return [], [], None
     header = rows[0]
     idx = {name: i for i, name in enumerate(header)}
     need = ("GEN_VAL_MO", "YEAR", "MONTH")
@@ -110,11 +117,17 @@ def fetch_hs10_world_kg_monthly(
     start_year: int,
     end_year: int,
     api_key: str,
-    chunk_years: int = 5,
+    chunk_years: int = 3,
+    # HS 382219 (and many current 6-digit codes) only exist after HS2022.
+    min_year: int = 2022,
 ) -> list[dict[str, float]]:
-    """Sum GEN_QY1_MO across HS10 children where UNIT_QY1 is kilograms."""
+    """Sum GEN_QY1_MO across HS10 children where UNIT_QY1 is kilograms.
+
+    Empty Census responses for pre-code years are skipped (not treated as fatal).
+    """
     by_date: dict[str, float] = {}
-    y0 = start_year
+    y0 = max(start_year, min_year)
+    empty_chunks = 0
     while y0 <= end_year:
         y1 = min(y0 + chunk_years - 1, end_year)
         params = {
@@ -126,10 +139,11 @@ def fetch_hs10_world_kg_monthly(
             "key": api_key,
         }
         rows = _get_json(params, timeout=180)
-        if len(rows) >= 2:
+        if len(rows) < 2:
+            empty_chunks += 1
+        else:
             header = rows[0]
             idx = {name: i for i, name in enumerate(header)}
-            # header may duplicate I_COMMODITY; first wins
             for row in rows[1:]:
                 unit = (row[idx["UNIT_QY1"]] if "UNIT_QY1" in idx else "") or ""
                 if unit.strip().upper() not in ("KG", "KGS", "KILOGRAM", "KILOGRAMS"):
@@ -144,8 +158,11 @@ def fetch_hs10_world_kg_monthly(
                 by_date[date] = by_date.get(date, 0.0) + q
         y0 = y1 + 1
         time.sleep(0.2)
-    return [{"date": d, "value": by_date[d]} for d in sorted(by_date)]
 
+    if not by_date and empty_chunks:
+        # Soft signal for callers; not raised — value series may still be fine.
+        pass
+    return [{"date": d, "value": by_date[d]} for d in sorted(by_date)]
 
 def unit_value_usd_per_kg(
     value_pts: list[dict[str, float]],

@@ -1,0 +1,49 @@
+{
+  "schema_version": 0,
+  "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+  "description": "Theme index into config/datasets.json. Prefer the global registry for dataset metadata. Paid rows remain map_only until license.",
+  "registry": "config/datasets.json",
+  "theme_dataset_ids": [
+    "us_defense_spending",
+    "gpr_index",
+    "usaspending_dew_awards",
+    "germanium_import_value",
+    "gallium_import_value",
+    "sipri_military_expenditure",
+    "dew_market_size_mm",
+    "janes_dew_line_items",
+    "ndaa_dew_program_allocations",
+    "workforce_ai_white_collar",
+    "revelio_hiring",
+    "lightcast_blue_collar",
+    "germanium_price_usd_kg",
+    "germanium_spot_cny_kg",
+    "pm_china_ga_export_reinstate",
+    "argus_germanium_price",
+    "smm_germanium_price",
+    "argus_gallium_price",
+    "fastmarkets_minor_metals"
+  ],
+  "ticker_dataset_ids": [
+    {
+      "id": "usaspending_lpth_awards",
+      "ticker": "LPTH"
+    },
+    {
+      "id": "lpth_blackdiamond_glass",
+      "ticker": "LPTH"
+    },
+    {
+      "id": "lpth_ir_detector_lead_times",
+      "ticker": "LPTH"
+    },
+    {
+      "id": "lpth_capex_guidance",
+      "ticker": "LPTH"
+    },
+    {
+      "id": "lpth_skilled_labor",
+      "ticker": "LPTH"
+    }
+  ]
+}

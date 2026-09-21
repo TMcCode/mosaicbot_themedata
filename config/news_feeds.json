@@ -1,0 +1,46 @@
+{
+  "schema_version": 0,
+  "description": "News is NOT a series_key column. Article/event streams keyed by theme and/or ticker. Charts start as headlines/list; derived count/sentiment series are optional later.",
+  "provider": "newsapi_ai",
+  "status": "planned",
+  "grains": {
+    "theme": {
+      "enabled": true,
+      "inputs": ["industry_publications", "theme_keywords"],
+      "notes": "Theme pubs + keywords first-class from day one."
+    },
+    "ticker": {
+      "enabled": true,
+      "inputs": ["ticker_keywords", "optional_company_pubs"],
+      "rotation": true,
+      "notes": "Ticker overlays from day one via rotation queue (not all tickers every run)."
+    }
+  },
+  "publish": {
+    "r2_prefix": "themedata/news/",
+    "objects": [
+      "themes/<theme_slug>/latest.json",
+      "tickers/<ticker>/latest.json",
+      "scheduler/last_runs.json"
+    ]
+  },
+  "article_fields": [
+    "id",
+    "published_at",
+    "fetched_at",
+    "title",
+    "url",
+    "source_name",
+    "snippet",
+    "matched_keywords",
+    "scope",
+    "theme",
+    "ticker"
+  ],
+  "charts": {
+    "v1": "headlines_list",
+    "v2_candidates": ["weekly_hit_count", "sentiment_proxy"],
+    "notes": "Decide v2 after seeing list UX density; do not invent sentiment series until provenance is clear."
+  },
+  "feeds": []
+}

@@ -2,6 +2,8 @@
 
 Macro / industry **datasets that inform themes** (steel production, construction end markets, lab economics, etc.).
 
+**Agents / contributors:** read [`AGENTS.md`](./AGENTS.md) for packs, attachments, naming, charts, and R2 conventions.
+
 Separate from:
 - **mosaicbot_stockcontext** — ticker thesis / text context
 - **mosaicbot_stockthemes** — public theme site

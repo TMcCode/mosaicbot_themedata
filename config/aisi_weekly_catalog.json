@@ -1,0 +1,47 @@
+{
+  "schema_version": 0,
+  "pack": "aisi_weekly",
+  "description": "AISI weekly domestic raw steel production and capability utilization",
+  "series": [
+    {
+      "key": "aisi_production",
+      "source": "aisi",
+      "label": "AISI domestic raw steel production",
+      "official_name": "American Iron and Steel Institute — weekly domestic raw steel production (net tons)",
+      "short_name": "US raw steel production",
+      "display_name": "US raw steel production (weekly)",
+      "frequency": "weekly",
+      "unit": "net_tons",
+      "derived": [
+        "yoy_pct",
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "aisi_production",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "aisi_utilization",
+      "source": "aisi",
+      "label": "AISI capability utilization rate",
+      "official_name": "American Iron and Steel Institute — weekly capability utilization rate",
+      "short_name": "Steel capability utilization",
+      "display_name": "Steel mill capability utilization",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "yoy_pct",
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "aisi_utilization",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    }
+  ]
+}

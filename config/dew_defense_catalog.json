@@ -1,0 +1,166 @@
+{
+  "schema_version": 0,
+  "pack": "dew_defense",
+  "description": "Directed energy / modern warfare backdrop — US defense spend, GPR, USASpending DEW keywords, Ge/Ga trade, LPTH awards",
+  "series": [
+    {
+      "key": "us_defense_spending",
+      "source": "fred",
+      "fred_id": "FDEFX",
+      "label": "Federal national defense consumption expenditures & gross investment",
+      "official_name": "BEA A824RC / FRED FDEFX — Federal national defense CE + GI",
+      "short_name": "US defense spending",
+      "display_name": "US national defense spending",
+      "frequency": "quarterly",
+      "unit": "billions_usd_saar",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "us_defense_spending",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "gpr_index",
+      "source": "gpr",
+      "label": "Geopolitical Risk Index (GPR)",
+      "official_name": "Caldara–Iacoviello Geopolitical Risk Index (monthly GPR)",
+      "short_name": "Geopolitical risk (GPR)",
+      "display_name": "Geopolitical risk index",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "gpr_index",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "usaspending_dew_awards",
+      "source": "usaspending",
+      "label": "USASpending DEW-related contract obligations",
+      "official_name": "USASpending.gov contract obligations — directed energy / laser weapon / counter-UAS / HEL keywords",
+      "short_name": "DEW federal contract awards",
+      "display_name": "US DEW-related federal contract awards",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "usaspending_dew_awards",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "gallium_import_value",
+      "source": "census_trade",
+      "hs6": "811292",
+      "label": "US imports HS 811292 (gallium, indium, niobium, etc.)",
+      "official_name": "HS 811292 Gallium, hafnium, indium, niobium, rhenium & articles — US general imports (world)",
+      "short_name": "Gallium-related imports $",
+      "display_name": "US gallium-related metal imports (HS 811292)",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "m3_avg_yoy_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "gallium_import_value",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "germanium_price_usd_kg",
+      "source": "usgs_mcs",
+      "label": "USGS MCS germanium metal annual average price",
+      "official_name": "USGS Mineral Commodity Summaries — germanium metal annual average price (USD/kg, Europe min 99.999%)",
+      "short_name": "Germanium metal price (USGS annual)",
+      "display_name": "Germanium metal price — USGS annual (USD/kg)",
+      "frequency": "annual",
+      "unit": "usd_per_kg",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "germanium_price_usd_kg",
+      "access": "api",
+      "cadence": "annual",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "germanium_spot_cny_kg",
+      "source": "tradingeconomics",
+      "label": "Trading Economics germanium ingot spot (CNY/kg)",
+      "official_name": "Trading Economics GECNYBGQ — Germanium Ingot 50Ohm (CNY/kg, CFD proxy)",
+      "short_name": "Germanium spot (TE)",
+      "display_name": "Germanium spot price (CNY/kg)",
+      "frequency": "weekly",
+      "unit": "cny_per_kg",
+      "derived": [
+        "wow_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "notes": "Weekly scrape of public TE page; append-only history (AISI pattern). Not Argus/SMM physical.",
+      "dataset_id": "germanium_spot_cny_kg",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "pm_china_ga_export_reinstate",
+      "source": "manifold",
+      "manifold_id": "QLCgECul9d",
+      "label": "Manifold: China reinstate gallium export restrictions after Nov 2026 suspension",
+      "official_name": "Manifold QLCgECul9d — Will China reinstate/enforce gallium export restrictions after Nov 2026 suspension?",
+      "short_name": "China Ga export-control risk",
+      "display_name": "China gallium export-control reinstatement odds",
+      "frequency": "daily",
+      "unit": "probability_pct",
+      "derived": [],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "notes": "Only liquid Ge/Ga export-cliff market found (Manifold play-money). Stock-relevant for LPTH IR optics / BD6 input-cost story. Not added to backdrop score.",
+      "dataset_id": "pm_china_ga_export_reinstate",
+      "access": "api",
+      "cadence": "daily",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "usaspending_lpth_awards",
+      "source": "usaspending",
+      "recipient": "LightPath",
+      "label": "USASpending awards to LightPath Technologies",
+      "official_name": "USASpending.gov contract obligations — recipient LightPath",
+      "short_name": "LPTH federal awards",
+      "display_name": "LightPath federal contract awards",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "usaspending_lpth_awards",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    }
+  ]
+}

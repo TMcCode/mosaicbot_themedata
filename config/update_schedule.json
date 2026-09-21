@@ -3,8 +3,8 @@
   "description": "Cadence registry for mosaicbot_themedata packs. Daily dispatcher runs packs that are due on this host.",
   "timezone": "America/New_York",
   "notes": [
-    "VPS is a temporary host for API packs; Mac Mini will own scrapes (AISI) and eventually the whole repo.",
-    "Jobs must be idempotent. Dispatcher skips when not due unless --force."
+    "TEMP: AISI + TE germanium scrapes run on VPS weekends until Mac Mini is online — then set hosts back to [macmini] and weekdays to [Mon].",
+    "VPS owns API packs (lab_economics, census_construction, dew_defense). Jobs must be idempotent. Dispatcher skips when not due unless --force."
   ],
   "packs": [
     {
@@ -36,26 +36,61 @@
         "max_age_days": 35
       },
       "freshness": {
-        "local_relative": "data/census/construction_latest.json",
+        "r2_key": "themedata/census_construction/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "Census C-30 via FRED"
+      "description": "Census C-30 via FRED (manufacturing, highway, total)"
     },
     {
       "id": "aisi_weekly",
       "job": "jobs/aisi_weekly.py",
       "enabled": true,
-      "hosts": ["macmini"],
+      "hosts": ["vps", "any"],
       "cadence": "weekly",
       "due": {
-        "weekdays": ["Mon"],
+        "weekdays": ["Sat", "Sun"],
         "max_age_days": 8
       },
       "freshness": {
-        "local_relative": "data/aisi/weekly_latest.json",
-        "as_of_field": "week_ending"
+        "r2_key": "themedata/aisi_weekly/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/aisi/weekly_latest.json"
       },
-      "description": "AISI weekly steel — residential IP / Mac Mini (Cloudflare)"
+      "description": "TEMP on VPS weekends — AISI weekly steel scrape (move to macmini Mon when ready)"
+    },
+    {
+      "id": "germanium_te_weekly",
+      "job": "jobs/germanium_te_weekly.py",
+      "enabled": true,
+      "hosts": ["vps", "any"],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": ["Sat", "Sun"],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/dew_defense/germanium_te_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/dew_defense/germanium_te_latest.json"
+      },
+      "description": "TEMP on VPS weekends — TE germanium spot scrape (move to macmini Mon when ready)"
+    },
+    {
+      "id": "dew_defense",
+      "job": "jobs/dew_defense.py",
+      "enabled": true,
+      "hosts": ["vps", "any"],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 1,
+        "day_of_month_to": 15,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/dew_defense/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "DEW backdrop: FRED defense, GPR, USASpending, Ge/Ga trade, TE Ge spot history, LPTH awards"
     }
   ]
 }

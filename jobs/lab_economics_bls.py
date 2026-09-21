@@ -29,15 +29,19 @@ from lib.env import load_env, require_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import transforms as tx  # noqa: E402
 from lib import census_trade as census  # noqa: E402
+from lib import theme_score as scores  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "lab_economics"
 R2_PREFIX = f"themedata/{PACK}"
+R2_SCORES_PREFIX = "themedata/scores"
 UA = "mosaicbot_themedata/0.1 (+lab_economics)"
 BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _DEFAULT_OUT = _ROOT / "data" / "lab_economics"
+_SCORES_OUT = _ROOT / "data" / "scores"
 _CATALOG = _ROOT / "config" / "lab_economics_catalog.json"
 _ATTACHMENTS = _ROOT / "config" / "series_attachments.json"
+_THEME_SCORES = _ROOT / "config" / "theme_scores.json"
 HS_LAB_REAGENTS = "382219"
 
 
@@ -313,11 +317,18 @@ def build_pack(
                 kg_pts = qty_hs6
                 census_notes.append(f"HS6 qty unit={unit_hs6}")
             else:
-                # Quantity in kg is usually only at HS10 — sum children
+                # Quantity in kg is usually only at HS10 — sum children.
+                # HS 382219 exists under HS2022+; earlier year chunks return empty.
                 kg_pts = census.fetch_hs10_world_kg_monthly(
                     hs, start_year=start_year, end_year=end_year, api_key=census_key
                 )
-                census_notes.append("kg from sum of HS10 children with UNIT_QY1=KG")
+                if kg_pts:
+                    census_notes.append(
+                        f"kg from sum of HS10 children UNIT_QY1=KG "
+                        f"({kg_pts[0]['date']}→{kg_pts[-1]['date']})"
+                    )
+                else:
+                    census_notes.append("HS10 kg: no KG rows returned")
             census_points["import_kg"] = kg_pts
             census_points["import_unit_value_usd_per_kg"] = census.unit_value_usd_per_kg(
                 val_pts, kg_pts
@@ -360,6 +371,9 @@ def build_pack(
             "bls_id": sid,
             "source": meta.get("source"),
             "label": meta["label"],
+            "official_name": meta.get("official_name"),
+            "short_name": meta.get("short_name"),
+            "display_name": meta.get("display_name"),
             "frequency": freq,
             "seasonal": meta.get("seasonal"),
             "unit": meta["unit"],
@@ -392,6 +406,28 @@ def build_pack(
     }
 
 
+def _write_scores_local(scores_dir: Path, theme_scores: list[dict], index: dict) -> None:
+    scores_dir.mkdir(parents=True, exist_ok=True)
+    themes_dir = scores_dir / "themes"
+    themes_dir.mkdir(exist_ok=True)
+    (scores_dir / "latest.json").write_text(
+        json.dumps(index, indent=2) + "\n", encoding="utf-8"
+    )
+    for s in theme_scores:
+        slug = s.get("theme_slug") or "unknown"
+        (themes_dir / f"{slug}.json").write_text(
+            json.dumps(s, indent=2) + "\n", encoding="utf-8"
+        )
+
+
+def _publish_scores_r2(theme_scores: list[dict], index: dict) -> list[str]:
+    uris = [r2lib.put_json(f"{R2_SCORES_PREFIX}/latest.json", index)]
+    for s in theme_scores:
+        slug = s.get("theme_slug") or "unknown"
+        uris.append(r2lib.put_json(f"{R2_SCORES_PREFIX}/themes/{slug}.json", s))
+    return uris
+
+
 def _write_local(out_dir: Path, payload: dict) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "latest.json").write_text(
@@ -408,6 +444,9 @@ def _write_local(out_dir: Path, payload: dict) -> None:
                     "key": key,
                     "bls_id": ser["bls_id"],
                     "label": ser["label"],
+                    "official_name": ser.get("official_name"),
+                    "short_name": ser.get("short_name"),
+                    "display_name": ser.get("display_name"),
                     "frequency": ser["frequency"],
                     "unit": ser["unit"],
                     "points": ser["raw"]["points"],
@@ -451,6 +490,9 @@ def _publish_r2(payload: dict) -> list[str]:
                     "key": key,
                     "bls_id": ser["bls_id"],
                     "label": ser["label"],
+                    "official_name": ser.get("official_name"),
+                    "short_name": ser.get("short_name"),
+                    "display_name": ser.get("display_name"),
                     "frequency": ser["frequency"],
                     "unit": ser["unit"],
                     "points": ser["raw"]["points"],
@@ -493,20 +535,69 @@ def run(
 ) -> dict:
     load_env()
     catalog = _load_json(_CATALOG)
+    # Prefer canonical R2 attachments when available; else local seed.
     attachments = _load_json(_ATTACHMENTS)
+    try:
+        remote = r2lib.get_json("themedata/series_attachments.json")
+        if isinstance(remote, dict) and isinstance(remote.get("attachments"), list):
+            attachments = remote
+    except Exception:
+        pass
     payload = build_pack(
         start_year=start_year,
         end_year=end_year,
         catalog=catalog,
         attachments=attachments,
     )
-    if dry_run:
-        return payload
-    _write_local(out_dir, payload)
-    if not skip_r2:
-        payload["_r2_uris"] = _publish_r2(payload)
-    return payload
 
+    theme_scores: list[dict] = []
+    scores_index_doc: dict | None = None
+    scores_cfg = None
+    try:
+        remote_recipe = r2lib.get_json("themedata/scores/recipe.json")
+        if isinstance(remote_recipe, dict) and isinstance(
+            remote_recipe.get("themes"), list
+        ):
+            scores_cfg = remote_recipe
+    except Exception:
+        scores_cfg = None
+    if scores_cfg is None and _THEME_SCORES.exists():
+        scores_cfg = _load_json(_THEME_SCORES)
+    if scores_cfg:
+        theme_scores = scores.score_themes_for_pack(scores_cfg, pack_payload=payload)
+        existing = None
+        try:
+            existing = r2lib.get_json(f"{R2_SCORES_PREFIX}/latest.json")
+        except Exception:
+            existing = None
+        if existing is None and (_SCORES_OUT / "latest.json").exists():
+            existing = _load_json(_SCORES_OUT / "latest.json")
+        scores_index_doc = scores.merge_scores_index(existing, theme_scores)
+        payload["theme_scores"] = [
+            {
+                "score_id": s.get("score_id"),
+                "theme": s.get("theme"),
+                "score": s.get("score"),
+                "as_of": s.get("as_of"),
+            }
+            for s in theme_scores
+        ]
+
+    if dry_run:
+        payload["_theme_scores_detail"] = theme_scores
+        return payload
+
+    _write_local(out_dir, payload)
+    if scores_index_doc is not None:
+        _write_scores_local(_SCORES_OUT, theme_scores, scores_index_doc)
+
+    r2_uris: list[str] = []
+    if not skip_r2:
+        r2_uris.extend(_publish_r2(payload))
+        if scores_index_doc is not None:
+            r2_uris.extend(_publish_scores_r2(theme_scores, scores_index_doc))
+        payload["_r2_uris"] = r2_uris
+    return payload
 
 def main(argv: list[str] | None = None) -> int:
     now_y = datetime.now(timezone.utc).year
@@ -535,6 +626,11 @@ def main(argv: list[str] | None = None) -> int:
         "fetched_at": payload.get("fetched_at"),
         "series_ok": sorted(payload.get("series", {}).keys()),
         "errors": payload.get("errors") or [],
+        "theme_scores": payload.get("theme_scores")
+        or [
+            {"score_id": s.get("score_id"), "score": s.get("score"), "as_of": s.get("as_of")}
+            for s in (payload.get("_theme_scores_detail") or [])
+        ],
         "latest_derived": {
             k: {n: m.get("latest") for n, m in v["derived"].items()}
             for k, v in payload.get("series", {}).items()

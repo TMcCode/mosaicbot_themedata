@@ -1,0 +1,201 @@
+{
+  "schema_version": 0,
+  "description": "Theme backdrop score recipes. polarity +1 = up is good for the theme, -1 = up is bad, 0 = unused. Scores recompute when contributing packs update (e.g. end of lab_economics job).",
+  "signal": {
+    "method": "clip_linear",
+    "yoy_clip_pct": 10.0,
+    "note": "Map YoY % into [-1, +1] by clipping at ±yoy_clip_pct, then score = 50 + 50 * weighted mean of (polarity * signal)."
+  },
+  "themes": [
+    {
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "score_id": "medtech_lab_backdrop",
+      "label": "Lab backdrop",
+      "pack": "lab_economics",
+      "status": "active",
+      "components": [
+        {
+          "series_key": "lab_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Lab services selling prices rising → pricing power / healthy demand."
+        },
+        {
+          "series_key": "lab_headcount",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Industry hiring → capacity expansion / demand for lab work."
+        },
+        {
+          "series_key": "qcew_621511_us_emp",
+          "metric": "yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Quarterly confirmation of diagnostic-lab employment trend (NAICS 621511)."
+        },
+        {
+          "series_key": "lab_supplies_import_kg",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.7,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Reagent import volume as a soft activity proxy for IVD throughput. Ambiguous if stockpiling; medium-low weight."
+        },
+        {
+          "series_key": "lab_supplies_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.4,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Import dollars mix volume and price; keep low weight as secondary activity signal."
+        },
+        {
+          "series_key": "lab_supplies_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.0,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Domestic IVD/reagent producer prices up → input cost pressure for lab operators."
+        },
+        {
+          "series_key": "lab_supplies_import_unit_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.0,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Import $/kg up → reagent input cost pressure."
+        },
+        {
+          "series_key": "lab_wages_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.7,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Lab hourly wages up → labor cost pressure (can also signal tightness/demand; down-weighted)."
+        },
+        {
+          "series_key": "qcew_621511_us_aww",
+          "metric": "yoy_pct",
+          "weight": 0.5,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Quarterly avg weekly wage for diagnostic labs → cost confirmation; lower weight vs monthly AHE."
+        },
+        {
+          "series_key": "lab_comp_eci",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Broad health-care compensation — noisy for labs specifically; low weight cost overlay."
+        },
+        {
+          "series_key": "qcew_621511_tx_emp",
+          "metric": "yoy_pct",
+          "weight": 0.0,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "Ticker-local (CSTL). Use later as ticker overlay on this theme score, not in the shared theme backdrop."
+        },
+        {
+          "series_key": "qcew_621511_tx_aww",
+          "metric": "yoy_pct",
+          "weight": 0.0,
+          "polarity": -1.0,
+          "enabled": false,
+          "rationale": "Ticker-local (CSTL). Same — overlay later, not theme backdrop."
+        }
+      ],
+      "notes": "Framed for diagnostic lab / early-detection operators (sell tests, buy reagents). Pure IVD reagent manufacturers may want flipped polarity on supplies/import prices later. TX QCEW is ticker-local and intentionally omitted from the theme score."
+    },
+    {
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "score_id": "infra_construction_steel_backdrop",
+      "label": "Construction & steel backdrop",
+      "pack": "census_construction",
+      "status": "active",
+      "components": [
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Manufacturing plant construction rising → industrial capex / steel demand tailwind."
+        },
+        {
+          "series_key": "construction_highway",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Highway & street spend → public infrastructure demand."
+        },
+        {
+          "series_key": "construction_total",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.6,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Broad construction SAAR — secondary confirmation."
+        }
+      ],
+      "notes": "Construction spend YoY as primary backdrop. AISI weekly series live in aisi_weekly pack — omitted here until multi-pack score recipes are supported; use AISI charts on the board instead."
+    },
+    {
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "score_id": "modern_warfare_dew_backdrop",
+      "label": "DEW / lasers backdrop",
+      "pack": "dew_defense",
+      "status": "active",
+      "components": [
+        {
+          "series_key": "usaspending_dew_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "DEW keyword federal awards rising → program momentum."
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Broad US defense spend tailwind."
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "yoy_pct",
+          "weight": 0.8,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Elevated geopolitical risk → DEW urgency."
+        },
+        {
+          "series_key": "gallium_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Gallium-related import stress; BD6 is the germanium/gallium alternative story."
+        },
+        {
+          "series_key": "germanium_price_usd_kg",
+          "metric": "yoy_pct",
+          "weight": 0.6,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Germanium metal $/kg up → IR optics input cost stress (LPTH BD6 is the alternative story at ticker level)."
+        }
+      ],
+      "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga trade as cost/supply stress (negative polarity)."
+    }
+  ]
+}

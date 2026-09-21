@@ -1,6 +1,6 @@
 {
   "schema_version": 0,
-  "description": "Attach themedata series to themes and/or tickers. scope=theme is broad industry context; scope=ticker is company-local.",
+  "description": "Attach themedata series to themes and/or tickers. scope=theme is broad industry context; scope=ticker is company-local; scope=membership links a ticker to a theme for inheritance with no series.",
   "attachments": [
     {
       "series_key": "lab_supplies_ppi",
@@ -75,6 +75,214 @@
       "scope": "theme",
       "theme": "MedTech Long '26: Diagnostics & Early Detection",
       "ticker": null
+    },
+    {
+      "series_key": "construction_manufacturing",
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null
+    },
+    {
+      "series_key": "construction_highway",
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null
+    },
+    {
+      "series_key": "construction_total",
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null
+    },
+    {
+      "series_key": "aisi_production",
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null
+    },
+    {
+      "series_key": "aisi_utilization",
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": "NUE",
+      "note": "Nucor — domestic steel production exposure; inherits AISI + construction theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": "MLM",
+      "note": "Martin Marietta — aggregates / construction materials; inherits construction spend charts"
+    },
+    {
+      "series_key": "us_defense_spending",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null
+    },
+    {
+      "series_key": "gpr_index",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_dew_awards",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null
+    },
+    {
+      "series_key": "gallium_import_value",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "AVAV",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "LMT",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "IPGP",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "RTX",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "BA.LSE",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "COHR",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "ESLT",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "RHM.XETRA",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "MKSI",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "AERG",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "LASR",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "ELMT",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "MTSI",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "LPTH",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "OPTX",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "QQ.LSE",
+      "note": "stockthemes constituent — inherits DEW theme charts"
+    },
+    {
+      "series_key": "usaspending_lpth_awards",
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "LPTH",
+      "note": "Company-local USASpending awards to LightPath"
+    },
+    {
+      "series_key": "germanium_spot_cny_kg",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null,
+      "note": "Weekly TE CFD spot (CNY/kg); primary Ge chart"
+    },
+    {
+      "series_key": "pm_china_ga_export_reinstate",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null,
+      "note": "Manifold odds China reinstates Ga export curbs after Nov 2026 cliff — LPTH Ge/Ga input-cost / BD6 story"
+    },
+    {
+      "series_key": "germanium_price_usd_kg",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null,
+      "note": "USGS MCS annual USD/kg — backdrop score component"
     }
   ]
 }

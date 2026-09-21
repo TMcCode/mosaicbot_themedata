@@ -8,65 +8,111 @@
       "source": "bls",
       "bls_id": "WPU06371801",
       "label": "PPI — In-Vitro Diagnostic Substances",
+      "official_name": "In-vitro diagnostic substances",
+      "short_name": "IVD reagents and diagnostic supplies prices",
+      "display_name": "IVD reagents / diagnostic supplies prices",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "index_1982_100",
       "raw_metric": "monthly_nsa_index",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 5
+      "usefulness": 5,
+      "dataset_id": "lab_supplies_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_wages_ahe",
       "source": "bls",
       "bls_id": "CEU6562151108",
       "label": "CES — Medical Laboratories production & nonsupervisory AHE",
+      "official_name": "Medical laboratories production and nonsupervisory average hourly earnings",
+      "short_name": "Medical laboratories hourly wages",
+      "display_name": "Medical laboratories hourly wages",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "usd_per_hour",
       "raw_metric": "monthly_nsa_ahe",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 5
+      "usefulness": 5,
+      "dataset_id": "lab_wages_ahe",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_comp_eci",
       "source": "bls",
       "bls_id": "CIS2016200000000I",
       "label": "ECI — private Health Care & Social Assistance total compensation",
+      "official_name": "Private health care and social assistance total compensation",
+      "short_name": "Health care compensation",
+      "display_name": "Health care compensation",
       "frequency": "quarterly",
       "seasonal": "SA",
       "unit": "index",
       "raw_metric": "quarterly_sa_index",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_comp_eci",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_headcount",
       "source": "bls",
       "bls_id": "CES6562151101",
       "label": "CES — Medical Laboratories all employees",
+      "official_name": "Medical laboratories all employees",
+      "short_name": "Medical laboratories employment",
+      "display_name": "Medical laboratories employment",
       "frequency": "monthly",
       "seasonal": "SA",
       "unit": "thousands",
       "raw_metric": "monthly_sa_thousands",
-      "derived": ["m3_avg_yoy_pct", "m3_net_change"],
+      "derived": [
+        "m3_avg_yoy_pct",
+        "m3_net_change"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_headcount",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_services_ppi",
       "source": "bls",
       "bls_id": "PCU6215116215112",
       "label": "PPI — Medical Laboratory Services",
+      "official_name": "Medical laboratory services",
+      "short_name": "Diagnostic lab services prices",
+      "display_name": "Diagnostic lab services prices",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "index",
       "raw_metric": "monthly_nsa_index",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_services_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "qcew_621511_us_emp",
@@ -75,13 +121,22 @@
       "area_fips": "US000",
       "qcew_metric": "employment",
       "label": "QCEW — US private NAICS 621511 employment (quarterly avg)",
+      "official_name": "NAICS 621511 Medical Laboratories employment",
+      "short_name": "US diagnostic labs employment",
+      "display_name": "US diagnostic labs employment",
       "frequency": "quarterly",
       "seasonal": "NSA",
       "unit": "employees",
       "raw_metric": "quarterly_nsa_employment",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "qcew_621511_us_emp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "qcew_621511_us_aww",
@@ -90,13 +145,22 @@
       "area_fips": "US000",
       "qcew_metric": "avg_weekly_wage",
       "label": "QCEW — US private NAICS 621511 avg weekly wage",
+      "official_name": "NAICS 621511 Medical Laboratories average weekly wage",
+      "short_name": "US diagnostic labs average weekly wage",
+      "display_name": "US diagnostic labs average weekly wage",
       "frequency": "quarterly",
       "seasonal": "NSA",
       "unit": "usd_per_week",
       "raw_metric": "quarterly_nsa_avg_weekly_wage",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "qcew_621511_us_aww",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "qcew_621511_tx_emp",
@@ -105,13 +169,22 @@
       "area_fips": "48000",
       "qcew_metric": "employment",
       "label": "QCEW — Texas private NAICS 621511 employment (quarterly avg)",
+      "official_name": "NAICS 621511 Medical Laboratories employment",
+      "short_name": "Texas diagnostic labs employment",
+      "display_name": "Texas diagnostic labs employment",
       "frequency": "quarterly",
       "seasonal": "NSA",
       "unit": "employees",
       "raw_metric": "quarterly_nsa_employment",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "qcew_621511_tx_emp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "qcew_621511_tx_aww",
@@ -120,13 +193,22 @@
       "area_fips": "48000",
       "qcew_metric": "avg_weekly_wage",
       "label": "QCEW — Texas private NAICS 621511 avg weekly wage",
+      "official_name": "NAICS 621511 Medical Laboratories average weekly wage",
+      "short_name": "Texas diagnostic labs average weekly wage",
+      "display_name": "Texas diagnostic labs average weekly wage",
       "frequency": "quarterly",
       "seasonal": "NSA",
       "unit": "usd_per_week",
       "raw_metric": "quarterly_nsa_avg_weekly_wage",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "qcew_621511_tx_aww",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_supplies_import_value",
@@ -135,13 +217,22 @@
       "census_metric": "import_value_usd",
       "hs_code": "382219",
       "label": "Census trade — HS 382219 import value (world, general imports)",
+      "official_name": "HS 382219 diagnostic or laboratory reagents, other",
+      "short_name": "Diagnostic/lab reagents imports",
+      "display_name": "Diagnostic/lab reagents imports",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "usd",
       "raw_metric": "monthly_nsa_import_value",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_supplies_import_value",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_supplies_import_kg",
@@ -150,13 +241,22 @@
       "census_metric": "import_kg",
       "hs_code": "382219",
       "label": "Census trade — HS 382219 import quantity (kg)",
+      "official_name": "HS 382219 diagnostic or laboratory reagents, other",
+      "short_name": "Diagnostic/lab reagents import volume",
+      "display_name": "Diagnostic/lab reagents import volume",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "kg",
       "raw_metric": "monthly_nsa_import_kg",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_supplies_import_kg",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     },
     {
       "key": "lab_supplies_import_unit_value",
@@ -165,13 +265,22 @@
       "census_metric": "import_unit_value_usd_per_kg",
       "hs_code": "382219",
       "label": "Census trade — HS 382219 import unit value ($/kg)",
+      "official_name": "HS 382219 diagnostic or laboratory reagents, other",
+      "short_name": "Diagnostic/lab reagents import price per kg",
+      "display_name": "Diagnostic/lab reagents import price per kg",
       "frequency": "monthly",
       "seasonal": "NSA",
       "unit": "usd_per_kg",
       "raw_metric": "monthly_nsa_unit_value",
-      "derived": ["m3_avg_yoy_pct"],
+      "derived": [
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
-      "usefulness": 4
+      "usefulness": 4,
+      "dataset_id": "lab_supplies_import_unit_value",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
     }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "schema_version": 0,
+  "pack": "census_construction",
+  "description": "Census C-30 construction spending via FRED (SAAR, $ millions)",
+  "series": [
+    {
+      "key": "construction_manufacturing",
+      "source": "fred",
+      "fred_id": "TLMFGCONS",
+      "label": "Total construction spending: Manufacturing",
+      "official_name": "Census C-30 Total Private Construction — Manufacturing (SAAR)",
+      "short_name": "Manufacturing construction spend",
+      "display_name": "Manufacturing construction spending",
+      "frequency": "monthly",
+      "seasonal": "SAAR",
+      "unit": "millions_usd_saar",
+      "derived": [
+        "m3_avg_yoy_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "construction_manufacturing",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "construction_highway",
+      "source": "fred",
+      "fred_id": "TLHWYCONS",
+      "label": "Total construction spending: Highway and street",
+      "official_name": "Census C-30 Total Construction — Highway and street (SAAR)",
+      "short_name": "Highway & street construction spend",
+      "display_name": "Highway & street construction spending",
+      "frequency": "monthly",
+      "seasonal": "SAAR",
+      "unit": "millions_usd_saar",
+      "derived": [
+        "m3_avg_yoy_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "construction_highway",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "construction_total",
+      "source": "fred",
+      "fred_id": "TTLCONS",
+      "label": "Total construction spending",
+      "official_name": "Census C-30 Total Construction (SAAR)",
+      "short_name": "Total construction spend",
+      "display_name": "Total construction spending",
+      "frequency": "monthly",
+      "seasonal": "SAAR",
+      "unit": "millions_usd_saar",
+      "derived": [
+        "m3_avg_yoy_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "construction_total",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    }
+  ]
+}

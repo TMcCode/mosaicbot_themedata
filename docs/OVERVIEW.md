@@ -21,8 +21,12 @@ Cadence: `config/update_schedule.json` + `jobs/dispatch_due.py` (due window **or
 Private R2: `r2://mosaic-themes/themedata/<pack>/`  
 Mapping DB seed: `config/series_attachments.json` (`scope`: `theme` | `ticker`).
 
+## Agent / architecture conventions
+
+See **[`../AGENTS.md`](../AGENTS.md)** — packs vs attachments vs web, naming fields, boards, R2 layout.
+
 ## Later
 
-- Phase B Census trade imports
-- launchd / cron for monthly lab pack + Monday AISI + monthly Census
+- Admin: attachments editor + **theme score weights/polarity editor** + default boards
+- Per-series cadence / release hints in dispatcher (keep packs domain-based)
 - Optional public JSON mirrors on `stockthemes-public`

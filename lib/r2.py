@@ -43,8 +43,8 @@ def put_json(key: str, payload: Any, *, indent: int | None = 2) -> str:
     return put_bytes(key, text.encode("utf-8"), content_type="application/json")
 
 
-def get_json(key: str) -> Any | None:
-    """Return parsed JSON or None if the object is missing."""
+def get_bytes(key: str) -> bytes | None:
+    """Return object bytes or None if missing."""
     client, bucket = _client()
     from botocore.exceptions import ClientError
 
@@ -55,5 +55,12 @@ def get_json(key: str) -> Any | None:
         if code in ("404", "NoSuchKey", "NotFound"):
             return None
         raise
-    body = resp["Body"].read().decode("utf-8")
-    return json.loads(body)
+    return resp["Body"].read()
+
+
+def get_json(key: str) -> Any | None:
+    """Return parsed JSON or None if the object is missing."""
+    raw = get_bytes(key)
+    if raw is None:
+        return None
+    return json.loads(raw.decode("utf-8"))

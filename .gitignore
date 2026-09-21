@@ -2,10 +2,20 @@ __pycache__/
 *.py[cod]
 .Python
 .venv/
+.venv_chart/
 venv/
 .env
+.env.local
 *.egg-info/
 .DS_Store
+.cursor/
+node_modules/
+.next/
+out/
+.cache/
+*.tsbuildinfo
+
+# Local pack outputs / scrapes
 data/**/*.json
 data/**/*.jsonl
 data/**/*.csv
@@ -13,3 +23,5 @@ data/**/*.html
 data/**/*.xlsx
 data/**/*.lock
 !data/**/.gitkeep
+
+exports/

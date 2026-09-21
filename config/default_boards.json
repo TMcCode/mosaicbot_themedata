@@ -1,0 +1,255 @@
+{
+  "schema_version": 0,
+  "description": "Default chart boards: ordered recipes per theme/ticker. chart_type is line|bar. metric is raw or a derived key from the pack catalog.",
+  "boards": [
+    {
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "lab_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_supplies_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_supplies_import_unit_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_headcount",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_supplies_import_kg",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qcew_621511_us_emp",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_wages_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_comp_eci",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_supplies_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qcew_621511_us_aww",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "ticker": "CSTL",
+      "recipes": [
+        {
+          "series_key": "qcew_621511_tx_emp",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qcew_621511_tx_aww",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_supplies_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_headcount",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "aisi_production",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "aisi_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_highway",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_total",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": "NUE",
+      "recipes": [
+        {
+          "series_key": "aisi_production",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "aisi_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Infrastructure Capex '26: Construction & Steel",
+      "ticker": "MLM",
+      "recipes": [
+        {
+          "series_key": "construction_highway",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_total",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "usaspending_dew_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "gallium_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_china_ga_export_reinstate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "germanium_price_usd_kg",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "ticker": "LPTH",
+      "recipes": [
+        {
+          "series_key": "usaspending_lpth_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_dew_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_china_ga_export_reinstate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "germanium_price_usd_kg",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    }
+  ]
+}
