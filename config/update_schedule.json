@@ -91,6 +91,23 @@
         "as_of_field": "as_of"
       },
       "description": "DEW backdrop: FRED defense, GPR, USASpending, Ge/Ga trade, TE Ge spot history, LPTH awards"
+    },
+    {
+      "id": "news",
+      "job": "jobs/news_feeds.py",
+      "enabled": false,
+      "hosts": ["local"],
+      "cadence": "daily",
+      "due": {
+        "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "max_age_days": 1
+      },
+      "freshness": {
+        "r2_key": "themedata/news/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/news/metrics_latest.json"
+      },
+      "description": "MOVED to MosaicBotMain FetchEODData/news_radar_job.py — keep enabled=false here. Stub job exits 2."
     }
   ]
 }

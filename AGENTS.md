@@ -68,13 +68,15 @@ Schedule host/weekday still lives in `update_schedule.json` (VPS weekends for sc
 
 Scrapes that append history (AISI, TE Ge) also keep `fetched_at` on each history snapshot row.
 
-## News (planned — not a series_key)
+## News (not a series_key)
 
-Config seed: `config/news_feeds.json`.
+**Moved** to **`MosaicBotMain_Local_Dev/FetchEODData/news_radar_job.py`** (package `FetchEODData/news_radar/`). Not a themedata pack and **not** wired into `run.py`.
 
-- **Grain:** theme pubs+keywords **and** ticker overlays from day one; tickers rotate (not all every run).
-- **Publish:** `themedata/news/themes/<slug>/…`, `themedata/news/tickers/<ticker>/…`
-- **Charts v1:** headlines/list only. Derived weekly hit counts / sentiment = later, only if useful after list UX.
+- Config: `FetchEODData/config/news_feeds.json`
+- Bake: `radar_news.json` → `themedata/news/` (R2) / `data/news/` (local)
+- Themedata `jobs/news_feeds.py` is a stub (exits 2)
+
+Stockthemes Narrative Radar “In the News” reads the baked JSON only.
 
 ## History / backfill philosophy
 
