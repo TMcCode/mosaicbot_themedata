@@ -215,6 +215,25 @@
       ],
       "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga spots + trade as cost/supply stress (negative polarity).",
       "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
+    },
+    {
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "score_id": "space_surveillance_backdrop",
+      "label": "Surveillance satellites backdrop",
+      "pack": "space_surveillance",
+      "status": "active",
+      "components": [
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "GEOINT / sat imagery federal awards rising \u2192 procurement demand for theme."
+        }
+      ],
+      "notes": "v1 single-component score from USASpending sat/GEOINT keywords. Defense spend charts attach from dew_defense but are not in this pack score until multi-pack recipes exist."
     }
   ]
 }

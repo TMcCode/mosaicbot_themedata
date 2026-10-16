@@ -267,6 +267,29 @@
         }
       ],
       "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
+    },
+    {
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
     }
   ]
 }

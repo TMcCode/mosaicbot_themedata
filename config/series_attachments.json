@@ -334,6 +334,62 @@
       "ticker": null,
       "note": "USGS MCS annual USD/kg \u2014 backdrop score component",
       "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
+    },
+    {
+      "series_key": "usaspending_sat_geoint_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": null,
+      "note": "USASpending sat/GEOINT keyword obligations \u2014 primary theme demand proxy"
+    },
+    {
+      "series_key": "us_defense_spending",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": null,
+      "note": "Reuse dew_defense FRED FDEFX \u2014 NDAA/defense top-line context (owned by dew_defense pack)"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "PL",
+      "note": "stockthemes constituent \u2014 Planet Labs \u2014 commercial EO / satellite imagery"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "BKSY",
+      "note": "stockthemes constituent \u2014 BlackSky \u2014 real-time GEOINT / monitoring"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "SATL",
+      "note": "stockthemes constituent \u2014 Satellogic \u2014 Earth observation constellation"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "HAWK",
+      "note": "stockthemes constituent \u2014 BlackHawk Acquisition / HawkEye 360 \u2014 RF GEOINT"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "MDA.TO",
+      "note": "stockthemes constituent \u2014 MDA Space \u2014 space robotics / radar / satellites (TSX)"
     }
   ]
 }

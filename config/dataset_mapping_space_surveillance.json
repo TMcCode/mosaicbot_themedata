@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "theme": "Space Supply Chain '26: Surveillance Satellites",
+  "theme_slug": "space-supply-chain-26-surveillance-satellites",
+  "description": "Theme index into config/datasets.json for Space Surveillance.",
+  "registry": "config/datasets.json",
+  "theme_dataset_ids": [
+    "usaspending_sat_geoint_awards",
+    "us_defense_spending",
+    "sipri_military_expenditure"
+  ],
+  "ticker_dataset_ids": []
+}

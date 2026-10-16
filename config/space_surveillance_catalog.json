@@ -1,0 +1,36 @@
+{
+  "schema_version": 0,
+  "pack": "space_surveillance",
+  "description": "Surveillance satellites / GEOINT backdrop — US defense spend context (attached from dew_defense) + USASpending sat/GEOINT keyword obligations",
+  "series": [
+    {
+      "key": "usaspending_sat_geoint_awards",
+      "source": "usaspending",
+      "keywords": [
+        "satellite imagery",
+        "geospatial intelligence",
+        "GEOINT",
+        "Earth observation",
+        "space-based surveillance",
+        "commercial remote sensing"
+      ],
+      "label": "USASpending GEOINT / surveillance-satellite related contract obligations",
+      "official_name": "USASpending.gov contract obligations — satellite imagery / GEOINT / Earth observation / space-based surveillance keywords",
+      "short_name": "US sat/GEOINT contract awards",
+      "display_name": "US satellite & GEOINT federal contract awards",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "usaspending_sat_geoint_awards",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Keyword proxy for surveillance-satellite / GEOINT procurement. Incomplete current months can appear early — interpret latest month cautiously."
+    }
+  ]
+}

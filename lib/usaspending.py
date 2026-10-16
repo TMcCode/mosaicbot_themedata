@@ -18,6 +18,16 @@ DEFAULT_DEW_KEYWORDS = [
     "HELSI",
 ]
 
+# Space Supply Chain / surveillance satellites — GEOINT & EO procurement proxy.
+DEFAULT_SAT_GEOINT_KEYWORDS = [
+    "satellite imagery",
+    "geospatial intelligence",
+    "GEOINT",
+    "Earth observation",
+    "space-based surveillance",
+    "commercial remote sensing",
+]
+
 
 def _post(url: str, payload: dict[str, Any], *, timeout: int = 120) -> dict[str, Any]:
     body = json.dumps(payload).encode("utf-8")

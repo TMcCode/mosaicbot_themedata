@@ -3,15 +3,18 @@
   "description": "Cadence registry for mosaicbot_themedata packs. Daily dispatcher runs packs that are due on this host.",
   "timezone": "America/New_York",
   "notes": [
-    "TEMP: AISI + TE germanium scrapes run on VPS weekends until Mac Mini is online — then set hosts back to [macmini] and weekdays to [Mon].",
-    "VPS owns API packs (lab_economics, census_construction, dew_defense). Jobs must be idempotent. Dispatcher skips when not due unless --force."
+    "TEMP: AISI + TE germanium scrapes run on VPS weekends until Mac Mini is online \u2014 then set hosts back to [macmini] and weekdays to [Mon].",
+    "VPS owns API packs (lab_economics, census_construction, dew_defense, space_surveillance). Jobs must be idempotent. Dispatcher skips when not due unless --force."
   ],
   "packs": [
     {
       "id": "lab_economics",
       "job": "jobs/lab_economics_bls.py",
       "enabled": true,
-      "hosts": ["vps", "any"],
+      "hosts": [
+        "vps",
+        "any"
+      ],
       "cadence": "monthly",
       "due": {
         "day_of_month_from": 5,
@@ -28,7 +31,10 @@
       "id": "census_construction",
       "job": "jobs/census_construction.py",
       "enabled": true,
-      "hosts": ["vps", "any"],
+      "hosts": [
+        "vps",
+        "any"
+      ],
       "cadence": "monthly",
       "due": {
         "day_of_month_from": 1,
@@ -45,10 +51,16 @@
       "id": "aisi_weekly",
       "job": "jobs/aisi_weekly.py",
       "enabled": true,
-      "hosts": ["vps", "any"],
+      "hosts": [
+        "vps",
+        "any"
+      ],
       "cadence": "weekly",
       "due": {
-        "weekdays": ["Sat", "Sun"],
+        "weekdays": [
+          "Sat",
+          "Sun"
+        ],
         "max_age_days": 8
       },
       "freshness": {
@@ -56,16 +68,22 @@
         "as_of_field": "as_of",
         "local_relative": "data/aisi/weekly_latest.json"
       },
-      "description": "TEMP on VPS weekends — AISI weekly steel scrape (move to macmini Mon when ready)"
+      "description": "TEMP on VPS weekends \u2014 AISI weekly steel scrape (move to macmini Mon when ready)"
     },
     {
       "id": "germanium_te_weekly",
       "job": "jobs/germanium_te_weekly.py",
       "enabled": true,
-      "hosts": ["vps", "any"],
+      "hosts": [
+        "vps",
+        "any"
+      ],
       "cadence": "weekly",
       "due": {
-        "weekdays": ["Sat", "Sun"],
+        "weekdays": [
+          "Sat",
+          "Sun"
+        ],
         "max_age_days": 8
       },
       "freshness": {
@@ -73,13 +91,16 @@
         "as_of_field": "as_of",
         "local_relative": "data/dew_defense/germanium_te_latest.json"
       },
-      "description": "TEMP on VPS weekends — TE Ge+Ga spots (one batched API snapshot / Ge scrape fallback). Budget-aware."
+      "description": "TEMP on VPS weekends \u2014 TE Ge+Ga spots (one batched API snapshot / Ge scrape fallback). Budget-aware."
     },
     {
       "id": "dew_defense",
       "job": "jobs/dew_defense.py",
       "enabled": true,
-      "hosts": ["vps", "any"],
+      "hosts": [
+        "vps",
+        "any"
+      ],
       "cadence": "monthly",
       "due": {
         "day_of_month_from": 1,
@@ -93,13 +114,43 @@
       "description": "DEW backdrop: FRED defense, GPR, USASpending, Ge/Ga trade, TE Ge spot history, LPTH awards"
     },
     {
+      "id": "space_surveillance",
+      "job": "jobs/space_surveillance.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 1,
+        "day_of_month_to": 15,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/space_surveillance/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "Surveillance satellites / GEOINT: USASpending keyword obligations"
+    },
+    {
       "id": "news",
       "job": "jobs/news_feeds.py",
       "enabled": false,
-      "hosts": ["local"],
+      "hosts": [
+        "local"
+      ],
       "cadence": "daily",
       "due": {
-        "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
         "max_age_days": 1
       },
       "freshness": {
@@ -107,7 +158,7 @@
         "as_of_field": "as_of",
         "local_relative": "data/news/metrics_latest.json"
       },
-      "description": "MOVED to MosaicBotMain FetchEODData/news_radar_job.py — keep enabled=false here. Stub job exits 2."
+      "description": "MOVED to MosaicBotMain FetchEODData/news_radar_job.py \u2014 keep enabled=false here. Stub job exits 2."
     }
   ]
 }
