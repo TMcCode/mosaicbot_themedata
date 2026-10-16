@@ -1,0 +1,44 @@
+{
+  "schema_version": 0,
+  "description": "Canonical theme registry for themedata. theme = stockthemes display name; theme_slug = stockthemes URL slug. Attachments / boards / scores should carry theme_slug (not only theme string).",
+  "themes": [
+    {
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "group": "MedTech Long",
+      "group_slug": "medtech-long",
+      "status": "active",
+      "stockthemes": true,
+      "packs": ["lab_economics"]
+    },
+    {
+      "theme": "Steel '26: Integrated / Blast Furnace Producers",
+      "theme_slug": "steel-26-integrated-blast-furnace-producers",
+      "group": "Steel",
+      "group_slug": "steel",
+      "status": "active",
+      "stockthemes": true,
+      "packs": ["census_construction", "aisi_weekly"],
+      "notes": "Was local-only 'Infrastructure Capex '26: Construction & Steel'; remapped to stockthemes Steel '26 integrated BF. Construction C-30 + AISI still apply as end-market / industry backdrop."
+    },
+    {
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "group": "Modern Warfare",
+      "group_slug": "modern-warfare",
+      "status": "active",
+      "stockthemes": true,
+      "packs": ["dew_defense"]
+    },
+    {
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "group": "Space Supply Chain",
+      "group_slug": "space-supply-chain",
+      "status": "planned",
+      "stockthemes": true,
+      "packs": [],
+      "notes": "stockthemes uses one theme name = group + year + theme title. Slug is the join key for URLs / news / themedata."
+    }
+  ]
+}

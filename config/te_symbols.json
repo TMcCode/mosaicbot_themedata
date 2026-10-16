@@ -1,0 +1,34 @@
+{
+  "schema_version": 0,
+  "description": "Stable Trading Economics market symbols for themedata series. Resolve once (search costs API budget); do not re-search on a schedule. Batch pullable symbols in one markets/symbol call when refreshing.",
+  "budget_notes": [
+    "Plan: 500 REST requests/month — treat as scarce.",
+    "Weekly refresh: one batched markets/symbol for all status=pull keys (~4 calls/month).",
+    "Historical: once per symbol (or incremental since last as_of); cache under data/te/cache/.",
+    "HTML scrape remains a zero-API fallback for germanium public page only."
+  ],
+  "symbols": {
+    "germanium_spot_cny_kg": {
+      "symbol": "GECNYBGQ:COM",
+      "ticker": "GECNYBGQ",
+      "name": "Germanium",
+      "url": "/commodity/germanium",
+      "unit": "CNY/Kg",
+      "pack": "dew_defense",
+      "status": "pull",
+      "history_name": "germanium_te_history.jsonl",
+      "latest_name": "germanium_te_latest.json"
+    },
+    "gallium_spot_cny_kg": {
+      "symbol": "GAC:COM",
+      "ticker": "GAC",
+      "name": "Gallium",
+      "url": "/commodity/gallium",
+      "unit": "CNY/Kg",
+      "pack": "dew_defense",
+      "status": "pull",
+      "history_name": "gallium_te_history.jsonl",
+      "latest_name": "gallium_te_latest.json"
+    }
+  }
+}

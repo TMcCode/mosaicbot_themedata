@@ -153,20 +153,41 @@
     },
     {
       "id": "germanium_spot_cny_kg",
-      "license": "free",
+      "license": "paid",
       "status": "pull",
-      "access": "scrape",
+      "access": "api",
       "cadence": "weekly",
       "sector": "commodities",
       "data_type": "commodity_price",
       "region": "global",
-      "description": "Trading Economics germanium ingot CFD spot (CNY/kg). Weekly scrape + append history (AISI pattern).",
+      "description": "Trading Economics germanium ingot CFD spot (CNY/kg). API historical backfill once + weekly markets/symbol (HTML scrape fallback). Append history locally/R2.",
       "source": "tradingeconomics",
+      "provider": "Trading Economics",
       "pack": "dew_defense",
       "series_keys": [
         "germanium_spot_cny_kg"
       ],
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "te_symbol": "GECNYBGQ:COM"
+    },
+    {
+      "id": "gallium_spot_cny_kg",
+      "license": "paid",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "commodities",
+      "data_type": "commodity_price",
+      "region": "global",
+      "description": "Trading Economics gallium CFD spot (CNY/kg). API historical backfill once + weekly markets/symbol batched with germanium.",
+      "source": "tradingeconomics",
+      "provider": "Trading Economics",
+      "pack": "dew_defense",
+      "series_keys": [
+        "gallium_spot_cny_kg"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "te_symbol": "GAC:COM"
     },
     {
       "id": "pm_china_ga_export_reinstate",

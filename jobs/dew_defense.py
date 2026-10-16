@@ -29,6 +29,7 @@ from lib import usaspending as usa  # noqa: E402
 from lib import census_trade as census  # noqa: E402
 from lib import usgs_mcs  # noqa: E402
 from lib import tradingeconomics_ge as te  # noqa: E402
+from lib import te_spot  # noqa: E402
 from lib import manifold as manifoldlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 
@@ -76,27 +77,30 @@ def _load_attachments() -> dict:
     return attachments
 
 
-def _ge_spot_points(out_dir: Path) -> list[dict[str, Any]]:
-    """Build TE germanium points from local + R2 history; best-effort scrape append."""
-    try:
-        te.scrape_and_upsert(out_dir)
-    except Exception:
-        pass
+def _te_spot_points(out_dir: Path, series_key: str) -> list[dict[str, Any]]:
+    """Build TE spot points from local + R2 history only (no TE API spend).
 
-    rows = te.load_history(out_dir)
+    Weekly ``germanium_te_weekly`` owns refresh/backfill so the monthly pack
+    does not burn the 500 req/month Trading Economics budget.
+    """
+    try:
+        spec = te_spot.get_spec(series_key)
+    except KeyError:
+        # Legacy germanium-only path
+        rows = te.load_history(out_dir)
+        return te.points_from_history(rows)
+
+    rows = te_spot.load_history(out_dir, spec)
     if not rows:
         try:
-            raw = r2lib.get_bytes(te.R2_HISTORY_KEY)
+            raw = r2lib.get_bytes(spec.r2_history_key)
             if raw:
-                rows = te.rows_from_r2_body(raw)
+                rows = te_spot.rows_from_body(raw)
                 if rows:
-                    te.history_path(out_dir).parent.mkdir(parents=True, exist_ok=True)
-                    te.history_path(out_dir).write_text(
-                        te.history_to_r2_body(rows), encoding="utf-8"
-                    )
+                    te_spot.write_history(out_dir, spec, rows)
         except Exception:
             rows = []
-    return te.points_from_history(rows)
+    return te_spot.points_from_history(rows)
 
 
 def build_pack(
@@ -161,23 +165,22 @@ def build_pack(
                     end_year=end_year,
                 )
             elif src == "tradingeconomics":
-                pts = _ge_spot_points(ge_dir)
+                pts = _te_spot_points(ge_dir, key)
                 notes.append(
-                    f"{key}: Trading Economics CFD proxy (weekly scrape / history append)"
+                    f"{key}: Trading Economics CFD proxy (history from weekly job; no TE API here)"
                 )
-                # Keep R2 history in sync when monthly pack also scraped
-                hist = te.load_history(ge_dir)
-                if hist:
-                    try:
+                try:
+                    spec = te_spot.get_spec(key)
+                    hist = te_spot.load_history(ge_dir, spec)
+                    if hist:
                         r2lib.put_bytes(
-                            te.R2_HISTORY_KEY,
-                            te.history_to_r2_body(hist).encode("utf-8"),
+                            spec.r2_history_key,
+                            te_spot.history_to_body(hist).encode("utf-8"),
                             content_type="application/x-ndjson",
                         )
-                        latest = hist[-1]
-                        r2lib.put_json(f"{R2_PREFIX}/{te.LATEST_NAME}", latest)
-                    except Exception as e:
-                        notes.append(f"{key} history R2 sync skipped: {e}")
+                        r2lib.put_json(f"{R2_PREFIX}/{spec.latest_name}", hist[-1])
+                except Exception as e:
+                    notes.append(f"{key} history R2 sync skipped: {e}")
             elif src == "manifold":
                 mid = str(meta.get("manifold_id") or "")
                 if not mid:
@@ -294,69 +297,30 @@ def run(
         out_dir=out_dir,
     )
 
-    theme_scores: list[dict] = []
-    scores_index_doc: dict | None = None
-    scores_cfg = None
-    try:
-        remote_recipe = r2lib.get_json("themedata/scores/recipe.json")
-        if isinstance(remote_recipe, dict) and isinstance(
-            remote_recipe.get("themes"), list
-        ):
-            scores_cfg = remote_recipe
-    except Exception:
-        scores_cfg = None
-    if scores_cfg is None and _THEME_SCORES.exists():
-        scores_cfg = _load_json(_THEME_SCORES)
-    if scores_cfg:
-        theme_scores = scores.score_themes_for_pack(scores_cfg, pack_payload=payload)
-        existing = None
-        try:
-            existing = r2lib.get_json(f"{R2_SCORES_PREFIX}/latest.json")
-        except Exception:
-            existing = None
-        if existing is None and (_SCORES_OUT / "latest.json").exists():
-            existing = _load_json(_SCORES_OUT / "latest.json")
-        if theme_scores:
-            scores_index_doc = scores.merge_scores_index(existing, theme_scores)
-            payload["theme_scores"] = [
-                {
-                    "score_id": s.get("score_id"),
-                    "theme": s.get("theme"),
-                    "score": s.get("score"),
-                    "as_of": s.get("as_of"),
-                }
-                for s in theme_scores
-            ]
-
     if dry_run:
+        # Still compute scores for dry-run inspection
+        scores.recompute_and_publish(
+            payload,
+            scores_dir=_SCORES_OUT,
+            skip_r2=True,
+            prefer_remote_recipe=True,
+        )
         return payload
 
     _write_local(out_dir, payload)
-    if scores_index_doc is not None:
-        _SCORES_OUT.mkdir(parents=True, exist_ok=True)
-        themes_dir = _SCORES_OUT / "themes"
-        themes_dir.mkdir(exist_ok=True)
-        (_SCORES_OUT / "latest.json").write_text(
-            json.dumps(scores_index_doc, indent=2) + "\n", encoding="utf-8"
-        )
-        for s in theme_scores:
-            slug = s.get("theme_slug") or "unknown"
-            (themes_dir / f"{slug}.json").write_text(
-                json.dumps(s, indent=2) + "\n", encoding="utf-8"
-            )
+    score_result = scores.recompute_and_publish(
+        payload,
+        scores_dir=_SCORES_OUT,
+        skip_r2=skip_r2,
+        sync_recipe=True,
+        prefer_remote_recipe=False,
+    )
+    payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
 
     r2_uris: list[str] = []
     if not skip_r2:
         r2_uris.extend(_publish_r2(payload))
-        if scores_index_doc is not None:
-            r2_uris.append(
-                r2lib.put_json(f"{R2_SCORES_PREFIX}/latest.json", scores_index_doc)
-            )
-            for s in theme_scores:
-                slug = s.get("theme_slug") or "unknown"
-                r2_uris.append(
-                    r2lib.put_json(f"{R2_SCORES_PREFIX}/themes/{slug}.json", s)
-                )
+        r2_uris.extend(score_result.get("r2_uris") or [])
     payload["_r2_uris"] = r2_uris
     return payload
 

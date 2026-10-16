@@ -550,52 +550,30 @@ def run(
         attachments=attachments,
     )
 
-    theme_scores: list[dict] = []
-    scores_index_doc: dict | None = None
-    scores_cfg = None
-    try:
-        remote_recipe = r2lib.get_json("themedata/scores/recipe.json")
-        if isinstance(remote_recipe, dict) and isinstance(
-            remote_recipe.get("themes"), list
-        ):
-            scores_cfg = remote_recipe
-    except Exception:
-        scores_cfg = None
-    if scores_cfg is None and _THEME_SCORES.exists():
-        scores_cfg = _load_json(_THEME_SCORES)
-    if scores_cfg:
-        theme_scores = scores.score_themes_for_pack(scores_cfg, pack_payload=payload)
-        existing = None
-        try:
-            existing = r2lib.get_json(f"{R2_SCORES_PREFIX}/latest.json")
-        except Exception:
-            existing = None
-        if existing is None and (_SCORES_OUT / "latest.json").exists():
-            existing = _load_json(_SCORES_OUT / "latest.json")
-        scores_index_doc = scores.merge_scores_index(existing, theme_scores)
-        payload["theme_scores"] = [
-            {
-                "score_id": s.get("score_id"),
-                "theme": s.get("theme"),
-                "score": s.get("score"),
-                "as_of": s.get("as_of"),
-            }
-            for s in theme_scores
-        ]
-
     if dry_run:
-        payload["_theme_scores_detail"] = theme_scores
+        score_result = scores.recompute_and_publish(
+            payload,
+            scores_dir=_SCORES_OUT,
+            skip_r2=True,
+            prefer_remote_recipe=True,
+        )
+        payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
         return payload
 
     _write_local(out_dir, payload)
-    if scores_index_doc is not None:
-        _write_scores_local(_SCORES_OUT, theme_scores, scores_index_doc)
+    score_result = scores.recompute_and_publish(
+        payload,
+        scores_dir=_SCORES_OUT,
+        skip_r2=skip_r2,
+        sync_recipe=True,
+        prefer_remote_recipe=False,
+    )
+    payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
 
     r2_uris: list[str] = []
     if not skip_r2:
         r2_uris.extend(_publish_r2(payload))
-        if scores_index_doc is not None:
-            r2_uris.extend(_publish_scores_r2(theme_scores, scores_index_doc))
+        r2_uris.extend(score_result.get("r2_uris") or [])
         payload["_r2_uris"] = r2_uris
     return payload
 

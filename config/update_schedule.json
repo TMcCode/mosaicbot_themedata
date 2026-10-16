@@ -73,7 +73,7 @@
         "as_of_field": "as_of",
         "local_relative": "data/dew_defense/germanium_te_latest.json"
       },
-      "description": "TEMP on VPS weekends — TE germanium spot scrape (move to macmini Mon when ready)"
+      "description": "TEMP on VPS weekends — TE Ge+Ga spots (one batched API snapshot / Ge scrape fallback). Budget-aware."
     },
     {
       "id": "dew_defense",

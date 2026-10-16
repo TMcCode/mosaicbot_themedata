@@ -1,20 +1,27 @@
-"""Trading Economics germanium spot — public HTML latest only; append history locally.
+"""Trading Economics germanium spot — API + HTML scrape, append history locally.
 
-Same pattern as AISI weekly: page exposes the current level; we scrape on a
-schedule and accumulate `germanium_te_history.jsonl`. CFD proxy (GECNYBGQ),
-not a physical assessment (Argus/SMM) or USGS annual MCS.
+Prefer:
+  - **One-time** ``markets/historical`` backfill (budget-aware via ``lib.tradingeconomics``)
+  - **Weekly** ``markets/symbol`` snapshot (or HTML scrape = 0 API) to append
+  - Local/R2 ``germanium_te_history.jsonl`` as source of truth
+
+CFD proxy (GECNYBGQ:COM), not Argus/SMM physical or USGS annual MCS.
 """
 
 from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 from urllib.request import Request, urlopen
 
+from lib import tradingeconomics as teapi
+
 URL = "https://tradingeconomics.com/commodity/germanium"
+SERIES_KEY = "germanium_spot_cny_kg"
+TE_SYMBOL = "GECNYBGQ:COM"
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
@@ -140,9 +147,22 @@ def load_history(out_dir: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def _write_history_rows(out_dir: Path, rows: list[dict[str, Any]]) -> None:
+    path = history_path(out_dir)
+    rows = sorted(rows, key=lambda r: r.get("as_of") or "")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "".join(json.dumps(r, separators=(",", ":")) + "\n" for r in rows),
+        encoding="utf-8",
+    )
+    if rows:
+        latest_path(out_dir).write_text(
+            json.dumps(rows[-1], indent=2) + "\n", encoding="utf-8"
+        )
+
+
 def upsert_history(out_dir: Path, row: dict[str, Any]) -> bool:
     """Insert or replace by as_of. Returns True if a new as_of was inserted."""
-    path = history_path(out_dir)
     rows = load_history(out_dir)
     key = row["as_of"]
     replaced = False
@@ -157,13 +177,24 @@ def upsert_history(out_dir: Path, row: dict[str, Any]) -> bool:
     if not replaced:
         out.append(row)
         inserted = True
-    out.sort(key=lambda r: r.get("as_of") or "")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        "".join(json.dumps(r, separators=(",", ":")) + "\n" for r in out),
-        encoding="utf-8",
-    )
-    latest_path(out_dir).write_text(json.dumps(row, indent=2) + "\n", encoding="utf-8")
+    _write_history_rows(out_dir, out)
+    return inserted
+
+
+def upsert_history_many(out_dir: Path, new_rows: list[dict[str, Any]]) -> int:
+    """Merge many rows by as_of in one write. Returns count of newly inserted as_of keys."""
+    by: dict[str, dict[str, Any]] = {
+        str(r.get("as_of")): r for r in load_history(out_dir) if r.get("as_of")
+    }
+    inserted = 0
+    for row in new_rows:
+        key = str(row.get("as_of") or "")
+        if not key:
+            continue
+        if key not in by:
+            inserted += 1
+        by[key] = row
+    _write_history_rows(out_dir, list(by.values()))
     return inserted
 
 
@@ -183,6 +214,149 @@ def scrape_and_upsert(out_dir: Path) -> tuple[dict[str, Any], bool]:
     snap = parse_spot(html)
     inserted = upsert_history(out_dir, snap)
     return snap, inserted
+
+
+def _te_symbol() -> str:
+    return teapi.symbol_for_series(SERIES_KEY) or TE_SYMBOL
+
+
+def spot_from_api_snapshot(row: dict[str, Any]) -> dict[str, Any]:
+    snap = teapi.snapshot_to_spot(row)
+    # Keep unit field aligned with catalog
+    snap["unit"] = "cny_per_kg"
+    if snap.get("price_cny_kg") is None:
+        raise ValueError("TE snapshot missing Last/Close")
+    snap["notes"] = (
+        "CFD proxy (Trading Economics API); not USGS MCS or Argus/SMM physical."
+    )
+    return snap
+
+
+def api_snapshot_and_upsert(
+    out_dir: Path,
+    *,
+    force: bool = False,
+    max_age_hours: float | None = 12.0,
+) -> tuple[dict[str, Any], bool]:
+    """One markets/symbol call (cached) → append history."""
+    rows = teapi.markets_snapshot(
+        _te_symbol(),
+        max_age_hours=max_age_hours,
+        force=force,
+    )
+    if not rows:
+        raise RuntimeError(f"empty TE snapshot for {_te_symbol()}")
+    snap = spot_from_api_snapshot(rows[0])
+    inserted = upsert_history(out_dir, snap)
+    return snap, inserted
+
+
+def api_backfill_history(
+    out_dir: Path,
+    *,
+    d1: str | None = None,
+    d2: str | None = None,
+    force: bool = False,
+) -> tuple[int, list[dict[str, Any]]]:
+    """Pull historical OHLC once (or from cache) and merge into history jsonl.
+
+    Returns (n_points_from_api, merged_history_rows).
+    """
+    sym = _te_symbol()
+    if d1 is None:
+        # Incremental: day after last local as_of, else 2020-01-01
+        existing = load_history(out_dir)
+        if existing and not force:
+            last = max(str(r.get("as_of") or "") for r in existing)
+            if last:
+                # re-pull a short overlap window to catch revisions
+                y, m, d = (int(x) for x in last.split("-"))
+                d1 = date(y, m, d).isoformat()
+        if d1 is None:
+            d1 = "2020-01-01"
+    if d2 is None:
+        d2 = date.today().isoformat()
+
+    hist = teapi.markets_historical(
+        sym,
+        d1=d1,
+        d2=d2,
+        max_age_hours=24.0 * 14 if not force else 0.0,
+        force=force,
+        allow_reserve=True,
+    )
+    pts = teapi.historical_to_points(hist, symbol=sym)
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    rows = [
+        {
+            "schema_version": 0,
+            "source": f"te_api_historical:{sym}",
+            "fetched_at": fetched_at,
+            "as_of": p["date"],
+            "price_cny_kg": p["value"],
+            "unit": "cny_per_kg",
+            "symbol": "GECNYBGQ",
+            "te_symbol": sym,
+            "full_name": "Germanium",
+            "notes": "CFD proxy (Trading Economics API historical Close).",
+        }
+        for p in pts
+    ]
+    upsert_history_many(out_dir, rows)
+    return len(pts), load_history(out_dir)
+
+
+def ingest_historical_file(out_dir: Path, path: Path) -> int:
+    """Merge a saved TE historical JSON array into history (0 API calls)."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise ValueError(f"expected list in {path}")
+    sym = _te_symbol()
+    pts = teapi.historical_to_points(data, symbol=sym)
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    rows = [
+        {
+            "schema_version": 0,
+            "source": f"te_api_historical_file:{path.name}",
+            "fetched_at": fetched_at,
+            "as_of": p["date"],
+            "price_cny_kg": p["value"],
+            "unit": "cny_per_kg",
+            "symbol": "GECNYBGQ",
+            "te_symbol": sym,
+            "full_name": "Germanium",
+            "notes": "CFD proxy (Trading Economics API historical Close).",
+        }
+        for p in pts
+    ]
+    upsert_history_many(out_dir, rows)
+    return len(pts)
+
+
+def refresh_and_upsert(
+    out_dir: Path,
+    *,
+    mode: str = "auto",
+    force: bool = False,
+) -> tuple[dict[str, Any], bool, str]:
+    """Refresh latest spot.
+
+    mode:
+      - ``api``: markets/symbol (1 request unless cache hit)
+      - ``scrape``: public HTML (0 API)
+      - ``auto``: api if routine budget remains, else scrape
+    """
+    mode = (mode or "auto").lower().strip()
+    if mode == "auto":
+        stats = teapi.usage_stats()
+        mode = "api" if stats["routine_remaining"] > 0 else "scrape"
+    if mode == "api":
+        snap, inserted = api_snapshot_and_upsert(out_dir, force=force)
+        return snap, inserted, "api"
+    if mode == "scrape":
+        snap, inserted = scrape_and_upsert(out_dir)
+        return snap, inserted, "scrape"
+    raise ValueError(f"unknown refresh mode {mode!r}")
 
 
 def history_to_r2_body(rows: list[dict[str, Any]]) -> str:

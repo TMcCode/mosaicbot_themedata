@@ -4,7 +4,7 @@
   "signal": {
     "method": "clip_linear",
     "yoy_clip_pct": 10.0,
-    "note": "Map YoY % into [-1, +1] by clipping at ±yoy_clip_pct, then score = 50 + 50 * weighted mean of (polarity * signal)."
+    "note": "Map YoY % into [-1, +1] by clipping at \u00b1yoy_clip_pct, then score = 50 + 50 * weighted mean of (polarity * signal)."
   },
   "themes": [
     {
@@ -20,7 +20,7 @@
           "weight": 1.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Lab services selling prices rising → pricing power / healthy demand."
+          "rationale": "Lab services selling prices rising \u2192 pricing power / healthy demand."
         },
         {
           "series_key": "lab_headcount",
@@ -28,7 +28,7 @@
           "weight": 1.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Industry hiring → capacity expansion / demand for lab work."
+          "rationale": "Industry hiring \u2192 capacity expansion / demand for lab work."
         },
         {
           "series_key": "qcew_621511_us_emp",
@@ -60,7 +60,7 @@
           "weight": 1.0,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Domestic IVD/reagent producer prices up → input cost pressure for lab operators."
+          "rationale": "Domestic IVD/reagent producer prices up \u2192 input cost pressure for lab operators."
         },
         {
           "series_key": "lab_supplies_import_unit_value",
@@ -68,7 +68,7 @@
           "weight": 1.0,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Import $/kg up → reagent input cost pressure."
+          "rationale": "Import $/kg up \u2192 reagent input cost pressure."
         },
         {
           "series_key": "lab_wages_ahe",
@@ -76,7 +76,7 @@
           "weight": 0.7,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Lab hourly wages up → labor cost pressure (can also signal tightness/demand; down-weighted)."
+          "rationale": "Lab hourly wages up \u2192 labor cost pressure (can also signal tightness/demand; down-weighted)."
         },
         {
           "series_key": "qcew_621511_us_aww",
@@ -84,7 +84,7 @@
           "weight": 0.5,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Quarterly avg weekly wage for diagnostic labs → cost confirmation; lower weight vs monthly AHE."
+          "rationale": "Quarterly avg weekly wage for diagnostic labs \u2192 cost confirmation; lower weight vs monthly AHE."
         },
         {
           "series_key": "lab_comp_eci",
@@ -92,7 +92,7 @@
           "weight": 0.3,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Broad health-care compensation — noisy for labs specifically; low weight cost overlay."
+          "rationale": "Broad health-care compensation \u2014 noisy for labs specifically; low weight cost overlay."
         },
         {
           "series_key": "qcew_621511_tx_emp",
@@ -108,15 +108,16 @@
           "weight": 0.0,
           "polarity": -1.0,
           "enabled": false,
-          "rationale": "Ticker-local (CSTL). Same — overlay later, not theme backdrop."
+          "rationale": "Ticker-local (CSTL). Same \u2014 overlay later, not theme backdrop."
         }
       ],
-      "notes": "Framed for diagnostic lab / early-detection operators (sell tests, buy reagents). Pure IVD reagent manufacturers may want flipped polarity on supplies/import prices later. TX QCEW is ticker-local and intentionally omitted from the theme score."
+      "notes": "Framed for diagnostic lab / early-detection operators (sell tests, buy reagents). Pure IVD reagent manufacturers may want flipped polarity on supplies/import prices later. TX QCEW is ticker-local and intentionally omitted from the theme score.",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection"
     },
     {
-      "theme": "Infrastructure Capex '26: Construction & Steel",
-      "score_id": "infra_construction_steel_backdrop",
-      "label": "Construction & steel backdrop",
+      "theme": "Steel '26: Integrated / Blast Furnace Producers",
+      "score_id": "steel_integrated_bf_backdrop",
+      "label": "Steel / construction backdrop",
       "pack": "census_construction",
       "status": "active",
       "components": [
@@ -126,7 +127,7 @@
           "weight": 1.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Manufacturing plant construction rising → industrial capex / steel demand tailwind."
+          "rationale": "Manufacturing plant construction rising \u2192 industrial capex / steel demand tailwind."
         },
         {
           "series_key": "construction_highway",
@@ -134,7 +135,7 @@
           "weight": 1.0,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Highway & street spend → public infrastructure demand."
+          "rationale": "Highway & street spend \u2192 public infrastructure demand."
         },
         {
           "series_key": "construction_total",
@@ -142,10 +143,11 @@
           "weight": 0.6,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Broad construction SAAR — secondary confirmation."
+          "rationale": "Broad construction SAAR \u2014 secondary confirmation."
         }
       ],
-      "notes": "Construction spend YoY as primary backdrop. AISI weekly series live in aisi_weekly pack — omitted here until multi-pack score recipes are supported; use AISI charts on the board instead."
+      "notes": "Construction spend YoY as primary backdrop for steel end markets. AISI weekly series live in aisi_weekly pack \u2014 omitted here until multi-pack score recipes are supported; use AISI charts on the board instead. Remapped from local Infrastructure Capex name to stockthemes Steel '26 integrated BF.",
+      "theme_slug": "steel-26-integrated-blast-furnace-producers"
     },
     {
       "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
@@ -160,7 +162,7 @@
           "weight": 1.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "DEW keyword federal awards rising → program momentum."
+          "rationale": "DEW keyword federal awards rising \u2192 program momentum."
         },
         {
           "series_key": "us_defense_spending",
@@ -176,7 +178,7 @@
           "weight": 0.8,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Elevated geopolitical risk → DEW urgency."
+          "rationale": "Elevated geopolitical risk \u2192 DEW urgency."
         },
         {
           "series_key": "gallium_import_value",
@@ -189,13 +191,30 @@
         {
           "series_key": "germanium_price_usd_kg",
           "metric": "yoy_pct",
-          "weight": 0.6,
+          "weight": 0.4,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Germanium metal $/kg up → IR optics input cost stress (LPTH BD6 is the alternative story at ticker level)."
+          "rationale": "USGS annual Ge $/kg \u2014 slow confirmation of IR optics input cost stress."
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "yoy_pct",
+          "weight": 0.5,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "TE Ge spot YoY \u2014 timely IR optics input-cost stress (CFD proxy)."
+        },
+        {
+          "series_key": "gallium_spot_cny_kg",
+          "metric": "yoy_pct",
+          "weight": 0.4,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "TE Ga spot YoY \u2014 timely Ga input-cost / export-control stress (CFD proxy)."
         }
       ],
-      "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga trade as cost/supply stress (negative polarity)."
+      "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga spots + trade as cost/supply stress (negative polarity).",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
     }
   ]
 }

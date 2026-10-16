@@ -36,7 +36,7 @@ Per-theme `dataset_mapping_*.json` files are thin **indexes** into `datasets.jso
 
 ### Watchlist → registry matching (free)
 
-LLM monitoring watchlists (`EconomicDataWatch` / `FreeAltDataWatch` / `PaidAltDataWatch`) and ticker **KeyInputsAndSourcing** still output plain provider+metric / input objects. After normalize, MosaicBot **post-processes** against `datasets.json` (sibling themedata or vendored `MosaicBotMain/config/themedata_datasets.json`) and fills:
+LLM monitoring watchlists (`EconomicDataWatch` / `FreeAltDataWatch` / `PaidAltDataWatch`), ticker **KeyInputsAndSourcing**, and **Ticker_KeyFactors** Free/Paid Alt Data cells still output plain provider+metric / input objects (Key Factors: 0–2 items per cell). After normalize, MosaicBot **post-processes** against `datasets.json` (sibling themedata or vendored `MosaicBotMain/config/themedata_datasets.json`) and fills:
 
 - `dataset_id`, `access`, `cadence`, `as_of_semantics`, `registry_match` (`high|medium|none`)
 
@@ -129,6 +129,18 @@ Colloquial examples already in use:
 - `HS 382219` → diagnostic / lab reagents (imports, volume, $/kg)
 - `NAICS 621511` → diagnostic labs / medical laboratories
 
+## Themes registry (stockthemes join key)
+
+Canonical list: **`config/themes.json`**.
+
+| Field | Role |
+|-------|------|
+| `theme` | Exact stockthemes **display name** (group + year + theme title), e.g. `Space Supply Chain '26: Surveillance Satellites` |
+| `theme_slug` | Exact stockthemes **URL slug**, e.g. `space-supply-chain-26-surveillance-satellites` |
+| `group` / `group_slug` | stockthemes group (informational) |
+
+Attachments, boards, and score recipes must carry **`theme_slug`** (not only `theme`) so renames and automation don’t rely on string equality alone. Prefer registry over `slugify(theme)` when present.
+
 ## Attachments format
 
 Canonical editorial file (admin + seed):
@@ -140,7 +152,8 @@ Canonical editorial file (admin + seed):
 Fields:
 
 - `scope`: `theme` | `ticker`
-- `theme`: theme display name (must match product naming)
+- `theme`: stockthemes display name (must match `config/themes.json`)
+- `theme_slug`: stockthemes URL slug (must match `config/themes.json`)
 - `ticker`: symbol or `null`
 - `series_key`: pack catalog key
 
@@ -155,7 +168,7 @@ Theme-scoped = broad industry context. Ticker-scoped = company-local proxy (e.g.
 Config: `config/theme_scores.json` (per-theme weights + polarity).
 
 - One **visible score per theme** (0–100). Tickers show one chip per theme they belong to (no forced mega-blend).
-- Recompute **when the contributing pack updates** (end of pack job), not on a separate cron.
+- Recompute **whenever contributing pack series update** (full pack job *or* partial refresh like weekly TE/AISI) via `lib.theme_score.recompute_and_publish` — cheap, no source refetch. Not a separate cron.
 - Signal: clip YoY % at ±10 → `[-1, +1]`; `score = 50 + 50 * Σ(weight × polarity × signal) / Σ(weight)`.
 - Publish under `themedata/scores/…` including a `history` array (same recipe over time; mixed frequencies carry forward).
 - Theme/ticker UI: score chip + one backdrop history chart.

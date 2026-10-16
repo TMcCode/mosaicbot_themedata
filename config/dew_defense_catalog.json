@@ -117,11 +117,34 @@
       ],
       "scope_default": "theme",
       "usefulness": 5,
-      "notes": "Weekly scrape of public TE page; append-only history (AISI pattern). Not Argus/SMM physical.",
+      "notes": "TE API GECNYBGQ:COM (historical backfill once + weekly snapshot); HTML scrape fallback. Append-only history. Not Argus/SMM physical.",
       "dataset_id": "germanium_spot_cny_kg",
-      "access": "scrape",
+      "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "te_symbol": "GECNYBGQ:COM"
+    },
+    {
+      "key": "gallium_spot_cny_kg",
+      "source": "tradingeconomics",
+      "label": "Trading Economics gallium spot (CNY/kg)",
+      "official_name": "Trading Economics GAC:COM — Gallium (CNY/kg, CFD proxy)",
+      "short_name": "Gallium spot (TE)",
+      "display_name": "Gallium spot price (CNY/kg)",
+      "frequency": "weekly",
+      "unit": "cny_per_kg",
+      "derived": [
+        "wow_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "notes": "TE API GAC:COM (historical backfill once + weekly snapshot batched with germanium). Not Argus/SMM physical.",
+      "dataset_id": "gallium_spot_cny_kg",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "te_symbol": "GAC:COM"
     },
     {
       "key": "pm_china_ga_export_reinstate",

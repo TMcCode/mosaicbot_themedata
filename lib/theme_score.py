@@ -1,9 +1,20 @@
-"""Theme backdrop scores from pack series + config/theme_scores.json."""
+"""Theme backdrop scores from pack series + config/theme_scores.json.
+
+Recompute whenever contributing pack series update (cheap: no source refetch).
+Shared entry point: ``recompute_and_publish``.
+"""
 
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
+
+_ROOT = Path(__file__).resolve().parents[1]
+_DEFAULT_RECIPE = _ROOT / "config" / "theme_scores.json"
+_DEFAULT_SCORES_OUT = _ROOT / "data" / "scores"
+R2_SCORES_PREFIX = "themedata/scores"
 
 
 def slugify_theme(name: str) -> str:
@@ -238,7 +249,10 @@ def score_theme(
         "score_id": theme_cfg.get("score_id"),
         "label": theme_cfg.get("label"),
         "theme": theme_cfg.get("theme"),
-        "theme_slug": _slugify(str(theme_cfg.get("theme") or "")),
+        "theme_slug": str(
+            theme_cfg.get("theme_slug")
+            or _slugify(str(theme_cfg.get("theme") or ""))
+        ),
         "pack": theme_cfg.get("pack") or pack_payload.get("pack"),
         "score": score,
         "normalized": None if normalized is None else round(normalized, 4),
@@ -313,4 +327,136 @@ def merge_scores_index(
         "schema_version": 0,
         "computed_at": fresh["computed_at"],
         "themes": sorted(by_slug.values(), key=lambda r: str(r.get("theme") or "")),
+    }
+
+
+def load_recipe(*, prefer_remote: bool = True) -> dict[str, Any] | None:
+    """Load score recipe: R2 ``themedata/scores/recipe.json`` or local seed."""
+    if prefer_remote:
+        try:
+            from lib import r2 as r2lib
+
+            remote = r2lib.get_json(f"{R2_SCORES_PREFIX}/recipe.json")
+            if isinstance(remote, dict) and isinstance(remote.get("themes"), list):
+                return remote
+        except Exception:
+            pass
+    if _DEFAULT_RECIPE.exists():
+        return json.loads(_DEFAULT_RECIPE.read_text(encoding="utf-8"))
+    return None
+
+
+def write_scores_local(
+    theme_scores: list[dict[str, Any]],
+    index: dict[str, Any],
+    *,
+    scores_dir: Path | None = None,
+) -> Path:
+    scores_dir = scores_dir or _DEFAULT_SCORES_OUT
+    scores_dir.mkdir(parents=True, exist_ok=True)
+    themes_dir = scores_dir / "themes"
+    themes_dir.mkdir(exist_ok=True)
+    (scores_dir / "latest.json").write_text(
+        json.dumps(index, indent=2) + "\n", encoding="utf-8"
+    )
+    for s in theme_scores:
+        slug = s.get("theme_slug") or "unknown"
+        (themes_dir / f"{slug}.json").write_text(
+            json.dumps(s, indent=2) + "\n", encoding="utf-8"
+        )
+    return scores_dir
+
+
+def publish_scores_r2(
+    theme_scores: list[dict[str, Any]],
+    index: dict[str, Any],
+    *,
+    recipe: dict[str, Any] | None = None,
+) -> list[str]:
+    from lib import r2 as r2lib
+
+    uris = [r2lib.put_json(f"{R2_SCORES_PREFIX}/latest.json", index)]
+    for s in theme_scores:
+        slug = s.get("theme_slug") or "unknown"
+        uris.append(r2lib.put_json(f"{R2_SCORES_PREFIX}/themes/{slug}.json", s))
+    if recipe is not None:
+        uris.append(r2lib.put_json(f"{R2_SCORES_PREFIX}/recipe.json", recipe))
+    return uris
+
+
+def recompute_and_publish(
+    pack_payload: dict[str, Any],
+    *,
+    scores_cfg: dict[str, Any] | None = None,
+    scores_dir: Path | None = None,
+    skip_r2: bool = False,
+    sync_recipe: bool = False,
+    prefer_remote_recipe: bool = True,
+) -> dict[str, Any]:
+    """Recompute backdrop scores for themes tied to this pack; write local + R2.
+
+    Call at the end of any job that updates pack series (full pack or partial
+    refresh). No source refetch — uses ``pack_payload["series"]`` only.
+    Returns ``{theme_scores, index, r2_uris, recipe}`` (theme_scores empty if
+    no recipe matches this pack).
+    """
+    scores_dir = scores_dir or _DEFAULT_SCORES_OUT
+    recipe = scores_cfg
+    if recipe is None:
+        recipe = load_recipe(prefer_remote=prefer_remote_recipe)
+    if recipe is None:
+        return {"theme_scores": [], "index": None, "r2_uris": [], "recipe": None}
+
+    theme_scores = score_themes_for_pack(recipe, pack_payload=pack_payload)
+    if not theme_scores:
+        return {
+            "theme_scores": [],
+            "index": None,
+            "r2_uris": [],
+            "recipe": recipe,
+        }
+
+    existing = None
+    try:
+        from lib import r2 as r2lib
+
+        existing = r2lib.get_json(f"{R2_SCORES_PREFIX}/latest.json")
+    except Exception:
+        existing = None
+    local_latest = (scores_dir or _DEFAULT_SCORES_OUT) / "latest.json"
+    if existing is None and local_latest.exists():
+        existing = json.loads(local_latest.read_text(encoding="utf-8"))
+
+    index = merge_scores_index(existing, theme_scores)
+    write_scores_local(theme_scores, index, scores_dir=scores_dir)
+
+    # Attach slim summary on pack payload for callers
+    pack_payload["theme_scores"] = [
+        {
+            "score_id": s.get("score_id"),
+            "theme": s.get("theme"),
+            "score": s.get("score"),
+            "as_of": s.get("as_of"),
+        }
+        for s in theme_scores
+    ]
+
+    r2_uris: list[str] = []
+    if not skip_r2:
+        recipe_to_put = None
+        if sync_recipe:
+            # Prefer the seed file when syncing so editorial edits ship with scores
+            if _DEFAULT_RECIPE.exists():
+                recipe_to_put = json.loads(_DEFAULT_RECIPE.read_text(encoding="utf-8"))
+            else:
+                recipe_to_put = recipe
+        r2_uris = publish_scores_r2(
+            theme_scores, index, recipe=recipe_to_put
+        )
+
+    return {
+        "theme_scores": theme_scores,
+        "index": index,
+        "r2_uris": r2_uris,
+        "recipe": recipe,
     }

@@ -23,6 +23,7 @@ if str(_ROOT) not in sys.path:
 from lib.env import load_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
+from lib import theme_score as scores  # noqa: E402
 
 URL = "https://www.steel.org/industry-data/"
 UA = (
@@ -404,9 +405,18 @@ def run(
         return payload
 
     _write_local(out_dir, payload, html=html, snapshot=snapshot)
+    # No AISI themes in recipe yet — no-op until multi-pack scores include steel.
+    score_result = scores.recompute_and_publish(
+        payload,
+        skip_r2=skip_r2,
+        sync_recipe=False,
+        prefer_remote_recipe=True,
+    )
+    payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
     r2_uris: list[str] = []
     if not skip_r2:
         r2_uris.extend(_publish_r2(payload))
+        r2_uris.extend(score_result.get("r2_uris") or [])
     payload["_r2_uris"] = r2_uris
     return payload
 

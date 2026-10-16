@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Weekly Trading Economics germanium spot scrape → dew_defense history + R2.
+"""Weekly Trading Economics commodity spots → dew_defense history + R2.
 
-AISI-style: public page = latest level only. Append local/R2 history, then merge
-the spot series into the published dew_defense pack (no full FRED/Census refetch).
-Mac Mini host (residential IP).
+Budget-aware (TE ~500 req/month):
+  - Default: one batched ``markets/symbol`` for every ``status=pull`` row in
+    ``config/te_symbols.json`` (Ge + Ga today).
+  - ``--mode scrape``: germanium HTML only (0 API); gallium skipped unless API.
+  - ``--backfill`` / ``--ingest-historical``: rare historical pulls.
+  - Monthly ``dew_defense`` pack reads history only — does not call TE.
 """
 
 from __future__ import annotations
@@ -22,13 +25,16 @@ if str(_ROOT) not in sys.path:
 from lib.env import load_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
-from lib import tradingeconomics_ge as te  # noqa: E402
+from lib import te_spot  # noqa: E402
+from lib import tradingeconomics as teapi  # noqa: E402
+from lib import tradingeconomics_ge as te_ge  # noqa: E402
+from lib import theme_score as scores  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "dew_defense"
-SERIES_KEY = "germanium_spot_cny_kg"
 R2_PREFIX = f"themedata/{PACK}"
 _DEFAULT_OUT = _ROOT / "data" / PACK
+_SCORES_OUT = _ROOT / "data" / "scores"
 _CATALOG = _ROOT / "config" / "dew_defense_catalog.json"
 _ATTACHMENTS = _ROOT / "config" / "series_attachments.json"
 
@@ -42,7 +48,6 @@ def _load_attachments() -> dict:
     try:
         remote = r2lib.get_json("themedata/series_attachments.json")
         if isinstance(remote, dict) and isinstance(remote.get("attachments"), list):
-            # Prefer remote editorial map, but ensure new seed keys exist
             remote_keys = {
                 (a.get("series_key"), a.get("scope"), a.get("theme"), a.get("ticker"))
                 for a in remote["attachments"]
@@ -57,11 +62,11 @@ def _load_attachments() -> dict:
     return attachments
 
 
-def _catalog_meta(catalog: dict) -> dict:
+def _catalog_meta(catalog: dict, series_key: str) -> dict:
     for meta in catalog.get("series") or []:
-        if meta.get("key") == SERIES_KEY:
+        if meta.get("key") == series_key:
             return meta
-    raise RuntimeError(f"{SERIES_KEY} missing from dew_defense catalog")
+    raise RuntimeError(f"{series_key} missing from dew_defense catalog")
 
 
 def _merge_history(local: list[dict], remote: list[dict]) -> list[dict]:
@@ -74,22 +79,16 @@ def _merge_history(local: list[dict], remote: list[dict]) -> list[dict]:
     return [by_as_of[k] for k in sorted(by_as_of)]
 
 
-def _load_merged_history(out_dir: Path) -> list[dict]:
-    local = te.load_history(out_dir)
+def _load_merged_history(out_dir: Path, spec: te_spot.SpotSpec) -> list[dict]:
+    local = te_spot.load_history(out_dir, spec)
     remote: list[dict] = []
     try:
-        raw = r2lib.get_bytes(te.R2_HISTORY_KEY)
+        raw = r2lib.get_bytes(spec.r2_history_key)
         if raw:
-            remote = te.rows_from_r2_body(raw)
+            remote = te_spot.rows_from_body(raw)
     except Exception:
         remote = []
     return _merge_history(local, remote)
-
-
-def _write_history(out_dir: Path, rows: list[dict]) -> None:
-    path = te.history_path(out_dir)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(te.history_to_r2_body(rows), encoding="utf-8")
 
 
 def _load_existing_pack(out_dir: Path) -> dict[str, Any] | None:
@@ -125,7 +124,6 @@ def _publish_series_slice(payload: dict, key: str) -> list[str]:
             {"key": key, "derived": ser.get("derived")},
         ),
     ]
-    # Refresh pack shell + metrics for this key
     uris.append(r2lib.put_json(f"{R2_PREFIX}/latest.json", payload))
     uris.append(r2lib.put_json(f"{R2_PREFIX}/catalog.json", payload["catalog"]))
     slim = {
@@ -140,7 +138,6 @@ def _publish_series_slice(payload: dict, key: str) -> list[str]:
         if isinstance(existing_slim, dict) and isinstance(existing_slim.get("metrics"), dict):
             slim["metrics"] = dict(existing_slim["metrics"])
             slim["fetched_at"] = payload.get("fetched_at") or existing_slim.get("fetched_at")
-            # Keep pack as_of as max of prior + this series
             prior = str(existing_slim.get("as_of") or "")
             cur = str(payload.get("as_of") or "")
             slim["as_of"] = max(prior, cur)
@@ -162,41 +159,73 @@ def run(
     dry_run: bool = False,
     skip_r2: bool = False,
     skip_fetch: bool = False,
+    mode: str = "auto",
+    backfill: bool = False,
+    ingest_historical: dict[str, Path] | None = None,
+    force: bool = False,
+    only: list[str] | None = None,
 ) -> dict:
     load_env()
     catalog = _load_json(_CATALOG)
-    meta = _catalog_meta(catalog)
     attachments = _load_attachments()
+    specs = te_spot.specs_from_symbology(pull_only=True)
+    if only:
+        want = set(only)
+        specs = [s for s in specs if s.series_key in want]
+    if not specs:
+        raise RuntimeError("no TE spot series selected")
 
-    snapshot = None
-    inserted = False
-    if not skip_fetch:
-        snapshot, inserted = te.scrape_and_upsert(out_dir)
+    per_series: dict[str, Any] = {}
+    refresh_via = None
 
-    history = _load_merged_history(out_dir)
-    if snapshot and not any(r.get("as_of") == snapshot.get("as_of") for r in history):
-        history = _merge_history(history, [snapshot])
-
-    if not history:
-        raise RuntimeError("no germanium TE history — fetch once first")
-
-    # Persist merged history locally (and later R2)
-    if not dry_run:
-        _write_history(out_dir, history)
-        if snapshot:
-            te.latest_path(out_dir).write_text(
-                json.dumps(snapshot, indent=2) + "\n", encoding="utf-8"
+    ingest_historical = ingest_historical or {}
+    for spec in specs:
+        if spec.series_key in ingest_historical:
+            n = te_spot.ingest_historical_file(
+                out_dir, spec, ingest_historical[spec.series_key]
             )
+            per_series.setdefault(spec.series_key, {})["backfill_points"] = n
 
-    pts = te.points_from_history(history)
-    series_obj = ps.series_shell(meta, points=pts)
+    if backfill and not dry_run:
+        for spec in specs:
+            n = te_spot.api_backfill(out_dir, spec, force=force)
+            per_series.setdefault(spec.series_key, {})["backfill_points"] = n
+
+    if not skip_fetch:
+        mode_l = (mode or "auto").lower()
+        if mode_l == "auto":
+            stats = teapi.usage_stats()
+            mode_l = "api" if stats["routine_remaining"] > 0 else "scrape"
+
+        if mode_l == "api":
+            refreshed = te_spot.refresh_batch_api(out_dir, specs, force=force)
+            refresh_via = "api"
+            for key, (snap, inserted) in refreshed.items():
+                per_series.setdefault(key, {}).update(
+                    {"snapshot": snap, "inserted": inserted}
+                )
+        elif mode_l == "scrape":
+            # Ge only — public HTML; Ga needs API
+            refresh_via = "scrape"
+            for spec in specs:
+                if spec.series_key == "germanium_spot_cny_kg":
+                    snap, inserted = te_ge.scrape_and_upsert(out_dir)
+                    per_series.setdefault(spec.series_key, {}).update(
+                        {"snapshot": snap, "inserted": inserted}
+                    )
+                else:
+                    per_series.setdefault(spec.series_key, {})["note"] = (
+                        "scrape mode: no HTML fallback; history unchanged"
+                    )
+        else:
+            raise ValueError(f"unknown mode {mode!r}")
 
     existing = _load_existing_pack(out_dir)
     if existing is None:
         existing = {
             "schema_version": SCHEMA_VERSION,
             "pack": PACK,
-            "source": "Trading Economics germanium spot (partial)",
+            "source": "Trading Economics commodity spots",
             "catalog": catalog,
             "attachments": attachments,
             "series": {},
@@ -204,29 +233,53 @@ def run(
             "notes": [],
         }
     else:
+        existing["pack"] = PACK
         existing["catalog"] = catalog
         existing["attachments"] = attachments
 
-    existing["series"][SERIES_KEY] = series_obj
-    existing["fetched_at"] = (snapshot or {}).get("fetched_at") or datetime.now(
-        timezone.utc
-    ).isoformat()
-    # Pack as_of: max across series latest dates when available
+    histories: dict[str, list[dict]] = {}
+    for spec in specs:
+        history = _load_merged_history(out_dir, spec)
+        snap = (per_series.get(spec.series_key) or {}).get("snapshot")
+        if snap and not any(r.get("as_of") == snap.get("as_of") for r in history):
+            history = _merge_history(history, [snap])
+        if not history:
+            raise RuntimeError(
+                f"no history for {spec.series_key} — run --backfill once first"
+            )
+        histories[spec.series_key] = history
+        if not dry_run:
+            te_spot.write_history(out_dir, spec, history)
+
+        meta = _catalog_meta(catalog, spec.series_key)
+        pts = te_spot.points_from_history(history)
+        existing["series"][spec.series_key] = ps.series_shell(meta, points=pts)
+        per_series.setdefault(spec.series_key, {})["history_points"] = len(pts)
+
+    existing["fetched_at"] = datetime.now(timezone.utc).isoformat()
     as_of = ""
     for ser in (existing.get("series") or {}).values():
         latest = (ser.get("raw") or {}).get("latest") or {}
         if latest.get("date"):
             as_of = max(as_of, str(latest["date"]))
-    existing["as_of"] = as_of or (snapshot or {}).get("as_of") or ""
-    notes = list(existing.get("notes") or [])
-    note = "germanium_spot_cny_kg: Trading Economics CFD proxy (weekly scrape)"
-    if note not in notes:
-        notes.append(note)
+    existing["as_of"] = as_of
+
+    notes = [
+        n
+        for n in (existing.get("notes") or [])
+        if not str(n).startswith("germanium_spot_cny_kg:")
+        and not str(n).startswith("gallium_spot_cny_kg:")
+        and not str(n).startswith("te_spots:")
+    ]
+    notes.append(
+        f"te_spots: weekly refresh via {refresh_via or 'history-only'} "
+        f"({', '.join(s.series_key for s in specs)})"
+    )
     existing["notes"] = notes
-    existing["_ge_spot"] = {
-        "inserted": inserted,
-        "snapshot": snapshot,
-        "history_points": len(pts),
+    existing["_te_spots"] = {
+        "refresh_via": refresh_via,
+        "series": per_series,
+        "te_usage": teapi.usage_stats(),
     }
 
     if dry_run:
@@ -243,25 +296,45 @@ def run(
         json.dumps(attachments, indent=2) + "\n", encoding="utf-8"
     )
 
+    # Backdrop score: cheap recompute from pack series (no TE/source refetch)
+    score_result = scores.recompute_and_publish(
+        existing,
+        scores_dir=_SCORES_OUT,
+        skip_r2=True,  # publish below with pack objects
+        sync_recipe=False,
+        prefer_remote_recipe=False,  # use local seed (includes Ge/Ga spots)
+    )
+    existing["_theme_scores_detail"] = score_result.get("theme_scores") or []
+
     r2_uris: list[str] = []
     if not skip_r2:
-        r2_uris.append(
-            r2lib.put_bytes(
-                te.R2_HISTORY_KEY,
-                te.history_to_r2_body(history).encode("utf-8"),
-                content_type="application/x-ndjson",
-            )
-        )
-        snap_for_r2 = snapshot or (history[-1] if history else None)
-        if snap_for_r2:
+        for spec in specs:
+            hist = histories[spec.series_key]
             r2_uris.append(
-                r2lib.put_json(
-                    f"{R2_PREFIX}/{te.LATEST_NAME}",
-                    snap_for_r2,
+                r2lib.put_bytes(
+                    spec.r2_history_key,
+                    te_spot.history_to_body(hist).encode("utf-8"),
+                    content_type="application/x-ndjson",
                 )
             )
+            snap = (per_series.get(spec.series_key) or {}).get("snapshot") or (
+                hist[-1] if hist else None
+            )
+            if snap:
+                r2_uris.append(
+                    r2lib.put_json(f"{R2_PREFIX}/{spec.latest_name}", snap)
+                )
+            r2_uris.extend(_publish_series_slice(existing, spec.series_key))
         r2_uris.append(r2lib.put_json(f"{R2_PREFIX}/attachments.json", attachments))
-        r2_uris.extend(_publish_series_slice(existing, SERIES_KEY))
+        # Publish scores + sync recipe so weekly TE refresh updates the chip
+        if score_result.get("theme_scores"):
+            r2_uris.extend(
+                scores.publish_scores_r2(
+                    score_result["theme_scores"],
+                    score_result["index"],
+                    recipe=scores.load_recipe(prefer_remote=False),
+                )
+            )
     existing["_r2_uris"] = r2_uris
     return existing
 
@@ -271,12 +344,32 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out-dir", type=Path, default=_DEFAULT_OUT)
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--skip-r2", action="store_true")
+    p.add_argument("--skip-fetch", action="store_true")
+    p.add_argument("--mode", choices=("auto", "api", "scrape"), default="auto")
+    p.add_argument("--backfill", action="store_true")
     p.add_argument(
-        "--skip-fetch",
-        action="store_true",
-        help="Rebuild series from existing germanium_te_history.jsonl only",
+        "--ingest-historical",
+        action="append",
+        default=[],
+        metavar="SERIES=PATH",
+        help="Merge saved TE historical JSON (0 API). Repeatable.",
+    )
+    p.add_argument("--force", action="store_true")
+    p.add_argument(
+        "--only",
+        action="append",
+        default=[],
+        help="Limit to series_key (repeatable). Default: all pullable.",
     )
     args = p.parse_args(argv)
+
+    ingest: dict[str, Path] = {}
+    for item in args.ingest_historical:
+        if "=" not in item:
+            print(f"FAILED: --ingest-historical needs SERIES=PATH, got {item!r}", file=sys.stderr)
+            return 2
+        k, v = item.split("=", 1)
+        ingest[k.strip()] = Path(v.strip())
 
     try:
         payload = run(
@@ -284,26 +377,36 @@ def main(argv: list[str] | None = None) -> int:
             dry_run=args.dry_run,
             skip_r2=args.skip_r2,
             skip_fetch=args.skip_fetch,
+            mode=args.mode,
+            backfill=args.backfill,
+            ingest_historical=ingest or None,
+            force=args.force,
+            only=args.only or None,
         )
     except Exception as e:
         print(f"FAILED: {e}", file=sys.stderr)
         return 1
 
-    ge = payload.get("_ge_spot") or {}
-    snap = ge.get("snapshot") or {}
+    te = payload.get("_te_spots") or {}
     summary = {
         "pack": PACK,
-        "series_key": SERIES_KEY,
-        "as_of": snap.get("as_of") or payload.get("as_of"),
-        "price_cny_kg": snap.get("price_cny_kg"),
-        "history_points": ge.get("history_points"),
-        "inserted": ge.get("inserted"),
+        "as_of": payload.get("as_of"),
+        "refresh_via": te.get("refresh_via"),
+        "te_usage": te.get("te_usage"),
+        "theme_scores": payload.get("theme_scores"),
+        "series": {
+            k: {
+                "as_of": (v.get("snapshot") or {}).get("as_of"),
+                "price_cny_kg": (v.get("snapshot") or {}).get("price_cny_kg"),
+                "history_points": v.get("history_points"),
+                "inserted": v.get("inserted"),
+                "backfill_points": v.get("backfill_points"),
+            }
+            for k, v in (te.get("series") or {}).items()
+        },
         "r2": payload.get("_r2_uris") or [],
     }
     print(json.dumps(summary, indent=2))
-    if not args.dry_run:
-        flag = "new as_of" if ge.get("inserted") else "history rebuild"
-        print(f"\nwrote {args.out_dir}/{te.LATEST_NAME} ({flag})", file=sys.stderr)
     return 0
 
 
