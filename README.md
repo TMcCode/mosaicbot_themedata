@@ -49,7 +49,7 @@ chmod +x scripts/install_vps.sh scripts/run_dispatch.sh
 ./scripts/install_vps.sh
 ```
 
-Cron: `/etc/cron.d/mosaic-themedata` → daily **08:00 UTC**, `THEMEDATA_HOST=vps`.  
+Cron: `/etc/cron.d/mosaic-themedata` → daily **10:30 America/New_York**, `THEMEDATA_HOST=vps`, then themedata digest email.  
 Status: `r2://mosaic-themes/themedata/scheduler/last_runs.json`
 
 Outputs land under `data/` (gitignored). JSON schemas under `schemas/`.  

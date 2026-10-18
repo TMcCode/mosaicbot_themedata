@@ -10,7 +10,7 @@ Series that **inform themes** (macro / industry), not ticker text tables.
 
 ## Runtime
 
-- **VPS (Contabo)** — temporary home for API packs (`THEMEDATA_HOST=vps`). Daily dispatcher at 08:00 UTC via `/etc/cron.d/mosaic-themedata`.
+- **VPS (Contabo)** — temporary home for API packs (`THEMEDATA_HOST=vps`). Daily dispatcher at **10:30 America/New_York** via `/etc/cron.d/mosaic-themedata`, then themedata digest email (`THEMEDATA_SEND_DIGEST=1`).
 - **Mac Mini / residential** — AISI (Cloudflare) and eventual permanent home for this repo (`THEMEDATA_HOST=macmini`).
 
 Cadence: `config/update_schedule.json` + `jobs/dispatch_due.py` (due window **or** stale `as_of`).

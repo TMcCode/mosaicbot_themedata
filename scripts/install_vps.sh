@@ -67,16 +67,19 @@ python3 -m venv .venv
 chmod +x scripts/run_dispatch.sh scripts/install_vps.sh
 EOF
 
-echo "==> install daily cron (08:00 UTC ≈ 04:00 ET)"
+echo "==> install daily cron (10:30 America/New_York — after Fetch / morning Step 14)"
 "${SSH[@]}" bash -s <<EOF
 set -euo pipefail
 cat > '${CRON_FILE}' <<'CRON'
 # mosaicbot_themedata — temporary on Contabo; move to Mac Mini later
+# 10:30 ET: quiet vs overnight Fetch (~12–4a) and weekday Step 14 (9:40).
+# THEMEDATA_SEND_DIGEST=1 emails after this run (set only on the last tick if you add another).
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+TZ=America/New_York
 THEMEDATA_HOST=vps
 THEMEDATA_ROOT=${REMOTE_ROOT}
-0 8 * * * root ${REMOTE_ROOT}/scripts/run_dispatch.sh
+30 10 * * * root THEMEDATA_SEND_DIGEST=1 ${REMOTE_ROOT}/scripts/run_dispatch.sh
 CRON
 chmod 644 '${CRON_FILE}'
 EOF
@@ -85,5 +88,5 @@ echo "==> dry-run dispatch"
 "${SSH[@]}" "THEMEDATA_HOST=vps '${REMOTE_ROOT}/scripts/run_dispatch.sh' --dry-run"
 
 echo "OK: installed on ${VPS_USER}@${VPS_HOST}:${REMOTE_ROOT}"
-echo "    cron: ${CRON_FILE} (daily 08:00 UTC)"
+echo "    cron: ${CRON_FILE} (daily 10:30 America/New_York + themedata digest email)"
 echo "    force: ssh ... ${REMOTE_ROOT}/scripts/run_dispatch.sh --force lab_economics"
