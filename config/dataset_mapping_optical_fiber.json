@@ -1,0 +1,26 @@
+{
+  "theme": "Data Centers '25: Optical & Fiber Systems",
+  "theme_slug": "data-centers-25-optical-fiber-systems",
+  "pack": "optical_fiber",
+  "theme_dataset_ids": [
+    "communications_equipment_new_orders",
+    "fiber_optic_cable_ppi",
+    "semi_electronic_components_ip",
+    "optical_fiber_cable_import_value",
+    "optical_transceiver_import_value",
+    "hyperscaler_capex",
+    "capex_msft",
+    "capex_googl",
+    "capex_meta",
+    "capex_amzn",
+    "capex_orcl",
+    "hyperscaler_subsea_rfs_km",
+    "subsea_other_rfs_km",
+    "subsea_cable_rfs_km",
+    "germanium_spot_cny_kg",
+    "gallium_spot_cny_kg",
+    "pm_kalshi_tariff_critical_minerals",
+    "pm_kalshi_copper_cable_sec232"
+  ],
+  "ticker_dataset_ids": []
+}

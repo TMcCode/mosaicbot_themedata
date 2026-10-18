@@ -1,0 +1,138 @@
+{
+  "schema_version": 0,
+  "pack": "romantic_gifts",
+  "description": "Romantic Gifts '25 \u2014 US e-commerce/mail-order + UK non-store retail volume + commercial print / courier / postage cost backdrop + Kalshi Etsy GMS (chart-only). Forums separate.",
+  "series": [
+    {
+      "key": "ecommerce_mail_order_sales",
+      "source": "fred",
+      "fred_id": "MRTSSM4541USS",
+      "label": "Retail Sales: Electronic Shopping and Mail-Order Houses",
+      "official_name": "FRED MRTSSM4541USS \u2014 Retail Sales: Electronic Shopping and Mail-Order Houses, SA",
+      "short_name": "E-commerce & mail-order sales",
+      "display_name": "US e-commerce & mail-order retail sales",
+      "frequency": "monthly",
+      "unit": "usd_millions_sa",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ecommerce_mail_order_sales",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Census MRTS NAICS 4541 \u2014 demand baseline for online personalized gifting (ETSY, FLWS, CMPR)."
+    },
+    {
+      "key": "uk_nonstore_retail_volume",
+      "source": "ons",
+      "ons_cdid": "J5DZ",
+      "ons_uri": "/businessindustryandtrade/retailindustry/timeseries/j5dz/drsi",
+      "label": "RSI Volume SA: Non-store Retailing (All Business)",
+      "official_name": "ONS DRSI J5DZ \u2014 Retail Sales Index volume SA, Non-store Retailing, All Business (watch alias GBRRSL02IXOBSAM)",
+      "short_name": "UK non-store retail volume",
+      "display_name": "UK non-store retail sales volume",
+      "frequency": "monthly",
+      "unit": "index_sa",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "uk_nonstore_retail_volume",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "ONS Great Britain non-store (online/mail-order) retail volume SA. Demand proxy for Moonpig / Funky Pigeon / Card Factory digital. Watchlists often cite GBRRSL02IXOBSAM (not on FRED)."
+    },
+    {
+      "key": "commercial_printing_ppi",
+      "source": "fred",
+      "fred_id": "PCU32311K32311K",
+      "label": "PPI: Commercial Printing, Except Screen and Books",
+      "official_name": "FRED PCU32311K32311K \u2014 Producer Price Index by Industry: Commercial Printing, Except Screen and Books (watch alias PCU323111323111)",
+      "short_name": "Commercial printing PPI",
+      "display_name": "US commercial printing producer prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "commercial_printing_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Print COGS proxy for cards, photobooks, on-demand gifts (CMPR, CEWE, Moonpig). BLS/FRED industry code is 32311K (not legacy 323111)."
+    },
+    {
+      "key": "courier_express_ppi",
+      "source": "fred",
+      "fred_id": "PCU492110492110",
+      "label": "PPI: Couriers and Express Delivery Services",
+      "official_name": "FRED PCU492110492110 \u2014 Producer Price Index by Industry: Couriers and Express Delivery Services",
+      "short_name": "Courier & express PPI",
+      "display_name": "US courier & express delivery prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "courier_express_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Parcel / last-mile cost pressure for DTC cards and personalized gifts."
+    },
+    {
+      "key": "postage_cpi",
+      "source": "bls",
+      "bls_id": "CUSR0000SEEC01",
+      "label": "CPI: Postage and Delivery Services",
+      "official_name": "BLS CUSR0000SEEC01 \u2014 CPI-U Postage and Delivery Services, US City Average, SA",
+      "short_name": "Postage CPI",
+      "display_name": "US postage & delivery services CPI",
+      "frequency": "monthly",
+      "unit": "index_sa",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "postage_cpi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Stamp / postal tariff friction for physical greeting cards (CARD.LSE, MOON.LSE, ETSY card makers). Not on FRED \u2014 BLS only."
+    },
+    {
+      "key": "kalshi_etsy_q3_gms",
+      "source": "kalshi",
+      "kalshi_series": "KXETSY",
+      "kalshi_ticker": "KXETSY-26OCTGMS-2580000000",
+      "label": "Kalshi \u2014 Etsy Q3 marketplace GMS above $2.58B",
+      "official_name": "Kalshi KXETSY-26OCTGMS-2580000000 \u2014 Will Etsy report above $2.58B marketplace GMS in Q3 2026?",
+      "short_name": "Etsy Q3 GMS odds",
+      "display_name": "Kalshi: Etsy Q3 marketplace GMS >$2.58B",
+      "frequency": "daily",
+      "unit": "pct",
+      "derived": [],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "kalshi_etsy_q3_gms",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "notes": "Chart-only prediction market (ETSY). Threshold markets rotate each quarter \u2014 retarget ticker when Q3 resolves. Not in backdrop score."
+    }
+  ]
+}

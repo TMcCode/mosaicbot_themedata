@@ -390,6 +390,2253 @@
       "theme_slug": "space-supply-chain-26-surveillance-satellites",
       "ticker": "MDA.TO",
       "note": "stockthemes constituent \u2014 MDA Space \u2014 space robotics / radar / satellites (TSX)"
+    },
+    {
+      "series_key": "gpr_index",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": null,
+      "note": "Reuse dew_defense GPR \u2014 geopolitical risk backdrop for ISR demand"
+    },
+    {
+      "series_key": "usaspending_pl_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "PL",
+      "note": "Planet Labs recipient awards"
+    },
+    {
+      "series_key": "usaspending_bksy_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "BKSY",
+      "note": "BlackSky recipient awards"
+    },
+    {
+      "series_key": "usaspending_satl_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "SATL",
+      "note": "Satellogic recipient awards"
+    },
+    {
+      "series_key": "usaspending_hawk_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "HAWK",
+      "note": "HawkEye 360 recipient awards"
+    },
+    {
+      "series_key": "usaspending_mda_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "MDA.TO",
+      "note": "MDA recipient awards (USDoD side)"
+    },
+    {
+      "series_key": "usaspending_space_members_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": null,
+      "note": "Sum of member recipient awards \u2014 use for YoY of the total"
+    },
+    {
+      "series_key": "communications_equipment_new_orders",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null
+    },
+    {
+      "series_key": "fiber_optic_cable_ppi",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null
+    },
+    {
+      "series_key": "semi_electronic_components_ip",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null
+    },
+    {
+      "series_key": "optical_fiber_cable_import_value",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null
+    },
+    {
+      "series_key": "optical_transceiver_import_value",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null
+    },
+    {
+      "series_key": "hyperscaler_capex",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "FMP CapEx sum MSFT+GOOGL+META+AMZN+ORCL \u2014 YoY growth chart"
+    },
+    {
+      "series_key": "capex_msft",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 hyperscaler CapEx by company"
+    },
+    {
+      "series_key": "capex_googl",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 hyperscaler CapEx by company"
+    },
+    {
+      "series_key": "capex_meta",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 hyperscaler CapEx by company"
+    },
+    {
+      "series_key": "capex_amzn",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 hyperscaler CapEx by company"
+    },
+    {
+      "series_key": "capex_orcl",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 Oracle OCI CapEx"
+    },
+    {
+      "series_key": "hyperscaler_subsea_rfs_km",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member + score \u2014 hyperscaler-owned subsea RFS km"
+    },
+    {
+      "series_key": "subsea_other_rfs_km",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Stack member \u2014 non-hyperscaler subsea RFS km"
+    },
+    {
+      "series_key": "subsea_cable_rfs_km",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Sum-of-members for subsea stack YoY"
+    },
+    {
+      "series_key": "germanium_spot_cny_kg",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Reuse dew_defense TE Ge spot \u2014 InP / laser feedstock stress"
+    },
+    {
+      "series_key": "gallium_spot_cny_kg",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Reuse dew_defense TE Ga spot \u2014 compound-semi feedstock stress"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "COHR",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "GLW",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "LITE",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "CIEN",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "PRYMY",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "5715.T",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "INFN",
+      "note": "stockthemes constituent"
+    },
+    {
+      "series_key": "pm_kalshi_tariff_critical_minerals",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Kalshi critical-minerals tariff odds \u2014 InP / laser feedstock policy risk"
+    },
+    {
+      "series_key": "pm_kalshi_copper_cable_sec232",
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "note": "Kalshi Sec 232 copper-cable odds \u2014 copper\u2192fiber substitution catalyst"
+    },
+    {
+      "series_key": "pm_kalshi_tariff_critical_minerals",
+      "scope": "theme",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": null,
+      "note": "Kalshi critical-minerals tariff odds \u2014 shared Ge/Ga feedstock risk"
+    },
+    {
+      "series_key": "bfs_business_applications",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legal_services_employment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "professional_services_employment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legal_services_ppi",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "bfs_business_applications",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "LZ",
+      "note": "Formation demand proxy for LegalZoom"
+    },
+    {
+      "series_key": "legal_services_employment",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "TRI",
+      "note": "Legal services seat / labor base"
+    },
+    {
+      "series_key": "legal_services_employment",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "note": "Legal services seat / labor base"
+    },
+    {
+      "series_key": "legal_services_employment",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "LAW",
+      "note": "Legal services seat / labor base"
+    },
+    {
+      "series_key": "legal_services_employment",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "INTA",
+      "note": "Legal services seat / labor base"
+    },
+    {
+      "series_key": "pce_legal_services",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "corporate_profits_after_tax",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "pce_legal_services",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "note": "Legal services demand proxy for Lexis / legal segment"
+    },
+    {
+      "series_key": "pce_legal_services",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "TRI",
+      "note": "Legal services demand proxy for Westlaw / legal segment"
+    },
+    {
+      "series_key": "legaltech_software_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_harvey_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_legora_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_ai_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "lawfirm_software_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_harvey_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "note": "Competitive legal-AI forum chatter (not Lexis-specific)"
+    },
+    {
+      "series_key": "legaltech_legora_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "note": "Competitive legal-AI forum chatter (not Lexis-specific)"
+    },
+    {
+      "series_key": "legaltech_ai_tools_sentiment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_ai_sentiment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_ai_tools_sentiment",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "note": "Competitive legal-AI tools forum sentiment (Harvey/Legora/CoCounsel/Lexis/Westlaw)"
+    },
+    {
+      "series_key": "legaltech_cocounsel_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_lexis_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_westlaw_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null
+    },
+    {
+      "series_key": "legaltech_cocounsel_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "TRI"
+    },
+    {
+      "series_key": "legaltech_westlaw_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "TRI"
+    },
+    {
+      "series_key": "legaltech_lexis_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX"
+    },
+    {
+      "series_key": "poultry_ppi",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "food_services_ahe",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "food_services_employment",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "cpi_food_away_from_home",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "food_services_retail_sales",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "LOCO"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "YUM"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "QSR"
+    },
+    {
+      "series_key": "poultry_ppi",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING",
+      "note": "Chicken COGS backdrop"
+    },
+    {
+      "series_key": "poultry_ppi",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "LOCO",
+      "note": "Chicken COGS backdrop"
+    },
+    {
+      "series_key": "wingstop_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "kfc_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "el_pollo_loco_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "popeyes_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "chick_fil_a_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "daves_hot_chicken_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "raising_canes_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "named_product_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "value_deal_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "chicken_sandwich_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "wingstop_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "fastfood_lexicon_pct",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "kfc_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "chickfila_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "raising_canes_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "brand_sentiment",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "wingstop_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING"
+    },
+    {
+      "series_key": "brand_sentiment",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING"
+    },
+    {
+      "series_key": "kfc_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "YUM"
+    },
+    {
+      "series_key": "popeyes_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "QSR"
+    },
+    {
+      "series_key": "el_pollo_loco_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "LOCO"
+    },
+    {
+      "series_key": "ams_wings_whole",
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null
+    },
+    {
+      "series_key": "ams_wings_whole",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING",
+      "note": "Chicken wing COGS (AMS wholesale)"
+    },
+    {
+      "series_key": "ams_wings_whole",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "LOCO",
+      "note": "Chicken wing COGS (AMS wholesale)"
+    },
+    {
+      "series_key": "ams_wings_whole",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "YUM",
+      "note": "Chicken wing COGS (AMS wholesale)"
+    },
+    {
+      "series_key": "ams_wings_whole",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "QSR",
+      "note": "Chicken wing COGS (AMS wholesale)"
+    },
+    {
+      "series_key": "usaspending_genomics_grants",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_nhgri_grants",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "instruments_mfg_employment",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_ilmn_awards",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ILMN"
+    },
+    {
+      "series_key": "usaspending_pacb_awards",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "usaspending_ont_awards",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ONT.LSE"
+    },
+    {
+      "series_key": "bioinformatics_illumina_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_pacbio_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_nanopore_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_mgi_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_ngs_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_sequencing_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "genomics_sequencing_mentions",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_platform_sentiment",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_ngs_sentiment",
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null
+    },
+    {
+      "series_key": "bioinformatics_illumina_mentions",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ILMN"
+    },
+    {
+      "series_key": "bioinformatics_platform_sentiment",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ILMN"
+    },
+    {
+      "series_key": "bioinformatics_pacbio_mentions",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "bioinformatics_platform_sentiment",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "bioinformatics_nanopore_mentions",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ONT.LSE"
+    },
+    {
+      "series_key": "bioinformatics_platform_sentiment",
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ONT.LSE"
+    },
+    {
+      "series_key": "existing_home_sales",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null,
+      "note": "Hero housing-turnover series"
+    },
+    {
+      "series_key": "mortgage_30y",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "building_materials_retail_sales",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "housing_starts",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "building_permits",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "new_home_sales",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "lumber_ppi",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "months_supply_new_homes",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "HD",
+      "note": "Home Depot \u2014 inherits theme housing/retail backdrop"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LOW",
+      "note": "Lowe's \u2014 inherits theme housing/retail backdrop"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "FND",
+      "note": "Floor & Decor \u2014 inherits theme housing/retail backdrop"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "TSCO",
+      "note": "Tractor Supply \u2014 inherits theme housing/retail backdrop"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LESL",
+      "note": "Leslie's \u2014 inherits theme housing/retail backdrop"
+    },
+    {
+      "series_key": "se_drought_d1_pct",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "TSCO",
+      "note": "SE drought seasonal outdoor demand \u2014 ticker only, not theme score"
+    },
+    {
+      "series_key": "se_drought_d1_pct",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LESL",
+      "note": "SE drought seasonal outdoor/pool demand \u2014 ticker only, not theme score"
+    },
+    {
+      "series_key": "home_depot_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "lowes_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "floor_decor_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "tractor_supply_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "leslies_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "named_product_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null,
+      "note": "Stack sum for YoY %"
+    },
+    {
+      "series_key": "remodel_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "maintenance_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "cost_talk_mentions",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "case_shiller_national",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null,
+      "note": "Housing-cost level (home prices)"
+    },
+    {
+      "series_key": "homeimprovement_community_posts",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "homeowners_community_posts",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "diy_community_posts",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "brand_sentiment",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "remodel_sentiment",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "maintenance_sentiment",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "cost_talk_sentiment",
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null
+    },
+    {
+      "series_key": "home_depot_mentions",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "HD"
+    },
+    {
+      "series_key": "lowes_mentions",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LOW"
+    },
+    {
+      "series_key": "floor_decor_mentions",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "FND"
+    },
+    {
+      "series_key": "tractor_supply_mentions",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "TSCO"
+    },
+    {
+      "series_key": "leslies_mentions",
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LESL"
+    },
+    {
+      "series_key": "orbital_launches_monthly",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "Hero launch cadence"
+    },
+    {
+      "series_key": "usaspending_launch_logistics_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "Stack layer (ex-CLPS)"
+    },
+    {
+      "series_key": "usaspending_clps_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "Stack layer"
+    },
+    {
+      "series_key": "usaspending_launch_and_clps_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "Launch+CLPS stack sum"
+    },
+    {
+      "series_key": "usaspending_launch_members_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "Members stack sum"
+    },
+    {
+      "series_key": "usaspending_rklb_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_lunr_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_fly_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_mnts_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_spacex_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "usaspending_avio_awards",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "us_defense_spending",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "From dew_defense"
+    },
+    {
+      "series_key": "gpr_index",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "note": "From dew_defense"
+    },
+    {
+      "series_key": "starship_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "falcon_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "electron_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "neutron_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "vega_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "ariane_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "alpha_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "nova_c_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "blue_ghost_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "vigoride_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "space_launch_named_product_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "clps_mentions",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "spacex_community_posts",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "rocketlab_community_posts",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "commercialspace_community_posts",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": "space_launch_brand_sentiment",
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "RKLB",
+      "note": "Rocket Lab"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "LUNR",
+      "note": "Intuitive Machines"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "FLY",
+      "note": "Firefly"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "MNTS",
+      "note": "Momentus"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AVIO.MI",
+      "note": "Avio"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "SPCX",
+      "note": "SpaceX"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "NOC",
+      "note": "Northrop \u2014 membership only, no awards series"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "VOYG",
+      "note": "Voyager"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AADX"
+    },
+    {
+      "series_key": null,
+      "scope": "membership",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "9348.T"
+    },
+    {
+      "series_key": "usaspending_rklb_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "RKLB"
+    },
+    {
+      "series_key": "electron_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "RKLB"
+    },
+    {
+      "series_key": "neutron_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "RKLB"
+    },
+    {
+      "series_key": "usaspending_lunr_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "LUNR"
+    },
+    {
+      "series_key": "nova_c_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "LUNR"
+    },
+    {
+      "series_key": "usaspending_fly_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "FLY"
+    },
+    {
+      "series_key": "alpha_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "FLY"
+    },
+    {
+      "series_key": "blue_ghost_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "FLY"
+    },
+    {
+      "series_key": "usaspending_mnts_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "MNTS"
+    },
+    {
+      "series_key": "vigoride_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "MNTS"
+    },
+    {
+      "series_key": "usaspending_avio_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AVIO.MI"
+    },
+    {
+      "series_key": "vega_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AVIO.MI"
+    },
+    {
+      "series_key": "ariane_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AVIO.MI"
+    },
+    {
+      "series_key": "usaspending_spacex_awards",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "SPCX"
+    },
+    {
+      "series_key": "starship_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "SPCX"
+    },
+    {
+      "series_key": "falcon_mentions",
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "SPCX"
+    },
+    {
+      "series_key": "retail_sales",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "ecommerce_sales_share",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "consumer_credit",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "fed_funds_rate",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "usdc_circulating",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "kalshi_bigtech_crypto_pay",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "shop_pay_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "usdc_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "pyusd_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "arc_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "ucp_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "x402_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "base_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "smart_cash_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "visa_direct_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "agentic_named_product_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "agentic_category_mentions",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "fintech_community_posts",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "cryptocurrency_community_posts",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "agentic_brand_sentiment",
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null
+    },
+    {
+      "series_key": "shop_pay_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "usdc_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "CRCL"
+    },
+    {
+      "series_key": "pyusd_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "PYPL"
+    },
+    {
+      "series_key": "arc_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "CRCL"
+    },
+    {
+      "series_key": "base_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "COIN"
+    },
+    {
+      "series_key": "smart_cash_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "JPM"
+    },
+    {
+      "series_key": "visa_direct_mentions",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "V"
+    },
+    {
+      "series_key": "kalshi_hood_event_contracts_vol",
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "HOOD",
+      "note": "Kalshi chart-only \u2014 HOOD event contracts volume"
+    },
+    {
+      "series_key": "food_services_retail_sales",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "cpi_food_away_from_home",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "cpi_food_at_home",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "beef_ppi",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "food_services_ahe",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "consumer_sentiment",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "chilis_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "applebees_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "olive_garden_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "ihop_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "texas_roadhouse_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "dennys_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "cracker_barrel_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "red_robin_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "named_brand_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "value_deal_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "tip_labor_mentions",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "chilis_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "olivegarden_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "serverlife_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "value_sit_down_brand_sentiment",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "dennys_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "DENN"
+    },
+    {
+      "series_key": "cracker_barrel_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "CBRL"
+    },
+    {
+      "series_key": "applebees_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "DIN"
+    },
+    {
+      "series_key": "ihop_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "DIN"
+    },
+    {
+      "series_key": "red_robin_mentions",
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "RRGB"
+    },
+    {
+      "series_key": "beef_choice_cutout",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "indeed_food_service_postings",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "opentable_us_seated_diners_yoy",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "applebees_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "ihop_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "texas_roadhouse_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "cracker_barrel_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "red_robin_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "kitchenconfidential_community_posts",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "menu_grocery_yoy_spread",
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null
+    },
+    {
+      "series_key": "ecommerce_mail_order_sales",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "commercial_printing_ppi",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "courier_express_ppi",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "postage_cpi",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "kalshi_etsy_q3_gms",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "ETSY",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "FLWS",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CMPR",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CARD.LSE",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "MOON.LSE",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CWC.XETRA",
+      "note": "stockthemes constituent \u2014 inherits romantic gifts theme charts"
+    },
+    {
+      "series_key": "kalshi_etsy_q3_gms",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "ETSY"
+    },
+    {
+      "series_key": "etsy_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "moonpig_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "funky_pigeon_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "card_factory_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "vistaprint_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "cewe_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "flowers_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "romantic_gifts_named_brand_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "personalized_gift_category_mentions",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "etsysellers_community_posts",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "weddingplanning_community_posts",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "smallbusiness_community_posts",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "romantic_gifts_brand_sentiment",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "etsy_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "ETSY"
+    },
+    {
+      "series_key": "moonpig_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "MOON.LSE"
+    },
+    {
+      "series_key": "funky_pigeon_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CARD.LSE"
+    },
+    {
+      "series_key": "card_factory_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CARD.LSE"
+    },
+    {
+      "series_key": "vistaprint_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CMPR"
+    },
+    {
+      "series_key": "cewe_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CWC.XETRA"
+    },
+    {
+      "series_key": "flowers_mentions",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "FLWS"
+    },
+    {
+      "series_key": "uk_nonstore_retail_volume",
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null
+    },
+    {
+      "series_key": "uk_nonstore_retail_volume",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "MOON.LSE"
+    },
+    {
+      "series_key": "uk_nonstore_retail_volume",
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "CARD.LSE"
     }
   ]
 }

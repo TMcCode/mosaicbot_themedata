@@ -4,8 +4,9 @@
 Theme: Space Supply Chain '26: Surveillance Satellites
 (stockthemes slug: space-supply-chain-26-surveillance-satellites).
 
-v1: USASpending sat/GEOINT keyword obligations. US defense spend is attached
-from dew_defense (same series_key) — not re-fetched here.
+USASpending sat/GEOINT keyword obligations + recipient awards for theme
+constituents (PL/BKSY/SATL/HAWK/MDA). Defense spend + GPR attached from
+dew_defense — not re-fetched here.
 """
 
 from __future__ import annotations
@@ -64,23 +65,73 @@ def build_pack(
     notes: list[str] = []
     latest_date = ""
 
+    pending_derived: list[dict[str, Any]] = []
+
     for meta in catalog.get("series") or []:
         key = meta.get("key")
         if not key:
             continue
         src = meta.get("source")
+        if src == "derived_sum":
+            pending_derived.append(meta)
+            continue
         try:
             if src != "usaspending":
                 raise RuntimeError(f"unknown source {src}")
-            keywords = list(meta.get("keywords") or usa.DEFAULT_SAT_GEOINT_KEYWORDS)
-            pts = usa.fetch_monthly_obligations(
-                keywords=keywords,
-                start_date=start,
-            )
+            recipient = meta.get("recipient")
+            if recipient:
+                pts = usa.fetch_monthly_obligations(
+                    recipient_search_text=[str(recipient)],
+                    start_date=start,
+                )
+                notes.append(f"{key}: USASpending recipient={recipient!r}")
+            else:
+                keywords = list(
+                    meta.get("keywords") or usa.DEFAULT_SAT_GEOINT_KEYWORDS
+                )
+                pts = usa.fetch_monthly_obligations(
+                    keywords=keywords,
+                    start_date=start,
+                )
+                notes.append(f"{key}: USASpending keywords={keywords}")
             if not pts:
                 raise RuntimeError("no points")
-            series_out[key] = ps.series_shell(meta, points=pts)
-            notes.append(f"{key}: USASpending keywords={keywords}")
+            series_out[key] = ps.series_shell(
+                meta, points=pts, fetched_at=fetched_at
+            )
+            latest = series_out[key]["raw"]["latest"]
+            if latest and latest.get("date"):
+                latest_date = max(latest_date, str(latest["date"]))
+        except Exception as e:
+            errors.append(f"{key}: {e}")
+
+    for meta in pending_derived:
+        key = meta.get("key")
+        if not key:
+            continue
+        try:
+            parts = list(meta.get("sum_of") or [])
+            if not parts:
+                raise RuntimeError("derived_sum missing sum_of")
+            by_date: dict[str, float] = {}
+            missing = [k for k in parts if k not in series_out]
+            if missing:
+                raise RuntimeError(f"missing components: {missing}")
+            for part_key in parts:
+                for p in series_out[part_key]["raw"]["points"]:
+                    d, v = p.get("date"), p.get("value")
+                    if d is None or v is None:
+                        continue
+                    by_date[str(d)] = by_date.get(str(d), 0.0) + float(v)
+            pts = [
+                {"date": d, "value": by_date[d]} for d in sorted(by_date.keys())
+            ]
+            if not pts:
+                raise RuntimeError("no points after sum")
+            series_out[key] = ps.series_shell(
+                meta, points=pts, fetched_at=fetched_at
+            )
+            notes.append(f"{key}: derived_sum of {parts}")
             latest = series_out[key]["raw"]["latest"]
             if latest and latest.get("date"):
                 latest_date = max(latest_date, str(latest["date"]))
@@ -93,7 +144,7 @@ def build_pack(
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
-        "source": "USASpending (sat/GEOINT keywords)",
+        "source": "USASpending (sat/GEOINT keywords + recipient awards)",
         "fetched_at": fetched_at,
         "as_of": latest_date,
         "catalog": catalog,

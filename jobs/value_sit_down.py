@@ -1,0 +1,523 @@
+#!/usr/bin/env python3
+"""Value sit-down casual dining backdrop pack; publish to R2.
+
+Theme: Restaurants '26: Value Sit Down
+(stockthemes slug: restaurants-26-value-sit-down).
+
+FRED food-services sales / CPI food away+at-home / beef PPI / UMich sentiment
++ BLS food-services AHE + USDA Choice cutout + Indeed Hiring Lab + OpenTable
+seated YoY. Forums in value_sit_down_forums.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+from lib.env import load_env, require_env  # noqa: E402
+from lib import r2 as r2lib  # noqa: E402
+from lib import pack_series as ps  # noqa: E402
+from lib import fred as fredlib  # noqa: E402
+from lib import theme_score as scores  # noqa: E402
+from lib import usda_ams_beef as beef  # noqa: E402
+from lib import indeed_hiring_lab as indeed  # noqa: E402
+from lib import opentable_soti as ot  # noqa: E402
+
+SCHEMA_VERSION = 0
+PACK = "value_sit_down"
+R2_PREFIX = f"themedata/{PACK}"
+UA = "mosaicbot_themedata/0.1 (+value_sit_down)"
+BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
+_DEFAULT_OUT = _ROOT / "data" / PACK
+_SCORES_OUT = _ROOT / "data" / "scores"
+_CATALOG = _ROOT / "config" / "value_sit_down_catalog.json"
+_ATTACHMENTS = _ROOT / "config" / "series_attachments.json"
+
+
+def _load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _load_attachments() -> dict:
+    attachments = (
+        _load_json(_ATTACHMENTS) if _ATTACHMENTS.exists() else {"attachments": []}
+    )
+    try:
+        remote = r2lib.get_json("themedata/series_attachments.json")
+        if isinstance(remote, dict) and isinstance(remote.get("attachments"), list):
+            attachments = remote
+    except Exception:
+        pass
+    return attachments
+
+
+def _fred_csv(series_id: str) -> list[tuple[str, float]]:
+    return fredlib.fetch_series(series_id)
+
+
+def _period_to_date(year: str, period: str) -> str | None:
+    y = int(year)
+    if period == "M13":
+        return None
+    if period.startswith("M") and len(period) == 3:
+        month = int(period[1:])
+        return f"{y:04d}-{month:02d}-01"
+    return None
+
+
+def fetch_bls_series(
+    series_ids: list[str],
+    *,
+    start_year: int,
+    end_year: int,
+    api_key: str,
+) -> dict[str, list[dict[str, Any]]]:
+    payload = {
+        "seriesid": series_ids,
+        "startyear": str(start_year),
+        "endyear": str(end_year),
+        "registrationkey": api_key,
+    }
+    body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        BLS_URL,
+        data=body,
+        headers={"Content-Type": "application/json", "User-Agent": UA},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            raw = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")[:500]
+        raise RuntimeError(f"BLS HTTP {e.code}: {detail}") from e
+
+    if raw.get("status") != "REQUEST_SUCCEEDED":
+        raise RuntimeError(
+            f"BLS status={raw.get('status')!r} message={raw.get('message')!r}"
+        )
+
+    out: dict[str, list[dict[str, Any]]] = {}
+    for series in raw.get("Results", {}).get("series", []):
+        sid = series.get("seriesID")
+        rows = []
+        for row in series.get("data", []):
+            rows.append(
+                {
+                    "year": row.get("year"),
+                    "period": row.get("period"),
+                    "value": row.get("value"),
+                }
+            )
+        out[str(sid)] = rows
+    return out
+
+
+def bls_rows_to_points(rows: list[dict[str, Any]]) -> list[dict[str, float]]:
+    pts: list[dict[str, float]] = []
+    for row in rows:
+        year, period, value = row.get("year"), row.get("period"), row.get("value")
+        if not year or not period or value in (None, "", "-"):
+            continue
+        d = _period_to_date(str(year), str(period))
+        if not d:
+            continue
+        try:
+            v = float(value)
+        except (TypeError, ValueError):
+            continue
+        pts.append({"date": d, "value": v})
+    pts.sort(key=lambda p: p["date"])
+    return pts
+
+
+def build_pack(
+    *,
+    catalog: dict,
+    attachments: dict,
+    start_year: int,
+    end_year: int,
+    out_dir: Path,
+) -> dict[str, Any]:
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    start = f"{start_year:04d}-01-01"
+    series_out: dict[str, Any] = {}
+    errors: list[str] = []
+    notes: list[str] = []
+    latest_date = ""
+
+    bls_ids = [
+        str(m["bls_id"])
+        for m in (catalog.get("series") or [])
+        if m.get("source") == "bls" and m.get("bls_id")
+    ]
+    bls_raw: dict[str, list[dict[str, Any]]] = {}
+    if bls_ids:
+        try:
+            api_key = require_env("BLS_API_KEY")["BLS_API_KEY"]
+            # BLS v2 allows ≤10 ids and ≤20 years per request; split by decade if needed.
+            for y0 in range(start_year, end_year + 1, 20):
+                y1 = min(y0 + 19, end_year)
+                chunk = fetch_bls_series(
+                    bls_ids, start_year=y0, end_year=y1, api_key=api_key
+                )
+                for sid, rows in chunk.items():
+                    bls_raw.setdefault(sid, []).extend(rows)
+        except Exception as e:
+            errors.append(f"bls_batch: {e}")
+            notes.append(f"BLS batch failed ({e}); series with FRED fallback will use it")
+
+    # USDA Choice cutout — Datamart backfill (PDF fallback)
+    try:
+        snap, n_up = beef.scrape_and_upsert(out_dir, fetched_at=fetched_at)
+        notes.append(
+            f"beef_choice_cutout: AMS {snap.get('date')} "
+            f"Choice={snap.get('choice_600_900')} "
+            f"({n_up} upserts, {snap.get('history_days')} days via "
+            f"{snap.get('source_note', 'datamart')})"
+        )
+    except Exception as e:
+        errors.append(f"beef_choice_cutout scrape: {e}")
+
+    # OpenTable — soft-fail (Akamai); keep prior history
+    try:
+        _ot_pts, ot_note = ot.scrape_and_upsert(out_dir, fetched_at=fetched_at)
+        notes.append(ot_note)
+    except Exception as e:
+        errors.append(f"opentable_us_seated_diners_yoy scrape: {e}")
+        notes.append(
+            f"OpenTable scrape failed ({e}); using local history if present"
+        )
+
+    for meta in catalog.get("series") or []:
+        key = meta.get("key")
+        if not key:
+            continue
+        src = meta.get("source")
+        try:
+            if src == "fred":
+                sid = meta["fred_id"]
+                pts = [
+                    {"date": d, "value": v}
+                    for d, v in _fred_csv(sid)
+                    if d >= start
+                ]
+                notes.append(f"{key}: FRED {sid}")
+            elif src == "bls":
+                sid = str(meta["bls_id"])
+                pts = bls_rows_to_points(bls_raw.get(sid) or [])
+                pts = [p for p in pts if p["date"] >= start]
+                notes.append(f"{key}: BLS {sid}")
+                if not pts and meta.get("fallback_source") == "fred":
+                    fsid = meta["fallback_fred_id"]
+                    pts = [
+                        {"date": d, "value": v}
+                        for d, v in _fred_csv(fsid)
+                        if d >= start
+                    ]
+                    notes.append(f"{key}: BLS empty → FRED fallback {fsid}")
+            elif src == "usda_ams_beef":
+                pts = [p for p in beef.points_from_history(out_dir) if p["date"] >= start]
+                notes.append(f"{key}: USDA AMS LM_XB403 history ({len(pts)} days)")
+            elif src == "indeed_hiring_lab":
+                daily = indeed.points_food_service()
+                pts = [
+                    p
+                    for p in indeed.weekly_last(daily)
+                    if p["date"] >= start
+                ]
+                notes.append(
+                    f"{key}: Indeed Hiring Lab Food Prep & Service "
+                    f"({len(pts)} weeks from {len(daily)} daily)"
+                )
+            elif src == "opentable_soti":
+                pts = [p for p in ot.points_from_history(out_dir) if p["date"] >= start]
+                notes.append(f"{key}: OpenTable SOTI history ({len(pts)} weeks)")
+            elif src == "derived_spread":
+                # Built after left/right series exist (second pass below).
+                continue
+            else:
+                raise RuntimeError(f"unknown source {src}")
+
+            if not pts:
+                # BLS request can 503 before bls_raw is filled — try catalog fallback
+                if src == "bls" and meta.get("fallback_source") == "fred":
+                    fsid = meta["fallback_fred_id"]
+                    pts = [
+                        {"date": d, "value": v}
+                        for d, v in _fred_csv(fsid)
+                        if d >= start
+                    ]
+                    notes.append(f"{key}: BLS unavailable → FRED fallback {fsid}")
+                if not pts:
+                    raise RuntimeError("no points")
+            series_out[key] = ps.series_shell(
+                meta, points=pts, fetched_at=fetched_at
+            )
+            latest = series_out[key]["raw"]["latest"]
+            if latest and latest.get("date"):
+                latest_date = max(latest_date, str(latest["date"]))
+        except Exception as e:
+            errors.append(f"{key}: {e}")
+
+    # Derived spreads (e.g. menu YoY − grocery YoY)
+    from lib import transforms as tx
+
+    for meta in catalog.get("series") or []:
+        if meta.get("source") != "derived_spread":
+            continue
+        key = meta.get("key")
+        if not key:
+            continue
+        try:
+            left_key = meta["left_series_key"]
+            right_key = meta["right_series_key"]
+            left_metric = meta.get("left_metric") or "yoy_pct"
+            right_metric = meta.get("right_metric") or "yoy_pct"
+            left_ser = series_out.get(left_key)
+            right_ser = series_out.get(right_key)
+            if not left_ser or not right_ser:
+                raise RuntimeError(f"missing {left_key} or {right_key}")
+            left_pts = (
+                (left_ser.get("derived") or {}).get(left_metric) or {}
+            ).get("points") or []
+            right_pts = (
+                (right_ser.get("derived") or {}).get(right_metric) or {}
+            ).get("points") or []
+            pts = tx.series_spread(left_pts, right_pts)
+            if not pts:
+                raise RuntimeError("no overlapping dates")
+            series_out[key] = ps.series_shell(
+                meta, points=pts, fetched_at=fetched_at
+            )
+            latest = series_out[key]["raw"]["latest"]
+            if latest and latest.get("date"):
+                latest_date = max(latest_date, str(latest["date"]))
+            notes.append(
+                f"{key}: {left_key}.{left_metric} − {right_key}.{right_metric} "
+                f"({len(pts)} months)"
+            )
+        except Exception as e:
+            errors.append(f"{key}: {e}")
+
+    if not series_out:
+        raise RuntimeError("no series built: " + "; ".join(errors))
+
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "pack": PACK,
+        "source": (
+            "FRED/BLS macro + USDA Choice cutout + Indeed Hiring Lab + OpenTable SOTI"
+        ),
+        "fetched_at": fetched_at,
+        "as_of": latest_date,
+        "catalog": catalog,
+        "attachments": attachments,
+        "series": series_out,
+        "errors": errors,
+        "notes": notes,
+    }
+
+
+def _write_local(out_dir: Path, payload: dict) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "latest.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8"
+    )
+    (out_dir / "catalog.json").write_text(
+        json.dumps(payload["catalog"], indent=2) + "\n", encoding="utf-8"
+    )
+    (out_dir / "attachments.json").write_text(
+        json.dumps(payload["attachments"], indent=2) + "\n", encoding="utf-8"
+    )
+    raw_dir = out_dir / "raw"
+    der_dir = out_dir / "derived"
+    raw_dir.mkdir(exist_ok=True)
+    der_dir.mkdir(exist_ok=True)
+    for key, ser in (payload.get("series") or {}).items():
+        (raw_dir / f"{key}.json").write_text(
+            json.dumps(
+                {
+                    "key": key,
+                    "label": ser.get("label"),
+                    "display_name": ser.get("display_name"),
+                    "frequency": ser.get("frequency"),
+                    "unit": ser.get("unit"),
+                    "points": ser["raw"]["points"],
+                    "latest": ser["raw"]["latest"],
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        (der_dir / f"{key}.json").write_text(
+            json.dumps({"key": key, "derived": ser.get("derived")}, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+
+def _publish_r2(payload: dict, out_dir: Path) -> list[str]:
+    uris = [
+        r2lib.put_json(f"{R2_PREFIX}/latest.json", payload),
+        r2lib.put_json(f"{R2_PREFIX}/catalog.json", payload["catalog"]),
+        r2lib.put_json(f"{R2_PREFIX}/attachments.json", payload["attachments"]),
+    ]
+    for hist_name in (beef.HISTORY_NAME, ot.HISTORY_NAME):
+        hist = out_dir / hist_name
+        if hist.exists():
+            uris.append(
+                r2lib.put_bytes(
+                    f"{R2_PREFIX}/{hist_name}",
+                    hist.read_bytes(),
+                    content_type="application/x-ndjson",
+                )
+            )
+    for key, ser in (payload.get("series") or {}).items():
+        uris.append(
+            r2lib.put_json(
+                f"{R2_PREFIX}/raw/{key}.json",
+                {
+                    "key": key,
+                    "label": ser.get("label"),
+                    "display_name": ser.get("display_name"),
+                    "frequency": ser.get("frequency"),
+                    "unit": ser.get("unit"),
+                    "points": ser["raw"]["points"],
+                    "latest": ser["raw"]["latest"],
+                },
+            )
+        )
+        uris.append(
+            r2lib.put_json(
+                f"{R2_PREFIX}/derived/{key}.json",
+                {"key": key, "derived": ser.get("derived")},
+            )
+        )
+    slim = {
+        "schema_version": SCHEMA_VERSION,
+        "pack": PACK,
+        "fetched_at": payload.get("fetched_at"),
+        "as_of": payload.get("as_of"),
+        "metrics": {
+            key: {
+                "raw_latest": ser["raw"]["latest"],
+                "derived_latest": {
+                    name: meta.get("latest")
+                    for name, meta in (ser.get("derived") or {}).items()
+                },
+            }
+            for key, ser in (payload.get("series") or {}).items()
+        },
+    }
+    uris.append(r2lib.put_json(f"{R2_PREFIX}/metrics_latest.json", slim))
+    return uris
+
+
+def run(
+    *,
+    out_dir: Path,
+    start_year: int,
+    end_year: int,
+    dry_run: bool = False,
+    skip_r2: bool = False,
+) -> dict:
+    load_env()
+    catalog = _load_json(_CATALOG)
+    attachments = _load_attachments()
+    payload = build_pack(
+        catalog=catalog,
+        attachments=attachments,
+        start_year=start_year,
+        end_year=end_year,
+        out_dir=out_dir,
+    )
+
+    if dry_run:
+        scores.recompute_and_publish(
+            payload, scores_dir=_SCORES_OUT, skip_r2=True, prefer_remote_recipe=False
+        )
+        return payload
+
+    _write_local(out_dir, payload)
+    score_result = scores.recompute_and_publish(
+        payload,
+        scores_dir=_SCORES_OUT,
+        skip_r2=skip_r2,
+        sync_recipe=True,
+        prefer_remote_recipe=False,
+    )
+    payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
+
+    r2_uris: list[str] = []
+    if not skip_r2:
+        r2_uris.extend(_publish_r2(payload, out_dir))
+        r2_uris.extend(score_result.get("r2_uris") or [])
+        try:
+            r2_uris.append(
+                r2lib.put_json(
+                    "themedata/series_attachments.json", payload["attachments"]
+                )
+            )
+        except Exception:
+            pass
+    payload["_r2_uris"] = r2_uris
+    return payload
+
+
+def main(argv: list[str] | None = None) -> int:
+    now_y = datetime.now(timezone.utc).year
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--out-dir", type=Path, default=_DEFAULT_OUT)
+    p.add_argument("--start-year", type=int, default=2015)
+    p.add_argument("--end-year", type=int, default=now_y)
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--skip-r2", action="store_true")
+    args = p.parse_args(argv)
+
+    try:
+        payload = run(
+            out_dir=args.out_dir,
+            start_year=args.start_year,
+            end_year=args.end_year,
+            dry_run=args.dry_run,
+            skip_r2=args.skip_r2,
+        )
+    except Exception as e:
+        print(f"FAILED: {e}", file=sys.stderr)
+        return 1
+
+    summary = {
+        "pack": PACK,
+        "as_of": payload.get("as_of"),
+        "series": list((payload.get("series") or {}).keys()),
+        "errors": payload.get("errors") or [],
+        "notes": payload.get("notes") or [],
+        "r2": payload.get("_r2_uris") or [],
+        "theme_scores": payload.get("_theme_scores_detail") or [],
+    }
+    print(json.dumps(summary, indent=2))
+    if payload.get("errors"):
+        print(
+            f"\nWARN: {len(payload['errors'])} series empty/failed",
+            file=sys.stderr,
+        )
+        for err in payload["errors"]:
+            print(f"  - {err}", file=sys.stderr)
+    if not args.dry_run:
+        print(f"\nwrote {args.out_dir}/latest.json", file=sys.stderr)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -8,31 +8,78 @@ from typing import Any
 from lib import transforms as tx
 
 
+def _yoy_lag(frequency: str) -> int:
+    if frequency == "quarterly":
+        return 4
+    if frequency == "weekly":
+        return 52
+    if frequency == "annual":
+        return 1
+    if frequency == "daily":
+        # Prefer calendar YoY via yoy_pct_calendar; lag kept as fallback only.
+        return 252
+    return 12
+
+
 def derive_metrics(
     points: list[dict[str, Any]],
     derived_names: list[str],
     *,
     frequency: str,
 ) -> dict[str, Any]:
-    lag = 4 if frequency == "quarterly" else 12
-    # Weekly YoY ≈ 52 weeks; annual YoY = 1 period
-    if frequency == "weekly":
-        lag = 52
-    elif frequency == "annual":
-        lag = 1
+    lag = _yoy_lag(frequency)
     metrics: dict[str, Any] = {}
     for name in derived_names:
         if name == "yoy_pct":
-            series = tx.yoy_pct(points, lag=lag)
+            if frequency == "daily":
+                series = tx.yoy_pct_calendar(points, years=1)
+            else:
+                series = tx.yoy_pct(points, lag=lag)
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
                 "latest": tx.latest(series),
             }
+        elif name == "m3_avg":
+            series = tx.rolling_mean_levels(points, window=3)
+            metrics[name] = {
+                "unit": "level",  # same dimension as raw; UI may reuse series unit
+                "points": series,
+                "latest": tx.latest(series),
+            }
+        elif name in ("m4_avg", "wma4"):
+            window = 20 if frequency == "daily" else 4
+            series = [
+                {"date": p["date"], "value": round(float(p["value"]), 2)}
+                for p in tx.rolling_mean_levels(points, window=window)
+            ]
+            metrics[name] = {
+                "unit": "level",
+                "points": series,
+                "latest": tx.latest(series),
+            }
         elif name == "m3_avg_yoy_pct":
             window = 3
-            yoy_lag = 12 if frequency not in ("weekly", "annual") else (52 if frequency == "weekly" else 1)
-            series = tx.rolling_mean_yoy_pct(points, window=window, lag=yoy_lag)
+            series = tx.rolling_mean_yoy_pct(
+                points, window=window, lag=_yoy_lag(frequency)
+            )
+            metrics[name] = {
+                "unit": "pct",
+                "points": series,
+                "latest": tx.latest(series),
+            }
+        elif name == "wma4_yoy_pct":
+            # 4W MA of YoY %: daily ≈ 20 sessions; weekly = 4 weeks.
+            if frequency == "daily":
+                yoy = tx.yoy_pct_calendar(points, years=1)
+                window = 20
+            else:
+                yoy = tx.yoy_pct(points, lag=lag)
+                window = 4
+            series = [
+                {"date": p["date"], "value": round(float(p["value"]), 4)}
+                for p in tx.rolling_mean_of_series(yoy, window=window)
+            ]
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
@@ -46,7 +93,9 @@ def derive_metrics(
                 "latest": tx.latest(series),
             }
         elif name == "wow_pct":
-            series = tx.yoy_pct(points, lag=1)  # 1-period % change
+            # Daily: ~5 sessions ≈ week; else 1 period.
+            wow_lag = 5 if frequency == "daily" else 1
+            series = tx.yoy_pct(points, lag=wow_lag)
             metrics[name] = {
                 "unit": "pct",
                 "points": series,

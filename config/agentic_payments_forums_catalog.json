@@ -1,0 +1,277 @@
+{
+  "schema_version": 0,
+  "pack": "agentic_payments_forums",
+  "description": "Agentic payments Reddit sidecar \u2014 weekly named product mentions + category talk + community volume + combined sentiment + thin digest (r/fintech, r/CryptoCurrency).",
+  "series": [
+    {
+      "key": "shop_pay_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Shop Pay",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Shop Pay lexicon",
+      "short_name": "Shop Pay",
+      "display_name": "Shop Pay mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "shop_pay_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "usdc_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 USDC",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting USDC lexicon",
+      "short_name": "USDC",
+      "display_name": "USDC mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "usdc_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "pyusd_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 PYUSD",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting PYUSD lexicon",
+      "short_name": "PYUSD",
+      "display_name": "PYUSD mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "pyusd_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "arc_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Arc",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Arc lexicon",
+      "short_name": "Arc",
+      "display_name": "Arc mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "arc_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ucp_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 UCP",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting UCP lexicon",
+      "short_name": "UCP",
+      "display_name": "UCP mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ucp_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "x402_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 x402",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting x402 lexicon",
+      "short_name": "x402",
+      "display_name": "x402 mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "x402_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "base_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Base",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Base lexicon",
+      "short_name": "Base",
+      "display_name": "Base L2 mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "base_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "smart_cash_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Smart Cash",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Smart Cash lexicon",
+      "short_name": "Smart Cash",
+      "display_name": "Smart Cash mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "smart_cash_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "visa_direct_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Visa Direct",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Visa Direct lexicon",
+      "short_name": "Visa Direct",
+      "display_name": "Visa Direct mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "visa_direct_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "agentic_named_product_mentions",
+      "source": "arctic_shift",
+      "label": "Named agentic-payments product mentions (sum)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting any named product lexicon",
+      "short_name": "Named products",
+      "display_name": "Named product talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "agentic_named_product_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "agentic_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts with agentic payments / stablecoin category talk",
+      "official_name": "Arctic Shift \u2014 weekly % of watched-sub posts hitting agentic/stablecoin category lexicon",
+      "short_name": "Agentic category %",
+      "display_name": "% of posts: agentic payments & stablecoins",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "agentic_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 do not stack into product stack."
+    },
+    {
+      "key": "fintech_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "fintech",
+      "label": "r/fintech weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/fintech post volume",
+      "short_name": "r/fintech",
+      "display_name": "r/fintech talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "fintech_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cryptocurrency_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "CryptoCurrency",
+      "label": "r/CryptoCurrency weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/CryptoCurrency post volume",
+      "short_name": "r/CryptoCurrency",
+      "display_name": "r/CryptoCurrency talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "cryptocurrency_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "agentic_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Agentic payments product mention sentiment",
+      "official_name": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning named payments products (\u22121..+1)",
+      "short_name": "Payments product sentiment",
+      "display_name": "Agentic payments product sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "agentic_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

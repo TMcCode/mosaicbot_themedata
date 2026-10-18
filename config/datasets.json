@@ -88,6 +88,420 @@
       "as_of_semantics": "period_end"
     },
     {
+      "id": "usaspending_pl_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending obligations for Planet Labs recipient awards (PL).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_pl_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_bksy_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending obligations for BlackSky recipient awards (BKSY).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_bksy_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_satl_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending obligations for Satellogic recipient awards (SATL).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_satl_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_hawk_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending obligations for HawkEye 360 recipient awards (HAWK).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_hawk_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_mda_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending obligations for MDA recipient awards (USDoD side) (MDA.TO).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_mda_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_space_members_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "Sum of USASpending recipient awards for Space Surveillance theme members (PL/BKSY/SATL/HAWK/MDA).",
+      "source": "usaspending",
+      "pack": "space_surveillance",
+      "series_keys": [
+        "usaspending_space_members_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "communications_equipment_new_orders",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FRED A34XNO communications equipment new orders",
+      "source": "fred",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "communications_equipment_new_orders"
+      ],
+      "as_of_semantics": "period_end",
+      "fred_id": "A34XNO"
+    },
+    {
+      "id": "fiber_optic_cable_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FRED PPI fiber optic cable manufacturing",
+      "source": "fred",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "fiber_optic_cable_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "fred_id": "PCU335921335921"
+    },
+    {
+      "id": "semi_electronic_components_ip",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FRED IP NAICS 3344 semi/electronic components",
+      "source": "fred",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "semi_electronic_components_ip"
+      ],
+      "as_of_semantics": "period_end",
+      "fred_id": "IPG3344N"
+    },
+    {
+      "id": "optical_fiber_cable_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "trade",
+      "region": "US",
+      "description": "Census HS 854470 optical fiber cable import value",
+      "source": "census_trade",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "optical_fiber_cable_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "hs6": "854470"
+    },
+    {
+      "id": "optical_fiber_cable_import_qty",
+      "license": "free",
+      "status": "map_only",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "trade",
+      "region": "US",
+      "description": "Census HS 854470 optical fiber cable import qty",
+      "source": "census_trade",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "optical_fiber_cable_import_qty"
+      ],
+      "as_of_semantics": "period_end",
+      "hs6": "854470",
+      "notes": "HS6 GEN_QY1 empty; need HS10 for fiber-meter qty."
+    },
+    {
+      "id": "optical_transceiver_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "trade",
+      "region": "US",
+      "description": "Census HS 851762 transceiver/network apparatus imports",
+      "source": "census_trade",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "optical_transceiver_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "hs6": "851762"
+    },
+    {
+      "id": "hyperscaler_capex",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP quarterly CapEx sum MSFT+GOOGL+META+AMZN+ORCL (calendar-quarter aligned)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "hyperscaler_capex"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "ORCL"
+      ]
+    },
+    {
+      "id": "capex_msft",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP MSFT quarterly CapEx (stack member)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "capex_msft"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "MSFT"
+    },
+    {
+      "id": "capex_googl",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP GOOGL quarterly CapEx (stack member)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "capex_googl"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "GOOGL"
+    },
+    {
+      "id": "capex_meta",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP META quarterly CapEx (stack member)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "capex_meta"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "META"
+    },
+    {
+      "id": "capex_amzn",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP AMZN quarterly CapEx (stack member)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "capex_amzn"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "AMZN"
+    },
+    {
+      "id": "capex_orcl",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "optical_fiber",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FMP ORCL quarterly CapEx (stack member; fiscal remapped to calendar Q)",
+      "source": "fmp",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "capex_orcl"
+      ],
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "ORCL"
+    },
+    {
+      "id": "hyperscaler_subsea_rfs_km",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "submarine cable RFS route-km",
+      "region": "Global",
+      "description": "TeleGeography annual new RFS km for hyperscaler-owned submarine cables (SubTel watchlist proxy)",
+      "source": "telegeography",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "hyperscaler_subsea_rfs_km"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "TeleGeography"
+    },
+    {
+      "id": "subsea_other_rfs_km",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "submarine cable RFS route-km",
+      "region": "Global",
+      "description": "TeleGeography annual new RFS km excluding hyperscaler owners (stack residual)",
+      "source": "telegeography",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "subsea_other_rfs_km"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "TeleGeography"
+    },
+    {
+      "id": "subsea_cable_rfs_km",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "optical_fiber",
+      "data_type": "submarine cable RFS route-km",
+      "region": "Global",
+      "description": "TeleGeography annual new RFS km for all submarine cables (sum for YoY). Prefer this id when watchlists say SubTel / Submarine Telecoms Forum new-cable km.",
+      "source": "telegeography",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "subsea_cable_rfs_km"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "TeleGeography",
+      "aliases": "SubTel; SubTel Forum; Submarine Telecoms Forum; Submarine Telecoms"
+    },
+    {
+      "id": "pm_kalshi_tariff_critical_minerals",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "daily",
+      "sector": "optical_fiber",
+      "data_type": "prediction_market",
+      "region": "US",
+      "description": "Kalshi odds of critical-minerals tariffs in 2026 (Ge/Ga/In feedstock).",
+      "source": "kalshi",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "pm_kalshi_tariff_critical_minerals"
+      ],
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "id": "pm_kalshi_copper_cable_sec232",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "daily",
+      "sector": "optical_fiber",
+      "data_type": "prediction_market",
+      "region": "US",
+      "description": "Kalshi odds insulated copper cable faces Sec 232 before Jan 2027.",
+      "source": "kalshi",
+      "pack": "optical_fiber",
+      "series_keys": [
+        "pm_kalshi_copper_cable_sec232"
+      ],
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
       "id": "germanium_import_value",
       "license": "free",
       "status": "map_only",
@@ -185,7 +599,8 @@
         "germanium_spot_cny_kg"
       ],
       "as_of_semantics": "vendor_as_of",
-      "te_symbol": "GECNYBGQ:COM"
+      "te_symbol": "GECNYBGQ:COM",
+      "aliases": "Germanium; Germanium spot; GECNYBGQ; GECNYBGQ:COM"
     },
     {
       "id": "gallium_spot_cny_kg",
@@ -204,7 +619,8 @@
         "gallium_spot_cny_kg"
       ],
       "as_of_semantics": "vendor_as_of",
-      "te_symbol": "GAC:COM"
+      "te_symbol": "GAC:COM",
+      "aliases": "Gallium; Gallium spot; GAC; GAC:COM"
     },
     {
       "id": "pm_china_ga_export_reinstate",
@@ -577,6 +993,428 @@
       ],
       "as_of_semantics": "period_end",
       "fred_id": "TTLCONS"
+    },
+    {
+      "id": "fred",
+      "license": "free",
+      "status": "map_only",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "macro",
+      "data_type": "macro economic time series",
+      "region": "US",
+      "description": "St. Louis Fed FRED API provider umbrella. Prefer a specific series (fred_id / dataset id) when the watchlist names one; this id only means the source is FRED.",
+      "source": "fred",
+      "pack": null,
+      "series_keys": [],
+      "as_of_semantics": "period_end",
+      "provider": "FRED",
+      "aliases": "FRED (Federal Reserve Economic Data); Federal Reserve Economic Data (FRED); Federal Reserve Economic Data; Federal Reserve Bank of St. Louis (FRED); Federal Reserve Bank of St. Louis; FRED (Federal Reserve Bank of St. Louis); St. Louis Fed; St. Louis Fed FRED; FRED API; Federal Reserve (FRED)",
+      "provider_umbrella": true
+    },
+    {
+      "id": "trading_economics",
+      "license": "paid",
+      "status": "map_only",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "commodities",
+      "data_type": "market / macro time series",
+      "region": "Global",
+      "description": "Trading Economics provider umbrella. Prefer a specific pull series (te_symbols.json / te_symbol) when known; this id only means the source is TE. API budget is scarce \u2014 do not auto-search new symbols.",
+      "source": "tradingeconomics",
+      "pack": null,
+      "series_keys": [],
+      "as_of_semantics": "vendor_as_of",
+      "provider": "Trading Economics",
+      "aliases": "TradingEconomics; tradingeconomics.com; TE",
+      "provider_umbrella": true
+    },
+    {
+      "id": "bfs_business_applications",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "business formation applications",
+      "region": "US",
+      "description": "Census Business Formation Statistics total business applications (SA). Proxy for formation / LegalZoom demand.",
+      "source": "fred",
+      "pack": "legal_software",
+      "series_keys": [
+        "bfs_business_applications"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Census Bureau",
+      "fred_id": "BABATOTALSAUS",
+      "aliases": "Business Formation Statistics; BFS; BABATOTALSAUS; Census BFS"
+    },
+    {
+      "id": "pce_legal_services",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "legal services consumer spending",
+      "region": "US",
+      "description": "FRED DGALRC1A027NBEA (watch alias PCESLS) \u2014 annual PCE Legal Services. Direct demand proxy for legal info/practice software.",
+      "source": "fred",
+      "pack": "legal_software",
+      "series_keys": [
+        "pce_legal_services"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BEA / FRED",
+      "fred_id": "DGALRC1A027NBEA",
+      "aliases": "PCESLS; DGALRC1A027NBEA; PCE Legal Services; Personal Consumption Expenditures Legal Services"
+    },
+    {
+      "id": "corporate_profits_after_tax",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "corporate profits",
+      "region": "US",
+      "description": "FRED CPATAX \u2014 corporate profits after tax. Soft budget proxy for legal/risk software spend.",
+      "source": "fred",
+      "pack": "legal_software",
+      "series_keys": [
+        "corporate_profits_after_tax"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BEA / FRED",
+      "fred_id": "CPATAX",
+      "aliases": "CPATAX; Corporate Profits After Tax; corporate profits"
+    },
+    {
+      "id": "legaltech_software_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit legaltech software mention counts",
+      "region": "US / global (Reddit)",
+      "description": "Weekly count of r/legaltech posts matching legal-software lexicon via Arctic Shift. Best-effort scrape; not official Reddit API.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_software_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "r/legaltech; legaltech reddit; legal AI forum mentions"
+    },
+    {
+      "id": "legaltech_harvey_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Harvey mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning Harvey (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_harvey_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Harvey AI; Harvey legal"
+    },
+    {
+      "id": "legaltech_legora_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Legora mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning Legora (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_legora_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Legora"
+    },
+    {
+      "id": "legaltech_cocounsel_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit CoCounsel mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning CoCounsel (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_cocounsel_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "CoCounsel; Thomson Reuters CoCounsel"
+    },
+    {
+      "id": "legaltech_lexis_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Lexis mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning Lexis or Prot\u00e9g\u00e9 (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_lexis_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Lexis; Lexis+; Prot\u00e9g\u00e9; RELX Lexis"
+    },
+    {
+      "id": "legaltech_westlaw_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Westlaw mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning Westlaw (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_westlaw_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Westlaw; Thomson Reuters Westlaw"
+    },
+    {
+      "id": "lawfirm_clio_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Clio mentions",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/lawfirm posts mentioning Clio (Arctic Shift).",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "lawfirm_clio_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Clio; Clio Manage"
+    },
+    {
+      "id": "legaltech_ai_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit legal AI category talk",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/legaltech posts mentioning genAI/ChatGPT/LLM \u2014 category talk, not a named product brand. Keep separate from product-brand stacks.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_ai_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "legal ChatGPT; legal LLM; generative AI legal"
+    },
+    {
+      "id": "lawfirm_software_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit lawfirm software mention counts",
+      "region": "US / global (Reddit)",
+      "description": "Weekly r/lawfirm posts matching legal-software lexicon via Arctic Shift.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "lawfirm_software_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "r/lawfirm; Clio reddit; practice management reddit"
+    },
+    {
+      "id": "legaltech_ai_tools_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit legal AI tools sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Weekly mean lexicon polarity (\u22121..+1) of r/legaltech posts mentioning Harvey, Legora, CoCounsel, Lexis, or Westlaw (unique posts). Heuristic, not LLM.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_ai_tools_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "AI tools sentiment; Harvey Legora sentiment; legaltech product sentiment"
+    },
+    {
+      "id": "legaltech_harvey_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Harvey sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Weekly mean lexicon polarity (\u22121..+1) of Harvey-mentioning r/legaltech posts via Arctic Shift. Heuristic, not LLM.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_harvey_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Harvey sentiment; Harvey polarity"
+    },
+    {
+      "id": "legaltech_legora_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Legora sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Weekly mean lexicon polarity of Legora-mentioning r/legaltech posts.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_legora_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Legora sentiment"
+    },
+    {
+      "id": "legaltech_ai_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit legal AI sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Weekly mean lexicon polarity of genAI/LLM r/legaltech posts.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_ai_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "legal AI sentiment"
+    },
+    {
+      "id": "lawfirm_clio_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit Clio sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Weekly mean lexicon polarity of Clio-mentioning r/lawfirm posts.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "lawfirm_clio_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "Clio sentiment"
+    },
+    {
+      "id": "legal_services_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "legal services employment",
+      "region": "US",
+      "description": "BLS CES all employees in Legal Services (NAICS 5411). Seat / billable base for legal software.",
+      "source": "bls",
+      "pack": "legal_software",
+      "series_keys": [
+        "legal_services_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "bls_id": "CES6054110001",
+      "aliases": "CES6054110001; BLS legal services; NAICS 5411 employment; Legal Services employment"
+    },
+    {
+      "id": "professional_services_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "professional services employment",
+      "region": "US",
+      "description": "BLS CES all employees in Professional, Scientific, and Technical Services (NAICS 54).",
+      "source": "bls",
+      "pack": "legal_software",
+      "series_keys": [
+        "professional_services_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "bls_id": "CES6054000001",
+      "aliases": "CES6054000001; NAICS 54 employment; Professional Scientific and Technical Services employment"
+    },
+    {
+      "id": "legal_services_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "legal_software",
+      "data_type": "legal services producer prices",
+      "region": "US",
+      "description": "BLS PPI by Industry: Offices of Lawyers \u2014 pricing / realization proxy.",
+      "source": "bls",
+      "pack": "legal_software",
+      "series_keys": [
+        "legal_services_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "bls_id": "PCU541110541110",
+      "aliases": "PCU541110541110; Offices of Lawyers PPI; legal services PPI"
     },
     {
       "id": "yipitdata_e_commerce_pricing_product_availability",
@@ -15308,6 +16146,2971 @@
       "provider_description": "ENR price reporters survey recurring suppliers in 20 major U.S. cities and combine local material prices with union wage rates using fixed index baskets.",
       "map_bucket": "AltData",
       "notes": "Paid map \u2014 from alt_data_map.csv; do not pull/publish until redistribution license. Disambiguated duplicate provider+data_type."
+    },
+    {
+      "id": "legaltech_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "legal_software",
+      "data_type": "reddit named legal product post count",
+      "region": "US / global (Reddit)",
+      "description": "Weekly unique r/legaltech posts mentioning Harvey|Legora|CoCounsel|Lexis|Westlaw. Stack sum_series_key for total YoY.",
+      "source": "arctic_shift",
+      "pack": "legal_forums",
+      "series_keys": [
+        "legaltech_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "poultry_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "restaurants_chicken",
+      "data_type": "processed poultry PPI",
+      "region": "US",
+      "description": "BLS PPI commodity processed poultry (WPU022104). Chicken COGS proxy for QSR chicken buyers.",
+      "source": "fred",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "poultry_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "WPU022104; poultry PPI; processed poultry; chicken commodity prices",
+      "fred_id": "WPU022104"
+    },
+    {
+      "id": "food_services_ahe",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "restaurants_chicken",
+      "data_type": "food services average hourly earnings",
+      "region": "US",
+      "description": "BLS CES7072200003 NAICS 722 food services AHE. Fallback FRED CES7000000003 leisure & hospitality if BLS down.",
+      "source": "bls",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "food_services_ahe"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "CES7072200003; NAICS 722 AHE; food services wages; restaurant AHE",
+      "bls_id": "CES7072200003"
+    },
+    {
+      "id": "food_services_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "restaurants_chicken",
+      "data_type": "food services employment",
+      "region": "US",
+      "description": "BLS CES all employees, Food Services and Drinking Places (NAICS 722).",
+      "source": "fred",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "food_services_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "CES7072200001; restaurant employment; NAICS 722 employment",
+      "fred_id": "CES7072200001"
+    },
+    {
+      "id": "cpi_food_away_from_home",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "restaurants_chicken",
+      "data_type": "CPI food away from home",
+      "region": "US",
+      "description": "BLS CPI-U Food Away From Home SA (CUSR0000SEFV).",
+      "source": "fred",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "cpi_food_away_from_home"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "CUSR0000SEFV; food away from home; restaurant CPI; menu inflation",
+      "fred_id": "CUSR0000SEFV"
+    },
+    {
+      "id": "food_services_retail_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "restaurants_chicken",
+      "data_type": "food services retail sales",
+      "region": "US",
+      "description": "FRED/Census retail sales: Food Services and Drinking Places (MRTSSM722USN).",
+      "source": "fred",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "food_services_retail_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "FRED / U.S. Census Bureau",
+      "fred_id": "MRTSSM722USN",
+      "aliases": "MRTSSM722USN; food services sales; restaurant retail sales; NAICS 722 sales"
+    },
+    {
+      "id": "wingstop_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit Wingstop mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit Wingstop mentions for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "wingstop_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit Wingstop mentions"
+    },
+    {
+      "id": "kfc_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit KFC mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit KFC mentions for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "kfc_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit KFC mentions"
+    },
+    {
+      "id": "el_pollo_loco_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit El Pollo Loco mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit El Pollo Loco mentions for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "el_pollo_loco_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit El Pollo Loco mentions"
+    },
+    {
+      "id": "popeyes_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit Popeyes mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit Popeyes mentions for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "popeyes_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit Popeyes mentions"
+    },
+    {
+      "id": "chick_fil_a_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit Chick-fil-A mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit Chick-fil-A mentions (competitive-set peer for chicken QSR theme).",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "chick_fil_a_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit Chick-fil-A mentions; CFA"
+    },
+    {
+      "id": "daves_hot_chicken_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit Dave's Hot Chicken mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit Dave's Hot Chicken mentions (competitive-set peer for chicken QSR theme).",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "daves_hot_chicken_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit Dave's Hot Chicken mentions; DHC"
+    },
+    {
+      "id": "raising_canes_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit Raising Cane's mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit Raising Cane's mentions (competitive-set peer for chicken QSR theme).",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "raising_canes_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit Raising Cane's mentions; Cane's"
+    },
+    {
+      "id": "chicken_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit chicken brand mentions sum",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit chicken brand mentions sum for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit chicken brand mentions sum"
+    },
+    {
+      "id": "value_deal_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit value deals mentions",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit value deals mentions for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "value_deal_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit value deals mentions"
+    },
+    {
+      "id": "chicken_sandwich_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit chicken sandwich mention share",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly % of watched chicken QSR sub posts mentioning chicken sandwich / LTOs.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "chicken_sandwich_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit chicken sandwich mentions; sandwich LTO %"
+    },
+    {
+      "id": "wingstop_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit r/Wingstop community volume",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly r/Wingstop post volume (brand-home community) for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "wingstop_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit r/Wingstop community volume"
+    },
+    {
+      "id": "kfc_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit r/KFC community volume",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly r/KFC post volume (brand-home community) for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "kfc_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit r/KFC community volume"
+    },
+    {
+      "id": "fastfood_lexicon_pct",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit r/fastfood chicken lexicon hit rate",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly % of r/fastfood posts matching chicken QSR lexicon.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "fastfood_lexicon_pct"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit r/fastfood lexicon %; chicken talk share"
+    },
+    {
+      "id": "chickfila_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit r/ChickFilA community volume",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly r/ChickFilA post volume (brand-home community) for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "chickfila_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit r/ChickFilA; Chick-fil-A subreddit"
+    },
+    {
+      "id": "raising_canes_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit r/RaisingCanes community volume",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly r/RaisingCanes post volume (brand-home community) for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "raising_canes_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit r/RaisingCanes; Cane's subreddit"
+    },
+    {
+      "id": "chicken_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "reddit chicken brand sentiment",
+      "region": "US / global (Reddit)",
+      "description": "Arctic Shift weekly reddit chicken brand sentiment for chicken QSR theme.",
+      "source": "arctic_shift",
+      "pack": "chicken_forums",
+      "series_keys": [
+        "brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift",
+      "aliases": "reddit chicken brand sentiment"
+    },
+    {
+      "id": "ams_wings_whole",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "restaurants_chicken",
+      "data_type": "USDA AMS whole wing wholesale price",
+      "region": "US",
+      "description": "USDA AMS Weekly National Chicken Report (ams_3646) Wings-Whole national wtd avg \u00a2/lb FOB plant. Free Urner Barry wing-index substitute.",
+      "source": "usda_ams",
+      "pack": "restaurants_chicken",
+      "series_keys": [
+        "ams_wings_whole"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "USDA Agricultural Marketing Service",
+      "aliases": "ams_3646; whole wings; wing prices; Urner Barry wing proxy; chicken wing wholesale"
+    },
+    {
+      "id": "usaspending_genomics_grants",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "genomics",
+      "data_type": "grant_awards",
+      "region": "US",
+      "description": "USASpending assistance obligations for NGS / genomic sequencing keywords. Theme proxy for Genomics '25: Sequencing Platforms & Instruments.",
+      "source": "usaspending",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "usaspending_genomics_grants"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_nhgri_grants",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "genomics",
+      "data_type": "grant_awards",
+      "region": "US",
+      "description": "USASpending assistance obligations for CFDA 93.172 (NHGRI Human Genome Research).",
+      "source": "usaspending",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "usaspending_nhgri_grants"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_ilmn_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "genomics",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending contract obligations to Illumina (ILMN).",
+      "source": "usaspending",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "usaspending_ilmn_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_pacb_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "genomics",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending contract obligations to Pacific Biosciences (PACB).",
+      "source": "usaspending",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "usaspending_pacb_awards"
+      ],
+      "as_of_semantics": "period_end"
+    },
+    {
+      "id": "usaspending_ont_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "genomics",
+      "data_type": "contract_awards",
+      "region": "US",
+      "description": "USASpending contract obligations to Oxford Nanopore (ONT.LSE).",
+      "source": "usaspending",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "usaspending_ont_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Oxford Nanopore; Nanopore Technologies; ONT"
+    },
+    {
+      "id": "instruments_mfg_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "industrials",
+      "data_type": "employment",
+      "region": "US",
+      "description": "FRED/BLS CES3133450001 \u2014 NAICS 3345 navigational, measuring, electromedical & control instruments manufacturing employment.",
+      "source": "fred",
+      "pack": "sequencing_platforms",
+      "series_keys": [
+        "instruments_mfg_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "CES3133450001; lab instruments employment; analytical instruments jobs"
+    },
+    {
+      "id": "bioinformatics_illumina_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly r/bioinformatics posts mentioning Illumina / NovaSeq / NextSeq / MiSeq / DRAGEN",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_illumina_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Illumina"
+    },
+    {
+      "id": "bioinformatics_pacbio_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly r/bioinformatics posts mentioning PacBio / Revio / HiFi",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_pacbio_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "PacBio"
+    },
+    {
+      "id": "bioinformatics_nanopore_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly r/bioinformatics posts mentioning Nanopore / ONT / MinION / PromethION",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_nanopore_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Nanopore"
+    },
+    {
+      "id": "bioinformatics_mgi_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly r/bioinformatics posts mentioning MGI / DNBSEQ",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_mgi_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "MGI"
+    },
+    {
+      "id": "bioinformatics_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly unique r/bioinformatics posts mentioning any named sequencing platform brand",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Named platforms (sum)"
+    },
+    {
+      "id": "bioinformatics_ngs_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly r/bioinformatics posts mentioning NGS / long-read / WGS category terms",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_ngs_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "NGS category"
+    },
+    {
+      "id": "bioinformatics_sequencing_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly count of r/bioinformatics posts matching sequencing lexicon",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_sequencing_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "r/bioinformatics"
+    },
+    {
+      "id": "genomics_sequencing_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly count of r/genomics posts matching sequencing lexicon",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "genomics_sequencing_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "r/genomics"
+    },
+    {
+      "id": "bioinformatics_platform_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of r/bioinformatics posts mentioning Illumina, PacBio, Nanopore, or MGI (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_platform_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Platforms"
+    },
+    {
+      "id": "bioinformatics_ngs_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of NGS-category r/bioinformatics posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_ngs_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "NGS"
+    },
+    {
+      "id": "bioinformatics_illumina_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Illumina-mentioning r/bioinformatics posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_illumina_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Illumina sentiment"
+    },
+    {
+      "id": "bioinformatics_pacbio_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "genomics",
+      "data_type": "reddit sequencing forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of PacBio-mentioning r/bioinformatics posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "genomics_forums",
+      "series_keys": [
+        "bioinformatics_pacbio_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "PacBio sentiment"
+    },
+    {
+      "id": "existing_home_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "existing_home_sales",
+      "region": "US",
+      "description": "FRED EXHOSLUSM495S \u2014 NAR Existing Home Sales SAAR. Hero housing-turnover series for home-improvement demand.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "existing_home_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "EXHOSLUSM495S; NAR existing home sales; housing turnover"
+    },
+    {
+      "id": "new_home_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "new_home_sales",
+      "region": "US",
+      "description": "FRED HSN1F \u2014 Census new one-family houses sold SAAR.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "new_home_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "HSN1F; new single-family home sales"
+    },
+    {
+      "id": "mortgage_30y",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "mortgage_rate",
+      "region": "US",
+      "description": "FRED MORTGAGE30US \u2014 Freddie Mac 30-year fixed mortgage average.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "mortgage_30y"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "MORTGAGE30US; 30 year mortgage; Freddie Mac PMMS"
+    },
+    {
+      "id": "building_materials_retail_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "retail",
+      "data_type": "retail_sales",
+      "region": "US",
+      "description": "FRED MRTSSM444USS \u2014 Retail sales NAICS 444 building material and garden equipment dealers, SA.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "building_materials_retail_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "MRTSSM444USS; NAICS 444; home improvement retail sales"
+    },
+    {
+      "id": "housing_starts",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "housing_starts",
+      "region": "US",
+      "description": "FRED HOUST \u2014 Census housing starts SAAR.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "housing_starts"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "HOUST; housing starts"
+    },
+    {
+      "id": "building_permits",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "building_permits",
+      "region": "US",
+      "description": "FRED PERMIT \u2014 Census building permits SAAR.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "building_permits"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "PERMIT; building permits"
+    },
+    {
+      "id": "lumber_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "commodities",
+      "data_type": "producer_prices",
+      "region": "US",
+      "description": "FRED WPU081 \u2014 BLS PPI lumber and wood products.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "lumber_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "WPU081; lumber PPI; wood products PPI"
+    },
+    {
+      "id": "months_supply_new_homes",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "months_supply",
+      "region": "US",
+      "description": "FRED MSACSR \u2014 Monthly supply of new houses.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "months_supply_new_homes"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "MSACSR; months supply new homes"
+    },
+    {
+      "id": "se_drought_d1_pct",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "weather",
+      "data_type": "drought",
+      "region": "US Southeast",
+      "description": "USDM traditional D1+ area % \u2014 mean of AL/FL/GA/LA/MS/NC/SC/TN. Seasonal outdoor demand for TSCO/LESL.",
+      "source": "usdm",
+      "pack": "home_improvement",
+      "series_keys": [
+        "se_drought_d1_pct"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "USDM; southeast drought; D1 drought"
+    },
+    {
+      "id": "home_depot_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly Home Depot mentions across r/HomeImprovement, r/homeowners, r/DIY.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "home_depot_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Home Depot reddit; HD mentions"
+    },
+    {
+      "id": "lowes_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly Lowe's mentions across HI/homeowner/DIY subs.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "lowes_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Lowe's reddit; LOW mentions"
+    },
+    {
+      "id": "floor_decor_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly Floor & Decor mentions across HI/homeowner/DIY subs.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "floor_decor_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Floor and Decor reddit; FND mentions"
+    },
+    {
+      "id": "tractor_supply_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly Tractor Supply mentions across HI/homeowner/DIY subs.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "tractor_supply_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Tractor Supply reddit; TSCO mentions"
+    },
+    {
+      "id": "leslies_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly Leslie's mentions across HI/homeowner/DIY subs.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "leslies_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "Leslie's reddit; LESL mentions"
+    },
+    {
+      "id": "hi_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit home improvement forum mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly unique posts mentioning any named HI retailer (stack sum).",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "HI named retailers sum"
+    },
+    {
+      "id": "remodel_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit remodel talk share",
+      "region": "Global",
+      "description": "Arctic Shift weekly % of watched-sub posts hitting remodel/renovation lexicon.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "remodel_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "remodel talk; renovation reddit"
+    },
+    {
+      "id": "homeimprovement_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit community volume",
+      "region": "Global",
+      "description": "Arctic Shift weekly r/HomeImprovement post volume.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "homeimprovement_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "r/HomeImprovement volume"
+    },
+    {
+      "id": "homeowners_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit community volume",
+      "region": "Global",
+      "description": "Arctic Shift weekly r/homeowners post volume.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "homeowners_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "r/homeowners volume"
+    },
+    {
+      "id": "diy_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit community volume",
+      "region": "Global",
+      "description": "Arctic Shift weekly r/DIY post volume.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "diy_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "r/DIY volume"
+    },
+    {
+      "id": "hi_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail",
+      "data_type": "reddit sentiment",
+      "region": "Global",
+      "description": "Arctic Shift weekly mean lexicon polarity of named HI retailer mentions (product-review proxy).",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "HI brand sentiment; home improvement retailer sentiment"
+    },
+    {
+      "id": "maintenance_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit maintenance talk share",
+      "region": "Global",
+      "description": "Arctic Shift weekly % of watched-sub posts hitting maintenance/repair lexicon.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "maintenance_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "maintenance tips reddit; repair talk"
+    },
+    {
+      "id": "cost_talk_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit cost talk share",
+      "region": "Global",
+      "description": "Arctic Shift weekly % of watched-sub posts hitting cost/price/housing affordability lexicon.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "cost_talk_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "housing cost talk; project cost reddit"
+    },
+    {
+      "id": "hi_remodel_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit sentiment",
+      "region": "Global",
+      "description": "Arctic Shift weekly mean polarity of remodel/DIY project posts.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "remodel_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "remodel sentiment; DIY project sentiment"
+    },
+    {
+      "id": "hi_maintenance_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit sentiment",
+      "region": "Global",
+      "description": "Arctic Shift weekly mean polarity of maintenance/repair tip posts.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "maintenance_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "maintenance sentiment; repair tip sentiment"
+    },
+    {
+      "id": "hi_cost_talk_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "housing",
+      "data_type": "reddit sentiment",
+      "region": "Global",
+      "description": "Arctic Shift weekly mean polarity of cost/price/housing-cost posts.",
+      "source": "arctic_shift",
+      "pack": "home_improvement_forums",
+      "series_keys": [
+        "cost_talk_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "cost talk sentiment; housing affordability sentiment"
+    },
+    {
+      "id": "case_shiller_national",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "housing",
+      "data_type": "home_prices",
+      "region": "US",
+      "description": "FRED CSUSHPISA \u2014 S&P/Case-Shiller U.S. National Home Price Index SA.",
+      "source": "fred",
+      "pack": "home_improvement",
+      "series_keys": [
+        "case_shiller_national"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "CSUSHPISA; Case-Shiller; national home prices"
+    },
+    {
+      "id": "orbital_launches_monthly",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "orbital_launches",
+      "region": "Global",
+      "description": "Launch Library 2 monthly orbital launch attempt counts.",
+      "source": "launch_library",
+      "pack": "space_launch",
+      "series_keys": [
+        "orbital_launches_monthly"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "orbital launches; launch cadence; LL2"
+    },
+    {
+      "id": "usaspending_launch_logistics_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending NSSL/launch/OTV keyword obligations (ex-CLPS).",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_launch_logistics_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "NSSL; launch services contracts; orbital transfer"
+    },
+    {
+      "id": "usaspending_clps_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending CLPS / lunar lander keyword obligations.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_clps_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "CLPS; lunar lander awards"
+    },
+    {
+      "id": "usaspending_launch_and_clps_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "Sum of NSSL/launch (ex-CLPS) + CLPS/lunar USASpending keyword obligations.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_launch_and_clps_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "launch+CLPS awards total"
+    },
+    {
+      "id": "usaspending_rklb_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Rocket Lab.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_rklb_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Rocket Lab"
+    },
+    {
+      "id": "usaspending_lunr_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Intuitive Machines.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_lunr_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Intuitive Machines"
+    },
+    {
+      "id": "usaspending_fly_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Firefly.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_fly_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Firefly"
+    },
+    {
+      "id": "usaspending_mnts_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Momentus.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_mnts_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Momentus"
+    },
+    {
+      "id": "usaspending_spacex_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Space Exploration Technologies.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_spacex_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Space Exploration Technologies"
+    },
+    {
+      "id": "usaspending_avio_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "USASpending recipient obligations \u2014 Avio.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_avio_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "Avio"
+    },
+    {
+      "id": "usaspending_launch_members_awards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "space",
+      "data_type": "federal_contracts",
+      "region": "US",
+      "description": "Sum of space launch theme-member USASpending recipient series.",
+      "source": "usaspending",
+      "pack": "space_launch",
+      "series_keys": [
+        "usaspending_launch_members_awards"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "space launch members awards"
+    },
+    {
+      "id": "starship_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 starship_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "starship_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "starship_mentions"
+    },
+    {
+      "id": "falcon_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 falcon_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "falcon_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "falcon_mentions"
+    },
+    {
+      "id": "electron_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 electron_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "electron_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "electron_mentions"
+    },
+    {
+      "id": "neutron_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 neutron_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "neutron_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "neutron_mentions"
+    },
+    {
+      "id": "vega_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 vega_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "vega_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "vega_mentions"
+    },
+    {
+      "id": "ariane_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 ariane_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "ariane_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "ariane_mentions"
+    },
+    {
+      "id": "alpha_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 alpha_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "alpha_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "alpha_mentions"
+    },
+    {
+      "id": "nova_c_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 nova_c_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "nova_c_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "nova_c_mentions"
+    },
+    {
+      "id": "blue_ghost_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 blue_ghost_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "blue_ghost_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "blue_ghost_mentions"
+    },
+    {
+      "id": "vigoride_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 vigoride_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "vigoride_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "vigoride_mentions"
+    },
+    {
+      "id": "space_launch_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 space_launch_named_product_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "space_launch_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "space_launch_named_product_mentions"
+    },
+    {
+      "id": "clps_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 clps_mentions.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "clps_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "clps_mentions"
+    },
+    {
+      "id": "spacex_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 spacex_community_posts.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "spacex_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "spacex_community_posts"
+    },
+    {
+      "id": "rocketlab_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 rocketlab_community_posts.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "rocketlab_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "rocketlab_community_posts"
+    },
+    {
+      "id": "commercialspace_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 commercialspace_community_posts.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "commercialspace_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "commercialspace_community_posts"
+    },
+    {
+      "id": "space_launch_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "space",
+      "data_type": "reddit space launch forum",
+      "region": "Global",
+      "description": "Arctic Shift space launch forums \u2014 space_launch_brand_sentiment.",
+      "source": "arctic_shift",
+      "pack": "space_launch_forums",
+      "series_keys": [
+        "space_launch_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "space_launch_brand_sentiment"
+    },
+    {
+      "id": "retail_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FRED RSAFS advance retail sales.",
+      "source": "fred",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "retail_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "RSAFS; retail sales"
+    },
+    {
+      "id": "ecommerce_sales_share",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FRED ECOMPCTSA e-commerce % of retail.",
+      "source": "fred",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "ecommerce_sales_share"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "ECOMPCTSA; ecommerce share"
+    },
+    {
+      "id": "consumer_credit",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FRED TOTALSL consumer credit.",
+      "source": "fred",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "consumer_credit"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "TOTALSL; consumer credit"
+    },
+    {
+      "id": "fed_funds_rate",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FRED FEDFUNDS.",
+      "source": "fred",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "fed_funds_rate"
+      ],
+      "as_of_semantics": "period_end",
+      "aliases": "FEDFUNDS"
+    },
+    {
+      "id": "usdc_circulating",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "DefiLlama USDC circulating supply.",
+      "source": "defillama",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "usdc_circulating"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "USDC; Circle"
+    },
+    {
+      "id": "kalshi_bigtech_crypto_pay",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Kalshi KXCRYPTOPAY big-tech crypto acceptance.",
+      "source": "kalshi",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "kalshi_bigtech_crypto_pay"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "KXCRYPTOPAY"
+    },
+    {
+      "id": "shop_pay_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 shop_pay_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "shop_pay_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "shop_pay_mentions"
+    },
+    {
+      "id": "usdc_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 usdc_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "usdc_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "usdc_mentions"
+    },
+    {
+      "id": "pyusd_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 pyusd_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "pyusd_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "pyusd_mentions"
+    },
+    {
+      "id": "arc_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 arc_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "arc_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "arc_mentions"
+    },
+    {
+      "id": "ucp_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 ucp_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "ucp_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "ucp_mentions"
+    },
+    {
+      "id": "x402_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 x402_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "x402_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "x402_mentions"
+    },
+    {
+      "id": "base_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 base_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "base_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "base_mentions"
+    },
+    {
+      "id": "smart_cash_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 smart_cash_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "smart_cash_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "smart_cash_mentions"
+    },
+    {
+      "id": "visa_direct_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 visa_direct_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "visa_direct_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "visa_direct_mentions"
+    },
+    {
+      "id": "agentic_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 agentic_named_product_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "agentic_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "agentic_named_product_mentions"
+    },
+    {
+      "id": "agentic_category_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 agentic_category_mentions.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "agentic_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "agentic_category_mentions"
+    },
+    {
+      "id": "fintech_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 fintech_community_posts.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "fintech_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "fintech_community_posts"
+    },
+    {
+      "id": "cryptocurrency_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 cryptocurrency_community_posts.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "cryptocurrency_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "cryptocurrency_community_posts"
+    },
+    {
+      "id": "agentic_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Arctic Shift agentic payments forums \u2014 agentic_brand_sentiment.",
+      "source": "arctic_shift",
+      "pack": "agentic_payments_forums",
+      "series_keys": [
+        "agentic_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "aliases": "agentic_brand_sentiment"
+    },
+    {
+      "id": "kalshi_hood_event_contracts_vol",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "prediction_market",
+      "region": "US",
+      "description": "Kalshi KXHOOD \u2014 Robinhood Q3 event-contracts volume threshold odds.",
+      "source": "kalshi",
+      "pack": "agentic_payments",
+      "series_keys": [
+        "kalshi_hood_event_contracts_vol"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "KXHOOD; HOOD event contracts; Robinhood prediction market volume"
+    },
+    {
+      "id": "cpi_food_at_home",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "value_sit_down",
+      "data_type": "CPI food at home",
+      "region": "US",
+      "description": "BLS CPI-U Food at Home SA (CUSR0000SAF11).",
+      "source": "fred",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "cpi_food_at_home"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "CUSR0000SAF11; food at home; grocery CPI",
+      "fred_id": "CUSR0000SAF11"
+    },
+    {
+      "id": "beef_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "value_sit_down",
+      "data_type": "beef and veal PPI",
+      "region": "US",
+      "description": "BLS PPI commodity beef and veal (WPU022101).",
+      "source": "fred",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "beef_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "WPU022101; beef PPI; veal; protein COGS",
+      "fred_id": "WPU022101"
+    },
+    {
+      "id": "food_services_ahe_nonsup",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "value_sit_down",
+      "data_type": "food services production nonsupervisory AHE",
+      "region": "US",
+      "description": "BLS CES7072200008 NAICS 722 prod/nonsup AHE. Fallback leisure & hospitality AHE.",
+      "source": "bls",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "food_services_ahe"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "U.S. Bureau of Labor Statistics",
+      "aliases": "CES7072200008; food services wages nonsup",
+      "bls_id": "CES7072200008"
+    },
+    {
+      "id": "consumer_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "value_sit_down",
+      "data_type": "University of Michigan consumer sentiment",
+      "region": "US",
+      "description": "FRED UMCSENT.",
+      "source": "fred",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "consumer_sentiment"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "University of Michigan / FRED",
+      "aliases": "UMCSENT; consumer sentiment; UMich",
+      "fred_id": "UMCSENT"
+    },
+    {
+      "id": "chilis_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Chili's forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Chili's forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "chilis_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "applebees_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Applebee's forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Applebee's forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "applebees_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "olive_garden_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Olive Garden forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Olive Garden forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "olive_garden_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "ihop_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "IHOP forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 IHOP forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "ihop_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "texas_roadhouse_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Texas Roadhouse forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Texas Roadhouse forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "texas_roadhouse_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "dennys_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Denny's forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Denny's forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "dennys_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "cracker_barrel_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Cracker Barrel forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Cracker Barrel forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "cracker_barrel_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "red_robin_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Red Robin forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Red Robin forum mentions.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "red_robin_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "named_brand_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Named sit-down brand mentions sum",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Named sit-down brand mentions sum.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "named_brand_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "value_deal_mentions_sit_down",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Value-deal talk share of posts",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 value-deal talk share of guest brand-sub posts.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "value_deal_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "tip_labor_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Tip/labor talk share of labor-sub posts",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 tip/labor talk share of serverlife+KC posts.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "tip_labor_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "chilis_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "r/Chilis community volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 r/Chilis community volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "chilis_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "olivegarden_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "r/OliveGarden community volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 r/OliveGarden community volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "olivegarden_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "serverlife_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "r/serverlife labor/ops volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 r/serverlife labor/ops volume (not brand stack).",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "serverlife_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "value_sit_down_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Sit-down brand sentiment",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Sit-down brand sentiment.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "value_sit_down_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "beef_choice_cutout",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Choice 600-900 boxed beef cutout",
+      "region": "US",
+      "description": "USDA AMS LM_XB403 Choice 600-900 cutout $/cwt.",
+      "source": "usda_ams",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "beef_choice_cutout"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "USDA AMS",
+      "aliases": "LM_XB403; Choice cutout; boxed beef; AMS 2453"
+    },
+    {
+      "id": "indeed_food_service_postings",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Indeed food service job postings index",
+      "region": "US",
+      "description": "Indeed Hiring Lab Job Postings Index \u2014 Food Preparation & Service SA.",
+      "source": "indeed_hiring_lab",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "indeed_food_service_postings"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "provider": "Indeed Hiring Lab",
+      "aliases": "Indeed Hiring Lab; food service postings; Food Preparation & Service"
+    },
+    {
+      "id": "opentable_us_seated_diners_yoy",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "OpenTable US seated diners YoY",
+      "region": "US",
+      "description": "OpenTable State of the Industry US rolling 7-day seated diners YoY %. Cite OpenTable.",
+      "source": "opentable",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "opentable_us_seated_diners_yoy"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "provider": "OpenTable",
+      "aliases": "OpenTable SOTI; seated diners; state of the industry"
+    },
+    {
+      "id": "applebees_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Applebee's brand sub volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Applebee's brand sub volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "applebees_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "ihop_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "IHOP brand sub volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 IHOP brand sub volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "ihop_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "texas_roadhouse_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Texas Roadhouse brand sub volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Texas Roadhouse brand sub volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "texas_roadhouse_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "cracker_barrel_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Cracker Barrel brand sub volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Cracker Barrel brand sub volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "cracker_barrel_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "red_robin_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "Red Robin brand sub volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Red Robin brand sub volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "red_robin_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "kitchenconfidential_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "value_sit_down",
+      "data_type": "KitchenConfidential labor/ops volume",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 KitchenConfidential labor/ops volume.",
+      "source": "arctic_shift",
+      "pack": "value_sit_down_forums",
+      "series_keys": [
+        "kitchenconfidential_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "provider": "Reddit via Arctic Shift"
+    },
+    {
+      "id": "menu_grocery_yoy_spread",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "value_sit_down",
+      "data_type": "Menu vs grocery CPI YoY spread",
+      "region": "US",
+      "description": "CPI food away YoY minus CPI food at home YoY (pp).",
+      "source": "fred",
+      "pack": "value_sit_down",
+      "series_keys": [
+        "menu_grocery_yoy_spread"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BLS via FRED"
+    },
+    {
+      "id": "ecommerce_mail_order_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "romantic_gifts",
+      "data_type": "retail_sales",
+      "region": "US",
+      "description": "Census/FRED retail sales: Electronic Shopping and Mail-Order Houses (MRTSSM4541USS).",
+      "source": "fred",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "ecommerce_mail_order_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "FRED / U.S. Census Bureau",
+      "fred_id": "MRTSSM4541USS",
+      "aliases": "MRTSSM4541USS; e-commerce retail sales; mail-order houses"
+    },
+    {
+      "id": "commercial_printing_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "romantic_gifts",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FRED/BLS PPI commercial printing except screen and books (PCU32311K32311K; watch alias PCU323111323111).",
+      "source": "fred",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "commercial_printing_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BLS / FRED",
+      "fred_id": "PCU32311K32311K",
+      "aliases": "PCU323111323111; PCU32311K32311K; commercial printing PPI"
+    },
+    {
+      "id": "courier_express_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "romantic_gifts",
+      "data_type": "orders_prices",
+      "region": "US",
+      "description": "FRED/BLS PPI couriers and express delivery services (PCU492110492110).",
+      "source": "fred",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "courier_express_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BLS / FRED",
+      "fred_id": "PCU492110492110",
+      "aliases": "PCU492110492110; courier PPI; express delivery PPI"
+    },
+    {
+      "id": "postage_cpi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "romantic_gifts",
+      "data_type": "consumer_prices",
+      "region": "US",
+      "description": "BLS CPI-U postage and delivery services (CUSR0000SEEC01).",
+      "source": "bls",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "postage_cpi"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "BLS",
+      "bls_id": "CUSR0000SEEC01",
+      "aliases": "CUSR0000SEEC01; postage CPI; stamp prices"
+    },
+    {
+      "id": "kalshi_etsy_q3_gms",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Kalshi KXETSY Etsy Q3 marketplace GMS threshold odds (chart-only).",
+      "source": "kalshi",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "kalshi_etsy_q3_gms"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "aliases": "KXETSY; pm_kalshi_etsy_q3_2026_gms"
+    },
+    {
+      "id": "etsy_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Etsy mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "etsy_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "moonpig_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Moonpig mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "moonpig_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "funky_pigeon_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Funky Pigeon mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "funky_pigeon_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "card_factory_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Card Factory mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "card_factory_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "vistaprint_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "VistaPrint / Cimpress mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "vistaprint_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "cewe_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "CEWE mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "cewe_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "flowers_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "1-800-Flowers / PersonalizationMall mentions (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "flowers_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "romantic_gifts_named_brand_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Named brand talk (weekly total) (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "romantic_gifts_named_brand_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "personalized_gift_category_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "% of posts: personalized gifts & cards (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "personalized_gift_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "etsysellers_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "r/EtsySellers talk (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "etsysellers_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "weddingplanning_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "r/weddingplanning talk (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "weddingplanning_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "smallbusiness_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "r/smallbusiness talk (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "smallbusiness_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "romantic_gifts_brand_sentiment",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "romantic_gifts",
+      "data_type": "forum_mentions",
+      "region": "global",
+      "description": "Romantic gifts brand sentiment (weekly)",
+      "source": "arctic_shift",
+      "pack": "romantic_gifts_forums",
+      "series_keys": [
+        "romantic_gifts_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "id": "uk_nonstore_retail_volume",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "romantic_gifts",
+      "data_type": "retail_sales",
+      "region": "GB",
+      "description": "ONS RSI volume SA non-store retailing (J5DZ). Watch alias GBRRSL02IXOBSAM.",
+      "source": "ons",
+      "pack": "romantic_gifts",
+      "series_keys": [
+        "uk_nonstore_retail_volume"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "UK Office for National Statistics",
+      "ons_cdid": "J5DZ",
+      "aliases": "GBRRSL02IXOBSAM; J5DZ; UK non-store retail; ONS DRSI"
     }
   ]
 }

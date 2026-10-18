@@ -7,7 +7,30 @@
   "theme_dataset_ids": [
     "usaspending_sat_geoint_awards",
     "us_defense_spending",
-    "sipri_military_expenditure"
+    "gpr_index",
+    "sipri_military_expenditure",
+    "usaspending_space_members_awards"
   ],
-  "ticker_dataset_ids": []
+  "ticker_dataset_ids": [
+    {
+      "id": "usaspending_pl_awards",
+      "ticker": "PL"
+    },
+    {
+      "id": "usaspending_bksy_awards",
+      "ticker": "BKSY"
+    },
+    {
+      "id": "usaspending_satl_awards",
+      "ticker": "SATL"
+    },
+    {
+      "id": "usaspending_hawk_awards",
+      "ticker": "HAWK"
+    },
+    {
+      "id": "usaspending_mda_awards",
+      "ticker": "MDA.TO"
+    }
+  ]
 }

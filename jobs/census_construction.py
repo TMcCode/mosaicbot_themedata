@@ -23,6 +23,7 @@ if str(_ROOT) not in sys.path:
 from lib.env import load_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
+from lib import fred as fredlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 
 SCHEMA_VERSION = 0
@@ -42,20 +43,7 @@ def _load_json(path: Path) -> dict:
 
 
 def _fred_csv(series_id: str) -> list[tuple[str, float]]:
-    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
-    req = Request(url, headers={"User-Agent": UA})
-    with urlopen(req, timeout=60) as resp:
-        raw = resp.read()
-    if raw[:15].lower().startswith(b"<!doctype") or b"<html" in raw[:200].lower():
-        raise RuntimeError(f"FRED returned HTML for {series_id} (missing/blocked)")
-    rows: list[tuple[str, float]] = []
-    for row in csv.DictReader(io.StringIO(raw.decode())):
-        d = row.get("observation_date") or row.get("DATE")
-        v = row.get(series_id)
-        if not d or v in (None, "", "."):
-            continue
-        rows.append((d, float(v)))
-    return rows
+    return fredlib.fetch_series(series_id)
 
 
 def build_pack(

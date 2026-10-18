@@ -3,49 +3,33 @@
   "description": "Cadence registry for mosaicbot_themedata packs. Daily dispatcher runs packs that are due on this host.",
   "timezone": "America/New_York",
   "notes": [
-    "TEMP: AISI + TE germanium scrapes run on VPS weekends until Mac Mini is online \u2014 then set hosts back to [macmini] and weekdays to [Mon].",
-    "VPS owns API packs (lab_economics, census_construction, dew_defense, space_surveillance). Jobs must be idempotent. Dispatcher skips when not due unless --force."
+    "Policy: nothing needs a daily refresh yet. Sources that print daily (Kalshi, TE spots, AISI) refresh weekly. True monthlies (BLS/Census/USASpending/FRED M3) stay monthly.",
+    "Stagger due windows so packs do not all fire the same day (API load + easier failure triage).",
+    "TEMP: AISI + TE scrapes on VPS weekends until Mac Mini \u2014 then move those hosts to [macmini] and weekdays to [Mon]/[Tue].",
+    "VPS owns API packs. Jobs must be idempotent. Dispatcher skips when not due unless --force."
   ],
   "packs": [
     {
-      "id": "lab_economics",
-      "job": "jobs/lab_economics_bls.py",
+      "id": "germanium_te_weekly",
+      "job": "jobs/germanium_te_weekly.py",
       "enabled": true,
       "hosts": [
         "vps",
         "any"
       ],
-      "cadence": "monthly",
+      "cadence": "weekly",
       "due": {
-        "day_of_month_from": 5,
-        "day_of_month_to": 20,
-        "max_age_days": 25
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
       },
       "freshness": {
-        "r2_key": "themedata/lab_economics/metrics_latest.json",
-        "as_of_field": "as_of"
+        "r2_key": "themedata/dew_defense/germanium_te_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/dew_defense/germanium_te_latest.json"
       },
-      "description": "BLS PPI/CES/ECI + QCEW + Census HS 382219 trade (theme + CSTL TX)"
-    },
-    {
-      "id": "census_construction",
-      "job": "jobs/census_construction.py",
-      "enabled": true,
-      "hosts": [
-        "vps",
-        "any"
-      ],
-      "cadence": "monthly",
-      "due": {
-        "day_of_month_from": 1,
-        "day_of_month_to": 12,
-        "max_age_days": 35
-      },
-      "freshness": {
-        "r2_key": "themedata/census_construction/metrics_latest.json",
-        "as_of_field": "as_of"
-      },
-      "description": "Census C-30 via FRED (manufacturing, highway, total)"
+      "description": "Weekly TE Ge+Ga spots (batched). TEMP VPS Saturday."
     },
     {
       "id": "aisi_weekly",
@@ -58,7 +42,6 @@
       "cadence": "weekly",
       "due": {
         "weekdays": [
-          "Sat",
           "Sun"
         ],
         "max_age_days": 8
@@ -68,11 +51,11 @@
         "as_of_field": "as_of",
         "local_relative": "data/aisi/weekly_latest.json"
       },
-      "description": "TEMP on VPS weekends \u2014 AISI weekly steel scrape (move to macmini Mon when ready)"
+      "description": "Weekly AISI steel scrape. TEMP VPS Sunday."
     },
     {
-      "id": "germanium_te_weekly",
-      "job": "jobs/germanium_te_weekly.py",
+      "id": "optical_fiber",
+      "job": "jobs/optical_fiber.py",
       "enabled": true,
       "hosts": [
         "vps",
@@ -81,17 +64,35 @@
       "cadence": "weekly",
       "due": {
         "weekdays": [
-          "Sat",
-          "Sun"
+          "Wed"
         ],
         "max_age_days": 8
       },
       "freshness": {
-        "r2_key": "themedata/dew_defense/germanium_te_latest.json",
-        "as_of_field": "as_of",
-        "local_relative": "data/dew_defense/germanium_te_latest.json"
+        "r2_key": "themedata/optical_fiber/metrics_latest.json",
+        "as_of_field": "as_of"
       },
-      "description": "TEMP on VPS weekends \u2014 TE Ge+Ga spots (one batched API snapshot / Ge scrape fallback). Budget-aware."
+      "description": "Weekly: FRED + Census HS optical + Kalshi PMs (daily markets sampled weekly)."
+    },
+    {
+      "id": "census_construction",
+      "job": "jobs/census_construction.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 1,
+        "day_of_month_to": 7,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/census_construction/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "Monthly FRED C-30 construction \u2014 early-month window."
     },
     {
       "id": "dew_defense",
@@ -103,15 +104,15 @@
       ],
       "cadence": "monthly",
       "due": {
-        "day_of_month_from": 1,
-        "day_of_month_to": 15,
+        "day_of_month_from": 4,
+        "day_of_month_to": 11,
         "max_age_days": 35
       },
       "freshness": {
         "r2_key": "themedata/dew_defense/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "DEW backdrop: FRED defense, GPR, USASpending, Ge/Ga trade, TE Ge spot history, LPTH awards"
+      "description": "Monthly DEW pack (FRED/GPR/USASpending/Census/Manifold). Staggered after construction."
     },
     {
       "id": "space_surveillance",
@@ -123,7 +124,7 @@
       ],
       "cadence": "monthly",
       "due": {
-        "day_of_month_from": 1,
+        "day_of_month_from": 8,
         "day_of_month_to": 15,
         "max_age_days": 35
       },
@@ -131,7 +132,286 @@
         "r2_key": "themedata/space_surveillance/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "Surveillance satellites / GEOINT: USASpending keyword obligations"
+      "description": "Monthly USASpending sat/GEOINT + recipients. Staggered mid-month."
+    },
+    {
+      "id": "space_launch",
+      "job": "jobs/space_launch.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 10,
+        "day_of_month_to": 18,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/space_launch/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/space_launch/latest.json"
+      },
+      "description": "Monthly LL2 orbital launches + USASpending CLPS/NSSL/launch recipients for space launch theme."
+    },
+    {
+      "id": "space_launch_forums",
+      "job": "jobs/space_launch_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/space_launch_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/space_launch_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift space launch forums (r/spacex, r/RocketLab, r/commercialspace)."
+    },
+    {
+      "id": "lab_economics",
+      "job": "jobs/lab_economics_bls.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 12,
+        "day_of_month_to": 22,
+        "max_age_days": 25
+      },
+      "freshness": {
+        "r2_key": "themedata/lab_economics/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "Monthly BLS/QCEW/Census lab pack \u2014 later window for BLS publish lag."
+    },
+    {
+      "id": "legal_software",
+      "job": "jobs/legal_software.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 15,
+        "day_of_month_to": 25,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/legal_software/metrics_latest.json",
+        "as_of_field": "as_of"
+      },
+      "description": "Monthly BLS/FRED legal software backdrop \u2014 later window for BLS publish lag."
+    },
+    {
+      "id": "legal_forums",
+      "job": "jobs/legal_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/legal_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/legal_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift legal forum mention counts (r/legaltech + r/lawfirm). Soft-fail scrape."
+    },
+    {
+      "id": "restaurants_chicken",
+      "job": "jobs/restaurants_chicken.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/restaurants_chicken/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/restaurants_chicken/latest.json"
+      },
+      "description": "Weekly USDA AMS whole-wing scrape + FRED chicken QSR backdrop refresh (Thu after AMS Friday print)."
+    },
+    {
+      "id": "chicken_forums",
+      "job": "jobs/chicken_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/chicken_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/chicken_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift chicken QSR forums (r/Wingstop, r/KFC, r/ElPolloLoco, r/fastfood). Soft-fail scrape."
+    },
+    {
+      "id": "value_sit_down",
+      "job": "jobs/value_sit_down.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/value_sit_down/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/value_sit_down/latest.json"
+      },
+      "description": "Weekly AMS Choice cutout + Indeed + OpenTable refresh; FRED/BLS re-pulled same run."
+    },
+    {
+      "id": "value_sit_down_forums",
+      "job": "jobs/value_sit_down_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/value_sit_down_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/value_sit_down_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift value sit-down forums \u2014 brand community stack (Chilis/OG/Applebees/IHOP/Roadhouse/CBRL/RedRobin) + labor/ops (serverlife/KC). Soft-fail scrape."
+    },
+    {
+      "id": "sequencing_platforms",
+      "job": "jobs/sequencing_platforms.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 18,
+        "day_of_month_to": 26,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/sequencing_platforms/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/sequencing_platforms/latest.json"
+      },
+      "description": "Monthly USASpending genomics grants/awards + FRED instruments employment."
+    },
+    {
+      "id": "genomics_forums",
+      "job": "jobs/genomics_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/genomics_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/genomics_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift genomics forums (r/bioinformatics, r/genomics). Soft-fail scrape."
+    },
+    {
+      "id": "home_improvement",
+      "job": "jobs/home_improvement.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 22,
+        "day_of_month_to": 28,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/home_improvement/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/home_improvement/latest.json"
+      },
+      "description": "Monthly FRED housing turnover + NAICS 444 retail + mortgage/starts/lumber + SE USDM drought for home-improvement retailers."
+    },
+    {
+      "id": "home_improvement_forums",
+      "job": "jobs/home_improvement_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/home_improvement_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/home_improvement_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift home-improvement forums (r/HomeImprovement, r/homeowners, r/DIY). Soft-fail scrape."
     },
     {
       "id": "news",
@@ -158,7 +438,93 @@
         "as_of_field": "as_of",
         "local_relative": "data/news/metrics_latest.json"
       },
-      "description": "MOVED to MosaicBotMain FetchEODData/news_radar_job.py \u2014 keep enabled=false here. Stub job exits 2."
+      "description": "MOVED to MosaicBotMain FetchEODData/news_radar_job.py \u2014 keep enabled=false here."
+    },
+    {
+      "id": "agentic_payments",
+      "job": "jobs/agentic_payments.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 12,
+        "day_of_month_to": 20,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/agentic_payments/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/agentic_payments/latest.json"
+      },
+      "description": "Monthly FRED spend rails + weekly-refreshable USDC circulating + Kalshi crypto-pay odds."
+    },
+    {
+      "id": "agentic_payments_forums",
+      "job": "jobs/agentic_payments_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/agentic_payments_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/agentic_payments_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift agentic payments forums (r/fintech, r/CryptoCurrency)."
+    },
+    {
+      "id": "romantic_gifts",
+      "job": "jobs/romantic_gifts.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 18,
+        "day_of_month_to": 28,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/romantic_gifts/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/romantic_gifts/latest.json"
+      },
+      "description": "Monthly FRED/BLS romantic-gifts backdrop + weekly-refreshable Kalshi Etsy GMS odds."
+    },
+    {
+      "id": "romantic_gifts_forums",
+      "job": "jobs/romantic_gifts_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/romantic_gifts_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/romantic_gifts_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift romantic-gifts forums \u2014 EtsySellers/weddingplanning/smallbusiness brand + POD talk. Soft-fail scrape."
     }
   ]
 }

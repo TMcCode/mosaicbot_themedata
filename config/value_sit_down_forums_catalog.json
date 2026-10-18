@@ -1,0 +1,421 @@
+{
+  "schema_version": 0,
+  "pack": "value_sit_down_forums",
+  "description": "Value sit-down Reddit sidecar \u2014 brand mentions + value-deal % (guest brand subs) + tip/labor % (serverlife+KC) + brand community volume stack + labor/ops stack + brand sentiment + digest (brand: Chilis/OliveGarden/Applebees/IHOP/TexasRoadhouse/CrackerBarrel/RedRobin; labor: serverlife/KitchenConfidential).",
+  "series": [
+    {
+      "key": "chilis_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Chili's",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Chili's lexicon",
+      "short_name": "Chili's",
+      "display_name": "Chili's mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "chilis_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "applebees_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Applebee's",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Applebee's lexicon",
+      "short_name": "Applebee's",
+      "display_name": "Applebee's mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "applebees_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "olive_garden_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Olive Garden",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Olive Garden lexicon",
+      "short_name": "Olive Garden",
+      "display_name": "Olive Garden mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "olive_garden_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ihop_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 IHOP",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting IHOP lexicon",
+      "short_name": "IHOP",
+      "display_name": "IHOP mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ihop_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "texas_roadhouse_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Texas Roadhouse",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Texas Roadhouse lexicon",
+      "short_name": "Texas Roadhouse",
+      "display_name": "Texas Roadhouse mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "texas_roadhouse_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "dennys_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Denny's",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Denny's lexicon",
+      "short_name": "Denny's",
+      "display_name": "Denny's mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dennys_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cracker_barrel_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Cracker Barrel",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Cracker Barrel lexicon",
+      "short_name": "Cracker Barrel",
+      "display_name": "Cracker Barrel mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "cracker_barrel_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "red_robin_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand mentions \u2014 Red Robin",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Red Robin lexicon",
+      "short_name": "Red Robin",
+      "display_name": "Red Robin mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "red_robin_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named value sit-down brand mentions (sum)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting any named brand lexicon",
+      "short_name": "Named brands",
+      "display_name": "Named brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "value_deal_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts with value-deal / promo talk",
+      "official_name": "Arctic Shift \u2014 weekly % of guest brand-sub posts hitting value-deal lexicon",
+      "short_name": "Value deals %",
+      "display_name": "% of brand-sub posts: value deals & promos",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "value_deal_mentions_sit_down",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 % of guest brand-sub posts. Do not stack into brand stack."
+    },
+    {
+      "key": "tip_labor_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts with tip-credit / labor talk",
+      "official_name": "Arctic Shift \u2014 weekly % of labor-sub posts hitting tip/labor lexicon",
+      "short_name": "Tip & labor %",
+      "display_name": "% of labor-sub posts: tip credit & labor",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "tip_labor_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 % of r/serverlife + r/KitchenConfidential posts. Not brand stack."
+    },
+    {
+      "key": "chilis_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "Chilis",
+      "label": "r/Chilis weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/Chilis post volume",
+      "short_name": "r/Chilis",
+      "display_name": "r/Chilis talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "chilis_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "olivegarden_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "OliveGarden",
+      "label": "r/OliveGarden weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/OliveGarden post volume",
+      "short_name": "r/OliveGarden",
+      "display_name": "r/OliveGarden talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "olivegarden_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "applebees_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "Applebees",
+      "label": "r/Applebees weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/Applebees post volume",
+      "short_name": "r/Applebees",
+      "display_name": "r/Applebees talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "applebees_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ihop_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "IHOP",
+      "label": "r/IHOP weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/IHOP post volume",
+      "short_name": "r/IHOP",
+      "display_name": "r/IHOP talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ihop_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "texas_roadhouse_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "TexasRoadhouse",
+      "label": "r/TexasRoadhouse weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/TexasRoadhouse post volume",
+      "short_name": "r/TexasRoadhouse",
+      "display_name": "r/TexasRoadhouse talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "texas_roadhouse_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cracker_barrel_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "CrackerBarrel",
+      "label": "r/CrackerBarrel weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/CrackerBarrel post volume",
+      "short_name": "r/CrackerBarrel",
+      "display_name": "r/CrackerBarrel talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "cracker_barrel_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "red_robin_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "RedRobin",
+      "label": "r/RedRobin weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/RedRobin post volume",
+      "short_name": "r/RedRobin",
+      "display_name": "r/RedRobin talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "red_robin_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "serverlife_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "serverlife",
+      "label": "r/serverlife weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/serverlife post volume",
+      "short_name": "r/serverlife",
+      "display_name": "r/serverlife labor/ops talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "serverlife_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Labor/ops stack \u2014 not brand community."
+    },
+    {
+      "key": "kitchenconfidential_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "KitchenConfidential",
+      "label": "r/KitchenConfidential weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/KitchenConfidential post volume",
+      "short_name": "r/KitchenConfidential",
+      "display_name": "r/KitchenConfidential labor/ops talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "kitchenconfidential_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Labor/ops stack \u2014 not brand community."
+    },
+    {
+      "key": "value_sit_down_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Value sit-down brand mention sentiment",
+      "official_name": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning named sit-down brands (\u22121..+1)",
+      "short_name": "Brand sentiment",
+      "display_name": "Value sit-down brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "value_sit_down_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Mean polarity on named-brand hits in guest brand subs only (not serverlife/KC)."
+    }
+  ]
+}

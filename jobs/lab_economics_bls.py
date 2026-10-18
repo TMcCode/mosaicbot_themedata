@@ -34,14 +34,12 @@ from lib import theme_score as scores  # noqa: E402
 SCHEMA_VERSION = 0
 PACK = "lab_economics"
 R2_PREFIX = f"themedata/{PACK}"
-R2_SCORES_PREFIX = "themedata/scores"
 UA = "mosaicbot_themedata/0.1 (+lab_economics)"
 BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _DEFAULT_OUT = _ROOT / "data" / "lab_economics"
 _SCORES_OUT = _ROOT / "data" / "scores"
 _CATALOG = _ROOT / "config" / "lab_economics_catalog.json"
 _ATTACHMENTS = _ROOT / "config" / "series_attachments.json"
-_THEME_SCORES = _ROOT / "config" / "theme_scores.json"
 HS_LAB_REAGENTS = "382219"
 
 
@@ -404,28 +402,6 @@ def build_pack(
         "errors": errors,
         "notes": census_notes,
     }
-
-
-def _write_scores_local(scores_dir: Path, theme_scores: list[dict], index: dict) -> None:
-    scores_dir.mkdir(parents=True, exist_ok=True)
-    themes_dir = scores_dir / "themes"
-    themes_dir.mkdir(exist_ok=True)
-    (scores_dir / "latest.json").write_text(
-        json.dumps(index, indent=2) + "\n", encoding="utf-8"
-    )
-    for s in theme_scores:
-        slug = s.get("theme_slug") or "unknown"
-        (themes_dir / f"{slug}.json").write_text(
-            json.dumps(s, indent=2) + "\n", encoding="utf-8"
-        )
-
-
-def _publish_scores_r2(theme_scores: list[dict], index: dict) -> list[str]:
-    uris = [r2lib.put_json(f"{R2_SCORES_PREFIX}/latest.json", index)]
-    for s in theme_scores:
-        slug = s.get("theme_slug") or "unknown"
-        uris.append(r2lib.put_json(f"{R2_SCORES_PREFIX}/themes/{slug}.json", s))
-    return uris
 
 
 def _write_local(out_dir: Path, payload: dict) -> None:

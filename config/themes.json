@@ -48,6 +48,122 @@
         "space_surveillance"
       ],
       "notes": "stockthemes uses one theme name = group + year + theme title. v1 pack: USASpending sat/GEOINT; defense spend attached from dew_defense."
+    },
+    {
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "group": "Space Supply Chain",
+      "group_slug": "space-supply-chain",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "space_launch",
+        "space_launch_forums"
+      ],
+      "notes": "v1: orbital launch cadence (LL2) + USASpending CLPS/NSSL/launch + member awards (RKLB/LUNR/FLY/MNTS/SpaceX/Avio; skip NOC) + forums. Defense/GPR via dew_defense source_pack."
+    },
+    {
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "group": "Data Centers",
+      "group_slug": "data-centers",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "optical_fiber",
+        "dew_defense"
+      ],
+      "notes": "FRED + Census HS optical fiber/transceiver imports; Ge/Ga spots attached from dew_defense."
+    },
+    {
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "group": "Industry-Specific Software",
+      "group_slug": "industry-specific-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "legal_software"
+      ],
+      "notes": "v1: FRED BFS + BLS legal/professional employment + legal PPI."
+    },
+    {
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "group": "Restaurants",
+      "group_slug": "restaurants",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "restaurants_chicken",
+        "chicken_forums"
+      ],
+      "notes": "v1: BLS poultry PPI + food-services labor/CPI + FRED food-services sales; Arctic Shift forums (Wingstop/KFC/LOCO/ChickFilA/RaisingCanes/fastfood). Tickers WING, LOCO, YUM, QSR. Google Trends deferred."
+    },
+    {
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "group": "Restaurants",
+      "group_slug": "restaurants",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "value_sit_down",
+        "value_sit_down_forums"
+      ],
+      "notes": "v1: FRED sales/CPI/beef/sentiment + BLS food-services AHE; Arctic Shift forums (Chilis/OliveGarden/serverlife). Skip OpenTable/Trends/Indeed."
+    },
+    {
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "group": "Genomics",
+      "group_slug": "genomics",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "sequencing_platforms",
+        "genomics_forums"
+      ],
+      "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards \u2014 conglomerate noise)."
+    },
+    {
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "group": "Buying a House",
+      "group_slug": "buying-a-house",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "home_improvement",
+        "home_improvement_forums"
+      ],
+      "notes": "v2: Existing home sales + mortgage + NAICS 444 + starts/permits + lumber PPI + SE drought (TSCO/LESL ticker only) + home_improvement_forums (HD/LOW/FND/TSCO/LESL + remodel + sentiment). Tickers HD, LOW, FND, TSCO, LESL."
+    },
+    {
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "group": "Agentic Utilities",
+      "group_slug": "agentic-utilities",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "agentic_payments",
+        "agentic_payments_forums"
+      ],
+      "notes": "v1: FRED retail/e-commerce share/consumer credit/fed funds + DefiLlama USDC circulating + Kalshi big-tech crypto-pay (chart-only) + agentic_payments_forums (r/fintech, r/CryptoCurrency). Tickers V, GOOG, SHOP, HOOD, CRCL, JPM, COIN, PYPL. Skip Trends / paid card panels / Discord."
+    },
+    {
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "group": "Romantic Gifts",
+      "group_slug": "romantic-gifts",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "romantic_gifts",
+        "romantic_gifts_forums"
+      ],
+      "notes": "v1: FRED e-commerce/mail-order sales + commercial print PPI + courier PPI + BLS postage CPI + Kalshi Etsy Q3 GMS (chart-only). Tickers ETSY, FLWS, CMPR, CARD.LSE, MOON.LSE, CWC.XETRA. UK ONS + forums deferred. Forums: EtsySellers/weddingplanning/smallbusiness."
     }
   ]
 }

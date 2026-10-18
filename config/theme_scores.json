@@ -214,7 +214,10 @@
         }
       ],
       "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga spots + trade as cost/supply stress (negative polarity).",
-      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "signal": {
+        "history_smooth_months": 3
+      }
     },
     {
       "theme": "Space Supply Chain '26: Surveillance Satellites",
@@ -223,17 +226,580 @@
       "label": "Surveillance satellites backdrop",
       "pack": "space_surveillance",
       "status": "active",
+      "signal": {
+        "yoy_clip_pct": 100.0,
+        "exclude_incomplete_month": true,
+        "note": "Award YoY is lumpy; \u00b1100 clip (not global \u00b110) so the score is not binary 0/100. Defense/GPR use default \u00b110 via component override. History/chip = 6M trailing mean of monthly blend (honest smooth for lumpy awards).",
+        "history_smooth_months": 6
+      },
       "components": [
         {
           "series_key": "usaspending_sat_geoint_awards",
           "metric": "m3_avg_yoy_pct",
-          "weight": 1.0,
+          "weight": 0.35,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "GEOINT / sat imagery federal awards rising \u2192 procurement demand for theme."
+          "rationale": "GEOINT / sat imagery federal awards rising \u2192 industry procurement demand."
+        },
+        {
+          "series_key": "usaspending_space_members_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Theme-member recipient awards (sum) rising \u2192 named-universe US federal demand."
+        },
+        {
+          "series_key": "us_defense_spending",
+          "source_pack": "dew_defense",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "yoy_clip_pct": 10.0,
+          "enabled": true,
+          "rationale": "Broad US defense spend tailwind (FRED / dew_defense pack)."
+        },
+        {
+          "series_key": "gpr_index",
+          "source_pack": "dew_defense",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "yoy_clip_pct": 10.0,
+          "enabled": true,
+          "rationale": "Elevated geopolitical risk \u2192 ISR / surveillance demand (dew_defense pack)."
         }
       ],
-      "notes": "v1 single-component score from USASpending sat/GEOINT keywords. Defense spend charts attach from dew_defense but are not in this pack score until multi-pack recipes exist."
+      "notes": "Multi-pack: awards from space_surveillance; us_defense_spending + gpr_index from dew_defense via source_pack. Recomputes when either pack updates. Incomplete USASpending months excluded from as_of."
+    },
+    {
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "score_id": "space_launch_backdrop",
+      "label": "Space launch / orbital logistics backdrop",
+      "pack": "space_launch",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 50.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 6,
+        "note": "Launch ops + awards are lumpy; \u00b150 clip (awards default). Defense/GPR use \u00b110. Forums not in score. Keyword + member awards overlap \u2014 weights 0.20/0.15."
+      },
+      "components": [
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Global orbital launch cadence rising \u2192 industry activity / demand for launch + logistics."
+        },
+        {
+          "series_key": "usaspending_launch_and_clps_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NSSL/launch + CLPS keyword awards (sum) rising \u2192 procurement demand."
+        },
+        {
+          "series_key": "usaspending_launch_members_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Theme-member recipient awards (sum) rising \u2192 named-universe US federal demand."
+        },
+        {
+          "series_key": "us_defense_spending",
+          "source_pack": "dew_defense",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "yoy_clip_pct": 10.0,
+          "enabled": true,
+          "rationale": "Broad US defense spend tailwind (NSSL / dual-use)."
+        },
+        {
+          "series_key": "gpr_index",
+          "source_pack": "dew_defense",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "yoy_clip_pct": 10.0,
+          "enabled": true,
+          "rationale": "Elevated geopolitical risk \u2192 national-security space launch demand."
+        }
+      ],
+      "notes": "Multi-pack: space_launch + dew_defense source_pack. Forums not in score. Skip NOC awards. Awards 0.20+0.15; defense/GPR 0.20+0.15 so federal lumpiness does not dominate."
+    },
+    {
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "score_id": "optical_fiber_backdrop",
+      "label": "Optical & fiber backdrop",
+      "pack": "optical_fiber",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Trade/orders can be lumpy; \u00b125 clip + 3M score smooth."
+      },
+      "components": [
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.22,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Big-4 CapEx rising \u2192 cloud/DCI optical + networking demand."
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.22,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Comms equipment new orders rising \u2192 networking/optical deployment demand."
+        },
+        {
+          "series_key": "optical_transceiver_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.22,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "HS 851762 import value rising \u2192 transceiver/network apparatus deliveries."
+        },
+        {
+          "series_key": "optical_fiber_cable_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "HS 854470 fiber cable imports rising \u2192 campus/DCI cabling demand."
+        },
+        {
+          "series_key": "hyperscaler_subsea_rfs_km",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Hyperscaler-owned subsea RFS km rising \u2192 long-haul optical / SLTE demand (PRYMY/CIEN)."
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Fiber cable PPI rising \u2192 pricing power / tight capacity."
+        }
+      ],
+      "notes": "v4: CapEx sum includes ORCL. Per-ticker CapEx + subsea hyperscaler/other are stacked charts only. Ge/Ga + Kalshi chart-only."
+    },
+    {
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "score_id": "legal_software_backdrop",
+      "label": "Legal software backdrop",
+      "pack": "legal_software",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Employment/BFS can move; \u00b115 clip + 3M score smooth."
+      },
+      "components": [
+        {
+          "series_key": "pce_legal_services",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising PCE legal spend (annual) \u2192 demand for legal info/practice software."
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising business applications \u2192 formation / transactional legal demand (LZ)."
+        },
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising legal headcount \u2192 seat renewals / research & practice software."
+        },
+        {
+          "series_key": "professional_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising NAICS 54 employment \u2192 advisory/accounting software budgets."
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising law-office prices \u2192 realization headroom for premium tools."
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising corporate profits \u2192 soft budget proxy for legal/risk software (noisier)."
+        }
+      ],
+      "notes": "v2: +PCE legal (PCESLS) + corporate profits (CPATAX). No PMs."
+    },
+    {
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "score_id": "restaurants_chicken_backdrop",
+      "label": "Chicken QSR backdrop",
+      "pack": "restaurants_chicken",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Cost/labor headwinds invert; sales support. \u00b112 clip + 3M smooth."
+      },
+      "components": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising AMS whole-wing \u00a2/lb \u2192 Wingstop-relevant COGS headwind (Urner Barry free proxy)."
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising processed-poultry PPI \u2192 broader chicken COGS."
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising food-services wages \u2192 restaurant-level margin pressure."
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising food-services sales \u2192 demand/traffic support."
+        },
+        {
+          "series_key": "cpi_food_away_from_home",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising menu-price CPI \u2192 value-seeking / traffic risk for QSR guests."
+        }
+      ],
+      "notes": "v2: +USDA AMS whole wings weekly. Forums not in score. YoY on wings needs ~52w history; until then component may be missing."
+    },
+    {
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "score_id": "sequencing_platforms_backdrop",
+      "label": "Sequencing platforms backdrop",
+      "pack": "sequencing_platforms",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Grant awards are lumpy; \u00b125 clip + 3M smooth."
+      },
+      "components": [
+        {
+          "series_key": "usaspending_genomics_grants",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.35,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising NGS/genomics federal grant obligations \u2192 research/clinical sequencing demand."
+        },
+        {
+          "series_key": "usaspending_nhgri_grants",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NHGRI (CFDA 93.172) funding rising \u2192 core NIH genomics tech demand."
+        },
+        {
+          "series_key": "instruments_mfg_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Instruments manufacturing employment rising \u2192 soft capacity/activity in related hardware."
+        },
+        {
+          "series_key": "usaspending_ilmn_awards",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Illumina federal awards rising \u2192 named-platform US federal demand (largest theme member)."
+        }
+      ],
+      "notes": "Forums not in score. USASpending incomplete months excluded from as_of."
+    },
+    {
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "score_id": "home_improvement_backdrop",
+      "label": "Home improvement backdrop",
+      "pack": "home_improvement",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Turnover-led; mortgage + Case-Shiller + lumber are headwinds (polarity \u22121). Forums/drought not in score."
+      },
+      "components": [
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Existing-home turnover rising \u2192 more moves / renovations / big-ticket DIY."
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NAICS 444 retail sales rising \u2192 direct home-improvement demand."
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Mortgage rates rising \u2192 lock-in / lower turnover / weaker discretionary projects."
+        },
+        {
+          "series_key": "housing_starts",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Housing starts rising \u2192 Pro / new-construction materials demand."
+        },
+        {
+          "series_key": "lumber_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Lumber PPI rising \u2192 materials cost / margin pressure for retailers."
+        },
+        {
+          "series_key": "case_shiller_national",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "National home prices rising \u2192 housing-cost / affordability headwind (complements mortgage; distinct from lumber COGS)."
+        }
+      ],
+      "notes": "Existing home sales is the hero (archive backfill + FRED live). Forums + SE drought not in score."
+    },
+    {
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "score_id": "agentic_payments_backdrop",
+      "label": "Agentic payments backdrop",
+      "pack": "agentic_payments",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Spend rails + USDC circulating. Fed funds / Kalshi / forums not in score."
+      },
+      "components": [
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Retail sales rising \u2192 payment network / commerce volume."
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "E-commerce share rising \u2192 digital / agentic checkout rails."
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "USDC circulating rising \u2192 programmable settlement rail adoption."
+        },
+        {
+          "series_key": "consumer_credit",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Consumer credit rising \u2192 card / spend capacity."
+        }
+      ],
+      "notes": "Forums and Kalshi chart-only. Skip Trends / paid card panels."
+    },
+    {
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "score_id": "value_sit_down_backdrop",
+      "label": "Value sit-down backdrop",
+      "pack": "value_sit_down",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Live backdrop: sales + 4W-avg OpenTable; Choice cutout 4W-avg YoY + wages + menu CPI. Beef PPI chart-only. Cutout/OT latest; monthlies month-capped. \u00b112 clip + 3M smooth."
+      },
+      "components": [
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising food-services sales \u2192 dining-out demand support."
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "exclude_incomplete_month": false,
+          "as_of": "latest",
+          "rationale": "Rising 4W-avg OpenTable seated YoY \u2192 traffic support; damps holiday/comp-week spikes."
+        },
+        {
+          "series_key": "beef_choice_cutout",
+          "metric": "wma4_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "exclude_incomplete_month": false,
+          "as_of": "latest",
+          "rationale": "Rising 4W-avg Choice cutout YoY \u2192 protein COGS headwind; sole beef input (PPI chart-only)."
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising food-services wages \u2192 unit labor pressure."
+        },
+        {
+          "series_key": "cpi_food_away_from_home",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising menu CPI \u2192 value / traffic risk if promotions deepen."
+        }
+      ],
+      "notes": "v7: OpenTable score uses wma4 (not raw weekly spikes); OT weight 0.25; menu CPI 0.15. Cutout wma4_yoy latest. PPI chart-only."
+    },
+    {
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "score_id": "romantic_gifts_backdrop",
+      "label": "Greeting cards & personalized gifts backdrop",
+      "pack": "romantic_gifts",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "US+UK demand vs print/courier/postage costs; \u00b112 clip + 3M score smooth."
+      },
+      "components": [
+        {
+          "series_key": "ecommerce_mail_order_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "US e-commerce/mail-order sales rising \u2192 online personalized gifting demand."
+        },
+        {
+          "series_key": "uk_nonstore_retail_volume",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "UK non-store retail volume rising \u2192 Moonpig / Funky Pigeon / Card Factory digital demand."
+        },
+        {
+          "series_key": "commercial_printing_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Commercial print PPI rising \u2192 COGS pressure for cards/photobooks/on-demand gifts."
+        },
+        {
+          "series_key": "courier_express_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Courier/express PPI rising \u2192 fulfillment cost pressure for DTC gifts."
+        },
+        {
+          "series_key": "postage_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Postage CPI rising \u2192 friction for physical greeting-card volumes."
+        }
+      ],
+      "notes": "v2: +ONS UK non-store retail volume (J5DZ; watch alias GBRRSL02IXOBSAM). Kalshi chart-only."
     }
   ]
 }

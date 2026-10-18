@@ -1,0 +1,259 @@
+{
+  "schema_version": 0,
+  "pack": "romantic_gifts_forums",
+  "description": "Romantic gifts Reddit sidecar \u2014 brand mentions + personalized/POD category % + community volume + combined sentiment + thin digest (r/EtsySellers, r/weddingplanning, r/smallbusiness).",
+  "series": [
+    {
+      "key": "etsy_mentions",
+      "source": "arctic_shift",
+      "label": "Etsy mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Etsy mentions (weekly)",
+      "short_name": "Etsy",
+      "display_name": "Etsy mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "etsy_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "moonpig_mentions",
+      "source": "arctic_shift",
+      "label": "Moonpig mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Moonpig mentions (weekly)",
+      "short_name": "Moonpig",
+      "display_name": "Moonpig mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "moonpig_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "funky_pigeon_mentions",
+      "source": "arctic_shift",
+      "label": "Funky Pigeon mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Funky Pigeon mentions (weekly)",
+      "short_name": "Funky Pigeon",
+      "display_name": "Funky Pigeon mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "funky_pigeon_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "card_factory_mentions",
+      "source": "arctic_shift",
+      "label": "Card Factory mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Card Factory mentions (weekly)",
+      "short_name": "Card Factory",
+      "display_name": "Card Factory mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "card_factory_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "vistaprint_mentions",
+      "source": "arctic_shift",
+      "label": "VistaPrint / Cimpress mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 VistaPrint / Cimpress mentions (weekly)",
+      "short_name": "VistaPrint",
+      "display_name": "VistaPrint / Cimpress mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "vistaprint_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cewe_mentions",
+      "source": "arctic_shift",
+      "label": "CEWE mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 CEWE mentions (weekly)",
+      "short_name": "CEWE",
+      "display_name": "CEWE mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "cewe_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "flowers_mentions",
+      "source": "arctic_shift",
+      "label": "1-800-Flowers / PersonalizationMall mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 1-800-Flowers / PersonalizationMall mentions (weekly)",
+      "short_name": "1-800-Flowers",
+      "display_name": "1-800-Flowers / PersonalizationMall mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "flowers_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "romantic_gifts_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 Named brand talk (weekly total)",
+      "short_name": "Named brands",
+      "display_name": "Named brand talk (weekly total) (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "romantic_gifts_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "personalized_gift_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts: personalized gifts & cards",
+      "official_name": "Arctic Shift \u2014 % of posts: personalized gifts & cards",
+      "short_name": "Personalized category %",
+      "display_name": "% of posts: personalized gifts & cards (weekly)",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "personalized_gift_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 do not stack into brand stack."
+    },
+    {
+      "key": "etsysellers_community_posts",
+      "source": "arctic_shift",
+      "label": "r/EtsySellers talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/EtsySellers talk (weekly)",
+      "short_name": "r/EtsySellers",
+      "display_name": "r/EtsySellers talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "etsysellers_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "EtsySellers"
+    },
+    {
+      "key": "weddingplanning_community_posts",
+      "source": "arctic_shift",
+      "label": "r/weddingplanning talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/weddingplanning talk (weekly)",
+      "short_name": "r/weddingplanning",
+      "display_name": "r/weddingplanning talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "weddingplanning_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "weddingplanning"
+    },
+    {
+      "key": "smallbusiness_community_posts",
+      "source": "arctic_shift",
+      "label": "r/smallbusiness talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/smallbusiness talk (weekly)",
+      "short_name": "r/smallbusiness",
+      "display_name": "r/smallbusiness talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "smallbusiness_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "smallbusiness"
+    },
+    {
+      "key": "romantic_gifts_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Romantic gifts brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 Romantic gifts brand sentiment (weekly)",
+      "short_name": "Brand sentiment",
+      "display_name": "Romantic gifts brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "romantic_gifts_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

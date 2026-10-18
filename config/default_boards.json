@@ -1,6 +1,6 @@
 {
   "schema_version": 0,
-  "description": "Default chart boards: ordered recipes per theme/ticker. chart_type is line|bar. metric is raw or a derived key from the pack catalog.",
+  "description": "Default chart boards: ordered recipes per theme/ticker. chart_type is line|bar|stacked_bar|multi_line. metric is raw or a derived key. stacked_bar / multi_line use series_keys (same units). stacked_bar optional sum_series_key for total YoY %. multi_line overlays lines (e.g. sentiment).",
   "boards": [
     {
       "scope": "theme",
@@ -216,6 +216,11 @@
           "series_key": "germanium_price_usd_kg",
           "metric": "yoy_pct",
           "chart_type": "bar"
+        },
+        {
+          "series_key": "pm_kalshi_tariff_critical_minerals",
+          "metric": "raw",
+          "chart_type": "line"
         }
       ],
       "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons"
@@ -275,6 +280,23 @@
       "ticker": null,
       "recipes": [
         {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Theme members US federal contract awards",
+          "series_keys": [
+            "usaspending_pl_awards",
+            "usaspending_bksy_awards",
+            "usaspending_satl_awards",
+            "usaspending_hawk_awards",
+            "usaspending_mda_awards"
+          ]
+        },
+        {
+          "series_key": "usaspending_space_members_awards",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "usaspending_sat_geoint_awards",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -287,6 +309,2320 @@
         {
           "series_key": "us_defense_spending",
           "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "PL",
+      "recipes": [
+        {
+          "series_key": "usaspending_pl_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "BKSY",
+      "recipes": [
+        {
+          "series_key": "usaspending_bksy_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "SATL",
+      "recipes": [
+        {
+          "series_key": "usaspending_satl_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "HAWK",
+      "recipes": [
+        {
+          "series_key": "usaspending_hawk_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Surveillance Satellites",
+      "theme_slug": "space-supply-chain-26-surveillance-satellites",
+      "ticker": "MDA.TO",
+      "recipes": [
+        {
+          "series_key": "usaspending_mda_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_sat_geoint_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Hyperscaler CapEx by company",
+          "series_keys": [
+            "capex_msft",
+            "capex_googl",
+            "capex_meta",
+            "capex_amzn",
+            "capex_orcl"
+          ],
+          "sum_series_key": "hyperscaler_capex"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "optical_transceiver_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "optical_fiber_cable_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Subsea cable km put into service",
+          "series_keys": [
+            "hyperscaler_subsea_rfs_km",
+            "subsea_other_rfs_km"
+          ],
+          "sum_series_key": "subsea_cable_rfs_km"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_electronic_components_ip",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "gallium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_kalshi_tariff_critical_minerals",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_kalshi_copper_cable_sec232",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "COHR",
+      "recipes": [
+        {
+          "series_key": "optical_transceiver_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "LITE",
+      "recipes": [
+        {
+          "series_key": "optical_transceiver_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "CIEN",
+      "recipes": [
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "GLW",
+      "recipes": [
+        {
+          "series_key": "optical_fiber_cable_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "PRYMY",
+      "recipes": [
+        {
+          "series_key": "optical_fiber_cable_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "communications_equipment_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fiber_optic_cable_ppi",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "germanium_spot_cny_kg",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "pce_legal_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "professional_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "r/legaltech named products (weekly)",
+          "series_keys": [
+            "legaltech_harvey_mentions",
+            "legaltech_legora_mentions",
+            "legaltech_cocounsel_mentions",
+            "legaltech_lexis_mentions",
+            "legaltech_westlaw_mentions"
+          ],
+          "sum_series_key": "legaltech_named_product_mentions"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum software talk by community (weekly)",
+          "series_keys": [
+            "legaltech_software_mentions",
+            "lawfirm_software_mentions"
+          ]
+        },
+        {
+          "series_key": "legaltech_ai_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/legaltech sentiment: AI tools vs AI/LLM talk",
+          "series_keys": [
+            "legaltech_ai_tools_sentiment",
+            "legaltech_ai_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "LZ",
+      "recipes": [
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "TRI",
+      "recipes": [
+        {
+          "series_key": "pce_legal_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "r/legaltech products (CoCounsel / Westlaw / Harvey)",
+          "series_keys": [
+            "legaltech_cocounsel_mentions",
+            "legaltech_westlaw_mentions",
+            "legaltech_harvey_mentions"
+          ],
+          "sum_series_key": "legaltech_named_product_mentions"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "RELX",
+      "recipes": [
+        {
+          "series_key": "pce_legal_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "r/legaltech products (Harvey / Legora / Lexis)",
+          "series_keys": [
+            "legaltech_harvey_mentions",
+            "legaltech_legora_mentions",
+            "legaltech_lexis_mentions"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/legaltech sentiment: AI tools vs AI/LLM talk",
+          "series_keys": [
+            "legaltech_ai_tools_sentiment",
+            "legaltech_ai_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "LAW",
+      "recipes": [
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Legal & Professional Services Software",
+      "theme_slug": "industry-specific-software-24-legal-professional-services-software",
+      "ticker": "INTA",
+      "recipes": [
+        {
+          "series_key": "legal_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "legal_services_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bfs_business_applications",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cpi_food_away_from_home",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Chicken brand mentions (weekly)",
+          "series_keys": [
+            "wingstop_mentions",
+            "kfc_mentions",
+            "el_pollo_loco_mentions",
+            "popeyes_mentions",
+            "chick_fil_a_mentions",
+            "daves_hot_chicken_mentions",
+            "raising_canes_mentions"
+          ],
+          "sum_series_key": "named_product_mentions"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "wingstop_community_posts",
+            "kfc_community_posts",
+            "chickfila_community_posts",
+            "raising_canes_community_posts"
+          ]
+        },
+        {
+          "series_key": "fastfood_lexicon_pct",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "value_deal_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "chicken_sandwich_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Chicken brand sentiment (weekly)",
+          "series_keys": [
+            "brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "WING",
+      "recipes": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wingstop_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Chicken brand sentiment (weekly)",
+          "series_keys": [
+            "brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "LOCO",
+      "recipes": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "YUM",
+      "recipes": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Chicken Buyers",
+      "theme_slug": "restaurants-26-chicken-buyers",
+      "ticker": "QSR",
+      "recipes": [
+        {
+          "series_key": "ams_wings_whole",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "poultry_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "usaspending_genomics_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_nhgri_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "instruments_mfg_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Platform vendors US federal contract awards",
+          "series_keys": [
+            "usaspending_ilmn_awards",
+            "usaspending_pacb_awards",
+            "usaspending_ont_awards"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "r/bioinformatics named platforms (weekly)",
+          "series_keys": [
+            "bioinformatics_illumina_mentions",
+            "bioinformatics_pacbio_mentions",
+            "bioinformatics_nanopore_mentions",
+            "bioinformatics_mgi_mentions"
+          ],
+          "sum_series_key": "bioinformatics_named_product_mentions"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum sequencing talk by community (weekly)",
+          "series_keys": [
+            "bioinformatics_sequencing_mentions",
+            "genomics_sequencing_mentions"
+          ]
+        },
+        {
+          "series_key": "bioinformatics_ngs_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/bioinformatics sentiment: platforms vs NGS talk",
+          "series_keys": [
+            "bioinformatics_platform_sentiment",
+            "bioinformatics_ngs_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ILMN",
+      "recipes": [
+        {
+          "series_key": "usaspending_ilmn_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_genomics_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "instruments_mfg_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bioinformatics_illumina_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/bioinformatics sentiment: platforms vs NGS talk",
+          "series_keys": [
+            "bioinformatics_platform_sentiment",
+            "bioinformatics_ngs_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "PACB",
+      "recipes": [
+        {
+          "series_key": "usaspending_pacb_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_genomics_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "instruments_mfg_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bioinformatics_pacbio_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/bioinformatics sentiment: platforms vs NGS talk",
+          "series_keys": [
+            "bioinformatics_platform_sentiment",
+            "bioinformatics_ngs_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Genomics '25: Sequencing Platforms & Instruments",
+      "theme_slug": "genomics-25-sequencing-platforms-instruments",
+      "ticker": "ONT.LSE",
+      "recipes": [
+        {
+          "series_key": "usaspending_ont_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_genomics_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "instruments_mfg_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bioinformatics_nanopore_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/bioinformatics sentiment: platforms vs NGS talk",
+          "series_keys": [
+            "bioinformatics_platform_sentiment",
+            "bioinformatics_ngs_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "housing_starts",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "new_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_permits",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lumber_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "case_shiller_national",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "months_supply_new_homes",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Retailer mentions (weekly)",
+          "series_keys": [
+            "home_depot_mentions",
+            "lowes_mentions",
+            "floor_decor_mentions",
+            "tractor_supply_mentions",
+            "leslies_mentions"
+          ],
+          "sum_series_key": "named_product_mentions"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "% of posts: remodel vs maintenance vs cost talk",
+          "series_keys": [
+            "remodel_mentions",
+            "maintenance_mentions",
+            "cost_talk_mentions"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "homeimprovement_community_posts",
+            "homeowners_community_posts",
+            "diy_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs maintenance vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "maintenance_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "HD",
+      "recipes": [
+        {
+          "series_key": "home_depot_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "housing_starts",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LOW",
+      "recipes": [
+        {
+          "series_key": "lowes_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "housing_starts",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "FND",
+      "recipes": [
+        {
+          "series_key": "floor_decor_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "TSCO",
+      "recipes": [
+        {
+          "series_key": "se_drought_d1_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tractor_supply_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Buying a House '26: Home Improvement Retailers",
+      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "ticker": "LESL",
+      "recipes": [
+        {
+          "series_key": "se_drought_d1_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "leslies_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "existing_home_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "building_materials_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mortgage_30y",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: retailers vs remodel vs cost",
+          "series_keys": [
+            "brand_sentiment",
+            "remodel_sentiment",
+            "cost_talk_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "US launch + CLPS federal contract awards",
+          "series_keys": [
+            "usaspending_launch_logistics_awards",
+            "usaspending_clps_awards"
+          ],
+          "sum_series_key": "usaspending_launch_and_clps_awards"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Theme members US federal contract awards",
+          "series_keys": [
+            "usaspending_rklb_awards",
+            "usaspending_lunr_awards",
+            "usaspending_fly_awards",
+            "usaspending_mnts_awards",
+            "usaspending_spacex_awards",
+            "usaspending_avio_awards"
+          ],
+          "sum_series_key": "usaspending_launch_members_awards"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gpr_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander mentions (weekly)",
+          "series_keys": [
+            "starship_mentions",
+            "falcon_mentions",
+            "electron_mentions",
+            "neutron_mentions",
+            "vega_mentions",
+            "ariane_mentions",
+            "alpha_mentions",
+            "nova_c_mentions",
+            "blue_ghost_mentions",
+            "vigoride_mentions"
+          ],
+          "sum_series_key": "space_launch_named_product_mentions"
+        },
+        {
+          "series_key": "clps_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "spacex_community_posts",
+            "rocketlab_community_posts",
+            "commercialspace_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "RKLB",
+      "recipes": [
+        {
+          "series_key": "usaspending_rklb_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "electron_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "neutron_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "LUNR",
+      "recipes": [
+        {
+          "series_key": "usaspending_lunr_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nova_c_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "FLY",
+      "recipes": [
+        {
+          "series_key": "usaspending_fly_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "alpha_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "blue_ghost_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "MNTS",
+      "recipes": [
+        {
+          "series_key": "usaspending_mnts_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vigoride_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "AVIO.MI",
+      "recipes": [
+        {
+          "series_key": "usaspending_avio_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vega_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ariane_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Space Supply Chain '26: Space Launch & Orbital Logistics",
+      "theme_slug": "space-supply-chain-26-space-launch-orbital-logistics",
+      "ticker": "SPCX",
+      "recipes": [
+        {
+          "series_key": "usaspending_spacex_awards",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "starship_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "falcon_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "orbital_launches_monthly",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_launch_logistics_awards",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "us_defense_spending",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Launch vehicle & lander sentiment (weekly)",
+          "series_keys": [
+            "space_launch_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_credit",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "kalshi_bigtech_crypto_pay",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named product talk (weekly)",
+          "series_keys": [
+            "shop_pay_mentions",
+            "usdc_mentions",
+            "pyusd_mentions",
+            "arc_mentions",
+            "ucp_mentions",
+            "x402_mentions",
+            "base_mentions",
+            "smart_cash_mentions",
+            "visa_direct_mentions"
+          ],
+          "sum_series_key": "agentic_named_product_mentions"
+        },
+        {
+          "series_key": "agentic_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "fintech_community_posts",
+            "cryptocurrency_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment (weekly)",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "SHOP",
+      "recipes": [
+        {
+          "series_key": "shop_pay_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "CRCL",
+      "recipes": [
+        {
+          "series_key": "usdc_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "PYPL",
+      "recipes": [
+        {
+          "series_key": "pyusd_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "COIN",
+      "recipes": [
+        {
+          "series_key": "base_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "JPM",
+      "recipes": [
+        {
+          "series_key": "smart_cash_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "V",
+      "recipes": [
+        {
+          "series_key": "visa_direct_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "GOOG",
+      "recipes": [
+        {
+          "series_key": "ucp_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Agentic Utilities '26: Agentic Payments",
+      "theme_slug": "agentic-utilities-26-agentic-payments",
+      "ticker": "HOOD",
+      "recipes": [
+        {
+          "series_key": "kalshi_hood_event_contracts_vol",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agentic payments product sentiment",
+          "series_keys": [
+            "agentic_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "series_key": "beef_choice_cutout",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line",
+          "section": "primary"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "series_key": "cpi_food_away_from_home",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "series_key": "menu_grocery_yoy_spread",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "series_key": "indeed_food_service_postings",
+          "metric": "yoy_pct",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Casual dining brand mentions (weekly)",
+          "series_keys": [
+            "chilis_mentions",
+            "applebees_mentions",
+            "olive_garden_mentions",
+            "ihop_mentions",
+            "texas_roadhouse_mentions",
+            "dennys_mentions",
+            "cracker_barrel_mentions",
+            "red_robin_mentions"
+          ],
+          "sum_series_key": "named_brand_mentions",
+          "section": "primary"
+        },
+        {
+          "series_key": "value_deal_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Value sit-down brand sentiment (weekly)",
+          "series_keys": [
+            "value_sit_down_brand_sentiment"
+          ],
+          "section": "primary"
+        },
+        {
+          "series_key": "beef_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "more"
+        },
+        {
+          "series_key": "cpi_food_at_home",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "more"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "more"
+        },
+        {
+          "series_key": "tip_labor_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "more"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Labor / FOIA talk (weekly)",
+          "series_keys": [
+            "serverlife_community_posts",
+            "kitchenconfidential_community_posts"
+          ],
+          "section": "more"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "DIN",
+      "recipes": [
+        {
+          "series_key": "applebees_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ihop_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "value_deal_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "beef_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "CBRL",
+      "recipes": [
+        {
+          "series_key": "cracker_barrel_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "beef_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "DENN",
+      "recipes": [
+        {
+          "series_key": "dennys_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "value_deal_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cpi_food_away_from_home",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Restaurants '26: Value Sit Down",
+      "theme_slug": "restaurants-26-value-sit-down",
+      "ticker": "RRGB",
+      "recipes": [
+        {
+          "series_key": "red_robin_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "beef_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_ahe",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ecommerce_mail_order_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "uk_nonstore_retail_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "commercial_printing_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "courier_express_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "postage_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "kalshi_etsy_q3_gms",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Personalized gift brand mentions (weekly)",
+          "series_keys": [
+            "etsy_mentions",
+            "moonpig_mentions",
+            "funky_pigeon_mentions",
+            "card_factory_mentions",
+            "vistaprint_mentions",
+            "cewe_mentions",
+            "flowers_mentions"
+          ],
+          "sum_series_key": "romantic_gifts_named_brand_mentions"
+        },
+        {
+          "series_key": "personalized_gift_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "etsysellers_community_posts",
+            "weddingplanning_community_posts",
+            "smallbusiness_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Romantic gifts brand sentiment (weekly)",
+          "series_keys": [
+            "romantic_gifts_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
+      "theme_slug": "romantic-gifts-25-greeting-cards-personalized-gifts",
+      "ticker": "ETSY",
+      "recipes": [
+        {
+          "series_key": "kalshi_etsy_q3_gms",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ecommerce_mail_order_sales",
+          "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
         }
       ]

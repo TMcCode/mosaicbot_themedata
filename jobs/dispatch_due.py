@@ -29,6 +29,7 @@ if str(_ROOT) not in sys.path:
 
 from lib.env import load_env  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
+from lib.as_of import freshness_as_of  # noqa: E402
 
 SCHEDULE_PATH = _ROOT / "config" / "update_schedule.json"
 STATUS_LOCAL = _ROOT / "data" / "scheduler" / "last_runs.json"
@@ -157,15 +158,25 @@ def is_due(
             reasons.append(f"day={today.day} in {d_from}-{d_to}")
 
     max_age = due.get("max_age_days")
-    as_of = _read_freshness_as_of(pack) or _last_success_as_of(status, pack_id)
+    raw_as_of = _read_freshness_as_of(pack) or _last_success_as_of(status, pack_id)
+    # Clamp future / incomplete-month vendor dates (e.g. USASpending) so age
+    # cannot go negative and block stale catch-up outside the due window.
+    as_of = freshness_as_of(raw_as_of, today=today) if raw_as_of else None
     stale = False
     if max_age is not None and as_of is not None:
         age = (today - as_of).days
+        clamp_note = ""
+        if raw_as_of and raw_as_of != as_of:
+            clamp_note = f" (raw_as_of={raw_as_of.isoformat()} clamped)"
         if age >= int(max_age):
             stale = True
-            reasons.append(f"stale as_of={as_of.isoformat()} age={age}d>={max_age}")
+            reasons.append(
+                f"stale as_of={as_of.isoformat()} age={age}d>={max_age}{clamp_note}"
+            )
         else:
-            reasons.append(f"fresh as_of={as_of.isoformat()} age={age}d<{max_age}")
+            reasons.append(
+                f"fresh as_of={as_of.isoformat()} age={age}d<{max_age}{clamp_note}"
+            )
     elif max_age is not None and as_of is None:
         stale = True
         reasons.append("no prior as_of")
