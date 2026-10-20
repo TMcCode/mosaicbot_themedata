@@ -25,6 +25,7 @@ if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
 from lib.env import load_env, require_env  # noqa: E402
+from lib import bls as blslib  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
@@ -37,7 +38,6 @@ SCHEMA_VERSION = 0
 PACK = "value_sit_down"
 R2_PREFIX = f"themedata/{PACK}"
 UA = "mosaicbot_themedata/0.1 (+value_sit_down)"
-BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _DEFAULT_OUT = _ROOT / "data" / PACK
 _SCORES_OUT = _ROOT / "data" / "scores"
 _CATALOG = _ROOT / "config" / "value_sit_down_catalog.json"
@@ -82,45 +82,13 @@ def fetch_bls_series(
     end_year: int,
     api_key: str,
 ) -> dict[str, list[dict[str, Any]]]:
-    payload = {
-        "seriesid": series_ids,
-        "startyear": str(start_year),
-        "endyear": str(end_year),
-        "registrationkey": api_key,
-    }
-    body = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        BLS_URL,
-        data=body,
-        headers={"Content-Type": "application/json", "User-Agent": UA},
-        method="POST",
+    return blslib.fetch_series(
+        series_ids,
+        start_year=start_year,
+        end_year=end_year,
+        api_key=api_key,
+        user_agent=UA,
     )
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            raw = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", errors="replace")[:500]
-        raise RuntimeError(f"BLS HTTP {e.code}: {detail}") from e
-
-    if raw.get("status") != "REQUEST_SUCCEEDED":
-        raise RuntimeError(
-            f"BLS status={raw.get('status')!r} message={raw.get('message')!r}"
-        )
-
-    out: dict[str, list[dict[str, Any]]] = {}
-    for series in raw.get("Results", {}).get("series", []):
-        sid = series.get("seriesID")
-        rows = []
-        for row in series.get("data", []):
-            rows.append(
-                {
-                    "year": row.get("year"),
-                    "period": row.get("period"),
-                    "value": row.get("value"),
-                }
-            )
-        out[str(sid)] = rows
-    return out
 
 
 def bls_rows_to_points(rows: list[dict[str, Any]]) -> list[dict[str, float]]:

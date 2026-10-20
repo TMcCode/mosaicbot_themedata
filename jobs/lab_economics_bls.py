@@ -26,6 +26,7 @@ if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
 from lib.env import load_env, require_env  # noqa: E402
+from lib import bls as blslib  # noqa: E402
 from lib import r2 as r2lib  # noqa: E402
 from lib import transforms as tx  # noqa: E402
 from lib import census_trade as census  # noqa: E402
@@ -35,7 +36,6 @@ SCHEMA_VERSION = 0
 PACK = "lab_economics"
 R2_PREFIX = f"themedata/{PACK}"
 UA = "mosaicbot_themedata/0.1 (+lab_economics)"
-BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _DEFAULT_OUT = _ROOT / "data" / "lab_economics"
 _SCORES_OUT = _ROOT / "data" / "scores"
 _CATALOG = _ROOT / "config" / "lab_economics_catalog.json"
@@ -77,50 +77,14 @@ def fetch_bls_series(
     end_year: int,
     api_key: str,
 ) -> dict[str, list[dict[str, Any]]]:
-    """POST BLS v2; return {series_id: [{year, period, value, footnotes}, ...]} raw rows."""
-    payload = {
-        "seriesid": series_ids,
-        "startyear": str(start_year),
-        "endyear": str(end_year),
-        "registrationkey": api_key,
-    }
-    body = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        BLS_URL,
-        data=body,
-        headers={"Content-Type": "application/json", "User-Agent": UA},
-        method="POST",
+    """POST BLS v2 with retries; return raw rows keyed by series id."""
+    return blslib.fetch_series(
+        series_ids,
+        start_year=start_year,
+        end_year=end_year,
+        api_key=api_key,
+        user_agent=UA,
     )
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            raw = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", errors="replace")[:500]
-        raise RuntimeError(f"BLS HTTP {e.code}: {detail}") from e
-
-    if raw.get("status") != "REQUEST_SUCCEEDED":
-        raise RuntimeError(f"BLS status={raw.get('status')!r} message={raw.get('message')!r}")
-
-    out: dict[str, list[dict[str, Any]]] = {}
-    for series in raw.get("Results", {}).get("series", []):
-        sid = series.get("seriesID")
-        rows = []
-        for row in series.get("data", []):
-            rows.append(
-                {
-                    "year": row.get("year"),
-                    "period": row.get("period"),
-                    "periodName": row.get("periodName"),
-                    "value": row.get("value"),
-                    "footnotes": row.get("footnotes") or [],
-                }
-            )
-        out[sid] = rows
-        msgs = series.get("message") or []
-        if msgs and not rows:
-            # keep empty; caller may soft-fail per series
-            out[sid] = []
-    return out
 
 
 def rows_to_points(rows: list[dict[str, Any]], *, frequency: str) -> list[dict[str, float]]:
