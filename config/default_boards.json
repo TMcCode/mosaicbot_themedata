@@ -4982,6 +4982,8 @@
           "metric": "raw",
           "display_name": "Forum talk by community (weekly)",
           "series_keys": [
+            "skincareaddiction_community_posts",
+            "makeupaddiction_community_posts",
             "asianbeauty_community_posts",
             "beauty_community_posts",
             "sephora_community_posts",

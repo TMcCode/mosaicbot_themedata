@@ -694,18 +694,25 @@ def build_pack(
     if history_only:
         notes.append("history_only: skipped Arctic Shift fetch")
     else:
-        # Reliable / theme-relevant mass first; prestige High last.
+        # High-volume mass: forward walk from _SERIES_FROM (not recent-only desc).
+        # Others: recent-first crawl is enough.
+        _FORWARD_SUBS = frozenset({"MakeupAddiction", "SkincareAddiction"})
         for sub, n in (
+            ("MakeupAddiction", max(25000, backfill_posts)),
+            ("SkincareAddiction", max(35000, backfill_posts)),
             ("AsianBeauty", max(6000, backfill_posts)),
             ("beauty", max(6000, backfill_posts)),
-            ("MakeupAddiction", max(6000, backfill_posts)),
-            ("SkincareAddiction", max(8000, backfill_posts)),
             ("Sephora", max(6000, backfill_posts)),
             ("SkincareAddictionLux", max(4000, backfill_posts)),
         ):
             time.sleep(3.0)  # breathe between subs; Arctic Shift 422s when rushed
             try:
-                posts = fetch_subreddit(sub, max_posts=n)
+                if sub in _FORWARD_SUBS:
+                    posts = fetch_subreddit_forward(
+                        sub, start_date=_SERIES_FROM, max_posts=n
+                    )
+                else:
+                    posts = fetch_subreddit(sub, max_posts=n)
                 if not posts:
                     errors.append(f"{sub}: empty fetch")
                     continue
@@ -775,8 +782,8 @@ def build_pack(
     if community_from:
         notes.append(
             f"community + brand stacks aligned from {community_from} "
-            f"(r/AsianBeauty + r/beauty + r/Sephora); "
-            f"SkA/MuA excluded from brand/community stack (short Arctic windows)"
+            f"(r/MakeupAddiction + r/SkincareAddiction + r/AsianBeauty + r/beauty); "
+            f"SkA/MuA forward-scraped from {_SERIES_FROM}"
         )
     if category_from:
         notes.append(
