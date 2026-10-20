@@ -4,8 +4,9 @@
 Theme: Buying a House '26: Home Improvement Retailers
 (stockthemes slug: buying-a-house-26-home-improvement-retailers).
 
-Housing turnover (existing home sales) + mortgage rates + NAICS 444 retail
-sales + housing starts/permits + lumber PPI + SE USDM drought (ticker-scoped).
+Housing turnover (existing home sales) + NAHB/Wells Fargo HMI (builder
+sentiment scrape) + mortgage rates + NAICS 444 retail sales + housing
+starts/permits + lumber PPI + SE USDM drought (ticker-scoped).
 Forums live in home_improvement_forums.
 """
 
@@ -29,7 +30,9 @@ from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import usdm as usdm_lib  # noqa: E402
+from lib import nahb_hmi as nahb_lib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "home_improvement"
@@ -118,6 +121,7 @@ def build_pack(
     notes: list[str] = []
     latest_date = ""
     exhos_archive = _load_exhos_archive()
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
         key = meta.get("key")
@@ -148,6 +152,20 @@ def build_pack(
                     f"{key}: USDM SE D1+ mean over {len(usdm_lib.SE_STATE_FIPS)} "
                     f"states ({len(pts)} pts)"
                 )
+            elif src == "nahb_hmi":
+                pts, mm = nahb_lib.scrape_national_hmi(start=start)
+                notes.append(
+                    f"{key}: NAHB HMI Table 2 n={mm.get('n')} "
+                    f"last={((mm.get('latest') or {}).get('date'))} "
+                    f"xls={mm.get('history_xls')}"
+                )
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             else:
                 raise RuntimeError(f"unknown source {src}")
             if not pts:
@@ -167,7 +185,10 @@ def build_pack(
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
-        "source": "FRED (housing turnover + home improvement retail) + USDM SE drought",
+        "source": (
+            "FRED (housing turnover + home improvement retail) + "
+            "NAHB/Wells Fargo HMI + USDM SE drought"
+        ),
         "fetched_at": fetched_at,
         "as_of": latest_date,
         "catalog": catalog,

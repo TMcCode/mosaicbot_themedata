@@ -1,0 +1,216 @@
+{
+  "schema_version": 0,
+  "pack": "memory_hbm_testing_forums",
+  "description": "HBM Inspection/Packaging/Bonding Reddit sidecar (legacy tester lexicon until retarget) \u2014 r/semiconductors, r/hardware, r/chipdesign.",
+  "series": [
+    {
+      "key": "teradyne_mentions",
+      "source": "arctic_shift",
+      "label": "Teradyne / Magnum / UltraFLEX mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Teradyne / Magnum / UltraFLEX mentions (weekly)",
+      "short_name": "Teradyne",
+      "display_name": "Teradyne mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hbm_teradyne_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "formfactor_mentions",
+      "source": "arctic_shift",
+      "label": "FormFactor / SmartMatrix / probe-card mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 FormFactor / SmartMatrix / probe-card mentions (weekly)",
+      "short_name": "FormFactor",
+      "display_name": "FormFactor mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hbm_formfactor_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cohu_mentions",
+      "source": "arctic_shift",
+      "label": "Cohu / Eclipse handler mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Cohu / Eclipse handler mentions (weekly)",
+      "short_name": "Cohu",
+      "display_name": "Cohu mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "hbm_cohu_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "aehr_mentions",
+      "source": "arctic_shift",
+      "label": "Aehr / FOX burn-in mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Aehr / FOX burn-in mentions (weekly)",
+      "short_name": "Aehr",
+      "display_name": "Aehr mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "hbm_aehr_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "advantest_mentions",
+      "source": "arctic_shift",
+      "label": "Advantest mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Advantest mentions (weekly)",
+      "short_name": "Advantest",
+      "display_name": "Advantest mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "hbm_advantest_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hbm_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named HBM-tester brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 unique posts hitting any HBM-tester brand lexicon (weekly)",
+      "short_name": "HBM tester brand talk",
+      "display_name": "Named HBM-tester brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hbm_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hbm_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts: HBM / probe / burn-in / hybrid bonding (weekly)",
+      "official_name": "Arctic Shift \u2014 share of watched-sub posts hitting HBM-testing lexicon (weekly %)",
+      "short_name": "HBM-test share",
+      "display_name": "% of posts: HBM testing / probe / burn-in (weekly)",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hbm_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "semiconductors_community_posts",
+      "source": "arctic_shift",
+      "label": "r/semiconductors weekly posts",
+      "official_name": "Arctic Shift \u2014 r/semiconductors total weekly posts",
+      "short_name": "r/semiconductors",
+      "display_name": "r/semiconductors community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hbm_semiconductors_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hardware_community_posts",
+      "source": "arctic_shift",
+      "label": "r/hardware weekly posts",
+      "official_name": "Arctic Shift \u2014 r/hardware total weekly posts",
+      "short_name": "r/hardware",
+      "display_name": "r/hardware community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "hbm_hardware_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "chipdesign_community_posts",
+      "source": "arctic_shift",
+      "label": "r/chipdesign weekly posts",
+      "official_name": "Arctic Shift \u2014 r/chipdesign total weekly posts",
+      "short_name": "r/chipdesign",
+      "display_name": "r/chipdesign community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "chipdesign_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hbm_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "HBM tester brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 mean lexicon sentiment over unique HBM-tester brand posts",
+      "short_name": "HBM tester brand sentiment",
+      "display_name": "HBM tester brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "hbm_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

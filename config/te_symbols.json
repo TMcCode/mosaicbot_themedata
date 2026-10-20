@@ -1,10 +1,10 @@
 {
   "schema_version": 0,
-  "description": "Stable Trading Economics market symbols for themedata series. Resolve once (search costs API budget); do not re-search on a schedule. Batch pullable symbols in one markets/symbol call when refreshing.",
+  "description": "Stable Trading Economics market symbols + country indicators for themedata series. Resolve once (search costs API budget); do not re-search on a schedule. Batch pullable market symbols in one markets/symbol call when refreshing. Country indicators use historical/country/.../indicator/... (cached).",
   "budget_notes": [
     "Plan: 500 REST requests/month — treat as scarce.",
-    "Weekly refresh: one batched markets/symbol for all status=pull keys (~4 calls/month).",
-    "Historical: once per symbol (or incremental since last as_of); cache under data/te/cache/.",
+    "Weekly refresh: one batched markets/symbol for all status=pull commodity keys (~4 calls/month).",
+    "Historical: once per symbol/indicator (or incremental since last as_of); cache under data/te/cache/.",
     "HTML scrape remains a zero-API fallback for germanium public page only."
   ],
   "symbols": {
@@ -29,6 +29,44 @@
       "status": "pull",
       "history_name": "gallium_te_history.jsonl",
       "latest_name": "gallium_te_latest.json"
+    }
+  },
+  "indicators": {
+    "korea_semiconductor_exports": {
+      "country": "south korea",
+      "indicator": "semiconductor exports",
+      "symbol": "KORSEMEXP",
+      "name": "South Korea Semiconductor Exports",
+      "url": "/south-korea/semiconductor-exports",
+      "unit": "usd_millions",
+      "frequency": "monthly",
+      "pack": "memory_cxl",
+      "status": "pull",
+      "notes": "HS 8541+8542 export value (Korea Customs). Memory-heavy; resolved 2026-10-19."
+    },
+    "taiwan_semiconductor_exports": {
+      "country": "taiwan",
+      "indicator": "semiconductor exports",
+      "symbol": "TWNSEMEXP",
+      "name": "Taiwan Semiconductor Exports",
+      "url": "/taiwan/semiconductor-exports",
+      "unit": "usd_millions",
+      "frequency": "monthly",
+      "pack": "memory_cxl",
+      "status": "pull",
+      "notes": "HS 8541+8542 export value (Taiwan Customs). Resolved 2026-10-19."
+    },
+    "china_retail_sales_yoy": {
+      "country": "china",
+      "indicator": "retail sales yoy",
+      "symbol": "CHNRetailSalesYoY",
+      "name": "China Retail Sales YoY",
+      "url": "/china/retail-sales-annual",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "beauty_prestige",
+      "status": "pull",
+      "notes": "NBS total retail sales of consumer goods YoY via Trading Economics. Broad China demand proxy — cosmetics-specific NBS series is CEIC/MacroMicro (map_only) until a free scrape path exists."
     }
   }
 }

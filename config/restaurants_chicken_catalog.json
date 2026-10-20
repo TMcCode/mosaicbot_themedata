@@ -13,7 +13,10 @@
       "display_name": "US wholesale whole-wing price (AMS)",
       "frequency": "weekly",
       "unit": "cents_per_lb",
-      "derived": ["yoy_pct", "wow_pct"],
+      "derived": [
+        "yoy_pct",
+        "wow_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "ams_wings_whole",
@@ -32,7 +35,10 @@
       "display_name": "US processed poultry producer prices",
       "frequency": "monthly",
       "unit": "index",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "poultry_ppi",
@@ -53,7 +59,10 @@
       "display_name": "US food services average hourly earnings",
       "frequency": "monthly",
       "unit": "usd_per_hour_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "food_services_ahe",
@@ -72,7 +81,10 @@
       "display_name": "US food services employment",
       "frequency": "monthly",
       "unit": "thousands_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "food_services_employment",
@@ -91,7 +103,10 @@
       "display_name": "US CPI food away from home",
       "frequency": "monthly",
       "unit": "index_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "cpi_food_away_from_home",
@@ -110,7 +125,10 @@
       "display_name": "US food services & drinking places retail sales",
       "frequency": "monthly",
       "unit": "usd_millions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "food_services_retail_sales",
@@ -118,6 +136,184 @@
       "cadence": "monthly",
       "as_of_semantics": "period_end",
       "notes": "Top-line demand / traffic proxy (Census via FRED)."
+    },
+    {
+      "key": "chicken_buyer_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "yum_kfc_revenue",
+        "qsr_revenue",
+        "wing_revenue",
+        "loco_revenue"
+      ],
+      "label": "Chicken buyer revenue (YUM KFC+QSR+WING+LOCO)",
+      "official_name": "Sum of YUM KFC segment + QSR + WING + LOCO total revenue",
+      "short_name": "Member revenue",
+      "display_name": "Chicken buyer revenue (YUM KFC+QSR+WING+LOCO)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "chicken_buyer_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "YUM layer is KFC Global Division segment (not total Yum)."
+    },
+    {
+      "key": "yum_kfc_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_limit": 40,
+      "fmp_symbol": "YUM",
+      "segment_aliases": [
+        "KFC Global Division",
+        "KFC"
+      ],
+      "label": "Yum KFC revenue",
+      "official_name": "FMP revenue-product-segmentation — YUM KFC Global Division",
+      "short_name": "YUM KFC",
+      "display_name": "Yum KFC revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "yum_kfc_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Chicken-theme layer; total YUM still available as yum_revenue. FMP lacks brand splits for Q4 2017–2020 (Franchise-only rows); inflated segment prints vs income-statement revenue are dropped."
+    },
+    {
+      "key": "yum_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Yum! Brands revenue",
+      "official_name": "FMP income-statement revenue — YUM",
+      "short_name": "YUM revenue",
+      "display_name": "Yum! Brands revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "yum_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "YUM"
+    },
+    {
+      "key": "qsr_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Restaurant Brands revenue",
+      "official_name": "FMP income-statement revenue — QSR",
+      "short_name": "QSR revenue",
+      "display_name": "Restaurant Brands revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "qsr_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "QSR"
+    },
+    {
+      "key": "wing_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Wingstop revenue",
+      "official_name": "FMP income-statement revenue — WING",
+      "short_name": "WING revenue",
+      "display_name": "Wingstop revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "wing_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "WING"
+    },
+    {
+      "key": "loco_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "El Pollo Loco revenue",
+      "official_name": "FMP income-statement revenue — LOCO",
+      "short_name": "LOCO revenue",
+      "display_name": "El Pollo Loco revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "loco_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "LOCO"
+    },
+    {
+      "key": "chicken_transcript_keywords",
+      "source": "fmp_transcript_keywords",
+      "fmp_symbols": [
+        "YUM",
+        "QSR",
+        "WING",
+        "LOCO"
+      ],
+      "fmp_limit": 16,
+      "require_all": false,
+      "keywords": [
+        "chicken",
+        "wing",
+        "wings",
+        "food cost",
+        "commodity",
+        "bone-in"
+      ],
+      "label": "Chicken/wing keyword hits in buyer earnings calls",
+      "official_name": "FMP earning-call-transcript keyword counts — YUM,QSR,WING,LOCO",
+      "short_name": "Transcript keywords",
+      "display_name": "Chicken/wing keyword hits in buyer earnings calls",
+      "frequency": "quarterly",
+      "unit": "keyword_hits",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "chicken_transcript_keywords",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
     }
   ]
 }

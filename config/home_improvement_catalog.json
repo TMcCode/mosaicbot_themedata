@@ -1,38 +1,65 @@
 {
   "schema_version": 0,
   "pack": "home_improvement",
-  "description": "Buying a House '26: Home Improvement Retailers backdrop — housing turnover (existing home sales) + mortgage rates + NAICS 444 retail sales + housing starts/permits + lumber PPI + SE drought (ticker-scoped TSCO/LESL). Forums in home_improvement_forums. Tickers HD, LOW, FND, TSCO, LESL.",
+  "description": "Buying a House '26: Home Improvement Retailers backdrop \u2014 housing turnover (existing home sales) + NAHB/Wells Fargo HMI (builder sentiment) + mortgage rates + NAICS 444 retail sales + housing starts/permits + lumber PPI + SE drought (ticker-scoped TSCO/LESL). Forums in home_improvement_forums. Tickers HD, LOW, FND, TSCO, LESL.",
   "series": [
     {
       "key": "existing_home_sales",
       "source": "fred",
       "fred_id": "EXHOSLUSM495S",
       "label": "Existing Home Sales (SAAR)",
-      "official_name": "FRED EXHOSLUSM495S — Existing Home Sales (NAR), seasonally adjusted annual rate",
+      "official_name": "FRED EXHOSLUSM495S \u2014 Existing Home Sales (NAR), seasonally adjusted annual rate",
       "short_name": "Existing home sales",
       "display_name": "US existing home sales (SAAR)",
       "frequency": "monthly",
       "unit": "units_saar",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "existing_home_sales",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Hero turnover series — low sales suppress discretionary renovation. Live FRED EXHOSLUSM495S is a rolling ~13-month NAR license window; deeper history spliced from config/seeds/existing_home_sales_archive.csv (provisional NAR reconstruction — murky redistribute; FRED wins on overlap). Prefer licensing NAR historical file for production."
+      "notes": "Hero turnover series \u2014 low sales suppress discretionary renovation. Live FRED EXHOSLUSM495S is a rolling ~13-month NAR license window; deeper history spliced from config/seeds/existing_home_sales_archive.csv (provisional NAR reconstruction \u2014 murky redistribute; FRED wins on overlap). Prefer licensing NAR historical file for production."
+    },
+    {
+      "key": "nahb_hmi",
+      "source": "nahb_hmi",
+      "label": "NAHB/Wells Fargo Housing Market Index",
+      "official_name": "NAHB/Wells Fargo Housing Market Index (national composite, SA)",
+      "short_name": "NAHB HMI",
+      "display_name": "NAHB Housing Market Index (builder confidence)",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "nahb_hmi",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Builder confidence lead (0\u2013100). Public Table 2 history XLS from nahb.org; proprietary \u2014 display with attribution, not for bulk redistribution."
     },
     {
       "key": "new_home_sales",
       "source": "fred",
       "fred_id": "HSN1F",
       "label": "New One Family Houses Sold (SAAR)",
-      "official_name": "FRED HSN1F — New One Family Houses Sold (Census), seasonally adjusted annual rate",
+      "official_name": "FRED HSN1F \u2014 New One Family Houses Sold (Census), seasonally adjusted annual rate",
       "short_name": "New home sales",
       "display_name": "US new single-family home sales (SAAR)",
       "frequency": "monthly",
       "unit": "thousands_saar",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "new_home_sales",
@@ -46,31 +73,37 @@
       "source": "fred",
       "fred_id": "MORTGAGE30US",
       "label": "30-Year Fixed Rate Mortgage Average",
-      "official_name": "FRED MORTGAGE30US — 30-Year Fixed Rate Mortgage Average in the United States (Freddie Mac)",
+      "official_name": "FRED MORTGAGE30US \u2014 30-Year Fixed Rate Mortgage Average in the United States (Freddie Mac)",
       "short_name": "30y mortgage rate",
       "display_name": "US 30-year fixed mortgage rate",
       "frequency": "weekly",
       "unit": "percent",
-      "derived": ["yoy_pct", "wow_pct"],
+      "derived": [
+        "yoy_pct",
+        "wow_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "mortgage_30y",
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Affordability / lock-in driver. Rising rates → lower turnover (score polarity −1)."
+      "notes": "Affordability / lock-in driver. Rising rates \u2192 lower turnover (score polarity \u22121)."
     },
     {
       "key": "building_materials_retail_sales",
       "source": "fred",
       "fred_id": "MRTSSM444USS",
       "label": "Retail Sales: Building Material and Garden Equipment and Supplies Dealers (NAICS 444)",
-      "official_name": "FRED MRTSSM444USS — Retail Sales: Building Material and Garden Equipment and Supplies Dealers, SA",
+      "official_name": "FRED MRTSSM444USS \u2014 Retail Sales: Building Material and Garden Equipment and Supplies Dealers, SA",
       "short_name": "NAICS 444 retail sales",
       "display_name": "US building materials & garden retail sales (NAICS 444)",
       "frequency": "monthly",
       "unit": "millions_usd_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "building_materials_retail_sales",
@@ -84,12 +117,15 @@
       "source": "fred",
       "fred_id": "HOUST",
       "label": "Housing Starts: Total New Privately Owned Housing Units Started",
-      "official_name": "FRED HOUST — New Privately-Owned Housing Units Started (Census), SAAR",
+      "official_name": "FRED HOUST \u2014 New Privately-Owned Housing Units Started (Census), SAAR",
       "short_name": "Housing starts",
       "display_name": "US housing starts (SAAR)",
       "frequency": "monthly",
       "unit": "thousands_saar",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "housing_starts",
@@ -103,12 +139,15 @@
       "source": "fred",
       "fred_id": "PERMIT",
       "label": "New Privately-Owned Housing Units Authorized in Permit-Issuing Places",
-      "official_name": "FRED PERMIT — New Private Housing Units Authorized by Building Permits (Census), SAAR",
+      "official_name": "FRED PERMIT \u2014 New Private Housing Units Authorized by Building Permits (Census), SAAR",
       "short_name": "Building permits",
       "display_name": "US building permits (SAAR)",
       "frequency": "monthly",
       "unit": "thousands_saar",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "building_permits",
@@ -122,31 +161,37 @@
       "source": "fred",
       "fred_id": "WPU081",
       "label": "PPI Commodity: Lumber and wood products",
-      "official_name": "FRED WPU081 — Producer Price Index by Commodity: Lumber and Wood Products (BLS)",
+      "official_name": "FRED WPU081 \u2014 Producer Price Index by Commodity: Lumber and Wood Products (BLS)",
       "short_name": "Lumber PPI",
       "display_name": "US lumber & wood products producer prices",
       "frequency": "monthly",
       "unit": "index",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "lumber_ppi",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Building-materials COGS proxy. Rising lumber PPI → margin/pricing headwind (score polarity −1)."
+      "notes": "Building-materials COGS proxy. Rising lumber PPI \u2192 margin/pricing headwind (score polarity \u22121)."
     },
     {
       "key": "case_shiller_national",
       "source": "fred",
       "fred_id": "CSUSHPISA",
       "label": "S&P/Case-Shiller U.S. National Home Price Index (SA)",
-      "official_name": "FRED CSUSHPISA — S&P/Case-Shiller U.S. National Home Price Index, seasonally adjusted",
+      "official_name": "FRED CSUSHPISA \u2014 S&P/Case-Shiller U.S. National Home Price Index, seasonally adjusted",
       "short_name": "Case-Shiller national",
       "display_name": "US national home prices (Case-Shiller)",
       "frequency": "monthly",
       "unit": "index",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "case_shiller_national",
@@ -160,30 +205,36 @@
       "source": "fred",
       "fred_id": "MSACSR",
       "label": "Monthly Supply of New Houses",
-      "official_name": "FRED MSACSR — Monthly Supply of New Houses in the United States (Census)",
+      "official_name": "FRED MSACSR \u2014 Monthly Supply of New Houses in the United States (Census)",
       "short_name": "New-home months' supply",
       "display_name": "US months' supply of new homes",
       "frequency": "monthly",
       "unit": "months",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "months_supply_new_homes",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Inventory overhang proxy — higher supply → softer housing activity (score polarity −1 if used)."
+      "notes": "Inventory overhang proxy \u2014 higher supply \u2192 softer housing activity (score polarity \u22121 if used)."
     },
     {
       "key": "se_drought_d1_pct",
       "source": "usdm",
       "label": "Southeast drought area in D1 or worse (%)",
-      "official_name": "USDM traditional D1+ area % — unweighted mean of AL/FL/GA/LA/MS/NC/SC/TN (FIPS)",
+      "official_name": "USDM traditional D1+ area % \u2014 unweighted mean of AL/FL/GA/LA/MS/NC/SC/TN (FIPS)",
       "short_name": "SE drought D1+",
       "display_name": "Southeast drought severity (D1+ area %)",
       "frequency": "weekly",
       "unit": "pct",
-      "derived": ["yoy_pct", "wow_pct"],
+      "derived": [
+        "yoy_pct",
+        "wow_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "se_drought_d1_pct",
@@ -191,6 +242,123 @@
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
       "notes": "Seasonal outdoor/lawn/pool demand proxy for TSCO/LESL. Not in theme backdrop score."
+    },
+    {
+      "key": "home_improvement_revenue",
+      "source": "fmp_revenue",
+      "fmp_limit": 40,
+      "label": "Home improvement retailer revenue (HD+LOW+FND+TSCO)",
+      "official_name": "FMP income-statement revenue sum \u2014 HD,LOW,FND,TSCO",
+      "short_name": "Member revenue",
+      "display_name": "Home improvement retailer revenue (HD+LOW+FND+TSCO)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "home_improvement_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "HD",
+        "LOW",
+        "FND",
+        "TSCO"
+      ],
+      "require_all": false,
+      "notes": "Theme-member top-line sum (FMP)."
+    },
+    {
+      "key": "hd_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Home Depot revenue",
+      "official_name": "FMP income-statement revenue \u2014 HD",
+      "short_name": "HD revenue",
+      "display_name": "Home Depot revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "hd_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "HD"
+    },
+    {
+      "key": "low_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Lowe's revenue",
+      "official_name": "FMP income-statement revenue \u2014 LOW",
+      "short_name": "LOW revenue",
+      "display_name": "Lowe's revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "low_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "LOW"
+    },
+    {
+      "key": "fnd_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Floor & Decor revenue",
+      "official_name": "FMP income-statement revenue \u2014 FND",
+      "short_name": "FND revenue",
+      "display_name": "Floor & Decor revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "fnd_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "FND"
+    },
+    {
+      "key": "tsco_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Tractor Supply revenue",
+      "official_name": "FMP income-statement revenue \u2014 TSCO",
+      "short_name": "TSCO revenue",
+      "display_name": "Tractor Supply revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "tsco_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "TSCO"
     }
   ]
 }

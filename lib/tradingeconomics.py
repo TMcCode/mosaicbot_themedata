@@ -369,6 +369,75 @@ def historical_to_points(
     return [{"date": d, "value": by[d]} for d in sorted(by)]
 
 
+def indicator_historical(
+    country: str,
+    indicator: str,
+    *,
+    d1: str | None = None,
+    d2: str | None = None,
+    max_age_hours: float | None = 24.0 * 14,
+    force: bool = False,
+    allow_reserve: bool = True,
+) -> list[dict[str, Any]]:
+    """Country macro indicator history (e.g. South Korea semiconductor exports).
+
+    Path segments are URL-encoded. Resolve country+indicator once and pin in
+    ``te_symbols.json`` — do not search on a schedule.
+    """
+    c = quote(str(country).strip().lower(), safe="")
+    i = quote(str(indicator).strip().lower(), safe="")
+    if not c or not i:
+        return []
+    params: dict[str, str] = {}
+    if d1:
+        params["d1"] = d1
+    if d2:
+        params["d2"] = d2
+    path = f"historical/country/{c}/indicator/{i}"
+    cache_key = f"indicator/hist|{c}|{i}|{d1 or ''}|{d2 or ''}"
+    data = get_json(
+        path,
+        params=params or None,
+        cache_key=cache_key,
+        max_age_hours=max_age_hours,
+        force=force,
+        allow_reserve=allow_reserve,
+    )
+    if not isinstance(data, list):
+        raise RuntimeError(f"unexpected indicator payload: {type(data)}")
+    return data
+
+
+def indicator_to_points(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Map TE country-indicator rows → ``[{date, value}]`` using Value + DateTime."""
+    by: dict[str, float] = {}
+    for r in rows:
+        raw = r.get("DateTime") or r.get("Date") or r.get("LatestValueDate")
+        val = r.get("Value")
+        if raw is None or val is None:
+            continue
+        try:
+            d = parse_te_date(str(raw))
+            by[d] = float(val)
+        except Exception:
+            continue
+    return [{"date": d, "value": by[d]} for d in sorted(by)]
+
+
+def load_indicator_specs(*, pull_only: bool = True) -> list[dict[str, Any]]:
+    """Return ``te_symbols.json`` ``indicators`` rows (status=pull by default)."""
+    doc = load_symbology()
+    out: list[dict[str, Any]] = []
+    for key, row in (doc.get("indicators") or {}).items():
+        if not isinstance(row, dict):
+            continue
+        status = str(row.get("status") or "pull")
+        if pull_only and status not in ("pull", ""):
+            continue
+        out.append({"series_key": key, **row})
+    return out
+
+
 def snapshot_to_spot(row: dict[str, Any]) -> dict[str, Any]:
     """Normalize a markets/symbol row into our germanium-style spot snapshot."""
     last = row.get("Last")

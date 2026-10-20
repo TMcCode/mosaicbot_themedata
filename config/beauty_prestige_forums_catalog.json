@@ -1,0 +1,281 @@
+{
+  "schema_version": 0,
+  "pack": "beauty_prestige_forums",
+  "description": "Prestige beauty Reddit sidecar — brand mentions + prestige-category % of mass beauty forums (r/SkincareAddiction, r/AsianBeauty, r/beauty, r/MakeupAddiction) + community volume incl. r/Sephora + r/SkincareAddictionLux + thin digest.",
+  "series": [
+    {
+      "key": "estee_lauder_mentions",
+      "source": "arctic_shift",
+      "label": "Estée Lauder mentions (weekly)",
+      "official_name": "Arctic Shift — Estée Lauder mentions (weekly)",
+      "short_name": "Estée Lauder",
+      "display_name": "Estée Lauder mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "estee_lauder_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "loreal_mentions",
+      "source": "arctic_shift",
+      "label": "L'Oréal mentions (weekly)",
+      "official_name": "Arctic Shift — L'Oréal mentions (weekly)",
+      "short_name": "L'Oréal",
+      "display_name": "L'Oréal mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "loreal_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "sephora_mentions",
+      "source": "arctic_shift",
+      "label": "Sephora mentions (weekly)",
+      "official_name": "Arctic Shift — Sephora mentions (weekly)",
+      "short_name": "Sephora",
+      "display_name": "Sephora mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "sephora_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "dior_mentions",
+      "source": "arctic_shift",
+      "label": "Dior mentions (weekly)",
+      "official_name": "Arctic Shift — Dior mentions (weekly)",
+      "short_name": "Dior",
+      "display_name": "Dior mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dior_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "chanel_mentions",
+      "source": "arctic_shift",
+      "label": "Chanel mentions (weekly)",
+      "official_name": "Arctic Shift — Chanel mentions (weekly)",
+      "short_name": "Chanel",
+      "display_name": "Chanel mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "chanel_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "prestige_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand talk (weekly total)",
+      "official_name": "Arctic Shift — Named brand talk (weekly total)",
+      "short_name": "Named brands",
+      "display_name": "Named brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "prestige_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "prestige_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of beauty-forum posts: prestige / luxury talk",
+      "official_name": "Arctic Shift — % of beauty-forum posts: prestige / luxury talk",
+      "short_name": "Prestige share of beauty forums",
+      "display_name": "% of beauty-forum posts: prestige / luxury talk",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "prestige_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Share of posts hitting prestige/luxury/longevity lexicon across mass + prestige beauty subs. Do not stack into brand stack."
+    },
+    {
+      "key": "skincareaddiction_community_posts",
+      "source": "arctic_shift",
+      "label": "r/SkincareAddiction talk (weekly)",
+      "official_name": "Arctic Shift — r/SkincareAddiction talk (weekly)",
+      "short_name": "r/SkincareAddiction",
+      "display_name": "r/SkincareAddiction talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "skincareaddiction_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "SkincareAddiction"
+    },
+    {
+      "key": "asianbeauty_community_posts",
+      "source": "arctic_shift",
+      "label": "r/AsianBeauty talk (weekly)",
+      "official_name": "Arctic Shift — r/AsianBeauty talk (weekly)",
+      "short_name": "r/AsianBeauty",
+      "display_name": "r/AsianBeauty talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "asianbeauty_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "AsianBeauty"
+    },
+    {
+      "key": "makeupaddiction_community_posts",
+      "source": "arctic_shift",
+      "label": "r/MakeupAddiction talk (weekly)",
+      "official_name": "Arctic Shift — r/MakeupAddiction talk (weekly)",
+      "short_name": "r/MakeupAddiction",
+      "display_name": "r/MakeupAddiction talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "makeupaddiction_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "MakeupAddiction"
+    },
+    {
+      "key": "beauty_community_posts",
+      "source": "arctic_shift",
+      "label": "r/beauty talk (weekly)",
+      "official_name": "Arctic Shift — r/beauty talk (weekly)",
+      "short_name": "r/beauty",
+      "display_name": "r/beauty talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "beauty_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "beauty"
+    },
+    {
+      "key": "sephora_community_posts",
+      "source": "arctic_shift",
+      "label": "r/Sephora talk (weekly)",
+      "official_name": "Arctic Shift — r/Sephora talk (weekly)",
+      "short_name": "r/Sephora",
+      "display_name": "r/Sephora talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "sephora_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "Sephora"
+    },
+    {
+      "key": "skincareaddictionlux_community_posts",
+      "source": "arctic_shift",
+      "label": "r/SkincareAddictionLux talk (weekly)",
+      "official_name": "Arctic Shift — r/SkincareAddictionLux talk (weekly)",
+      "short_name": "r/SkincareAddictionLux",
+      "display_name": "r/SkincareAddictionLux talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "skincareaddictionlux_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "SkincareAddictionLux"
+    },
+    {
+      "key": "prestige_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Prestige brand sentiment (weekly)",
+      "official_name": "Arctic Shift — Prestige brand sentiment (weekly)",
+      "short_name": "Brand sentiment",
+      "display_name": "Prestige brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "prestige_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

@@ -28,6 +28,7 @@ from lib import pack_series as ps  # noqa: E402
 from lib import usaspending as usa  # noqa: E402
 from lib import orbital_launches as oll  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "space_launch"
@@ -69,6 +70,7 @@ def build_pack(
     latest_date = ""
 
     pending_derived: list[dict[str, Any]] = []
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
         key = meta.get("key")
@@ -109,6 +111,13 @@ def build_pack(
                         start_date=start,
                     )
                     notes.append(f"{key}: USASpending keywords={keywords}")
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             else:
                 raise RuntimeError(f"unknown source {src}")
             if not pts:

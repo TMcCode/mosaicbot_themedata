@@ -97,6 +97,7 @@
       "scope": "theme",
       "theme": "Steel '26: Integrated / Blast Furnace Producers",
       "ticker": null,
+      "theme_slug": "steel-26-integrated-blast-furnace-producers",
       "recipes": [
         {
           "series_key": "aisi_production",
@@ -107,6 +108,22 @@
           "series_key": "aisi_utilization",
           "metric": "raw",
           "chart_type": "line"
+        },
+        {
+          "series_key": "iron_ore_price",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "BF steel member revenue by name (X+CLF+MT)",
+          "series_keys": [
+            "x_revenue",
+            "clf_revenue",
+            "mt_revenue"
+          ],
+          "sum_series_key": "steel_member_revenue"
         },
         {
           "series_key": "construction_manufacturing",
@@ -123,54 +140,7 @@
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
         }
-      ],
-      "theme_slug": "steel-26-integrated-blast-furnace-producers"
-    },
-    {
-      "scope": "ticker",
-      "theme": "Steel '26: Integrated / Blast Furnace Producers",
-      "ticker": "NUE",
-      "recipes": [
-        {
-          "series_key": "aisi_production",
-          "metric": "raw",
-          "chart_type": "line"
-        },
-        {
-          "series_key": "aisi_utilization",
-          "metric": "raw",
-          "chart_type": "line"
-        },
-        {
-          "series_key": "construction_manufacturing",
-          "metric": "m3_avg_yoy_pct",
-          "chart_type": "bar"
-        }
-      ],
-      "theme_slug": "steel-26-integrated-blast-furnace-producers"
-    },
-    {
-      "scope": "ticker",
-      "theme": "Steel '26: Integrated / Blast Furnace Producers",
-      "ticker": "MLM",
-      "recipes": [
-        {
-          "series_key": "construction_highway",
-          "metric": "m3_avg_yoy_pct",
-          "chart_type": "bar"
-        },
-        {
-          "series_key": "construction_total",
-          "metric": "m3_avg_yoy_pct",
-          "chart_type": "bar"
-        },
-        {
-          "series_key": "construction_manufacturing",
-          "metric": "m3_avg_yoy_pct",
-          "chart_type": "bar"
-        }
-      ],
-      "theme_slug": "steel-26-integrated-blast-furnace-producers"
+      ]
     },
     {
       "scope": "theme",
@@ -186,6 +156,24 @@
           "series_key": "us_defense_spending",
           "metric": "yoy_pct",
           "chart_type": "bar"
+        },
+        {
+          "series_key": "dew_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "DEW pure-play revenue by name (IPGP+LASR+COHR+MKSI+AVAV)",
+          "series_keys": [
+            "ipgp_dew_revenue",
+            "lasr_dew_revenue",
+            "cohr_dew_revenue",
+            "mksi_dew_revenue",
+            "avav_dew_revenue"
+          ],
+          "sum_series_key": "dew_pureplay_revenue"
         },
         {
           "series_key": "gpr_index",
@@ -297,6 +285,17 @@
           "chart_type": "bar"
         },
         {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Surveillance sat revenue by name (BKSY+PL+SATL)",
+          "series_keys": [
+            "bksy_revenue",
+            "pl_revenue",
+            "satl_revenue"
+          ],
+          "sum_series_key": "surveillance_sat_revenue"
+        },
+        {
           "series_key": "usaspending_sat_geoint_awards",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -335,6 +334,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "pl_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "gpr_index",
           "metric": "raw",
           "chart_type": "line"
@@ -363,6 +367,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "bksy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "gpr_index",
           "metric": "raw",
           "chart_type": "line"
@@ -388,6 +397,11 @@
         {
           "series_key": "usaspending_sat_geoint_awards",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "satl_revenue",
+          "metric": "raw",
           "chart_type": "bar"
         },
         {
@@ -483,6 +497,24 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "optical_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Optical vendor revenue by name (CIEN+COHR+GLW optical+INFN+LITE)",
+          "series_keys": [
+            "cien_revenue",
+            "cohr_revenue",
+            "glw_revenue",
+            "infn_revenue",
+            "lite_revenue"
+          ],
+          "sum_series_key": "optical_vendor_revenue"
+        },
+        {
           "series_key": "optical_transceiver_import_value",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -551,6 +583,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "cohr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "fiber_optic_cable_ppi",
           "metric": "yoy_pct",
           "chart_type": "bar"
@@ -576,6 +613,11 @@
         {
           "series_key": "communications_equipment_new_orders",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lite_revenue",
+          "metric": "raw",
           "chart_type": "bar"
         },
         {
@@ -607,6 +649,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "cien_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "fiber_optic_cable_ppi",
           "metric": "yoy_pct",
           "chart_type": "bar"
@@ -632,6 +679,11 @@
         {
           "series_key": "communications_equipment_new_orders",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "glw_revenue",
+          "metric": "raw",
           "chart_type": "bar"
         },
         {
@@ -920,6 +972,23 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "chicken_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Chicken buyer revenue by name (YUM KFC+QSR+WING+LOCO)",
+          "series_keys": [
+            "yum_kfc_revenue",
+            "qsr_revenue",
+            "wing_revenue",
+            "loco_revenue"
+          ],
+          "sum_series_key": "chicken_buyer_revenue"
+        },
+        {
           "series_key": "food_services_ahe",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1007,6 +1076,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "wing_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "food_services_ahe",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1048,6 +1122,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "loco_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "food_services_ahe",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1076,6 +1155,16 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "yum_kfc_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "yum_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "food_services_ahe",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1101,6 +1190,11 @@
         {
           "series_key": "poultry_ppi",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qsr_revenue",
+          "metric": "raw",
           "chart_type": "bar"
         },
         {
@@ -1306,9 +1400,26 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "nahb_hmi",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "mortgage_30y",
           "metric": "raw",
           "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Home improvement retailer revenue by name (HD+LOW+FND+TSCO)",
+          "series_keys": [
+            "hd_revenue",
+            "low_revenue",
+            "fnd_revenue",
+            "tsco_revenue"
+          ],
+          "sum_series_key": "home_improvement_revenue"
         },
         {
           "series_key": "building_materials_retail_sales",
@@ -1408,6 +1519,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "hd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "building_materials_retail_sales",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1448,6 +1564,11 @@
         {
           "series_key": "existing_home_sales",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "low_revenue",
+          "metric": "raw",
           "chart_type": "bar"
         },
         {
@@ -1494,6 +1615,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "fnd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "building_materials_retail_sales",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1528,6 +1654,11 @@
         },
         {
           "series_key": "tractor_supply_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tsco_revenue",
           "metric": "raw",
           "chart_type": "bar"
         },
@@ -1625,6 +1756,17 @@
         {
           "chart_type": "stacked_bar",
           "metric": "raw",
+          "display_name": "Space launch pure-play revenue by name (RKLB+LUNR+FLY)",
+          "series_keys": [
+            "rklb_revenue",
+            "lunr_revenue",
+            "fly_revenue"
+          ],
+          "sum_series_key": "space_launch_pureplay_revenue"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
           "display_name": "Theme members US federal contract awards",
           "series_keys": [
             "usaspending_rklb_awards",
@@ -1706,6 +1848,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "rklb_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "neutron_mentions",
           "metric": "raw",
           "chart_type": "bar"
@@ -1752,6 +1899,11 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "lunr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "orbital_launches_monthly",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -1789,6 +1941,11 @@
         },
         {
           "series_key": "alpha_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fly_revenue",
           "metric": "raw",
           "chart_type": "bar"
         },
@@ -2623,6 +2780,2472 @@
         {
           "series_key": "ecommerce_mail_order_sales",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "it_equipment_software_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "AI-resilient software revenue by name (BSY+CDNS+INTU+SHOP+WDAY+ORCL Cloud)",
+          "series_keys": [
+            "bsy_revenue",
+            "cdns_revenue",
+            "intu_revenue",
+            "shop_revenue",
+            "wday_revenue",
+            "orcl_cloud_revenue"
+          ],
+          "sum_series_key": "ai_resilient_software_revenue"
+        },
+        {
+          "series_key": "nonfarm_productivity",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "information_job_openings",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "AI adoption: Ramp vs Census survey",
+          "series_keys": [
+            "ramp_ai_adoption",
+            "ramp_census_ai_adoption"
+          ]
+        },
+        {
+          "series_key": "ramp_ai_spend_pepm",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ramp_information_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Ramp vendor AI adoption (OpenAI vs Anthropic)",
+          "series_keys": [
+            "ramp_openai_adoption",
+            "ramp_anthropic_adoption"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "AI software brand mentions (weekly)",
+          "series_keys": [
+            "oracle_mentions",
+            "workday_mentions",
+            "intuit_mentions",
+            "shopify_mentions",
+            "cadence_mentions",
+            "bentley_mentions"
+          ],
+          "sum_series_key": "ai_software_named_brand_mentions"
+        },
+        {
+          "series_key": "agentic_ai_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "artificialinteligence_community_posts",
+            "softwareengineering_community_posts",
+            "cloudcomputing_community_posts",
+            "ecommerce_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "AI software brand sentiment (weekly)",
+          "series_keys": [
+            "ai_software_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "ORCL",
+      "recipes": [
+        {
+          "series_key": "orcl_cloud_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "CDNS",
+      "recipes": [
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cdns_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "INTU",
+      "recipes": [
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "intu_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "SHOP",
+      "recipes": [
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shop_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "WDAY",
+      "recipes": [
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wday_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "ticker": "BSY",
+      "recipes": [
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bsy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "google_political_ads_weekly_spend",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_agency_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Agency brand mentions (weekly)",
+          "series_keys": [
+            "stagwell_mentions",
+            "omnicom_mentions",
+            "publicis_mentions",
+            "wpp_mentions",
+            "ipsos_mentions"
+          ],
+          "sum_series_key": "agency_named_brand_mentions"
+        },
+        {
+          "series_key": "political_ads_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "politicalscience_community_posts",
+            "advertising_community_posts",
+            "marketing_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Agency brand sentiment (weekly)",
+          "series_keys": [
+            "agency_brand_sentiment"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Kalshi: Dem midterm control odds",
+          "series_keys": [
+            "kalshi_senate_control_d",
+            "kalshi_house_control_d"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Kalshi: close federal races (count)",
+          "series_keys": [
+            "kalshi_close_senate_races",
+            "kalshi_close_house_races"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": "STGW",
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": "IPS.PA",
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": "OMC",
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": "PUB.PA",
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "ticker": "WPP.LSE",
+      "recipes": [
+        {
+          "series_key": "fec_independent_expenditures",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "advertising_pr_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ddr5_rdimm_32gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "memory_ic_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_electronic_components_ip",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_employment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "CXL brand mentions (weekly)",
+          "series_keys": [
+            "astera_mentions",
+            "marvell_mentions",
+            "micron_mentions",
+            "rambus_mentions",
+            "montage_mentions",
+            "samsung_cmm_mentions"
+          ],
+          "sum_series_key": "cxl_named_brand_mentions"
+        },
+        {
+          "series_key": "cxl_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "hardware_community_posts",
+            "localllama_community_posts",
+            "semiconductors_community_posts",
+            "nvidia_community_posts"
+          ]
+        },
+        {
+          "series_key": "pm_kalshi_ddr5_ye2027_above_95",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_manifold_cxmt_hbm3_2026",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "CXL brand sentiment (weekly)",
+          "series_keys": [
+            "cxl_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "ticker": "ALAB",
+      "recipes": [
+        {
+          "series_key": "astera_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "ticker": "MRVL",
+      "recipes": [
+        {
+          "series_key": "marvell_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "ticker": "MU",
+      "recipes": [
+        {
+          "series_key": "micron_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "memory_ic_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "ticker": "RMBS",
+      "recipes": [
+        {
+          "series_key": "rambus_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "nand_512gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_256gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "NAND member revenue by name (MU+SIMO+SNDK+WDC)",
+          "series_keys": [
+            "mu_revenue",
+            "simo_revenue",
+            "sndk_revenue",
+            "wdc_revenue"
+          ],
+          "sum_series_key": "nand_member_revenue"
+        },
+        {
+          "series_key": "microsd_128gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "solid_state_storage_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "NAND brand mentions (weekly)",
+          "series_keys": [
+            "sandisk_mentions",
+            "micron_nand_mentions",
+            "phison_mentions",
+            "simo_mentions",
+            "wdc_mentions",
+            "samsung_ssd_mentions",
+            "kioxia_mentions"
+          ],
+          "sum_series_key": "nand_named_brand_mentions"
+        },
+        {
+          "series_key": "nand_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "hardware_community_posts",
+            "semiconductors_community_posts",
+            "datahoarder_community_posts"
+          ]
+        },
+        {
+          "series_key": "pm_manifold_wdc_kioxia_merger_2027",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_polymarket_mu_q1_nand_rev_above_17b",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_polymarket_mu_q1_gm_85_875",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "NAND brand sentiment (weekly)",
+          "series_keys": [
+            "nand_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "ticker": "MU",
+      "recipes": [
+        {
+          "series_key": "micron_nand_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_512gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mu_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "ticker": "SNDK",
+      "recipes": [
+        {
+          "series_key": "sandisk_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_512gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "sndk_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "solid_state_storage_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "ticker": "SIMO",
+      "recipes": [
+        {
+          "series_key": "simo_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "simo_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "ticker": "WDC",
+      "recipes": [
+        {
+          "series_key": "wdc_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_256gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wdc_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: DRAM",
+      "theme_slug": "memory-26-dram",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr4_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mu_dram_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dram_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_rdimm_32gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_udimm_16gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "memory_ic_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "DRAM brand mentions (weekly)",
+          "series_keys": [
+            "micron_dram_mentions",
+            "samsung_dram_mentions",
+            "hynix_mentions",
+            "rambus_mentions",
+            "montage_mentions"
+          ],
+          "sum_series_key": "dram_named_brand_mentions"
+        },
+        {
+          "series_key": "dram_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "hardware_community_posts",
+            "semiconductors_community_posts"
+          ]
+        },
+        {
+          "series_key": "pm_kalshi_ddr5_ye2027_above_95",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_manifold_ram_prices_down_2027",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_manifold_ddr5_kit_still_500_eoy2026",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "DRAM brand sentiment (weekly)",
+          "series_keys": [
+            "dram_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "nand_512gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nand_256gb_tlc_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "essd_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Enterprise storage member revenue by name (STX+WDC+SNDK+SIMO)",
+          "series_keys": [
+            "stx_essd_revenue",
+            "wdc_essd_revenue",
+            "sndk_essd_revenue",
+            "simo_essd_revenue"
+          ],
+          "sum_series_key": "essd_member_revenue"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "solid_state_storage_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand mentions (weekly)",
+          "series_keys": [
+            "sandisk_mentions",
+            "micron_essd_mentions",
+            "phison_mentions",
+            "simo_mentions",
+            "wdc_mentions",
+            "seagate_mentions",
+            "samsung_ssd_mentions",
+            "kioxia_mentions"
+          ],
+          "sum_series_key": "essd_named_brand_mentions"
+        },
+        {
+          "series_key": "essd_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "hardware_community_posts",
+            "semiconductors_community_posts",
+            "sysadmin_community_posts",
+            "datahoarder_community_posts"
+          ]
+        },
+        {
+          "series_key": "pm_manifold_wdc_kioxia_merger_2027",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_polymarket_mu_q1_nand_rev_above_17b",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pm_polymarket_mu_q1_gm_85_875",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": "STX",
+      "recipes": [
+        {
+          "series_key": "seagate_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        },
+        {
+          "series_key": "stx_essd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": "WDC",
+      "recipes": [
+        {
+          "series_key": "wdc_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        },
+        {
+          "series_key": "wdc_essd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": "SIMO",
+      "recipes": [
+        {
+          "series_key": "simo_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        },
+        {
+          "series_key": "simo_essd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": "SNDK",
+      "recipes": [
+        {
+          "series_key": "sandisk_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        },
+        {
+          "series_key": "sndk_essd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "ticker": "MU",
+      "recipes": [
+        {
+          "series_key": "micron_essd_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Enterprise SSD brand sentiment (weekly)",
+          "series_keys": [
+            "essd_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: DRAM",
+      "theme_slug": "memory-26-dram",
+      "ticker": "MU",
+      "recipes": [
+        {
+          "series_key": "micron_dram_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mu_dram_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: DRAM",
+      "theme_slug": "memory-26-dram",
+      "ticker": "RMBS",
+      "recipes": [
+        {
+          "series_key": "rambus_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_rdimm_32gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Data Centers '25: Optical & Fiber Systems",
+      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "ticker": "INFN",
+      "recipes": [
+        {
+          "series_key": "infn_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": "IPGP",
+      "recipes": [
+        {
+          "series_key": "ipgp_dew_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": "LASR",
+      "recipes": [
+        {
+          "series_key": "lasr_dew_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": "COHR",
+      "recipes": [
+        {
+          "series_key": "cohr_dew_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": "MKSI",
+      "recipes": [
+        {
+          "series_key": "mksi_dew_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
+      "theme_slug": "modern-warfare-26-lasers-directed-energy-weapons",
+      "ticker": "AVAV",
+      "recipes": [
+        {
+          "series_key": "avav_dew_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Steel '26: Integrated / Blast Furnace Producers",
+      "ticker": "X",
+      "theme_slug": "steel-26-integrated-blast-furnace-producers",
+      "recipes": [
+        {
+          "series_key": "aisi_production",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "aisi_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "x_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "iron_ore_price",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Steel '26: Integrated / Blast Furnace Producers",
+      "ticker": "CLF",
+      "theme_slug": "steel-26-integrated-blast-furnace-producers",
+      "recipes": [
+        {
+          "series_key": "aisi_production",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "aisi_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "clf_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "iron_ore_price",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Steel '26: Integrated / Blast Furnace Producers",
+      "ticker": "MT",
+      "theme_slug": "steel-26-integrated-blast-furnace-producers",
+      "recipes": [
+        {
+          "series_key": "aisi_production",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "aisi_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "mt_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "iron_ore_price",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_manufacturing",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "gddr6_8gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gddr5_8gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_udimm_16gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Graphics/mobile member revenue (MU+RMBS+QCOM)",
+          "series_keys": [
+            "mu_gm_revenue",
+            "rmbs_gm_revenue",
+            "qcom_gm_revenue"
+          ],
+          "sum_series_key": "graphics_mobile_member_revenue"
+        },
+        {
+          "series_key": "graphics_mobile_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "amat_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "memory_ic_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semiconductor_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Graphics/mobile brand mentions (weekly)",
+          "series_keys": [
+            "gm_micron_mentions",
+            "gm_samsung_mentions",
+            "gm_hynix_mentions",
+            "gm_nvidia_mentions",
+            "gm_amd_mentions",
+            "gm_qcom_mentions",
+            "gm_rambus_mentions"
+          ],
+          "sum_series_key": "gm_named_brand_mentions"
+        },
+        {
+          "series_key": "gm_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "gm_hardware_community_posts",
+            "gm_semiconductors_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Graphics/mobile brand sentiment (weekly)",
+          "series_keys": [
+            "gm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "ticker": "MU",
+      "recipes": [
+        {
+          "series_key": "gm_micron_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mu_gm_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gddr6_8gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_udimm_16gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "graphics_mobile_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "ticker": "RMBS",
+      "recipes": [
+        {
+          "series_key": "rmbs_gm_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_udimm_16gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "graphics_mobile_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "ticker": "QCOM",
+      "recipes": [
+        {
+          "series_key": "qcom_gm_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_udimm_16gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "graphics_mobile_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "ticker": "AMAT",
+      "recipes": [
+        {
+          "series_key": "gddr6_8gb_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "amat_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_tester_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "HBM tester revenue by name",
+          "series_keys": [
+            "ter_revenue",
+            "form_revenue",
+            "cohu_revenue",
+            "aehr_revenue"
+          ],
+          "sum_series_key": "hbm_tester_revenue"
+        },
+        {
+          "series_key": "hbm_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_measuring_instrument_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "measuring_instruments_ip",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "measuring_instruments_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pm_manifold_cxmt_hbm3_2026",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "HBM tester brand mentions (weekly)",
+          "series_keys": [
+            "teradyne_mentions",
+            "formfactor_mentions",
+            "cohu_mentions",
+            "aehr_mentions",
+            "advantest_mentions"
+          ],
+          "sum_series_key": "hbm_named_brand_mentions"
+        },
+        {
+          "series_key": "hbm_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "semiconductors_community_posts",
+            "hardware_community_posts",
+            "chipdesign_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "HBM tester brand sentiment (weekly)",
+          "series_keys": [
+            "hbm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "ticker": "TER",
+      "recipes": [
+        {
+          "series_key": "ter_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "teradyne_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "HBM tester brand sentiment (weekly)",
+          "series_keys": [
+            "hbm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "ticker": "FORM",
+      "recipes": [
+        {
+          "series_key": "form_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "formfactor_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "HBM tester brand sentiment (weekly)",
+          "series_keys": [
+            "hbm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "ticker": "COHU",
+      "recipes": [
+        {
+          "series_key": "cohu_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cohu_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "HBM tester brand sentiment (weekly)",
+          "series_keys": [
+            "hbm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "ticker": "AEHR",
+      "recipes": [
+        {
+          "series_key": "aehr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "aehr_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "HBM tester brand sentiment (weekly)",
+          "series_keys": [
+            "hbm_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_packaging_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "HBM packaging/inspection revenue by name (USD)",
+          "series_keys": [
+            "amat_hbm_pkg_revenue",
+            "amkr_revenue",
+            "camt_revenue",
+            "onto_revenue",
+            "klic_revenue"
+          ],
+          "sum_series_key": "hbm_packaging_revenue"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_measuring_instrument_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "measuring_instruments_ip",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ddr5_16gb_die_spot",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "measuring_instruments_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pm_manifold_cxmt_hbm3_2026",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "AMAT",
+      "recipes": [
+        {
+          "series_key": "amat_hbm_pkg_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "AMKR",
+      "recipes": [
+        {
+          "series_key": "amkr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "CAMT",
+      "recipes": [
+        {
+          "series_key": "camt_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "ONTO",
+      "recipes": [
+        {
+          "series_key": "onto_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "KLIC",
+      "recipes": [
+        {
+          "series_key": "klic_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "ASX",
+      "recipes": [
+        {
+          "series_key": "asx_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "ticker": "BESI.AS",
+      "recipes": [
+        {
+          "series_key": "besi_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "china_retail_sales_yoy",
+          "metric": "m3_avg",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "china_beauty_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "china_beauty_export_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "more"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Prestige USD member revenue (EL+IPAR+WALD)",
+          "series_keys": [
+            "el_revenue",
+            "ipar_revenue",
+            "wald_revenue"
+          ],
+          "sum_series_key": "prestige_member_revenue"
+        },
+        {
+          "series_key": "beauty_makeup_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "perfume_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cosmetics_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "toilet_preparations_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ecommerce_mail_order_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Prestige brand mentions (weekly)",
+          "series_keys": [
+            "estee_lauder_mentions",
+            "loreal_mentions",
+            "sephora_mentions",
+            "dior_mentions",
+            "chanel_mentions"
+          ],
+          "sum_series_key": "prestige_named_brand_mentions"
+        },
+        {
+          "series_key": "prestige_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "asianbeauty_community_posts",
+            "beauty_community_posts",
+            "sephora_community_posts",
+            "skincareaddictionlux_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Prestige brand sentiment (weekly)",
+          "series_keys": [
+            "prestige_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "EL",
+      "recipes": [
+        {
+          "series_key": "el_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "IPAR",
+      "recipes": [
+        {
+          "series_key": "ipar_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "WALD",
+      "recipes": [
+        {
+          "series_key": "wald_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "MC.PA",
+      "recipes": [
+        {
+          "series_key": "lvmh_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "OR.PA",
+      "recipes": [
+        {
+          "series_key": "loreal_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "PUIG.MC",
+      "recipes": [
+        {
+          "series_key": "puig_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "GIVN.SW",
+      "recipes": [
+        {
+          "series_key": "givaudan_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "THG.L",
+      "recipes": [
+        {
+          "series_key": "thg_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "ticker": "SSDOY",
+      "recipes": [
+        {
+          "series_key": "shiseido_adr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "health_personal_care_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "consumer_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "prestige_transcript_keywords",
+          "metric": "raw",
           "chart_type": "bar"
         }
       ]

@@ -172,6 +172,35 @@ def _metric_latest(
     return points[-1]
 
 
+def _history_point_count(
+    series: dict[str, Any],
+    comp: dict[str, Any],
+) -> int:
+    """Points available for ``min_history_points`` gate (default: raw prints)."""
+    basis = str(comp.get("min_history_basis") or "raw").lower()
+    if basis == "metric":
+        metric = str(comp.get("metric") or "m3_avg_yoy_pct")
+        return len(_metric_points(series, metric))
+    return len((series.get("raw") or {}).get("points") or [])
+
+
+def _waiting_history(
+    comp: dict[str, Any],
+    series: dict[str, Any],
+) -> tuple[bool, int, int | None]:
+    """True when component has ``min_history_points`` and series is too short.
+
+    Returns ``(waiting, have, need)``. Used so weekly DX spots can be wired
+    into the recipe now and auto-join once ~1y of prints exist.
+    """
+    need_raw = comp.get("min_history_points")
+    if need_raw is None:
+        return False, _history_point_count(series, comp), None
+    need = int(need_raw)
+    have = _history_point_count(series, comp)
+    return have < need, have, need
+
+
 def _component_max_as_of(
     comp: dict[str, Any],
     theme_max_as_of: str | None,
@@ -247,6 +276,9 @@ def score_history(
             continue
         ser = pack_series.get(key)
         if not ser:
+            continue
+        waiting, _, _ = _waiting_history(comp, ser)
+        if waiting:
             continue
         rows = _asof_lookup(_metric_points(ser, metric))
         comp_max = _component_max_as_of(comp, max_as_of, ser)
@@ -350,6 +382,25 @@ def score_theme(
                     "weight": weight,
                     "polarity": polarity,
                     "status": "missing_series",
+                }
+            )
+            continue
+
+        waiting, have_n, need_n = _waiting_history(comp, ser)
+        if waiting:
+            missing.append(f"{key}:{metric}")
+            components_out.append(
+                {
+                    "series_key": key,
+                    "metric": metric,
+                    "weight": weight,
+                    "polarity": polarity,
+                    "status": "waiting_history",
+                    "history_points": have_n,
+                    "min_history_points": need_n,
+                    "display_name": ser.get("display_name")
+                    or ser.get("short_name")
+                    or ser.get("label"),
                 }
             )
             continue

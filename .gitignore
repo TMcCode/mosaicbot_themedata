@@ -22,6 +22,7 @@ data/**/*.csv
 data/**/*.html
 data/**/*.xlsx
 data/**/*.lock
+data/**/*.zip
 !data/**/.gitkeep
 
 exports/

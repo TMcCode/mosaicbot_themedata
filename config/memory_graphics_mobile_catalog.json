@@ -1,0 +1,331 @@
+{
+  "schema_version": 0,
+  "pack": "memory_graphics_mobile",
+  "description": "Memory '26: Graphics & Mobile Memory \u2014 DRAMeXchange GDDR5/GDDR6 public spot (append weekly) + TE KR/TW semi exports + Census HS 854232 + FMP CapEx/revenue (MU+RMBS+QCOM + AMAT CapEx) + GDDR/LPDDR transcript keywords + FRED PPI. DDR5 die/UDIMM via memory_dram source_pack. LPDDR spot/contract login-walled (map_only).",
+  "series": [
+    {
+      "key": "gddr6_8gb_spot",
+      "source": "dramexchange",
+      "dx_product": "GDDR6 8Gb",
+      "label": "DRAMeXchange GDDR6 8Gb session average (USD)",
+      "official_name": "DRAMeXchange GDDR Spot \u2014 GDDR6 8Gb session average (USD)",
+      "short_name": "GDDR6 8Gb spot",
+      "display_name": "GDDR6 8Gb spot price (USD)",
+      "frequency": "weekly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "wma4",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "gddr6_8gb_spot",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Lead graphics DRAM public print. Score auto-joins at 60 weekly prints. LPDDR stays map_only (login wall)."
+    },
+    {
+      "key": "gddr5_8gb_spot",
+      "source": "dramexchange",
+      "dx_product": "GDDR5 8Gb",
+      "label": "DRAMeXchange GDDR5 8Gb session average (USD)",
+      "official_name": "DRAMeXchange GDDR Spot \u2014 GDDR5 8Gb session average (USD)",
+      "short_name": "GDDR5 8Gb spot",
+      "display_name": "GDDR5 8Gb spot price (USD)",
+      "frequency": "weekly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "wma4",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "gddr5_8gb_spot",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Legacy graphics DRAM \u2014 GDDR6 transition / residual cycle."
+    },
+    {
+      "key": "korea_semiconductor_exports",
+      "source": "te_indicator",
+      "te_series_key": "korea_semiconductor_exports",
+      "label": "South Korea semiconductor exports (USD millions)",
+      "official_name": "Trading Economics \u2014 South Korea Semiconductor Exports (KORSEMEXP; HS 8541+8542)",
+      "short_name": "Korea semi exports",
+      "display_name": "South Korea semiconductor exports",
+      "frequency": "monthly",
+      "unit": "usd_millions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "korea_semiconductor_exports",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Samsung/Hynix DRAM+LPDDR+GDDR export pulse."
+    },
+    {
+      "key": "taiwan_semiconductor_exports",
+      "source": "te_indicator",
+      "te_series_key": "taiwan_semiconductor_exports",
+      "label": "Taiwan semiconductor exports (USD millions)",
+      "official_name": "Trading Economics \u2014 Taiwan Semiconductor Exports (TWNSEMEXP; HS 8541+8542)",
+      "short_name": "Taiwan semi exports",
+      "display_name": "Taiwan semiconductor exports",
+      "frequency": "monthly",
+      "unit": "usd_millions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "taiwan_semiconductor_exports",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Nanya / MediaTek adjacency \u2014 soft IC cycle confirm."
+    },
+    {
+      "key": "hyperscaler_capex",
+      "source": "fmp_capex",
+      "fmp_symbols": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "ORCL"
+      ],
+      "fmp_limit": 40,
+      "require_all": true,
+      "label": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
+      "official_name": "FMP cash-flow-statement capitalExpenditure sum \u2014 MSFT, GOOGL, META, AMZN, ORCL",
+      "short_name": "Hyperscaler CapEx",
+      "display_name": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hyperscaler_capex",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "AI CapEx \u2192 HBM capacity diversion \u2192 GDDR/LPDDR tightness."
+    },
+    {
+      "key": "amat_capex",
+      "source": "fmp_capex",
+      "fmp_symbols": [
+        "AMAT"
+      ],
+      "fmp_limit": 40,
+      "require_all": true,
+      "label": "Applied Materials CapEx",
+      "official_name": "FMP cash-flow-statement capitalExpenditure \u2014 AMAT",
+      "short_name": "AMAT CapEx",
+      "display_name": "Applied Materials CapEx",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "amat_capex",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "WFE / memory fab tool demand (theme member)."
+    },
+    {
+      "key": "memory_ic_import_value",
+      "source": "census_trade",
+      "hs6": "854232",
+      "field": "value",
+      "label": "US imports: electronic integrated circuits \u2014 memories (HS 854232)",
+      "official_name": "Census HS 854232 \u2014 Electronic integrated circuits: memories \u2014 GEN_VAL_MO",
+      "short_name": "Memory IC imports ($)",
+      "display_name": "US memory IC imports (value)",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "memory_ic_import_value",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "DRAM/GDDR/LPDDR IC import value into US systems."
+    },
+    {
+      "key": "semiconductor_ppi",
+      "source": "fred",
+      "fred_id": "PCU334413334413",
+      "label": "PPI: Semiconductors and Related Device Manufacturing",
+      "official_name": "FRED PCU334413334413",
+      "short_name": "Semiconductor PPI",
+      "display_name": "US semiconductor producer prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "semiconductor_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Chart-only pricing-power proxy."
+    },
+    {
+      "key": "graphics_mobile_member_revenue",
+      "source": "fmp_revenue",
+      "fmp_symbols": [
+        "MU",
+        "RMBS",
+        "QCOM"
+      ],
+      "fmp_limit": 40,
+      "require_all": false,
+      "label": "Graphics/mobile memory member revenue (MU+RMBS+QCOM)",
+      "official_name": "FMP income-statement revenue sum \u2014 MU, RMBS, QCOM",
+      "short_name": "Member revenue",
+      "display_name": "Graphics/mobile member revenue (MU+RMBS+QCOM)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "graphics_mobile_member_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "US-listed cores: Micron (bits), Rambus (IP), Qualcomm (mobile/LPDDR demand). NVDA/AMD chart via attach later if needed."
+    },
+    {
+      "key": "mu_gm_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "MU",
+      "fmp_limit": 40,
+      "label": "Micron revenue",
+      "official_name": "FMP income-statement revenue \u2014 MU",
+      "short_name": "MU revenue",
+      "display_name": "Micron revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "mu_gm_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "rmbs_gm_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "RMBS",
+      "fmp_limit": 40,
+      "label": "Rambus revenue",
+      "official_name": "FMP income-statement revenue \u2014 RMBS",
+      "short_name": "RMBS revenue",
+      "display_name": "Rambus revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "rmbs_gm_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "qcom_gm_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "QCOM",
+      "fmp_limit": 40,
+      "label": "Qualcomm revenue",
+      "official_name": "FMP income-statement revenue \u2014 QCOM",
+      "short_name": "QCOM revenue",
+      "display_name": "Qualcomm revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "qcom_gm_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Mobile/AI PC SoC demand \u2192 LPDDR content."
+    },
+    {
+      "key": "graphics_mobile_transcript_keywords",
+      "source": "fmp_transcript_keywords",
+      "fmp_symbols": [
+        "MU",
+        "RMBS",
+        "QCOM"
+      ],
+      "fmp_limit": 16,
+      "require_all": false,
+      "keywords": [
+        "GDDR",
+        "GDDR6",
+        "GDDR7",
+        "LPDDR",
+        "LPDDR5",
+        "LPDDR6",
+        "graphics memory",
+        "mobile DRAM",
+        "HBM"
+      ],
+      "label": "GDDR/LPDDR keyword hits in MU+RMBS+QCOM earnings calls",
+      "official_name": "FMP earning-call-transcript keyword counts \u2014 MU, RMBS, QCOM",
+      "short_name": "Transcript keywords",
+      "display_name": "GDDR/LPDDR keyword hits in member earnings calls",
+      "frequency": "quarterly",
+      "unit": "keyword_hits",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "graphics_mobile_transcript_keywords",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Chart-only narrative intensity."
+    }
+  ]
+}

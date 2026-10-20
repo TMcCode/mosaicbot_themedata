@@ -12,7 +12,10 @@
       "display_name": "Global orbital launches (monthly)",
       "frequency": "monthly",
       "unit": "launches",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "orbital_launches_monthly",
@@ -38,7 +41,10 @@
       "display_name": "US NSSL & launch-services federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "usaspending_launch_logistics_awards",
@@ -62,7 +68,10 @@
       "display_name": "US CLPS & lunar-lander federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "usaspending_clps_awards",
@@ -84,7 +93,11 @@
       "display_name": "US launch + CLPS federal contract awards (total)",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "usaspending_launch_and_clps_awards",
@@ -103,7 +116,9 @@
       "display_name": "Rocket Lab federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_rklb_awards",
@@ -121,7 +136,9 @@
       "display_name": "Intuitive Machines federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_lunr_awards",
@@ -139,7 +156,9 @@
       "display_name": "Firefly federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "usaspending_fly_awards",
@@ -158,7 +177,9 @@
       "display_name": "Momentus federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 3,
       "dataset_id": "usaspending_mnts_awards",
@@ -176,7 +197,9 @@
       "display_name": "SpaceX federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_spacex_awards",
@@ -194,7 +217,9 @@
       "display_name": "Avio federal contract awards (US)",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 3,
       "dataset_id": "usaspending_avio_awards",
@@ -220,7 +245,11 @@
       "display_name": "Theme members US federal contract awards (total)",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "usaspending_launch_members_awards",
@@ -228,6 +257,100 @@
       "cadence": "monthly",
       "as_of_semantics": "period_end",
       "notes": "Skip NOC (conglomerate). Use YoY on this total — do not stack YoY%."
+    },
+    {
+      "key": "space_launch_pureplay_revenue",
+      "source": "fmp_revenue",
+      "fmp_limit": 40,
+      "label": "Space launch pure-play revenue (RKLB+LUNR+FLY)",
+      "official_name": "FMP income-statement revenue sum — RKLB,LUNR,FLY",
+      "short_name": "Member revenue",
+      "display_name": "Space launch pure-play revenue (RKLB+LUNR+FLY)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "space_launch_pureplay_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "RKLB",
+        "LUNR",
+        "FLY"
+      ],
+      "require_all": false,
+      "notes": "Theme-member top-line sum (FMP)."
+    },
+    {
+      "key": "rklb_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Rocket Lab revenue",
+      "official_name": "FMP income-statement revenue — RKLB",
+      "short_name": "RKLB revenue",
+      "display_name": "Rocket Lab revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "rklb_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "RKLB"
+    },
+    {
+      "key": "lunr_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Intuitive Machines revenue",
+      "official_name": "FMP income-statement revenue — LUNR",
+      "short_name": "LUNR revenue",
+      "display_name": "Intuitive Machines revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "lunr_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "LUNR"
+    },
+    {
+      "key": "fly_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Firefly Aerospace revenue",
+      "official_name": "FMP income-statement revenue — FLY",
+      "short_name": "FLY revenue",
+      "display_name": "Firefly Aerospace revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "fly_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "FLY"
     }
   ]
 }

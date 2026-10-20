@@ -24,7 +24,7 @@
         "census_construction",
         "aisi_weekly"
       ],
-      "notes": "Was local-only 'Infrastructure Capex '26: Construction & Steel'; remapped to stockthemes Steel '26 integrated BF. Construction C-30 + AISI still apply as end-market / industry backdrop."
+      "notes": "Integrated BF producers (X/CLF/MT revenue). Construction C-30 + AISI weekly + IMF iron ore (FRED) as industry backdrop. Was local Infrastructure Capex remapped."
     },
     {
       "theme": "Modern Warfare '26: Lasers & Directed Energy Weapons",
@@ -124,7 +124,7 @@
         "sequencing_platforms",
         "genomics_forums"
       ],
-      "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards \u2014 conglomerate noise)."
+      "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards — conglomerate noise)."
     },
     {
       "theme": "Buying a House '26: Home Improvement Retailers",
@@ -137,7 +137,7 @@
         "home_improvement",
         "home_improvement_forums"
       ],
-      "notes": "v2: Existing home sales + mortgage + NAICS 444 + starts/permits + lumber PPI + SE drought (TSCO/LESL ticker only) + home_improvement_forums (HD/LOW/FND/TSCO/LESL + remodel + sentiment). Tickers HD, LOW, FND, TSCO, LESL."
+      "notes": "v3: Existing home sales + NAHB HMI (public Table 2) + mortgage + NAICS 444 + starts/permits + lumber PPI + Case-Shiller + SE drought (TSCO/LESL) + forums. Tickers HD, LOW, FND, TSCO, LESL."
     },
     {
       "theme": "Agentic Utilities '26: Agentic Payments",
@@ -164,6 +164,135 @@
         "romantic_gifts_forums"
       ],
       "notes": "v1: FRED e-commerce/mail-order sales + commercial print PPI + courier PPI + BLS postage CPI + Kalshi Etsy Q3 GMS (chart-only). Tickers ETSY, FLWS, CMPR, CARD.LSE, MOON.LSE, CWC.XETRA. UK ONS + forums deferred. Forums: EtsySellers/weddingplanning/smallbusiness."
+    },
+    {
+      "theme": "AI '26: Mizuho Most AI-Resilient Software",
+      "theme_slug": "ai-26-mizuho-most-ai-resilient-software",
+      "group": "AI",
+      "group_slug": "ai",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "ai_resilient_software",
+        "ai_resilient_software_forums"
+      ],
+      "notes": "v1: FRED software IPP + IT/software + productivity + Info JOLTS + Ramp AI Index (adoption/spend/vendors; free page scrape). Forums: ArtificialInteligence/softwareengineering/cloudcomputing/ecommerce — brand stack excludes ecommerce. Tickers ORCL CDNS INTU SHOP WDAY BSY. Skip Trends / Polymarket / inventories."
+    },
+    {
+      "theme": "Political Spend '26: Ad Agencies & Polling",
+      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "group": "Political Spend",
+      "group_slug": "political-spend",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "political_spend",
+        "political_spend_forums"
+      ],
+      "notes": "v1: FEC independent expenditures (monthly bulk; txn cap) + FRED ad agency PPI + NAICS 5418 revenue + UMCSENT. Forums: PoliticalScience/Advertising/marketing. Tickers STGW IPS.PA OMC PUB.PA WPP.LSE. Skip Trends / AdImpact (map_only) / paid panels."
+    },
+    {
+      "theme": "Memory '26: CXL / Memory Expansion",
+      "theme_slug": "memory-26-cxl-memory-expansion",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_cxl",
+        "memory_cxl_forums"
+      ],
+      "notes": "v4: DRAMeXchange DDR5 RDIMM/die + TE KR/TW exports + FRED + Census + CapEx. Forums: hardware/LocalLLaMA/semiconductors/nvidia (homelab dropped; complete weeks > long history). Tickers ALAB MRVL MU INTC RMBS MCHP CDNS PENG. TrendForce Gold map_only."
+    },
+    {
+      "theme": "Memory '26: NAND / Flash",
+      "theme_slug": "memory-26-nand-flash",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_nand",
+        "memory_nand_forums"
+      ],
+      "notes": "v1: DRAMeXchange 512/256Gb TLC + MicroSD spot + TE KR/TW exports + Census HS 852351 + CapEx + FRED PPI. Forums: hardware/semiconductors/datahoarder. Tickers MU SNDK SIMO WDC. TrendForce contract map_only."
+    },
+    {
+      "theme": "Memory '26: DRAM",
+      "theme_slug": "memory-26-dram",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_dram",
+        "memory_dram_forums"
+      ],
+      "notes": "v1: DX DDR5/DDR4 die + UDIMM/RDIMM spot + TE KR/TW + Census HS 854232 + CapEx + PPI. Forums: hardware/semiconductors. Tickers MU RMBS. HBM/TrendForce contract map_only."
+    },
+    {
+      "theme": "Memory '26: Graphics & Mobile Memory",
+      "theme_slug": "memory-26-graphics-mobile-memory",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_graphics_mobile",
+        "memory_graphics_mobile_forums"
+      ],
+      "notes": "v2: DX GDDR6/GDDR5 public spot (append weekly) + TE KR/TW + Census HS 854232 + FMP MU/RMBS/QCOM + AMAT CapEx + GDDR/LPDDR transcripts + forums (r/hardware, r/semiconductors). DDR5 die/UDIMM from memory_dram source_pack. LPDDR spot/contract login-walled (map_only)."
+    },
+    {
+      "theme": "Memory '26: Enterprise SSD & Managed Storage",
+      "theme_slug": "memory-26-enterprise-ssd-managed-storage",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_essd",
+        "memory_essd_forums"
+      ],
+      "notes": "v1: DX TLC spot + TE KR/TW exports + Census HS 852351 + CapEx + PPI. Forums: hardware/semiconductors/sysadmin/datahoarder (+Seagate). Tickers MU SNDK SIMO WDC STX + controllers. TrendForce eSSD map_only."
+    },
+    {
+      "theme": "Memory '26: HBM Testing",
+      "theme_slug": "memory-26-hbm-testing",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_hbm_testing",
+        "memory_hbm_testing_forums"
+      ],
+      "notes": "v1: CapEx+revenue (hyperscaler + TER/FORM/COHU/AEHR) + transcript HBM keywords + KR/TW exports + HS 903082 + measuring-instruments IP + DX DDR5 die (gated). Forums: semis/hardware/chipdesign. Tickers TER FORM COHU AEHR. Distinct from packaging/bonding theme."
+    },
+    {
+      "theme": "Memory '26: HBM Inspection, Packaging & Bonding",
+      "theme_slug": "memory-26-hbm-inspection-packaging-bonding",
+      "group": "Memory",
+      "group_slug": "memory",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "memory_hbm_packaging"
+      ],
+      "notes": "v1: CapEx+revenue (AMAT+AMKR+CAMT+ONTO+KLIC; ASX/BESI.AS ticker-local FX) + transcript hybrid-bonding keywords + KR/TW + HS 903082 + measuring IP + DX DDR5 die (gated). Tickers AMAT AMKR ASX CAMT ONTO KLIC BESI.AS. Distinct from HBM Testing. Forums later."
+    },
+    {
+      "theme": "Beauty '26: Prestige Beauty",
+      "theme_slug": "beauty-26-prestige-beauty",
+      "group": "Beauty",
+      "group_slug": "beauty",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "beauty_prestige",
+        "beauty_prestige_forums"
+      ],
+      "notes": "v1: FRED health/personal-care retail + toilet-prep PPI + cosmetics CPI + e-commerce + TE China retail YoY (NBS via TE) + Census HS 330499/330300 + FMP members + transcript + forums. Cosmetics-only China NBS / paid panels map_only."
     }
   ]
 }

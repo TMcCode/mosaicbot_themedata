@@ -25,6 +25,7 @@ from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "census_construction"
@@ -56,16 +57,31 @@ def build_pack(
     series_out: dict[str, Any] = {}
     latest_date = ""
     errors: list[str] = []
+    notes: list[str] = []
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
-        sid = meta.get("fred_id")
         key = meta.get("key")
-        if not sid or not key:
+        if not key:
             continue
+        src = meta.get("source")
         try:
-            pts = [{"date": d, "value": v} for d, v in _fred_csv(sid) if d >= start]
-            if not pts:
-                raise RuntimeError(f"no points for {sid}")
+            if src == "fred" or meta.get("fred_id"):
+                sid = meta.get("fred_id")
+                if not sid:
+                    raise RuntimeError("fred_id required")
+                pts = [{"date": d, "value": v} for d, v in _fred_csv(sid) if d >= start]
+                if not pts:
+                    raise RuntimeError(f"no points for {sid}")
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
+            else:
+                raise RuntimeError(f"unknown source {src}")
             series_out[key] = ps.series_shell(meta, points=pts)
             latest = series_out[key]["raw"]["latest"]
             if latest and latest.get("date"):
@@ -79,13 +95,14 @@ def build_pack(
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
-        "source": "Census C-30 via FRED",
+        "source": "Census C-30 via FRED + FMP member revenue",
         "fetched_at": fetched_at,
         "as_of": latest_date,
         "catalog": catalog,
         "attachments": attachments,
         "series": series_out,
         "errors": errors,
+        "notes": notes,
     }
 
 

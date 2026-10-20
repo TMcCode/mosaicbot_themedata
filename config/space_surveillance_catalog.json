@@ -20,7 +20,10 @@
       "display_name": "US satellite & GEOINT federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "usaspending_sat_geoint_awards",
@@ -39,7 +42,9 @@
       "display_name": "Planet Labs federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_pl_awards",
@@ -57,7 +62,9 @@
       "display_name": "BlackSky federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_bksy_awards",
@@ -75,7 +82,9 @@
       "display_name": "Satellogic federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "usaspending_satl_awards",
@@ -93,7 +102,9 @@
       "display_name": "HawkEye 360 federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "usaspending_hawk_awards",
@@ -111,7 +122,9 @@
       "display_name": "MDA federal contract awards",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "usaspending_mda_awards",
@@ -136,7 +149,11 @@
       "display_name": "Theme members US federal contract awards (total)",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "usaspending_space_members_awards",
@@ -144,6 +161,100 @@
       "cadence": "monthly",
       "as_of_semantics": "period_end",
       "notes": "Sum of theme-member recipient series (US federal only). Use YoY on this total — do not stack YoY%."
+    },
+    {
+      "key": "surveillance_sat_revenue",
+      "source": "fmp_revenue",
+      "fmp_limit": 40,
+      "label": "Surveillance sat revenue (BKSY+PL+SATL)",
+      "official_name": "FMP income-statement revenue sum — BKSY,PL,SATL",
+      "short_name": "Member revenue",
+      "display_name": "Surveillance sat revenue (BKSY+PL+SATL)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "surveillance_sat_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "BKSY",
+        "PL",
+        "SATL"
+      ],
+      "require_all": false,
+      "notes": "Theme-member top-line sum (FMP)."
+    },
+    {
+      "key": "bksy_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "BlackSky revenue",
+      "official_name": "FMP income-statement revenue — BKSY",
+      "short_name": "BKSY revenue",
+      "display_name": "BlackSky revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "bksy_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "BKSY"
+    },
+    {
+      "key": "pl_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Planet Labs revenue",
+      "official_name": "FMP income-statement revenue — PL",
+      "short_name": "PL revenue",
+      "display_name": "Planet Labs revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "pl_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "PL"
+    },
+    {
+      "key": "satl_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Satellogic revenue",
+      "official_name": "FMP income-statement revenue — SATL",
+      "short_name": "SATL revenue",
+      "display_name": "Satellogic revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "satl_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "SATL"
     }
   ]
 }

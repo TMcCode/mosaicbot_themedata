@@ -33,6 +33,7 @@ from lib import tradingeconomics_ge as te  # noqa: E402
 from lib import te_spot  # noqa: E402
 from lib import manifold as manifoldlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "dew_defense"
@@ -113,6 +114,8 @@ def build_pack(
             census_key = require_env("CENSUS_API_KEY")["CENSUS_API_KEY"]
             break
 
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
+
     for meta in catalog.get("series") or []:
         key = meta.get("key")
         if not key:
@@ -179,6 +182,13 @@ def build_pack(
                     f"{key}: Manifold {mid} vol={mm.get('volume')} "
                     f"bettors={mm.get('unique_bettors')} url={mm.get('url')}"
                 )
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             else:
                 raise RuntimeError(f"unknown source {src}")
 

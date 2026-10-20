@@ -184,6 +184,183 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dew_pureplay_revenue",
+      "source": "fmp_revenue",
+      "fmp_limit": 40,
+      "label": "DEW pure-play revenue (IPGP+LASR+COHR+MKSI+AVAV)",
+      "official_name": "FMP income-statement revenue sum — IPGP,LASR,COHR,MKSI,AVAV",
+      "short_name": "Member revenue",
+      "display_name": "DEW pure-play revenue (IPGP+LASR+COHR+MKSI+AVAV)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "dew_pureplay_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "IPGP",
+        "LASR",
+        "COHR",
+        "MKSI",
+        "AVAV"
+      ],
+      "require_all": false,
+      "notes": "Theme-member top-line sum (FMP)."
+    },
+    {
+      "key": "ipgp_dew_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "IPG Photonics revenue",
+      "official_name": "FMP income-statement revenue — IPGP",
+      "short_name": "IPGP revenue",
+      "display_name": "IPG Photonics revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "ipgp_dew_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "IPGP"
+    },
+    {
+      "key": "lasr_dew_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "nLIGHT revenue",
+      "official_name": "FMP income-statement revenue — LASR",
+      "short_name": "LASR revenue",
+      "display_name": "nLIGHT revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "lasr_dew_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "LASR"
+    },
+    {
+      "key": "cohr_dew_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Coherent revenue",
+      "official_name": "FMP income-statement revenue — COHR",
+      "short_name": "COHR revenue",
+      "display_name": "Coherent revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "cohr_dew_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "COHR"
+    },
+    {
+      "key": "mksi_dew_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "MKS Instruments revenue",
+      "official_name": "FMP income-statement revenue — MKSI",
+      "short_name": "MKSI revenue",
+      "display_name": "MKS Instruments revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "mksi_dew_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "MKSI"
+    },
+    {
+      "key": "avav_dew_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "AeroVironment revenue",
+      "official_name": "FMP income-statement revenue — AVAV",
+      "short_name": "AVAV revenue",
+      "display_name": "AeroVironment revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "avav_dew_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "AVAV"
+    },
+    {
+      "key": "dew_transcript_keywords",
+      "source": "fmp_transcript_keywords",
+      "fmp_symbols": [
+        "IPGP",
+        "LASR",
+        "COHR",
+        "MKSI",
+        "AVAV"
+      ],
+      "fmp_limit": 16,
+      "require_all": false,
+      "keywords": [
+        "directed energy",
+        "high energy laser",
+        "HELWS",
+        "laser weapon",
+        "counter-UAS",
+        "fiber laser"
+      ],
+      "label": "DEW/laser keyword hits in pure-play earnings calls",
+      "official_name": "FMP earning-call-transcript keyword counts — IPGP,LASR,COHR,MKSI,AVAV",
+      "short_name": "Transcript keywords",
+      "display_name": "DEW/laser keyword hits in pure-play earnings calls",
+      "frequency": "quarterly",
+      "unit": "keyword_hits",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dew_transcript_keywords",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
     }
   ]
 }

@@ -32,6 +32,8 @@ from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 from lib import usda_ams_chicken as ams  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
+from lib.pack_derived import apply_derived_sums  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "restaurants_chicken"
@@ -155,11 +157,15 @@ def build_pack(
     except Exception as e:
         errors.append(f"ams_wings_whole scrape: {e}")
 
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
+
     for meta in catalog.get("series") or []:
         key = meta.get("key")
         if not key:
             continue
         src = meta.get("source")
+        if src == "derived_sum":
+            continue
         try:
             if src == "fred":
                 sid = meta["fred_id"]
@@ -185,6 +191,13 @@ def build_pack(
             elif src == "usda_ams":
                 pts = [p for p in ams.points_from_history(out_dir) if p["date"] >= start]
                 notes.append(f"{key}: USDA AMS ams_3646 history ({len(pts)} weeks)")
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             else:
                 raise RuntimeError(f"unknown source {src}")
 
@@ -208,6 +221,16 @@ def build_pack(
                 latest_date = max(latest_date, str(latest["date"]))
         except Exception as e:
             errors.append(f"{key}: {e}")
+
+    derived_latest = apply_derived_sums(
+        catalog,
+        series_out,
+        notes=notes,
+        errors=errors,
+        fetched_at=fetched_at,
+    )
+    if derived_latest:
+        latest_date = max(latest_date, derived_latest)
 
     if not series_out:
         raise RuntimeError("no series built: " + "; ".join(errors))

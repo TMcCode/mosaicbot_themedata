@@ -1,0 +1,262 @@
+{
+  "schema_version": 0,
+  "pack": "ai_resilient_software_forums",
+  "description": "AI-resilient software Reddit sidecar \u2014 brand mentions (AI/SE/cloud only; not r/ecommerce) + agentic/enterprise AI category % + community volume + combined sentiment + thin digest (r/ArtificialInteligence, r/softwareengineering, r/cloudcomputing, r/ecommerce).",
+  "series": [
+    {
+      "key": "oracle_mentions",
+      "source": "arctic_shift",
+      "label": "Oracle / OCI mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Oracle / OCI mentions (weekly)",
+      "short_name": "Oracle",
+      "display_name": "Oracle / OCI mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "oracle_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "workday_mentions",
+      "source": "arctic_shift",
+      "label": "Workday mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Workday mentions (weekly)",
+      "short_name": "Workday",
+      "display_name": "Workday mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "workday_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "intuit_mentions",
+      "source": "arctic_shift",
+      "label": "Intuit / QuickBooks / TurboTax mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Intuit / QuickBooks / TurboTax mentions (weekly)",
+      "short_name": "Intuit",
+      "display_name": "Intuit / QuickBooks / TurboTax mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "intuit_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "shopify_mentions",
+      "source": "arctic_shift",
+      "label": "Shopify / Sidekick mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Shopify / Sidekick mentions (weekly)",
+      "short_name": "Shopify",
+      "display_name": "Shopify / Sidekick mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "shopify_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Brand stack excludes r/ecommerce (Shopify platform noise). Counts from ArtificialInteligence / softwareengineering / cloudcomputing only."
+    },
+    {
+      "key": "cadence_mentions",
+      "source": "arctic_shift",
+      "label": "Cadence / EDA mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Cadence / EDA mentions (weekly)",
+      "short_name": "Cadence",
+      "display_name": "Cadence / EDA mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "cadence_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "bentley_mentions",
+      "source": "arctic_shift",
+      "label": "Bentley Systems / ProjectWise mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Bentley Systems / ProjectWise mentions (weekly)",
+      "short_name": "Bentley",
+      "display_name": "Bentley Systems / ProjectWise mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "bentley_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ai_software_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 Named brand talk (weekly total)",
+      "short_name": "Named brands",
+      "display_name": "Named brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ai_software_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "agentic_ai_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts: agentic / enterprise AI",
+      "official_name": "Arctic Shift \u2014 % of posts: agentic / enterprise AI",
+      "short_name": "Agentic AI category %",
+      "display_name": "% of posts: agentic / enterprise AI (weekly)",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "agentic_ai_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 do not stack into brand stack."
+    },
+    {
+      "key": "artificialinteligence_community_posts",
+      "source": "arctic_shift",
+      "label": "r/ArtificialInteligence talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/ArtificialInteligence talk (weekly)",
+      "short_name": "r/ArtificialInteligence",
+      "display_name": "r/ArtificialInteligence talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "artificialinteligence_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "ArtificialInteligence",
+      "notes": "Live sub spelling drops one L (Reddit 21-char name limit)."
+    },
+    {
+      "key": "softwareengineering_community_posts",
+      "source": "arctic_shift",
+      "label": "r/softwareengineering talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/softwareengineering talk (weekly)",
+      "short_name": "r/softwareengineering",
+      "display_name": "r/softwareengineering talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "softwareengineering_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "softwareengineering"
+    },
+    {
+      "key": "cloudcomputing_community_posts",
+      "source": "arctic_shift",
+      "label": "r/cloudcomputing talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/cloudcomputing talk (weekly)",
+      "short_name": "r/cloudcomputing",
+      "display_name": "r/cloudcomputing talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "cloudcomputing_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "cloudcomputing"
+    },
+    {
+      "key": "ecommerce_community_posts",
+      "source": "arctic_shift",
+      "label": "r/ecommerce talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/ecommerce talk (weekly)",
+      "short_name": "r/ecommerce",
+      "display_name": "r/ecommerce talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ecommerce_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "subreddit": "ecommerce"
+    },
+    {
+      "key": "ai_software_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "AI software brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 AI software brand sentiment (weekly)",
+      "short_name": "Brand sentiment",
+      "display_name": "AI software brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ai_software_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

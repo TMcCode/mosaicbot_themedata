@@ -32,7 +32,8 @@ from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import census_trade as census  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
-from lib import fmp as fmplib  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
+from lib.pack_derived import apply_derived_sums  # noqa: E402
 from lib import telegeography_cables as teglib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 from lib.as_of import freshness_as_of  # noqa: E402
@@ -92,26 +93,15 @@ def build_pack(
     census_cache: dict[str, tuple[list, list, str | None]] = {}
     # One TeleGeography full-catalog pull shared by subsea series.
     teg_cables: list[dict[str, Any]] | None = None
-    # Shared FMP CapEx pulls (aggregate + per-ticker reuse same cache).
-    fmp_by_symbol: dict[str, list[dict[str, Any]]] | None = None
-    fmp_symbols_needed: list[str] = []
-    for _m in catalog.get("series") or []:
-        _src = _m.get("source")
-        if _src == "fmp_capex":
-            for s in _m.get("fmp_symbols") or list(fmplib.DEFAULT_HYPERSCALERS):
-                su = str(s).upper()
-                if su not in fmp_symbols_needed:
-                    fmp_symbols_needed.append(su)
-        elif _src == "fmp_capex_ticker":
-            su = str(_m.get("fmp_symbol") or "").upper()
-            if su and su not in fmp_symbols_needed:
-                fmp_symbols_needed.append(su)
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
         key = meta.get("key")
         if not key:
             continue
         src = meta.get("source")
+        if src == "derived_sum":
+            continue
         try:
             if src == "fred":
                 sid = meta["fred_id"]
@@ -158,53 +148,13 @@ def build_pack(
                     f"{key}: Kalshi {ticker} last={mm.get('last_price')} "
                     f"oi={mm.get('open_interest')} url={mm.get('url')}"
                 )
-            elif src in ("fmp_capex", "fmp_capex_ticker"):
-                if fmp_by_symbol is None:
-                    if not fmp_symbols_needed:
-                        raise RuntimeError("no FMP CapEx symbols in catalog")
-                    fmp_by_symbol = fmplib.fetch_capex_by_symbol(
-                        fmp_symbols_needed,
-                        limit=int(meta.get("fmp_limit") or 40),
-                    )
-                    notes.append(
-                        f"fmp: fetched CapEx for {','.join(fmp_symbols_needed)}"
-                    )
-                if src == "fmp_capex_ticker":
-                    sym = str(meta.get("fmp_symbol") or "").upper()
-                    if not sym:
-                        raise RuntimeError("fmp_symbol required")
-                    pts = [
-                        {"date": p["date"], "value": p["value"]}
-                        for p in fmp_by_symbol.get(sym) or []
-                        if p["date"] >= start
-                    ]
-                    notes.append(
-                        f"{key}: FMP CapEx {sym} n={len(pts)} (calendar Q)"
-                    )
-                else:
-                    # Aggregate only the symbols listed on this series (not every
-                    # ticker series that happens to share the FMP cache).
-                    agg_syms = [
-                        str(s).upper()
-                        for s in (
-                            meta.get("fmp_symbols")
-                            or list(fmplib.DEFAULT_HYPERSCALERS)
-                        )
-                    ]
-                    subset = {
-                        s: fmp_by_symbol[s]
-                        for s in agg_syms
-                        if s in fmp_by_symbol
-                    }
-                    pts, mm = fmplib.aggregate_capex_points(
-                        subset,
-                        require_all=bool(meta.get("require_all", True)),
-                    )
-                    pts = [p for p in pts if p["date"] >= start]
-                    notes.append(
-                        f"{key}: FMP CapEx sum {','.join(mm.get('symbols') or [])} "
-                        f"quarters={mm.get('quarters')} unit={mm.get('unit')}"
-                    )
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             elif src == "telegeography_cables":
                 if teg_cables is None:
                     teg_cables = teglib.fetch_all_cable_details()
@@ -242,6 +192,16 @@ def build_pack(
                 latest_date = max(latest_date, str(latest["date"]))
         except Exception as e:
             errors.append(f"{key}: {e}")
+
+    derived_latest = apply_derived_sums(
+        catalog,
+        series_out,
+        notes=notes,
+        errors=errors,
+        fetched_at=fetched_at,
+    )
+    if derived_latest:
+        latest_date = max(latest_date, derived_latest)
 
     if not series_out:
         raise RuntimeError("no series built: " + "; ".join(errors))

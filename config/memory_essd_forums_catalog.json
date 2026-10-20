@@ -1,0 +1,292 @@
+{
+  "schema_version": 0,
+  "pack": "memory_essd_forums",
+  "description": "Enterprise SSD Reddit sidecar \u2014 brand mentions (Sandisk/Micron/Phison/SIMO/WDC/Samsung/Kioxia/Seagate) + enterprise SSD/NVMe category % + community volume (r/hardware, r/semiconductors, r/sysadmin, r/datahoarder) + combined sentiment + thin digest.",
+  "series": [
+    {
+      "key": "sandisk_mentions",
+      "source": "arctic_shift",
+      "label": "Sandisk / SNDK mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Sandisk / SNDK mentions (weekly)",
+      "short_name": "Sandisk",
+      "display_name": "Sandisk / SNDK mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_sandisk_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "micron_essd_mentions",
+      "source": "arctic_shift",
+      "label": "Micron enterprise SSD mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Micron enterprise SSD mentions (weekly)",
+      "short_name": "Micron",
+      "display_name": "Micron enterprise SSD mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "micron_essd_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "phison_mentions",
+      "source": "arctic_shift",
+      "label": "Phison mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Phison mentions (weekly)",
+      "short_name": "Phison",
+      "display_name": "Phison mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_phison_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "simo_mentions",
+      "source": "arctic_shift",
+      "label": "Silicon Motion / SIMO mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Silicon Motion / SIMO mentions (weekly)",
+      "short_name": "SIMO",
+      "display_name": "Silicon Motion / SIMO mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_simo_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "wdc_mentions",
+      "source": "arctic_shift",
+      "label": "Western Digital / WD SSD mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Western Digital / WD SSD mentions (weekly)",
+      "short_name": "WDC",
+      "display_name": "Western Digital / WD SSD mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_wdc_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "seagate_mentions",
+      "source": "arctic_shift",
+      "label": "Seagate / STX mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Seagate / STX mentions (weekly)",
+      "short_name": "Seagate",
+      "display_name": "Seagate / STX mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "seagate_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "samsung_ssd_mentions",
+      "source": "arctic_shift",
+      "label": "Samsung SSD / PM-series mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Samsung SSD / PM-series mentions (weekly)",
+      "short_name": "Samsung SSD",
+      "display_name": "Samsung enterprise SSD mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "essd_samsung_ssd_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "kioxia_mentions",
+      "source": "arctic_shift",
+      "label": "Kioxia mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Kioxia mentions (weekly)",
+      "short_name": "Kioxia",
+      "display_name": "Kioxia mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "essd_kioxia_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "essd_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named enterprise-SSD brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 unique posts hitting any eSSD brand lexicon (weekly)",
+      "short_name": "eSSD brand talk",
+      "display_name": "Named enterprise-SSD brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "essd_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts: enterprise SSD / NVMe (weekly)",
+      "official_name": "Arctic Shift \u2014 share of watched-sub posts hitting enterprise SSD/NVMe lexicon (weekly %)",
+      "short_name": "eSSD/NVMe share",
+      "display_name": "% of posts: enterprise SSD / NVMe (weekly)",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "essd_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hardware_community_posts",
+      "source": "arctic_shift",
+      "label": "r/hardware weekly posts",
+      "official_name": "Arctic Shift \u2014 r/hardware total weekly posts",
+      "short_name": "r/hardware",
+      "display_name": "r/hardware community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "essd_hardware_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "semiconductors_community_posts",
+      "source": "arctic_shift",
+      "label": "r/semiconductors weekly posts",
+      "official_name": "Arctic Shift \u2014 r/semiconductors total weekly posts",
+      "short_name": "r/semiconductors",
+      "display_name": "r/semiconductors community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "essd_semiconductors_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "sysadmin_community_posts",
+      "source": "arctic_shift",
+      "label": "r/sysadmin weekly posts",
+      "official_name": "Arctic Shift \u2014 r/sysadmin total weekly posts",
+      "short_name": "r/sysadmin",
+      "display_name": "r/sysadmin community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "sysadmin_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "datahoarder_community_posts",
+      "source": "arctic_shift",
+      "label": "r/datahoarder weekly posts",
+      "official_name": "Arctic Shift \u2014 r/datahoarder total weekly posts",
+      "short_name": "r/datahoarder",
+      "display_name": "r/datahoarder community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "essd_datahoarder_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "essd_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Enterprise SSD brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 mean lexicon sentiment over unique eSSD-brand posts",
+      "short_name": "eSSD brand sentiment",
+      "display_name": "Enterprise SSD brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "essd_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

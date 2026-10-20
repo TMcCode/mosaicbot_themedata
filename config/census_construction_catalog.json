@@ -1,7 +1,7 @@
 {
   "schema_version": 0,
   "pack": "census_construction",
-  "description": "Census C-30 construction spending via FRED (SAAR, $ millions)",
+  "description": "Census C-30 construction spending via FRED (SAAR, $ millions) + BF steel member revenue + iron ore",
   "series": [
     {
       "key": "construction_manufacturing",
@@ -68,6 +68,122 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end"
+    },
+    {
+      "key": "iron_ore_price",
+      "source": "fred",
+      "fred_id": "PIORECRUSDM",
+      "label": "Global iron ore price",
+      "official_name": "FRED PIORECRUSDM — Global price of Iron Ore (IMF)",
+      "short_name": "Iron ore",
+      "display_name": "Global iron ore price",
+      "frequency": "monthly",
+      "unit": "usd_per_metric_ton",
+      "derived": [
+        "m3_avg_yoy_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "iron_ore_price",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "BF input / steel-cycle price. IMF global iron ore via FRED."
+    },
+    {
+      "key": "steel_member_revenue",
+      "source": "fmp_revenue",
+      "fmp_limit": 40,
+      "label": "BF steel member revenue (X+CLF+MT)",
+      "official_name": "FMP income-statement revenue sum — X,CLF,MT",
+      "short_name": "Member revenue",
+      "display_name": "BF steel member revenue (X+CLF+MT)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "steel_member_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbols": [
+        "X",
+        "CLF",
+        "MT"
+      ],
+      "require_all": false,
+      "notes": "US-listed integrated / BF theme cores (stockthemes). NUE is EAF mini-mills."
+    },
+    {
+      "key": "x_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "U.S. Steel revenue",
+      "official_name": "FMP income-statement revenue — X",
+      "short_name": "X revenue",
+      "display_name": "U.S. Steel revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "x_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "X"
+    },
+    {
+      "key": "clf_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "Cleveland-Cliffs revenue",
+      "official_name": "FMP income-statement revenue — CLF",
+      "short_name": "CLF revenue",
+      "display_name": "Cleveland-Cliffs revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "clf_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "CLF"
+    },
+    {
+      "key": "mt_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "label": "ArcelorMittal revenue",
+      "official_name": "FMP income-statement revenue — MT",
+      "short_name": "MT revenue",
+      "display_name": "ArcelorMittal revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "mt_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "fmp_symbol": "MT"
     }
   ]
 }

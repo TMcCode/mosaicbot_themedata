@@ -85,6 +85,42 @@ def derive_metrics(
                 "points": series,
                 "latest": tx.latest(series),
             }
+        elif name == "yoy_4y_pct":
+            # Same calendar point ~4 years prior (midterm↔midterm / prez↔prez).
+            if frequency == "daily":
+                series = tx.yoy_pct_calendar(points, years=4)
+            else:
+                series = tx.yoy_pct(points, lag=lag * 4)
+            metrics[name] = {
+                "unit": "pct",
+                "points": series,
+                "latest": tx.latest(series),
+            }
+        elif name == "wma4_yoy_4y_pct":
+            if frequency == "daily":
+                yoy = tx.yoy_pct_calendar(points, years=4)
+                window = 20
+            else:
+                yoy = tx.yoy_pct(points, lag=lag * 4)
+                window = 4
+            series = [
+                {"date": p["date"], "value": round(float(p["value"]), 4)}
+                for p in tx.rolling_mean_of_series(yoy, window=window)
+            ]
+            metrics[name] = {
+                "unit": "pct",
+                "points": series,
+                "latest": tx.latest(series),
+            }
+        elif name == "m3_avg_yoy_4y_pct":
+            series = tx.rolling_mean_yoy_pct(
+                points, window=3, lag=lag * 4
+            )
+            metrics[name] = {
+                "unit": "pct",
+                "points": series,
+                "latest": tx.latest(series),
+            }
         elif name == "m3_net_change":
             series = tx.lag_diff(points, lag=3)
             metrics[name] = {

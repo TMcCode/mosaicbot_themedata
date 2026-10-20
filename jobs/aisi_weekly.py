@@ -33,6 +33,7 @@ UA = (
 SCHEMA_VERSION = 0
 PACK = "aisi_weekly"
 R2_PREFIX = f"themedata/{PACK}"
+R2_HISTORY_KEY = f"{R2_PREFIX}/weekly_history.jsonl"
 
 _LEGACY_OUT = _ROOT / "data" / "aisi"
 _DEFAULT_OUT = _ROOT / "data" / PACK
@@ -182,33 +183,105 @@ def fetch(url: str = URL) -> str:
     return text
 
 
-def _history_paths() -> list[Path]:
-    return [
-        _DEFAULT_OUT / "weekly_history.jsonl",
+def _history_paths(out_dir: Path | None = None) -> list[Path]:
+    paths = [
+        (out_dir or _DEFAULT_OUT) / "weekly_history.jsonl",
         _LEGACY_OUT / "weekly_history.jsonl",
     ]
-
-
-def _load_history() -> list[dict]:
-    for path in _history_paths():
-        if not path.exists():
+    # Dedupe if out_dir is already the default/legacy path
+    seen: set[Path] = set()
+    out: list[Path] = []
+    for p in paths:
+        rp = p.resolve()
+        if rp in seen:
             continue
+        seen.add(rp)
+        out.append(p)
+    return out
+
+
+def _rows_from_jsonl_text(text: str) -> list[dict]:
+    rows: list[dict] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if line:
+            rows.append(json.loads(line))
+    return rows
+
+
+def _read_history_file(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    return _rows_from_jsonl_text(path.read_text(encoding="utf-8"))
+
+
+def _merge_history_rows(*groups: list[dict]) -> list[dict]:
+    """Merge by week_ending; prefer the row with the newest fetched_at."""
+    by_week: dict[str, dict] = {}
+    for group in groups:
+        for row in group:
+            key = str(row.get("week_ending") or "")
+            if not key:
+                continue
+            prev = by_week.get(key)
+            if prev is None:
+                by_week[key] = row
+                continue
+            if str(row.get("fetched_at") or "") >= str(prev.get("fetched_at") or ""):
+                by_week[key] = row
+    return [by_week[k] for k in sorted(by_week)]
+
+
+def _load_r2_history() -> list[dict]:
+    try:
+        raw = r2lib.get_bytes(R2_HISTORY_KEY)
+        if raw:
+            return _rows_from_jsonl_text(raw.decode("utf-8"))
+    except Exception:
+        pass
+    # Recover weeks from published series if history object was never written
+    try:
+        latest = r2lib.get_json(f"{R2_PREFIX}/latest.json")
+        if not isinstance(latest, dict):
+            return []
+        series = latest.get("series") or {}
+        prod = ((series.get("aisi_production") or {}).get("raw") or {}).get("points") or []
+        util = ((series.get("aisi_utilization") or {}).get("raw") or {}).get("points") or []
+        util_by = {p["date"]: p["value"] for p in util if p.get("date")}
         rows: list[dict] = []
-        for line in path.read_text(encoding="utf-8").splitlines():
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-        if rows:
-            return rows
-    return []
+        for p in prod:
+            d = p.get("date")
+            if not d:
+                continue
+            row: dict[str, Any] = {
+                "schema_version": SCHEMA_VERSION,
+                "source": URL,
+                "week_ending": d,
+                "production_net_tons": int(float(p["value"])),
+            }
+            if d in util_by:
+                row["capability_utilization_pct"] = float(util_by[d])
+            rows.append(row)
+        return rows
+    except Exception:
+        return []
+
+
+def _load_history(out_dir: Path | None = None) -> list[dict]:
+    local_groups = [_read_history_file(p) for p in _history_paths(out_dir)]
+    return _merge_history_rows(*local_groups, _load_r2_history())
+
+
+def _write_history_file(path: Path, rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "".join(json.dumps(r, separators=(",", ":")) + "\n" for r in rows),
+        encoding="utf-8",
+    )
 
 
 def _upsert_history(path: Path, row: dict) -> bool:
-    rows = []
-    if path.exists():
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                rows.append(json.loads(line))
+    rows = _read_history_file(path)
     key = row["week_ending"]
     replaced = False
     out: list[dict] = []
@@ -222,12 +295,8 @@ def _upsert_history(path: Path, row: dict) -> bool:
     if not replaced:
         out.append(row)
         inserted = True
-    out.sort(key=lambda r: r.get("week_ending") or "")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        "".join(json.dumps(r, separators=(",", ":")) + "\n" for r in out),
-        encoding="utf-8",
-    )
+    out = _merge_history_rows(out)
+    _write_history_file(path, out)
     return inserted
 
 
@@ -319,12 +388,21 @@ def _write_local(out_dir: Path, payload: dict, *, html: str | None, snapshot: di
         (out_dir / "industry_data.html").write_text(html, encoding="utf-8")
 
 
-def _publish_r2(payload: dict) -> list[str]:
+def _publish_r2(payload: dict, history: list[dict] | None = None) -> list[str]:
     uris = [
         r2lib.put_json(f"{R2_PREFIX}/latest.json", payload),
         r2lib.put_json(f"{R2_PREFIX}/catalog.json", payload["catalog"]),
         r2lib.put_json(f"{R2_PREFIX}/attachments.json", payload["attachments"]),
     ]
+    if history is not None:
+        body = "".join(json.dumps(r, separators=(",", ":")) + "\n" for r in history)
+        uris.append(
+            r2lib.put_bytes(
+                R2_HISTORY_KEY,
+                body.encode("utf-8"),
+                content_type="application/x-ndjson",
+            )
+        )
     slim = {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
@@ -377,21 +455,34 @@ def run(
     html = None
     snapshot = None
     inserted = False
+    # Merge local paths + R2 before upsert so VPS/Mac don't clobber each other
+    history = _load_history(out_dir)
     if not skip_fetch:
         html = fetch()
-        snapshot = parse_weekly(html_to_text(html))
+        snapshot = parse_weekly(html_to_text(html), fetched_at=datetime.now(timezone.utc).isoformat())
         if not dry_run:
-            hist_path = out_dir / "weekly_history.jsonl"
-            inserted = _upsert_history(hist_path, snapshot)
-            # Mirror history to legacy path
-            _upsert_history(_LEGACY_OUT / "weekly_history.jsonl", snapshot)
+            before = {r.get("week_ending") for r in history}
+            history = _merge_history_rows(history, [snapshot])
+            inserted = snapshot.get("week_ending") not in before
+            # Persist merged history on both pack + legacy paths
+            _write_history_file(out_dir / "weekly_history.jsonl", history)
+            _write_history_file(_LEGACY_OUT / "weekly_history.jsonl", history)
+        elif snapshot:
+            history = _merge_history_rows(history, [snapshot])
+    elif snapshot is None and history:
+        # rebuild-only: keep history as loaded
+        pass
 
-    history = _load_history()
     if snapshot and not any(r.get("week_ending") == snapshot.get("week_ending") for r in history):
-        history = list(history) + [snapshot]
+        history = _merge_history_rows(history, [snapshot])
 
     if not history:
         raise RuntimeError("no AISI history — fetch a week first (or place weekly_history.jsonl)")
+
+    # Keep local files in sync even on skip-fetch rebuilds
+    if not dry_run:
+        _write_history_file(out_dir / "weekly_history.jsonl", history)
+        _write_history_file(_LEGACY_OUT / "weekly_history.jsonl", history)
 
     payload = build_pack_from_history(
         catalog=catalog,
@@ -415,7 +506,7 @@ def run(
     payload["_theme_scores_detail"] = score_result.get("theme_scores") or []
     r2_uris: list[str] = []
     if not skip_r2:
-        r2_uris.extend(_publish_r2(payload))
+        r2_uris.extend(_publish_r2(payload, history=history))
         r2_uris.extend(score_result.get("r2_uris") or [])
     payload["_r2_uris"] = r2_uris
     return payload

@@ -392,6 +392,52 @@
       "description": "Monthly FRED housing turnover + NAICS 444 retail + mortgage/starts/lumber + SE USDM drought for home-improvement retailers."
     },
     {
+      "id": "beauty_prestige",
+      "job": "jobs/beauty_prestige.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month": [
+          12,
+          13,
+          14
+        ],
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/beauty_prestige/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/beauty_prestige/latest.json"
+      },
+      "description": "Prestige beauty \u2014 FRED + Census + FMP. Soft-fail OK."
+    },
+    {
+      "id": "beauty_prestige_forums",
+      "job": "jobs/beauty_prestige_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/beauty_prestige_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/beauty_prestige_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift prestige beauty forums. Soft-fail; prefer complete weeks."
+    },
+    {
       "id": "home_improvement_forums",
       "job": "jobs/home_improvement_forums.py",
       "enabled": true,
@@ -525,6 +571,381 @@
         "local_relative": "data/romantic_gifts_forums/latest.json"
       },
       "description": "Weekly Arctic Shift romantic-gifts forums \u2014 EtsySellers/weddingplanning/smallbusiness brand + POD talk. Soft-fail scrape."
+    },
+    {
+      "id": "ai_resilient_software",
+      "job": "jobs/ai_resilient_software.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 12,
+        "day_of_month_to": 22,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/ai_resilient_software/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ai_resilient_software/latest.json"
+      },
+      "description": "Monthly FRED software/IT/productivity/JOLTS + weekly-refreshable Ramp AI Index scrape."
+    },
+    {
+      "id": "ai_resilient_software_forums",
+      "job": "jobs/ai_resilient_software_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ai_resilient_software_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ai_resilient_software_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift AI software forums \u2014 brand + agentic AI talk. Soft-fail scrape."
+    },
+    {
+      "id": "political_spend",
+      "job": "jobs/political_spend.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/political_spend/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/political_spend/latest.json"
+      },
+      "description": "Weekly FEC IE bulk refresh + monthly FRED ad PPI / 5418 revenue / UMCSENT."
+    },
+    {
+      "id": "political_spend_forums",
+      "job": "jobs/political_spend_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/political_spend_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/political_spend_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift political spend forums \u2014 agency brands + political-ads talk. Soft-fail scrape."
+    },
+    {
+      "id": "memory_cxl",
+      "job": "jobs/memory_cxl.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_cxl/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_cxl/latest.json"
+      },
+      "description": "Weekly DRAMeXchange DDR5 die/RDIMM spot scrape + TE Korea/Taiwan semi exports + FRED/Census/CapEx refresh."
+    },
+    {
+      "id": "memory_cxl_forums",
+      "job": "jobs/memory_cxl_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_cxl_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_cxl_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift CXL forums \u2014 hardware/LocalLLaMA/semiconductors/nvidia + CXL category. Soft-fail scrape; prefer complete weeks."
+    },
+    {
+      "id": "memory_nand",
+      "job": "jobs/memory_nand.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_nand/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_nand/latest.json"
+      },
+      "description": "Weekly DRAMeXchange NAND TLC/MicroSD spot + TE KR/TW exports + Census HS 852351 + CapEx/PPI."
+    },
+    {
+      "id": "memory_nand_forums",
+      "job": "jobs/memory_nand_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_nand_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_nand_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift NAND forums \u2014 hardware/semiconductors/datahoarder. Soft-fail; prefer complete weeks."
+    },
+    {
+      "id": "memory_dram",
+      "job": "jobs/memory_dram.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_dram/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_dram/latest.json"
+      },
+      "description": "Weekly DRAMeXchange DDR5/DDR4 die + UDIMM/RDIMM + TE KR/TW + Census HS 854232 + CapEx/PPI."
+    },
+    {
+      "id": "memory_graphics_mobile",
+      "job": "jobs/memory_graphics_mobile.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_graphics_mobile/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_graphics_mobile/latest.json"
+      },
+      "description": "Weekly Graphics/Mobile Memory \u2014 TE KR/TW + Census HS 854232 + FMP MU/RMBS/QCOM + AMAT CapEx + transcripts."
+    },
+    {
+      "id": "memory_graphics_mobile_forums",
+      "job": "jobs/memory_graphics_mobile_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_graphics_mobile_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_graphics_mobile_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift graphics/mobile forums \u2014 hardware/semiconductors. Soft-fail; prefer complete weeks."
+    },
+    {
+      "id": "memory_dram_forums",
+      "job": "jobs/memory_dram_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_dram_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_dram_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift DRAM forums \u2014 hardware/semiconductors. Soft-fail; prefer complete weeks."
+    },
+    {
+      "id": "memory_essd",
+      "job": "jobs/memory_essd.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_essd/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_essd/latest.json"
+      },
+      "description": "Weekly DRAMeXchange TLC spot + TE KR/TW exports + Census HS 852351 + CapEx/PPI (Enterprise SSD theme)."
+    },
+    {
+      "id": "memory_essd_forums",
+      "job": "jobs/memory_essd_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_essd_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_essd_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift eSSD forums \u2014 hardware/semiconductors/sysadmin/datahoarder. Soft-fail; prefer complete weeks."
+    },
+    {
+      "id": "memory_hbm_testing",
+      "job": "jobs/memory_hbm_testing.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_hbm_testing/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_hbm_testing/latest.json"
+      },
+      "description": "Weekly HBM testing backdrop \u2014 CapEx + KR/TW + HS 903082 + measuring IP + DX DDR5 die."
+    },
+    {
+      "id": "memory_hbm_packaging",
+      "job": "jobs/memory_hbm_packaging.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month": [
+          8,
+          9,
+          10
+        ],
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_hbm_packaging/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_hbm_packaging/latest.json"
+      },
+      "description": "HBM Inspection/Packaging/Bonding \u2014 FMP CapEx/revenue + TE + Census + DX. Soft-fail OK."
+    },
+    {
+      "id": "memory_hbm_testing_forums",
+      "job": "jobs/memory_hbm_testing_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/memory_hbm_testing_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/memory_hbm_testing_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift HBM testing forums \u2014 semis/hardware/chipdesign. Soft-fail; prefer complete weeks."
     }
   ]
 }

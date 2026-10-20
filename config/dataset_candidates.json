@@ -848,9 +848,9 @@
         "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
         "Romantic Gifts '25: Perfumes"
       ],
-      "seen_count": 1039,
+      "seen_count": 1091,
       "first_seen_at": "2026-10-16T20:56:21.618485+00:00",
-      "last_seen_at": "2026-10-18T04:06:21.751120+00:00",
+      "last_seen_at": "2026-10-20T15:22:38.778096+00:00",
       "notes": "Auto-captured from watchlist registry_match=none Rejected: Google Trends / search-interest noise \u2014 not a themedata pull target.",
       "rejected_at": "2026-10-16T23:39:59.064184+00:00"
     },
@@ -906,9 +906,9 @@
         "AI '25: Apps & Edge Deployment",
         "Retail Tech '26: Store Automation & Smart Retail"
       ],
-      "seen_count": 40,
+      "seen_count": 41,
       "first_seen_at": "2026-10-16T20:56:22.045099+00:00",
-      "last_seen_at": "2026-10-17T21:38:35.360976+00:00",
+      "last_seen_at": "2026-10-19T15:49:57.347373+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -1256,7 +1256,7 @@
     },
     {
       "id": "cand_national_association_of_home_builder_83623f82",
-      "status": "open",
+      "status": "aliased",
       "fingerprint": "national association of home builders (nahb)|nahb/wells fargo housing market index (composite index)",
       "provider": "National Association of Home Builders (NAHB)",
       "aliases": "",
@@ -1265,7 +1265,7 @@
       "data_type": "NAHB/Wells Fargo Housing Market Index (Composite Index)",
       "cadence": "monthly",
       "access_guess": "",
-      "aliased_to": null,
+      "aliased_to": "nahb_hmi",
       "first_seen_theme": "Global Home Improvement '26: U.S. & Canada Home Improvement",
       "themes_seen": [
         "Global Home Improvement '26: U.S. & Canada Home Improvement",
@@ -1278,7 +1278,7 @@
       "seen_count": 7,
       "first_seen_at": "2026-10-16T20:56:25.012364+00:00",
       "last_seen_at": "2026-10-16T22:10:13.192536+00:00",
-      "notes": "Auto-captured from watchlist registry_match=none"
+      "notes": "Auto-captured from watchlist registry_match=none | Aliased to nahb_hmi (public Table 2 scrape; display/attribution)."
     },
     {
       "id": "cand_reddit_97b8dd0c",
@@ -1441,9 +1441,9 @@
         "Romantic Gifts '25: Novelty & Keepsake Gifts",
         "Romantic Gifts '25: Perfumes"
       ],
-      "seen_count": 157,
+      "seen_count": 162,
       "first_seen_at": "2026-10-16T20:56:25.249103+00:00",
-      "last_seen_at": "2026-10-17T22:00:19.329268+00:00",
+      "last_seen_at": "2026-10-18T16:01:48.187565+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -1625,9 +1625,9 @@
         "Romantic Gifts '25: Novelty & Keepsake Gifts",
         "Romantic Gifts '25: Perfumes"
       ],
-      "seen_count": 299,
+      "seen_count": 315,
       "first_seen_at": "2026-10-16T20:56:25.658466+00:00",
-      "last_seen_at": "2026-10-18T04:13:40.413655+00:00",
+      "last_seen_at": "2026-10-19T17:41:57.288797+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -2187,7 +2187,7 @@
     },
     {
       "id": "cand_opensecrets_org_federal_election_com_cb190df5",
-      "status": "open",
+      "status": "aliased",
       "fingerprint": "opensecrets.org / federal election commission (fec)|total independent expenditures (usd) for federal elections",
       "provider": "OpenSecrets.org / Federal Election Commission (FEC)",
       "aliases": "",
@@ -2196,7 +2196,7 @@
       "data_type": "Total Independent Expenditures (USD) for Federal Elections",
       "cadence": "monthly",
       "access_guess": "",
-      "aliased_to": null,
+      "aliased_to": "fec_independent_expenditures",
       "first_seen_theme": "Political Spend '26: Ad Agencies & Polling",
       "themes_seen": [
         "Political Spend '26: Ad Agencies & Polling"
@@ -2204,7 +2204,7 @@
       "seen_count": 2,
       "first_seen_at": "2026-10-16T20:56:35.055191+00:00",
       "last_seen_at": "2026-10-16T21:49:07.838860+00:00",
-      "notes": "Auto-captured from watchlist registry_match=none"
+      "notes": "Auto-captured from watchlist registry_match=none | Aliased to fec_independent_expenditures (FEC bulk IE monthly)."
     },
     {
       "id": "cand_adweek_ad_age_fbe4b4a6",
@@ -2621,9 +2621,9 @@
         "Retail Shopping '26: Eurofashion",
         "Retail Shopping '26: Global Fast Fashion"
       ],
-      "seen_count": 131,
+      "seen_count": 133,
       "first_seen_at": "2026-10-16T20:56:43.513623+00:00",
-      "last_seen_at": "2026-10-17T22:06:01.128468+00:00",
+      "last_seen_at": "2026-10-18T15:33:31.195382+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -3047,9 +3047,9 @@
         "China '26: Chinese AI Compute",
         "Macro '26: EM ETFs"
       ],
-      "seen_count": 29,
+      "seen_count": 30,
       "first_seen_at": "2026-10-16T20:56:54.851778+00:00",
-      "last_seen_at": "2026-10-16T22:07:16.015121+00:00",
+      "last_seen_at": "2026-10-18T14:16:27.112512+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -3974,9 +3974,9 @@
         "Atoms Bits Short '26: AI Exposed REITs",
         "Retail Shopping '26: Digital Fashion Retailers"
       ],
-      "seen_count": 17,
+      "seen_count": 18,
       "first_seen_at": "2026-10-16T20:57:16.585802+00:00",
-      "last_seen_at": "2026-10-16T22:14:11.438809+00:00",
+      "last_seen_at": "2026-10-19T18:22:56.353437+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -5001,9 +5001,9 @@
         "Edge AI Long '24: Device Connectivity & IoT",
         "AI Bottleneck '26: MLCCs"
       ],
-      "seen_count": 4,
+      "seen_count": 5,
       "first_seen_at": "2026-10-16T20:57:55.498070+00:00",
-      "last_seen_at": "2026-10-16T22:13:45.367821+00:00",
+      "last_seen_at": "2026-10-20T14:34:19.708015+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -5360,9 +5360,9 @@
         "NatGas '25: Gas-Weighted E&Ps",
         "Auto Retail & Services '26: Global Leasing and Rentals"
       ],
-      "seen_count": 46,
+      "seen_count": 50,
       "first_seen_at": "2026-10-16T20:58:07.151010+00:00",
-      "last_seen_at": "2026-10-16T22:13:56.906907+00:00",
+      "last_seen_at": "2026-10-20T14:45:21.051642+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -6007,9 +6007,9 @@
         "Data Centers '25: Electrical & Lighting Systems",
         "Optical Connectivity '26: Optical Infrastructure"
       ],
-      "seen_count": 13,
+      "seen_count": 15,
       "first_seen_at": "2026-10-16T20:58:36.779554+00:00",
-      "last_seen_at": "2026-10-16T22:13:23.751703+00:00",
+      "last_seen_at": "2026-10-19T17:20:55.528613+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -6140,9 +6140,9 @@
         "EU Chips Act '26: Power, Automotive & Sovereign Compute",
         "Euro Spend '25: Transport & Mobility Systems"
       ],
-      "seen_count": 16,
+      "seen_count": 17,
       "first_seen_at": "2026-10-16T20:58:44.561769+00:00",
-      "last_seen_at": "2026-10-16T21:58:41.264596+00:00",
+      "last_seen_at": "2026-10-18T15:39:13.575528+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -6234,9 +6234,9 @@
         "Return to Office '24: White Collar Personal Care",
         "Romantic Gifts '25: Greeting Cards & Personalized Gifts"
       ],
-      "seen_count": 37,
+      "seen_count": 38,
       "first_seen_at": "2026-10-16T20:58:50.755957+00:00",
-      "last_seen_at": "2026-10-18T02:31:48.731667+00:00",
+      "last_seen_at": "2026-10-18T14:47:27.247347+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -8138,9 +8138,9 @@
         "Retail Tech '25: Product Authentication & Traceability",
         "Retail Tech '26: Store Automation & Smart Retail"
       ],
-      "seen_count": 27,
+      "seen_count": 29,
       "first_seen_at": "2026-10-16T21:00:24.377134+00:00",
-      "last_seen_at": "2026-10-17T21:55:26.656296+00:00",
+      "last_seen_at": "2026-10-18T14:53:46.589029+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -9061,9 +9061,9 @@
         "Retail Tech '26: Store Automation & Smart Retail",
         "Return to Office '24: White Collar Offices"
       ],
-      "seen_count": 98,
+      "seen_count": 99,
       "first_seen_at": "2026-10-16T21:01:11.249695+00:00",
-      "last_seen_at": "2026-10-18T03:39:09.922064+00:00",
+      "last_seen_at": "2026-10-20T14:58:29.139958+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -12025,9 +12025,9 @@
         "Atoms Bits Long '26: Mining Capex",
         "NatGas '25: Gas-Weighted E&Ps"
       ],
-      "seen_count": 59,
+      "seen_count": 60,
       "first_seen_at": "2026-10-16T21:03:58.611282+00:00",
-      "last_seen_at": "2026-10-16T22:13:53.072676+00:00",
+      "last_seen_at": "2026-10-19T17:42:04.509700+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -16374,9 +16374,9 @@
         "Retail Shopping '25: Shopping REITs",
         "Return to Office '24: White Collar Offices"
       ],
-      "seen_count": 70,
+      "seen_count": 73,
       "first_seen_at": "2026-10-16T21:08:46.584362+00:00",
-      "last_seen_at": "2026-10-17T23:41:53.981145+00:00",
+      "last_seen_at": "2026-10-18T14:47:19.158997+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -16710,9 +16710,9 @@
         "Infra Built in ZIRP '25: HC Platforms",
         "MedTech Long '25: Aging-Driven Procedures & Care"
       ],
-      "seen_count": 11,
+      "seen_count": 12,
       "first_seen_at": "2026-10-16T21:09:16.295834+00:00",
-      "last_seen_at": "2026-10-16T22:07:32.914893+00:00",
+      "last_seen_at": "2026-10-20T13:37:49.840646+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -16783,9 +16783,9 @@
         "Restaurants '26: Value Sit Down",
         "Romantic Gifts '25: Novelty & Keepsake Gifts"
       ],
-      "seen_count": 61,
+      "seen_count": 62,
       "first_seen_at": "2026-10-16T21:09:18.767694+00:00",
-      "last_seen_at": "2026-10-17T21:18:17.920851+00:00",
+      "last_seen_at": "2026-10-18T15:50:22.613001+00:00",
       "notes": "Auto-captured from watchlist registry_match=none Rejected: Google / Google Trends search-interest noise.",
       "rejected_at": "2026-10-16T23:40:21.437663+00:00"
     },
@@ -17979,9 +17979,9 @@
         "MedTech Short '25: High Val MedTech",
         "Retail Shopping '25: Single-Vertical Ecom"
       ],
-      "seen_count": 12,
+      "seen_count": 14,
       "first_seen_at": "2026-10-16T21:11:01.789286+00:00",
-      "last_seen_at": "2026-10-17T23:58:57.025350+00:00",
+      "last_seen_at": "2026-10-20T13:37:48.160578+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -18075,9 +18075,9 @@
         "Romantic Gifts '25: Novelty & Keepsake Gifts",
         "Romantic Gifts '25: Perfumes"
       ],
-      "seen_count": 136,
+      "seen_count": 151,
       "first_seen_at": "2026-10-16T21:11:05.309454+00:00",
-      "last_seen_at": "2026-10-18T04:13:38.817158+00:00",
+      "last_seen_at": "2026-10-20T15:18:07.690587+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -20537,9 +20537,9 @@
         "GLP-1 Long '24: Improved Looks",
         "Atoms Bits Long '26: Mining Capex"
       ],
-      "seen_count": 10,
+      "seen_count": 11,
       "first_seen_at": "2026-10-16T21:14:25.639364+00:00",
-      "last_seen_at": "2026-10-17T20:34:58.802763+00:00",
+      "last_seen_at": "2026-10-18T14:53:49.420338+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -20603,9 +20603,9 @@
         "Retail Tech '25: Retail Media Networks",
         "Retail Tech '26: Membership & Loyalty Ecosystems"
       ],
-      "seen_count": 72,
+      "seen_count": 84,
       "first_seen_at": "2026-10-16T21:14:25.962046+00:00",
-      "last_seen_at": "2026-10-18T03:08:19.583658+00:00",
+      "last_seen_at": "2026-10-19T17:15:44.144686+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -20626,9 +20626,9 @@
         "Global Airlines '26: Chinese Airlines",
         "City-Specific Businesses '26: Paris Business"
       ],
-      "seen_count": 6,
+      "seen_count": 7,
       "first_seen_at": "2026-10-16T21:14:30.104360+00:00",
-      "last_seen_at": "2026-10-16T22:02:13.286971+00:00",
+      "last_seen_at": "2026-10-19T18:22:59.176083+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -21259,9 +21259,9 @@
       "themes_seen": [
         "Auto Components '25: Tires & Wheels"
       ],
-      "seen_count": 2,
+      "seen_count": 3,
       "first_seen_at": "2026-10-16T21:15:18.445079+00:00",
-      "last_seen_at": "2026-10-16T21:55:55.869334+00:00",
+      "last_seen_at": "2026-10-19T16:43:03.145631+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -22630,9 +22630,9 @@
         "Retail Tech '26: Retail Fulfillment Automation",
         "Retail Tech '26: Store Automation & Smart Retail"
       ],
-      "seen_count": 9,
+      "seen_count": 10,
       "first_seen_at": "2026-10-16T21:17:29.437996+00:00",
-      "last_seen_at": "2026-10-18T02:40:55.578743+00:00",
+      "last_seen_at": "2026-10-18T14:59:14.108119+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -23915,9 +23915,9 @@
         "Data Owners '25: Creative IP & Licensed Content Libraries",
         "HaveNots Longs '25: Everyman Subscriptions"
       ],
-      "seen_count": 7,
+      "seen_count": 8,
       "first_seen_at": "2026-10-16T21:19:17.796582+00:00",
-      "last_seen_at": "2026-10-16T22:12:37.837378+00:00",
+      "last_seen_at": "2026-10-18T14:03:23.622481+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -24709,9 +24709,9 @@
         "AI '25: Phase 2 Deployment",
         "Humanoid '25: Motion Control"
       ],
-      "seen_count": 6,
+      "seen_count": 7,
       "first_seen_at": "2026-10-16T21:20:29.114230+00:00",
-      "last_seen_at": "2026-10-16T22:13:09.743247+00:00",
+      "last_seen_at": "2026-10-19T16:11:36.414212+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -26139,9 +26139,9 @@
         "Retail Shopping '26: Global Fast Fashion",
         "Retail Tech '26: Retail Supply Chain & Inventory Software"
       ],
-      "seen_count": 16,
+      "seen_count": 18,
       "first_seen_at": "2026-10-16T21:22:09.788586+00:00",
-      "last_seen_at": "2026-10-17T23:58:58.640283+00:00",
+      "last_seen_at": "2026-10-18T16:01:46.916438+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -29560,9 +29560,9 @@
         "Retail Tech '26: Membership & Loyalty Ecosystems",
         "Romantic Gifts '25: Chocolates & Confectionery"
       ],
-      "seen_count": 27,
+      "seen_count": 32,
       "first_seen_at": "2026-10-16T21:27:22.480332+00:00",
-      "last_seen_at": "2026-10-18T04:06:23.469843+00:00",
+      "last_seen_at": "2026-10-18T16:01:48.950421+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -30149,9 +30149,9 @@
       "themes_seen": [
         "General Merchandise Retail '26: Global Dept Stores"
       ],
-      "seen_count": 2,
+      "seen_count": 3,
       "first_seen_at": "2026-10-16T21:29:02.387415+00:00",
-      "last_seen_at": "2026-10-16T22:00:10.961853+00:00",
+      "last_seen_at": "2026-10-18T14:47:19.860862+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -30212,9 +30212,9 @@
       "themes_seen": [
         "General Merchandise Retail '26: Global Mass Merchants"
       ],
-      "seen_count": 2,
+      "seen_count": 3,
       "first_seen_at": "2026-10-16T21:29:10.809215+00:00",
-      "last_seen_at": "2026-10-16T22:00:13.873260+00:00",
+      "last_seen_at": "2026-10-18T15:39:17.099192+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -36963,9 +36963,9 @@
         "Return to Office '24: Out of Home (OOH) & Billboard Ads",
         "Return to Office '24: White Collar Offices"
       ],
-      "seen_count": 59,
+      "seen_count": 76,
       "first_seen_at": "2026-10-16T21:37:26.781660+00:00",
-      "last_seen_at": "2026-10-18T04:13:46.342444+00:00",
+      "last_seen_at": "2026-10-20T14:58:26.657011+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -36991,9 +36991,9 @@
         "Rare Earths '25: Upstream Exploration & Mining Dev",
         "Rate Sensitivity '25: Home Furniture"
       ],
-      "seen_count": 9,
+      "seen_count": 10,
       "first_seen_at": "2026-10-16T21:37:30.774650+00:00",
-      "last_seen_at": "2026-10-16T22:10:11.096980+00:00",
+      "last_seen_at": "2026-10-18T15:05:00.448539+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -38021,9 +38021,9 @@
       "themes_seen": [
         "Crypto '26: Bitcoin Treasury Companies"
       ],
-      "seen_count": 2,
+      "seen_count": 3,
       "first_seen_at": "2026-10-16T21:39:07.607832+00:00",
-      "last_seen_at": "2026-10-16T22:02:55.903308+00:00",
+      "last_seen_at": "2026-10-19T17:31:31.166938+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -39568,9 +39568,9 @@
         "MegaTech '25: Nvidia GPU Complex",
         "AI Power '26: Passive Components & Plumbing"
       ],
-      "seen_count": 26,
+      "seen_count": 29,
       "first_seen_at": "2026-10-16T21:41:24.729843+00:00",
-      "last_seen_at": "2026-10-18T01:49:36.545710+00:00",
+      "last_seen_at": "2026-10-20T14:58:27.413679+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -45993,9 +45993,9 @@
         "Alcohol '26: Global Wines",
         "NatGas '25: Gas Marketing & Trading"
       ],
-      "seen_count": 9,
+      "seen_count": 12,
       "first_seen_at": "2026-10-16T21:52:14.272315+00:00",
-      "last_seen_at": "2026-10-16T22:12:46.968961+00:00",
+      "last_seen_at": "2026-10-20T14:08:44.067094+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -49967,7 +49967,7 @@
       "seen_count": 1,
       "first_seen_at": "2026-10-16T21:56:54.919142+00:00",
       "last_seen_at": "2026-10-16T21:56:54.919142+00:00",
-      "notes": "Auto-captured from watchlist registry_match=none"
+      "notes": "Auto-captured from watchlist registry_match=none Free proxy pulled: china_retail_sales_yoy (broad NBS retail via TE). Cosmetics-only still unpaid. Free cosmetics-specific trade pulled: china_beauty_import_value (GACC HS 3304). Domestic NBS cosmetics retail YoY still unpaid."
     },
     {
       "id": "cand_weibo_wechat_via_public_apis_or_moni_f5063836",
@@ -58209,9 +58209,9 @@
         "Data Centers '25: Electrical & Grid Infra",
         "Retail Tech '26: Store Automation & Smart Retail"
       ],
-      "seen_count": 4,
+      "seen_count": 5,
       "first_seen_at": "2026-10-16T22:05:15.161974+00:00",
-      "last_seen_at": "2026-10-16T22:14:24.766394+00:00",
+      "last_seen_at": "2026-10-18T14:53:42.968898+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -61492,9 +61492,9 @@
         "Romantic Gifts '25: Greeting Cards & Personalized Gifts",
         "Romantic Gifts '25: Perfumes"
       ],
-      "seen_count": 33,
+      "seen_count": 40,
       "first_seen_at": "2026-10-16T22:06:24.028215+00:00",
-      "last_seen_at": "2026-10-18T04:06:19.611938+00:00",
+      "last_seen_at": "2026-10-18T16:06:23.950206+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -69226,7 +69226,7 @@
     },
     {
       "id": "cand_google_meta_public_transparency_disc_e0e2f683",
-      "status": "open",
+      "status": "aliased",
       "fingerprint": "google & meta public transparency disclosures|google_political_ads_advertiser_spend.csv:spend_usd (targeted political ad spend by geography)",
       "provider": "Google & Meta Public Transparency Disclosures",
       "aliases": "",
@@ -69234,8 +69234,8 @@
       "metric_or_field": "google_political_ads_advertiser_spend.csv:spend_usd (Targeted Political Ad Spend by Geography)",
       "data_type": "google_political_ads_advertiser_spend.csv:spend_usd (Targeted Political Ad Spend by Geography)",
       "cadence": "weekly",
-      "access_guess": "",
-      "aliased_to": null,
+      "access_guess": "api",
+      "aliased_to": "google_political_ads_weekly_spend",
       "first_seen_theme": "Political Spend '26: Broadcasters",
       "themes_seen": [
         "Political Spend '26: Broadcasters"
@@ -69243,7 +69243,7 @@
       "seen_count": 1,
       "first_seen_at": "2026-10-16T22:09:25.739447+00:00",
       "last_seen_at": "2026-10-16T22:09:25.739447+00:00",
-      "notes": "Auto-captured from watchlist registry_match=none"
+      "notes": "Aliased to Google weekly Spend_USD pull (Meta Ad Library skipped \u2014 not a free redistributable series)."
     },
     {
       "id": "cand_uspto_google_patents_public_data_4736444d",
@@ -71121,9 +71121,9 @@
       "themes_seen": [
         "Real Food '26: Fruits & Vegetables"
       ],
-      "seen_count": 3,
+      "seen_count": 5,
       "first_seen_at": "2026-10-16T22:10:22.992302+00:00",
-      "last_seen_at": "2026-10-17T22:00:19.973513+00:00",
+      "last_seen_at": "2026-10-18T14:41:39.395064+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -71694,9 +71694,9 @@
         "Recreation '24: Sporting Goods & Outdoor Apparel",
         "Recreation '24: Sporting Goods & Outdoor Brands"
       ],
-      "seen_count": 4,
+      "seen_count": 5,
       "first_seen_at": "2026-10-16T22:10:40.694345+00:00",
-      "last_seen_at": "2026-10-17T21:18:16.824033+00:00",
+      "last_seen_at": "2026-10-18T16:06:21.837730+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -72059,9 +72059,9 @@
         "Retail Tech '26: Store Automation & Smart Retail",
         "Romantic Gifts '25: Greeting Cards & Personalized Gifts"
       ],
-      "seen_count": 3,
+      "seen_count": 4,
       "first_seen_at": "2026-10-16T22:10:51.716074+00:00",
-      "last_seen_at": "2026-10-16T22:14:34.619454+00:00",
+      "last_seen_at": "2026-10-18T15:05:06.463981+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -73712,9 +73712,9 @@
         "Agentic Utilities '26: Agentic Payments",
         "Video & News '24: Media Conglomerate"
       ],
-      "seen_count": 4,
+      "seen_count": 5,
       "first_seen_at": "2026-10-16T22:11:39.645313+00:00",
-      "last_seen_at": "2026-10-16T22:13:26.078089+00:00",
+      "last_seen_at": "2026-10-19T18:12:01.851985+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -74199,9 +74199,9 @@
         "BS Jobs '26: Slide Decks & Meetings",
         "GLP-1 Long '24: Improved Looks"
       ],
-      "seen_count": 13,
+      "seen_count": 14,
       "first_seen_at": "2026-10-16T22:12:05.751306+00:00",
-      "last_seen_at": "2026-10-18T04:13:39.484841+00:00",
+      "last_seen_at": "2026-10-18T14:53:42.260946+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -74734,9 +74734,9 @@
       "themes_seen": [
         "HaveNots Longs '25: Everyman Subscriptions"
       ],
-      "seen_count": 1,
+      "seen_count": 2,
       "first_seen_at": "2026-10-16T22:12:37.531925+00:00",
-      "last_seen_at": "2026-10-16T22:12:37.531925+00:00",
+      "last_seen_at": "2026-10-18T14:16:29.512858+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -74755,9 +74755,9 @@
       "themes_seen": [
         "HaveNots Longs '25: Everyman Subscriptions"
       ],
-      "seen_count": 1,
+      "seen_count": 2,
       "first_seen_at": "2026-10-16T22:12:38.238133+00:00",
-      "last_seen_at": "2026-10-16T22:12:38.238133+00:00",
+      "last_seen_at": "2026-10-18T14:28:52.875478+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -76020,9 +76020,9 @@
       "themes_seen": [
         "Retail Shopping '26: Eurofashion"
       ],
-      "seen_count": 1,
+      "seen_count": 2,
       "first_seen_at": "2026-10-16T22:14:12.508187+00:00",
-      "last_seen_at": "2026-10-16T22:14:12.508187+00:00",
+      "last_seen_at": "2026-10-19T16:53:35.917744+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -76105,9 +76105,9 @@
         "Retail Shopping '26: Global Fast Fashion",
         "Romantic Gifts '25: Greeting Cards & Personalized Gifts"
       ],
-      "seen_count": 2,
+      "seen_count": 3,
       "first_seen_at": "2026-10-16T22:14:14.882494+00:00",
-      "last_seen_at": "2026-10-16T22:14:35.113825+00:00",
+      "last_seen_at": "2026-10-18T15:44:45.086931+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     },
     {
@@ -78081,6 +78081,956 @@
       "seen_count": 1,
       "first_seen_at": "2026-10-18T04:13:45.013121+00:00",
       "last_seen_at": "2026-10-18T04:13:45.013121+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_semrush_eece71d0",
+      "status": "open",
+      "fingerprint": "semrush|organic_keywords_in_top_3 and serp_features_ai_overview_share",
+      "provider": "Semrush",
+      "aliases": "",
+      "dataset_or_product": "Organic Search & SERP Features Intelligence",
+      "metric_or_field": "organic_keywords_in_top_3 and serp_features_ai_overview_share",
+      "data_type": "organic_keywords_in_top_3 and serp_features_ai_overview_share",
+      "cadence": "weekly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T13:56:57.106749+00:00",
+      "last_seen_at": "2026-10-18T13:56:57.106749+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_japan_exchange_group_jpx_tokyo_stock_a8a8840a",
+      "status": "open",
+      "fingerprint": "japan exchange group (jpx) / tokyo stock exchange|timely disclosure filing: 'notice concerning repurchase of shares' & 'spin-off listing status'",
+      "provider": "Japan Exchange Group (JPX) / Tokyo Stock Exchange",
+      "aliases": "",
+      "dataset_or_product": "Timely Disclosure network (TDnet)",
+      "metric_or_field": "Timely Disclosure Filing: 'Notice Concerning Repurchase of Shares' & 'Spin-off Listing Status'",
+      "data_type": "Timely Disclosure Filing: 'Notice Concerning Repurchase of Shares' & 'Spin-off Listing Status'",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:09:51.130123+00:00",
+      "last_seen_at": "2026-10-18T14:09:51.130123+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_national_press_and_publication_admin_aaaf7db4",
+      "status": "open",
+      "fingerprint": "national press and publication administration (nppa)|monthly total approved domestic & imported game publishing licenses (isbn / \u7248\u53f7 count and constituent grant names)",
+      "provider": "National Press and Publication Administration (NPPA)",
+      "aliases": "",
+      "dataset_or_product": "Online Game Publishing Approvals Portal",
+      "metric_or_field": "Monthly Total Approved Domestic & Imported Game Publishing Licenses (ISBN / \u7248\u53f7 count and constituent grant names)",
+      "data_type": "Monthly Total Approved Domestic & Imported Game Publishing Licenses (ISBN / \u7248\u53f7 count and constituent grant names)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:16:28.804035+00:00",
+      "last_seen_at": "2026-10-18T14:16:28.804035+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_gamma_data_cng_713917b4",
+      "status": "open",
+      "fingerprint": "gamma data (cng)|domestic_actual_sales_revenue_cny (china domestic game market actual sales revenue) and overseas_sales_revenue_usd (actu",
+      "provider": "Gamma Data (CNG)",
+      "aliases": "",
+      "dataset_or_product": "China Gaming Industry Monthly Revenue Database",
+      "metric_or_field": "domestic_actual_sales_revenue_cny (China Domestic Game Market Actual Sales Revenue) and overseas_sales_revenue_usd (Actual Sales Revenue of Chinese Self-Developed Games in Overseas Markets)",
+      "data_type": "domestic_actual_sales_revenue_cny (China Domestic Game Market Actual Sales Revenue) and overseas_sales_revenue_usd (Actual Sales Revenue of Chinese Self-Developed Games in Overseas Markets)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:16:33.197607+00:00",
+      "last_seen_at": "2026-10-18T14:16:33.197607+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_niko_partners_b2c83788",
+      "status": "open",
+      "fingerprint": "niko partners|approved_game_count, foreign_vs_domestic_license_ratio, and projected_annual_gamer_spending_usd",
+      "provider": "Niko Partners",
+      "aliases": "",
+      "dataset_or_product": "China Games Market Intelligence Service",
+      "metric_or_field": "approved_game_count, foreign_vs_domestic_license_ratio, and projected_annual_gamer_spending_usd",
+      "data_type": "approved_game_count, foreign_vs_domestic_license_ratio, and projected_annual_gamer_spending_usd",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:16:34.115761+00:00",
+      "last_seen_at": "2026-10-18T14:16:34.115761+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_pathmatics_b9b87025",
+      "status": "open",
+      "fingerprint": "pathmatics|estimated_ad_spend, impression_count, and advertiser_category_share",
+      "provider": "Pathmatics",
+      "aliases": "",
+      "dataset_or_product": "Digital Ad Intelligence",
+      "metric_or_field": "estimated_ad_spend, impression_count, and advertiser_category_share",
+      "data_type": "estimated_ad_spend, impression_count, and advertiser_category_share",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:23:19.376905+00:00",
+      "last_seen_at": "2026-10-18T14:23:19.376905+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_valve_3a27de31",
+      "status": "open",
+      "fingerprint": "valve|player_count",
+      "provider": "Valve",
+      "aliases": "",
+      "dataset_or_product": "Steam Web API",
+      "metric_or_field": "player_count",
+      "data_type": "player_count",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:28:48.317394+00:00",
+      "last_seen_at": "2026-10-18T14:28:48.317394+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_metacritic_e5e8b9b4",
+      "status": "open",
+      "fingerprint": "metacritic|metascore",
+      "provider": "Metacritic",
+      "aliases": "",
+      "dataset_or_product": "Metascore Review Aggregator",
+      "metric_or_field": "metascore",
+      "data_type": "metascore",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:28:50.922709+00:00",
+      "last_seen_at": "2026-10-18T14:28:50.922709+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_vg_insights_82dd67e6",
+      "status": "open",
+      "fingerprint": "vg insights|estimated_units_sold",
+      "provider": "VG Insights",
+      "aliases": "",
+      "dataset_or_product": "Global Steam Market Intelligence",
+      "metric_or_field": "estimated_units_sold",
+      "data_type": "estimated_units_sold",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:28:53.686435+00:00",
+      "last_seen_at": "2026-10-18T14:28:53.686435+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_tokyo_stock_exchange_jpx_tdnet_80f28d47",
+      "status": "open",
+      "fingerprint": "tokyo stock exchange (jpx) / tdnet|disclosure_title and share_repurchase_amount (securities code: 6758)",
+      "provider": "Tokyo Stock Exchange (JPX) / TDnet",
+      "aliases": "",
+      "dataset_or_product": "Timely Disclosure Network (TDnet)",
+      "metric_or_field": "disclosure_title and share_repurchase_amount (Securities Code: 6758)",
+      "data_type": "disclosure_title and share_repurchase_amount (Securities Code: 6758)",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:41:38.462543+00:00",
+      "last_seen_at": "2026-10-18T14:41:38.462543+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_korea_creative_content_agency_3cc1402c",
+      "status": "open",
+      "fingerprint": "korea creative content agency|game industry sales and export value (krw billions and usd millions)",
+      "provider": "Korea Creative Content Agency",
+      "aliases": "",
+      "dataset_or_product": "Quarterly and Annual Content Industry Trend Analysis",
+      "metric_or_field": "Game Industry Sales and Export Value (KRW Billions and USD Millions)",
+      "data_type": "Game Industry Sales and Export Value (KRW Billions and USD Millions)",
+      "cadence": "quarterly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:47:21.328749+00:00",
+      "last_seen_at": "2026-10-18T14:47:21.328749+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_twitch_sullygnome_903c30b3",
+      "status": "open",
+      "fingerprint": "twitch / sullygnome|hours_watched",
+      "provider": "Twitch / SullyGnome",
+      "aliases": "",
+      "dataset_or_product": "Twitch Video Game Viewership Analytics",
+      "metric_or_field": "hours_watched",
+      "data_type": "hours_watched",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:47:23.809255+00:00",
+      "last_seen_at": "2026-10-18T14:47:23.809255+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_twitch_amazon_ec2511c8",
+      "status": "open",
+      "fingerprint": "twitch / amazon|viewer_count by game_id",
+      "provider": "Twitch / Amazon",
+      "aliases": "",
+      "dataset_or_product": "Twitch Helix API",
+      "metric_or_field": "viewer_count by game_id",
+      "data_type": "viewer_count by game_id",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:53:47.252709+00:00",
+      "last_seen_at": "2026-10-18T14:53:47.252709+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_circana_formerly_the_npd_group_78ab08e7",
+      "status": "open",
+      "fingerprint": "circana (formerly the npd group)|monthly_dollar_sales_by_platform_and_software_title_units",
+      "provider": "Circana (formerly The NPD Group)",
+      "aliases": "",
+      "dataset_or_product": "Video Games Industry Retail Tracking Service",
+      "metric_or_field": "monthly_dollar_sales_by_platform_and_software_title_units",
+      "data_type": "monthly_dollar_sales_by_platform_and_software_title_units",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T14:53:47.953724+00:00",
+      "last_seen_at": "2026-10-18T14:53:47.953724+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_traackr_5f470ff4",
+      "status": "open",
+      "fingerprint": "traackr|brand_vitality_score",
+      "provider": "Traackr",
+      "aliases": "",
+      "dataset_or_product": "Brand Vitality Score (BVS) & Influencer Analytics",
+      "metric_or_field": "brand_vitality_score",
+      "data_type": "brand_vitality_score",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:05:08.462089+00:00",
+      "last_seen_at": "2026-10-18T15:05:08.462089+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_instituto_costarricense_de_turismo_i_15a80722",
+      "status": "open",
+      "fingerprint": "instituto costarricense de turismo (ict)|llegadas internacionales por v\u00eda a\u00e9rea",
+      "provider": "Instituto Costarricense de Turismo (ICT)",
+      "aliases": "",
+      "dataset_or_product": "Anuarios y Estad\u00edsticas de Llegadas Internacionales",
+      "metric_or_field": "Llegadas internacionales por v\u00eda a\u00e9rea",
+      "data_type": "Llegadas internacionales por v\u00eda a\u00e9rea",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:15:16.044206+00:00",
+      "last_seen_at": "2026-10-18T15:15:16.044206+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_prince_george_s_county_department_of_87d4bb45",
+      "status": "open",
+      "fingerprint": "prince george's county department of permitting, inspections and enforcement (dpie)|permit status and application milestones",
+      "provider": "Prince George's County Department of Permitting, Inspections and Enforcement (DPIE)",
+      "aliases": "",
+      "dataset_or_product": "ePermits Public Records Search",
+      "metric_or_field": "Permit Status and Application Milestones",
+      "data_type": "Permit Status and Application Milestones",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:15:16.753708+00:00",
+      "last_seen_at": "2026-10-18T15:15:16.753708+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_alcohol_and_tobacco_tax_and_trade_bu_0d94971f",
+      "status": "open",
+      "fingerprint": "alcohol and tobacco tax and trade bureau (ttb)|taxable withdrawals (gallons)",
+      "provider": "Alcohol and Tobacco Tax and Trade Bureau (TTB)",
+      "aliases": "",
+      "dataset_or_product": "Wine Monthly Statistical Report",
+      "metric_or_field": "Taxable Withdrawals (Gallons)",
+      "data_type": "Taxable Withdrawals (Gallons)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 3,
+      "first_seen_at": "2026-10-18T15:21:32.698523+00:00",
+      "last_seen_at": "2026-10-18T15:33:39.423097+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_california_department_of_food_and_ag_1a9a8671",
+      "status": "open",
+      "fingerprint": "california department of food and agriculture (cdfa)|total grape crush tonnage",
+      "provider": "California Department of Food and Agriculture (CDFA)",
+      "aliases": "",
+      "dataset_or_product": "California Grape Crush Report",
+      "metric_or_field": "Total Grape Crush Tonnage",
+      "data_type": "Total Grape Crush Tonnage",
+      "cadence": "irregular",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:21:33.376896+00:00",
+      "last_seen_at": "2026-10-18T15:21:33.376896+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_wine_australia_6f2ec713",
+      "status": "open",
+      "fingerprint": "wine australia|export_value_fob_aud",
+      "provider": "Wine Australia",
+      "aliases": "",
+      "dataset_or_product": "Wine Export Approvals and Shipments Dashboard",
+      "metric_or_field": "export_value_fob_aud",
+      "data_type": "export_value_fob_aud",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:28:13.124083+00:00",
+      "last_seen_at": "2026-10-18T15:28:13.124083+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_new_zealand_winegrowers_f15d48b3",
+      "status": "open",
+      "fingerprint": "new zealand winegrowers|total_export_volume_litres",
+      "provider": "New Zealand Winegrowers",
+      "aliases": "",
+      "dataset_or_product": "Monthly Wine Export Reports",
+      "metric_or_field": "total_export_volume_litres",
+      "data_type": "total_export_volume_litres",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:28:13.918389+00:00",
+      "last_seen_at": "2026-10-18T15:28:13.918389+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_wine_searcher_e22b4e5b",
+      "status": "open",
+      "fingerprint": "wine-searcher|average_merchant_price_usd",
+      "provider": "Wine-Searcher",
+      "aliases": "",
+      "dataset_or_product": "Global Wine Search and Merchant Price Index",
+      "metric_or_field": "average_merchant_price_usd",
+      "data_type": "average_merchant_price_usd",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:28:14.596840+00:00",
+      "last_seen_at": "2026-10-18T15:28:14.596840+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_office_for_national_statistics_bc628145",
+      "status": "open",
+      "fingerprint": "office for national statistics|mm23 / d7bs",
+      "provider": "Office for National Statistics",
+      "aliases": "",
+      "dataset_or_product": "Consumer Price Indices",
+      "metric_or_field": "MM23 / D7BS",
+      "data_type": "MM23 / D7BS",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:33:31.852565+00:00",
+      "last_seen_at": "2026-10-18T15:33:31.852565+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_comit_champagne_civc_adad4ac1",
+      "status": "open",
+      "fingerprint": "comit\u00e9 champagne (civc)|volume d'exp\u00e9ditions de champagne (millions de bouteilles: france, union europ\u00e9enne, pays tiers)",
+      "provider": "Comit\u00e9 Champagne (CIVC)",
+      "aliases": "",
+      "dataset_or_product": "Monthly Champagne Shipments (Exp\u00e9ditions de Champagne)",
+      "metric_or_field": "Volume d'exp\u00e9ditions de Champagne (millions de bouteilles: France, Union Europ\u00e9enne, Pays Tiers)",
+      "data_type": "Volume d'exp\u00e9ditions de Champagne (millions de bouteilles: France, Union Europ\u00e9enne, Pays Tiers)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 2,
+      "first_seen_at": "2026-10-18T15:33:37.317703+00:00",
+      "last_seen_at": "2026-10-18T15:39:12.912380+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_direction_g_n_rale_des_douanes_et_dr_9fd5e3e0",
+      "status": "open",
+      "fingerprint": "direction g\u00e9n\u00e9rale des douanes et droits indirects (douanes fran\u00e7aises)|exportations mensuelles de vins effervescents aop champagne (valeur fob en millions eur, volume en hectolitres)",
+      "provider": "Direction G\u00e9n\u00e9rale des Douanes et Droits Indirects (Douanes Fran\u00e7aises)",
+      "aliases": "",
+      "dataset_or_product": "Donn\u00e9es du Commerce Ext\u00e9rieur Fran\u00e7ais",
+      "metric_or_field": "Exportations mensuelles de vins effervescents AOP Champagne (Valeur FOB en millions EUR, Volume en hectolitres)",
+      "data_type": "Exportations mensuelles de vins effervescents AOP Champagne (Valeur FOB en millions EUR, Volume en hectolitres)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:33:40.211540+00:00",
+      "last_seen_at": "2026-10-18T15:33:40.211540+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_liv_ex_c43507cd",
+      "status": "open",
+      "fingerprint": "liv-ex|liv-ex champagne 50 index value",
+      "provider": "Liv-ex",
+      "aliases": "",
+      "dataset_or_product": "Liv-ex Fine Wine Market Indices",
+      "metric_or_field": "Liv-ex Champagne 50 Index Value",
+      "data_type": "Liv-ex Champagne 50 Index Value",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:39:14.232419+00:00",
+      "last_seen_at": "2026-10-18T15:39:14.232419+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_systembolaget_97dd596b",
+      "status": "open",
+      "fingerprint": "systembolaget|product_count_by_supplier",
+      "provider": "Systembolaget",
+      "aliases": "",
+      "dataset_or_product": "Systembolaget Open Data API",
+      "metric_or_field": "product_count_by_supplier",
+      "data_type": "product_count_by_supplier",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:44:42.706059+00:00",
+      "last_seen_at": "2026-10-18T15:44:42.706059+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_hawesko_holding_se_9f2bdd4d",
+      "status": "open",
+      "fingerprint": "hawesko holding se|active_depot_count",
+      "provider": "Hawesko Holding SE",
+      "aliases": "",
+      "dataset_or_product": "Jacques' Wein-Depot Store Locator",
+      "metric_or_field": "active_depot_count",
+      "data_type": "active_depot_count",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:44:43.427193+00:00",
+      "last_seen_at": "2026-10-18T15:44:43.427193+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_cdc_national_center_for_health_stati_9b519871",
+      "status": "open",
+      "fingerprint": "cdc / national center for health statistics|provisional number of marriages and crude marriage rate per 1,000 population (table 1: provisional vital statistics)",
+      "provider": "CDC / National Center for Health Statistics",
+      "aliases": "",
+      "dataset_or_product": "National Vital Statistics System (NVSS)",
+      "metric_or_field": "Provisional Number of Marriages and Crude Marriage Rate per 1,000 Population (Table 1: Provisional Vital Statistics)",
+      "data_type": "Provisional Number of Marriages and Crude Marriage Rate per 1,000 Population (Table 1: Provisional Vital Statistics)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:50:21.222381+00:00",
+      "last_seen_at": "2026-10-18T15:50:21.222381+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_aritzia_reformation_corporate_store__d968883d",
+      "status": "open",
+      "fingerprint": "aritzia / reformation corporate store locators|active boutique count and announced new store openings",
+      "provider": "Aritzia / Reformation Corporate Store Locators",
+      "aliases": "",
+      "dataset_or_product": "Public Retail Store Directories",
+      "metric_or_field": "Active Boutique Count and Announced New Store Openings",
+      "data_type": "Active Boutique Count and Announced New Store Openings",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:50:24.055170+00:00",
+      "last_seen_at": "2026-10-18T15:50:24.055170+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_abercrombie_fitch_co_urban_outfitter_059f1892",
+      "status": "open",
+      "fingerprint": "abercrombie & fitch co. / urban outfitters inc.|active job openings count in occasion & bridal merchandising / styling",
+      "provider": "Abercrombie & Fitch Co. / Urban Outfitters Inc.",
+      "aliases": "",
+      "dataset_or_product": "Corporate Career Portals",
+      "metric_or_field": "Active Job Openings Count in Occasion & Bridal Merchandising / Styling",
+      "data_type": "Active Job Openings Count in Occasion & Bridal Merchandising / Styling",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:50:24.756996+00:00",
+      "last_seen_at": "2026-10-18T15:50:24.756996+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_international_monetary_fund_a9081f73",
+      "status": "open",
+      "fingerprint": "international monetary fund|pcottindusdm",
+      "provider": "International Monetary Fund",
+      "aliases": "",
+      "dataset_or_product": "Primary Commodity Prices",
+      "metric_or_field": "PCOTTINDUSDM",
+      "data_type": "PCOTTINDUSDM",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T15:56:05.498219+00:00",
+      "last_seen_at": "2026-10-18T15:56:05.498219+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_torrid_holdings_inc_4d1e5b0e",
+      "status": "open",
+      "fingerprint": "torrid holdings inc.|total_active_store_locations_count",
+      "provider": "Torrid Holdings Inc.",
+      "aliases": "",
+      "dataset_or_product": "Torrid Store Locator Web Directory",
+      "metric_or_field": "total_active_store_locations_count",
+      "data_type": "total_active_store_locations_count",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T16:01:46.267656+00:00",
+      "last_seen_at": "2026-10-18T16:01:46.267656+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_academy_sports_outdoors_579f6572",
+      "status": "open",
+      "fingerprint": "academy sports + outdoors|total open store count and new store openings",
+      "provider": "Academy Sports + Outdoors",
+      "aliases": "",
+      "dataset_or_product": "Academy Store Directory",
+      "metric_or_field": "Total Open Store Count and New Store Openings",
+      "data_type": "Total Open Store Count and New Store Openings",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-18T16:06:23.253387+00:00",
+      "last_seen_at": "2026-10-18T16:06:23.253387+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_nokia_cisco_a2a13d2d",
+      "status": "open",
+      "fingerprint": "nokia / cisco|global agentic-ai machine-to-machine (m2m) traffic volume (eb/month)",
+      "provider": "Nokia / Cisco",
+      "aliases": "",
+      "dataset_or_product": "Global Network Traffic Report / Annual Internet Report",
+      "metric_or_field": "Global Agentic-AI Machine-to-Machine (M2M) Traffic Volume (EB/month)",
+      "data_type": "Global Agentic-AI Machine-to-Machine (M2M) Traffic Volume (EB/month)",
+      "cadence": "annually",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T15:49:55.301246+00:00",
+      "last_seen_at": "2026-10-19T15:49:55.301246+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_federal_energy_regulatory_commission_a3149c06",
+      "status": "open",
+      "fingerprint": "federal energy regulatory commission (ferc) / independent system operators (iso)|new data center interconnection requests (mw capacity)",
+      "provider": "Federal Energy Regulatory Commission (FERC) / Independent System Operators (ISO)",
+      "aliases": "",
+      "dataset_or_product": "Interconnection Queues",
+      "metric_or_field": "New data center interconnection requests (MW capacity)",
+      "data_type": "New data center interconnection requests (MW capacity)",
+      "cadence": "monthly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T15:49:58.243984+00:00",
+      "last_seen_at": "2026-10-19T15:49:58.243984+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_nist_national_institute_of_standards_6c4880fa",
+      "status": "open",
+      "fingerprint": "nist (national institute of standards and technology)|release of new rmf profiles, guidance, or updates related to ai agent security",
+      "provider": "NIST (National Institute of Standards and Technology)",
+      "aliases": "",
+      "dataset_or_product": "AI Risk Management Framework (RMF) Publications",
+      "metric_or_field": "Release of new RMF profiles, guidance, or updates related to AI agent security",
+      "data_type": "Release of new RMF profiles, guidance, or updates related to AI agent security",
+      "cadence": "irregular",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T16:22:28.563925+00:00",
+      "last_seen_at": "2026-10-19T16:22:28.563925+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_company_earnings_reports_google_meta_76300337",
+      "status": "open",
+      "fingerprint": "company earnings reports (google, meta, microsoft, amazon)|total capital expenditure (capex) by major hyperscalers",
+      "provider": "Company Earnings Reports (Google, Meta, Microsoft, Amazon)",
+      "aliases": "",
+      "dataset_or_product": "Capital Expenditure (CapEx)",
+      "metric_or_field": "Total Capital Expenditure (CapEx) by Major Hyperscalers",
+      "data_type": "Total Capital Expenditure (CapEx) by Major Hyperscalers",
+      "cadence": "quarterly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T16:32:36.990591+00:00",
+      "last_seen_at": "2026-10-19T16:32:36.990591+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_tsmc_investor_relations_542252b1",
+      "status": "open",
+      "fingerprint": "tsmc investor relations|announcements of u.s. fab construction progress or new capacity milestones",
+      "provider": "TSMC Investor Relations",
+      "aliases": "",
+      "dataset_or_product": "Press Releases / Newsroom",
+      "metric_or_field": "Announcements of U.S. fab construction progress or new capacity milestones",
+      "data_type": "Announcements of U.S. fab construction progress or new capacity milestones",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T16:53:34.946006+00:00",
+      "last_seen_at": "2026-10-19T16:53:34.946006+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_tsmc_samsung_intel_micron_sk_hynix_addc3577",
+      "status": "open",
+      "fingerprint": "tsmc, samsung, intel, micron, sk hynix|capital expenditure (capex) guidance / actuals (usd billions)",
+      "provider": "TSMC, Samsung, Intel, Micron, SK Hynix",
+      "aliases": "",
+      "dataset_or_product": "Company Earnings Reports/Transcripts",
+      "metric_or_field": "Capital Expenditure (Capex) Guidance / Actuals (USD billions)",
+      "data_type": "Capital Expenditure (Capex) Guidance / Actuals (USD billions)",
+      "cadence": "quarterly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T17:12:30.452994+00:00",
+      "last_seen_at": "2026-10-19T17:12:30.452994+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_public_company_earnings_reports_fbff51b7",
+      "status": "open",
+      "fingerprint": "public company earnings reports|capital expenditure (capex) guidance and actuals for microsoft, google, amazon, meta",
+      "provider": "Public company earnings reports",
+      "aliases": "",
+      "dataset_or_product": "Company Financials",
+      "metric_or_field": "Capital Expenditure (CapEx) guidance and actuals for Microsoft, Google, Amazon, Meta",
+      "data_type": "Capital Expenditure (CapEx) guidance and actuals for Microsoft, Google, Amazon, Meta",
+      "cadence": "quarterly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T17:20:50.129234+00:00",
+      "last_seen_at": "2026-10-19T17:20:50.129234+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_lawrence_berkeley_national_laborator_edee00dd",
+      "status": "open",
+      "fingerprint": "lawrence berkeley national laboratory / u.s. department of energy|total mw of data center projects in interconnection queues (annual)",
+      "provider": "Lawrence Berkeley National Laboratory / U.S. Department of Energy",
+      "aliases": "",
+      "dataset_or_product": "Data Center Power Grid Interconnection Queue Data",
+      "metric_or_field": "Total MW of data center projects in interconnection queues (annual)",
+      "data_type": "Total MW of data center projects in interconnection queues (annual)",
+      "cadence": "annually",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T17:20:52.838436+00:00",
+      "last_seen_at": "2026-10-19T17:20:52.838436+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_u_s_federal_energy_regulatory_commis_bfe18a56",
+      "status": "open",
+      "fingerprint": "u.s. federal energy regulatory commission (ferc)|pjm interconnection iras proposal (docket no. er26-xxxx-000) status/decision",
+      "provider": "U.S. Federal Energy Regulatory Commission (FERC)",
+      "aliases": "",
+      "dataset_or_product": "eLibrary Docket Filings",
+      "metric_or_field": "PJM Interconnection IRAS Proposal (Docket No. ER26-XXXX-000) Status/Decision",
+      "data_type": "PJM Interconnection IRAS Proposal (Docket No. ER26-XXXX-000) Status/Decision",
+      "cadence": "event_driven",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T17:42:01.925409+00:00",
+      "last_seen_at": "2026-10-19T17:42:01.925409+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_ercot_iso_b0c1b99e",
+      "status": "open",
+      "fingerprint": "ercot iso|system-wide actual load (mw)",
+      "provider": "ERCOT ISO",
+      "aliases": "",
+      "dataset_or_product": "Real-Time Load Data",
+      "metric_or_field": "System-Wide Actual Load (MW)",
+      "data_type": "System-Wide Actual Load (MW)",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T18:03:53.317008+00:00",
+      "last_seen_at": "2026-10-19T18:03:53.317008+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_epoch_ai_ai_automation_global_forbes_07089c71",
+      "status": "open",
+      "fingerprint": "epoch ai, ai automation global, forbes, semianalysis|annual decline in ai inference cost per million tokens (for llms)",
+      "provider": "Epoch AI, AI Automation Global, Forbes, SemiAnalysis",
+      "aliases": "",
+      "dataset_or_product": "AI Inference Cost Analysis",
+      "metric_or_field": "Annual Decline in AI Inference Cost per Million Tokens (for LLMs)",
+      "data_type": "Annual Decline in AI Inference Cost per Million Tokens (for LLMs)",
+      "cadence": "annually",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-19T18:22:50.994935+00:00",
+      "last_seen_at": "2026-10-19T18:22:50.994935+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_pwc_morgan_stanley_goldman_sachs_e77e0dfc",
+      "status": "open",
+      "fingerprint": "pwc, morgan stanley, goldman sachs|annual data center capital expenditure (usd billions)",
+      "provider": "PwC, Morgan Stanley, Goldman Sachs",
+      "aliases": "",
+      "dataset_or_product": "Global AI Infrastructure Spending Forecasts",
+      "metric_or_field": "Annual Data Center Capital Expenditure (USD billions)",
+      "data_type": "Annual Data Center Capital Expenditure (USD billions)",
+      "cadence": "annually",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-20T13:46:05.390317+00:00",
+      "last_seen_at": "2026-10-20T13:46:05.390317+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_company_careers_pages_e_g_google_car_292ebf65",
+      "status": "open",
+      "fingerprint": "company careers pages (e.g., google careers)|number of unique job postings for 'ai agent developer' at alphabet inc. (goog)",
+      "provider": "Company Careers Pages (e.g., Google Careers)",
+      "aliases": "",
+      "dataset_or_product": "Job Postings",
+      "metric_or_field": "Number of unique job postings for 'AI Agent Developer' at Alphabet Inc. (GOOG)",
+      "data_type": "Number of unique job postings for 'AI Agent Developer' at Alphabet Inc. (GOOG)",
+      "cadence": "weekly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-20T14:08:46.310161+00:00",
+      "last_seen_at": "2026-10-20T14:08:46.310161+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_semi_org_4b2f94ea",
+      "status": "open",
+      "fingerprint": "semi.org|total silicon wafer shipments (year-over-year growth)",
+      "provider": "SEMI.org",
+      "aliases": "",
+      "dataset_or_product": "Silicon Wafer Shipments",
+      "metric_or_field": "Total Silicon Wafer Shipments (Year-over-Year Growth)",
+      "data_type": "Total Silicon Wafer Shipments (Year-over-Year Growth)",
+      "cadence": "quarterly",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-20T14:45:22.828370+00:00",
+      "last_seen_at": "2026-10-20T14:45:22.828370+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_legaltech_news_a7acc7ea",
+      "status": "open",
+      "fingerprint": "legaltech news|articles and reports on 'ai in legal discovery' or 'legal tech job displacement'",
+      "provider": "Legaltech News",
+      "aliases": "",
+      "dataset_or_product": "Industry News & Analysis",
+      "metric_or_field": "Articles and reports on 'AI in legal discovery' or 'legal tech job displacement'",
+      "data_type": "Articles and reports on 'AI in legal discovery' or 'legal tech job displacement'",
+      "cadence": "daily",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-20T15:10:07.235568+00:00",
+      "last_seen_at": "2026-10-20T15:10:07.235568+00:00",
+      "notes": "Auto-captured from watchlist registry_match=none"
+    },
+    {
+      "id": "cand_federal_court_dockets_legal_news_out_35f70977",
+      "status": "open",
+      "fingerprint": "federal court dockets / legal news outlets|number of ai bias & compliance lawsuit filings against enterprise software vendors",
+      "provider": "Federal Court Dockets / Legal News Outlets",
+      "aliases": "",
+      "dataset_or_product": "AI Bias & Compliance Lawsuit Filings",
+      "metric_or_field": "Number of AI Bias & Compliance Lawsuit Filings against Enterprise Software Vendors",
+      "data_type": "Number of AI Bias & Compliance Lawsuit Filings against Enterprise Software Vendors",
+      "cadence": "quarterly/ongoing",
+      "access_guess": "",
+      "aliased_to": null,
+      "first_seen_theme": "",
+      "themes_seen": [],
+      "seen_count": 1,
+      "first_seen_at": "2026-10-20T15:18:10.107682+00:00",
+      "last_seen_at": "2026-10-20T15:18:10.107682+00:00",
       "notes": "Auto-captured from watchlist registry_match=none"
     }
   ]

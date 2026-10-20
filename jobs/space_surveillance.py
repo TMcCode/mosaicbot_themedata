@@ -27,6 +27,7 @@ from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import usaspending as usa  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "space_surveillance"
@@ -66,6 +67,7 @@ def build_pack(
     latest_date = ""
 
     pending_derived: list[dict[str, Any]] = []
+    fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
         key = meta.get("key")
@@ -76,24 +78,32 @@ def build_pack(
             pending_derived.append(meta)
             continue
         try:
-            if src != "usaspending":
-                raise RuntimeError(f"unknown source {src}")
-            recipient = meta.get("recipient")
-            if recipient:
-                pts = usa.fetch_monthly_obligations(
-                    recipient_search_text=[str(recipient)],
-                    start_date=start,
-                )
-                notes.append(f"{key}: USASpending recipient={recipient!r}")
+            if src == "usaspending":
+                recipient = meta.get("recipient")
+                if recipient:
+                    pts = usa.fetch_monthly_obligations(
+                        recipient_search_text=[str(recipient)],
+                        start_date=start,
+                    )
+                    notes.append(f"{key}: USASpending recipient={recipient!r}")
+                else:
+                    keywords = list(
+                        meta.get("keywords") or usa.DEFAULT_SAT_GEOINT_KEYWORDS
+                    )
+                    pts = usa.fetch_monthly_obligations(
+                        keywords=keywords,
+                        start_date=start,
+                    )
+                    notes.append(f"{key}: USASpending keywords={keywords}")
+            elif fmp_packlib.is_fmp_source(src):
+                pts, note = fmp_caches.resolve(meta, start=start)
+                for n in fmp_caches.notes:
+                    if n not in notes:
+                        notes.append(n)
+                fmp_caches.notes.clear()
+                notes.append(note)
             else:
-                keywords = list(
-                    meta.get("keywords") or usa.DEFAULT_SAT_GEOINT_KEYWORDS
-                )
-                pts = usa.fetch_monthly_obligations(
-                    keywords=keywords,
-                    start_date=start,
-                )
-                notes.append(f"{key}: USASpending keywords={keywords}")
+                raise RuntimeError(f"unknown source {src}")
             if not pts:
                 raise RuntimeError("no points")
             series_out[key] = ps.series_shell(

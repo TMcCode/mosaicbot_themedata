@@ -1,0 +1,197 @@
+{
+  "schema_version": 0,
+  "pack": "memory_dram_forums",
+  "description": "Memory DRAM Reddit sidecar \u2014 Micron/Samsung/Hynix/Rambus/Montage + DRAM/HBM/DDR5 category + community volume (r/hardware, r/semiconductors).",
+  "series": [
+    {
+      "key": "micron_dram_mentions",
+      "source": "arctic_shift",
+      "label": "Micron / Crucial DRAM mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Micron / Crucial DRAM mentions (weekly)",
+      "short_name": "Micron",
+      "display_name": "Micron / Crucial DRAM mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "micron_dram_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "samsung_dram_mentions",
+      "source": "arctic_shift",
+      "label": "Samsung DRAM mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Samsung DRAM mentions (weekly)",
+      "short_name": "Samsung DRAM",
+      "display_name": "Samsung DRAM mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "samsung_dram_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hynix_mentions",
+      "source": "arctic_shift",
+      "label": "SK Hynix mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 SK Hynix mentions (weekly)",
+      "short_name": "SK Hynix",
+      "display_name": "SK Hynix mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hynix_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "rambus_mentions",
+      "source": "arctic_shift",
+      "label": "Rambus mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Rambus mentions (weekly)",
+      "short_name": "Rambus",
+      "display_name": "Rambus mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "rambus_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "montage_mentions",
+      "source": "arctic_shift",
+      "label": "Montage Technology mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Montage Technology mentions (weekly)",
+      "short_name": "Montage",
+      "display_name": "Montage Technology mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "montage_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "dram_named_brand_mentions",
+      "source": "arctic_shift",
+      "label": "Named DRAM brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 Named DRAM brand talk (weekly total)",
+      "short_name": "dram named brand men",
+      "display_name": "Named DRAM brand talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "dram_named_brand_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "dram_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts: DRAM / DDR5 / HBM (weekly)",
+      "official_name": "Arctic Shift \u2014 % of posts: DRAM / DDR5 / HBM (weekly)",
+      "short_name": "dram category mentio",
+      "display_name": "% of posts: DRAM / DDR5 / HBM (weekly)",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "dram_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hardware_community_posts",
+      "source": "arctic_shift",
+      "label": "r/hardware community volume (weekly)",
+      "official_name": "Arctic Shift \u2014 r/hardware community volume (weekly)",
+      "short_name": "hardware community p",
+      "display_name": "r/hardware community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "dram_hardware_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "semiconductors_community_posts",
+      "source": "arctic_shift",
+      "label": "r/semiconductors community volume (weekly)",
+      "official_name": "Arctic Shift \u2014 r/semiconductors community volume (weekly)",
+      "short_name": "semiconductors commu",
+      "display_name": "r/semiconductors community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dram_semiconductors_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "dram_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "DRAM brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 DRAM brand sentiment (weekly)",
+      "short_name": "dram brand sentiment",
+      "display_name": "DRAM brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dram_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}
