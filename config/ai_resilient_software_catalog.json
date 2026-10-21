@@ -1,7 +1,7 @@
 {
   "schema_version": 0,
   "pack": "ai_resilient_software",
-  "description": "AI '26 Mizuho Most AI-Resilient Software — FRED software IPP / IT+software / productivity / info openings + Ramp AI Index (adoption + spend PEPM; free page scrape). Forums separate.",
+  "description": "AI '26 Mizuho Most AI-Resilient Software — FRED software IPP / IT+software / productivity / info openings + Ramp AI Index (adoption + spend PEPM; free page scrape) + OpenRouter public API token rankings (weekly). Forums separate.",
   "series": [
     {
       "key": "software_ipp_investment",
@@ -223,6 +223,93 @@
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
       "notes": "Closest Ramp industry slice for software / tech theme."
+    },
+    {
+      "key": "openrouter_total_tokens",
+      "source": "openrouter_rankings",
+      "openrouter_bucket": "total",
+      "label": "OpenRouter — total public API tokens (weekly)",
+      "official_name": "OpenRouter Data API rankings-daily — sum of top-50 models + other (trillion tokens / ISO week)",
+      "short_name": "OpenRouter total tokens",
+      "display_name": "OpenRouter public API token volume",
+      "frequency": "weekly",
+      "unit": "trillion_tokens",
+      "derived": [
+        "wow_pct",
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "openrouter_total_tokens",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "notes": "CC BY 4.0 — cite OpenRouter rankings. Soft-fail without OPENROUTER_API_KEY. History from 2025-01-01."
+    },
+    {
+      "key": "openrouter_openai_tokens",
+      "source": "openrouter_rankings",
+      "openrouter_bucket": "openai",
+      "label": "OpenRouter — OpenAI model tokens (weekly)",
+      "official_name": "OpenRouter rankings-daily — openai/* permaslug weekly trillion tokens",
+      "short_name": "OpenRouter OpenAI tokens",
+      "display_name": "OpenRouter OpenAI token volume",
+      "frequency": "weekly",
+      "unit": "trillion_tokens",
+      "derived": [
+        "wow_pct",
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "openrouter_openai_tokens",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "notes": "API-side complement to Ramp OpenAI adoption (spend share vs router traffic)."
+    },
+    {
+      "key": "openrouter_anthropic_tokens",
+      "source": "openrouter_rankings",
+      "openrouter_bucket": "anthropic",
+      "label": "OpenRouter — Anthropic model tokens (weekly)",
+      "official_name": "OpenRouter rankings-daily — anthropic/* permaslug weekly trillion tokens",
+      "short_name": "OpenRouter Anthropic tokens",
+      "display_name": "OpenRouter Anthropic token volume",
+      "frequency": "weekly",
+      "unit": "trillion_tokens",
+      "derived": [
+        "wow_pct",
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "openrouter_anthropic_tokens",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "openrouter_other_tokens",
+      "source": "openrouter_rankings",
+      "openrouter_bucket": "other",
+      "label": "OpenRouter — non-OpenAI/Anthropic tokens (weekly)",
+      "official_name": "OpenRouter rankings-daily — all authors except openai/anthropic (incl. long-tail other)",
+      "short_name": "OpenRouter other tokens",
+      "display_name": "OpenRouter other-model token volume",
+      "frequency": "weekly",
+      "unit": "trillion_tokens",
+      "derived": [
+        "wow_pct",
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "openrouter_other_tokens",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "notes": "Stack layer with openai + anthropic; sums to openrouter_total_tokens."
     },
     {
       "key": "ai_resilient_software_revenue",

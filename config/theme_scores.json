@@ -4,7 +4,7 @@
   "signal": {
     "method": "clip_linear",
     "yoy_clip_pct": 10.0,
-    "note": "Map YoY % into [-1, +1] by clipping at ±yoy_clip_pct, then score = 50 + 50 * weighted mean of (polarity * signal)."
+    "note": "Map YoY % into [-1, +1] by clipping at \u00b1yoy_clip_pct, then score = 50 + 50 * weighted mean of (polarity * signal)."
   },
   "themes": [
     {
@@ -20,7 +20,7 @@
           "weight": 1.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Lab services selling prices rising → pricing power / healthy demand."
+          "rationale": "Lab services selling prices rising \u2192 pricing power / healthy demand."
         },
         {
           "series_key": "lab_headcount",
@@ -28,7 +28,7 @@
           "weight": 1.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Industry hiring → capacity expansion / demand for lab work."
+          "rationale": "Industry hiring \u2192 capacity expansion / demand for lab work."
         },
         {
           "series_key": "qcew_621511_us_emp",
@@ -60,7 +60,7 @@
           "weight": 1.0,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Domestic IVD/reagent producer prices up → input cost pressure for lab operators."
+          "rationale": "Domestic IVD/reagent producer prices up \u2192 input cost pressure for lab operators."
         },
         {
           "series_key": "lab_supplies_import_unit_value",
@@ -68,7 +68,7 @@
           "weight": 1.0,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Import $/kg up → reagent input cost pressure."
+          "rationale": "Import $/kg up \u2192 reagent input cost pressure."
         },
         {
           "series_key": "lab_wages_ahe",
@@ -76,7 +76,7 @@
           "weight": 0.7,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Lab hourly wages up → labor cost pressure (can also signal tightness/demand; down-weighted)."
+          "rationale": "Lab hourly wages up \u2192 labor cost pressure (can also signal tightness/demand; down-weighted)."
         },
         {
           "series_key": "qcew_621511_us_aww",
@@ -84,7 +84,7 @@
           "weight": 0.5,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Quarterly avg weekly wage for diagnostic labs → cost confirmation; lower weight vs monthly AHE."
+          "rationale": "Quarterly avg weekly wage for diagnostic labs \u2192 cost confirmation; lower weight vs monthly AHE."
         },
         {
           "series_key": "lab_comp_eci",
@@ -92,7 +92,7 @@
           "weight": 0.3,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Broad health-care compensation — noisy for labs specifically; low weight cost overlay."
+          "rationale": "Broad health-care compensation \u2014 noisy for labs specifically; low weight cost overlay."
         },
         {
           "series_key": "qcew_621511_tx_emp",
@@ -108,7 +108,7 @@
           "weight": 0.0,
           "polarity": -1.0,
           "enabled": false,
-          "rationale": "Ticker-local (CSTL). Same — overlay later, not theme backdrop."
+          "rationale": "Ticker-local (CSTL). Same \u2014 overlay later, not theme backdrop."
         }
       ],
       "notes": "Framed for diagnostic lab / early-detection operators (sell tests, buy reagents). Pure IVD reagent manufacturers may want flipped polarity on supplies/import prices later. TX QCEW is ticker-local and intentionally omitted from the theme score.",
@@ -128,7 +128,7 @@
           "weight": 1.0,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US mill capability utilization YoY → domestic steel operating rate (needs ~52w AISI history)."
+          "rationale": "US mill capability utilization YoY \u2192 domestic steel operating rate (needs ~52w AISI history)."
         },
         {
           "series_key": "aisi_production",
@@ -137,7 +137,7 @@
           "weight": 0.6,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US raw steel production YoY → volume cycle (needs ~52w AISI history)."
+          "rationale": "US raw steel production YoY \u2192 volume cycle (needs ~52w AISI history)."
         },
         {
           "series_key": "construction_manufacturing",
@@ -145,7 +145,7 @@
           "weight": 1.0,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Manufacturing plant construction rising → industrial capex / steel demand tailwind."
+          "rationale": "Manufacturing plant construction rising \u2192 industrial capex / steel demand tailwind."
         },
         {
           "series_key": "construction_highway",
@@ -153,7 +153,7 @@
           "weight": 0.8,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Highway & street spend → public infrastructure demand."
+          "rationale": "Highway & street spend \u2192 public infrastructure demand."
         },
         {
           "series_key": "iron_ore_price",
@@ -161,7 +161,7 @@
           "weight": 0.7,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Global iron ore price YoY → BF input / steel-cycle pricing."
+          "rationale": "Global iron ore price YoY \u2192 BF input / steel-cycle pricing."
         },
         {
           "series_key": "construction_total",
@@ -169,7 +169,7 @@
           "weight": 0.4,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Broad construction SAAR — secondary confirmation."
+          "rationale": "Broad construction SAAR \u2014 secondary confirmation."
         },
         {
           "series_key": "steel_member_revenue",
@@ -177,7 +177,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "X+CLF+MT revenue growth → realized BF mill demand."
+          "rationale": "X+CLF+MT revenue growth \u2192 realized BF mill demand."
         }
       ],
       "notes": "Multi-pack: AISI weekly via source_pack=aisi_weekly; construction + iron ore + X/CLF/MT revenue from census_construction. AISI YoY dormant until ~52 weeks of history accumulate.",
@@ -196,7 +196,7 @@
           "weight": 1.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "DEW keyword federal awards rising → program momentum."
+          "rationale": "DEW keyword federal awards rising \u2192 program momentum."
         },
         {
           "series_key": "us_defense_spending",
@@ -212,7 +212,7 @@
           "weight": 0.8,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Elevated geopolitical risk → DEW urgency."
+          "rationale": "Elevated geopolitical risk \u2192 DEW urgency."
         },
         {
           "series_key": "gallium_import_value",
@@ -228,7 +228,7 @@
           "weight": 0.4,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "USGS annual Ge $/kg — slow confirmation of IR optics input cost stress."
+          "rationale": "USGS annual Ge $/kg \u2014 slow confirmation of IR optics input cost stress."
         },
         {
           "series_key": "germanium_spot_cny_kg",
@@ -236,7 +236,7 @@
           "weight": 0.5,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "TE Ge spot YoY — timely IR optics input-cost stress (CFD proxy)."
+          "rationale": "TE Ge spot YoY \u2014 timely IR optics input-cost stress (CFD proxy)."
         },
         {
           "series_key": "gallium_spot_cny_kg",
@@ -244,7 +244,7 @@
           "weight": 0.4,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "TE Ga spot YoY — timely Ga input-cost / export-control stress (CFD proxy)."
+          "rationale": "TE Ga spot YoY \u2014 timely Ga input-cost / export-control stress (CFD proxy)."
         },
         {
           "series_key": "dew_pureplay_revenue",
@@ -252,7 +252,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "DEW pure-play revenue growth → laser/sensor demand (ex-primes)."
+          "rationale": "DEW pure-play revenue growth \u2192 laser/sensor demand (ex-primes)."
         }
       ],
       "notes": "Defense spend + DEW contract awards + GPR. Ge/Ga spots + trade as cost/supply stress (negative polarity).",
@@ -271,7 +271,7 @@
       "signal": {
         "yoy_clip_pct": 100.0,
         "exclude_incomplete_month": true,
-        "note": "Award YoY is lumpy; ±100 clip (not global ±10) so the score is not binary 0/100. Defense/GPR use default ±10 via component override. History/chip = 6M trailing mean of monthly blend (honest smooth for lumpy awards).",
+        "note": "Award YoY is lumpy; \u00b1100 clip (not global \u00b110) so the score is not binary 0/100. Defense/GPR use default \u00b110 via component override. History/chip = 6M trailing mean of monthly blend (honest smooth for lumpy awards).",
         "history_smooth_months": 6
       },
       "components": [
@@ -281,7 +281,7 @@
           "weight": 0.35,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "GEOINT / sat imagery federal awards rising → industry procurement demand."
+          "rationale": "GEOINT / sat imagery federal awards rising \u2192 industry procurement demand."
         },
         {
           "series_key": "usaspending_space_members_awards",
@@ -289,7 +289,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member recipient awards (sum) rising → named-universe US federal demand."
+          "rationale": "Theme-member recipient awards (sum) rising \u2192 named-universe US federal demand."
         },
         {
           "series_key": "us_defense_spending",
@@ -309,7 +309,7 @@
           "polarity": 1.0,
           "yoy_clip_pct": 10.0,
           "enabled": true,
-          "rationale": "Elevated geopolitical risk → ISR / surveillance demand (dew_defense pack)."
+          "rationale": "Elevated geopolitical risk \u2192 ISR / surveillance demand (dew_defense pack)."
         },
         {
           "series_key": "surveillance_sat_revenue",
@@ -317,7 +317,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "EO/SAR vendor revenue growth → surveillance demand."
+          "rationale": "EO/SAR vendor revenue growth \u2192 surveillance demand."
         }
       ],
       "notes": "Multi-pack: awards from space_surveillance; us_defense_spending + gpr_index from dew_defense via source_pack. Recomputes when either pack updates. Incomplete USASpending months excluded from as_of."
@@ -333,7 +333,7 @@
         "yoy_clip_pct": 50.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 6,
-        "note": "Launch ops + awards are lumpy; ±50 clip (awards default). Defense/GPR use ±10. Forums not in score. Keyword + member awards overlap — weights 0.20/0.15."
+        "note": "Launch ops + awards are lumpy; \u00b150 clip (awards default). Defense/GPR use \u00b110. Forums not in score. Keyword + member awards overlap \u2014 weights 0.20/0.15."
       },
       "components": [
         {
@@ -342,7 +342,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Global orbital launch cadence rising → industry activity / demand for launch + logistics."
+          "rationale": "Global orbital launch cadence rising \u2192 industry activity / demand for launch + logistics."
         },
         {
           "series_key": "usaspending_launch_and_clps_awards",
@@ -350,7 +350,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NSSL/launch + CLPS keyword awards (sum) rising → procurement demand."
+          "rationale": "NSSL/launch + CLPS keyword awards (sum) rising \u2192 procurement demand."
         },
         {
           "series_key": "usaspending_launch_members_awards",
@@ -358,7 +358,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member recipient awards (sum) rising → named-universe US federal demand."
+          "rationale": "Theme-member recipient awards (sum) rising \u2192 named-universe US federal demand."
         },
         {
           "series_key": "us_defense_spending",
@@ -378,7 +378,7 @@
           "polarity": 1.0,
           "yoy_clip_pct": 10.0,
           "enabled": true,
-          "rationale": "Elevated geopolitical risk → national-security space launch demand."
+          "rationale": "Elevated geopolitical risk \u2192 national-security space launch demand."
         },
         {
           "series_key": "space_launch_pureplay_revenue",
@@ -386,7 +386,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Launch pure-play revenue growth → commercial launch demand."
+          "rationale": "Launch pure-play revenue growth \u2192 commercial launch demand."
         }
       ],
       "notes": "Multi-pack: space_launch + dew_defense source_pack. Forums not in score. Skip NOC awards. Awards 0.20+0.15; defense/GPR 0.20+0.15 so federal lumpiness does not dominate."
@@ -402,7 +402,7 @@
         "yoy_clip_pct": 25.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Trade/orders can be lumpy; ±25 clip + 3M score smooth."
+        "note": "Trade/orders can be lumpy; \u00b125 clip + 3M score smooth."
       },
       "components": [
         {
@@ -411,7 +411,7 @@
           "weight": 0.22,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Big-4 CapEx rising → cloud/DCI optical + networking demand."
+          "rationale": "Big-4 CapEx rising \u2192 cloud/DCI optical + networking demand."
         },
         {
           "series_key": "communications_equipment_new_orders",
@@ -419,7 +419,7 @@
           "weight": 0.22,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Comms equipment new orders rising → networking/optical deployment demand."
+          "rationale": "Comms equipment new orders rising \u2192 networking/optical deployment demand."
         },
         {
           "series_key": "optical_transceiver_import_value",
@@ -427,7 +427,7 @@
           "weight": 0.22,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "HS 851762 import value rising → transceiver/network apparatus deliveries."
+          "rationale": "HS 851762 import value rising \u2192 transceiver/network apparatus deliveries."
         },
         {
           "series_key": "optical_fiber_cable_import_value",
@@ -435,7 +435,7 @@
           "weight": 0.14,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "HS 854470 fiber cable imports rising → campus/DCI cabling demand."
+          "rationale": "HS 854470 fiber cable imports rising \u2192 campus/DCI cabling demand."
         },
         {
           "series_key": "hyperscaler_subsea_rfs_km",
@@ -443,7 +443,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler-owned subsea RFS km rising → long-haul optical / SLTE demand (PRYMY/CIEN)."
+          "rationale": "Hyperscaler-owned subsea RFS km rising \u2192 long-haul optical / SLTE demand (PRYMY/CIEN)."
         },
         {
           "series_key": "fiber_optic_cable_ppi",
@@ -451,7 +451,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Fiber cable PPI rising → pricing power / tight capacity."
+          "rationale": "Fiber cable PPI rising \u2192 pricing power / tight capacity."
         },
         {
           "series_key": "optical_vendor_revenue",
@@ -459,7 +459,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member optical vendor revenue growth → realized networking demand."
+          "rationale": "Theme-member optical vendor revenue growth \u2192 realized networking demand."
         }
       ],
       "notes": "v4: CapEx sum includes ORCL. Per-ticker CapEx + subsea hyperscaler/other are stacked charts only. Ge/Ga + Kalshi chart-only."
@@ -475,7 +475,7 @@
         "yoy_clip_pct": 15.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Employment/BFS can move; ±15 clip + 3M score smooth."
+        "note": "Employment/BFS can move; \u00b115 clip + 3M score smooth."
       },
       "components": [
         {
@@ -484,7 +484,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising PCE legal spend (annual) → demand for legal info/practice software."
+          "rationale": "Rising PCE legal spend (annual) \u2192 demand for legal info/practice software."
         },
         {
           "series_key": "bfs_business_applications",
@@ -492,7 +492,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising business applications → formation / transactional legal demand (LZ)."
+          "rationale": "Rising business applications \u2192 formation / transactional legal demand (LZ)."
         },
         {
           "series_key": "legal_services_employment",
@@ -500,7 +500,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising legal headcount → seat renewals / research & practice software."
+          "rationale": "Rising legal headcount \u2192 seat renewals / research & practice software."
         },
         {
           "series_key": "professional_services_employment",
@@ -508,7 +508,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising NAICS 54 employment → advisory/accounting software budgets."
+          "rationale": "Rising NAICS 54 employment \u2192 advisory/accounting software budgets."
         },
         {
           "series_key": "legal_services_ppi",
@@ -516,7 +516,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising law-office prices → realization headroom for premium tools."
+          "rationale": "Rising law-office prices \u2192 realization headroom for premium tools."
         },
         {
           "series_key": "corporate_profits_after_tax",
@@ -524,7 +524,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising corporate profits → soft budget proxy for legal/risk software (noisier)."
+          "rationale": "Rising corporate profits \u2192 soft budget proxy for legal/risk software (noisier)."
         }
       ],
       "notes": "v2: +PCE legal (PCESLS) + corporate profits (CPATAX). No PMs."
@@ -540,7 +540,7 @@
         "yoy_clip_pct": 12.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Cost/labor headwinds invert; sales support. ±12 clip + 3M smooth."
+        "note": "Cost/labor headwinds invert; sales support. \u00b112 clip + 3M smooth."
       },
       "components": [
         {
@@ -549,7 +549,7 @@
           "weight": 0.3,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising AMS whole-wing ¢/lb → Wingstop-relevant COGS headwind (Urner Barry free proxy)."
+          "rationale": "Rising AMS whole-wing \u00a2/lb \u2192 Wingstop-relevant COGS headwind (Urner Barry free proxy)."
         },
         {
           "series_key": "poultry_ppi",
@@ -557,7 +557,7 @@
           "weight": 0.15,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising processed-poultry PPI → broader chicken COGS."
+          "rationale": "Rising processed-poultry PPI \u2192 broader chicken COGS."
         },
         {
           "series_key": "food_services_ahe",
@@ -565,7 +565,7 @@
           "weight": 0.2,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising food-services wages → restaurant-level margin pressure."
+          "rationale": "Rising food-services wages \u2192 restaurant-level margin pressure."
         },
         {
           "series_key": "food_services_retail_sales",
@@ -573,7 +573,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising food-services sales → demand/traffic support."
+          "rationale": "Rising food-services sales \u2192 demand/traffic support."
         },
         {
           "series_key": "cpi_food_away_from_home",
@@ -581,7 +581,7 @@
           "weight": 0.15,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising menu-price CPI → value-seeking / traffic risk for QSR guests."
+          "rationale": "Rising menu-price CPI \u2192 value-seeking / traffic risk for QSR guests."
         },
         {
           "series_key": "chicken_buyer_revenue",
@@ -589,7 +589,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member restaurant revenue growth → chicken-channel demand."
+          "rationale": "Theme-member restaurant revenue growth \u2192 chicken-channel demand."
         }
       ],
       "notes": "v2: +USDA AMS whole wings weekly. Forums not in score. YoY on wings needs ~52w history; until then component may be missing."
@@ -605,7 +605,7 @@
         "yoy_clip_pct": 25.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Grant awards are lumpy; ±25 clip + 3M smooth."
+        "note": "Grant awards are lumpy; \u00b125 clip + 3M smooth."
       },
       "components": [
         {
@@ -614,7 +614,7 @@
           "weight": 0.35,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising NGS/genomics federal grant obligations → research/clinical sequencing demand."
+          "rationale": "Rising NGS/genomics federal grant obligations \u2192 research/clinical sequencing demand."
         },
         {
           "series_key": "usaspending_nhgri_grants",
@@ -622,7 +622,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NHGRI (CFDA 93.172) funding rising → core NIH genomics tech demand."
+          "rationale": "NHGRI (CFDA 93.172) funding rising \u2192 core NIH genomics tech demand."
         },
         {
           "series_key": "instruments_mfg_employment",
@@ -630,7 +630,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Instruments manufacturing employment rising → soft capacity/activity in related hardware."
+          "rationale": "Instruments manufacturing employment rising \u2192 soft capacity/activity in related hardware."
         },
         {
           "series_key": "usaspending_ilmn_awards",
@@ -638,7 +638,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Illumina federal awards rising → named-platform US federal demand (largest theme member)."
+          "rationale": "Illumina federal awards rising \u2192 named-platform US federal demand (largest theme member)."
         }
       ],
       "notes": "Forums not in score. USASpending incomplete months excluded from as_of."
@@ -654,7 +654,7 @@
         "yoy_clip_pct": 15.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Turnover-led + NAHB HMI sentiment; mortgage + Case-Shiller + lumber headwinds (polarity −1). Forums/drought not in score."
+        "note": "Turnover-led + NAHB HMI sentiment; mortgage + Case-Shiller + lumber headwinds (polarity \u22121). Forums/drought not in score."
       },
       "components": [
         {
@@ -663,7 +663,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Existing-home turnover rising → more moves / renovations / big-ticket DIY."
+          "rationale": "Existing-home turnover rising \u2192 more moves / renovations / big-ticket DIY."
         },
         {
           "series_key": "nahb_hmi",
@@ -672,7 +672,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 40.0,
-          "rationale": "NAHB HMI rising → builder confidence / new-home cycle lead for Pro + remodel adjacency."
+          "rationale": "NAHB HMI rising \u2192 builder confidence / new-home cycle lead for Pro + remodel adjacency."
         },
         {
           "series_key": "building_materials_retail_sales",
@@ -680,7 +680,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 444 retail sales rising → direct home-improvement demand."
+          "rationale": "NAICS 444 retail sales rising \u2192 direct home-improvement demand."
         },
         {
           "series_key": "mortgage_30y",
@@ -688,7 +688,7 @@
           "weight": 0.2,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Mortgage rates rising → lock-in / lower turnover / weaker discretionary projects."
+          "rationale": "Mortgage rates rising \u2192 lock-in / lower turnover / weaker discretionary projects."
         },
         {
           "series_key": "housing_starts",
@@ -696,7 +696,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Housing starts rising → Pro / new-construction materials demand."
+          "rationale": "Housing starts rising \u2192 Pro / new-construction materials demand."
         },
         {
           "series_key": "lumber_ppi",
@@ -704,7 +704,7 @@
           "weight": 0.1,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Lumber PPI rising → materials cost / margin pressure for retailers."
+          "rationale": "Lumber PPI rising \u2192 materials cost / margin pressure for retailers."
         },
         {
           "series_key": "case_shiller_national",
@@ -712,7 +712,7 @@
           "weight": 0.1,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "National home prices rising → housing-cost / affordability headwind (complements mortgage; distinct from lumber COGS)."
+          "rationale": "National home prices rising \u2192 housing-cost / affordability headwind (complements mortgage; distinct from lumber COGS)."
         },
         {
           "series_key": "home_improvement_revenue",
@@ -720,7 +720,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member retailer revenue growth → home-improvement demand."
+          "rationale": "Theme-member retailer revenue growth \u2192 home-improvement demand."
         }
       ],
       "notes": "Existing home sales hero (archive + FRED). NAHB HMI public Table 2 scrape. Forums + SE drought not in score."
@@ -745,7 +745,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Retail sales rising → payment network / commerce volume."
+          "rationale": "Retail sales rising \u2192 payment network / commerce volume."
         },
         {
           "series_key": "ecommerce_sales_share",
@@ -753,7 +753,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "E-commerce share rising → digital / agentic checkout rails."
+          "rationale": "E-commerce share rising \u2192 digital / agentic checkout rails."
         },
         {
           "series_key": "usdc_circulating",
@@ -761,7 +761,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "USDC circulating rising → programmable settlement rail adoption."
+          "rationale": "USDC circulating rising \u2192 programmable settlement rail adoption."
         },
         {
           "series_key": "consumer_credit",
@@ -769,7 +769,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Consumer credit rising → card / spend capacity."
+          "rationale": "Consumer credit rising \u2192 card / spend capacity."
         }
       ],
       "notes": "Forums and Kalshi chart-only. Skip Trends / paid card panels."
@@ -785,7 +785,7 @@
         "yoy_clip_pct": 12.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Live backdrop: sales + 4W-avg OpenTable; Choice cutout 4W-avg YoY + wages + menu CPI. Beef PPI chart-only. Cutout/OT latest; monthlies month-capped. ±12 clip + 3M smooth."
+        "note": "Live backdrop: sales + 4W-avg OpenTable; Choice cutout 4W-avg YoY + wages + menu CPI. Beef PPI chart-only. Cutout/OT latest; monthlies month-capped. \u00b112 clip + 3M smooth."
       },
       "components": [
         {
@@ -794,7 +794,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Rising food-services sales → dining-out demand support."
+          "rationale": "Rising food-services sales \u2192 dining-out demand support."
         },
         {
           "series_key": "opentable_us_seated_diners_yoy",
@@ -804,7 +804,7 @@
           "enabled": true,
           "exclude_incomplete_month": false,
           "as_of": "latest",
-          "rationale": "Rising 4W-avg OpenTable seated YoY → traffic support; damps holiday/comp-week spikes."
+          "rationale": "Rising 4W-avg OpenTable seated YoY \u2192 traffic support; damps holiday/comp-week spikes."
         },
         {
           "series_key": "beef_choice_cutout",
@@ -814,7 +814,7 @@
           "enabled": true,
           "exclude_incomplete_month": false,
           "as_of": "latest",
-          "rationale": "Rising 4W-avg Choice cutout YoY → protein COGS headwind; sole beef input (PPI chart-only)."
+          "rationale": "Rising 4W-avg Choice cutout YoY \u2192 protein COGS headwind; sole beef input (PPI chart-only)."
         },
         {
           "series_key": "food_services_ahe",
@@ -822,7 +822,7 @@
           "weight": 0.15,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising food-services wages → unit labor pressure."
+          "rationale": "Rising food-services wages \u2192 unit labor pressure."
         },
         {
           "series_key": "cpi_food_away_from_home",
@@ -830,7 +830,7 @@
           "weight": 0.15,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Rising menu CPI → value / traffic risk if promotions deepen."
+          "rationale": "Rising menu CPI \u2192 value / traffic risk if promotions deepen."
         }
       ],
       "notes": "v7: OpenTable score uses wma4 (not raw weekly spikes); OT weight 0.25; menu CPI 0.15. Cutout wma4_yoy latest. PPI chart-only."
@@ -846,7 +846,7 @@
         "yoy_clip_pct": 12.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "US+UK demand vs print/courier/postage costs; ±12 clip + 3M score smooth."
+        "note": "US+UK demand vs print/courier/postage costs; \u00b112 clip + 3M score smooth."
       },
       "components": [
         {
@@ -855,7 +855,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US e-commerce/mail-order sales rising → online personalized gifting demand."
+          "rationale": "US e-commerce/mail-order sales rising \u2192 online personalized gifting demand."
         },
         {
           "series_key": "uk_nonstore_retail_volume",
@@ -863,7 +863,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "UK non-store retail volume rising → Moonpig / Funky Pigeon / Card Factory digital demand."
+          "rationale": "UK non-store retail volume rising \u2192 Moonpig / Funky Pigeon / Card Factory digital demand."
         },
         {
           "series_key": "commercial_printing_ppi",
@@ -871,7 +871,7 @@
           "weight": 0.2,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Commercial print PPI rising → COGS pressure for cards/photobooks/on-demand gifts."
+          "rationale": "Commercial print PPI rising \u2192 COGS pressure for cards/photobooks/on-demand gifts."
         },
         {
           "series_key": "courier_express_ppi",
@@ -879,7 +879,7 @@
           "weight": 0.2,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Courier/express PPI rising → fulfillment cost pressure for DTC gifts."
+          "rationale": "Courier/express PPI rising \u2192 fulfillment cost pressure for DTC gifts."
         },
         {
           "series_key": "postage_cpi",
@@ -887,7 +887,7 @@
           "weight": 0.15,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Postage CPI rising → friction for physical greeting-card volumes."
+          "rationale": "Postage CPI rising \u2192 friction for physical greeting-card volumes."
         }
       ],
       "notes": "v2: +ONS UK non-store retail volume (J5DZ; watch alias GBRRSL02IXOBSAM). Kalshi chart-only."
@@ -903,7 +903,7 @@
         "yoy_clip_pct": 12.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Software IPP + IT/software + productivity + Info openings + Ramp adoption/spend; ±12 clip + 3M score smooth."
+        "note": "Software IPP + IT/software + productivity + Info openings + Ramp adoption/spend; \u00b112 clip + 3M score smooth."
       },
       "components": [
         {
@@ -912,7 +912,7 @@
           "weight": 0.22,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Software IPP investment rising → enterprise software CapEx / adoption."
+          "rationale": "Software IPP investment rising \u2192 enterprise software CapEx / adoption."
         },
         {
           "series_key": "it_equipment_software_investment",
@@ -920,7 +920,7 @@
           "weight": 0.18,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "IT + software fixed investment rising → AI infra + apps spend."
+          "rationale": "IT + software fixed investment rising \u2192 AI infra + apps spend."
         },
         {
           "series_key": "nonfarm_productivity",
@@ -928,7 +928,7 @@
           "weight": 0.12,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Productivity rising → AI efficiency thesis confirming."
+          "rationale": "Productivity rising \u2192 AI efficiency thesis confirming."
         },
         {
           "series_key": "information_job_openings",
@@ -936,7 +936,7 @@
           "weight": 0.13,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Info openings rising → tech talent / digital demand."
+          "rationale": "Info openings rising \u2192 tech talent / digital demand."
         },
         {
           "series_key": "ramp_ai_adoption",
@@ -944,7 +944,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Ramp AI adoption rising → paid AI tool penetration among US businesses."
+          "rationale": "Ramp AI adoption rising \u2192 paid AI tool penetration among US businesses."
         },
         {
           "series_key": "ramp_ai_spend_pepm",
@@ -952,7 +952,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Ramp median AI spend/employee rising → AI intensity / monetization."
+          "rationale": "Ramp median AI spend/employee rising \u2192 AI intensity / monetization."
         },
         {
           "series_key": "ai_resilient_software_revenue",
@@ -960,7 +960,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member software revenue growth → resilient demand."
+          "rationale": "Theme-member software revenue growth \u2192 resilient demand."
         }
       ],
       "notes": "v1: FRED + Ramp page scrape. Vendor/Census overlays chart-only. Forums not in score."
@@ -976,7 +976,7 @@
         "yoy_clip_pct": 40.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "Political spend uses 4y cycle % (midterm↔midterm / prez↔prez), not 1y YoY which just flags election vs off-year. FRED agency health stays 1y. 3M score smooth."
+        "note": "Political spend uses 4y cycle % (midterm\u2194midterm / prez\u2194prez), not 1y YoY which just flags election vs off-year. FRED agency health stays 1y. 3M score smooth."
       },
       "components": [
         {
@@ -986,7 +986,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Federal IE vs same point last midterm/prez cycle → political super-cycle intensity."
+          "rationale": "Federal IE vs same point last midterm/prez cycle \u2192 political super-cycle intensity."
         },
         {
           "series_key": "google_political_ads_weekly_spend",
@@ -997,7 +997,7 @@
           "exclude_incomplete_month": false,
           "as_of": "latest",
           "yoy_clip_pct": 100.0,
-          "rationale": "Google/YouTube US election-ad spend vs same week ~4y ago (last midterm or prez) → digital channel heat."
+          "rationale": "Google/YouTube US election-ad spend vs same week ~4y ago (last midterm or prez) \u2192 digital channel heat."
         },
         {
           "series_key": "advertising_pr_revenue",
@@ -1005,7 +1005,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 5418 revenue rising → agency end-market health."
+          "rationale": "NAICS 5418 revenue rising \u2192 agency end-market health."
         },
         {
           "series_key": "advertising_agency_ppi",
@@ -1013,7 +1013,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Agency PPI rising → pricing power / service inflation."
+          "rationale": "Agency PPI rising \u2192 pricing power / service inflation."
         },
         {
           "series_key": "consumer_sentiment",
@@ -1021,7 +1021,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Consumer sentiment rising → softer macro support for ad budgets."
+          "rationale": "Consumer sentiment rising \u2192 softer macro support for ad budgets."
         }
       ],
       "notes": "v3: FEC + Google scored on 4y cycle % (same election type), not 1y YoY. Forums not in score. AdImpact map_only."
@@ -1037,7 +1037,7 @@
         "yoy_clip_pct": 40.0,
         "exclude_incomplete_month": true,
         "history_smooth_months": 3,
-        "note": "TE Korea/Taiwan semi exports + CapEx + US memory imports lead; FRED IP soft confirm. Export YoY uses ±100 clip (AI boom). Forums not in score."
+        "note": "TE Korea/Taiwan semi exports + CapEx + US memory imports lead; FRED IP soft confirm. Export YoY uses \u00b1100 clip (AI boom). Forums not in score."
       },
       "components": [
         {
@@ -1047,7 +1047,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea semi exports (memory-heavy) rising → Hynix/Samsung cycle / CXL module feedstock."
+          "rationale": "Korea semi exports (memory-heavy) rising \u2192 Hynix/Samsung cycle / CXL module feedstock."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1056,7 +1056,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Taiwan semi exports rising → foundry/IC supply chain health for AI/HPC."
+          "rationale": "Taiwan semi exports rising \u2192 foundry/IC supply chain health for AI/HPC."
         },
         {
           "series_key": "hyperscaler_capex",
@@ -1064,7 +1064,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx rising → AI/HPC infra demand for CXL memory expansion."
+          "rationale": "Hyperscaler CapEx rising \u2192 AI/HPC infra demand for CXL memory expansion."
         },
         {
           "series_key": "memory_ic_import_value",
@@ -1072,7 +1072,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US memory IC imports rising → DRAM/module content flowing into systems."
+          "rationale": "US memory IC imports rising \u2192 DRAM/module content flowing into systems."
         },
         {
           "series_key": "semi_electronic_components_ip",
@@ -1080,7 +1080,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 3344 industrial production rising → domestic semi/component volume."
+          "rationale": "NAICS 3344 industrial production rising \u2192 domestic semi/component volume."
         }
       ],
       "notes": "v3: +DRAMeXchange DDR5 RDIMM/die spot (chart-only until ~52w for YoY). TE Korea/Taiwan exports + CapEx + imports in score. PPI/employment chart-only. Forums not in score. TrendForce Gold contract/HBM map_only."
@@ -1108,7 +1108,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "NAND TLC spot YoY rising → producer pricing power (auto-on after 60 weekly prints)."
+          "rationale": "NAND TLC spot YoY rising \u2192 producer pricing power (auto-on after 60 weekly prints)."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1117,7 +1117,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea semi exports rising → Samsung/Hynix NAND cycle strength."
+          "rationale": "Korea semi exports rising \u2192 Samsung/Hynix NAND cycle strength."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1126,7 +1126,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Taiwan semi exports rising → controller/IC ecosystem health."
+          "rationale": "Taiwan semi exports rising \u2192 controller/IC ecosystem health."
         },
         {
           "series_key": "hyperscaler_capex",
@@ -1134,7 +1134,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx rising → enterprise SSD / data-center NAND demand."
+          "rationale": "Hyperscaler CapEx rising \u2192 enterprise SSD / data-center NAND demand."
         },
         {
           "series_key": "solid_state_storage_import_value",
@@ -1142,7 +1142,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US SSD/flash imports rising → solid-state storage content flowing into systems."
+          "rationale": "US SSD/flash imports rising \u2192 solid-state storage content flowing into systems."
         },
         {
           "series_key": "nand_member_revenue",
@@ -1150,7 +1150,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member NAND revenue growth → realized flash demand."
+          "rationale": "Theme-member NAND revenue growth \u2192 realized flash demand."
         }
       ],
       "notes": "v2: 512Gb TLC wired with min_history_points=60 (waiting_history until then; others renormalize). PPI/MicroSD chart-only. Forums not in score. TrendForce contract map_only."
@@ -1178,7 +1178,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "DDR5 die spot YoY rising → DRAM pricing power (auto-on after 60 weekly prints)."
+          "rationale": "DDR5 die spot YoY rising \u2192 DRAM pricing power (auto-on after 60 weekly prints)."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1187,7 +1187,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea semi exports rising → Samsung/Hynix DRAM cycle."
+          "rationale": "Korea semi exports rising \u2192 Samsung/Hynix DRAM cycle."
         },
         {
           "series_key": "hyperscaler_capex",
@@ -1195,7 +1195,7 @@
           "weight": 0.3,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx rising → AI/server DRAM + HBM demand."
+          "rationale": "Hyperscaler CapEx rising \u2192 AI/server DRAM + HBM demand."
         },
         {
           "series_key": "memory_ic_import_value",
@@ -1203,7 +1203,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US memory IC imports rising → DRAM content into systems."
+          "rationale": "US memory IC imports rising \u2192 DRAM content into systems."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1240,7 +1240,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "NAND TLC spot YoY rising → producer pricing power (auto-on after 60 weekly prints)."
+          "rationale": "NAND TLC spot YoY rising \u2192 producer pricing power (auto-on after 60 weekly prints)."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1249,7 +1249,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea semi exports rising → Samsung/Hynix NAND cycle strength."
+          "rationale": "Korea semi exports rising \u2192 Samsung/Hynix NAND cycle strength."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1258,7 +1258,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Taiwan semi exports rising → controller (SIMO/Phison) ecosystem health."
+          "rationale": "Taiwan semi exports rising \u2192 controller (SIMO/Phison) ecosystem health."
         },
         {
           "series_key": "hyperscaler_capex",
@@ -1266,7 +1266,7 @@
           "weight": 0.25,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx rising → enterprise SSD / managed storage demand."
+          "rationale": "Hyperscaler CapEx rising \u2192 enterprise SSD / managed storage demand."
         },
         {
           "series_key": "solid_state_storage_import_value",
@@ -1274,7 +1274,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US SSD/flash imports rising → solid-state storage content into systems."
+          "rationale": "US SSD/flash imports rising \u2192 solid-state storage content into systems."
         },
         {
           "series_key": "essd_member_revenue",
@@ -1282,10 +1282,10 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member storage revenue growth → enterprise SSD/HDD demand."
+          "rationale": "Theme-member storage revenue growth \u2192 enterprise SSD/HDD demand."
         }
       ],
-      "notes": "v1: clone of NAND recipe — TLC gated at 60w; CapEx+exports+HS852351 active. PPI/MicroSD chart-only. Forums not in score."
+      "notes": "v1: clone of NAND recipe \u2014 TLC gated at 60w; CapEx+exports+HS852351 active. PPI/MicroSD chart-only. Forums not in score."
     },
     {
       "theme": "Memory '26: Graphics & Mobile Memory",
@@ -1310,7 +1310,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "GDDR6 spot YoY → graphics DRAM pricing power (auto-on after 60 weekly prints)."
+          "rationale": "GDDR6 spot YoY \u2192 graphics DRAM pricing power (auto-on after 60 weekly prints)."
         },
         {
           "series_key": "ddr5_udimm_16gb_spot",
@@ -1322,7 +1322,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "DDR5 UDIMM spot YoY → PC/client adjacency until GDDR history matures."
+          "rationale": "DDR5 UDIMM spot YoY \u2192 PC/client adjacency until GDDR history matures."
         },
         {
           "series_key": "ddr5_16gb_die_spot",
@@ -1334,7 +1334,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "DDR5 die spot YoY → broad DRAM pricing power."
+          "rationale": "DDR5 die spot YoY \u2192 broad DRAM pricing power."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1343,7 +1343,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea semi exports → Samsung/Hynix DRAM+LPDDR+GDDR cycle."
+          "rationale": "Korea semi exports \u2192 Samsung/Hynix DRAM+LPDDR+GDDR cycle."
         },
         {
           "series_key": "hyperscaler_capex",
@@ -1351,7 +1351,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx → HBM diversion pressure on non-AI memory."
+          "rationale": "Hyperscaler CapEx \u2192 HBM diversion pressure on non-AI memory."
         },
         {
           "series_key": "graphics_mobile_member_revenue",
@@ -1359,7 +1359,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "MU+RMBS+QCOM revenue → realized graphics/mobile memory demand."
+          "rationale": "MU+RMBS+QCOM revenue \u2192 realized graphics/mobile memory demand."
         },
         {
           "series_key": "memory_ic_import_value",
@@ -1367,7 +1367,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US memory IC imports → content into systems."
+          "rationale": "US memory IC imports \u2192 content into systems."
         },
         {
           "series_key": "amat_capex",
@@ -1400,7 +1400,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx rising → HBM content → tester demand."
+          "rationale": "Hyperscaler CapEx rising \u2192 HBM content \u2192 tester demand."
         },
         {
           "series_key": "hbm_tester_capex",
@@ -1408,7 +1408,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "TER/FORM/COHU/AEHR CapEx rising → capacity for HBM test."
+          "rationale": "TER/FORM/COHU/AEHR CapEx rising \u2192 capacity for HBM test."
         },
         {
           "series_key": "hbm_tester_revenue",
@@ -1416,7 +1416,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Theme-member revenue growth → realized ATE/probe/burn-in demand."
+          "rationale": "Theme-member revenue growth \u2192 realized ATE/probe/burn-in demand."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1425,7 +1425,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea memory exports rising → HBM producer spend on test."
+          "rationale": "Korea memory exports rising \u2192 HBM producer spend on test."
         },
         {
           "series_key": "semi_measuring_instrument_import_value",
@@ -1433,7 +1433,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "US HS 903082 imports rising → ATE/wafer-test instrument content."
+          "rationale": "US HS 903082 imports rising \u2192 ATE/wafer-test instrument content."
         },
         {
           "series_key": "measuring_instruments_ip",
@@ -1441,7 +1441,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 3345 IP rising → domestic test/measurement production."
+          "rationale": "NAICS 3345 IP rising \u2192 domestic test/measurement production."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1450,7 +1450,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Taiwan semi exports rising → packaging/foundry adjacency."
+          "rationale": "Taiwan semi exports rising \u2192 packaging/foundry adjacency."
         },
         {
           "series_key": "ddr5_16gb_die_spot",
@@ -1461,7 +1461,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "DDR5 die spot YoY rising → memory CapEx cycle (auto-on after 60w)."
+          "rationale": "DDR5 die spot YoY rising \u2192 memory CapEx cycle (auto-on after 60w)."
         }
       ],
       "notes": "v1: forums/Manifold chart-only. Distinct from packaging/bonding theme."
@@ -1486,7 +1486,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Hyperscaler CapEx → HBM content → packaging/inspection demand."
+          "rationale": "Hyperscaler CapEx \u2192 HBM content \u2192 packaging/inspection demand."
         },
         {
           "series_key": "hbm_packaging_capex",
@@ -1494,7 +1494,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "AMAT/AMKR/CAMT/ONTO/KLIC CapEx → packaging/inspection capacity."
+          "rationale": "AMAT/AMKR/CAMT/ONTO/KLIC CapEx \u2192 packaging/inspection capacity."
         },
         {
           "series_key": "hbm_packaging_revenue",
@@ -1502,7 +1502,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "USD member revenue → realized WFE/OSAT/inspection demand."
+          "rationale": "USD member revenue \u2192 realized WFE/OSAT/inspection demand."
         },
         {
           "series_key": "korea_semiconductor_exports",
@@ -1511,7 +1511,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Korea memory exports → HBM packaging spend."
+          "rationale": "Korea memory exports \u2192 HBM packaging spend."
         },
         {
           "series_key": "taiwan_semiconductor_exports",
@@ -1520,7 +1520,7 @@
           "polarity": 1.0,
           "enabled": true,
           "yoy_clip_pct": 100.0,
-          "rationale": "Taiwan exports → ASE/OSAT adjacency."
+          "rationale": "Taiwan exports \u2192 ASE/OSAT adjacency."
         },
         {
           "series_key": "semi_measuring_instrument_import_value",
@@ -1528,7 +1528,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "HS 903082 imports → inspection/metrology content."
+          "rationale": "HS 903082 imports \u2192 inspection/metrology content."
         },
         {
           "series_key": "measuring_instruments_ip",
@@ -1536,7 +1536,7 @@
           "weight": 0.05,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 3345 IP → process-control production."
+          "rationale": "NAICS 3345 IP \u2192 process-control production."
         },
         {
           "series_key": "ddr5_16gb_die_spot",
@@ -1547,7 +1547,7 @@
           "min_history_points": 60,
           "exclude_incomplete_month": false,
           "yoy_clip_pct": 40.0,
-          "rationale": "DDR5 die spot YoY → memory CapEx cycle (auto-on after 60w)."
+          "rationale": "DDR5 die spot YoY \u2192 memory CapEx cycle (auto-on after 60w)."
         }
       ],
       "notes": "v1: distinct from HBM Testing. Forums later. TrendForce map_only."
@@ -1572,7 +1572,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "NAICS 446 retail rising → US beauty demand."
+          "rationale": "NAICS 446 retail rising \u2192 US beauty demand."
         },
         {
           "series_key": "china_retail_sales_yoy",
@@ -1580,7 +1580,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Broad China retail YoY rising → discretionary backdrop (cosmetics-specific = HS 3304 imports)."
+          "rationale": "Broad China retail YoY rising \u2192 discretionary backdrop (cosmetics-specific = HS 3304 imports)."
         },
         {
           "series_key": "china_beauty_import_value",
@@ -1588,7 +1588,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "China HS 3304 beauty imports rising → prestige foreign brands into CN."
+          "rationale": "China HS 3304 beauty imports rising \u2192 prestige foreign brands into CN."
         },
         {
           "series_key": "beauty_makeup_import_value",
@@ -1596,7 +1596,7 @@
           "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "HS 330499 imports rising → prestige/mass beauty content."
+          "rationale": "HS 330499 imports rising \u2192 prestige/mass beauty content."
         },
         {
           "series_key": "perfume_import_value",
@@ -1604,7 +1604,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "HS 330300 perfume imports → fragrance demand."
+          "rationale": "HS 330300 perfume imports \u2192 fragrance demand."
         },
         {
           "series_key": "prestige_member_revenue",
@@ -1612,7 +1612,7 @@
           "weight": 0.2,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "EL+IPAR+WALD revenue → realized prestige demand."
+          "rationale": "EL+IPAR+WALD revenue \u2192 realized prestige demand."
         },
         {
           "series_key": "ecommerce_mail_order_sales",
@@ -1620,7 +1620,7 @@
           "weight": 0.1,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "E-commerce rising → digital prestige channel."
+          "rationale": "E-commerce rising \u2192 digital prestige channel."
         },
         {
           "series_key": "toilet_preparations_ppi",
@@ -1628,10 +1628,76 @@
           "weight": 0.1,
           "polarity": -1.0,
           "enabled": true,
-          "rationale": "Toilet-prep PPI rising → COGS / margin pressure."
+          "rationale": "Toilet-prep PPI rising \u2192 COGS / margin pressure."
         }
       ],
       "notes": "Forums/transcripts chart-only. Cosmetics-specific = GACC HS 3304 via chinadata; NBS domestic cosmetics retail still map_only."
+    },
+    {
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "score_id": "crypto_brokerages_backdrop",
+      "label": "Crypto brokerages backdrop",
+      "pack": "crypto_brokerages",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Stablecoin + DEX + Base TVL/DEX + M2 + reused USDC. COT/CEX spot/PM/Kalshi/forums not in score."
+      },
+      "components": [
+        {
+          "series_key": "stablecoin_circulating_total",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Stablecoin circulating rising \u2192 trading collateral / settlement rails."
+        },
+        {
+          "series_key": "dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "DEX volume rising \u2192 crypto trading activity (CEX volume map_only)."
+        },
+        {
+          "series_key": "base_tvl",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Base TVL rising \u2192 COIN L2 / agentic rails adoption."
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "agentic_payments",
+          "rationale": "USDC circulating (reused from agentic_payments) \u2192 programmable settlement."
+        },
+        {
+          "series_key": "m2_money_stock",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "M2 expansion \u2192 liquidity / risk appetite for crypto trading."
+        },
+        {
+          "series_key": "base_dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Base DEX volume \u2192 COIN L2 / on-chain activity."
+        }
+      ],
+      "notes": "Reuses usdc_circulating via source_pack=agentic_payments. COT/Coinbase spot/PM/Kalshi/forums chart-only."
     }
   ]
 }

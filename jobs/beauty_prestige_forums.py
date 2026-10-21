@@ -302,41 +302,68 @@ def fetch_subreddit_forward(
     *,
     start_date: str,
     max_posts: int = 40000,
+    max_per_month: int = 2500,
 ) -> list[dict[str, Any]]:
-    """Walk ascending from ``start_date`` so high-volume subs get deep history.
+    """Deep history for high-volume subs via month-bounded asc pages.
 
-    Recent-only ``sort=desc`` caps out after ~1–2 months on SkA/MuA. Arctic Shift
-    accepts ``after`` + ``sort=asc`` to page forward through older weeks.
+    Recent-only ``sort=desc`` only covers ~1–2 months on SkA/MuA. Chunking by
+    calendar month with ``after``/``before`` keeps Arctic Shift from stalling on
+    one endless ascending cursor.
     """
     out: list[dict[str, Any]] = []
-    after = datetime.fromisoformat(start_date).replace(tzinfo=timezone.utc).timestamp()
-    now_ts = datetime.now(timezone.utc).timestamp()
-    while len(out) < max_posts and after < now_ts:
-        params: dict[str, Any] = {
-            "subreddit": sub,
-            "limit": 100,
-            "sort": "asc",
-            "after": str(int(after)),
-        }
-        try:
-            data = _arctic_get(params)
-        except Exception:
+    start = datetime.fromisoformat(start_date).date()
+    today = datetime.now(timezone.utc).date()
+    # First day of start month → walk months until current.
+    y, m = start.year, start.month
+    while len(out) < max_posts:
+        month_start = date(y, m, 1)
+        if month_start > today:
             break
-        batch = data.get("data") or []
-        if not batch:
-            break
-        out.extend(batch)
-        nxt = max(
-            float(p["created_utc"])
-            for p in batch
-            if p.get("created_utc") is not None
-        )
-        if nxt <= after:
-            break
-        after = nxt + 1
-        time.sleep(1.0)
-        if len(batch) < 100:
-            break
+        if m == 12:
+            month_end = date(y + 1, 1, 1)
+        else:
+            month_end = date(y, m + 1, 1)
+        after = datetime(
+            month_start.year, month_start.month, month_start.day, tzinfo=timezone.utc
+        ).timestamp()
+        before = datetime(
+            month_end.year, month_end.month, month_end.day, tzinfo=timezone.utc
+        ).timestamp()
+        month_n = 0
+        cursor = after
+        while len(out) < max_posts and month_n < max_per_month and cursor < before:
+            params: dict[str, Any] = {
+                "subreddit": sub,
+                "limit": 100,
+                "sort": "asc",
+                "after": str(int(cursor)),
+                "before": str(int(before)),
+            }
+            try:
+                data = _arctic_get(params)
+            except Exception:
+                break
+            batch = data.get("data") or []
+            if not batch:
+                break
+            out.extend(batch)
+            month_n += len(batch)
+            nxt = max(
+                float(p["created_utc"])
+                for p in batch
+                if p.get("created_utc") is not None
+            )
+            if nxt <= cursor:
+                break
+            cursor = nxt + 1
+            time.sleep(0.7)
+            if len(batch) < 100:
+                break
+        time.sleep(1.5)
+        if m == 12:
+            y, m = y + 1, 1
+        else:
+            m += 1
     return _dedupe_posts(out)
 
 
@@ -696,20 +723,29 @@ def build_pack(
     else:
         # High-volume mass: forward walk from _SERIES_FROM (not recent-only desc).
         # Others: recent-first crawl is enough.
-        _FORWARD_SUBS = frozenset({"MakeupAddiction", "SkincareAddiction"})
+        # High-volume mass forums need ~full-month pages or weekly stacks cliff.
+        # SkA ~1–2k posts/week; MuA ~0.5–1k/week.
+        _FORWARD_LIMITS = {
+            "MakeupAddiction": (max(40000, backfill_posts), 6000),
+            "SkincareAddiction": (max(60000, backfill_posts), 9000),
+        }
         for sub, n in (
-            ("MakeupAddiction", max(25000, backfill_posts)),
-            ("SkincareAddiction", max(35000, backfill_posts)),
+            ("MakeupAddiction", max(40000, backfill_posts)),
+            ("SkincareAddiction", max(60000, backfill_posts)),
             ("AsianBeauty", max(6000, backfill_posts)),
             ("beauty", max(6000, backfill_posts)),
             ("Sephora", max(6000, backfill_posts)),
             ("SkincareAddictionLux", max(4000, backfill_posts)),
         ):
-            time.sleep(3.0)  # breathe between subs; Arctic Shift 422s when rushed
+            time.sleep(2.0)
             try:
-                if sub in _FORWARD_SUBS:
+                if sub in _FORWARD_LIMITS:
+                    max_posts_n, mpm = _FORWARD_LIMITS[sub]
                     posts = fetch_subreddit_forward(
-                        sub, start_date=_SERIES_FROM, max_posts=n
+                        sub,
+                        start_date=_SERIES_FROM,
+                        max_posts=max_posts_n,
+                        max_per_month=mpm,
                     )
                 else:
                     posts = fetch_subreddit(sub, max_posts=n)
@@ -764,7 +800,6 @@ def build_pack(
         "beauty_community_posts": ("beauty", "total_posts"),
         "sephora_community_posts": ("Sephora", "total_posts"),
         "skincareaddictionlux_community_posts": ("SkincareAddictionLux", "total_posts"),
-        # Still built for optional use; not on default board (short Arctic window).
         "skincareaddiction_community_posts": ("SkincareAddiction", "total_posts"),
         "makeupaddiction_community_posts": ("MakeupAddiction", "total_posts"),
         "prestige_brand_sentiment": ("*", "prestige_brand_sentiment"),

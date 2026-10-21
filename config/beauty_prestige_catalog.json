@@ -501,14 +501,13 @@
         "duty-free",
         "duty free",
         "Hainan",
-        "longevity",
         "fragrance",
         "perfume"
       ],
       "label": "Prestige theme keyword hits in member earnings calls",
-      "official_name": "FMP transcript keyword counts — prestige / travel retail / longevity lexicon",
+      "official_name": "FMP transcript keyword counts — prestige / travel retail / fragrance lexicon",
       "short_name": "Transcript keywords",
-      "display_name": "Prestige / travel-retail / longevity keyword hits in member earnings calls",
+      "display_name": "Prestige / travel-retail keyword hits in member earnings calls",
       "frequency": "quarterly",
       "unit": "keyword_hits",
       "derived": [
@@ -520,7 +519,7 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only. Dropped Sephora (OR.PA owns it → corporate noise) and bare China/Asia/skincare/makeup."
+      "notes": "Chart-only narrative intensity. Core = prestige + Asia travel retail (duty-free/Hainan) + fragrance. Dropped longevity (sparse buzzword), Sephora (OR.PA owns it), and bare China/Asia/skincare/makeup."
     }
   ]
 }

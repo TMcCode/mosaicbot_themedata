@@ -124,7 +124,7 @@
         "sequencing_platforms",
         "genomics_forums"
       ],
-      "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards — conglomerate noise)."
+      "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards \u2014 conglomerate noise)."
     },
     {
       "theme": "Buying a House '26: Home Improvement Retailers",
@@ -176,7 +176,7 @@
         "ai_resilient_software",
         "ai_resilient_software_forums"
       ],
-      "notes": "v1: FRED software IPP + IT/software + productivity + Info JOLTS + Ramp AI Index (adoption/spend/vendors; free page scrape). Forums: ArtificialInteligence/softwareengineering/cloudcomputing/ecommerce — brand stack excludes ecommerce. Tickers ORCL CDNS INTU SHOP WDAY BSY. Skip Trends / Polymarket / inventories."
+      "notes": "v2: FRED software IPP + IT/software + productivity + Info JOLTS + Ramp AI Index (adoption/spend/vendors; free page scrape) + OpenRouter rankings-daily (weekly total + OpenAI/Anthropic/other stack; OPENROUTER_API_KEY). Forums: ArtificialInteligence/softwareengineering/cloudcomputing/ecommerce \u2014 brand stack excludes ecommerce. Tickers ORCL CDNS INTU SHOP WDAY BSY. Skip Trends / Polymarket / inventories."
     },
     {
       "theme": "Political Spend '26: Ad Agencies & Polling",
@@ -293,6 +293,19 @@
         "beauty_prestige_forums"
       ],
       "notes": "v1: FRED health/personal-care retail + toilet-prep PPI + cosmetics CPI + e-commerce + TE China retail YoY (NBS via TE) + Census HS 330499/330300 + FMP members + transcript + forums. Cosmetics-only China NBS / paid panels map_only."
+    },
+    {
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "group": "Brokerages & Exchanges",
+      "group_slug": "brokerages-exchanges",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "crypto_brokerages",
+        "crypto_brokerages_forums"
+      ],
+      "notes": "v1: DefiLlama stablecoin total + DEX volume + Base TVL + FMP COIN/HOOD/IBKR + transcript keywords + Polymarket market-structure. Reuses agentic_payments USDC/fed funds/Kalshi HOOD + agentic_payments_forums CryptoCurrency community. Forums: CoinBase/RobinHood/defi. DB1.XETRA skipped (EUR). CEX volume map_only."
     }
   ]
 }

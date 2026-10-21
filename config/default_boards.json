@@ -2853,6 +2853,22 @@
           ]
         },
         {
+          "series_key": "openrouter_total_tokens",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "OpenRouter API tokens by provider (weekly)",
+          "series_keys": [
+            "openrouter_openai_tokens",
+            "openrouter_anthropic_tokens",
+            "openrouter_other_tokens"
+          ],
+          "sum_series_key": "openrouter_total_tokens"
+        },
+        {
           "chart_type": "stacked_bar",
           "metric": "raw",
           "display_name": "AI software brand mentions (weekly)",
@@ -5249,6 +5265,251 @@
           "series_key": "prestige_transcript_keywords",
           "metric": "raw",
           "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "stablecoin_circulating_total",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "m2_money_stock",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_total_assets",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "base_dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "coinbase_spot_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cme_bitcoin_open_interest",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cme_bitcoin_cot_lev_net",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "base_tvl",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usdc_circulating",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Crypto brokerage USD member revenue (COIN+HOOD+IBKR)",
+          "series_keys": [
+            "coin_revenue",
+            "hood_revenue",
+            "ibkr_revenue"
+          ],
+          "sum_series_key": "crypto_broker_member_revenue"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "crypto_broker_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pm_us_crypto_market_structure_law_2026",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "kalshi_hood_event_contracts_vol",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named brokerage brand mentions (weekly)",
+          "series_keys": [
+            "coinbase_mentions",
+            "robinhood_mentions",
+            "broker_base_mentions",
+            "bitstamp_mentions",
+            "deribit_mentions"
+          ],
+          "sum_series_key": "crypto_broker_named_mentions"
+        },
+        {
+          "series_key": "cex_brokerage_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "cryptocurrency_community_posts",
+            "coinbase_community_posts",
+            "robinhood_community_posts",
+            "defi_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Crypto brokerage brand sentiment (weekly)",
+          "series_keys": [
+            "crypto_broker_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "ticker": "COIN",
+      "recipes": [
+        {
+          "series_key": "coin_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "base_dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "coinbase_spot_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "base_tvl",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "coinbase_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "broker_base_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stablecoin_circulating_total",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "crypto_broker_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "ticker": "HOOD",
+      "recipes": [
+        {
+          "series_key": "hood_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "kalshi_hood_event_contracts_vol",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "robinhood_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "crypto_broker_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Brokerages & Exchanges '26: Crypto Brokerages & Trading",
+      "theme_slug": "brokerages-exchanges-26-crypto-brokerages-trading",
+      "ticker": "IBKR",
+      "recipes": [
+        {
+          "series_key": "ibkr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "dex_volume",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "crypto_broker_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pm_us_crypto_market_structure_law_2026",
+          "metric": "raw",
+          "chart_type": "line"
         }
       ]
     }

@@ -5,7 +5,8 @@ Theme: AI '26: Mizuho Most AI-Resilient Software
 (stockthemes slug: ai-26-mizuho-most-ai-resilient-software).
 
 FRED software IPP + IT/software investment + nonfarm productivity + Information
-JOLTS openings + Ramp AI Index (page scrape; optional partner API key unused for v1).
+JOLTS openings + Ramp AI Index (page scrape) + OpenRouter rankings-daily
+(API; OPENROUTER_API_KEY; soft-fail if unset).
 """
 
 from __future__ import annotations
@@ -26,6 +27,7 @@ from lib import r2 as r2lib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import ramp_ai_index as ramplib  # noqa: E402
+from lib import openrouter_rankings as orlib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 from lib import fmp_pack as fmp_packlib  # noqa: E402
 from lib.pack_derived import apply_derived_sums  # noqa: E402
@@ -108,6 +110,27 @@ def build_pack(
             errors.append(f"ramp_ai_index: {e}")
             ramp_payload = None
 
+    openrouter_buckets: dict[str, list[dict[str, float]]] | None = None
+    need_or = any(
+        m.get("source") == "openrouter_rankings"
+        for m in (catalog.get("series") or [])
+    )
+    if need_or:
+        if not orlib.api_key():
+            errors.append("openrouter_rankings: OPENROUTER_API_KEY not set")
+        else:
+            try:
+                rows, meta = orlib.fetch_rankings_daily()
+                openrouter_buckets = orlib.weekly_author_buckets(rows)
+                notes.append(
+                    "openrouter: "
+                    + orlib.citation(meta)
+                    + f" weeks={len(openrouter_buckets.get('total') or [])}"
+                )
+            except Exception as e:
+                errors.append(f"openrouter_rankings: {e}")
+                openrouter_buckets = None
+
     fmp_caches = fmp_packlib.FmpCaches.from_catalog(catalog)
 
     for meta in catalog.get("series") or []:
@@ -132,6 +155,13 @@ def build_pack(
                 pts = _ramp_points(meta, ramp_payload)
                 pts = [p for p in pts if p["date"] >= start]
                 notes.append(f"{key}: Ramp {meta.get('ramp_array')} n={len(pts)}")
+            elif src == "openrouter_rankings":
+                if openrouter_buckets is None:
+                    raise RuntimeError("OpenRouter rankings unavailable")
+                bucket = str(meta.get("openrouter_bucket") or "total")
+                pts = list(openrouter_buckets.get(bucket) or [])
+                pts = [p for p in pts if p["date"] >= start]
+                notes.append(f"{key}: OpenRouter {bucket} n={len(pts)}")
             elif fmp_packlib.is_fmp_source(src):
                 pts, note = fmp_caches.resolve(meta, start=start)
                 for n in fmp_caches.notes:
@@ -169,7 +199,10 @@ def build_pack(
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
-        "source": "FRED software/IT/productivity/JOLTS + Ramp AI Index (page scrape)",
+        "source": (
+            "FRED software/IT/productivity/JOLTS + Ramp AI Index (page scrape) "
+            "+ OpenRouter rankings-daily (API)"
+        ),
         "fetched_at": fetched_at,
         "as_of": latest_date,
         "catalog": catalog,

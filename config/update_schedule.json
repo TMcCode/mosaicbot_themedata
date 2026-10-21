@@ -591,7 +591,7 @@
         "as_of_field": "as_of",
         "local_relative": "data/ai_resilient_software/latest.json"
       },
-      "description": "Monthly FRED software/IT/productivity/JOLTS + weekly-refreshable Ramp AI Index scrape."
+      "description": "Monthly FRED software/IT/productivity/JOLTS + Ramp AI Index scrape + OpenRouter rankings (OPENROUTER_API_KEY; soft-fail)."
     },
     {
       "id": "ai_resilient_software_forums",
@@ -946,6 +946,50 @@
         "local_relative": "data/memory_hbm_testing_forums/latest.json"
       },
       "description": "Weekly Arctic Shift HBM testing forums \u2014 semis/hardware/chipdesign. Soft-fail; prefer complete weeks."
+    },
+    {
+      "id": "crypto_brokerages",
+      "job": "jobs/crypto_brokerages.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/crypto_brokerages/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/crypto_brokerages/latest.json"
+      },
+      "description": "Weekly DefiLlama + FMP + Polymarket crypto brokerages. Soft-fail OK."
+    },
+    {
+      "id": "crypto_brokerages_forums",
+      "job": "jobs/crypto_brokerages_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/crypto_brokerages_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/crypto_brokerages_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift crypto brokerage forums (CoinBase/RobinHood/defi)."
     }
   ]
 }
