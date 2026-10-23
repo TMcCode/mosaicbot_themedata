@@ -2,7 +2,7 @@
   "schema_version": 0,
   "description": "Stable Trading Economics market symbols + country indicators for themedata series. Resolve once (search costs API budget); do not re-search on a schedule. Batch pullable market symbols in one markets/symbol call when refreshing. Country indicators use historical/country/.../indicator/... (cached).",
   "budget_notes": [
-    "Plan: 500 REST requests/month — treat as scarce.",
+    "Plan: 500 REST requests/month \u2014 treat as scarce.",
     "Weekly refresh: one batched markets/symbol for all status=pull commodity keys (~4 calls/month).",
     "Historical: once per symbol/indicator (or incremental since last as_of); cache under data/te/cache/.",
     "HTML scrape remains a zero-API fallback for germanium public page only."
@@ -29,6 +29,39 @@
       "status": "pull",
       "history_name": "gallium_te_history.jsonl",
       "latest_name": "gallium_te_latest.json"
+    },
+    "te_crack_spread": {
+      "symbol": "TECSI:IND",
+      "ticker": "TECSI",
+      "name": "TE Crack Spread Index",
+      "url": "/commodity/te-crack-spread-index",
+      "unit": "USD/bbl",
+      "pack": "energy_bottleneck_us_refiners",
+      "status": "pack",
+      "history_name": "te_crack_spread_history.jsonl",
+      "latest_name": "te_crack_spread_latest.json"
+    },
+    "te_rbob_gasoline": {
+      "symbol": "XB1:COM",
+      "ticker": "XB1",
+      "name": "Gasoline",
+      "url": "/commodity/gasoline",
+      "unit": "USD/gal",
+      "pack": "energy_bottleneck_us_refiners",
+      "status": "pack",
+      "history_name": "te_rbob_gasoline_history.jsonl",
+      "latest_name": "te_rbob_gasoline_latest.json"
+    },
+    "te_heating_oil": {
+      "symbol": "HO1:COM",
+      "ticker": "HO1",
+      "name": "Heating Oil",
+      "url": "/commodity/heating-oil",
+      "unit": "USD/gal",
+      "pack": "energy_bottleneck_us_refiners",
+      "status": "pack",
+      "history_name": "te_heating_oil_history.jsonl",
+      "latest_name": "te_heating_oil_latest.json"
     }
   },
   "indicators": {
@@ -66,7 +99,7 @@
       "frequency": "monthly",
       "pack": "beauty_prestige",
       "status": "pull",
-      "notes": "NBS total retail sales of consumer goods YoY via Trading Economics. Broad China demand proxy — cosmetics-specific NBS series is CEIC/MacroMicro (map_only) until a free scrape path exists."
+      "notes": "NBS total retail sales of consumer goods YoY via Trading Economics. Broad China demand proxy \u2014 cosmetics-specific NBS series is CEIC/MacroMicro (map_only) until a free scrape path exists."
     },
     "taiwan_industrial_production_yoy": {
       "country": "taiwan",
@@ -78,7 +111,7 @@
       "frequency": "monthly",
       "pack": "advanced_packaging",
       "status": "pull",
-      "notes": "TE Category Industrial Production for Taiwan — prints as YoY % (HistoricalDataSymbol TaiwanIP). Hub activity proxy for TSMC/ASE/substrate packaging. Resolved 2026-10-21."
+      "notes": "TE Category Industrial Production for Taiwan \u2014 prints as YoY % (HistoricalDataSymbol TaiwanIP). Hub activity proxy for TSMC/ASE/substrate packaging. Resolved 2026-10-21."
     }
   }
 }

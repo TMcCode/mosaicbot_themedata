@@ -1,0 +1,1018 @@
+{
+  "schema_version": 0,
+  "pack": "energy_bottleneck_us_refiners",
+  "description": "Energy Bottleneck '26: US Refiners \u2014 EIA WPSR inventories/util/exports + TE crack/RBOB/HO + FRED WTI/product spots + FMP refining/RD segments (VLO/MPC/PSX/DINO/PBF/DK/SUN/CVI/PARR) + Kalshi. Forums in energy_bottleneck_us_refiners_forums. Platts outages/OPIS RIN/Kpler map-only.",
+  "series": [
+    {
+      "key": "te_crack_spread",
+      "source": "tradingeconomics",
+      "te_symbol": "TECSI:IND",
+      "label": "TE Crack Spread Index",
+      "official_name": "Trading Economics TECSI:IND \u2014 TE Crack Spread Index",
+      "short_name": "TE Crack Spread Index",
+      "display_name": "TE US crack spread index",
+      "frequency": "daily",
+      "unit": "usd_per_bbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "te_crack_spread",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "te_rbob_gasoline",
+      "source": "tradingeconomics",
+      "te_symbol": "XB1:COM",
+      "label": "Gasoline futures (RBOB)",
+      "official_name": "Trading Economics XB1:COM \u2014 Gasoline futures (RBOB)",
+      "short_name": "Gasoline futures (RBOB)",
+      "display_name": "RBOB gasoline futures",
+      "frequency": "daily",
+      "unit": "usd_per_gal",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "te_rbob_gasoline",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "te_heating_oil",
+      "source": "tradingeconomics",
+      "te_symbol": "HO1:COM",
+      "label": "Heating oil / ULSD futures",
+      "official_name": "Trading Economics HO1:COM \u2014 Heating oil / ULSD futures",
+      "short_name": "Heating oil / ULSD futures",
+      "display_name": "Heating oil (ULSD) futures",
+      "frequency": "daily",
+      "unit": "usd_per_gal",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "te_heating_oil",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of"
+    },
+    {
+      "key": "wti_crude_ur",
+      "source": "fred",
+      "fred_id": "DCOILWTICO",
+      "label": "WTI crude spot",
+      "official_name": "FRED DCOILWTICO \u2014 WTI crude spot",
+      "short_name": "WTI crude spot",
+      "display_name": "WTI crude oil spot",
+      "frequency": "daily",
+      "unit": "usd_per_bbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "wti_crude_ur",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "nyh_gasoline_spot",
+      "source": "fred",
+      "fred_id": "DGASNYH",
+      "label": "NY Harbor gasoline spot",
+      "official_name": "FRED DGASNYH \u2014 NY Harbor gasoline spot",
+      "short_name": "NY Harbor gasoline spot",
+      "display_name": "NY Harbor conventional gasoline spot",
+      "frequency": "daily",
+      "unit": "usd_per_gal",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "nyh_gasoline_spot",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "nyh_heating_oil_spot",
+      "source": "fred",
+      "fred_id": "DHOILNYH",
+      "label": "NY Harbor heating oil spot",
+      "official_name": "FRED DHOILNYH \u2014 NY Harbor heating oil spot",
+      "short_name": "NY Harbor heating oil spot",
+      "display_name": "NY Harbor No. 2 heating oil spot",
+      "frequency": "daily",
+      "unit": "usd_per_gal",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "nyh_heating_oil_spot",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "retail_gas_price",
+      "source": "fred",
+      "fred_id": "GASREGW",
+      "label": "US retail gasoline",
+      "official_name": "FRED GASREGW \u2014 US retail gasoline",
+      "short_name": "US retail gasoline",
+      "display_name": "US regular retail gasoline price",
+      "frequency": "weekly",
+      "unit": "usd_per_gal",
+      "derived": [
+        "wow_pct",
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "retail_gas_price",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_distillate_stocks",
+      "source": "eia_weekly",
+      "eia_series": "WDISTUS1",
+      "label": "US distillate stocks",
+      "official_name": "EIA WDISTUS1 \u2014 US distillate stocks",
+      "short_name": "US distillate stocks",
+      "display_name": "US distillate fuel oil stocks",
+      "frequency": "weekly",
+      "unit": "mmbbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "eia_distillate_stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_gasoline_stocks",
+      "source": "eia_weekly",
+      "eia_series": "WGTSTUS1",
+      "label": "US gasoline stocks",
+      "official_name": "EIA WGTSTUS1 \u2014 US gasoline stocks",
+      "short_name": "US gasoline stocks",
+      "display_name": "US total gasoline stocks",
+      "frequency": "weekly",
+      "unit": "mmbbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "eia_gasoline_stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_jet_stocks",
+      "source": "eia_weekly",
+      "eia_series": "WKJSTUS1",
+      "label": "US jet fuel stocks",
+      "official_name": "EIA WKJSTUS1 \u2014 US jet fuel stocks",
+      "short_name": "US jet fuel stocks",
+      "display_name": "US jet fuel stocks",
+      "frequency": "weekly",
+      "unit": "mmbbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "eia_jet_stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_crude_stocks",
+      "source": "eia_weekly",
+      "eia_series": "WCESTUS1",
+      "label": "US crude stocks ex-SPR",
+      "official_name": "EIA WCESTUS1 \u2014 US crude stocks ex-SPR",
+      "short_name": "US crude stocks ex-SPR",
+      "display_name": "US commercial crude stocks (ex-SPR)",
+      "frequency": "weekly",
+      "unit": "mmbbl",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "eia_crude_stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_refinery_util",
+      "source": "eia_weekly",
+      "eia_series": "WPULEUS3",
+      "label": "US refinery utilization",
+      "official_name": "EIA WPULEUS3 \u2014 US refinery utilization",
+      "short_name": "US refinery utilization",
+      "display_name": "US refinery operable capacity utilization",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "eia_refinery_util",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_crude_inputs",
+      "source": "eia_weekly",
+      "eia_series": "WCRRIUS2",
+      "label": "US refiner crude inputs",
+      "official_name": "EIA WCRRIUS2 \u2014 US refiner crude inputs",
+      "short_name": "US refiner crude inputs",
+      "display_name": "US refiner net crude inputs",
+      "frequency": "weekly",
+      "unit": "kbpd",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "eia_crude_inputs",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_distillate_exports",
+      "source": "eia_weekly",
+      "eia_series": "WDIEXUS2",
+      "label": "US distillate exports",
+      "official_name": "EIA WDIEXUS2 \u2014 US distillate exports",
+      "short_name": "US distillate exports",
+      "display_name": "US distillate exports",
+      "frequency": "weekly",
+      "unit": "kbpd",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "eia_distillate_exports",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_distillate_supplied",
+      "source": "eia_weekly",
+      "eia_series": "WDIUPUS2",
+      "label": "US distillate product supplied",
+      "official_name": "EIA WDIUPUS2 \u2014 US distillate product supplied",
+      "short_name": "US distillate product supplied",
+      "display_name": "US distillate product supplied (demand)",
+      "frequency": "weekly",
+      "unit": "kbpd",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "eia_distillate_supplied",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_gasoline_supplied",
+      "source": "eia_weekly",
+      "eia_series": "WGFUPUS2",
+      "label": "US gasoline product supplied",
+      "official_name": "EIA WGFUPUS2 \u2014 US gasoline product supplied",
+      "short_name": "US gasoline product supplied",
+      "display_name": "US gasoline product supplied (demand)",
+      "frequency": "weekly",
+      "unit": "kbpd",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "eia_gasoline_supplied",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "eia_distillate_production",
+      "source": "eia_weekly",
+      "eia_series": "WDIRPUS2",
+      "label": "US distillate production",
+      "official_name": "EIA WDIRPUS2 \u2014 US distillate production",
+      "short_name": "US distillate production",
+      "display_name": "US distillate production",
+      "frequency": "weekly",
+      "unit": "kbpd",
+      "derived": [
+        "wow_pct",
+        "yoy_pct",
+        "wma4_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "eia_distillate_production",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "vlo_refining_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "VLO",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refining"
+      ],
+      "label": "VLO refining segment revenue",
+      "official_name": "FMP product segment \u2014 VLO Refining",
+      "short_name": "VLO refining",
+      "display_name": "Valero refining revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "vlo_refining_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "mpc_refining_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "MPC",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refining And Marketing",
+        "Refining and Marketing"
+      ],
+      "label": "MPC refining segment revenue",
+      "official_name": "FMP product segment \u2014 MPC Refining And Marketing",
+      "short_name": "MPC refining",
+      "display_name": "Marathon refining & marketing revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "mpc_refining_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dino_refining_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "DINO",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refining"
+      ],
+      "label": "DINO refining segment revenue",
+      "official_name": "FMP product segment \u2014 DINO Refining",
+      "short_name": "DINO refining",
+      "display_name": "HF Sinclair refining revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "dino_refining_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "pbf_refining_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "PBF",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refining Group",
+        "Refining"
+      ],
+      "label": "PBF refining segment revenue",
+      "official_name": "FMP product segment \u2014 PBF Refining Group",
+      "short_name": "PBF refining",
+      "display_name": "PBF refining revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "pbf_refining_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dk_refining_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "DK",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refining"
+      ],
+      "label": "DK refining segment revenue",
+      "official_name": "FMP product segment \u2014 DK Refining",
+      "short_name": "DK refining",
+      "display_name": "Delek refining revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "dk_refining_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cvi_petroleum_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "CVI",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Petroleum Segment",
+        "Petroleum"
+      ],
+      "label": "CVI refining segment revenue",
+      "official_name": "FMP product segment \u2014 CVI Petroleum Segment",
+      "short_name": "CVI refining",
+      "display_name": "CVR petroleum revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "cvi_petroleum_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "vlo_rd_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "VLO",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Renewable Diesel"
+      ],
+      "label": "VLO renewables revenue",
+      "official_name": "FMP product segment \u2014 VLO Renewable Diesel",
+      "short_name": "VLO RD",
+      "display_name": "Valero renewable diesel revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "vlo_rd_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "mpc_rd_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "MPC",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Renewable Diesel"
+      ],
+      "label": "MPC renewables revenue",
+      "official_name": "FMP product segment \u2014 MPC Renewable Diesel",
+      "short_name": "MPC RD",
+      "display_name": "Marathon renewable diesel revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "mpc_rd_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dino_renewables_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "DINO",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Renewables",
+        "Renewable Diesel"
+      ],
+      "label": "DINO renewables revenue",
+      "official_name": "FMP product segment \u2014 DINO Renewables",
+      "short_name": "DINO RD",
+      "display_name": "HF Sinclair renewables revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "dino_renewables_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dino_lubes_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "DINO",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Lubricants & Specialties",
+        "Lubricants And Specialty Products",
+        "Lubricants and Specialty Products"
+      ],
+      "label": "DINO lubricants & specialties revenue",
+      "official_name": "FMP product segment \u2014 DINO Lubricants & Specialties",
+      "short_name": "DINO lubes",
+      "display_name": "HF Sinclair lubricants & specialties revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "dino_lubes_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Spin / SOTP catalyst \u2014 ticker chart; not in theme refining stack."
+    },
+    {
+      "key": "mpc_midstream_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "MPC",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Midstream"
+      ],
+      "label": "MPC midstream/logistics revenue",
+      "official_name": "FMP product segment \u2014 MPC Midstream",
+      "short_name": "MPC midstream",
+      "display_name": "Marathon midstream revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 2,
+      "dataset_id": "mpc_midstream_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dk_logistics_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "DK",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Logistics"
+      ],
+      "label": "DK midstream/logistics revenue",
+      "official_name": "FMP product segment \u2014 DK Logistics",
+      "short_name": "DK midstream",
+      "display_name": "Delek logistics revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 2,
+      "dataset_id": "dk_logistics_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "pbf_logistics_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "PBF",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Logistics Group",
+        "Logistics"
+      ],
+      "label": "PBF midstream/logistics revenue",
+      "official_name": "FMP product segment \u2014 PBF Logistics Group",
+      "short_name": "PBF midstream",
+      "display_name": "PBF logistics revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 2,
+      "dataset_id": "pbf_logistics_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "ur_member_revenue",
+      "source": "fmp_revenue",
+      "fmp_symbols": [
+        "VLO",
+        "MPC",
+        "PSX",
+        "DINO",
+        "PBF",
+        "DK",
+        "SUN",
+        "CVI",
+        "PARR"
+      ],
+      "fmp_limit": 40,
+      "require_all": false,
+      "label": "US refiner member revenue sum",
+      "official_name": "FMP income-statement revenue sum \u2014 VLO/MPC/PSX/DINO/PBF/DK/SUN/CVI/PARR",
+      "short_name": "Member revenue",
+      "display_name": "US refiner member revenue (USD)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_member_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "vlo_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "VLO",
+      "fmp_limit": 40,
+      "label": "VLO revenue",
+      "official_name": "FMP income-statement revenue \u2014 VLO",
+      "short_name": "VLO revenue",
+      "display_name": "VLO total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "vlo_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "mpc_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "MPC",
+      "fmp_limit": 40,
+      "label": "MPC revenue",
+      "official_name": "FMP income-statement revenue \u2014 MPC",
+      "short_name": "MPC revenue",
+      "display_name": "MPC total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "mpc_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "psx_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "PSX",
+      "fmp_limit": 40,
+      "label": "PSX revenue",
+      "official_name": "FMP income-statement revenue \u2014 PSX",
+      "short_name": "PSX revenue",
+      "display_name": "PSX total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "psx_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dino_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "DINO",
+      "fmp_limit": 40,
+      "label": "DINO revenue",
+      "official_name": "FMP income-statement revenue \u2014 DINO",
+      "short_name": "DINO revenue",
+      "display_name": "DINO total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "dino_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "pbf_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "PBF",
+      "fmp_limit": 40,
+      "label": "PBF revenue",
+      "official_name": "FMP income-statement revenue \u2014 PBF",
+      "short_name": "PBF revenue",
+      "display_name": "PBF total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "pbf_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "dk_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "DK",
+      "fmp_limit": 40,
+      "label": "DK revenue",
+      "official_name": "FMP income-statement revenue \u2014 DK",
+      "short_name": "DK revenue",
+      "display_name": "DK total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "dk_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "sun_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "SUN",
+      "fmp_limit": 40,
+      "label": "SUN revenue",
+      "official_name": "FMP income-statement revenue \u2014 SUN",
+      "short_name": "SUN revenue",
+      "display_name": "SUN total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "sun_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cvi_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "CVI",
+      "fmp_limit": 40,
+      "label": "CVI revenue",
+      "official_name": "FMP income-statement revenue \u2014 CVI",
+      "short_name": "CVI revenue",
+      "display_name": "CVI total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "cvi_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "parr_revenue_ur",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "PARR",
+      "fmp_limit": 40,
+      "label": "PARR revenue",
+      "official_name": "FMP income-statement revenue \u2014 PARR",
+      "short_name": "PARR revenue",
+      "display_name": "PARR total revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "parr_revenue_ur",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "psx_refined_products_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "PSX",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Refined petroleum products and renewable fuels",
+        "Refined products",
+        "Refining"
+      ],
+      "label": "PSX refined products & renewable fuels revenue",
+      "official_name": "FMP product segment \u2014 PSX Refined petroleum products and renewable fuels",
+      "short_name": "PSX refined products",
+      "display_name": "Phillips 66 refined products & renewable fuels revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "psx_refined_products_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "ur_refining_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "vlo_refining_revenue",
+        "mpc_refining_revenue",
+        "dino_refining_revenue",
+        "pbf_refining_revenue",
+        "dk_refining_revenue",
+        "cvi_petroleum_revenue"
+      ],
+      "label": "US refining segment revenue sum",
+      "official_name": "Derived sum \u2014 VLO/MPC/DINO/PBF/DK/CVI refining segments",
+      "short_name": "Refining revenue (sum)",
+      "display_name": "US refining segment revenue (theme members)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ur_refining_revenue",
+      "access": "manual",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "ur_rd_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "vlo_rd_revenue",
+        "mpc_rd_revenue",
+        "dino_renewables_revenue"
+      ],
+      "label": "US renewable diesel / renewables revenue sum",
+      "official_name": "Derived sum \u2014 VLO/MPC/DINO renewable segments",
+      "short_name": "RD revenue (sum)",
+      "display_name": "Renewable diesel / renewables revenue (VLO+MPC+DINO)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_rd_revenue",
+      "access": "manual",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "kalshi_us_crude_export_ban",
+      "source": "kalshi",
+      "kalshi_series": "KXCRUDEEXPORTBAN",
+      "kalshi_ticker": "KXCRUDEEXPORTBAN-27",
+      "label": "Kalshi US crude export ban",
+      "official_name": "Kalshi \u2014 Will the US ban crude oil exports before Jan 1 2027",
+      "short_name": "Crude export ban",
+      "display_name": "Kalshi: US crude export ban (prob)",
+      "frequency": "daily",
+      "unit": "probability",
+      "derived": [],
+      "scope_default": "theme",
+      "usefulness": 2,
+      "dataset_id": "kalshi_us_crude_export_ban",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "notes": "Soft-fail if market ticker drifts; chart-only."
+    }
+  ]
+}

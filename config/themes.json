@@ -478,6 +478,19 @@
         "regional_oil_presalt_ncs_forums"
       ],
       "notes": "v1: NOD NCS fields + ANP Pre-Salt wells/Santos bulletin + FRED Brent/EU gas + Gassco NCS exit + UK ET 3.1 + FMP members + Wikipedia + Kalshi PBR. Forums: r/oil+Norway+investing. Abicom soft-fail."
+    },
+    {
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "group": "Energy Bottleneck",
+      "group_slug": "energy-bottleneck",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "energy_bottleneck_us_refiners",
+        "energy_bottleneck_us_refiners_forums"
+      ],
+      "notes": "v1: EIA WPSR + TE crack/RBOB/HO + FRED spots + FMP refining/RD + Kalshi. Forums: EnergyTrading/oilandgas/investing."
     }
   ]
 }

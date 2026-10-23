@@ -9255,6 +9255,449 @@
           "chart_type": "line"
         }
       ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-theme",
+      "scope": "theme",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": null,
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_gasoline_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_exports",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "series_keys": [
+            "vlo_refining_revenue",
+            "mpc_refining_revenue",
+            "dino_refining_revenue",
+            "pbf_refining_revenue",
+            "dk_refining_revenue",
+            "cvi_petroleum_revenue"
+          ],
+          "display_name": "Refining segment revenue (members)",
+          "sum_series_key": "ur_refining_revenue"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "series_keys": [
+            "vlo_rd_revenue",
+            "mpc_rd_revenue",
+            "dino_renewables_revenue"
+          ],
+          "display_name": "Renewable diesel / renewables revenue",
+          "sum_series_key": "ur_rd_revenue"
+        },
+        {
+          "series_key": "ur_member_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_gas_price",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "wti_crude_ur",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "series_keys": [
+            "ur_vlo_mentions",
+            "ur_mpc_mentions",
+            "ur_psx_mentions",
+            "ur_dino_mentions",
+            "ur_pbf_mentions",
+            "ur_dk_mentions"
+          ],
+          "display_name": "Named refiner forum mentions"
+        },
+        {
+          "series_key": "ur_crack_rin_mentions",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "series_keys": [
+            "ur_energytrading_posts",
+            "ur_oilandgas_posts",
+            "ur_investing_posts"
+          ],
+          "display_name": "Community volume by subreddit"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-vlo",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "VLO",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "vlo_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vlo_rd_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vlo_refining_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-mpc",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "MPC",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "mpc_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mpc_midstream_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mpc_rd_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mpc_refining_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-psx",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "PSX",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "psx_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "psx_refined_products_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-dino",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "DINO",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "dino_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dino_lubes_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dino_renewables_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dino_refining_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-pbf",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "PBF",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "pbf_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pbf_logistics_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pbf_refining_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-dk",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "DK",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "dk_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dk_logistics_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dk_refining_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-sun",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "SUN",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "sun_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-cvi",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "CVI",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "cvi_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cvi_petroleum_revenue",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "board_id": "energy-bottleneck-26-us-refiners-parr",
+      "scope": "ticker",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "ticker": "PARR",
+      "pack": "energy_bottleneck_us_refiners",
+      "recipes": [
+        {
+          "series_key": "parr_revenue_ur",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "te_crack_spread",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
     }
   ]
 }

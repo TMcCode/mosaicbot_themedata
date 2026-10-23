@@ -2547,6 +2547,63 @@
         }
       ],
       "notes": "Pre-salt well stacks + Gassco + UKCS + Kalshi + forums + wiki chart-only. Score uses Santos (not field sum) for Brazil continuity post-2023 CDP migration."
+    },
+    {
+      "score_id": "energy_bottleneck_us_refiners_backdrop",
+      "label": "US refiners energy-bottleneck backdrop",
+      "theme": "Energy Bottleneck '26: US Refiners",
+      "theme_slug": "energy-bottleneck-26-us-refiners",
+      "pack": "energy_bottleneck_us_refiners",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Crack + distillate tightness + util + exports + refining revenue. Stocks inverse. RIN/forums/Kalshi chart-only."
+      },
+      "components": [
+        {
+          "series_key": "te_crack_spread",
+          "metric": "wma4_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "TE crack index \u2192 primary margin pulse (Platts outage proxy via price)."
+        },
+        {
+          "series_key": "eia_distillate_stocks",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Low/falling distillate stocks \u2192 bottleneck (inverse YoY)."
+        },
+        {
+          "series_key": "eia_refinery_util",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "High utilization \u2192 tight capacity / strong runs."
+        },
+        {
+          "series_key": "eia_distillate_exports",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Export machine to short Atlantic Basin markets."
+        },
+        {
+          "series_key": "ur_refining_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Member refining-segment USD revenue \u2192 realized cash engine."
+        }
+      ],
+      "notes": "Retail gas, RINs, Kalshi, forums, RD segments chart-only. WTI omitted (crack already nets feedstock)."
     }
   ]
 }

@@ -31663,6 +31663,831 @@
       "series_keys": [
         "ro_fpso_presalt_sentiment"
       ]
+    },
+    {
+      "id": "te_crack_spread",
+      "provider": "tradingeconomics",
+      "name": "TE US crack spread index",
+      "description": "Trading Economics TECSI:IND \u2014 TE Crack Spread Index",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "te_crack_spread"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "te_rbob_gasoline",
+      "provider": "tradingeconomics",
+      "name": "RBOB gasoline futures",
+      "description": "Trading Economics XB1:COM \u2014 Gasoline futures (RBOB)",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "te_rbob_gasoline"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "te_heating_oil",
+      "provider": "tradingeconomics",
+      "name": "Heating oil (ULSD) futures",
+      "description": "Trading Economics HO1:COM \u2014 Heating oil / ULSD futures",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "te_heating_oil"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "wti_crude_ur",
+      "provider": "fred",
+      "name": "WTI crude oil spot",
+      "description": "FRED DCOILWTICO \u2014 WTI crude spot",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "wti_crude_ur"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "nyh_gasoline_spot",
+      "provider": "fred",
+      "name": "NY Harbor conventional gasoline spot",
+      "description": "FRED DGASNYH \u2014 NY Harbor gasoline spot",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "nyh_gasoline_spot"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "nyh_heating_oil_spot",
+      "provider": "fred",
+      "name": "NY Harbor No. 2 heating oil spot",
+      "description": "FRED DHOILNYH \u2014 NY Harbor heating oil spot",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "nyh_heating_oil_spot"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "retail_gas_price",
+      "provider": "fred",
+      "name": "US regular retail gasoline price",
+      "description": "FRED GASREGW \u2014 US retail gasoline",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "retail_gas_price"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_distillate_stocks",
+      "provider": "eia_weekly",
+      "name": "US distillate fuel oil stocks",
+      "description": "EIA WDISTUS1 \u2014 US distillate stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_distillate_stocks"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_gasoline_stocks",
+      "provider": "eia_weekly",
+      "name": "US total gasoline stocks",
+      "description": "EIA WGTSTUS1 \u2014 US gasoline stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_gasoline_stocks"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_jet_stocks",
+      "provider": "eia_weekly",
+      "name": "US jet fuel stocks",
+      "description": "EIA WKJSTUS1 \u2014 US jet fuel stocks",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_jet_stocks"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_crude_stocks",
+      "provider": "eia_weekly",
+      "name": "US commercial crude stocks (ex-SPR)",
+      "description": "EIA WCESTUS1 \u2014 US crude stocks ex-SPR",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_crude_stocks"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_refinery_util",
+      "provider": "eia_weekly",
+      "name": "US refinery operable capacity utilization",
+      "description": "EIA WPULEUS3 \u2014 US refinery utilization",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_refinery_util"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_crude_inputs",
+      "provider": "eia_weekly",
+      "name": "US refiner net crude inputs",
+      "description": "EIA WCRRIUS2 \u2014 US refiner crude inputs",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_crude_inputs"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_distillate_exports",
+      "provider": "eia_weekly",
+      "name": "US distillate exports",
+      "description": "EIA WDIEXUS2 \u2014 US distillate exports",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_distillate_exports"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_distillate_supplied",
+      "provider": "eia_weekly",
+      "name": "US distillate product supplied (demand)",
+      "description": "EIA WDIUPUS2 \u2014 US distillate product supplied",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_distillate_supplied"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_gasoline_supplied",
+      "provider": "eia_weekly",
+      "name": "US gasoline product supplied (demand)",
+      "description": "EIA WGFUPUS2 \u2014 US gasoline product supplied",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_gasoline_supplied"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "eia_distillate_production",
+      "provider": "eia_weekly",
+      "name": "US distillate production",
+      "description": "EIA WDIRPUS2 \u2014 US distillate production",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "eia_distillate_production"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "vlo_refining_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Valero refining revenue",
+      "description": "FMP product segment \u2014 VLO Refining",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "vlo_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "mpc_refining_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Marathon refining & marketing revenue",
+      "description": "FMP product segment \u2014 MPC Refining And Marketing",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "mpc_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dino_refining_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "HF Sinclair refining revenue",
+      "description": "FMP product segment \u2014 DINO Refining",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dino_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "pbf_refining_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "PBF refining revenue",
+      "description": "FMP product segment \u2014 PBF Refining Group",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "pbf_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dk_refining_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Delek refining revenue",
+      "description": "FMP product segment \u2014 DK Refining",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dk_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "cvi_petroleum_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "CVR petroleum revenue",
+      "description": "FMP product segment \u2014 CVI Petroleum Segment",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "cvi_petroleum_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "vlo_rd_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Valero renewable diesel revenue",
+      "description": "FMP product segment \u2014 VLO Renewable Diesel",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "vlo_rd_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "mpc_rd_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Marathon renewable diesel revenue",
+      "description": "FMP product segment \u2014 MPC Renewable Diesel",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "mpc_rd_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dino_renewables_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "HF Sinclair renewables revenue",
+      "description": "FMP product segment \u2014 DINO Renewables",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dino_renewables_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dino_lubes_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "HF Sinclair lubricants & specialties revenue",
+      "description": "FMP product segment \u2014 DINO Lubricants & Specialties",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dino_lubes_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "mpc_midstream_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Marathon midstream revenue",
+      "description": "FMP product segment \u2014 MPC Midstream",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "mpc_midstream_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dk_logistics_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Delek logistics revenue",
+      "description": "FMP product segment \u2014 DK Logistics",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dk_logistics_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "pbf_logistics_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "PBF logistics revenue",
+      "description": "FMP product segment \u2014 PBF Logistics Group",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "pbf_logistics_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "ur_member_revenue",
+      "provider": "fmp_revenue",
+      "name": "US refiner member revenue (USD)",
+      "description": "FMP income-statement revenue sum \u2014 VLO/MPC/PSX/DINO/PBF/DK/SUN/CVI/PARR",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "ur_member_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "vlo_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "VLO total revenue",
+      "description": "FMP income-statement revenue \u2014 VLO",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "vlo_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "mpc_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "MPC total revenue",
+      "description": "FMP income-statement revenue \u2014 MPC",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "mpc_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "psx_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "PSX total revenue",
+      "description": "FMP income-statement revenue \u2014 PSX",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "psx_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dino_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "DINO total revenue",
+      "description": "FMP income-statement revenue \u2014 DINO",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dino_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "pbf_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "PBF total revenue",
+      "description": "FMP income-statement revenue \u2014 PBF",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "pbf_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "dk_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "DK total revenue",
+      "description": "FMP income-statement revenue \u2014 DK",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "dk_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "sun_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "SUN total revenue",
+      "description": "FMP income-statement revenue \u2014 SUN",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "sun_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "cvi_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "CVI total revenue",
+      "description": "FMP income-statement revenue \u2014 CVI",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "cvi_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "parr_revenue_ur",
+      "provider": "fmp_revenue_ticker",
+      "name": "PARR total revenue",
+      "description": "FMP income-statement revenue \u2014 PARR",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "parr_revenue_ur"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "psx_refined_products_revenue",
+      "provider": "fmp_revenue_segment",
+      "name": "Phillips 66 refined products & renewable fuels revenue",
+      "description": "FMP product segment \u2014 PSX Refined petroleum products and renewable fuels",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "psx_refined_products_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "ur_refining_revenue",
+      "provider": "derived_sum",
+      "name": "US refining segment revenue (theme members)",
+      "description": "Derived sum \u2014 VLO/MPC/DINO/PBF/DK/CVI refining segments",
+      "access": "manual",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "ur_refining_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "ur_rd_revenue",
+      "provider": "derived_sum",
+      "name": "Renewable diesel / renewables revenue (VLO+MPC+DINO)",
+      "description": "Derived sum \u2014 VLO/MPC/DINO renewable segments",
+      "access": "manual",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "ur_rd_revenue"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "kalshi_us_crude_export_ban",
+      "provider": "kalshi",
+      "name": "Kalshi: US crude export ban (prob)",
+      "description": "Kalshi \u2014 Will the US ban crude oil exports before Jan 1 2027",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "energy_bottleneck_us_refiners",
+      "series_keys": [
+        "kalshi_us_crude_export_ban"
+      ],
+      "status": "active",
+      "license": "vendor"
+    },
+    {
+      "id": "ur_vlo_mentions",
+      "provider": "arctic_shift",
+      "name": "Valero forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning Valero",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_vlo_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_mpc_mentions",
+      "provider": "arctic_shift",
+      "name": "Marathon Petroleum forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning Marathon Petroleum",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_mpc_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_psx_mentions",
+      "provider": "arctic_shift",
+      "name": "Phillips 66 forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning Phillips 66",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_psx_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_dino_mentions",
+      "provider": "arctic_shift",
+      "name": "HF Sinclair forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning HF Sinclair",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_dino_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_pbf_mentions",
+      "provider": "arctic_shift",
+      "name": "PBF Energy forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning PBF Energy",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_pbf_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_dk_mentions",
+      "provider": "arctic_shift",
+      "name": "Delek forum mentions",
+      "description": "Arctic Shift \u2014 unique posts mentioning Delek",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_dk_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_crack_rin_mentions",
+      "provider": "arctic_shift",
+      "name": "Crack spread / RIN / turnaround forum talk",
+      "description": "Arctic Shift \u2014 unique posts on crack spreads, RINs, turnarounds",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_crack_rin_mentions"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_refiner_sentiment",
+      "provider": "arctic_shift",
+      "name": "Refiner & crack-talk sentiment",
+      "description": "Arctic Shift \u2014 mean lexicon polarity on named-refiner or crack/RIN posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_ai_tools_sentiment"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_energytrading_posts",
+      "provider": "arctic_shift",
+      "name": "r/EnergyTrading community volume",
+      "description": "Arctic Shift \u2014 r/EnergyTrading weekly post count",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_energytrading_posts"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_oilandgas_posts",
+      "provider": "arctic_shift",
+      "name": "r/oilandgas community volume",
+      "description": "Arctic Shift \u2014 r/oilandgas weekly post count",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_oilandgas_posts"
+      ],
+      "status": "active",
+      "license": "redistributable"
+    },
+    {
+      "id": "ur_investing_posts",
+      "provider": "arctic_shift",
+      "name": "r/investing community volume",
+      "description": "Arctic Shift \u2014 r/investing weekly post count",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "energy_bottleneck_us_refiners_forums",
+      "series_keys": [
+        "ur_investing_posts"
+      ],
+      "status": "active",
+      "license": "redistributable"
     }
   ]
 }

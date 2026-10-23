@@ -1,0 +1,226 @@
+{
+  "schema_version": 0,
+  "pack": "energy_bottleneck_us_refiners_forums",
+  "description": "Forums sidecar for Energy Bottleneck US Refiners \u2014 r/EnergyTrading + r/oilandgas + r/investing; named refiners stack + crack/RIN category + community volume.",
+  "series": [
+    {
+      "key": "ur_vlo_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Valero mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning Valero",
+      "short_name": "Valero mentions",
+      "display_name": "Valero forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_vlo_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_mpc_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Marathon Petroleum mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning Marathon Petroleum",
+      "short_name": "Marathon Petroleum mentions",
+      "display_name": "Marathon Petroleum forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_mpc_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_psx_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Phillips 66 mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning Phillips 66",
+      "short_name": "Phillips 66 mentions",
+      "display_name": "Phillips 66 forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_psx_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_dino_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "HF Sinclair mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning HF Sinclair",
+      "short_name": "HF Sinclair mentions",
+      "display_name": "HF Sinclair forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_dino_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_pbf_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "PBF Energy mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning PBF Energy",
+      "short_name": "PBF Energy mentions",
+      "display_name": "PBF Energy forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_pbf_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_dk_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Delek mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts mentioning Delek",
+      "short_name": "Delek mentions",
+      "display_name": "Delek forum mentions",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ur_dk_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_crack_rin_mentions",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Crack / RIN / turnaround mention posts",
+      "official_name": "Arctic Shift \u2014 unique posts on crack spreads, RINs, turnarounds",
+      "short_name": "Crack/RIN talk",
+      "display_name": "Crack spread / RIN / turnaround forum talk",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ur_crack_rin_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_ai_tools_sentiment",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "Refiner / crack-talk sentiment",
+      "official_name": "Arctic Shift \u2014 mean lexicon polarity on named-refiner or crack/RIN posts",
+      "short_name": "Refiner talk sentiment",
+      "display_name": "Refiner & crack-talk sentiment",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ur_refiner_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Combined polarity over unique posts hitting any named refiner or crack/RIN lexicon."
+    },
+    {
+      "key": "ur_energytrading_posts",
+      "source": "arctic_shift",
+      "subreddit": "EnergyTrading",
+      "label": "r/EnergyTrading post volume",
+      "official_name": "Arctic Shift \u2014 r/EnergyTrading weekly post count",
+      "short_name": "r/EnergyTrading",
+      "display_name": "r/EnergyTrading community volume",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ur_energytrading_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_oilandgas_posts",
+      "source": "arctic_shift",
+      "subreddit": "oilandgas",
+      "label": "r/oilandgas post volume",
+      "official_name": "Arctic Shift \u2014 r/oilandgas weekly post count",
+      "short_name": "r/oilandgas",
+      "display_name": "r/oilandgas community volume",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ur_oilandgas_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ur_investing_posts",
+      "source": "arctic_shift",
+      "subreddit": "investing",
+      "label": "r/investing post volume",
+      "official_name": "Arctic Shift \u2014 r/investing weekly post count",
+      "short_name": "r/investing",
+      "display_name": "r/investing community volume",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ur_investing_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}
