@@ -1,0 +1,675 @@
+{
+  "schema_version": 0,
+  "pack": "trad_toys",
+  "description": "Toys & Hobbies '25: Trad Toys, Dolls & Games \u2014 FRED toys CPI + hobby-store sales + plastics/dolls PPI + Census HS 9503 + FMP member/segment revenue + Wikipedia brand pageviews + Amazon bestsellers brand presence + Tonies catalog + BGG family own/hotness + CPSC toy recalls. Forums in trad_toys_forums.",
+  "series": [
+    {
+      "key": "toys_cpi",
+      "source": "fred",
+      "fred_id": "CUSR0000SERE01",
+      "label": "CPI-U toys, games, hobbies, and playground equipment",
+      "official_name": "FRED CUSR0000SERE01 \u2014 CPI-U: Toys, Games, Hobbies and Playground Equipment",
+      "short_name": "Toys CPI",
+      "display_name": "US toys & games consumer prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "toys_cpi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "hobby_toy_store_sales",
+      "source": "fred",
+      "fred_id": "MRTSSM45112USN",
+      "label": "Retail sales: hobby, toy, and game stores (NSA)",
+      "official_name": "FRED MRTSSM45112USN \u2014 Retail Sales: Hobby, Toy, and Game Stores",
+      "short_name": "Hobby/toy store sales",
+      "display_name": "US hobby, toy & game store sales",
+      "frequency": "monthly",
+      "unit": "usd_millions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hobby_toy_store_sales",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "plastic_resins_ppi",
+      "source": "fred",
+      "fred_id": "WPU0662",
+      "label": "PPI thermoplastic resins and plastics materials",
+      "official_name": "FRED WPU0662 \u2014 PPI Commodity: Plastics materials and resins",
+      "short_name": "Plastic resins PPI",
+      "display_name": "US plastic resins producer prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "plastic_resins_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "notes": "Molded-toy COGS proxy."
+    },
+    {
+      "key": "dolls_toys_ppi",
+      "source": "fred",
+      "fred_id": "PCU339930339930",
+      "label": "PPI industry: doll, toy, and game manufacturing",
+      "official_name": "FRED PCU339930339930 \u2014 PPI Industry: Doll, Toy, and Game Manufacturing",
+      "short_name": "Dolls/toys PPI",
+      "display_name": "US dolls, toys & games producer prices",
+      "frequency": "monthly",
+      "unit": "index",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "dolls_toys_ppi",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "hs9503_import_value",
+      "source": "census_trade",
+      "hs6": "950300",
+      "field": "value",
+      "label": "US imports: toys (HS 9503)",
+      "official_name": "Census HS 950300 \u2014 Tricycles, scooters, pedal cars; dolls; toys; puzzles \u2014 GEN_VAL_MO",
+      "short_name": "Toy imports ($)",
+      "display_name": "US toy imports (HS 9503)",
+      "frequency": "monthly",
+      "unit": "usd",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "hs9503_import_value",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "trad_toys_member_revenue",
+      "source": "fmp_revenue",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbols": [
+        "MAT",
+        "HAS",
+        "JAKK",
+        "BBW",
+        "TOY.TO",
+        "TNIE.DE",
+        "9992.HK",
+        "7867.T"
+      ],
+      "require_all": false,
+      "label": "Theme-member revenue sum (FX\u2192USD)",
+      "official_name": "FMP revenue sum \u2014 MAT/HAS/JAKK/BBW/TOY.TO/TNIE.DE/9992.HK/7867.T at latest FRED FX",
+      "short_name": "Member revenue",
+      "display_name": "Trad-toys member revenue (USD, latest FX)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "trad_toys_member_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "mat_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "MAT",
+      "label": "Mattel revenue",
+      "official_name": "FMP income-statement revenue \u2014 MAT",
+      "short_name": "Mattel revenue",
+      "display_name": "Mattel revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "mat_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "has_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "HAS",
+      "label": "Hasbro revenue",
+      "official_name": "FMP income-statement revenue \u2014 HAS",
+      "short_name": "Hasbro revenue",
+      "display_name": "Hasbro revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "has_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "has_consumer_products",
+      "source": "fmp_revenue_segment",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "HAS",
+      "segment_aliases": [
+        "Consumer Products"
+      ],
+      "label": "Hasbro Consumer Products revenue",
+      "official_name": "FMP product segment \u2014 HAS Consumer Products",
+      "short_name": "HAS Consumer Products",
+      "display_name": "Hasbro Consumer Products revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "has_consumer_products",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "has_wizards",
+      "source": "fmp_revenue_segment",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "HAS",
+      "segment_aliases": [
+        "Wizards Of The Coast And Digital Gaming"
+      ],
+      "label": "Hasbro Wizards of the Coast & Digital Gaming",
+      "official_name": "FMP product segment \u2014 HAS Wizards Of The Coast And Digital Gaming",
+      "short_name": "HAS Wizards",
+      "display_name": "Hasbro Wizards of the Coast revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "has_wizards",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Tabletop / kidult engine; some prints sparse."
+    },
+    {
+      "key": "jakk_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "JAKK",
+      "label": "JAKKS Pacific revenue",
+      "official_name": "FMP income-statement revenue \u2014 JAKK",
+      "short_name": "JAKKS revenue",
+      "display_name": "JAKKS Pacific revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "jakk_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "bbw_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "BBW",
+      "label": "Build-A-Bear revenue",
+      "official_name": "FMP income-statement revenue \u2014 BBW",
+      "short_name": "BBW revenue",
+      "display_name": "Build-A-Bear revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "bbw_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "bbw_retail",
+      "source": "fmp_revenue_segment",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "BBW",
+      "segment_aliases": [
+        "Retail"
+      ],
+      "label": "Build-A-Bear Retail revenue",
+      "official_name": "FMP product segment \u2014 BBW Retail",
+      "short_name": "BBW Retail",
+      "display_name": "Build-A-Bear Retail revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "bbw_retail",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "gme_collectibles",
+      "source": "fmp_revenue_segment",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "GME",
+      "segment_aliases": [
+        "Collectibles"
+      ],
+      "label": "GameStop Collectibles revenue",
+      "official_name": "FMP product segment \u2014 GME Collectibles",
+      "short_name": "GME Collectibles",
+      "display_name": "GameStop Collectibles revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "gme_collectibles",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Kidult / collectible channel proxy; not core toy OEM."
+    },
+    {
+      "key": "kidult_channel_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "has_wizards",
+        "bbw_retail",
+        "gme_collectibles"
+      ],
+      "label": "Kidult / collectibles channel revenue sum",
+      "official_name": "Derived sum \u2014 HAS Wizards + BBW Retail + GME Collectibles (USD billions)",
+      "short_name": "Kidult channel (sum)",
+      "display_name": "Kidult channel revenue (Wizards + BBW Retail + GME Collectibles)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "kidult_channel_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Sum series for stacked-card YoY % (quarterly \u2014 no 3M avg)."
+    },
+    {
+      "key": "toy_to_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "TOY.TO",
+      "label": "Spin Master revenue (FX\u2192USD)",
+      "official_name": "FMP income-statement revenue \u2014 TOY.TO",
+      "short_name": "Spin Master revenue",
+      "display_name": "Spin Master revenue (USD, latest FX)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "toy_to_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "tnie_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "TNIE.DE",
+      "label": "tonies revenue (FX\u2192USD)",
+      "official_name": "FMP income-statement revenue \u2014 TNIE.DE",
+      "short_name": "tonies revenue",
+      "display_name": "tonies revenue (USD, latest FX)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "tnie_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "pop_mart_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "9992.HK",
+      "label": "Pop Mart revenue (FX\u2192USD)",
+      "official_name": "FMP income-statement revenue \u2014 9992.HK",
+      "short_name": "Pop Mart revenue",
+      "display_name": "Pop Mart revenue (USD, latest FX)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "pop_mart_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "tomy_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_to_usd": true,
+      "fmp_limit": 40,
+      "fmp_symbol": "7867.T",
+      "label": "TOMY revenue (FX\u2192USD)",
+      "official_name": "FMP income-statement revenue \u2014 7867.T",
+      "short_name": "TOMY revenue",
+      "display_name": "TOMY revenue (USD, latest FX)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "tomy_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_toy_brand_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "basket",
+      "label": "Wikipedia pageviews: Barbie+Hot Wheels+Labubu+Tonies",
+      "official_name": "Wikimedia Pageviews API \u2014 monthly user views sum (enwiki)",
+      "short_name": "Wiki brand views",
+      "display_name": "Wikipedia interest: Barbie / Hot Wheels / Labubu / Tonies",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "wiki_toy_brand_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_barbie_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "barbie",
+      "label": "Wikipedia pageviews: Barbie",
+      "official_name": "Wikimedia Pageviews \u2014 enwiki Barbie (user)",
+      "short_name": "Wiki Barbie",
+      "display_name": "Wikipedia pageviews: Barbie",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "wiki_barbie_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_hot_wheels_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "hot_wheels",
+      "label": "Wikipedia pageviews: Hot Wheels",
+      "official_name": "Wikimedia Pageviews \u2014 enwiki Hot_Wheels (user)",
+      "short_name": "Wiki Hot Wheels",
+      "display_name": "Wikipedia pageviews: Hot Wheels",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "wiki_hot_wheels_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_labubu_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "labubu",
+      "label": "Wikipedia pageviews: Labubu",
+      "official_name": "Wikimedia Pageviews \u2014 enwiki Labubu (user)",
+      "short_name": "Wiki Labubu",
+      "display_name": "Wikipedia pageviews: Labubu",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "wiki_labubu_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_tonies_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "tonies",
+      "label": "Wikipedia pageviews: Tonies",
+      "official_name": "Wikimedia Pageviews \u2014 enwiki Tonies (user)",
+      "short_name": "Wiki Tonies",
+      "display_name": "Wikipedia pageviews: Tonies",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "wiki_tonies_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "amazon_toys_brand_presence",
+      "source": "amazon_bestsellers",
+      "metric_field": "any_theme_brand",
+      "label": "Amazon Toys & Games bestseller brand hits",
+      "official_name": "Amazon Best Sellers Toys & Games \u2014 weekly count of titles matching theme brands (Chrome scrape)",
+      "short_name": "Amazon brand hits",
+      "display_name": "Amazon Toys bestsellers: theme-brand presence",
+      "frequency": "weekly",
+      "unit": "listings",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "amazon_toys_brand_presence",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "tonies_catalog_size",
+      "source": "tonies_catalog",
+      "metric_field": "catalog_size",
+      "label": "Tonies US catalog size (content SKUs)",
+      "official_name": "us.tonies.com Shopify products.json \u2014 Tonie/content SKU count",
+      "short_name": "Tonies catalog",
+      "display_name": "Tonies catalog size (US)",
+      "frequency": "weekly",
+      "unit": "skus",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "tonies_catalog_size",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "tonies_new_skus_30d",
+      "source": "tonies_catalog",
+      "metric_field": "new_skus_30d",
+      "label": "Tonies new content SKUs (trailing 30d)",
+      "official_name": "us.tonies.com \u2014 count of content SKUs with created_at in last 30 days",
+      "short_name": "Tonies new SKUs",
+      "display_name": "Tonies new catalog adds (30d)",
+      "frequency": "weekly",
+      "unit": "skus",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "tonies_new_skus_30d",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "bgg_family_own_sum",
+      "source": "bgg",
+      "metric_field": "family_own_sum",
+      "label": "BGG ownership sum: family/trad games basket",
+      "official_name": "BoardGameGeek geekdo collections own-count sum \u2014 Monopoly/UNO/Scrabble/Jenga/Connect Four/Candy Land/Ticket to Ride",
+      "short_name": "BGG family owns",
+      "display_name": "BGG collectors owning family/trad games",
+      "frequency": "weekly",
+      "unit": "users",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "bgg_family_own_sum",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "bgg_family_hot_count",
+      "source": "bgg",
+      "metric_field": "family_hot_count",
+      "label": "BGG hotness: family/trad titles in top 50",
+      "official_name": "BoardGameGeek hotness API \u2014 count of mass-market/family titles in top 50",
+      "short_name": "BGG family hot",
+      "display_name": "BGG hot list: family/trad game count",
+      "frequency": "weekly",
+      "unit": "games",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "bgg_family_hot_count",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "cpsc_toy_recalls",
+      "source": "cpsc_recalls",
+      "label": "CPSC toy product recalls (monthly count)",
+      "official_name": "saferproducts.gov Recall API \u2014 ProductType=Toys monthly count",
+      "short_name": "Toy recalls",
+      "display_name": "CPSC toy recalls (monthly)",
+      "frequency": "monthly",
+      "unit": "recalls",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 2,
+      "dataset_id": "cpsc_toy_recalls",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "notes": "Risk/reputation \u2014 not a demand score input."
+    }
+  ]
+}

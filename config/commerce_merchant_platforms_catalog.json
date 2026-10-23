@@ -1,0 +1,702 @@
+{
+  "schema_version": 0,
+  "pack": "commerce_merchant_platforms",
+  "description": "Retail Tech '26: Commerce & Merchant Platforms \u2014 FRED e-com sales + FMP member/quarterly segment mix (SHOP/TOST/XYZ/CMRC/ADBE) + Wikipedia + Shopify App Store + iTunes + npm. Annual-only segments omitted (WIX/GLBE/LSPD). GDDY Apps&Commerce Q omitted (FMP feed broken). Forums in commerce_merchant_platforms_forums. Reuses agentic_payments ecommerce_sales_share / retail_sales via attachments.",
+  "series": [
+    {
+      "key": "ecommerce_retail_sales",
+      "source": "fred",
+      "fred_id": "MRTSSM4541USS",
+      "label": "Retail sales: electronic shopping and mail-order houses",
+      "official_name": "FRED MRTSSM4541USS \u2014 Retail Sales: Electronic Shopping and Mail-Order Houses",
+      "short_name": "E-com retail sales",
+      "display_name": "US electronic shopping & mail-order retail sales",
+      "frequency": "monthly",
+      "unit": "usd_millions",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ecommerce_retail_sales_cmp",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cmp_member_revenue",
+      "source": "fmp_revenue",
+      "fmp_symbols": [
+        "SHOP",
+        "TOST",
+        "XYZ",
+        "ADBE",
+        "WIX",
+        "CMRC",
+        "GDDY",
+        "GLBE",
+        "LSPD",
+        "VTEX"
+      ],
+      "fmp_limit": 40,
+      "require_all": false,
+      "label": "Commerce platform USD member revenue sum",
+      "official_name": "FMP income-statement revenue sum \u2014 SHOP/TOST/XYZ/ADBE/WIX/CMRC/GDDY/GLBE/LSPD/VTEX",
+      "short_name": "Member revenue",
+      "display_name": "Commerce platform member revenue (USD)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "cmp_member_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "shop_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "SHOP",
+      "fmp_limit": 40,
+      "label": "Shopify revenue",
+      "official_name": "FMP income-statement revenue \u2014 SHOP",
+      "short_name": "SHOP revenue",
+      "display_name": "Shopify revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "shop_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "tost_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "TOST",
+      "fmp_limit": 40,
+      "label": "Toast revenue",
+      "official_name": "FMP income-statement revenue \u2014 TOST",
+      "short_name": "TOST revenue",
+      "display_name": "Toast revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "tost_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "xyz_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "XYZ",
+      "fmp_limit": 40,
+      "label": "Block (Square) revenue",
+      "official_name": "FMP income-statement revenue \u2014 XYZ",
+      "short_name": "XYZ revenue",
+      "display_name": "Block (Square) revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "xyz_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "adbe_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "ADBE",
+      "fmp_limit": 40,
+      "label": "Adobe revenue",
+      "official_name": "FMP income-statement revenue \u2014 ADBE",
+      "short_name": "ADBE revenue",
+      "display_name": "Adobe revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "adbe_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cmrc_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "CMRC",
+      "fmp_limit": 40,
+      "label": "Commerce.com revenue",
+      "official_name": "FMP income-statement revenue \u2014 CMRC",
+      "short_name": "CMRC revenue",
+      "display_name": "Commerce.com revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "cmrc_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "vtex_revenue_cmp",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "VTEX",
+      "fmp_limit": 40,
+      "label": "VTEX revenue",
+      "official_name": "FMP income-statement revenue \u2014 VTEX",
+      "short_name": "VTEX revenue",
+      "display_name": "VTEX revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "vtex_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "shop_service_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "SHOP",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Service",
+        "Merchant Solutions"
+      ],
+      "label": "Shopify Service / Merchant Solutions revenue",
+      "official_name": "FMP product segment \u2014 SHOP Service (alias Merchant Solutions)",
+      "short_name": "SHOP Service",
+      "display_name": "Shopify Service revenue (payments/merchant solutions)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "shop_service_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Transaction-heavy mix; margin pressure signal vs subscription."
+    },
+    {
+      "key": "shop_subscription_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "SHOP",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Subscription and Circulation",
+        "Subscription Solutions"
+      ],
+      "label": "Shopify Subscription revenue",
+      "official_name": "FMP product segment \u2014 SHOP Subscription and Circulation",
+      "short_name": "SHOP Subscription",
+      "display_name": "Shopify Subscription revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "shop_subscription_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "xyz_software_data_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "XYZ",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Software and Data Products"
+      ],
+      "label": "Block Software and Data Products revenue",
+      "official_name": "FMP product segment \u2014 XYZ Software and Data Products",
+      "short_name": "XYZ Software",
+      "display_name": "Block Software & Data revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "xyz_software_data_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "No Square vs Cash App split in FMP."
+    },
+    {
+      "key": "xyz_transaction_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "XYZ",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Transaction"
+      ],
+      "label": "Block Transaction revenue",
+      "official_name": "FMP product segment \u2014 XYZ Transaction",
+      "short_name": "XYZ Transaction",
+      "display_name": "Block Transaction revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "xyz_transaction_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "tost_technology_service",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "TOST",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Technology Service"
+      ],
+      "label": "Toast Technology Service revenue",
+      "official_name": "FMP product segment \u2014 TOST Technology Service",
+      "short_name": "TOST Tech Service",
+      "display_name": "Toast Technology Service revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "tost_technology_service",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "tost_license_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "TOST",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "License"
+      ],
+      "label": "Toast License revenue",
+      "official_name": "FMP product segment \u2014 TOST License",
+      "short_name": "TOST License",
+      "display_name": "Toast License (software) revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "tost_license_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cmrc_subscription_revenue",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "CMRC",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Subscription and Circulation"
+      ],
+      "label": "Commerce.com Subscription revenue",
+      "official_name": "FMP product segment \u2014 CMRC Subscription and Circulation",
+      "short_name": "CMRC Subscription",
+      "display_name": "Commerce.com Subscription revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "cmrc_subscription_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "adbe_digital_experience",
+      "source": "fmp_revenue_segment",
+      "fmp_symbol": "ADBE",
+      "fmp_limit": 40,
+      "segment_aliases": [
+        "Digital Experience"
+      ],
+      "label": "Adobe Digital Experience revenue",
+      "official_name": "FMP product segment \u2014 ADBE Digital Experience",
+      "short_name": "ADBE Digital Experience",
+      "display_name": "Adobe Digital Experience revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "adbe_digital_experience",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Commerce Cloud sits inside DX \u2014 not a clean Adobe Commerce line."
+    },
+    {
+      "key": "gddy_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "GDDY",
+      "fmp_limit": 40,
+      "label": "GoDaddy revenue",
+      "official_name": "FMP income-statement revenue \u2014 GDDY",
+      "short_name": "GDDY revenue",
+      "display_name": "GoDaddy revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "gddy_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Apps & Commerce quarterly segment dropped \u2014 FMP post-2025-Q1 prints are YTD/zero artifacts; company still reports the segment in filings/annual."
+    },
+    {
+      "key": "software_like_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "shop_subscription_revenue",
+        "tost_license_revenue",
+        "xyz_software_data_revenue",
+        "cmrc_subscription_revenue"
+      ],
+      "label": "Software-like platform revenue sum",
+      "official_name": "Derived sum \u2014 SHOP Subscription + TOST License + XYZ Software + CMRC Subscription",
+      "short_name": "Software-like (sum)",
+      "display_name": "Software-like platform revenue (SHOP sub + TOST license + XYZ software + CMRC sub)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "software_like_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "transaction_like_revenue",
+      "source": "derived_sum",
+      "sum_of": [
+        "shop_service_revenue",
+        "tost_technology_service",
+        "xyz_transaction_revenue"
+      ],
+      "label": "Transaction-like platform revenue sum",
+      "official_name": "Derived sum \u2014 SHOP Service + TOST Tech Service + XYZ Transaction",
+      "short_name": "Transaction-like (sum)",
+      "display_name": "Transaction-like platform revenue (SHOP service + TOST tech + XYZ txn)",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "transaction_like_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Mix / margin-pressure lens \u2014 not a GMV proxy."
+    },
+    {
+      "key": "wiki_commerce_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "basket",
+      "label": "Wikipedia commerce-platform pageviews (basket)",
+      "official_name": "Wikimedia pageviews \u2014 Shopify+Wix+Toast+Block+Adobe Commerce monthly sum",
+      "short_name": "Wiki commerce basket",
+      "display_name": "Wikipedia commerce-platform attention (basket)",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "wiki_commerce_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "wiki_shopify_pageviews",
+      "source": "wikipedia_pageviews",
+      "metric_field": "shopify",
+      "label": "Wikipedia Shopify pageviews",
+      "official_name": "Wikimedia pageviews \u2014 en.wikipedia Shopify",
+      "short_name": "Wiki Shopify",
+      "display_name": "Wikipedia Shopify pageviews",
+      "frequency": "monthly",
+      "unit": "pageviews",
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 3,
+      "dataset_id": "wiki_shopify_pageviews",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "shopify_apps_product_content",
+      "source": "shopify_app_store",
+      "metric_field": "product_content",
+      "label": "Shopify App Store \u2014 product content apps",
+      "official_name": "Shopify App Store category count \u2014 Product content",
+      "short_name": "Shopify product-content apps",
+      "display_name": "Shopify App Store: product-content apps",
+      "frequency": "weekly",
+      "unit": "apps",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "shopify_apps_product_content",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "AI listing / content tooling density proxy."
+    },
+    {
+      "key": "shopify_apps_search_filters",
+      "source": "shopify_app_store",
+      "metric_field": "search_filters",
+      "label": "Shopify App Store \u2014 search & filters apps",
+      "official_name": "Shopify App Store category count \u2014 Search and filters",
+      "short_name": "Shopify search apps",
+      "display_name": "Shopify App Store: search & filter apps",
+      "frequency": "weekly",
+      "unit": "apps",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "shopify_apps_search_filters",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "shopify_apps_category_sum",
+      "source": "shopify_app_store",
+      "metric_field": "category_sum",
+      "label": "Shopify App Store watched-category sum",
+      "official_name": "Shopify App Store \u2014 sum of product-content + search/filters + analytics counts",
+      "short_name": "Shopify apps (sum)",
+      "display_name": "Shopify App Store: watched category app count",
+      "frequency": "weekly",
+      "unit": "apps",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "shopify_apps_category_sum",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "itunes_shop_app_ratings",
+      "source": "itunes_ratings",
+      "metric_field": "shop_consumer",
+      "label": "iOS Shop app user rating count",
+      "official_name": "iTunes Lookup \u2014 Shop: Track, Pay, Discover userRatingCount",
+      "short_name": "Shop app ratings",
+      "display_name": "iOS Shop app cumulative ratings",
+      "frequency": "weekly",
+      "unit": "ratings",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "itunes_shop_app_ratings",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "itunes_ratings_basket",
+      "source": "itunes_ratings",
+      "metric_field": "ratings_basket",
+      "label": "iOS commerce-app ratings basket",
+      "official_name": "iTunes Lookup \u2014 sum of Shop + Shopify merchant + Square POS + Wix + GoDaddy rating counts",
+      "short_name": "iOS ratings basket",
+      "display_name": "iOS commerce-app cumulative ratings (basket)",
+      "frequency": "weekly",
+      "unit": "ratings",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "itunes_ratings_basket",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "npm_shopify_api_downloads",
+      "source": "npm_downloads",
+      "metric_field": "shopify_api",
+      "label": "npm @shopify/shopify-api last-month downloads",
+      "official_name": "npm registry downloads/point/last-month \u2014 @shopify/shopify-api",
+      "short_name": "npm shopify-api",
+      "display_name": "npm Shopify API downloads (last month)",
+      "frequency": "weekly",
+      "unit": "downloads",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "npm_shopify_api_downloads",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "npm_commerce_sdk_basket",
+      "source": "npm_downloads",
+      "metric_field": "npm_basket",
+      "label": "npm commerce SDK downloads basket",
+      "official_name": "npm last-month downloads sum \u2014 @shopify/shopify-api + @shopify/cli + square + @wix/sdk",
+      "short_name": "npm commerce basket",
+      "display_name": "npm commerce SDK downloads (basket, last month)",
+      "frequency": "weekly",
+      "unit": "downloads",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "npm_commerce_sdk_basket",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "wix_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "WIX",
+      "fmp_limit": 40,
+      "label": "Wix revenue",
+      "official_name": "FMP income-statement revenue \u2014 WIX",
+      "short_name": "WIX revenue",
+      "display_name": "Wix revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "wix_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "glbe_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "GLBE",
+      "fmp_limit": 40,
+      "label": "Global-e revenue",
+      "official_name": "FMP income-statement revenue \u2014 GLBE",
+      "short_name": "GLBE revenue",
+      "display_name": "Global-e revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "glbe_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    },
+    {
+      "key": "lspd_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_symbol": "LSPD",
+      "fmp_limit": 40,
+      "label": "Lightspeed revenue",
+      "official_name": "FMP income-statement revenue \u2014 LSPD",
+      "short_name": "LSPD revenue",
+      "display_name": "Lightspeed revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": [
+        "yoy_pct"
+      ],
+      "scope_default": "ticker",
+      "usefulness": 4,
+      "dataset_id": "lspd_revenue_cmp",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end"
+    }
+  ]
+}

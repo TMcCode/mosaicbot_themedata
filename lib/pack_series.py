@@ -21,6 +21,11 @@ def _yoy_lag(frequency: str) -> int:
     return 12
 
 
+def complete_points(points: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Drop partial panel prints (``incomplete: true``) for YoY / scores."""
+    return [p for p in points if not p.get("incomplete")]
+
+
 def derive_metrics(
     points: list[dict[str, Any]],
     derived_names: list[str],
@@ -28,20 +33,22 @@ def derive_metrics(
     frequency: str,
 ) -> dict[str, Any]:
     lag = _yoy_lag(frequency)
+    # Growth metrics must not compare against an incomplete current quarter.
+    pts_for_growth = complete_points(points)
     metrics: dict[str, Any] = {}
     for name in derived_names:
         if name == "yoy_pct":
             if frequency == "daily":
-                series = tx.yoy_pct_calendar(points, years=1)
+                series = tx.yoy_pct_calendar(pts_for_growth, years=1)
             else:
-                series = tx.yoy_pct(points, lag=lag)
+                series = tx.yoy_pct(pts_for_growth, lag=lag)
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
                 "latest": tx.latest(series),
             }
         elif name == "m3_avg":
-            series = tx.rolling_mean_levels(points, window=3)
+            series = tx.rolling_mean_levels(pts_for_growth, window=3)
             metrics[name] = {
                 "unit": "level",  # same dimension as raw; UI may reuse series unit
                 "points": series,
@@ -51,7 +58,7 @@ def derive_metrics(
             window = 20 if frequency == "daily" else 4
             series = [
                 {"date": p["date"], "value": round(float(p["value"]), 2)}
-                for p in tx.rolling_mean_levels(points, window=window)
+                for p in tx.rolling_mean_levels(pts_for_growth, window=window)
             ]
             metrics[name] = {
                 "unit": "level",
@@ -61,7 +68,7 @@ def derive_metrics(
         elif name == "m3_avg_yoy_pct":
             window = 3
             series = tx.rolling_mean_yoy_pct(
-                points, window=window, lag=_yoy_lag(frequency)
+                pts_for_growth, window=window, lag=_yoy_lag(frequency)
             )
             metrics[name] = {
                 "unit": "pct",
@@ -71,10 +78,10 @@ def derive_metrics(
         elif name == "wma4_yoy_pct":
             # 4W MA of YoY %: daily ≈ 20 sessions; weekly = 4 weeks.
             if frequency == "daily":
-                yoy = tx.yoy_pct_calendar(points, years=1)
+                yoy = tx.yoy_pct_calendar(pts_for_growth, years=1)
                 window = 20
             else:
-                yoy = tx.yoy_pct(points, lag=lag)
+                yoy = tx.yoy_pct(pts_for_growth, lag=lag)
                 window = 4
             series = [
                 {"date": p["date"], "value": round(float(p["value"]), 4)}
@@ -88,9 +95,9 @@ def derive_metrics(
         elif name == "yoy_4y_pct":
             # Same calendar point ~4 years prior (midterm↔midterm / prez↔prez).
             if frequency == "daily":
-                series = tx.yoy_pct_calendar(points, years=4)
+                series = tx.yoy_pct_calendar(pts_for_growth, years=4)
             else:
-                series = tx.yoy_pct(points, lag=lag * 4)
+                series = tx.yoy_pct(pts_for_growth, lag=lag * 4)
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
@@ -98,10 +105,10 @@ def derive_metrics(
             }
         elif name == "wma4_yoy_4y_pct":
             if frequency == "daily":
-                yoy = tx.yoy_pct_calendar(points, years=4)
+                yoy = tx.yoy_pct_calendar(pts_for_growth, years=4)
                 window = 20
             else:
-                yoy = tx.yoy_pct(points, lag=lag * 4)
+                yoy = tx.yoy_pct(pts_for_growth, lag=lag * 4)
                 window = 4
             series = [
                 {"date": p["date"], "value": round(float(p["value"]), 4)}
@@ -114,7 +121,7 @@ def derive_metrics(
             }
         elif name == "m3_avg_yoy_4y_pct":
             series = tx.rolling_mean_yoy_pct(
-                points, window=3, lag=lag * 4
+                pts_for_growth, window=3, lag=lag * 4
             )
             metrics[name] = {
                 "unit": "pct",
@@ -122,7 +129,7 @@ def derive_metrics(
                 "latest": tx.latest(series),
             }
         elif name == "m3_net_change":
-            series = tx.lag_diff(points, lag=3)
+            series = tx.lag_diff(pts_for_growth, lag=3)
             metrics[name] = {
                 "unit": "level_diff",
                 "points": series,
@@ -131,7 +138,7 @@ def derive_metrics(
         elif name == "wow_pct":
             # Daily: ~5 sessions ≈ week; else 1 period.
             wow_lag = 5 if frequency == "daily" else 1
-            series = tx.yoy_pct(points, lag=wow_lag)
+            series = tx.yoy_pct(pts_for_growth, lag=wow_lag)
             metrics[name] = {
                 "unit": "pct",
                 "points": series,

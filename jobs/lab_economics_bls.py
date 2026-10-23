@@ -31,6 +31,7 @@ from lib import r2 as r2lib  # noqa: E402
 from lib import transforms as tx  # noqa: E402
 from lib import census_trade as census  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
+from lib import fmp_pack as fmp_packlib  # noqa: E402
 
 SCHEMA_VERSION = 0
 PACK = "lab_economics"
@@ -235,6 +236,13 @@ def build_pack(
     timeseries_meta = [s for s in series_meta if s.get("source") == "bls"]
     qcew_meta = [s for s in series_meta if s.get("source") == "bls_qcew_open"]
     census_meta = [s for s in series_meta if s.get("source") == "census_trade"]
+    fmp_meta = [
+        s for s in series_meta if fmp_packlib.is_fmp_source(s.get("source"))
+    ]
+    fmp_caches = (
+        fmp_packlib.FmpCaches.from_catalog(catalog) if fmp_meta else None
+    )
+    fmp_notes: list[str] = []
 
     bls_ids = [s["bls_id"] for s in timeseries_meta]
     raw_by_id: dict[str, list] = {}
@@ -318,6 +326,21 @@ def build_pack(
             points = qcew_points.get(f"{area}:{metric}", [])
         elif meta.get("source") == "census_trade":
             points = census_points.get(meta["census_metric"], [])
+        elif fmp_packlib.is_fmp_source(meta.get("source")):
+            assert fmp_caches is not None
+            try:
+                points, note = fmp_caches.resolve(
+                    meta, start=f"{start_year:04d}-01-01"
+                )
+                for n in fmp_caches.notes:
+                    if n not in fmp_notes:
+                        fmp_notes.append(n)
+                fmp_caches.notes.clear()
+                fmp_notes.append(note)
+            except Exception as e:
+                errors.append(f"{key}: {e}")
+                continue
+            sid = str(meta.get("fmp_symbol") or sid)
         else:
             rows = raw_by_id.get(sid, [])
             points = rows_to_points(rows, frequency=freq)
@@ -352,6 +375,8 @@ def build_pack(
     sources = ["BLS Public Data API v2", "QCEW open data"]
     if census_meta:
         sources.append("Census intltrade imports/hs")
+    if fmp_meta:
+        sources.append("FMP income statement")
     return {
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
@@ -364,7 +389,7 @@ def build_pack(
         "attachments": attachments,
         "series": series_out,
         "errors": errors,
-        "notes": census_notes,
+        "notes": census_notes + fmp_notes,
     }
 
 

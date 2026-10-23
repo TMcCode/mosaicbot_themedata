@@ -1,0 +1,277 @@
+{
+  "schema_version": 0,
+  "pack": "streetwear_sneakers_forums",
+  "description": "Streetwear/sneaker Reddit sidecar \u2014 named brands + resale/heat category + community volume + sentiment (r/Sneakers, r/streetwear).",
+  "series": [
+    {
+      "key": "nike_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Nike",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Nike / Jordan lexicon",
+      "short_name": "Nike",
+      "display_name": "Nike mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "nike_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "jordan_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Jordan",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Air Jordan lexicon",
+      "short_name": "Jordan",
+      "display_name": "Jordan mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "jordan_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "adidas_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Adidas",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Adidas lexicon",
+      "short_name": "Adidas",
+      "display_name": "Adidas mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "adidas_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "asics_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 ASICS",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting ASICS lexicon",
+      "short_name": "ASICS",
+      "display_name": "ASICS mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "asics_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "on_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 On",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting On Running lexicon",
+      "short_name": "On",
+      "display_name": "On mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "on_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "hoka_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 HOKA",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting HOKA lexicon",
+      "short_name": "HOKA",
+      "display_name": "HOKA mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "hoka_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ugg_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 UGG",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting UGG lexicon",
+      "short_name": "UGG",
+      "display_name": "UGG mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ugg_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "crocs_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 Crocs",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting Crocs lexicon",
+      "short_name": "Crocs",
+      "display_name": "Crocs mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "crocs_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "new_balance_mentions",
+      "source": "arctic_shift",
+      "label": "Named product mentions \u2014 New Balance",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting New Balance lexicon",
+      "short_name": "New Balance",
+      "display_name": "New Balance mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "new_balance_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "sneaker_named_product_mentions",
+      "source": "arctic_shift",
+      "label": "Named sneaker/streetwear product mentions (sum)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts hitting any named brand lexicon",
+      "short_name": "Named products",
+      "display_name": "Named sneaker/streetwear talk (weekly total)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "sneaker_named_product_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Sum series for stacked-card YoY %."
+    },
+    {
+      "key": "sneaker_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts with resale / heat / drop category talk",
+      "official_name": "Arctic Shift \u2014 weekly % of watched-sub posts hitting resale/heat/drop lexicon",
+      "short_name": "Resale/heat %",
+      "display_name": "% of posts: resale, heat & drops",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "sneaker_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category bar \u2014 do not stack into product stack."
+    },
+    {
+      "key": "sneakers_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "Sneakers",
+      "label": "r/Sneakers weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/Sneakers post volume",
+      "short_name": "r/Sneakers",
+      "display_name": "r/Sneakers talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "sneakers_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "streetwear_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "streetwear",
+      "label": "r/streetwear weekly posts",
+      "official_name": "Arctic Shift \u2014 weekly r/streetwear post volume",
+      "short_name": "r/streetwear",
+      "display_name": "r/streetwear talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "streetwear_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "sneaker_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Sneaker/streetwear brand mention sentiment",
+      "official_name": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning named brands (\u22121..+1)",
+      "short_name": "Brand sentiment",
+      "display_name": "Sneaker brand sentiment (weekly)",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [
+        "wma4"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "sneaker_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

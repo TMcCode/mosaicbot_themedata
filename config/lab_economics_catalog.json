@@ -1,7 +1,7 @@
 {
   "schema_version": 0,
   "pack": "lab_economics",
-  "description": "Medical laboratories — supplies, wages, headcount, services (BLS Phase A; Census trade Phase B)",
+  "description": "Medical laboratories — supplies, wages, headcount, services (BLS) + Census HS 382219 reagent imports + CSTL revenue (FMP). Early-detection thesis series (EXAS Screening, PubMed liquid biopsy, physician emp) attached from diagnostic_platforms.",
   "series": [
     {
       "key": "lab_supplies_ppi",
@@ -281,6 +281,26 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end"
+    },
+    {
+      "key": "cstl_revenue",
+      "source": "fmp_revenue_ticker",
+      "fmp_limit": 40,
+      "fmp_symbol": "CSTL",
+      "label": "Castle Biosciences revenue",
+      "official_name": "FMP income-statement revenue — CSTL",
+      "short_name": "CSTL revenue",
+      "display_name": "Castle Biosciences revenue",
+      "frequency": "quarterly",
+      "unit": "usd_billions",
+      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "scope_default": "ticker",
+      "usefulness": 5,
+      "dataset_id": "cstl_revenue",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "notes": "Theme-member lab / early-detection operator revenue."
     }
   ]
 }

@@ -1,0 +1,43 @@
+{
+  "schema_version": 0,
+  "pack": "regulatory_testing_forums",
+  "description": "Regulatory Testing Reddit sidecar — r/regulatoryaffairs community volume + compliance/RA category % + thin digest. Brand stacks dropped (Workiva/Bentley/Cadence too sparse on Reddit). Not in backdrop scores.",
+  "series": [
+    {
+      "key": "compliance_category_mentions",
+      "source": "arctic_shift",
+      "label": "% of posts with compliance / RA / ESG / GRC talk",
+      "official_name": "Arctic Shift — weekly % of r/regulatoryaffairs posts hitting compliance/RA category lexicon",
+      "short_name": "Compliance category %",
+      "display_name": "% of r/regulatoryaffairs: compliance / RA talk",
+      "frequency": "weekly",
+      "unit": "pct",
+      "derived": ["wma4"],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "compliance_category_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Category intensity on the practitioner sub — not a named-product stack."
+    },
+    {
+      "key": "regulatoryaffairs_community_posts",
+      "source": "arctic_shift",
+      "subreddit": "regulatoryaffairs",
+      "label": "r/regulatoryaffairs weekly posts",
+      "official_name": "Arctic Shift — weekly r/regulatoryaffairs post volume",
+      "short_name": "r/regulatoryaffairs",
+      "display_name": "r/regulatoryaffairs talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": ["wow_pct"],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "regulatoryaffairs_community_posts",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}

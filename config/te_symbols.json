@@ -67,6 +67,18 @@
       "pack": "beauty_prestige",
       "status": "pull",
       "notes": "NBS total retail sales of consumer goods YoY via Trading Economics. Broad China demand proxy — cosmetics-specific NBS series is CEIC/MacroMicro (map_only) until a free scrape path exists."
+    },
+    "taiwan_industrial_production_yoy": {
+      "country": "taiwan",
+      "indicator": "industrial production",
+      "symbol": "TaiwanIP",
+      "name": "Taiwan Industrial Production YoY",
+      "url": "/taiwan/industrial-production",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "advanced_packaging",
+      "status": "pull",
+      "notes": "TE Category Industrial Production for Taiwan — prints as YoY % (HistoricalDataSymbol TaiwanIP). Hub activity proxy for TSMC/ASE/substrate packaging. Resolved 2026-10-21."
     }
   }
 }

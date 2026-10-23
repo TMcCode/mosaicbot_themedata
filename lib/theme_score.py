@@ -151,10 +151,13 @@ def _merge_signal_cfg(
 
 def _metric_points(series: dict[str, Any], metric: str) -> list[dict[str, Any]]:
     if metric in ("level", "raw", "value"):
-        return list((series.get("raw") or {}).get("points") or [])
-    derived = series.get("derived") or {}
-    meta = derived.get(metric) or {}
-    return list(meta.get("points") or [])
+        pts = list((series.get("raw") or {}).get("points") or [])
+    else:
+        derived = series.get("derived") or {}
+        meta = derived.get(metric) or {}
+        pts = list(meta.get("points") or [])
+    # Never score incomplete panel prints (partial member revenue quarters).
+    return [p for p in pts if not p.get("incomplete")]
 
 
 def _metric_latest(

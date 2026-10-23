@@ -5884,6 +5884,3886 @@
       "ticker": "COIN"
     },
     {
+      "series_key": "it_equipment_software_investment",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse ai_resilient_software \u2014 no re-pull"
+    },
+    {
+      "series_key": "corporate_profits_after_tax",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse legal_software CPATAX \u2014 no re-pull"
+    },
+    {
+      "series_key": "hyperscaler_capex",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse optical_fiber \u2014 CDNS CapEx read-through"
+    },
+    {
+      "series_key": "korea_semiconductor_exports",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse memory_cxl \u2014 CDNS cycle"
+    },
+    {
+      "series_key": "taiwan_semiconductor_exports",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse memory_cxl \u2014 CDNS cycle chart-only"
+    },
+    {
+      "series_key": "bsy_revenue",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse ai_resilient_software \u2014 stack layer"
+    },
+    {
+      "series_key": "cdns_revenue",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "note": "Reuse ai_resilient_software \u2014 stack layer"
+    },
+    {
+      "series_key": "industrial_production",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "regulatory_testing_member_revenue",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "wk_revenue",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "compliance_transcript_keywords",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "compliance_category_mentions",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "regulatoryaffairs_community_posts",
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null
+    },
+    {
+      "series_key": "wk_revenue",
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "WK"
+    },
+    {
+      "series_key": "cdns_revenue",
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "CDNS",
+      "note": "Reuse ai_resilient_software"
+    },
+    {
+      "series_key": "hyperscaler_capex",
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "CDNS",
+      "note": "Reuse optical_fiber"
+    },
+    {
+      "series_key": "bsy_revenue",
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "BSY",
+      "note": "Reuse ai_resilient_software"
+    },
+    {
+      "series_key": "hyperscaler_capex",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "hbm_packaging_capex",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "hbm_packaging_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "amat_hbm_pkg_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "amkr_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "camt_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "onto_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "klic_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "asx_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging \u2014 TWD ticker-local"
+    },
+    {
+      "series_key": "besi_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging \u2014 EUR ticker-local"
+    },
+    {
+      "series_key": "hbm_pkg_transcript_keywords",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "korea_semiconductor_exports",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "taiwan_semiconductor_exports",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "semi_measuring_instrument_import_value",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "measuring_instruments_ip",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "form_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_testing"
+    },
+    {
+      "series_key": "hbm_category_mentions",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_testing_forums \u2014 no new scrape"
+    },
+    {
+      "series_key": "semiconductors_community_posts",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_testing_forums"
+    },
+    {
+      "series_key": "hardware_community_posts",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_testing_forums"
+    },
+    {
+      "series_key": "chipdesign_community_posts",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "note": "Reuse memory_hbm_testing_forums"
+    },
+    {
+      "series_key": "tsm_revenue",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null
+    },
+    {
+      "series_key": "cowos_transcript_keywords",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null
+    },
+    {
+      "series_key": "tsm_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "TSM"
+    },
+    {
+      "series_key": "cowos_transcript_keywords",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "TSM"
+    },
+    {
+      "series_key": "asx_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "ASX",
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "amkr_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "AMKR",
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "camt_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "CAMT",
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "onto_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "ONTO",
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "besi_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "BESI.AS",
+      "note": "Reuse memory_hbm_packaging"
+    },
+    {
+      "series_key": "form_revenue",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "FORM",
+      "note": "Reuse memory_hbm_testing"
+    },
+    {
+      "series_key": "taiwan_industrial_production_yoy",
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null
+    },
+    {
+      "series_key": "taiwan_industrial_production_yoy",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "TSM"
+    },
+    {
+      "series_key": "taiwan_industrial_production_yoy",
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "ASX"
+    },
+    {
+      "series_key": "retail_sales",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "note": "Reuse agentic_payments"
+    },
+    {
+      "series_key": "fed_funds_rate",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "note": "Reuse agentic_payments \u2014 chart-only"
+    },
+    {
+      "series_key": "shop_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "note": "Reuse ai_resilient_software"
+    },
+    {
+      "series_key": "food_services_retail_sales",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "note": "Reuse value_sit_down"
+    },
+    {
+      "series_key": "opentable_us_seated_diners_yoy",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "note": "Reuse value_sit_down \u2014 chart-only"
+    },
+    {
+      "series_key": "nondefense_capex_new_orders",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "pos_member_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "four_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "par_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "xyz_revenue",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "pos_transcript_keywords",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "toast_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "square_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "clover_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "lightspeed_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "shift4_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "brink_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "pos_named_product_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "pos_category_mentions",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "ecommerce_community_posts",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "smallbusiness_community_posts",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "pos_brand_sentiment",
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_revenue",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "toast_mentions",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "opentable_us_seated_diners_yoy",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "TOST",
+      "note": "Reuse value_sit_down \u2014 chart-only"
+    },
+    {
+      "series_key": "pos_transcript_keywords",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "four_revenue",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "FOUR"
+    },
+    {
+      "series_key": "shift4_mentions",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "FOUR"
+    },
+    {
+      "series_key": "pos_transcript_keywords",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "FOUR"
+    },
+    {
+      "series_key": "par_revenue",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "PAR"
+    },
+    {
+      "series_key": "brink_mentions",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "PAR"
+    },
+    {
+      "series_key": "opentable_us_seated_diners_yoy",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "PAR",
+      "note": "Reuse value_sit_down \u2014 chart-only"
+    },
+    {
+      "series_key": "pos_transcript_keywords",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "PAR"
+    },
+    {
+      "series_key": "xyz_revenue",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "square_mentions",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "pos_transcript_keywords",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "shop_revenue",
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "SHOP",
+      "note": "Reuse ai_resilient_software"
+    },
+    {
+      "series_key": "shoe_store_sales",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sporting_goods_store_sales",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "footwear_cpi",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "cotton_ppi",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "rubber_ppi",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "footwear_import_value",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "textile_footwear_import_value",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "streetwear_member_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "nke_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "vfc_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "dks_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "deck_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "crox_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "onon_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "as_revenue",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sneaker_transcript_keywords",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "stockx_hero_premium_pct",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "stockx_hero_last_sale_index",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "nike_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "jordan_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "adidas_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "asics_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "on_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "hoka_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "ugg_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "crocs_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "new_balance_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sneaker_named_product_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sneaker_category_mentions",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sneakers_community_posts",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "streetwear_community_posts",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "sneaker_brand_sentiment",
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null
+    },
+    {
+      "series_key": "nke_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "NKE"
+    },
+    {
+      "series_key": "nike_mentions",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "NKE"
+    },
+    {
+      "series_key": "stockx_hero_premium_pct",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "NKE"
+    },
+    {
+      "series_key": "vfc_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "VFC"
+    },
+    {
+      "series_key": "dks_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DKS"
+    },
+    {
+      "series_key": "sporting_goods_store_sales",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DKS"
+    },
+    {
+      "series_key": "deck_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DECK"
+    },
+    {
+      "series_key": "hoka_mentions",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DECK"
+    },
+    {
+      "series_key": "ugg_mentions",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DECK"
+    },
+    {
+      "series_key": "crox_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "CROX"
+    },
+    {
+      "series_key": "crocs_mentions",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "CROX"
+    },
+    {
+      "series_key": "onon_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "ONON"
+    },
+    {
+      "series_key": "on_mentions",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "ONON"
+    },
+    {
+      "series_key": "as_revenue",
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "AS"
+    },
+    {
+      "series_key": "pce_recreation_services",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "brent_crude",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "fed_funds_rate",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "services_cpi",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_member_revenue",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "mass_market_cruise_revenue",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "expedition_luxury_cruise_revenue",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "carnival_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "royal_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "norwegian_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "viking_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "lindblad_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "msc_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "virgin_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "princess_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "celebrity_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_named_line_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_booking_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_destination_mentions",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_community_posts",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruises_community_posts",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "cruise_brand_sentiment",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "ccl_revenue",
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "CCL"
+    },
+    {
+      "series_key": "rcl_revenue",
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "RCL"
+    },
+    {
+      "series_key": "nclh_revenue",
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "NCLH"
+    },
+    {
+      "series_key": "vik_revenue",
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "VIK"
+    },
+    {
+      "series_key": "lind_revenue",
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "LIND"
+    },
+    {
+      "series_key": "tsa_checkpoint_throughput",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "portmiami_cruise_passengers",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "miami_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "canaveral_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "everglades_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "galveston_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "tampa_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "seattle_cruise_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "key_us_cruise_port_calls",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "seattle_cruise_passengers",
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null
+    },
+    {
+      "series_key": "vip_nonresidential",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "vip_highway",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "vip_manufacturing",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "vip_power",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "vip_residential",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "ae_employment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "construction_jolts_openings",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "highway_iiija_obligations",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "aec_software_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "adsk_aec_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "ttan_subscription_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "ttan_usage_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "kalshi_datacenter_construction_90b",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "kalshi_building_permits_1_40m",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "procore_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "autodesk_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "servicetitan_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "bentley_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "trimble_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "aec_named_product_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "aec_software_category_mentions",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "construction_community_posts",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "architects_community_posts",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "civilengineering_community_posts",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "hvac_community_posts",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "aec_tools_sentiment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "aec_software_category_sentiment",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "adsk_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "adsk_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "ADSK"
+    },
+    {
+      "series_key": "bsy_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "bsy_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "BSY"
+    },
+    {
+      "series_key": "pcor_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "pcor_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "PCOR"
+    },
+    {
+      "series_key": "trmb_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "trmb_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TRMB"
+    },
+    {
+      "series_key": "ttan_revenue",
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null
+    },
+    {
+      "series_key": "ttan_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN"
+    },
+    {
+      "series_key": "adsk_aec_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "ADSK"
+    },
+    {
+      "series_key": "ttan_subscription_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN"
+    },
+    {
+      "series_key": "ttan_usage_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN"
+    },
+    {
+      "series_key": "trmb_buildings_infrastructure_revenue",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TRMB"
+    },
+    {
+      "series_key": "vip_residential",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN",
+      "note": "Trades residential pipeline"
+    },
+    {
+      "series_key": "procore_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "PCOR"
+    },
+    {
+      "series_key": "autodesk_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "ADSK"
+    },
+    {
+      "series_key": "servicetitan_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN"
+    },
+    {
+      "series_key": "bentley_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "BSY"
+    },
+    {
+      "series_key": "trimble_mentions",
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TRMB"
+    },
+    {
+      "series_key": "professional_services_employment",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "computer_systems_design_employment",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "professional_services_jolts_openings",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "nonfarm_productivity",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "billable_hours_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_consulting_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_outsourcing_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_tm_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_fixed_price_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_cost_reimbursable_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_employees",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_employees",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "ctsh_employees",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "epam_employees",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "infy_employees",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_revenue_per_employee",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_revenue_per_employee",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_federal_obligations",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "kalshi_wa_prof_tech_emp_240k",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "accenture_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "cognizant_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "infosys_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "epam_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "booz_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "billable_named_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "billable_hours_talk_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "ai_junior_displacement_mentions",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "consulting_community_posts",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "cscareerquestions_community_posts",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "itcareerquestions_community_posts",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "billable_tools_sentiment",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "ai_junior_displacement_sentiment",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "acn_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "bah_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "bah_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "ctsh_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "ctsh_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CTSH"
+    },
+    {
+      "series_key": "epam_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "epam_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "EPAM"
+    },
+    {
+      "series_key": "infy_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "infy_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "INFY"
+    },
+    {
+      "series_key": "cap_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "cap_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CAP.PA"
+    },
+    {
+      "series_key": "gib_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "gib_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "GIB-A.TO"
+    },
+    {
+      "series_key": "erf_revenue",
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null
+    },
+    {
+      "series_key": "erf_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ERF.PA"
+    },
+    {
+      "series_key": "acn_consulting_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "acn_outsourcing_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "acn_employees",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "acn_revenue_per_employee",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "bah_tm_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "bah_fixed_price_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "bah_cost_reimbursable_revenue",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "bah_employees",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "bah_revenue_per_employee",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "bah_federal_obligations",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "ctsh_employees",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CTSH"
+    },
+    {
+      "series_key": "ctsh_revenue_per_employee",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CTSH"
+    },
+    {
+      "series_key": "epam_employees",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "EPAM"
+    },
+    {
+      "series_key": "epam_revenue_per_employee",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "EPAM"
+    },
+    {
+      "series_key": "infy_employees",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "INFY"
+    },
+    {
+      "series_key": "infy_revenue_per_employee",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "INFY"
+    },
+    {
+      "series_key": "accenture_mentions",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN"
+    },
+    {
+      "series_key": "cognizant_mentions",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CTSH"
+    },
+    {
+      "series_key": "infosys_mentions",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "INFY"
+    },
+    {
+      "series_key": "epam_mentions",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "EPAM"
+    },
+    {
+      "series_key": "booz_mentions",
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH"
+    },
+    {
+      "series_key": "farm_products_ppi",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "farm_machinery_ppi",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ag_chemicals_ppi",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "pesticide_mfg_ppi",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "corn_price",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "soy_price",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "wheat_price",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ag_employment",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_total_farm_tractors",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_hp_100_plus",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_4wd",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_combines",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "part137_operators",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "part137_drone_named",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "hs8806_import_value",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ag_drones_member_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "de_ppa_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "cnh_agriculture_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ctva_crop_protection_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "tdy_digital_imaging_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "usda_precision_ag_obligations",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "dji_agras_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "hylio_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "xag_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "deere_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "raven_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ag_drones_named_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "spray_drone_talk_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "fcc_covered_list_talk_mentions",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "agriculture_community_posts",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "drones_community_posts",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ag_drone_tools_sentiment",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "spray_drone_talk_sentiment",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "de_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "cnh_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "agco_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ctva_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "tdy_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "pl_revenue",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "de_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "DE"
+    },
+    {
+      "series_key": "de_ppa_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "DE"
+    },
+    {
+      "series_key": "cnh_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CNH"
+    },
+    {
+      "series_key": "cnh_agriculture_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CNH"
+    },
+    {
+      "series_key": "agco_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "AGCO"
+    },
+    {
+      "series_key": "ctva_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CTVA"
+    },
+    {
+      "series_key": "ctva_crop_protection_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CTVA"
+    },
+    {
+      "series_key": "tdy_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "TDY"
+    },
+    {
+      "series_key": "tdy_digital_imaging_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "TDY"
+    },
+    {
+      "series_key": "pl_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "PL"
+    },
+    {
+      "series_key": "trmb_revenue",
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "TRMB"
+    },
+    {
+      "series_key": "agtech_community_posts",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "part137_drone_share_pct",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "hs8424_ag_sprayer_import_value",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_under_40_hp",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "aem_hp_40_100",
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null
+    },
+    {
+      "series_key": "ilmn_sequencing_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "pacb_consumable_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "pacb_instrument_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "qtrx_consumables_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "qtrx_instruments_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "mass_device_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "mass_recurring_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "exas_screening_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "diagnostic_platforms_member_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "pubmed_ptau217",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "pubmed_liquid_biopsy",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "physician_offices_employment",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "lab_headcount",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From lab_economics"
+    },
+    {
+      "series_key": "lab_services_ppi",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From lab_economics"
+    },
+    {
+      "series_key": "lab_supplies_import_kg",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From lab_economics"
+    },
+    {
+      "series_key": "usaspending_nhgri_grants",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From sequencing_platforms"
+    },
+    {
+      "series_key": "usaspending_genomics_grants",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From sequencing_platforms"
+    },
+    {
+      "series_key": "instruments_mfg_employment",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From sequencing_platforms"
+    },
+    {
+      "series_key": "bioinformatics_named_product_mentions",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From genomics_forums"
+    },
+    {
+      "series_key": "bioinformatics_ngs_mentions",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From genomics_forums"
+    },
+    {
+      "series_key": "bioinformatics_platform_sentiment",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From genomics_forums"
+    },
+    {
+      "series_key": "bioinformatics_ngs_sentiment",
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "note": "From genomics_forums"
+    },
+    {
+      "series_key": "ilmn_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "ILMN"
+    },
+    {
+      "series_key": "ilmn_sequencing_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "ILMN"
+    },
+    {
+      "series_key": "pacb_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "pacb_consumable_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "pacb_instrument_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PACB"
+    },
+    {
+      "series_key": "qtrx_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QTRX"
+    },
+    {
+      "series_key": "qtrx_consumables_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QTRX"
+    },
+    {
+      "series_key": "qtrx_instruments_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QTRX"
+    },
+    {
+      "series_key": "mass_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "MASS"
+    },
+    {
+      "series_key": "mass_device_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "MASS"
+    },
+    {
+      "series_key": "mass_recurring_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "MASS"
+    },
+    {
+      "series_key": "psnl_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PSNL"
+    },
+    {
+      "series_key": "pubmed_liquid_biopsy",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PSNL"
+    },
+    {
+      "series_key": "icad_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "ICAD"
+    },
+    {
+      "series_key": "qdel_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QDEL"
+    },
+    {
+      "series_key": "exas_screening_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "ticker": null,
+      "note": "From diagnostic_platforms"
+    },
+    {
+      "series_key": "pubmed_liquid_biopsy",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "ticker": null,
+      "note": "From diagnostic_platforms"
+    },
+    {
+      "series_key": "physician_offices_employment",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "ticker": null,
+      "note": "From diagnostic_platforms"
+    },
+    {
+      "series_key": "cstl_revenue",
+      "scope": "theme",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "ticker": null
+    },
+    {
+      "series_key": "cstl_revenue",
+      "scope": "ticker",
+      "theme": "MedTech Long '26: Diagnostics & Early Detection",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "ticker": "CSTL"
+    },
+    {
+      "series_key": "ic_substrates_pureplay_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ic_substrates_pureplay_capex",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "unimicron_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ibiden_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ats_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "semco_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "kinsus_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "nanya_pcb_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "zhen_ding_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "simmtech_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "daeduck_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "unimicron_capex",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ibiden_capex",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ats_capex",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "pcb_mfg_ppi",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "semi_capacity_utilization",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "hs853400_import_value",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "kyocera_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ajinomoto_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "shennan_revenue",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "taiwan_industrial_production_yoy",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "note": "From advanced_packaging"
+    },
+    {
+      "series_key": "cowos_transcript_keywords",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "note": "From advanced_packaging \u2014 includes ABF"
+    },
+    {
+      "series_key": "taiwan_semiconductor_exports",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "note": "From memory_hbm_packaging"
+    },
+    {
+      "series_key": "korea_semiconductor_exports",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "note": "From memory_hbm_packaging"
+    },
+    {
+      "series_key": "hyperscaler_capex",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "note": "From memory_hbm_packaging"
+    },
+    {
+      "series_key": "semis_abf_mentions",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "semis_fcbga_mentions",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "semis_glass_core_mentions",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ic_substrates_named_mentions",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "substrate_category_mentions",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ic_substrates_semiconductors_community_posts",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "ic_substrates_tech_sentiment",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "substrate_category_sentiment",
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null
+    },
+    {
+      "series_key": "unimicron_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "3037.TW"
+    },
+    {
+      "series_key": "unimicron_capex",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "3037.TW"
+    },
+    {
+      "series_key": "ibiden_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "4062.T"
+    },
+    {
+      "series_key": "ibiden_capex",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "4062.T"
+    },
+    {
+      "series_key": "ats_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "ATS.VI"
+    },
+    {
+      "series_key": "ats_capex",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "ATS.VI"
+    },
+    {
+      "series_key": "semco_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "009150.KS"
+    },
+    {
+      "series_key": "kinsus_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "3189.TW"
+    },
+    {
+      "series_key": "nanya_pcb_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "8046.TW"
+    },
+    {
+      "series_key": "zhen_ding_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "4958.TW"
+    },
+    {
+      "series_key": "simmtech_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "222800.KQ"
+    },
+    {
+      "series_key": "daeduck_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "353200.KS"
+    },
+    {
+      "series_key": "shennan_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "002916.SZ"
+    },
+    {
+      "series_key": "kyocera_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "6971.T"
+    },
+    {
+      "series_key": "ajinomoto_revenue",
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "2802.T"
+    },
+    {
+      "series_key": "toys_cpi",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "hobby_toy_store_sales",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "plastic_resins_ppi",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "dolls_toys_ppi",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "hs9503_import_value",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "trad_toys_member_revenue",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "has_consumer_products",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "has_wizards",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "bbw_retail",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "gme_collectibles",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_toy_brand_pageviews",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_barbie_pageviews",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_hot_wheels_pageviews",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_labubu_pageviews",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_tonies_pageviews",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "amazon_toys_brand_presence",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "tonies_catalog_size",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "tonies_new_skus_30d",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "bgg_family_own_sum",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "bgg_family_hot_count",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "cpsc_toy_recalls",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_barbie_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_hot_wheels_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_labubu_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_tonies_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_transformers_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_named_brand_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_soldout_restock_mentions",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "actionfigures_community_posts",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "dolls_community_posts",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "blindbox_community_posts",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "toys_brand_sentiment",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "mat_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "MAT"
+    },
+    {
+      "series_key": "has_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "HAS"
+    },
+    {
+      "series_key": "has_consumer_products",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "HAS"
+    },
+    {
+      "series_key": "has_wizards",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "HAS"
+    },
+    {
+      "series_key": "jakk_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "JAKK"
+    },
+    {
+      "series_key": "bbw_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "BBW"
+    },
+    {
+      "series_key": "bbw_retail",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "BBW"
+    },
+    {
+      "series_key": "gme_collectibles",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "GME"
+    },
+    {
+      "series_key": "toy_to_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "TOY.TO"
+    },
+    {
+      "series_key": "tnie_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "TNIE.XETRA"
+    },
+    {
+      "series_key": "pop_mart_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "9992.HK"
+    },
+    {
+      "series_key": "tomy_revenue",
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "7867.T"
+    },
+    {
+      "series_key": "kidult_channel_revenue",
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null
+    },
+    {
+      "series_key": "ecommerce_retail_sales",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "ecommerce_sales_share",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null,
+      "note": "Reuse agentic_payments"
+    },
+    {
+      "series_key": "retail_sales",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null,
+      "note": "Reuse agentic_payments \u2014 chart-only"
+    },
+    {
+      "series_key": "cmp_member_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shop_service_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shop_subscription_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "software_like_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "transaction_like_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "xyz_software_data_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "xyz_transaction_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_technology_service",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_license_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmrc_subscription_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "adbe_digital_experience",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "wiki_commerce_pageviews",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shopify_apps_category_sum",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shopify_apps_product_content",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "itunes_shop_app_ratings",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "npm_commerce_sdk_basket",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "npm_shopify_api_downloads",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_shopify_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_wix_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_toast_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_square_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_godaddy_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_bigcommerce_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_named_brand_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_ai_commerce_mentions",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shopify_community_posts",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_ecommerce_community_posts",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_smallbusiness_community_posts",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmp_brand_sentiment",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "shop_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "shop_service_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "shop_subscription_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "wiki_shopify_pageviews",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "cmp_shopify_mentions",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "itunes_shop_app_ratings",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "npm_shopify_api_downloads",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP"
+    },
+    {
+      "series_key": "tost_technology_service",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "tost_license_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "cmp_toast_mentions",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "xyz_software_data_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "xyz_transaction_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "cmp_square_mentions",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "cmp_wix_mentions",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "WIX"
+    },
+    {
+      "series_key": "cmrc_subscription_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "CMRC"
+    },
+    {
+      "series_key": "cmp_godaddy_mentions",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "GDDY"
+    },
+    {
+      "series_key": "adbe_digital_experience",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "ADBE"
+    },
+    {
+      "series_key": "gddy_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "gddy_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "GDDY"
+    },
+    {
+      "series_key": "wix_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "WIX"
+    },
+    {
+      "series_key": "glbe_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "GLBE"
+    },
+    {
+      "series_key": "lspd_revenue",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "LSPD"
+    },
+    {
+      "series_key": "shop_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "xyz_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "adbe_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "wix_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "cmrc_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "glbe_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "lspd_revenue",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "vtex_revenue_cmp",
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null
+    },
+    {
+      "series_key": "tost_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "TOST"
+    },
+    {
+      "series_key": "xyz_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "XYZ"
+    },
+    {
+      "series_key": "adbe_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "ADBE"
+    },
+    {
+      "series_key": "cmrc_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "CMRC"
+    },
+    {
+      "series_key": "vtex_revenue_cmp",
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "VTEX"
+    },
+    {
       "series_key": "brent_crude_ro",
       "scope": "theme",
       "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",

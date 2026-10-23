@@ -22,7 +22,9 @@ _CAPEX = frozenset({"fmp_capex", "fmp_capex_ticker"})
 _REV = frozenset({"fmp_revenue", "fmp_revenue_ticker"})
 _SEG = frozenset({"fmp_revenue_segment"})
 _TX = frozenset({"fmp_transcript_keywords", "fmp_transcript_keywords_ticker"})
-FMP_SOURCES = _CAPEX | _REV | _SEG | _TX
+_EMP = frozenset({"fmp_employee_count"})
+_RPE = frozenset({"fmp_revenue_per_employee"})
+FMP_SOURCES = _CAPEX | _REV | _SEG | _TX | _EMP | _RPE
 
 
 def is_fmp_source(src: str | None) -> bool:
@@ -49,9 +51,13 @@ class FmpCaches:
     rev_by_symbol: dict[str, list[dict[str, Any]]] | None = None
     tx_cache: dict[tuple[str, int, int], dict[str, Any]] | None = None
     # (symbol, tuple(aliases)) → points
-    seg_by_key: dict[tuple[str, tuple[str, ...]], list[dict[str, Any]]] = field(
+    seg_by_key: dict[tuple[Any, ...], list[dict[str, Any]]] = field(
         default_factory=dict
     )
+    # If any CapEx/revenue series sets fmp_to_usd, convert the whole cache
+    # batch at latest FRED FX (constant over history). Safe for USD filers.
+    capex_to_usd: bool = False
+    rev_to_usd: bool = False
     notes: list[str] = field(default_factory=list)
 
     @classmethod
@@ -65,12 +71,20 @@ class FmpCaches:
                         if s not in out.capex_symbols:
                             out.capex_symbols.append(s)
                 _add_syms(out.capex_symbols, meta)
+                if meta.get("fmp_to_usd"):
+                    out.capex_to_usd = True
             elif src in _REV:
                 _add_syms(out.rev_symbols, meta)
+                if meta.get("fmp_to_usd"):
+                    out.rev_to_usd = True
             elif src in _SEG:
                 _add_syms(out.rev_symbols, meta)  # symbol only; fetch lazy in resolve
+                if meta.get("fmp_to_usd"):
+                    out.rev_to_usd = True  # segments use same reported ccy
             elif src in _TX:
                 _add_syms(out.tx_symbols, meta)
+            elif src in _EMP or src in _RPE:
+                pass  # resolved lazily per series
         return out
 
     def resolve(
@@ -87,9 +101,15 @@ class FmpCaches:
                 self.capex_by_symbol = fmplib.fetch_capex_by_symbol(
                     self.capex_symbols,
                     limit=int(meta.get("fmp_limit") or 40),
+                    to_usd=self.capex_to_usd or bool(meta.get("fmp_to_usd")),
                 )
                 self.notes.append(
                     f"fmp: fetched CapEx for {','.join(self.capex_symbols)}"
+                    + (
+                        " (to_usd=latest_FX)"
+                        if (self.capex_to_usd or meta.get("fmp_to_usd"))
+                        else ""
+                    )
                 )
             if src == "fmp_capex_ticker":
                 sym = str(meta.get("fmp_symbol") or "").upper()
@@ -125,13 +145,16 @@ class FmpCaches:
             if self.rev_by_symbol is None:
                 if not self.rev_symbols:
                     raise RuntimeError("no FMP revenue symbols in catalog")
+                to_usd = self.rev_to_usd or bool(meta.get("fmp_to_usd"))
                 self.rev_by_symbol = fmplib.fetch_revenue_by_symbol(
                     self.rev_symbols,
                     limit=int(meta.get("fmp_limit") or 40),
+                    to_usd=to_usd,
                 )
                 self.notes.append(
                     f"fmp: fetched revenue for {','.join(self.rev_symbols)} "
-                    f"(history from {rev_start})"
+                    f"(history from {rev_start}"
+                    f"{'; to_usd=latest_FX' if to_usd else ''})"
                 )
             if src == "fmp_revenue_ticker":
                 sym = str(meta.get("fmp_symbol") or "").upper()
@@ -171,12 +194,25 @@ class FmpCaches:
             if not aliases:
                 raise RuntimeError("segment_aliases required")
             rev_start = fmplib.revenue_history_start(start, meta)
-            cache_key = (sym, tuple(aliases))
+            to_usd = self.rev_to_usd or bool(meta.get("fmp_to_usd"))
+            period = str(meta.get("fmp_period") or "quarter").strip().lower()
+            cache_key = (
+                sym,
+                tuple(aliases),
+                bool(meta.get("skip_segment_sum_guard")),
+                to_usd,
+                period,
+            )
             if cache_key not in self.seg_by_key:
                 pts_all, mm = fmplib.fetch_quarterly_segment_revenue(
                     sym,
                     aliases,
                     limit=int(meta.get("fmp_limit") or 40),
+                    skip_segment_sum_guard=bool(
+                        meta.get("skip_segment_sum_guard")
+                    ),
+                    to_usd=to_usd,
+                    period=period,
                 )
                 self.seg_by_key[cache_key] = pts_all
                 self.notes.append(
@@ -260,6 +296,42 @@ class FmpCaches:
                 pts,
                 f"{key}: FMP transcript keywords sum "
                 f"{','.join(mm.get('symbols') or [])} quarters={mm.get('quarters')}",
+            )
+
+        if src in _EMP:
+            sym = str(meta.get("fmp_symbol") or "").upper()
+            if not sym:
+                raise RuntimeError("fmp_symbol required for fmp_employee_count")
+            pts_all, mm = fmplib.fetch_employee_count(
+                sym, limit=int(meta.get("fmp_limit") or 40)
+            )
+            pts = [
+                {"date": p["date"], "value": p["value"]}
+                for p in pts_all
+                if p["date"] >= start
+            ]
+            return (
+                pts,
+                f"{key}: FMP employee count {sym} n={len(pts)} "
+                f"(filed={mm.get('n')})",
+            )
+
+        if src in _RPE:
+            sym = str(meta.get("fmp_symbol") or "").upper()
+            if not sym:
+                raise RuntimeError("fmp_symbol required for fmp_revenue_per_employee")
+            pts_all, mm = fmplib.fetch_revenue_per_employee(
+                sym, limit=int(meta.get("fmp_limit") or 40)
+            )
+            pts = [
+                {"date": p["date"], "value": p["value"]}
+                for p in pts_all
+                if p["date"] >= start
+            ]
+            return (
+                pts,
+                f"{key}: FMP revenue/employee {sym} n={len(pts)} "
+                f"(emp_prints={mm.get('employee_n')})",
             )
 
         raise RuntimeError(f"not an FMP source: {src}")

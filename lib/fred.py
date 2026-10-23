@@ -88,6 +88,14 @@ def fetch_series(
     if not sid:
         raise RuntimeError("empty FRED series id")
 
+    def _csv() -> list[tuple[str, float]]:
+        qs = urllib.parse.urlencode({"id": sid})
+        if observation_start:
+            qs += f"&cosd={observation_start}"
+        if observation_end:
+            qs += f"&coed={observation_end}"
+        return _parse_csv(_get(f"{_CSV}?{qs}"), sid)
+
     key = _api_key()
     if key:
         params: dict[str, Any] = {
@@ -101,7 +109,18 @@ def fetch_series(
         if observation_end:
             params["observation_end"] = observation_end
         url = f"{_API}?{urllib.parse.urlencode(params)}"
-        return _parse_api(_get(url))
+        try:
+            raw = _get(url)
+            if raw.lstrip()[:1] in (b"{", b"["):
+                return _parse_api(raw)
+            # Maintenance / WAF HTML — fall through to CSV when allowed.
+            if not allow_csv_fallback:
+                allow_csv_fallback = True
+        except Exception:
+            if not allow_csv_fallback:
+                allow_csv_fallback = True
+            else:
+                raise
 
     if not allow_csv_fallback:
         raise RuntimeError(
@@ -109,9 +128,4 @@ def fetch_series(
             "(https://fred.stlouisfed.org/docs/api/api_key.html)"
         )
 
-    qs = urllib.parse.urlencode({"id": sid})
-    if observation_start:
-        qs += f"&cosd={observation_start}"
-    if observation_end:
-        qs += f"&coed={observation_end}"
-    return _parse_csv(_get(f"{_CSV}?{qs}"), sid)
+    return _csv()

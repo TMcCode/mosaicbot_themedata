@@ -19060,23 +19060,6 @@
       "as_of_semantics": "scrape_as_of"
     },
     {
-      "id": "smallbusiness_community_posts",
-      "license": "scrape",
-      "status": "pull",
-      "access": "scrape",
-      "cadence": "weekly",
-      "sector": "romantic_gifts",
-      "data_type": "forum_mentions",
-      "region": "global",
-      "description": "r/smallbusiness talk (weekly)",
-      "source": "arctic_shift",
-      "pack": "romantic_gifts_forums",
-      "series_keys": [
-        "smallbusiness_community_posts"
-      ],
-      "as_of_semantics": "scrape_as_of"
-    },
-    {
       "id": "romantic_gifts_brand_sentiment",
       "license": "scrape",
       "status": "pull",
@@ -19591,25 +19574,6 @@
       "as_of_semantics": "scrape_as_of",
       "provider": "Arctic Shift / Reddit",
       "aliases": "cloudcomputing community posts"
-    },
-    {
-      "id": "ecommerce_community_posts",
-      "license": "free",
-      "status": "pull",
-      "access": "scrape",
-      "cadence": "weekly",
-      "sector": "ai_software",
-      "data_type": "forum",
-      "region": "US",
-      "description": "r/ecommerce community volume",
-      "source": "arctic_shift",
-      "pack": "ai_resilient_software_forums",
-      "series_keys": [
-        "ecommerce_community_posts"
-      ],
-      "as_of_semantics": "scrape_as_of",
-      "provider": "Arctic Shift / Reddit",
-      "aliases": "ecommerce community posts"
     },
     {
       "id": "ai_software_brand_sentiment",
@@ -24832,6 +24796,6333 @@
       ],
       "as_of_semantics": "period_end",
       "name": "CFTC CME Bitcoin open interest"
+    },
+    {
+      "id": "industrial_production",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "regulatory_testing",
+      "data_type": "industrial production",
+      "region": "US",
+      "description": "FRED INDPRO \u2014 industrial production total index. Demand backdrop for BSY/CDNS end-markets.",
+      "source": "fred",
+      "pack": "regulatory_testing",
+      "series_keys": [
+        "industrial_production"
+      ],
+      "as_of_semantics": "period_end",
+      "provider": "Federal Reserve / FRED",
+      "fred_id": "INDPRO",
+      "aliases": "INDPRO; Industrial Production Index; industrial production"
+    },
+    {
+      "id": "regulatory_testing_member_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "regulatory_testing",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 WK+BSY+CDNS",
+      "source": "fmp",
+      "pack": "regulatory_testing",
+      "series_keys": [
+        "regulatory_testing_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Compliance software member revenue",
+      "fmp_symbols": [
+        "WK",
+        "BSY",
+        "CDNS"
+      ]
+    },
+    {
+      "id": "wk_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "regulatory_testing",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 WK",
+      "source": "fmp",
+      "pack": "regulatory_testing",
+      "series_keys": [
+        "wk_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Workiva revenue",
+      "fmp_symbols": [
+        "WK"
+      ]
+    },
+    {
+      "id": "compliance_transcript_keywords",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "regulatory_testing",
+      "data_type": "transcript_keywords",
+      "region": "US",
+      "description": "FMP transcript keyword counts \u2014 CSRD/ESG/compliance/verification for WK/BSY/CDNS",
+      "source": "fmp",
+      "pack": "regulatory_testing",
+      "series_keys": [
+        "compliance_transcript_keywords"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Compliance transcript keywords",
+      "fmp_symbols": [
+        "WK",
+        "BSY",
+        "CDNS"
+      ]
+    },
+    {
+      "id": "compliance_category_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "regulatory_testing",
+      "data_type": "forum_mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly compliance/CSRD/ESG category share",
+      "source": "arctic_shift",
+      "pack": "regulatory_testing_forums",
+      "series_keys": [
+        "compliance_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Compliance category %"
+    },
+    {
+      "id": "regulatoryaffairs_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "regulatory_testing",
+      "data_type": "forum_mentions",
+      "region": "Global",
+      "description": "Arctic Shift weekly r/regulatoryaffairs volume",
+      "source": "arctic_shift",
+      "pack": "regulatory_testing_forums",
+      "series_keys": [
+        "regulatoryaffairs_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/regulatoryaffairs posts"
+    },
+    {
+      "id": "tsm_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "advanced_packaging",
+      "data_type": "financials",
+      "region": "TW",
+      "description": "FMP income-statement revenue \u2014 TSM ADR",
+      "source": "fmp",
+      "pack": "advanced_packaging",
+      "series_keys": [
+        "tsm_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "TSMC ADR revenue",
+      "fmp_symbols": [
+        "TSM"
+      ]
+    },
+    {
+      "id": "cowos_transcript_keywords",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "advanced_packaging",
+      "data_type": "transcript_keywords",
+      "region": "Global",
+      "description": "FMP transcript CoWoS/packaging keywords \u2014 TSM/ASX/AMKR",
+      "source": "fmp",
+      "pack": "advanced_packaging",
+      "series_keys": [
+        "cowos_transcript_keywords"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "CoWoS transcript keywords",
+      "fmp_symbols": [
+        "TSM",
+        "ASX",
+        "AMKR"
+      ]
+    },
+    {
+      "id": "taiwan_industrial_production_yoy",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "advanced_packaging",
+      "data_type": "industrial production",
+      "region": "TW",
+      "description": "Taiwan industrial production YoY via Trading Economics (TaiwanIP).",
+      "source": "trading_economics",
+      "provider": "trading_economics",
+      "pack": "advanced_packaging",
+      "series_keys": [
+        "taiwan_industrial_production_yoy"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Taiwan Industrial Production YoY",
+      "aliases": [
+        "TaiwanIP",
+        "Taiwan industrial production",
+        "TWN IP"
+      ]
+    },
+    {
+      "id": "nondefense_capex_new_orders",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "payments",
+      "data_type": "manufacturers new orders",
+      "region": "US",
+      "description": "FRED NEWORDER \u2014 nondefense capital goods ex-aircraft",
+      "source": "fred",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "nondefense_capex_new_orders"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Nondefense capex new orders",
+      "fred_id": "NEWORDER",
+      "aliases": [
+        "NEWORDER",
+        "core capital goods orders"
+      ]
+    },
+    {
+      "id": "pos_member_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue sum TOST+FOUR+PAR+XYZ",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "pos_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Integrated POS USD member revenue",
+      "fmp_symbols": [
+        "TOST",
+        "FOUR",
+        "PAR",
+        "XYZ"
+      ]
+    },
+    {
+      "id": "tost_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TOST",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "tost_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Toast revenue",
+      "fmp_symbols": [
+        "TOST"
+      ]
+    },
+    {
+      "id": "four_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 FOUR",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "four_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shift4 revenue",
+      "fmp_symbols": [
+        "FOUR"
+      ]
+    },
+    {
+      "id": "par_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 PAR",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "par_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PAR Technology revenue",
+      "fmp_symbols": [
+        "PAR"
+      ]
+    },
+    {
+      "id": "xyz_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 XYZ",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "xyz_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Block revenue",
+      "fmp_symbols": [
+        "XYZ"
+      ]
+    },
+    {
+      "id": "pos_transcript_keywords",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "payments",
+      "data_type": "transcript_keywords",
+      "region": "US",
+      "description": "FMP transcript POS keywords \u2014 TOST/FOUR/PAR/XYZ",
+      "source": "fmp",
+      "pack": "integrated_pos",
+      "series_keys": [
+        "pos_transcript_keywords"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "POS transcript keywords",
+      "fmp_symbols": [
+        "TOST",
+        "FOUR",
+        "PAR",
+        "XYZ"
+      ]
+    },
+    {
+      "id": "toast_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Toast mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "toast_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Toast mentions"
+    },
+    {
+      "id": "square_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Square mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "square_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Square mentions"
+    },
+    {
+      "id": "clover_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Clover mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "clover_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Clover mentions"
+    },
+    {
+      "id": "lightspeed_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Lightspeed mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "lightspeed_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Lightspeed mentions"
+    },
+    {
+      "id": "shift4_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Shift4 mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "shift4_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Shift4 mentions"
+    },
+    {
+      "id": "brink_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Brink mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "brink_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Brink mentions"
+    },
+    {
+      "id": "pos_named_product_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 Named POS product mentions",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "pos_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Named POS product mentions"
+    },
+    {
+      "id": "pos_category_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 POS category talk %",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "pos_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "POS category talk %"
+    },
+    {
+      "id": "ecommerce_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 r/ecommerce posts",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "ecommerce_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/ecommerce posts"
+    },
+    {
+      "id": "smallbusiness_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 r/smallbusiness posts",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "smallbusiness_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/smallbusiness posts"
+    },
+    {
+      "id": "pos_brand_sentiment",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "payments",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly \u2014 POS brand sentiment",
+      "source": "arctic_shift",
+      "pack": "integrated_pos_forums",
+      "series_keys": [
+        "pos_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "POS brand sentiment"
+    },
+    {
+      "id": "shoe_store_sales",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "retail sales",
+      "region": "US",
+      "description": "FRED MRTSSM4482USS shoe stores",
+      "source": "fred",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "shoe_store_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shoe store sales",
+      "fred_id": "MRTSSM4482USS"
+    },
+    {
+      "id": "sporting_goods_store_sales",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "retail sales",
+      "region": "US",
+      "description": "FRED MRTSSM45111USS sporting goods",
+      "source": "fred",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "sporting_goods_store_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Sporting goods store sales",
+      "fred_id": "MRTSSM45111USS"
+    },
+    {
+      "id": "footwear_cpi",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "cpi",
+      "region": "US",
+      "description": "BLS CUSR0000SEAE footwear CPI (FRED mirror id)",
+      "source": "bls",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "footwear_cpi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Footwear CPI",
+      "bls_id": "CUSR0000SEAE",
+      "fred_id": "CUSR0000SEAE"
+    },
+    {
+      "id": "cotton_ppi",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "ppi",
+      "region": "US",
+      "description": "BLS WPU0141 cotton PPI (FRED mirror id)",
+      "source": "bls",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "cotton_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Cotton PPI",
+      "bls_id": "WPU0141",
+      "fred_id": "WPU0141"
+    },
+    {
+      "id": "rubber_ppi",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "ppi",
+      "region": "US",
+      "description": "BLS WPU071 rubber/plastics PPI (FRED mirror id)",
+      "source": "bls",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "rubber_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Rubber PPI",
+      "bls_id": "WPU071",
+      "fred_id": "WPU071"
+    },
+    {
+      "id": "footwear_import_value",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "trade",
+      "region": "US",
+      "description": "Census HS 640411 sports footwear imports",
+      "source": "census",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "footwear_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Sports footwear imports HS640411",
+      "hs6": "640411"
+    },
+    {
+      "id": "streetwear_member_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue sum NKE+VFC+DKS+DECK+CROX+ONON+AS",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "streetwear_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Streetwear USD member revenue",
+      "fmp_symbols": [
+        "NKE",
+        "VFC",
+        "DKS",
+        "DECK",
+        "CROX",
+        "ONON",
+        "AS"
+      ]
+    },
+    {
+      "id": "nke_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue NKE",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "nke_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Nike revenue",
+      "fmp_symbols": [
+        "NKE"
+      ]
+    },
+    {
+      "id": "vfc_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue VFC",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "vfc_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "VF revenue",
+      "fmp_symbols": [
+        "VFC"
+      ]
+    },
+    {
+      "id": "dks_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue DKS",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "dks_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Dick's revenue",
+      "fmp_symbols": [
+        "DKS"
+      ]
+    },
+    {
+      "id": "deck_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue DECK",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "deck_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Deckers revenue",
+      "fmp_symbols": [
+        "DECK"
+      ]
+    },
+    {
+      "id": "crox_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue CROX",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "crox_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Crocs revenue",
+      "fmp_symbols": [
+        "CROX"
+      ]
+    },
+    {
+      "id": "onon_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue ONON",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "onon_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "On revenue",
+      "fmp_symbols": [
+        "ONON"
+      ]
+    },
+    {
+      "id": "as_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "financials",
+      "region": "US",
+      "description": "FMP revenue AS",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "as_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Amer Sports revenue",
+      "fmp_symbols": [
+        "AS"
+      ]
+    },
+    {
+      "id": "sneaker_transcript_keywords",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "fashion",
+      "data_type": "transcript_keywords",
+      "region": "US",
+      "description": "FMP footwear transcript keywords",
+      "source": "fmp",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "sneaker_transcript_keywords"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Sneaker transcript keywords",
+      "fmp_symbols": [
+        "NKE",
+        "DECK",
+        "ONON",
+        "CROX",
+        "DKS"
+      ]
+    },
+    {
+      "id": "stockx_hero_premium_pct",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "resale premium",
+      "region": "US",
+      "description": "StockX hero SKU mean resale premium vs retail (Chrome scrape)",
+      "source": "stockx",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "stockx_hero_premium_pct"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "StockX hero resale premium",
+      "aliases": [
+        "StockX Market Index",
+        "StockX sneaker index"
+      ]
+    },
+    {
+      "id": "stockx_hero_last_sale_index",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "resale prices",
+      "region": "US",
+      "description": "StockX hero SKU mean last sale USD",
+      "source": "stockx",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "stockx_hero_last_sale_index"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "StockX hero last-sale index"
+    },
+    {
+      "id": "adidas_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly adidas_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "adidas_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "adidas mentions"
+    },
+    {
+      "id": "asics_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly asics_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "asics_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "asics mentions"
+    },
+    {
+      "id": "crocs_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly crocs_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "crocs_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "crocs mentions"
+    },
+    {
+      "id": "hoka_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly hoka_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "hoka_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "hoka mentions"
+    },
+    {
+      "id": "jordan_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly jordan_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "jordan_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "jordan mentions"
+    },
+    {
+      "id": "new_balance_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly new_balance_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "new_balance_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "new balance mentions"
+    },
+    {
+      "id": "nike_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly nike_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "nike_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "nike mentions"
+    },
+    {
+      "id": "on_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly on_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "on_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "on mentions"
+    },
+    {
+      "id": "sneaker_brand_sentiment",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly sneaker_brand_sentiment",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "sneaker_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "sneaker brand sentiment"
+    },
+    {
+      "id": "sneaker_category_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly sneaker_category_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "sneaker_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "sneaker category mentions"
+    },
+    {
+      "id": "sneaker_named_product_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly sneaker_named_product_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "sneaker_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "sneaker named product mentions"
+    },
+    {
+      "id": "sneakers_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly sneakers_community_posts",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "sneakers_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "sneakers community posts"
+    },
+    {
+      "id": "streetwear_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly streetwear_community_posts",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "streetwear_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "streetwear community posts"
+    },
+    {
+      "id": "ugg_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "fashion",
+      "data_type": "forum mentions",
+      "region": "US",
+      "description": "Arctic Shift weekly ugg_mentions",
+      "source": "arctic_shift",
+      "pack": "streetwear_sneakers_forums",
+      "series_keys": [
+        "ugg_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "ugg mentions"
+    },
+    {
+      "id": "textile_footwear_import_value",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "fashion",
+      "data_type": "trade",
+      "region": "US",
+      "description": "Census HS 640419 textile footwear imports",
+      "source": "census",
+      "pack": "streetwear_sneakers",
+      "series_keys": [
+        "textile_footwear_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Textile footwear imports HS640419",
+      "hs6": "640419"
+    },
+    {
+      "id": "pce_recreation_services",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FRED DRCARC1Q027SBEA \u2014 Personal consumption expenditures: Recreation services",
+      "source": "fred",
+      "pack": "cruises",
+      "series_keys": [
+        "pce_recreation_services"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US PCE recreation services",
+      "fred_id": "DRCARC1Q027SBEA"
+    },
+    {
+      "id": "brent_crude",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "usd_per_barrel",
+      "region": "US",
+      "description": "FRED DCOILBRENTEU \u2014 Crude Oil Prices: Brent - Europe",
+      "source": "fred",
+      "pack": "cruises",
+      "series_keys": [
+        "brent_crude"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Brent crude oil price",
+      "fred_id": "DCOILBRENTEU"
+    },
+    {
+      "id": "services_cpi",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "travel",
+      "data_type": "index",
+      "region": "US",
+      "description": "FRED CUSR0000SASLE \u2014 CPI-U: Services Less Energy Services",
+      "source": "fred",
+      "pack": "cruises",
+      "series_keys": [
+        "services_cpi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US services CPI (less energy)",
+      "fred_id": "CUSR0000SASLE"
+    },
+    {
+      "id": "cruise_member_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 Carnival, Royal Caribbean, Norwegian, Viking, Lindblad",
+      "source": "fmp_revenue",
+      "pack": "cruises",
+      "series_keys": [
+        "cruise_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Cruise USD member revenue (CCL+RCL+NCLH+VIK+LIND)"
+    },
+    {
+      "id": "mass_market_cruise_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP revenue sum \u2014 Carnival, Royal Caribbean, Norwegian",
+      "source": "fmp_revenue",
+      "pack": "cruises",
+      "series_keys": [
+        "mass_market_cruise_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Mass-market cruise revenue (CCL+RCL+NCLH)"
+    },
+    {
+      "id": "expedition_luxury_cruise_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP revenue sum \u2014 Viking + Lindblad",
+      "source": "fmp_revenue",
+      "pack": "cruises",
+      "series_keys": [
+        "expedition_luxury_cruise_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Expedition & luxury cruise revenue (VIK+LIND)"
+    },
+    {
+      "id": "ccl_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CCL",
+      "source": "fmp_revenue_ticker",
+      "pack": "cruises",
+      "series_keys": [
+        "ccl_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Carnival revenue"
+    },
+    {
+      "id": "rcl_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 RCL",
+      "source": "fmp_revenue_ticker",
+      "pack": "cruises",
+      "series_keys": [
+        "rcl_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Royal Caribbean revenue"
+    },
+    {
+      "id": "nclh_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 NCLH",
+      "source": "fmp_revenue_ticker",
+      "pack": "cruises",
+      "series_keys": [
+        "nclh_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Norwegian Cruise Line revenue"
+    },
+    {
+      "id": "vik_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 VIK",
+      "source": "fmp_revenue_ticker",
+      "pack": "cruises",
+      "series_keys": [
+        "vik_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Viking revenue"
+    },
+    {
+      "id": "lind_revenue",
+      "license": "api",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "travel",
+      "data_type": "usd_billions",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 LIND",
+      "source": "fmp_revenue_ticker",
+      "pack": "cruises",
+      "series_keys": [
+        "lind_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Lindblad Expeditions revenue"
+    },
+    {
+      "id": "carnival_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Carnival lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "carnival_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Carnival mentions (weekly)"
+    },
+    {
+      "id": "royal_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Royal Caribbean lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "royal_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Royal Caribbean mentions (weekly)"
+    },
+    {
+      "id": "norwegian_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Norwegian lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "norwegian_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Norwegian mentions (weekly)"
+    },
+    {
+      "id": "viking_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Viking lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "viking_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Viking mentions (weekly)"
+    },
+    {
+      "id": "lindblad_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Lindblad lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "lindblad_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Lindblad mentions (weekly)"
+    },
+    {
+      "id": "msc_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting MSC lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "msc_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "MSC mentions (weekly)"
+    },
+    {
+      "id": "virgin_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Virgin Voyages lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "virgin_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Virgin Voyages mentions (weekly)"
+    },
+    {
+      "id": "princess_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Princess Cruise lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "princess_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Princess mentions (weekly)"
+    },
+    {
+      "id": "celebrity_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting Celebrity Cruise lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "celebrity_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Celebrity mentions (weekly)"
+    },
+    {
+      "id": "cruise_named_line_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting any named cruise line",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruise_named_line_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Named cruise-line talk (weekly)"
+    },
+    {
+      "id": "cruise_booking_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts hitting booking/deposit/OBC/cancel lexicon",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruise_booking_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Cruise booking talk (weekly)"
+    },
+    {
+      "id": "cruise_destination_mentions",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts hitting Celebration Key / Stirrup Cay / Perfect Day etc.",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruise_destination_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Cruise destination / private-island talk (weekly)"
+    },
+    {
+      "id": "cruise_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly total posts in r/cruise",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruise_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/cruise posts (weekly)"
+    },
+    {
+      "id": "cruises_community_posts",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly total posts in r/cruises",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruises_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/cruises posts (weekly)"
+    },
+    {
+      "id": "cruise_brand_sentiment",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "forum_mentions",
+      "region": "US",
+      "description": "Arctic Shift \u2014 mean lexicon polarity over unique posts hitting any named line",
+      "source": "arctic_shift",
+      "pack": "cruises_forums",
+      "series_keys": [
+        "cruise_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Cruise line sentiment (weekly)"
+    },
+    {
+      "id": "tsa_checkpoint_throughput",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "passenger_throughput",
+      "region": "US",
+      "description": "TSA national checkpoint travel numbers (weekly sum of daily totals)",
+      "source": "tsa",
+      "pack": "cruises",
+      "series_keys": [
+        "tsa_checkpoint_throughput"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "TSA checkpoint throughput"
+    },
+    {
+      "id": "portmiami_cruise_passengers",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "travel",
+      "data_type": "cruise_passengers",
+      "region": "US",
+      "description": "PortMiami monthly cruise passenger counts (GMCVB Research PDF)",
+      "source": "gmcvb_portmiami",
+      "pack": "cruises",
+      "series_keys": [
+        "portmiami_cruise_passengers"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PortMiami cruise passengers"
+    },
+    {
+      "id": "portcount_us_cruise_calls",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "cruise_ship_calls",
+      "region": "US",
+      "description": "Monthly cruise ship calls at key US ports (PortCount cruise hub sp.r trailing window; append history)",
+      "source": "portcount",
+      "pack": "cruises",
+      "series_keys": [
+        "miami_cruise_calls",
+        "canaveral_cruise_calls",
+        "everglades_cruise_calls",
+        "galveston_cruise_calls",
+        "tampa_cruise_calls",
+        "seattle_cruise_calls",
+        "key_us_cruise_port_calls"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Key US cruise port calls (PortCount)"
+    },
+    {
+      "id": "seattle_cruise_passengers",
+      "license": "scrape",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "travel",
+      "data_type": "cruise_passengers",
+      "region": "US",
+      "description": "Port of Seattle monthly cruise passengers (Tableau Public Cruise KPI Passengers sheet via vizql bootstrap)",
+      "source": "port_of_seattle_tableau",
+      "pack": "cruises",
+      "series_keys": [
+        "seattle_cruise_passengers"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Port of Seattle cruise passengers"
+    },
+    {
+      "id": "vip_nonresidential",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census C-30 Total Construction \u2014 Nonresidential (SAAR) via FRED TLNRESCONS",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "vip_nonresidential"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US nonresidential construction spending",
+      "fred_id": "TLNRESCONS"
+    },
+    {
+      "id": "vip_highway",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census C-30 Total Construction \u2014 Highway and street (SAAR) via FRED TLHWYCONS",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "vip_highway"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US highway & street construction spending",
+      "fred_id": "TLHWYCONS"
+    },
+    {
+      "id": "vip_manufacturing",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census C-30 Total Private Construction \u2014 Manufacturing (SAAR) via FRED TLMFGCONS",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "vip_manufacturing"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US manufacturing construction spending",
+      "fred_id": "TLMFGCONS"
+    },
+    {
+      "id": "vip_power",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census C-30 Total Construction \u2014 Power (SAAR) via FRED TLPWRCONS",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "vip_power"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US power construction spending",
+      "fred_id": "TLPWRCONS"
+    },
+    {
+      "id": "vip_residential",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census C-30 Total Private Construction \u2014 Residential (SAAR) via FRED PRRESCONS",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "vip_residential"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US private residential construction spending",
+      "fred_id": "PRRESCONS"
+    },
+    {
+      "id": "ae_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BLS CES6054130001 \u2014 Architectural and Engineering Services employment (thousands, SA)",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "ae_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US architecture & engineering employment",
+      "fred_id": "CES6054130001"
+    },
+    {
+      "id": "construction_jolts_openings",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BLS JTS2300JOL \u2014 Job Openings: Construction (JOLTS, thousands, SA)",
+      "source": "fred",
+      "pack": "aec_software",
+      "series_keys": [
+        "construction_jolts_openings"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US construction job openings (JOLTS)",
+      "fred_id": "JTS2300JOL"
+    },
+    {
+      "id": "highway_iiija_obligations",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "USASpending monthly obligations \u2014 CFDA 20.205 Highway Planning and Construction",
+      "source": "usaspending",
+      "pack": "aec_software",
+      "series_keys": [
+        "highway_iiija_obligations"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US highway program obligations (CFDA 20.205)"
+    },
+    {
+      "id": "aec_software_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 ADSK,BSY,PCOR,TRMB,TTAN",
+      "source": "fmp_revenue",
+      "pack": "aec_software",
+      "series_keys": [
+        "aec_software_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "AEC software revenue (ADSK+BSY+PCOR+TRMB+TTAN)"
+    },
+    {
+      "id": "adsk_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 ADSK",
+      "source": "fmp_revenue_ticker",
+      "pack": "aec_software",
+      "series_keys": [
+        "adsk_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Autodesk revenue"
+    },
+    {
+      "id": "pcor_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 PCOR",
+      "source": "fmp_revenue_ticker",
+      "pack": "aec_software",
+      "series_keys": [
+        "pcor_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Procore revenue"
+    },
+    {
+      "id": "trmb_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TRMB",
+      "source": "fmp_revenue_ticker",
+      "pack": "aec_software",
+      "series_keys": [
+        "trmb_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Trimble revenue"
+    },
+    {
+      "id": "ttan_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TTAN",
+      "source": "fmp_revenue_ticker",
+      "pack": "aec_software",
+      "series_keys": [
+        "ttan_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "ServiceTitan revenue"
+    },
+    {
+      "id": "adsk_aec_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 ADSK Architecture Engineering And Construction",
+      "source": "fmp_revenue_segment",
+      "pack": "aec_software",
+      "series_keys": [
+        "adsk_aec_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Autodesk AEC segment revenue"
+    },
+    {
+      "id": "ttan_subscription_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 TTAN Subscription / Platform Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "aec_software",
+      "series_keys": [
+        "ttan_subscription_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "ServiceTitan subscription revenue"
+    },
+    {
+      "id": "ttan_usage_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 TTAN Usage Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "aec_software",
+      "series_keys": [
+        "ttan_usage_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "ServiceTitan usage revenue"
+    },
+    {
+      "id": "trmb_buildings_infrastructure_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 TRMB Buildings and Infrastructure (legacy industry taxonomy)",
+      "source": "fmp_revenue_segment",
+      "pack": "aec_software",
+      "series_keys": [
+        "trmb_buildings_infrastructure_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Trimble Buildings & Infrastructure revenue (legacy)"
+    },
+    {
+      "id": "kalshi_datacenter_construction_90b",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Kalshi KXDATACENTCON-26NOV02-T90.0 \u2014 P(yes) US private data center construction spending above $90.0B",
+      "source": "kalshi",
+      "pack": "aec_software",
+      "series_keys": [
+        "kalshi_datacenter_construction_90b"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "name": "Kalshi: data-center construction above $90B (yes %)"
+    },
+    {
+      "id": "kalshi_building_permits_1_40m",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Kalshi KXBUILDPERMS-26NOV18-T1.400 \u2014 P(yes) US building permits above 1.400M",
+      "source": "kalshi",
+      "pack": "aec_software",
+      "series_keys": [
+        "kalshi_building_permits_1_40m"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "name": "Kalshi: building permits above 1.40M (yes %)"
+    },
+    {
+      "id": "procore_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Procore across AEC/trades subs",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "procore_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Procore mentions (weekly)"
+    },
+    {
+      "id": "autodesk_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Autodesk family (Revit, AutoCAD, BIM 360, ACC) across AEC/trades subs",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "autodesk_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Autodesk & Revit mentions (weekly)"
+    },
+    {
+      "id": "servicetitan_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning ServiceTitan across AEC/trades subs",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "servicetitan_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "ServiceTitan mentions (weekly)"
+    },
+    {
+      "id": "trimble_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Trimble across AEC/trades subs",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "trimble_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Trimble mentions (weekly)"
+    },
+    {
+      "id": "aec_named_product_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning any named AEC/trades software brand in watchlist",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "aec_named_product_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "AEC software product talk total (weekly)"
+    },
+    {
+      "id": "aec_software_category_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting AEC/construction-software category lexicon",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "aec_software_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of posts: BIM & construction software talk"
+    },
+    {
+      "id": "construction_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/Construction post volume",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "construction_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/Construction talk (weekly)"
+    },
+    {
+      "id": "architects_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/architects post volume",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "architects_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/architects talk (weekly)"
+    },
+    {
+      "id": "civilengineering_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/civilengineering post volume",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "civilengineering_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/civilengineering talk (weekly)"
+    },
+    {
+      "id": "hvac_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/HVAC post volume",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "hvac_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/HVAC talk (weekly)"
+    },
+    {
+      "id": "aec_tools_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning any named AEC software brand (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "aec_tools_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "AEC software product sentiment (weekly)"
+    },
+    {
+      "id": "aec_software_category_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of AEC software category posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "aec_software_category_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "BIM & construction software sentiment (weekly)"
+    },
+    {
+      "id": "procore_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Procore posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "procore_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Procore sentiment (weekly)"
+    },
+    {
+      "id": "autodesk_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Autodesk-family posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "autodesk_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Autodesk sentiment (weekly)"
+    },
+    {
+      "id": "servicetitan_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of ServiceTitan posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "servicetitan_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "ServiceTitan sentiment (weekly)"
+    },
+    {
+      "id": "bentley_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Bentley-family posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "bentley_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Bentley sentiment (weekly)"
+    },
+    {
+      "id": "trimble_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "construction_software",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Trimble posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "aec_software_forums",
+      "series_keys": [
+        "trimble_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Trimble sentiment (weekly)"
+    },
+    {
+      "id": "computer_systems_design_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BLS CES6054150001 \u2014 Computer Systems Design and Related Services (NAICS 5415) employment, SA",
+      "source": "fred",
+      "pack": "billable_hours",
+      "series_keys": [
+        "computer_systems_design_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US computer systems design employment",
+      "fred_id": "CES6054150001"
+    },
+    {
+      "id": "professional_services_jolts_openings",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BLS JTS540099JOL \u2014 Job Openings: Professional and Business Services (JOLTS, thousands, SA)",
+      "source": "fred",
+      "pack": "billable_hours",
+      "series_keys": [
+        "professional_services_jolts_openings"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US professional & business services job openings",
+      "fred_id": "JTS540099JOL"
+    },
+    {
+      "id": "billable_hours_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 ACN,BAH,CTSH,EPAM,INFY (USD)",
+      "source": "fmp_revenue",
+      "pack": "billable_hours",
+      "series_keys": [
+        "billable_hours_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "IT services revenue (ACN+BAH+CTSH+EPAM+INFY)"
+    },
+    {
+      "id": "acn_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 ACN",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "acn_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Accenture revenue"
+    },
+    {
+      "id": "bah_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 BAH",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen Hamilton revenue"
+    },
+    {
+      "id": "ctsh_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CTSH",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "ctsh_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Cognizant revenue"
+    },
+    {
+      "id": "epam_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 EPAM",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "epam_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "EPAM Systems revenue"
+    },
+    {
+      "id": "infy_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 INFY",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "infy_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Infosys revenue"
+    },
+    {
+      "id": "cap_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CAP.PA (EUR)",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "cap_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Capgemini revenue (EUR)"
+    },
+    {
+      "id": "gib_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 GIB (CAD)",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "gib_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "CGI revenue (CAD)"
+    },
+    {
+      "id": "erf_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 ERF.PA (EUR)",
+      "source": "fmp_revenue_ticker",
+      "pack": "billable_hours",
+      "series_keys": [
+        "erf_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Eurofins Scientific revenue (EUR)"
+    },
+    {
+      "id": "acn_consulting_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 ACN Consulting Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "billable_hours",
+      "series_keys": [
+        "acn_consulting_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Accenture consulting revenue"
+    },
+    {
+      "id": "acn_outsourcing_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 ACN Outsourcing Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "billable_hours",
+      "series_keys": [
+        "acn_outsourcing_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Accenture outsourcing revenue"
+    },
+    {
+      "id": "bah_tm_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 BAH Time-and-materials Contract",
+      "source": "fmp_revenue_segment",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_tm_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen time-and-materials revenue"
+    },
+    {
+      "id": "bah_fixed_price_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 BAH Fixed-price Contract",
+      "source": "fmp_revenue_segment",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_fixed_price_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen fixed-price revenue"
+    },
+    {
+      "id": "bah_cost_reimbursable_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue-product-segmentation \u2014 BAH Cost Reimbursable Contract",
+      "source": "fmp_revenue_segment",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_cost_reimbursable_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen cost-reimbursable revenue"
+    },
+    {
+      "id": "acn_employees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP historical-employee-count \u2014 ACN (SEC 10-K)",
+      "source": "fmp_employee_count",
+      "pack": "billable_hours",
+      "series_keys": [
+        "acn_employees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Accenture employees"
+    },
+    {
+      "id": "bah_employees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP historical-employee-count \u2014 BAH (SEC 10-K)",
+      "source": "fmp_employee_count",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_employees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen employees"
+    },
+    {
+      "id": "ctsh_employees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP historical-employee-count \u2014 CTSH (SEC 10-K)",
+      "source": "fmp_employee_count",
+      "pack": "billable_hours",
+      "series_keys": [
+        "ctsh_employees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Cognizant employees"
+    },
+    {
+      "id": "epam_employees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP historical-employee-count \u2014 EPAM (SEC 10-K)",
+      "source": "fmp_employee_count",
+      "pack": "billable_hours",
+      "series_keys": [
+        "epam_employees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "EPAM employees"
+    },
+    {
+      "id": "infy_employees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP historical-employee-count \u2014 INFY",
+      "source": "fmp_employee_count",
+      "pack": "billable_hours",
+      "series_keys": [
+        "infy_employees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Infosys employees"
+    },
+    {
+      "id": "acn_revenue_per_employee",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP annual revenue / historical-employee-count \u2014 ACN",
+      "source": "fmp_revenue_per_employee",
+      "pack": "billable_hours",
+      "series_keys": [
+        "acn_revenue_per_employee"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Accenture revenue per employee"
+    },
+    {
+      "id": "bah_revenue_per_employee",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP annual revenue / historical-employee-count \u2014 BAH",
+      "source": "fmp_revenue_per_employee",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_revenue_per_employee"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen revenue per employee"
+    },
+    {
+      "id": "ctsh_revenue_per_employee",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP annual revenue / historical-employee-count \u2014 CTSH",
+      "source": "fmp_revenue_per_employee",
+      "pack": "billable_hours",
+      "series_keys": [
+        "ctsh_revenue_per_employee"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Cognizant revenue per employee"
+    },
+    {
+      "id": "epam_revenue_per_employee",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP annual revenue / historical-employee-count \u2014 EPAM",
+      "source": "fmp_revenue_per_employee",
+      "pack": "billable_hours",
+      "series_keys": [
+        "epam_revenue_per_employee"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "EPAM revenue per employee"
+    },
+    {
+      "id": "infy_revenue_per_employee",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "annual",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP annual revenue / historical-employee-count \u2014 INFY",
+      "source": "fmp_revenue_per_employee",
+      "pack": "billable_hours",
+      "series_keys": [
+        "infy_revenue_per_employee"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Infosys revenue per employee"
+    },
+    {
+      "id": "bah_federal_obligations",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "USASpending monthly contract obligations \u2014 recipient Booz Allen Hamilton",
+      "source": "usaspending",
+      "pack": "billable_hours",
+      "series_keys": [
+        "bah_federal_obligations"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Booz Allen federal contract obligations"
+    },
+    {
+      "id": "kalshi_wa_prof_tech_emp_240k",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Kalshi KXWATECHEMP-27FEB28-T240000 \u2014 P(yes) Washington prof/scientific/technical employment above 240,000",
+      "source": "kalshi",
+      "pack": "billable_hours",
+      "series_keys": [
+        "kalshi_wa_prof_tech_emp_240k"
+      ],
+      "as_of_semantics": "vendor_as_of",
+      "name": "Kalshi: WA professional employment above 240k (yes %)"
+    },
+    {
+      "id": "accenture_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Accenture across consulting/career subs",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "accenture_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Accenture mentions (weekly)"
+    },
+    {
+      "id": "cognizant_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Cognizant across consulting/career subs",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "cognizant_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Cognizant mentions (weekly)"
+    },
+    {
+      "id": "infosys_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Infosys across consulting/career subs",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "infosys_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Infosys mentions (weekly)"
+    },
+    {
+      "id": "epam_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning EPAM across consulting/career subs",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "epam_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "EPAM mentions (weekly)"
+    },
+    {
+      "id": "booz_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Booz Allen or BAH across consulting/career subs",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "booz_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Booz Allen mentions (weekly)"
+    },
+    {
+      "id": "billable_named_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning any named firm in watchlist",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "billable_named_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "IT services firm talk total (weekly)"
+    },
+    {
+      "id": "billable_hours_talk_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting billable-hours category lexicon",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "billable_hours_talk_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of posts: billable hours & utilization talk"
+    },
+    {
+      "id": "ai_junior_displacement_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting AI junior-displacement category lexicon",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "ai_junior_displacement_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of posts: AI replacing junior roles"
+    },
+    {
+      "id": "consulting_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/consulting post volume",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "consulting_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/consulting talk (weekly)"
+    },
+    {
+      "id": "cscareerquestions_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/cscareerquestions post volume",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "cscareerquestions_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/cscareerquestions talk (weekly)"
+    },
+    {
+      "id": "itcareerquestions_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/ITCareerQuestions post volume",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "itcareerquestions_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/ITCareerQuestions talk (weekly)"
+    },
+    {
+      "id": "billable_tools_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning any named firm (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "billable_tools_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "IT services firm sentiment (weekly)"
+    },
+    {
+      "id": "ai_junior_displacement_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of AI-vs-juniors category posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "ai_junior_displacement_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "AI replacing juniors sentiment (weekly)"
+    },
+    {
+      "id": "accenture_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Accenture posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "accenture_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Accenture sentiment (weekly)"
+    },
+    {
+      "id": "cognizant_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Cognizant posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "cognizant_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Cognizant sentiment (weekly)"
+    },
+    {
+      "id": "infosys_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Infosys posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "infosys_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Infosys sentiment (weekly)"
+    },
+    {
+      "id": "epam_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of EPAM posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "epam_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "EPAM sentiment (weekly)"
+    },
+    {
+      "id": "booz_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "it_services",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of Booz Allen posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "billable_hours_forums",
+      "series_keys": [
+        "booz_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Booz Allen sentiment (weekly)"
+    },
+    {
+      "id": "farm_products_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED WPU01 \u2014 Producer Price Index by Commodity: Farm Products",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "farm_products_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US farm products PPI",
+      "fred_id": "WPU01"
+    },
+    {
+      "id": "farm_machinery_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED WPU111 \u2014 PPI by Commodity: Machinery and Equipment: Farm Machinery and Equipment",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "farm_machinery_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US farm machinery PPI",
+      "fred_id": "WPU111"
+    },
+    {
+      "id": "ag_chemicals_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED WPU065 \u2014 PPI by Commodity: Chemicals and Allied Products: Agricultural Chemicals",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "ag_chemicals_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US agricultural chemicals PPI",
+      "fred_id": "WPU065"
+    },
+    {
+      "id": "pesticide_mfg_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED PCU325320325320P \u2014 PPI industry data for pesticide and other agricultural chemical mfg",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "pesticide_mfg_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US pesticide manufacturing PPI",
+      "fred_id": "PCU325320325320P"
+    },
+    {
+      "id": "corn_price",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED PMAIZMTUSDM \u2014 Global price of Corn (USD per metric ton)",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "corn_price"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Global corn price",
+      "fred_id": "PMAIZMTUSDM"
+    },
+    {
+      "id": "soy_price",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED PSOYBUSDQ \u2014 Global price of Soybeans (USD per metric ton)",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "soy_price"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Global soybean price",
+      "fred_id": "PSOYBUSDQ"
+    },
+    {
+      "id": "wheat_price",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED PWHEAMTUSDM \u2014 Global price of Wheat (USD per metric ton)",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "wheat_price"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Global wheat price",
+      "fred_id": "PWHEAMTUSDM"
+    },
+    {
+      "id": "ag_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED LNS12034560 \u2014 Employment Level - Agriculture and Related Industries (thousands)",
+      "source": "fred",
+      "pack": "ag_drones",
+      "series_keys": [
+        "ag_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US agriculture employment",
+      "fred_id": "LNS12034560"
+    },
+    {
+      "id": "aem_total_farm_tractors",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM US Ag Tractor and Combine Report \u2014 Total Farm Tractors monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_total_farm_tractors"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US farm tractor retail sales (AEM)"
+    },
+    {
+      "id": "aem_hp_100_plus",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM \u2014 2WD Farm Tractors 100+ HP monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_hp_100_plus"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US 100+ HP tractor sales (AEM)"
+    },
+    {
+      "id": "aem_4wd",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM \u2014 4WD Farm Tractors monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_4wd"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US 4WD tractor sales (AEM)"
+    },
+    {
+      "id": "aem_combines",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM \u2014 Self-Prop Combines monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_combines"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US combine retail sales (AEM)"
+    },
+    {
+      "id": "part137_operators",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "v-1x FAR Part 137 operator roster count (FAA air-operator mirror)",
+      "source": "faa_part137",
+      "pack": "ag_drones",
+      "series_keys": [
+        "part137_operators"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "US Part 137 ag aircraft operators"
+    },
+    {
+      "id": "part137_drone_named",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "v-1x Part 137 roster \u2014 name/slug lexicon (drone|uas|uav|hylio|xag|\u2026)",
+      "source": "faa_part137",
+      "pack": "ag_drones",
+      "series_keys": [
+        "part137_drone_named"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Part 137 operators with drone in name"
+    },
+    {
+      "id": "hs8806_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census Intl Trade \u2014 HS 8806 Unmanned aircraft, monthly general import value (world)",
+      "source": "census_trade",
+      "pack": "ag_drones",
+      "series_keys": [
+        "hs8806_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US UAV imports (HS 8806 value)"
+    },
+    {
+      "id": "ag_drones_member_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 DE,CNH,AGCO,CTVA,TDY,PL (USD)",
+      "source": "fmp_revenue",
+      "pack": "ag_drones",
+      "series_keys": [
+        "ag_drones_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Ag drones member revenue (DE+CNH+AGCO+CTVA+TDY+PL)"
+    },
+    {
+      "id": "de_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 DE",
+      "source": "fmp_revenue_ticker",
+      "pack": "ag_drones",
+      "series_keys": [
+        "de_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Deere revenue"
+    },
+    {
+      "id": "cnh_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CNH",
+      "source": "fmp_revenue_ticker",
+      "pack": "ag_drones",
+      "series_keys": [
+        "cnh_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "CNH Industrial revenue"
+    },
+    {
+      "id": "agco_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 AGCO",
+      "source": "fmp_revenue_ticker",
+      "pack": "ag_drones",
+      "series_keys": [
+        "agco_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "AGCO revenue"
+    },
+    {
+      "id": "ctva_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CTVA",
+      "source": "fmp_revenue_ticker",
+      "pack": "ag_drones",
+      "series_keys": [
+        "ctva_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Corteva revenue"
+    },
+    {
+      "id": "tdy_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TDY",
+      "source": "fmp_revenue_ticker",
+      "pack": "ag_drones",
+      "series_keys": [
+        "tdy_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Teledyne revenue"
+    },
+    {
+      "id": "de_ppa_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 DE Production & Precision Ag (PPA)",
+      "source": "fmp_revenue_segment",
+      "pack": "ag_drones",
+      "series_keys": [
+        "de_ppa_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Deere Production & Precision Ag revenue"
+    },
+    {
+      "id": "cnh_agriculture_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 CNH Agriculture / Agricultural Equipment",
+      "source": "fmp_revenue_segment",
+      "pack": "ag_drones",
+      "series_keys": [
+        "cnh_agriculture_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "CNH Agriculture revenue"
+    },
+    {
+      "id": "ctva_crop_protection_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 CTVA Crop Protection",
+      "source": "fmp_revenue_segment",
+      "pack": "ag_drones",
+      "series_keys": [
+        "ctva_crop_protection_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Corteva Crop Protection revenue"
+    },
+    {
+      "id": "tdy_digital_imaging_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 TDY Digital Imaging",
+      "source": "fmp_revenue_segment",
+      "pack": "ag_drones",
+      "series_keys": [
+        "tdy_digital_imaging_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Teledyne Digital Imaging revenue"
+    },
+    {
+      "id": "usda_precision_ag_obligations",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "USASpending.gov monthly obligations matching precision agriculture / UAV keywords",
+      "source": "usaspending",
+      "pack": "ag_drones",
+      "series_keys": [
+        "usda_precision_ag_obligations"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Federal precision-ag / UAV award obligations"
+    },
+    {
+      "id": "dji_agras_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning DJI Agras / Agras T40/T50/T100",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "dji_agras_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "DJI Agras mentions (weekly)"
+    },
+    {
+      "id": "hylio_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Hylio",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "hylio_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Hylio mentions (weekly)"
+    },
+    {
+      "id": "xag_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning XAG",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "xag_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "XAG mentions (weekly)"
+    },
+    {
+      "id": "deere_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning John Deere, Operations Center, or See & Spray",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "deere_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "John Deere / See & Spray mentions (weekly)"
+    },
+    {
+      "id": "raven_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly posts mentioning Raven, Case IH Trident, or CNH FieldOps",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "raven_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Raven / CNH precision mentions (weekly)"
+    },
+    {
+      "id": "ag_drones_named_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning any named ag-drone product",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "ag_drones_named_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Ag drone product talk total (weekly)"
+    },
+    {
+      "id": "spray_drone_talk_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting spray-drone category lexicon",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "spray_drone_talk_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of posts: spray drone & Part 137 talk"
+    },
+    {
+      "id": "fcc_covered_list_talk_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting FCC Covered List / DJI ban lexicon",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "fcc_covered_list_talk_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of posts: FCC Covered List / DJI ban talk"
+    },
+    {
+      "id": "agriculture_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/Agriculture post volume",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "agriculture_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/Agriculture talk (weekly)"
+    },
+    {
+      "id": "drones_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/drones post volume",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "drones_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/drones talk (weekly)"
+    },
+    {
+      "id": "ag_drone_tools_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of posts mentioning any named product (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "ag_drone_tools_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Ag drone product sentiment (weekly)"
+    },
+    {
+      "id": "spray_drone_talk_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity of spray-drone category posts (\u22121..+1)",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "spray_drone_talk_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Spray drone talk sentiment (weekly)"
+    },
+    {
+      "id": "agtech_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/AgTech post volume",
+      "source": "arctic_shift",
+      "pack": "ag_drones_forums",
+      "series_keys": [
+        "agtech_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/AgTech talk (weekly)"
+    },
+    {
+      "id": "part137_drone_share_pct",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "v-1x Part 137 \u2014 100 \u00d7 drone_named / total operators",
+      "source": "faa_part137",
+      "pack": "ag_drones",
+      "series_keys": [
+        "part137_drone_share_pct"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Part 137 drone-named share of operators"
+    },
+    {
+      "id": "hs8424_ag_sprayer_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census Intl Trade \u2014 sum of HS6 842441/842449/842482 (ag/horticultural sprayers & liquid projectors), monthly general import value (world)",
+      "source": "census_trade",
+      "pack": "ag_drones",
+      "series_keys": [
+        "hs8424_ag_sprayer_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US ag sprayer imports (HS 8424 subset)"
+    },
+    {
+      "id": "aem_under_40_hp",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM \u2014 2WD Farm Tractors < 40 HP monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_under_40_hp"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US <40 HP tractor sales (AEM)"
+    },
+    {
+      "id": "aem_hp_40_100",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "sector": "agriculture",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "AEM \u2014 2WD Farm Tractors 40 < 100 HP monthly retail units",
+      "source": "aem_tractor_combine",
+      "pack": "ag_drones",
+      "series_keys": [
+        "aem_hp_40_100"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US 40\u2013100 HP tractor sales (AEM)"
+    },
+    {
+      "id": "ilmn_sequencing_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 ILMN Sequencing",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "ilmn_sequencing_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Illumina Sequencing revenue"
+    },
+    {
+      "id": "pacb_consumable_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 PACB Consumable",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "pacb_consumable_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PacBio consumables revenue"
+    },
+    {
+      "id": "pacb_instrument_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 PACB Instrument",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "pacb_instrument_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PacBio instrument revenue"
+    },
+    {
+      "id": "qtrx_consumables_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 QTRX Consumable And Other Products",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "qtrx_consumables_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Quanterix consumables revenue"
+    },
+    {
+      "id": "qtrx_instruments_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 QTRX Instruments",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "qtrx_instruments_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Quanterix instruments revenue"
+    },
+    {
+      "id": "mass_device_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 MASS Device Sales / Product",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "mass_device_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "10x Genomics device sales"
+    },
+    {
+      "id": "mass_recurring_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 MASS Recurring / Consumables and service",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "mass_recurring_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "10x Genomics recurring revenue"
+    },
+    {
+      "id": "exas_screening_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 EXAS Screening",
+      "source": "fmp_revenue_segment",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "exas_screening_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Exact Sciences screening revenue"
+    },
+    {
+      "id": "diagnostic_platforms_member_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 ILMN+PACB+QTRX+MASS+PSNL+ICAD+QDEL",
+      "source": "fmp_revenue",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "diagnostic_platforms_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Diagnostic platforms member revenue"
+    },
+    {
+      "id": "ilmn_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 ILMN",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "ilmn_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Illumina revenue"
+    },
+    {
+      "id": "pacb_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 PACB",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "pacb_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PacBio revenue"
+    },
+    {
+      "id": "qtrx_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 QTRX",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "qtrx_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Quanterix revenue"
+    },
+    {
+      "id": "mass_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 MASS",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "mass_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "10x Genomics revenue"
+    },
+    {
+      "id": "psnl_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 PSNL",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "psnl_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Personalis revenue"
+    },
+    {
+      "id": "icad_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 ICAD",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "icad_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "iCAD revenue"
+    },
+    {
+      "id": "qdel_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 QDEL",
+      "source": "fmp_revenue_ticker",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "qdel_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "QuidelOrtho revenue"
+    },
+    {
+      "id": "pubmed_ptau217",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "NCBI PubMed esearch count \u2014 p-Tau217 / pTau217 (publication date)",
+      "source": "pubmed",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "pubmed_ptau217"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PubMed publications mentioning p-Tau217"
+    },
+    {
+      "id": "pubmed_liquid_biopsy",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "NCBI PubMed esearch count \u2014 liquid biopsy (publication date)",
+      "source": "pubmed",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "pubmed_liquid_biopsy"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "PubMed publications mentioning liquid biopsy"
+    },
+    {
+      "id": "physician_offices_employment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "All employees, offices of physicians (NAICS 6211)",
+      "source": "fred",
+      "pack": "diagnostic_platforms",
+      "series_keys": [
+        "physician_offices_employment"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US physician offices employment"
+    },
+    {
+      "id": "cstl_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "medtech",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 CSTL",
+      "source": "fmp_revenue_ticker",
+      "pack": "lab_economics",
+      "series_keys": [
+        "cstl_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Castle Biosciences revenue"
+    },
+    {
+      "id": "ic_substrates_pureplay_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP revenue sum \u2014 Unimicron/Kinsus/Nan Ya PCB/Zhen Ding/Ibiden/SEMCO/Simmtech/Daeduck/AT&S at latest FRED FX",
+      "source": "fmp_revenue",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ic_substrates_pureplay_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "IC substrate pure-play revenue (USD, latest FX)"
+    },
+    {
+      "id": "ic_substrates_pureplay_capex",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP CapEx sum \u2014 substrate pure-plays at latest FRED FX",
+      "source": "fmp_capex",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ic_substrates_pureplay_capex"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "IC substrate pure-play CapEx (USD, latest FX)"
+    },
+    {
+      "id": "unimicron_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 3037.TW at latest FRED TWD FX",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "unimicron_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Unimicron revenue (USD, latest FX)"
+    },
+    {
+      "id": "ibiden_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 4062.T at latest FRED JPY FX",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ibiden_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Ibiden revenue (USD, latest FX)"
+    },
+    {
+      "id": "ats_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 ATS.VI at latest FRED EUR FX",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ats_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "AT&S revenue (USD, latest FX)"
+    },
+    {
+      "id": "semco_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 009150.KS at latest FRED KRW FX",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "semco_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "SEMCO revenue (USD, latest FX)"
+    },
+    {
+      "id": "kinsus_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 3189.TW",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "kinsus_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Kinsus revenue (USD, latest FX)"
+    },
+    {
+      "id": "nanya_pcb_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 8046.TW",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "nanya_pcb_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Nan Ya PCB revenue (USD, latest FX)"
+    },
+    {
+      "id": "zhen_ding_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 4958.TW",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "zhen_ding_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Zhen Ding revenue (USD, latest FX)"
+    },
+    {
+      "id": "simmtech_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 222800.KQ",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "simmtech_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Simmtech revenue (USD, latest FX)"
+    },
+    {
+      "id": "daeduck_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 353200.KS",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "daeduck_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Daeduck Electronics revenue (USD, latest FX)"
+    },
+    {
+      "id": "unimicron_capex",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP cash-flow CapEx \u2014 3037.TW at latest FRED TWD FX",
+      "source": "fmp_capex_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "unimicron_capex"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Unimicron CapEx (USD, latest FX)"
+    },
+    {
+      "id": "ibiden_capex",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP cash-flow CapEx \u2014 4062.T at latest FRED JPY FX",
+      "source": "fmp_capex_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ibiden_capex"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Ibiden CapEx (USD, latest FX)"
+    },
+    {
+      "id": "ats_capex",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP cash-flow CapEx \u2014 ATS.VI at latest FRED EUR FX",
+      "source": "fmp_capex_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ats_capex"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "AT&S CapEx (USD, latest FX)"
+    },
+    {
+      "id": "pcb_mfg_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FRED PCU334412334412 \u2014 PPI industry data for bare printed circuit board manufacturing",
+      "source": "fred",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "pcb_mfg_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US bare printed circuit board PPI"
+    },
+    {
+      "id": "semi_capacity_utilization",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FRED CAPUTLG3344S \u2014 Capacity Utilization: Manufacturing: Durable Goods: Computer and electronic product / related (semi & electronic components)",
+      "source": "fred",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "semi_capacity_utilization"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US semiconductor & electronic component capacity utilization"
+    },
+    {
+      "id": "hs853400_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "Census Intl Trade \u2014 HS6 853400 printed circuits, monthly general import value (world)",
+      "source": "census_trade",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "hs853400_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US printed-circuit imports (HS 853400 value)"
+    },
+    {
+      "id": "kyocera_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 6971.T (conglomerate)",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "kyocera_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Kyocera revenue (USD, latest FX)"
+    },
+    {
+      "id": "ajinomoto_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 2802.T (ABF film parent; food-heavy)",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "ajinomoto_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Ajinomoto revenue (USD, latest FX)"
+    },
+    {
+      "id": "shennan_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "global",
+      "description": "FMP income-statement revenue \u2014 002916.SZ",
+      "source": "fmp_revenue_ticker",
+      "pack": "ic_substrates",
+      "series_keys": [
+        "shennan_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shennan Circuit revenue (USD, latest FX)"
+    },
+    {
+      "id": "semis_abf_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/semiconductors posts mentioning ABF / Ajinomoto Build-up Film",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "semis_abf_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors ABF mentions (weekly)"
+    },
+    {
+      "id": "semis_fcbga_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/semiconductors posts mentioning FC-BGA / flip-chip BGA",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "semis_fcbga_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors FC-BGA mentions (weekly)"
+    },
+    {
+      "id": "semis_glass_core_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/semiconductors posts mentioning glass-core / TGV",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "semis_glass_core_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors glass-core / TGV mentions (weekly)"
+    },
+    {
+      "id": "ic_substrates_named_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique r/semiconductors posts hitting ABF/FC-BGA/glass lexicon",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "ic_substrates_named_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors substrate-tech talk total (weekly)"
+    },
+    {
+      "id": "substrate_category_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of r/semiconductors posts hitting substrate category lexicon",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "substrate_category_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of r/semiconductors: IC substrate talk"
+    },
+    {
+      "id": "ic_substrates_semiconductors_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/semiconductors post volume (ic_substrates_forums)",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "ic_substrates_semiconductors_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors community volume (weekly)"
+    },
+    {
+      "id": "ic_substrates_tech_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity on ABF/FC-BGA/glass posts",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "ic_substrates_tech_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors substrate-tech sentiment"
+    },
+    {
+      "id": "substrate_category_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "semiconductors",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity on substrate-category posts",
+      "source": "arctic_shift",
+      "pack": "ic_substrates_forums",
+      "series_keys": [
+        "substrate_category_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/semiconductors substrate-category sentiment"
+    },
+    {
+      "id": "toys_cpi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED CUSR0000SERE01 \u2014 CPI-U: Toys, Games, Hobbies and Playground Equipment",
+      "source": "fred",
+      "pack": "trad_toys",
+      "series_keys": [
+        "toys_cpi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US toys & games consumer prices"
+    },
+    {
+      "id": "hobby_toy_store_sales",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED MRTSSM45112USN \u2014 Retail Sales: Hobby, Toy, and Game Stores",
+      "source": "fred",
+      "pack": "trad_toys",
+      "series_keys": [
+        "hobby_toy_store_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US hobby, toy & game store sales"
+    },
+    {
+      "id": "plastic_resins_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED WPU0662 \u2014 PPI Commodity: Plastics materials and resins",
+      "source": "fred",
+      "pack": "trad_toys",
+      "series_keys": [
+        "plastic_resins_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US plastic resins producer prices"
+    },
+    {
+      "id": "dolls_toys_ppi",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FRED PCU339930339930 \u2014 PPI Industry: Doll, Toy, and Game Manufacturing",
+      "source": "fred",
+      "pack": "trad_toys",
+      "series_keys": [
+        "dolls_toys_ppi"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US dolls, toys & games producer prices"
+    },
+    {
+      "id": "hs9503_import_value",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Census HS 950300 \u2014 Tricycles, scooters, pedal cars; dolls; toys; puzzles \u2014 GEN_VAL_MO",
+      "source": "census_trade",
+      "pack": "trad_toys",
+      "series_keys": [
+        "hs9503_import_value"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US toy imports (HS 9503)"
+    },
+    {
+      "id": "trad_toys_member_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP revenue sum \u2014 MAT/HAS/JAKK/BBW/TOY.TO/TNIE.DE/9992.HK/7867.T at latest FRED FX",
+      "source": "fmp_revenue",
+      "pack": "trad_toys",
+      "series_keys": [
+        "trad_toys_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Trad-toys member revenue (USD, latest FX)"
+    },
+    {
+      "id": "mat_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 MAT",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "mat_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Mattel revenue"
+    },
+    {
+      "id": "has_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 HAS",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "has_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Hasbro revenue"
+    },
+    {
+      "id": "has_consumer_products",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 HAS Consumer Products",
+      "source": "fmp_revenue_segment",
+      "pack": "trad_toys",
+      "series_keys": [
+        "has_consumer_products"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Hasbro Consumer Products revenue"
+    },
+    {
+      "id": "has_wizards",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 HAS Wizards Of The Coast And Digital Gaming",
+      "source": "fmp_revenue_segment",
+      "pack": "trad_toys",
+      "series_keys": [
+        "has_wizards"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Hasbro Wizards of the Coast revenue"
+    },
+    {
+      "id": "jakk_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 JAKK",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "jakk_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "JAKKS Pacific revenue"
+    },
+    {
+      "id": "bbw_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 BBW",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "bbw_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Build-A-Bear revenue"
+    },
+    {
+      "id": "bbw_retail",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 BBW Retail",
+      "source": "fmp_revenue_segment",
+      "pack": "trad_toys",
+      "series_keys": [
+        "bbw_retail"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Build-A-Bear Retail revenue"
+    },
+    {
+      "id": "gme_collectibles",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP product segment \u2014 GME Collectibles",
+      "source": "fmp_revenue_segment",
+      "pack": "trad_toys",
+      "series_keys": [
+        "gme_collectibles"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "GameStop Collectibles revenue"
+    },
+    {
+      "id": "toy_to_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TOY.TO",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "toy_to_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Spin Master revenue (USD, latest FX)"
+    },
+    {
+      "id": "tnie_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 TNIE.DE",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "tnie_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "tonies revenue (USD, latest FX)"
+    },
+    {
+      "id": "pop_mart_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 9992.HK",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "pop_mart_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Pop Mart revenue (USD, latest FX)"
+    },
+    {
+      "id": "tomy_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 7867.T",
+      "source": "fmp_revenue_ticker",
+      "pack": "trad_toys",
+      "series_keys": [
+        "tomy_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "TOMY revenue (USD, latest FX)"
+    },
+    {
+      "id": "wiki_toy_brand_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Wikimedia Pageviews API \u2014 monthly user views sum (enwiki)",
+      "source": "wikipedia_pageviews",
+      "pack": "trad_toys",
+      "series_keys": [
+        "wiki_toy_brand_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia interest: Barbie / Hot Wheels / Labubu / Tonies"
+    },
+    {
+      "id": "wiki_barbie_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Wikimedia Pageviews \u2014 enwiki Barbie (user)",
+      "source": "wikipedia_pageviews",
+      "pack": "trad_toys",
+      "series_keys": [
+        "wiki_barbie_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia pageviews: Barbie"
+    },
+    {
+      "id": "wiki_hot_wheels_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Wikimedia Pageviews \u2014 enwiki Hot_Wheels (user)",
+      "source": "wikipedia_pageviews",
+      "pack": "trad_toys",
+      "series_keys": [
+        "wiki_hot_wheels_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia pageviews: Hot Wheels"
+    },
+    {
+      "id": "wiki_labubu_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Wikimedia Pageviews \u2014 enwiki Labubu (user)",
+      "source": "wikipedia_pageviews",
+      "pack": "trad_toys",
+      "series_keys": [
+        "wiki_labubu_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia pageviews: Labubu"
+    },
+    {
+      "id": "wiki_tonies_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Wikimedia Pageviews \u2014 enwiki Tonies (user)",
+      "source": "wikipedia_pageviews",
+      "pack": "trad_toys",
+      "series_keys": [
+        "wiki_tonies_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia pageviews: Tonies"
+    },
+    {
+      "id": "amazon_toys_brand_presence",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Amazon Best Sellers Toys & Games \u2014 weekly count of titles matching theme brands (Chrome scrape)",
+      "source": "amazon_bestsellers",
+      "pack": "trad_toys",
+      "series_keys": [
+        "amazon_toys_brand_presence"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Amazon Toys bestsellers: theme-brand presence"
+    },
+    {
+      "id": "tonies_catalog_size",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "us.tonies.com Shopify products.json \u2014 Tonie/content SKU count",
+      "source": "tonies_catalog",
+      "pack": "trad_toys",
+      "series_keys": [
+        "tonies_catalog_size"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Tonies catalog size (US)"
+    },
+    {
+      "id": "tonies_new_skus_30d",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "us.tonies.com \u2014 count of content SKUs with created_at in last 30 days",
+      "source": "tonies_catalog",
+      "pack": "trad_toys",
+      "series_keys": [
+        "tonies_new_skus_30d"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Tonies new catalog adds (30d)"
+    },
+    {
+      "id": "bgg_family_own_sum",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BoardGameGeek geekdo collections own-count sum \u2014 Monopoly/UNO/Scrabble/Jenga/Connect Four/Candy Land/Ticket to Ride",
+      "source": "bgg",
+      "pack": "trad_toys",
+      "series_keys": [
+        "bgg_family_own_sum"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "BGG collectors owning family/trad games"
+    },
+    {
+      "id": "bgg_family_hot_count",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "BoardGameGeek hotness API \u2014 count of mass-market/family titles in top 50",
+      "source": "bgg",
+      "pack": "trad_toys",
+      "series_keys": [
+        "bgg_family_hot_count"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "BGG hot list: family/trad game count"
+    },
+    {
+      "id": "cpsc_toy_recalls",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "saferproducts.gov Recall API \u2014 ProductType=Toys monthly count",
+      "source": "cpsc_recalls",
+      "pack": "trad_toys",
+      "series_keys": [
+        "cpsc_toy_recalls"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "CPSC toy recalls (monthly)"
+    },
+    {
+      "id": "toys_barbie_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Barbie across watched toy subs",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_barbie_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Barbie mentions (weekly)"
+    },
+    {
+      "id": "toys_hot_wheels_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Hot Wheels",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_hot_wheels_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Hot Wheels mentions (weekly)"
+    },
+    {
+      "id": "toys_labubu_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Labubu or Pop Mart",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_labubu_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Labubu / Pop Mart mentions (weekly)"
+    },
+    {
+      "id": "toys_tonies_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Tonies or Toniebox",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_tonies_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Tonies / Toniebox mentions (weekly)"
+    },
+    {
+      "id": "toys_transformers_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Transformers",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_transformers_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Transformers mentions (weekly)"
+    },
+    {
+      "id": "toys_named_brand_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting any named trad-toy brand lexicon",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_named_brand_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum named toy-brand talk total (weekly)"
+    },
+    {
+      "id": "toys_soldout_restock_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting sold-out/restock/secondary lexicon",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_soldout_restock_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of forum posts: sold-out / restock talk"
+    },
+    {
+      "id": "actionfigures_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/ActionFigures post volume",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "actionfigures_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/ActionFigures community volume (weekly)"
+    },
+    {
+      "id": "dolls_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/Dolls post volume",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "dolls_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/Dolls community volume (weekly)"
+    },
+    {
+      "id": "blindbox_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/blindbox post volume",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "blindbox_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/blindbox community volume (weekly)"
+    },
+    {
+      "id": "toys_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly mean lexicon polarity over unique posts hitting named brands",
+      "source": "arctic_shift",
+      "pack": "trad_toys_forums",
+      "series_keys": [
+        "toys_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum toy-brand sentiment"
+    },
+    {
+      "id": "kidult_channel_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "consumer",
+      "data_type": "themedata_series",
+      "region": "US",
+      "description": "Derived sum \u2014 HAS Wizards + BBW Retail + GME Collectibles",
+      "source": "derived_sum",
+      "pack": "trad_toys",
+      "series_keys": [
+        "kidult_channel_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Kidult channel revenue (Wizards + BBW Retail + GME Collectibles)"
+    },
+    {
+      "id": "ecommerce_retail_sales_cmp",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FRED MRTSSM4541USS \u2014 Retail Sales: Electronic Shopping and Mail-Order Houses",
+      "source": "fred",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "ecommerce_retail_sales"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "US electronic shopping & mail-order retail sales"
+    },
+    {
+      "id": "cmp_member_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP income-statement revenue sum \u2014 SHOP/TOST/XYZ/ADBE/WIX/CMRC/GDDY/GLBE/LSPD/VTEX",
+      "source": "fmp_revenue",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "cmp_member_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Commerce platform member revenue (USD)"
+    },
+    {
+      "id": "shop_revenue_cmp",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP income-statement revenue \u2014 SHOP",
+      "source": "fmp_revenue_ticker",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shop_revenue_cmp"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shopify revenue"
+    },
+    {
+      "id": "shop_service_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 SHOP Service (alias Merchant Solutions)",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shop_service_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shopify Service revenue (payments/merchant solutions)"
+    },
+    {
+      "id": "shop_subscription_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 SHOP Subscription and Circulation",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shop_subscription_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Shopify Subscription revenue"
+    },
+    {
+      "id": "xyz_software_data_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 XYZ Software and Data Products",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "xyz_software_data_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Block Software & Data revenue"
+    },
+    {
+      "id": "xyz_transaction_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 XYZ Transaction",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "xyz_transaction_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Block Transaction revenue"
+    },
+    {
+      "id": "tost_technology_service",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 TOST Technology Service",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "tost_technology_service"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Toast Technology Service revenue"
+    },
+    {
+      "id": "tost_license_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 TOST License",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "tost_license_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Toast License (software) revenue"
+    },
+    {
+      "id": "cmrc_subscription_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 CMRC Subscription and Circulation",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "cmrc_subscription_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Commerce.com Subscription revenue"
+    },
+    {
+      "id": "gddy_apps_commerce",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 GDDY Applications And Commerce",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "gddy_apps_commerce"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "GoDaddy Applications & Commerce revenue"
+    },
+    {
+      "id": "adbe_digital_experience",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP product segment \u2014 ADBE Digital Experience",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "adbe_digital_experience"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Adobe Digital Experience revenue"
+    },
+    {
+      "id": "wix_business_solutions",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 WIX Business Solutions",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "wix_business_solutions"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wix Business Solutions revenue (annual)"
+    },
+    {
+      "id": "wix_creative_subscription",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 WIX Creative Subscription",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "wix_creative_subscription"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wix Creative Subscription revenue (annual)"
+    },
+    {
+      "id": "glbe_fulfillment",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 GLBE Fulfillment Services",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "glbe_fulfillment"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Global-e Fulfillment Services revenue (annual)"
+    },
+    {
+      "id": "glbe_service_fees",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 GLBE Service Fees",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "glbe_service_fees"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Global-e Service Fees revenue (annual)"
+    },
+    {
+      "id": "lspd_subscription",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 LSPD Subscription Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "lspd_subscription"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Lightspeed Subscription revenue (annual)"
+    },
+    {
+      "id": "lspd_transaction",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "FMP annual product segment \u2014 LSPD Transaction Based Revenue",
+      "source": "fmp_revenue_segment",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "lspd_transaction"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Lightspeed Transaction revenue (annual)"
+    },
+    {
+      "id": "software_like_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Derived sum \u2014 SHOP Subscription + TOST License + XYZ Software + CMRC Subscription",
+      "source": "derived_sum",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "software_like_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Software-like platform revenue (SHOP sub + TOST license + XYZ software + CMRC sub)"
+    },
+    {
+      "id": "transaction_like_revenue",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Derived sum \u2014 SHOP Service + TOST Tech Service + XYZ Transaction",
+      "source": "derived_sum",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "transaction_like_revenue"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Transaction-like platform revenue (SHOP service + TOST tech + XYZ txn)"
+    },
+    {
+      "id": "wiki_commerce_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Wikimedia pageviews \u2014 Shopify+Wix+Toast+Block+Adobe Commerce monthly sum",
+      "source": "wikipedia_pageviews",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "wiki_commerce_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia commerce-platform attention (basket)"
+    },
+    {
+      "id": "wiki_shopify_pageviews",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Wikimedia pageviews \u2014 en.wikipedia Shopify",
+      "source": "wikipedia_pageviews",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "wiki_shopify_pageviews"
+      ],
+      "as_of_semantics": "period_end",
+      "name": "Wikipedia Shopify pageviews"
+    },
+    {
+      "id": "shopify_apps_product_content",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Shopify App Store category count \u2014 Product content",
+      "source": "shopify_app_store",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shopify_apps_product_content"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Shopify App Store: product-content apps"
+    },
+    {
+      "id": "shopify_apps_search_filters",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Shopify App Store category count \u2014 Search and filters",
+      "source": "shopify_app_store",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shopify_apps_search_filters"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Shopify App Store: search & filter apps"
+    },
+    {
+      "id": "shopify_apps_category_sum",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Shopify App Store \u2014 sum of product-content + search/filters + analytics counts",
+      "source": "shopify_app_store",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "shopify_apps_category_sum"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Shopify App Store: watched category app count"
+    },
+    {
+      "id": "itunes_shop_app_ratings",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "iTunes Lookup \u2014 Shop: Track, Pay, Discover userRatingCount",
+      "source": "itunes_ratings",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "itunes_shop_app_ratings"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "iOS Shop app cumulative ratings"
+    },
+    {
+      "id": "itunes_ratings_basket",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "iTunes Lookup \u2014 sum of Shop + Shopify merchant + Square POS + Wix + GoDaddy rating counts",
+      "source": "itunes_ratings",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "itunes_ratings_basket"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "iOS commerce-app cumulative ratings (basket)"
+    },
+    {
+      "id": "npm_shopify_api_downloads",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "npm registry downloads/point/last-month \u2014 @shopify/shopify-api",
+      "source": "npm_downloads",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "npm_shopify_api_downloads"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "npm Shopify API downloads (last month)"
+    },
+    {
+      "id": "npm_commerce_sdk_basket",
+      "license": "free",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "npm last-month downloads sum \u2014 @shopify/shopify-api + @shopify/cli + square + @wix/sdk",
+      "source": "npm_downloads",
+      "pack": "commerce_merchant_platforms",
+      "series_keys": [
+        "npm_commerce_sdk_basket"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "npm commerce SDK downloads (basket, last month)"
+    },
+    {
+      "id": "cmp_shopify_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Shopify across watched commerce subs",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_shopify_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Shopify mentions (weekly)"
+    },
+    {
+      "id": "cmp_wix_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Wix",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_wix_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Wix mentions (weekly)"
+    },
+    {
+      "id": "cmp_toast_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Toast POS",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_toast_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Toast mentions (weekly)"
+    },
+    {
+      "id": "cmp_square_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Square POS / Block",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_square_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum Square mentions (weekly)"
+    },
+    {
+      "id": "cmp_godaddy_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning GoDaddy",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_godaddy_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum GoDaddy mentions (weekly)"
+    },
+    {
+      "id": "cmp_bigcommerce_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning BigCommerce",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_bigcommerce_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum BigCommerce mentions (weekly)"
+    },
+    {
+      "id": "cmp_named_brand_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly unique posts hitting any named merchant-platform lexicon",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_named_brand_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum named commerce-brand talk total (weekly)"
+    },
+    {
+      "id": "cmp_ai_commerce_mentions",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly % of watched-sub posts hitting Sidekick / AI commerce / agentic lexicon",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_ai_commerce_mentions"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "% of forum posts: AI / agentic commerce talk"
+    },
+    {
+      "id": "shopify_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/shopify post volume",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "shopify_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/shopify community volume (weekly)"
+    },
+    {
+      "id": "cmp_ecommerce_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/ecommerce post volume",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_ecommerce_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/ecommerce community volume (weekly)"
+    },
+    {
+      "id": "cmp_smallbusiness_community_posts",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 weekly r/smallbusiness post volume",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_smallbusiness_community_posts"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "r/smallbusiness community volume (weekly)"
+    },
+    {
+      "id": "cmp_brand_sentiment",
+      "license": "free",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "sector": "retail_tech",
+      "data_type": "theme_metric",
+      "region": "US",
+      "description": "Arctic Shift \u2014 mean lexicon polarity over unique posts hitting any named brand",
+      "source": "arctic_shift",
+      "pack": "commerce_merchant_platforms_forums",
+      "series_keys": [
+        "cmp_brand_sentiment"
+      ],
+      "as_of_semantics": "scrape_as_of",
+      "name": "Forum merchant-platform brand sentiment"
     },
     {
       "id": "brent_crude_ro",

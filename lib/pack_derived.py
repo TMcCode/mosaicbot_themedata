@@ -34,13 +34,35 @@ def apply_derived_sums(
             if missing:
                 raise RuntimeError(f"missing components: {missing}")
             by_date: dict[str, float] = {}
+            counts: dict[str, int] = {}
             for part_key in parts:
                 for p in series_out[part_key]["raw"]["points"]:
                     d, v = p.get("date"), p.get("value")
                     if d is None or v is None:
                         continue
-                    by_date[str(d)[:10]] = by_date.get(str(d)[:10], 0.0) + float(v)
-            pts = [{"date": d, "value": round(by_date[d], 4)} for d in sorted(by_date)]
+                    ds = str(d)[:10]
+                    by_date[ds] = by_date.get(ds, 0.0) + float(v)
+                    counts[ds] = counts.get(ds, 0) + 1
+            n_expected = len(parts)
+            dates_sorted = sorted(by_date)
+            peak = max((counts[d] for d in dates_sorted), default=0)
+            latest_d = dates_sorted[-1] if dates_sorted else None
+            latest_incomplete = bool(
+                latest_d
+                and peak > 0
+                and 0 < counts.get(latest_d, 0) < peak
+            )
+            pts: list[dict] = []
+            for d in dates_sorted:
+                row: dict = {
+                    "date": d,
+                    "value": round(by_date[d], 4),
+                    "n_contributors": counts.get(d, 0),
+                    "n_expected": n_expected,
+                }
+                if latest_incomplete and d == latest_d:
+                    row["incomplete"] = True
+                pts.append(row)
             if not pts:
                 raise RuntimeError("no points after sum")
             series_out[key] = ps.series_shell(

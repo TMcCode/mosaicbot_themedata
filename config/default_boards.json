@@ -28,6 +28,26 @@
           "chart_type": "bar"
         },
         {
+          "series_key": "cstl_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "exas_screening_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "physician_offices_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "lab_supplies_import_kg",
           "metric": "m3_avg_yoy_pct",
           "chart_type": "bar"
@@ -66,6 +86,11 @@
       "ticker": "CSTL",
       "recipes": [
         {
+          "series_key": "cstl_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
           "series_key": "qcew_621511_tx_emp",
           "metric": "yoy_pct",
           "chart_type": "bar"
@@ -88,6 +113,11 @@
         {
           "series_key": "lab_headcount",
           "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "raw",
           "chart_type": "bar"
         }
       ],
@@ -5510,6 +5540,3401 @@
           "series_key": "pm_us_crypto_market_structure_law_2026",
           "metric": "raw",
           "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Compliance software revenue by name (WK+BSY+CDNS)",
+          "series_keys": [
+            "wk_revenue",
+            "bsy_revenue",
+            "cdns_revenue"
+          ],
+          "sum_series_key": "regulatory_testing_member_revenue"
+        },
+        {
+          "series_key": "industrial_production",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "it_equipment_software_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "compliance_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "compliance_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "regulatoryaffairs_community_posts",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "WK",
+      "recipes": [
+        {
+          "series_key": "wk_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "compliance_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "it_equipment_software_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "compliance_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "CDNS",
+      "recipes": [
+        {
+          "series_key": "cdns_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "industrial_production",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "ticker": "BSY",
+      "recipes": [
+        {
+          "series_key": "bsy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "industrial_production",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "it_equipment_software_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_packaging_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Packaging/inspection USD revenue (AMAT+AMKR+CAMT+ONTO+KLIC)",
+          "series_keys": [
+            "amat_hbm_pkg_revenue",
+            "amkr_revenue",
+            "camt_revenue",
+            "onto_revenue",
+            "klic_revenue"
+          ],
+          "sum_series_key": "hbm_packaging_revenue"
+        },
+        {
+          "series_key": "tsm_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "m3_avg",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_measuring_instrument_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cowos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "semiconductors_community_posts",
+            "hardware_community_posts",
+            "chipdesign_community_posts"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "TSM",
+      "recipes": [
+        {
+          "series_key": "tsm_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "m3_avg",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cowos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "ASX",
+      "recipes": [
+        {
+          "series_key": "asx_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "m3_avg",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cowos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "AMKR",
+      "recipes": [
+        {
+          "series_key": "amkr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cowos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "CAMT",
+      "recipes": [
+        {
+          "series_key": "camt_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_measuring_instrument_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "ONTO",
+      "recipes": [
+        {
+          "series_key": "onto_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_measuring_instrument_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "BESI.AS",
+      "recipes": [
+        {
+          "series_key": "besi_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_pkg_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "ticker": "FORM",
+      "recipes": [
+        {
+          "series_key": "form_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hbm_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Integrated POS USD member revenue (TOST+FOUR+PAR+XYZ)",
+          "series_keys": [
+            "tost_revenue",
+            "four_revenue",
+            "par_revenue",
+            "xyz_revenue"
+          ],
+          "sum_series_key": "pos_member_revenue"
+        },
+        {
+          "series_key": "shop_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nondefense_capex_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "pos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named POS product talk (weekly)",
+          "series_keys": [
+            "toast_mentions",
+            "square_mentions",
+            "clover_mentions",
+            "lightspeed_mentions",
+            "shift4_mentions",
+            "brink_mentions"
+          ],
+          "sum_series_key": "pos_named_product_mentions"
+        },
+        {
+          "series_key": "pos_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "ecommerce_community_posts",
+            "smallbusiness_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "POS product sentiment (weekly)",
+          "series_keys": [
+            "pos_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "TOST",
+      "recipes": [
+        {
+          "series_key": "tost_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "toast_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "FOUR",
+      "recipes": [
+        {
+          "series_key": "four_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shift4_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "PAR",
+      "recipes": [
+        {
+          "series_key": "par_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brink_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "XYZ",
+      "recipes": [
+        {
+          "series_key": "xyz_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "square_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "ticker": "SHOP",
+      "recipes": [
+        {
+          "series_key": "shop_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "sporting_goods_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Streetwear USD member revenue (NKE+VFC+DKS+DECK+CROX+ONON+AS)",
+          "series_keys": [
+            "nke_revenue",
+            "vfc_revenue",
+            "dks_revenue",
+            "deck_revenue",
+            "crox_revenue",
+            "onon_revenue",
+            "as_revenue"
+          ],
+          "sum_series_key": "streetwear_member_revenue"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "textile_footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "stockx_hero_last_sale_index",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cotton_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "rubber_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "sneaker_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named brand talk (weekly)",
+          "series_keys": [
+            "nike_mentions",
+            "jordan_mentions",
+            "adidas_mentions",
+            "asics_mentions",
+            "on_mentions",
+            "hoka_mentions",
+            "ugg_mentions",
+            "crocs_mentions",
+            "new_balance_mentions"
+          ],
+          "sum_series_key": "sneaker_named_product_mentions"
+        },
+        {
+          "series_key": "sneaker_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "sneakers_community_posts",
+            "streetwear_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Sneaker brand sentiment (weekly)",
+          "series_keys": [
+            "sneaker_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "NKE",
+      "recipes": [
+        {
+          "series_key": "nke_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nike_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "VFC",
+      "recipes": [
+        {
+          "series_key": "vfc_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DKS",
+      "recipes": [
+        {
+          "series_key": "dks_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "DECK",
+      "recipes": [
+        {
+          "series_key": "deck_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hoka_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "CROX",
+      "recipes": [
+        {
+          "series_key": "crox_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "crocs_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "ONON",
+      "recipes": [
+        {
+          "series_key": "onon_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "on_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "ticker": "AS",
+      "recipes": [
+        {
+          "series_key": "as_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "stockx_hero_premium_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "seattle_cruise_passengers",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Key US cruise port calls",
+          "series_keys": [
+            "miami_cruise_calls",
+            "canaveral_cruise_calls",
+            "everglades_cruise_calls",
+            "galveston_cruise_calls",
+            "tampa_cruise_calls",
+            "seattle_cruise_calls"
+          ],
+          "sum_series_key": "key_us_cruise_port_calls"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Cruise USD member revenue",
+          "series_keys": [
+            "ccl_revenue",
+            "rcl_revenue",
+            "nclh_revenue",
+            "vik_revenue",
+            "lind_revenue"
+          ],
+          "sum_series_key": "cruise_member_revenue"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Mass vs expedition/luxury revenue",
+          "series_keys": [
+            "mass_market_cruise_revenue",
+            "expedition_luxury_cruise_revenue"
+          ]
+        },
+        {
+          "series_key": "fed_funds_rate",
+          "metric": "wma4",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "services_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named cruise-line talk (weekly)",
+          "series_keys": [
+            "carnival_mentions",
+            "royal_mentions",
+            "norwegian_mentions",
+            "viking_mentions",
+            "lindblad_mentions",
+            "msc_mentions",
+            "virgin_mentions",
+            "princess_mentions",
+            "celebrity_mentions"
+          ],
+          "sum_series_key": "cruise_named_line_mentions"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_destination_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "cruise_community_posts",
+            "cruises_community_posts"
+          ]
+        },
+        {
+          "series_key": "cruise_brand_sentiment",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "CCL",
+      "recipes": [
+        {
+          "series_key": "ccl_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "RCL",
+      "recipes": [
+        {
+          "series_key": "rcl_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "NCLH",
+      "recipes": [
+        {
+          "series_key": "nclh_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "VIK",
+      "recipes": [
+        {
+          "series_key": "vik_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "ticker": "LIND",
+      "recipes": [
+        {
+          "series_key": "lind_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "tsa_checkpoint_throughput",
+          "metric": "wma4_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cruise_booking_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "vip_nonresidential",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Census VIP by segment (nonres/highway/mfg/power/residential)",
+          "series_keys": [
+            "vip_nonresidential",
+            "vip_highway",
+            "vip_manufacturing",
+            "vip_power",
+            "vip_residential"
+          ]
+        },
+        {
+          "series_key": "ae_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_jolts_openings",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "highway_iiija_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "AEC software revenue by name (ADSK+BSY+PCOR+TRMB+TTAN)",
+          "series_keys": [
+            "adsk_revenue",
+            "bsy_revenue",
+            "pcor_revenue",
+            "trmb_revenue",
+            "ttan_revenue"
+          ],
+          "sum_series_key": "aec_software_revenue"
+        },
+        {
+          "series_key": "adsk_aec_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "ServiceTitan subscription vs usage revenue",
+          "series_keys": [
+            "ttan_subscription_revenue",
+            "ttan_usage_revenue"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Kalshi: data-center construction vs building permits",
+          "series_keys": [
+            "kalshi_datacenter_construction_90b",
+            "kalshi_building_permits_1_40m"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "AEC software brand mentions (weekly)",
+          "series_keys": [
+            "procore_mentions",
+            "autodesk_mentions",
+            "servicetitan_mentions",
+            "bentley_mentions",
+            "trimble_mentions"
+          ],
+          "sum_series_key": "aec_named_product_mentions"
+        },
+        {
+          "series_key": "aec_software_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "construction_community_posts",
+            "architects_community_posts",
+            "civilengineering_community_posts",
+            "hvac_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: AEC tools vs software category",
+          "series_keys": [
+            "aec_tools_sentiment",
+            "aec_software_category_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "ADSK",
+      "recipes": [
+        {
+          "series_key": "adsk_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "adsk_aec_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "autodesk_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ae_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_nonresidential",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "BSY",
+      "recipes": [
+        {
+          "series_key": "bsy_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bentley_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_highway",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "highway_iiija_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_power",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "PCOR",
+      "recipes": [
+        {
+          "series_key": "pcor_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "procore_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_nonresidential",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "construction_jolts_openings",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TRMB",
+      "recipes": [
+        {
+          "series_key": "trmb_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "trmb_buildings_infrastructure_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "trimble_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_nonresidential",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "ticker": "TTAN",
+      "recipes": [
+        {
+          "series_key": "ttan_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "ServiceTitan subscription vs usage",
+          "series_keys": [
+            "ttan_subscription_revenue",
+            "ttan_usage_revenue"
+          ]
+        },
+        {
+          "series_key": "servicetitan_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "vip_residential",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Revenue per employee (ACN vs BAH)",
+          "series_keys": [
+            "acn_revenue_per_employee",
+            "bah_revenue_per_employee"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Accenture consulting vs outsourcing revenue",
+          "series_keys": [
+            "acn_consulting_revenue",
+            "acn_outsourcing_revenue"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Booz Allen revenue by contract type",
+          "series_keys": [
+            "bah_cost_reimbursable_revenue",
+            "bah_tm_revenue",
+            "bah_fixed_price_revenue"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "IT services revenue by name (ACN+BAH+CTSH+EPAM+INFY)",
+          "series_keys": [
+            "acn_revenue",
+            "bah_revenue",
+            "ctsh_revenue",
+            "epam_revenue",
+            "infy_revenue"
+          ],
+          "sum_series_key": "billable_hours_revenue"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Headcount (ACN / CTSH / INFY / EPAM / BAH)",
+          "series_keys": [
+            "acn_employees",
+            "ctsh_employees",
+            "infy_employees",
+            "epam_employees",
+            "bah_employees"
+          ]
+        },
+        {
+          "series_key": "computer_systems_design_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "professional_services_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "professional_services_jolts_openings",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nonfarm_productivity",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bah_federal_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "kalshi_wa_prof_tech_emp_240k",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Firm mentions (weekly)",
+          "series_keys": [
+            "accenture_mentions",
+            "cognizant_mentions",
+            "infosys_mentions",
+            "epam_mentions",
+            "booz_mentions"
+          ],
+          "sum_series_key": "billable_named_mentions"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "% of posts: billable-hours talk vs AI junior displacement",
+          "series_keys": [
+            "billable_hours_talk_mentions",
+            "ai_junior_displacement_mentions"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "consulting_community_posts",
+            "cscareerquestions_community_posts",
+            "itcareerquestions_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: firms vs AI junior displacement",
+          "series_keys": [
+            "billable_tools_sentiment",
+            "ai_junior_displacement_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ACN",
+      "recipes": [
+        {
+          "series_key": "acn_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Consulting vs outsourcing",
+          "series_keys": [
+            "acn_consulting_revenue",
+            "acn_outsourcing_revenue"
+          ]
+        },
+        {
+          "series_key": "acn_employees",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "acn_revenue_per_employee",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "accenture_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "BAH",
+      "recipes": [
+        {
+          "series_key": "bah_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Contract mix",
+          "series_keys": [
+            "bah_cost_reimbursable_revenue",
+            "bah_tm_revenue",
+            "bah_fixed_price_revenue"
+          ]
+        },
+        {
+          "series_key": "bah_employees",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "bah_revenue_per_employee",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "bah_federal_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "booz_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CTSH",
+      "recipes": [
+        {
+          "series_key": "ctsh_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ctsh_employees",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ctsh_revenue_per_employee",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "cognizant_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "EPAM",
+      "recipes": [
+        {
+          "series_key": "epam_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "epam_employees",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "epam_revenue_per_employee",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "epam_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "INFY",
+      "recipes": [
+        {
+          "series_key": "infy_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "infy_employees",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "infy_revenue_per_employee",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "infosys_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "CAP.PA",
+      "recipes": [
+        {
+          "series_key": "cap_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "computer_systems_design_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "GIB-A.TO",
+      "recipes": [
+        {
+          "series_key": "gib_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bah_federal_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "ticker": "ERF.PA",
+      "recipes": [
+        {
+          "series_key": "erf_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "de_ppa_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cnh_agriculture_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ctva_crop_protection_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tdy_digital_imaging_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Member revenue by name (DE+CNH+AGCO+CTVA+TDY+PL)",
+          "series_keys": [
+            "de_revenue",
+            "cnh_revenue",
+            "agco_revenue",
+            "ctva_revenue",
+            "tdy_revenue",
+            "pl_revenue"
+          ],
+          "sum_series_key": "ag_drones_member_revenue"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "US farm tractor retail by class (AEM)",
+          "series_keys": [
+            "aem_under_40_hp",
+            "aem_hp_40_100",
+            "aem_hp_100_plus",
+            "aem_4wd"
+          ],
+          "sum_series_key": "aem_total_farm_tractors"
+        },
+        {
+          "series_key": "aem_combines",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Part 137 operators (total vs drone-named)",
+          "series_keys": [
+            "part137_operators",
+            "part137_drone_named"
+          ]
+        },
+        {
+          "series_key": "part137_drone_share_pct",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "hs8806_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "farm_products_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ag_chemicals_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Corn / wheat prices",
+          "series_keys": [
+            "corn_price",
+            "wheat_price"
+          ]
+        },
+        {
+          "series_key": "usda_precision_ag_obligations",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Product mentions (weekly)",
+          "series_keys": [
+            "dji_agras_mentions",
+            "hylio_mentions",
+            "xag_mentions",
+            "deere_mentions",
+            "raven_mentions"
+          ],
+          "sum_series_key": "ag_drones_named_mentions"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "% of posts: spray-drone vs FCC Covered List talk",
+          "series_keys": [
+            "spray_drone_talk_mentions",
+            "fcc_covered_list_talk_mentions"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum sentiment: products vs spray-drone talk",
+          "series_keys": [
+            "ag_drone_tools_sentiment",
+            "spray_drone_talk_sentiment"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "agriculture_community_posts",
+            "drones_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "US imports: UAV (HS 8806) vs ag sprayers (HS 8424)",
+          "series_keys": [
+            "hs8806_import_value",
+            "hs8424_ag_sprayer_import_value"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "DE",
+      "recipes": [
+        {
+          "series_key": "de_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "de_ppa_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "aem_hp_100_plus",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CNH",
+      "recipes": [
+        {
+          "series_key": "cnh_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cnh_agriculture_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "AGCO",
+      "recipes": [
+        {
+          "series_key": "agco_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "CTVA",
+      "recipes": [
+        {
+          "series_key": "ctva_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ctva_crop_protection_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "TDY",
+      "recipes": [
+        {
+          "series_key": "tdy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tdy_digital_imaging_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "PL",
+      "recipes": [
+        {
+          "series_key": "pl_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hs8806_import_value",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "ticker": "TRMB",
+      "recipes": [
+        {
+          "series_key": "trmb_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ilmn_sequencing_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pacb_consumable_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pacb_instrument_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qtrx_consumables_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Member revenue by name",
+          "series_keys": [
+            "ilmn_revenue",
+            "pacb_revenue",
+            "qtrx_revenue",
+            "mass_revenue",
+            "psnl_revenue",
+            "icad_revenue",
+            "qdel_revenue"
+          ],
+          "sum_series_key": "diagnostic_platforms_member_revenue"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "PacBio razor/blade (instrument vs consumable)",
+          "series_keys": [
+            "pacb_instrument_revenue",
+            "pacb_consumable_revenue"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "10x device vs recurring",
+          "series_keys": [
+            "mass_device_revenue",
+            "mass_recurring_revenue"
+          ]
+        },
+        {
+          "series_key": "exas_screening_revenue",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_ptau217",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "lab_headcount",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "usaspending_nhgri_grants",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "physician_offices_employment",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/bioinformatics sentiment: platforms vs NGS talk",
+          "series_keys": [
+            "bioinformatics_platform_sentiment",
+            "bioinformatics_ngs_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "ILMN",
+      "recipes": [
+        {
+          "series_key": "ilmn_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ilmn_sequencing_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PACB",
+      "recipes": [
+        {
+          "series_key": "pacb_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pacb_consumable_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pacb_instrument_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QTRX",
+      "recipes": [
+        {
+          "series_key": "qtrx_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "qtrx_consumables_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_ptau217",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "MASS",
+      "recipes": [
+        {
+          "series_key": "mass_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mass_device_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mass_recurring_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "PSNL",
+      "recipes": [
+        {
+          "series_key": "psnl_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "ICAD",
+      "recipes": [
+        {
+          "series_key": "icad_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "ticker": "QDEL",
+      "recipes": [
+        {
+          "series_key": "qdel_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Pure-play revenue by name (USD, latest FX)",
+          "series_keys": [
+            "unimicron_revenue",
+            "kinsus_revenue",
+            "nanya_pcb_revenue",
+            "zhen_ding_revenue",
+            "ibiden_revenue",
+            "semco_revenue",
+            "simmtech_revenue",
+            "daeduck_revenue",
+            "ats_revenue"
+          ],
+          "sum_series_key": "ic_substrates_pureplay_revenue"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Pure-play CapEx by name (USD, latest FX)",
+          "series_keys": [
+            "unimicron_capex",
+            "ibiden_capex",
+            "ats_capex"
+          ],
+          "sum_series_key": "ic_substrates_pureplay_capex"
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cowos_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pcb_mfg_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "semi_capacity_utilization",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "hs853400_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Substrate-tech mentions (weekly)",
+          "series_keys": [
+            "semis_abf_mentions",
+            "semis_fcbga_mentions",
+            "semis_glass_core_mentions"
+          ],
+          "sum_series_key": "ic_substrates_named_mentions"
+        },
+        {
+          "series_key": "substrate_category_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ic_substrates_semiconductors_community_posts",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "r/semiconductors sentiment: tech vs category",
+          "series_keys": [
+            "ic_substrates_tech_sentiment",
+            "substrate_category_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "3037.TW",
+      "recipes": [
+        {
+          "series_key": "unimicron_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "unimicron_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "raw",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "4062.T",
+      "recipes": [
+        {
+          "series_key": "ibiden_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ibiden_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "ATS.VI",
+      "recipes": [
+        {
+          "series_key": "ats_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ats_capex",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "009150.KS",
+      "recipes": [
+        {
+          "series_key": "semco_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "3189.TW",
+      "recipes": [
+        {
+          "series_key": "kinsus_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "8046.TW",
+      "recipes": [
+        {
+          "series_key": "nanya_pcb_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "4958.TW",
+      "recipes": [
+        {
+          "series_key": "zhen_ding_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "222800.KQ",
+      "recipes": [
+        {
+          "series_key": "simmtech_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "353200.KS",
+      "recipes": [
+        {
+          "series_key": "daeduck_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "002916.SZ",
+      "recipes": [
+        {
+          "series_key": "shennan_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "6971.T",
+      "recipes": [
+        {
+          "series_key": "kyocera_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "ticker": "2802.T",
+      "recipes": [
+        {
+          "series_key": "ajinomoto_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "hobby_toy_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "toys_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "hs9503_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Member revenue by name (USD, latest FX)",
+          "series_keys": [
+            "mat_revenue",
+            "has_revenue",
+            "jakk_revenue",
+            "bbw_revenue",
+            "toy_to_revenue",
+            "tnie_revenue",
+            "pop_mart_revenue",
+            "tomy_revenue"
+          ],
+          "sum_series_key": "trad_toys_member_revenue"
+        },
+        {
+          "series_key": "has_consumer_products",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Kidult channel: Wizards + BBW Retail + GME Collectibles",
+          "series_keys": [
+            "has_wizards",
+            "bbw_retail",
+            "gme_collectibles"
+          ],
+          "sum_series_key": "kidult_channel_revenue"
+        },
+        {
+          "series_key": "wiki_toy_brand_pageviews",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Wikipedia pageviews by brand",
+          "series_keys": [
+            "wiki_barbie_pageviews",
+            "wiki_hot_wheels_pageviews",
+            "wiki_labubu_pageviews",
+            "wiki_tonies_pageviews"
+          ]
+        },
+        {
+          "series_key": "amazon_toys_brand_presence",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tonies_new_skus_30d",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tonies_catalog_size",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "bgg_family_own_sum",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "bgg_family_hot_count",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "plastic_resins_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "dolls_toys_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cpsc_toy_recalls",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named toy-brand mentions (weekly)",
+          "series_keys": [
+            "toys_barbie_mentions",
+            "toys_hot_wheels_mentions",
+            "toys_labubu_mentions",
+            "toys_tonies_mentions",
+            "toys_transformers_mentions"
+          ],
+          "sum_series_key": "toys_named_brand_mentions"
+        },
+        {
+          "series_key": "toys_soldout_restock_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "actionfigures_community_posts",
+            "dolls_community_posts",
+            "blindbox_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum toy-brand sentiment (weekly)",
+          "series_keys": [
+            "toys_brand_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "MAT",
+      "recipes": [
+        {
+          "series_key": "mat_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wiki_barbie_pageviews",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wiki_hot_wheels_pageviews",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "HAS",
+      "recipes": [
+        {
+          "series_key": "has_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "has_consumer_products",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "has_wizards",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "JAKK",
+      "recipes": [
+        {
+          "series_key": "jakk_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "toys_transformers_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "BBW",
+      "recipes": [
+        {
+          "series_key": "bbw_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "bbw_retail",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "GME",
+      "recipes": [
+        {
+          "series_key": "gme_collectibles",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "TOY.TO",
+      "recipes": [
+        {
+          "series_key": "toy_to_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "TNIE.XETRA",
+      "recipes": [
+        {
+          "series_key": "tnie_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "tonies_new_skus_30d",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wiki_tonies_pageviews",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "9992.HK",
+      "recipes": [
+        {
+          "series_key": "pop_mart_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wiki_labubu_pageviews",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "toys_labubu_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "ticker": "7867.T",
+      "recipes": [
+        {
+          "series_key": "tomy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Software-like vs transaction-like platform revenue",
+          "series_keys": [
+            "software_like_revenue",
+            "transaction_like_revenue"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Shopify Service vs Subscription",
+          "series_keys": [
+            "shop_service_revenue",
+            "shop_subscription_revenue"
+          ],
+          "sum_series_key": "shop_revenue_cmp"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Toast Tech Service vs License",
+          "series_keys": [
+            "tost_technology_service",
+            "tost_license_revenue"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Block Software vs Transaction",
+          "series_keys": [
+            "xyz_software_data_revenue",
+            "xyz_transaction_revenue"
+          ]
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Commerce platform member revenue (USD)",
+          "series_keys": [
+            "shop_revenue_cmp",
+            "tost_revenue_cmp",
+            "xyz_revenue_cmp",
+            "adbe_revenue_cmp",
+            "wix_revenue",
+            "cmrc_revenue_cmp",
+            "gddy_revenue",
+            "glbe_revenue",
+            "lspd_revenue",
+            "vtex_revenue_cmp"
+          ],
+          "sum_series_key": "cmp_member_revenue"
+        },
+        {
+          "series_key": "adbe_digital_experience",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "wiki_commerce_pageviews",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "shopify_apps_category_sum",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "itunes_shop_app_ratings",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "npm_commerce_sdk_basket",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Named commerce brand talk (weekly)",
+          "series_keys": [
+            "cmp_shopify_mentions",
+            "cmp_wix_mentions",
+            "cmp_toast_mentions",
+            "cmp_square_mentions",
+            "cmp_godaddy_mentions",
+            "cmp_bigcommerce_mentions"
+          ],
+          "sum_series_key": "cmp_named_brand_mentions"
+        },
+        {
+          "series_key": "cmp_ai_commerce_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum talk by community (weekly)",
+          "series_keys": [
+            "shopify_community_posts",
+            "cmp_ecommerce_community_posts",
+            "cmp_smallbusiness_community_posts"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum brand sentiment",
+          "series_keys": [
+            "cmp_brand_sentiment"
+          ]
+        },
+        {
+          "series_key": "gddy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "SHOP",
+      "recipes": [
+        {
+          "series_key": "shop_revenue_cmp",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "SHOP Service vs Subscription",
+          "series_keys": [
+            "shop_service_revenue",
+            "shop_subscription_revenue"
+          ]
+        },
+        {
+          "series_key": "cmp_shopify_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "itunes_shop_app_ratings",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "npm_shopify_api_downloads",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "TOST",
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "TOST Tech Service vs License",
+          "series_keys": [
+            "tost_technology_service",
+            "tost_license_revenue"
+          ]
+        },
+        {
+          "series_key": "cmp_toast_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "XYZ",
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "XYZ Software vs Transaction",
+          "series_keys": [
+            "xyz_software_data_revenue",
+            "xyz_transaction_revenue"
+          ]
+        },
+        {
+          "series_key": "cmp_square_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "WIX",
+      "recipes": [
+        {
+          "series_key": "wix_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cmp_wix_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "GDDY",
+      "recipes": [
+        {
+          "series_key": "gddy_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "cmp_godaddy_mentions",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "ADBE",
+      "recipes": [
+        {
+          "series_key": "adbe_digital_experience",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "CMRC",
+      "recipes": [
+        {
+          "series_key": "cmrc_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "GLBE",
+      "recipes": [
+        {
+          "series_key": "glbe_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "ticker": "LSPD",
+      "recipes": [
+        {
+          "series_key": "lspd_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar"
         }
       ]
     },

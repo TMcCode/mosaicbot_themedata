@@ -10,8 +10,23 @@
       "status": "active",
       "stockthemes": true,
       "packs": [
-        "lab_economics"
-      ]
+        "lab_economics",
+        "diagnostic_platforms"
+      ],
+      "notes": "v2: lab_economics (BLS/QCEW/Census reagents + CSTL revenue) + early-detection demand via diagnostic_platforms source_pack (EXAS Screening, PubMed liquid biopsy, physician emp). Import weights softened in score. Ticker: CSTL."
+    },
+    {
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "group": "MedTech Long",
+      "group_slug": "medtech-long",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "diagnostic_platforms",
+        "genomics_forums"
+      ],
+      "notes": "v1: FMP ILMN Sequencing + PACB Consumable/Instrument + QTRX Consumables/Instruments + MASS Device/Recurring + EXAS Screening backdrop + member revenue + PubMed p-Tau217/liquid biopsy + physician emp. Reuses lab_economics + sequencing_platforms via attachments/source_pack; forums via genomics_forums. Tickers: PSNL, ILMN, ICAD, MASS, PACB, QDEL, QTRX."
     },
     {
       "theme": "Steel '26: Integrated / Blast Furnace Producers",
@@ -306,6 +321,150 @@
         "crypto_brokerages_forums"
       ],
       "notes": "v1: DefiLlama stablecoin total + DEX volume + Base TVL + FMP COIN/HOOD/IBKR + transcript keywords + Polymarket market-structure. Reuses agentic_payments USDC/fed funds/Kalshi HOOD + agentic_payments_forums CryptoCurrency community. Forums: CoinBase/RobinHood/defi. DB1.XETRA skipped (EUR). CEX volume map_only."
+    },
+    {
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "group": "Regulatory Testing",
+      "group_slug": "regulatory-testing",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "regulatory_testing",
+        "regulatory_testing_forums"
+      ],
+      "notes": "v1b: FRED INDPRO + FMP WK/BSY/CDNS revenue + compliance transcripts. Reuses IT/software investment, CPATAX, hyperscaler CapEx, KR/TW exports. Forums: r/regulatoryaffairs category % + community volume only (named brand stacks dropped \u2014 too sparse). Tickers WK CDNS BSY."
+    },
+    {
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "group": "AI",
+      "group_slug": "ai",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "advanced_packaging"
+      ],
+      "notes": "v1b: TSM ADR revenue + CoWoS transcripts + TE Taiwan industrial production YoY. Reuses memory_hbm_packaging CapEx/revenue/exports/metrology/transcripts + memory_hbm_testing FORM + forums category/community. No new forums scrape. TrendForce/Yole map_only."
+    },
+    {
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "group": "Chips",
+      "group_slug": "chips",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "ic_substrates",
+        "ic_substrates_forums",
+        "advanced_packaging",
+        "memory_hbm_packaging"
+      ],
+      "notes": "v1: FMP pure-play rev/CapEx (latest FX\u2192USD) + FRED PCB PPI / semi util + Census HS 853400. Reuses Taiwan IP + CoWoS/ABF transcripts + TW/KR semi exports + hyperscaler CapEx. Forums: r/semiconductors ABF/FC-BGA/glass-core. Conglomerates chart-only. Tickers: 3037.TW 4062.T ATS.VI 009150.KS 3189.TW 8046.TW 4958.TW 222800.KQ 353200.KS 002916.SZ (+ conglomerates)."
+    },
+    {
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "group": "Payments",
+      "group_slug": "payments",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "integrated_pos",
+        "integrated_pos_forums"
+      ],
+      "notes": "v1: FMP TOST/FOUR/PAR/XYZ revenue + POS transcripts + FRED NEWORDER. Reuses agentic_payments retail/fed funds, ai_resilient shop_revenue, value_sit_down food-services + OpenTable (chart-only). Forums: r/ecommerce + r/smallbusiness. Skip Green Sheet / PAGS/STNE sum."
+    },
+    {
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "group": "Fashion Styles",
+      "group_slug": "fashion-styles",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "streetwear_sneakers",
+        "streetwear_sneakers_forums"
+      ],
+      "notes": "v1: FRED shoe/sporting-goods + footwear CPI + cotton/rubber PPI (chart) + Census HS 6404/6403 + FMP USD members + StockX hero-SKU resale premium (Chrome scrape) + forums r/Sneakers+streetwear. Skip ADS/PUM/7936/JD FX sum; EL.PA eyewear."
+    },
+    {
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "group": "Recreation",
+      "group_slug": "recreation",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "cruises",
+        "cruises_forums"
+      ],
+      "notes": "v1: PortCount key US port calls 0.20 + PortMiami passengers 0.10 (score) + PCE recreation + Brent (neg) + FMP members + TSA/forums chart-only. No UMich."
+    },
+    {
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "group": "Industry-Specific Software",
+      "group_slug": "industry-specific-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "aec_software",
+        "aec_software_forums"
+      ],
+      "notes": "v1: Census VIP + A&E emp + construction JOLTS + USASpending CFDA 20.205 + FMP ADSK/BSY/PCOR/TRMB/TTAN (+ ADSK AEC, TTAN sub/usage, TRMB B&I legacy) + Kalshi DC/permits chart-only + forums. Skip AIA ABI (404). Tickers: ADSK, BSY, PCOR, TRMB, TTAN, NEM.XETRA, ELCO.LSE, SMCRT.ST, 002410.SHE."
+    },
+    {
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "group": "BS Jobs",
+      "group_slug": "bs-jobs",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "billable_hours",
+        "billable_hours_forums"
+      ],
+      "notes": "v1: NAICS 54/5415 + JOLTS + productivity + FMP USD stack (ACN/BAH/CTSH/EPAM/INFY) + ACN consulting/outsourcing + BAH contract mix + headcount/rev-per-employee + USASpending BAH + Kalshi WA emp chart-only + forums r/consulting+cscareerquestions+ITCareerQuestions. Tickers: BAH, ACN, CAP.PA, CTSH, EPAM, ERF.PA, GIB-A.TO, INFY."
+    },
+    {
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "group": "Drones",
+      "group_slug": "drones",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "ag_drones",
+        "ag_drones_forums"
+      ],
+      "notes": "v1: FRED farm PPI/prices + AEM tractor/combine + Part 137 (v-1x) + HS 8806 + FMP DE PPA/CNH Ag/CTVA Crop Protection/TDY Digital Imaging + member revenue + USASpending precision-ag + forums r/Agriculture+r/drones. Tickers: PL, PLTR, AGCO, CNH, DE, TDY, CTVA, TRMB, UAVS, 7272.T, HEXA-B.ST."
+    },
+    {
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "group": "Toys & Hobbies",
+      "group_slug": "toys-hobbies",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "trad_toys",
+        "trad_toys_forums"
+      ],
+      "notes": "v1: FRED toys CPI + hobby-store sales + resins/dolls PPI + Census HS 9503 + FMP members/HAS segments/BBW Retail/GME Collectibles + Wikipedia brand pageviews + Amazon bestsellers brand presence + Tonies catalog + BGG family own/hotness + CPSC toy recalls. Forums: r/ActionFigures+Dolls+blindbox with sold-out/restock lexicon."
+    },
+    {
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "group": "Retail Tech",
+      "group_slug": "retail-tech",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "commerce_merchant_platforms",
+        "commerce_merchant_platforms_forums"
+      ],
+      "notes": "v1: FRED e-com retail sales + FMP member/segment mix (SHOP/TOST/XYZ/CMRC/GDDY/ADBE Q; WIX/GLBE/LSPD annual) + Wikipedia + Shopify App Store categories + iTunes ratings + npm SDKs. Reuses agentic_payments ecommerce_sales_share/retail_sales. Forums: r/shopify+ecommerce+smallbusiness."
     },
     {
       "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",

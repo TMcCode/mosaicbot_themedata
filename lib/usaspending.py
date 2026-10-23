@@ -80,10 +80,11 @@ def _post(url: str, payload: dict[str, Any], *, timeout: int = 120) -> dict[str,
 
 
 def _fy_month_to_date(fiscal_year: str | int, month: str | int) -> str | None:
-    """Map USASpending over-time FY + month → YYYY-MM-01.
+    """Map USASpending over-time FY + calendar month → YYYY-MM-01.
 
-    API returns fiscal_year + calendar month number for monthly groups in practice;
-    treat as calendar year-month labeled under fiscal_year field.
+    ``month`` is the calendar month (1–12). ``fiscal_year`` is the federal FY
+    that contains that month (FY starts Oct 1), so Oct–Dec of FY *Y* are
+    calendar Oct–Dec of *Y-1*.
     """
     try:
         y = int(fiscal_year)
@@ -92,6 +93,9 @@ def _fy_month_to_date(fiscal_year: str | int, month: str | int) -> str | None:
         return None
     if m < 1 or m > 12:
         return None
+    # Oct–Dec sit in the prior calendar year of the federal FY label.
+    if m >= 10:
+        y -= 1
     return f"{y:04d}-{m:02d}-01"
 
 
@@ -102,9 +106,20 @@ def fetch_monthly_obligations(
     award_type_codes: list[str] | None = None,
     program_numbers: list[str] | None = None,
     start_date: str = "2018-01-01",
-    end_date: str = "2030-12-31",
+    end_date: str | None = None,
+    drop_incomplete_month: bool = True,
 ) -> list[dict[str, float]]:
-    """Monthly aggregated obligations (USD). Defaults to contracts A–D."""
+    """Monthly aggregated obligations (USD). Defaults to contracts A–D.
+
+    Drops the incomplete current calendar month (and any future FY mislabels)
+    by default so YoY charts are not yanked by partial MTD prints.
+    """
+    from datetime import datetime, timezone
+
+    from lib.as_of import monthly_as_of_cap_iso
+
+    if end_date is None:
+        end_date = datetime.now(timezone.utc).date().isoformat()
     filters: dict[str, Any] = {
         "award_type_codes": list(award_type_codes or CONTRACT_AWARD_TYPES),
         "time_period": [{"start_date": start_date, "end_date": end_date}],
@@ -117,11 +132,12 @@ def fetch_monthly_obligations(
         filters["program_numbers"] = list(program_numbers)
 
     data = _post(SPENDING_OVER_TIME, {"group": "month", "filters": filters})
+    max_date = monthly_as_of_cap_iso() if drop_incomplete_month else end_date
     points: list[dict[str, float]] = []
     for row in data.get("results") or []:
         tp = row.get("time_period") or {}
         date = _fy_month_to_date(tp.get("fiscal_year"), tp.get("month"))
-        if not date or date < start_date:
+        if not date or date < start_date or date > max_date:
             continue
         amt = row.get("aggregated_amount")
         if amt is None:

@@ -39,20 +39,55 @@
           "rationale": "Quarterly confirmation of diagnostic-lab employment trend (NAICS 621511)."
         },
         {
-          "series_key": "lab_supplies_import_kg",
-          "metric": "m3_avg_yoy_pct",
-          "weight": 0.7,
+          "series_key": "cstl_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.35,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Reagent import volume as a soft activity proxy for IVD throughput. Ambiguous if stockpiling; medium-low weight."
+          "rationale": "Castle Biosciences revenue growth \u2192 theme-member early-detection lab operator demand."
+        },
+        {
+          "series_key": "exas_screening_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "diagnostic_platforms",
+          "rationale": "Exact Sciences Screening segment \u2192 blood/stool screening commercialization backdrop."
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "diagnostic_platforms",
+          "rationale": "Liquid-biopsy publication pulse \u2192 soft scientific validation for blood-based early detection."
+        },
+        {
+          "series_key": "physician_offices_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "diagnostic_platforms",
+          "rationale": "Physician offices employment \u2192 clinic capacity / testing demand backdrop."
+        },
+        {
+          "series_key": "lab_supplies_import_kg",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Reagent import volume \u2014 soft activity proxy; down-weighted (stockpiling/HS noise can dominate)."
         },
         {
           "series_key": "lab_supplies_import_value",
           "metric": "m3_avg_yoy_pct",
-          "weight": 0.4,
+          "weight": 0.15,
           "polarity": 1.0,
           "enabled": true,
-          "rationale": "Import dollars mix volume and price; keep low weight as secondary activity signal."
+          "rationale": "Import dollars mix volume and price; chart-leaning secondary signal."
         },
         {
           "series_key": "lab_supplies_ppi",
@@ -111,8 +146,14 @@
           "rationale": "Ticker-local (CSTL). Same \u2014 overlay later, not theme backdrop."
         }
       ],
-      "notes": "Framed for diagnostic lab / early-detection operators (sell tests, buy reagents). Pure IVD reagent manufacturers may want flipped polarity on supplies/import prices later. TX QCEW is ticker-local and intentionally omitted from the theme score.",
-      "theme_slug": "medtech-long-26-diagnostics-early-detection"
+      "notes": "Lab operator frame (sell tests, buy reagents) + early-detection demand: CSTL revenue; EXAS Screening / PubMed liquid biopsy / physician emp via source_pack=diagnostic_platforms. Import kg/value down-weighted so stockpiling noise does not dominate. TX QCEW ticker-local, omitted from theme score.",
+      "theme_slug": "medtech-long-26-diagnostics-early-detection",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Mild smooth; import volumes lumpy."
+      }
     },
     {
       "theme": "Steel '26: Integrated / Blast Furnace Producers",
@@ -1698,6 +1739,749 @@
         }
       ],
       "notes": "Reuses usdc_circulating via source_pack=agentic_payments. COT/Coinbase spot/PM/Kalshi/forums chart-only."
+    },
+    {
+      "theme": "Regulatory Testing '26: Compliance Software",
+      "theme_slug": "regulatory-testing-26-compliance-software",
+      "score_id": "regulatory_testing_backdrop",
+      "label": "Compliance software backdrop",
+      "pack": "regulatory_testing",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "INDPRO + reused software investment/profits/CapEx/KR exports + member revenue; \u00b112 clip + 3M smooth. Transcript/forums chart-only."
+      },
+      "components": [
+        {
+          "series_key": "industrial_production",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Industrial production rising \u2192 BSY infra + CDNS semi end-markets."
+        },
+        {
+          "series_key": "it_equipment_software_investment",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "IT + software fixed investment (reused) \u2192 enterprise compliance/software CapEx."
+        },
+        {
+          "series_key": "corporate_profits_after_tax",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "legal_software",
+          "rationale": "Corporate profits (reused CPATAX) \u2192 soft budget for GRC/compliance software."
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "optical_fiber",
+          "rationale": "Hyperscaler CapEx (reused) \u2192 CDNS EDA / AI infra verification demand."
+        },
+        {
+          "series_key": "regulatory_testing_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "WK+BSY+CDNS revenue growth \u2192 theme demand confirmation."
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_cxl",
+          "rationale": "KR semi exports (reused) \u2192 CDNS design/verification cycle proxy."
+        }
+      ],
+      "notes": "Reuses IT/software investment, CPATAX, hyperscaler CapEx, KR exports via source_pack. Transcript/forums/TW exports chart-only."
+    },
+    {
+      "theme": "AI '25: Advanced Packaging",
+      "theme_slug": "ai-25-advanced-packaging",
+      "score_id": "advanced_packaging_backdrop",
+      "label": "Advanced packaging backdrop",
+      "pack": "advanced_packaging",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 40.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Trimmed: hyperscaler CapEx + packaging revenue + Taiwan IP + TSM. CapEx/KR-TW exports/metrology imports chart-only."
+      },
+      "components": [
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_hbm_packaging",
+          "rationale": "Hyperscaler CapEx \u2192 AI accelerator \u2192 CoWoS/HBM packaging demand."
+        },
+        {
+          "series_key": "hbm_packaging_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_hbm_packaging",
+          "rationale": "USD packaging/inspection revenue (reused) \u2192 realized theme demand."
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "m3_avg",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "yoy_clip_pct": 40.0,
+          "rationale": "Taiwan industrial production YoY (TE) \u2192 foundry/OSAT/substrate hub activity."
+        },
+        {
+          "series_key": "tsm_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "TSM ADR revenue \u2014 foundry/CoWoS anchor (conglomerate; light weight)."
+        }
+      ],
+      "notes": "v2 trimmed score: hyperscaler 0.30 + packaging revenue 0.30 + Taiwan IP 0.25 + TSM 0.15. Packaging CapEx / KR-TW exports / measuring imports stay on board only."
+    },
+    {
+      "theme": "Payments '24: Integrated POS",
+      "theme_slug": "payments-24-integrated-pos",
+      "score_id": "integrated_pos_backdrop",
+      "label": "Integrated POS backdrop",
+      "pack": "integrated_pos",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Retail + USD POS members + food-services + OpenTable 4W + light NEWORDER. Fed funds / forums chart-only."
+      },
+      "components": [
+        {
+          "series_key": "retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "agentic_payments",
+          "rationale": "Retail & food-services sales \u2192 card / POS volume backdrop."
+        },
+        {
+          "series_key": "pos_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "TOST+FOUR+PAR+XYZ revenue \u2192 realized integrated POS demand."
+        },
+        {
+          "series_key": "food_services_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "value_sit_down",
+          "rationale": "Food-services sales \u2192 restaurant POS install base demand."
+        },
+        {
+          "series_key": "opentable_us_seated_diners_yoy",
+          "metric": "wma4",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "value_sit_down",
+          "exclude_incomplete_month": false,
+          "as_of": "latest",
+          "rationale": "Rising 4W-avg OpenTable seated YoY \u2192 restaurant traffic / Toast-PAR demand."
+        },
+        {
+          "series_key": "nondefense_capex_new_orders",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Core capex new orders (NEWORDER) \u2192 soft SMB hardware / kit investment pulse."
+        }
+      ],
+      "notes": "Fed funds + forums chart-only. SHOP reused on board (not in score sum)."
+    },
+    {
+      "theme": "Fashion Styles '24: Streetwear, Sportstyle & Sneaker Culture",
+      "theme_slug": "fashion-styles-24-streetwear-sportstyle-sneaker-culture",
+      "score_id": "streetwear_sneakers_backdrop",
+      "label": "Streetwear & sneakers backdrop",
+      "pack": "streetwear_sneakers",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Members + sports/textile imports + footwear CPI; shoe/sporting when FRED returns. StockX/PPI/forums chart-only."
+      },
+      "components": [
+        {
+          "series_key": "shoe_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Shoe store sales \u2192 sneaker/sportstyle sell-through."
+        },
+        {
+          "series_key": "sporting_goods_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Sporting goods sales \u2192 DKS / sportstyle channel."
+        },
+        {
+          "series_key": "streetwear_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.28,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "USD theme-member revenue \u2192 realized brand demand."
+        },
+        {
+          "series_key": "footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Sports footwear imports (HS 640411) \u2192 sneaker supply pulse."
+        },
+        {
+          "series_key": "textile_footwear_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Other textile-upper footwear imports (HS 640419) \u2192 lifestyle footwear pipeline."
+        },
+        {
+          "series_key": "footwear_cpi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Footwear CPI \u2192 brand pricing power."
+        }
+      ],
+      "notes": "StockX hero premium chart-only until multi-month history. Cotton/rubber PPI + forums chart-only. Shoe/sporting FRED may miss during Fed site maintenance."
+    },
+    {
+      "theme": "Recreation '24: Cruises",
+      "theme_slug": "recreation-24-cruises",
+      "score_id": "cruises_backdrop",
+      "label": "Cruises backdrop",
+      "pack": "cruises",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Key US port calls 0.20 + PortMiami passengers 0.10 + USD members + PCE recreation + Brent (neg). TSA / forums chart-only. No UMich."
+      },
+      "components": [
+        {
+          "series_key": "key_us_cruise_port_calls",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Miami+Canaveral+Everglades+Galveston+Tampa+Seattle cruise calls (PortCount); full months only \u2014 breadth of US homeport activity."
+        },
+        {
+          "series_key": "portmiami_cruise_passengers",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "PortMiami passengers (GMCVB) \u2014 heads/intensity at the largest homeport; complements multi-port calls."
+        },
+        {
+          "series_key": "cruise_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "USD theme-member revenue \u2192 realized cruise demand/yield."
+        },
+        {
+          "series_key": "pce_recreation_services",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "BEA PCE recreation services \u2192 discretionary experiences wallet."
+        },
+        {
+          "series_key": "brent_crude",
+          "metric": "wma4_yoy_pct",
+          "weight": 0.15,
+          "polarity": -1.0,
+          "enabled": true,
+          "yoy_clip_pct": 40.0,
+          "rationale": "Brent rising \u2192 fuel cost pressure for cruise operators."
+        }
+      ],
+      "notes": "TSA / fed funds / services CPI / mass-vs-expedition / forums chart-only. Port bucket: PortCount multi-port calls (0.20, complete months) + PortMiami GMCVB passengers (0.10)."
+    },
+    {
+      "theme": "Industry-Specific Software '24: Construction, AEC & Trades Software",
+      "theme_slug": "industry-specific-software-24-construction-aec-trades-software",
+      "score_id": "aec_software_backdrop",
+      "label": "AEC software backdrop",
+      "pack": "aec_software",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "VIP nonres + A&E employment + ADSK AEC; Kalshi/forums/USASpending not in score."
+      },
+      "components": [
+        {
+          "series_key": "vip_nonresidential",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.4,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Nonres VIP rising \u2192 jobsite/design demand for AEC software."
+        },
+        {
+          "series_key": "ae_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "A&E headcount rising \u2192 design-seat / license base."
+        },
+        {
+          "series_key": "adsk_aec_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Autodesk AEC segment growth \u2192 theme-pure software demand."
+        }
+      ],
+      "notes": "Light blend. Highway VIP / JOLTS / USASpending / Kalshi / forums chart-only."
+    },
+    {
+      "theme": "BS Jobs '26: Billable Hours Pyramid",
+      "theme_slug": "bs-jobs-26-billable-hours-pyramid",
+      "score_id": "billable_hours_backdrop",
+      "label": "Billable hours backdrop",
+      "pack": "billable_hours",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Productivity + ACN rev/employee + computer-systems emp (neg openings not in v1). Forums/Kalshi/USASpending chart-only."
+      },
+      "components": [
+        {
+          "series_key": "acn_revenue_per_employee",
+          "metric": "yoy_pct",
+          "weight": 0.35,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ACN revenue/employee rising \u2192 billable-pyramid leverage / AI efficiency."
+        },
+        {
+          "series_key": "nonfarm_productivity",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Macro productivity rising \u2192 AI efficiency backdrop."
+        },
+        {
+          "series_key": "computer_systems_design_employment",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.2,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "IT-services headcount falling while firms grow \u2192 substitution thesis."
+        },
+        {
+          "series_key": "billable_hours_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Member revenue growth with labor compression \u2192 theme demand."
+        }
+      ],
+      "notes": "Openings/Kalshi/forums/BAH awards chart-only. Emp polarity \u22121 (down is bullish for thesis)."
+    },
+    {
+      "theme": "Drones '25: Ag Drones",
+      "theme_slug": "drones-25-ag-drones",
+      "score_id": "ag_drones_backdrop",
+      "label": "Ag drones backdrop",
+      "pack": "ag_drones",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 12.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "OEM precision-ag segments + farm/chemical PPI. AEM tractor YoY enabled once history exists; Part 137 / HS trade / forums chart-only."
+      },
+      "components": [
+        {
+          "series_key": "de_ppa_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Deere PPA is the core large-ag + precision OEM pulse."
+        },
+        {
+          "series_key": "cnh_agriculture_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "CNH Ag + Raven precision exposure (thin history until more FMP prints)."
+        },
+        {
+          "series_key": "ctva_crop_protection_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Crop protection volume/pricing supports aerial application demand."
+        },
+        {
+          "series_key": "farm_products_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Higher crop prices \u2192 farm liquidity for spray-drone / precision capex."
+        },
+        {
+          "series_key": "ag_chemicals_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Chemical input inflation supports targeted aerial application economics."
+        },
+        {
+          "series_key": "aem_hp_100_plus",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "Large-ag tractor retail \u2014 disabled until >12 months of AEM history for YoY."
+        }
+      ],
+      "notes": "Part 137 share + HS 8806/8424 + forums chart-only. Re-enable AEM when YoY exists."
+    },
+    {
+      "theme": "MedTech Long '25: Diagnostic Platforms",
+      "theme_slug": "medtech-long-25-diagnostic-platforms",
+      "score_id": "diagnostic_platforms_backdrop",
+      "label": "Diagnostic platforms backdrop",
+      "pack": "diagnostic_platforms",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 15.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Platform P&L + lab activity; PubMed soft; grants via sequencing_platforms."
+      },
+      "components": [
+        {
+          "series_key": "ilmn_sequencing_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Illumina Sequencing segment rising \u2192 short-read platform/consumables demand."
+        },
+        {
+          "series_key": "pacb_consumable_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "PacBio consumables rising \u2192 long-read utilization after installs."
+        },
+        {
+          "series_key": "qtrx_consumables_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Quanterix consumables rising \u2192 Simoa / immunoassay assay pull-through."
+        },
+        {
+          "series_key": "lab_headcount",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "lab_economics",
+          "rationale": "Diagnostic lab employment rising \u2192 centralized lab capacity/demand."
+        },
+        {
+          "series_key": "usaspending_nhgri_grants",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "sequencing_platforms",
+          "rationale": "NHGRI funding rising \u2192 research sequencing demand backdrop."
+        },
+        {
+          "series_key": "pubmed_ptau217",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Rising p-Tau217 publication volume \u2192 soft validation for AD blood assays."
+        },
+        {
+          "series_key": "pubmed_liquid_biopsy",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.07,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Liquid-biopsy publication pulse \u2192 broader blood-based diagnostics research activity."
+        }
+      ],
+      "notes": "Multi-pack: lab_headcount from lab_economics; NHGRI grants from sequencing_platforms. Forums chart-only. PubMed soft/query-sensitive \u2014 low weight."
+    },
+    {
+      "theme": "Chips '26: IC Substrates",
+      "theme_slug": "chips-26-ic-substrates",
+      "score_id": "ic_substrates_backdrop",
+      "label": "IC substrates backdrop",
+      "pack": "ic_substrates",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Pure-play P&L + capacity; hub demand via source_pack."
+      },
+      "components": [
+        {
+          "series_key": "unimicron_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Unimicron revenue rising \u2192 TW ABF/FC-BGA substrate demand."
+        },
+        {
+          "series_key": "ibiden_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Ibiden revenue rising \u2192 JP high-end substrate demand."
+        },
+        {
+          "series_key": "ats_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "AT&S revenue rising \u2192 EU advanced substrate / Kulim pulse."
+        },
+        {
+          "series_key": "semco_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "SEMCO revenue rising \u2192 KR packaging/substrate complex (noisy vs MLCC)."
+        },
+        {
+          "series_key": "ic_substrates_pureplay_capex",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Pure-play CapEx rising \u2192 capacity build for AI substrate demand."
+        },
+        {
+          "series_key": "taiwan_industrial_production_yoy",
+          "metric": "m3_avg",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "advanced_packaging",
+          "rationale": "Taiwan IP YoY rising \u2192 hub manufacturing for substrates/packaging."
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_hbm_packaging",
+          "rationale": "Hyperscaler CapEx rising \u2192 AI accelerator / server substrate demand."
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.06,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_hbm_packaging",
+          "rationale": "TW semi exports rising \u2192 soft packaging/substrate trade pulse."
+        },
+        {
+          "series_key": "pcb_mfg_ppi",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.04,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Bare PCB PPI rising \u2192 soft pricing backdrop (low weight)."
+        }
+      ],
+      "notes": "Multi-pack: Taiwan IP + CoWoS chart from advanced_packaging; hyperscaler CapEx + TW/KR exports from memory_hbm_packaging. Conglomerates / HS imports chart-only. Latest-FX USD levels."
+    },
+    {
+      "theme": "Toys & Hobbies '25: Trad Toys, Dolls & Games",
+      "theme_slug": "toys-hobbies-25-trad-toys-dolls-games",
+      "score_id": "trad_toys_backdrop",
+      "label": "Trad toys backdrop",
+      "pack": "trad_toys",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Store sales + imports + HAS consumer products + member revenue; CPI chart-only for promo read."
+      },
+      "components": [
+        {
+          "series_key": "hobby_toy_store_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.28,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Hobby/toy store sales \u2192 specialty sell-through."
+        },
+        {
+          "series_key": "hs9503_import_value",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.22,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "HS 9503 imports \u2192 pipeline / retailer orders."
+        },
+        {
+          "series_key": "has_consumer_products",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Hasbro Consumer Products \u2192 trad toy OEM demand."
+        },
+        {
+          "series_key": "trad_toys_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Theme-member revenue \u2192 realized demand."
+        },
+        {
+          "series_key": "wiki_toy_brand_pageviews",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Wikipedia brand interest \u2192 cultural mindshare."
+        }
+      ],
+      "notes": "Amazon/Tonies/BGG/CPSC/forums/CPI/PPI chart-only. Wizards & Collectibles chart-only."
+    },
+    {
+      "score_id": "commerce_merchant_platforms_backdrop",
+      "label": "Commerce & merchant platforms backdrop",
+      "theme": "Retail Tech '26: Commerce & Merchant Platforms",
+      "theme_slug": "retail-tech-26-commerce-merchant-platforms",
+      "pack": "commerce_merchant_platforms",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "E-com sales + member revenue + wiki. Software/transaction mix chart-only (thin FMP segments)."
+      },
+      "components": [
+        {
+          "series_key": "ecommerce_retail_sales",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.28,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "US e-com/mail-order retail sales \u2192 merchant platform GMV backdrop."
+        },
+        {
+          "series_key": "ecommerce_sales_share",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "agentic_payments",
+          "rationale": "E-com % of retail \u2192 structural shift to online merchant OS."
+        },
+        {
+          "series_key": "cmp_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.3,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Theme-member revenue \u2192 realized platform demand."
+        },
+        {
+          "series_key": "software_like_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "Chart-only \u2014 FMP segment panel thins; YoY not trustworthy for chip."
+        },
+        {
+          "series_key": "wiki_commerce_pageviews",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Wikipedia attention \u2192 cultural/merchant mindshare."
+        }
+      ],
+      "notes": "Software/transaction mix + App Store/iTunes/npm/forums chart-only. Score = e-com sales + member revenue + wiki."
     },
     {
       "score_id": "regional_oil_presalt_ncs_backdrop",

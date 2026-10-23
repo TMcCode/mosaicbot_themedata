@@ -992,6 +992,491 @@
       "description": "Weekly Arctic Shift crypto brokerage forums (CoinBase/RobinHood/defi)."
     },
     {
+      "id": "regulatory_testing",
+      "job": "jobs/regulatory_testing.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 18,
+        "day_of_month_to": 28,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/regulatory_testing/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/regulatory_testing/latest.json"
+      },
+      "description": "Monthly FRED INDPRO + FMP WK/BSY/CDNS revenue + compliance transcripts. Soft-fail OK."
+    },
+    {
+      "id": "regulatory_testing_forums",
+      "job": "jobs/regulatory_testing_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/regulatory_testing_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/regulatory_testing_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift r/regulatoryaffairs \u2014 category % + community volume (no named-brand stack)."
+    },
+    {
+      "id": "advanced_packaging",
+      "job": "jobs/advanced_packaging.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 10,
+        "day_of_month_to": 20,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/advanced_packaging/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/advanced_packaging/latest.json"
+      },
+      "description": "Monthly thin AI advanced packaging \u2014 TSM revenue + CoWoS transcripts. Macros reused from HBM packaging."
+    },
+    {
+      "id": "integrated_pos",
+      "job": "jobs/integrated_pos.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "day_of_month_from": 12,
+        "day_of_month_to": 22,
+        "max_age_days": 35
+      },
+      "freshness": {
+        "r2_key": "themedata/integrated_pos/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/integrated_pos/latest.json"
+      },
+      "description": "Monthly thin Integrated POS \u2014 FMP members + NEWORDER + transcripts. Macros reused."
+    },
+    {
+      "id": "integrated_pos_forums",
+      "job": "jobs/integrated_pos_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/integrated_pos_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/integrated_pos_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift r/ecommerce + r/smallbusiness \u2014 POS brands + category + community."
+    },
+    {
+      "id": "streetwear_sneakers",
+      "job": "jobs/streetwear_sneakers.py",
+      "enabled": true,
+      "hosts": [
+        "mac",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/streetwear_sneakers/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/streetwear_sneakers/latest.json"
+      },
+      "description": "Weekly streetwear/sneakers \u2014 FRED/Census/FMP + StockX Chrome hero basket (prefer Mac for Chrome)."
+    },
+    {
+      "id": "streetwear_sneakers_forums",
+      "job": "jobs/streetwear_sneakers_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/streetwear_sneakers_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/streetwear_sneakers_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift r/Sneakers + r/streetwear \u2014 brands + resale/heat category."
+    },
+    {
+      "id": "cruises",
+      "job": "jobs/cruises.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "monthly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "day_of_month_window": [
+          5,
+          12
+        ],
+        "max_age_days": 40
+      },
+      "freshness": {
+        "r2_key": "themedata/cruises/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cruises/latest.json"
+      },
+      "description": "Monthly cruises \u2014 PortMiami/Seattle/PortCount scrapes + FRED PCE/Brent/CPI + TSA + FMP members. Thu in DOM 5\u201312 to avoid Wed weekly pile-up."
+    },
+    {
+      "id": "cruises_forums",
+      "job": "jobs/cruises_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/cruises_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cruises_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift r/cruise + r/cruises \u2014 lines + booking + destinations."
+    },
+    {
+      "id": "aec_software",
+      "job": "jobs/aec_software.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/aec_software/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/aec_software/latest.json"
+      },
+      "description": "Weekly AEC software \u2014 FRED VIP/labor + USASpending highway + FMP members/segments + Kalshi DC/permits refresh."
+    },
+    {
+      "id": "aec_software_forums",
+      "job": "jobs/aec_software_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/aec_software_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/aec_software_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift AEC forums (r/Construction, r/architects, r/civilengineering, r/HVAC). Soft-fail scrape."
+    },
+    {
+      "id": "billable_hours",
+      "job": "jobs/billable_hours.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/billable_hours/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/billable_hours/latest.json"
+      },
+      "description": "Weekly billable-hours \u2014 FRED labor/productivity + FMP members/segments/headcount + USASpending BAH + Kalshi."
+    },
+    {
+      "id": "billable_hours_forums",
+      "job": "jobs/billable_hours_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/billable_hours_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/billable_hours_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift billable-hours forums (r/consulting, r/cscareerquestions, r/ITCareerQuestions)."
+    },
+    {
+      "id": "ag_drones",
+      "job": "jobs/ag_drones.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ag_drones/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ag_drones/latest.json"
+      },
+      "description": "Weekly ag drones \u2014 FRED farm PPI/prices + AEM PDF + Part 137 + HS 8806 + FMP segments + USASpending."
+    },
+    {
+      "id": "ag_drones_forums",
+      "job": "jobs/ag_drones_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ag_drones_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ag_drones_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift ag-drones forums (r/Agriculture, r/drones)."
+    },
+    {
+      "id": "diagnostic_platforms",
+      "job": "jobs/diagnostic_platforms.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/diagnostic_platforms/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/diagnostic_platforms/latest.json"
+      },
+      "description": "Weekly diagnostic platforms \u2014 FMP segments/revenue + PubMed counts + FRED physician emp."
+    },
+    {
+      "id": "ic_substrates",
+      "job": "jobs/ic_substrates.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ic_substrates/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ic_substrates/latest.json"
+      },
+      "description": "Weekly IC substrates \u2014 FMP pure-play FX\u2192USD rev/CapEx + FRED PCB/util + HS 853400."
+    },
+    {
+      "id": "ic_substrates_forums",
+      "job": "jobs/ic_substrates_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ic_substrates_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ic_substrates_forums/latest.json"
+      },
+      "description": "Weekly IC substrates forums \u2014 Arctic Shift r/semiconductors ABF/FC-BGA/glass-core + category %."
+    },
+    {
+      "id": "trad_toys",
+      "job": "jobs/trad_toys.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/trad_toys/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/trad_toys/latest.json"
+      },
+      "description": "Weekly trad toys \u2014 FRED/Census/FMP + Wikipedia/Amazon/Tonies/BGG/CPSC."
+    },
+    {
+      "id": "trad_toys_forums",
+      "job": "jobs/trad_toys_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/trad_toys_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/trad_toys_forums/latest.json"
+      },
+      "description": "Weekly trad toys forums \u2014 Arctic Shift ActionFigures/Dolls/blindbox."
+    },
+    {
+      "id": "commerce_merchant_platforms",
+      "job": "jobs/commerce_merchant_platforms.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/commerce_merchant_platforms/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/commerce_merchant_platforms/latest.json"
+      },
+      "description": "Weekly commerce merchant platforms \u2014 FRED/FMP + wiki/App Store/iTunes/npm."
+    },
+    {
+      "id": "commerce_merchant_platforms_forums",
+      "job": "jobs/commerce_merchant_platforms_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/commerce_merchant_platforms_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/commerce_merchant_platforms_forums/latest.json"
+      },
+      "description": "Weekly commerce forums \u2014 Arctic Shift shopify/ecommerce/smallbusiness."
+    },
+    {
       "id": "regional_oil_presalt_ncs",
       "job": "jobs/regional_oil_presalt_ncs.py",
       "enabled": true,
