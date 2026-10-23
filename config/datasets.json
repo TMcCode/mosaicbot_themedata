@@ -24832,6 +24832,546 @@
       ],
       "as_of_semantics": "period_end",
       "name": "CFTC CME Bitcoin open interest"
+    },
+    {
+      "id": "brent_crude_ro",
+      "label": "Brent crude oil price",
+      "description": "FRED DCOILBRENTEU \u2014 Crude Oil Prices: Brent - Europe",
+      "source": "fred",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "brent_crude_ro"
+      ]
+    },
+    {
+      "id": "eu_natgas_ro",
+      "label": "EU natural gas price",
+      "description": "FRED PNGASEUUSDM \u2014 Global Price of Natural Gas, EU",
+      "source": "fred",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "eu_natgas_ro"
+      ]
+    },
+    {
+      "id": "nod_johan_sverdrup_oil",
+      "label": "Johan Sverdrup oil production",
+      "description": "Norwegian Offshore Directorate FactPages \u2014 Johan Sverdrup oil production",
+      "source": "nod_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "nod_johan_sverdrup_oil"
+      ]
+    },
+    {
+      "id": "nod_johan_castberg_oil",
+      "label": "Johan Castberg oil production",
+      "description": "Norwegian Offshore Directorate FactPages \u2014 Johan Castberg oil production",
+      "source": "nod_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "nod_johan_castberg_oil"
+      ]
+    },
+    {
+      "id": "nod_alvheim_oil",
+      "label": "Alvheim oil production",
+      "description": "Norwegian Offshore Directorate FactPages \u2014 Alvheim oil production",
+      "source": "nod_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "nod_alvheim_oil"
+      ]
+    },
+    {
+      "id": "nod_balder_oil",
+      "label": "Balder oil production",
+      "description": "Norwegian Offshore Directorate FactPages \u2014 Balder oil production",
+      "source": "nod_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "nod_balder_oil"
+      ]
+    },
+    {
+      "id": "ncs_focus_oil",
+      "label": "North Sea focus-field oil production",
+      "description": "Derived sum \u2014 Sverdrup + Castberg + Alvheim + Balder (NOD)",
+      "source": "derived_sum",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "ncs_focus_oil"
+      ]
+    },
+    {
+      "id": "anp_buzios_oil",
+      "label": "B\u00fazios oil production",
+      "description": "ANP Produ\u00e7\u00e3o por Po\u00e7o Pr\u00e9-Sal \u2014 B\u00fazios oil production",
+      "source": "anp_presalt_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "anp_buzios_oil"
+      ]
+    },
+    {
+      "id": "anp_tupi_oil",
+      "label": "Tupi oil production",
+      "description": "ANP Produ\u00e7\u00e3o por Po\u00e7o Pr\u00e9-Sal \u2014 Tupi oil production",
+      "source": "anp_presalt_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "anp_tupi_oil"
+      ]
+    },
+    {
+      "id": "anp_mero_oil",
+      "label": "Mero oil production",
+      "description": "ANP Produ\u00e7\u00e3o por Po\u00e7o Pr\u00e9-Sal \u2014 Mero oil production",
+      "source": "anp_presalt_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "anp_mero_oil"
+      ]
+    },
+    {
+      "id": "anp_atapu_oil",
+      "label": "Atapu oil production",
+      "description": "ANP Produ\u00e7\u00e3o por Po\u00e7o Pr\u00e9-Sal \u2014 Atapu oil production",
+      "source": "anp_presalt_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "anp_atapu_oil"
+      ]
+    },
+    {
+      "id": "anp_sepia_oil",
+      "label": "S\u00e9pia oil production",
+      "description": "ANP Produ\u00e7\u00e3o por Po\u00e7o Pr\u00e9-Sal \u2014 S\u00e9pia oil production",
+      "source": "anp_presalt_field",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "anp_sepia_oil"
+      ]
+    },
+    {
+      "id": "presalt_focus_oil",
+      "label": "Pre-salt focus-field oil production",
+      "description": "Derived sum \u2014 B\u00fazios + Tupi + Mero + Atapu + S\u00e9pia (ANP)",
+      "source": "derived_sum",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "presalt_focus_oil"
+      ]
+    },
+    {
+      "id": "brazil_santos_oil",
+      "label": "Brazil Santos basin oil production",
+      "description": "ANP Boletim Mensal \u2014 Santos basin petroleum (bbl/d)",
+      "source": "anp_santos_bulletin",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "brazil_santos_oil"
+      ]
+    },
+    {
+      "id": "gassco_ncs_exit",
+      "label": "Norway NCS gas exit nominations",
+      "description": "Gassco UMM \u2014 Sum Exit Nominations NCS (MSm\u00b3/d)",
+      "source": "gassco_exit",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "gassco_ncs_exit"
+      ]
+    },
+    {
+      "id": "uk_indigenous_oil",
+      "label": "UK indigenous crude oil production",
+      "description": "DESNZ Energy Trends Table 3.1 \u2014 Indigenous crude oil (thousand tonnes)",
+      "source": "uk_et31",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "monthly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "uk_indigenous_oil"
+      ]
+    },
+    {
+      "id": "abicom_fuel_parity_gap",
+      "label": "Brazil fuel import-parity gap",
+      "description": "Abicom \u2014 defasagem m\u00e9dia diesel/gasolina vs import parity (%)",
+      "source": "abicom_parity",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "abicom_fuel_parity_gap"
+      ]
+    },
+    {
+      "id": "eqnr_revenue_ro",
+      "label": "Equinor revenue",
+      "description": "FMP income-statement revenue \u2014 EQNR",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "eqnr_revenue_ro"
+      ]
+    },
+    {
+      "id": "pbr_revenue_ro",
+      "label": "Petrobras revenue",
+      "description": "FMP income-statement revenue \u2014 PBR",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "pbr_revenue_ro"
+      ]
+    },
+    {
+      "id": "akrbp_revenue_ro",
+      "label": "Aker BP revenue",
+      "description": "FMP income-statement revenue \u2014 AKRBP.OL",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "akrbp_revenue_ro"
+      ]
+    },
+    {
+      "id": "galp_revenue_ro",
+      "label": "Galp revenue",
+      "description": "FMP income-statement revenue \u2014 GALP.LS",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "galp_revenue_ro"
+      ]
+    },
+    {
+      "id": "hbr_revenue_ro",
+      "label": "Harbour Energy revenue",
+      "description": "FMP income-statement revenue \u2014 HBR.L",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "hbr_revenue_ro"
+      ]
+    },
+    {
+      "id": "var_revenue_ro",
+      "label": "V\u00e5r Energi revenue",
+      "description": "FMP income-statement revenue \u2014 VAR.OL",
+      "source": "fmp_revenue_ticker",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "var_revenue_ro"
+      ]
+    },
+    {
+      "id": "ro_member_revenue",
+      "label": "Theme-member revenue (USD)",
+      "description": "FMP income-statement revenue sum \u2014 EQNR/PBR/AKRBP.OL/GALP.LS/HBR.L/VAR.OL",
+      "source": "fmp_revenue",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "quarterly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "ro_member_revenue"
+      ]
+    },
+    {
+      "id": "wiki_oil_pageviews",
+      "label": "Wikipedia attention (theme basket)",
+      "description": "Wikimedia pageviews \u2014 Petrobras/Equinor/Sverdrup/B\u00fazios/Pre-salt",
+      "source": "wikipedia_pageviews",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "period_end",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "wiki_oil_pageviews"
+      ]
+    },
+    {
+      "id": "kalshi_pbr_q3_production",
+      "label": "Kalshi: Petrobras Q3 production >3,250 mboed",
+      "description": "Kalshi KXPBR-26NOVPROD-3250 \u2014 Petrobras Q3 total production >3250 mboed",
+      "source": "kalshi",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "kalshi_pbr_q3_production"
+      ]
+    },
+    {
+      "id": "kalshi_pbr_fy_production",
+      "label": "Kalshi: Petrobras FY production >3,250 mboed",
+      "description": "Kalshi KXPBRA-27FEBPROD-3250 \u2014 Petrobras fiscal-year production >3250 mboed",
+      "source": "kalshi",
+      "license": "open",
+      "status": "pull",
+      "access": "api",
+      "cadence": "weekly",
+      "as_of_semantics": "vendor_as_of",
+      "pack": "regional_oil_presalt_ncs",
+      "series_keys": [
+        "kalshi_pbr_fy_production"
+      ]
+    },
+    {
+      "id": "ro_petrobras_mentions",
+      "label": "Forum Petrobras mentions (weekly)",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Petrobras",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_petrobras_mentions"
+      ]
+    },
+    {
+      "id": "ro_equinor_mentions",
+      "label": "Forum Equinor mentions (weekly)",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Equinor",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_equinor_mentions"
+      ]
+    },
+    {
+      "id": "ro_akerbp_mentions",
+      "label": "Forum Aker BP mentions (weekly)",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning Aker BP",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_akerbp_mentions"
+      ]
+    },
+    {
+      "id": "ro_fpso_presalt_mentions",
+      "label": "Forum FPSO & pre-salt / NCS talk (weekly)",
+      "description": "Arctic Shift \u2014 weekly unique posts mentioning FPSO / pre-salt",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_fpso_presalt_mentions"
+      ]
+    },
+    {
+      "id": "ro_oil_community_volume",
+      "label": "r/oil community volume (weekly)",
+      "description": "Arctic Shift \u2014 weekly post count in r/oil",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_oil_community_volume"
+      ]
+    },
+    {
+      "id": "ro_norway_community_volume",
+      "label": "r/Norway community volume (weekly)",
+      "description": "Arctic Shift \u2014 weekly post count in r/Norway",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_norway_community_volume"
+      ]
+    },
+    {
+      "id": "ro_investing_community_volume",
+      "label": "r/investing community volume (weekly)",
+      "description": "Arctic Shift \u2014 weekly post count in r/investing",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_investing_community_volume"
+      ]
+    },
+    {
+      "id": "ro_brand_sentiment",
+      "label": "Forum operator-tools sentiment",
+      "description": "Arctic Shift \u2014 mean lexicon polarity over unique posts hitting Petrobras/Equinor/Aker BP",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_brand_sentiment"
+      ]
+    },
+    {
+      "id": "ro_fpso_presalt_sentiment",
+      "label": "Forum FPSO & basin talk sentiment",
+      "description": "Arctic Shift \u2014 mean lexicon polarity on FPSO/pre-salt/NCS tagged posts",
+      "source": "arctic_shift",
+      "license": "open",
+      "status": "pull",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of",
+      "pack": "regional_oil_presalt_ncs_forums",
+      "series_keys": [
+        "ro_fpso_presalt_sentiment"
+      ]
     }
   ]
 }

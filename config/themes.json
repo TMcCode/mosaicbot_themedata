@@ -306,6 +306,19 @@
         "crypto_brokerages_forums"
       ],
       "notes": "v1: DefiLlama stablecoin total + DEX volume + Base TVL + FMP COIN/HOOD/IBKR + transcript keywords + Polymarket market-structure. Reuses agentic_payments USDC/fed funds/Kalshi HOOD + agentic_payments_forums CryptoCurrency community. Forums: CoinBase/RobinHood/defi. DB1.XETRA skipped (EUR). CEX volume map_only."
+    },
+    {
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "group": "Regional Oil",
+      "group_slug": "regional-oil",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "regional_oil_presalt_ncs",
+        "regional_oil_presalt_ncs_forums"
+      ],
+      "notes": "v1: NOD NCS fields + ANP Pre-Salt wells/Santos bulletin + FRED Brent/EU gas + Gassco NCS exit + UK ET 3.1 + FMP members + Wikipedia + Kalshi PBR. Forums: r/oil+Norway+investing. Abicom soft-fail."
     }
   ]
 }

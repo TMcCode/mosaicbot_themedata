@@ -5512,6 +5512,324 @@
           "chart_type": "line"
         }
       ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "display_name": "Pre-salt focus fields",
+          "series_keys": [
+            "anp_buzios_oil",
+            "anp_tupi_oil",
+            "anp_mero_oil",
+            "anp_atapu_oil",
+            "anp_sepia_oil"
+          ],
+          "sum_series_key": "presalt_focus_oil"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "display_name": "NCS focus fields",
+          "series_keys": [
+            "nod_johan_sverdrup_oil",
+            "nod_johan_castberg_oil",
+            "nod_alvheim_oil",
+            "nod_balder_oil"
+          ],
+          "sum_series_key": "ncs_focus_oil"
+        },
+        {
+          "series_key": "brazil_santos_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eu_natgas_ro",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "gassco_ncs_exit",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "uk_indigenous_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "display_name": "Theme-member revenue",
+          "series_keys": [
+            "eqnr_revenue_ro",
+            "pbr_revenue_ro",
+            "akrbp_revenue_ro",
+            "galp_revenue_ro",
+            "hbr_revenue_ro",
+            "var_revenue_ro"
+          ],
+          "sum_series_key": "ro_member_revenue"
+        },
+        {
+          "series_key": "abicom_fuel_parity_gap",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "wiki_oil_pageviews",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "kalshi_pbr_q3_production",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "kalshi_pbr_fy_production",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "display_name": "Forum operator mentions",
+          "series_keys": [
+            "ro_petrobras_mentions",
+            "ro_equinor_mentions",
+            "ro_akerbp_mentions"
+          ]
+        },
+        {
+          "series_key": "ro_fpso_presalt_mentions",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "level",
+          "display_name": "Forum community volume",
+          "series_keys": [
+            "ro_oil_community_volume",
+            "ro_norway_community_volume",
+            "ro_investing_community_volume"
+          ]
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "level",
+          "display_name": "Forum sentiment",
+          "series_keys": [
+            "ro_brand_sentiment",
+            "ro_fpso_presalt_sentiment"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "EQNR",
+      "recipes": [
+        {
+          "series_key": "eqnr_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nod_johan_sverdrup_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nod_johan_castberg_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gassco_ncs_exit",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "eu_natgas_ro",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "PBR",
+      "recipes": [
+        {
+          "series_key": "pbr_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "anp_buzios_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "anp_mero_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "anp_tupi_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brazil_santos_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "abicom_fuel_parity_gap",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "kalshi_pbr_q3_production",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "AKRBP.OL",
+      "recipes": [
+        {
+          "series_key": "akrbp_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nod_alvheim_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ncs_focus_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "GALP.LS",
+      "recipes": [
+        {
+          "series_key": "galp_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "anp_buzios_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brazil_santos_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "HBR.L",
+      "recipes": [
+        {
+          "series_key": "hbr_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "uk_indigenous_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "ticker": "VAR.OL",
+      "recipes": [
+        {
+          "series_key": "var_revenue_ro",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "gassco_ncs_exit",
+          "metric": "level",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "nod_balder_oil",
+          "metric": "level",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "eu_natgas_ro",
+          "metric": "level",
+          "chart_type": "line"
+        }
+      ]
     }
   ]
 }

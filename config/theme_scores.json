@@ -1698,6 +1698,71 @@
         }
       ],
       "notes": "Reuses usdc_circulating via source_pack=agentic_payments. COT/Coinbase spot/PM/Kalshi/forums chart-only."
+    },
+    {
+      "score_id": "regional_oil_presalt_ncs_backdrop",
+      "label": "Pre-Salt & North Sea engines backdrop",
+      "theme": "Regional Oil '26: The Pre-Salt & North Sea Engines",
+      "theme_slug": "regional-oil-26-the-pre-salt-north-sea-engines",
+      "pack": "regional_oil_presalt_ncs",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Brent + EU gas + NCS focus oil + Santos (ANP continuity) + member revenue. Abicom/Gassco/Kalshi/forums/wiki chart-only."
+      },
+      "components": [
+        {
+          "series_key": "brent_crude_ro",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Brent \u2192 realized offshore oil cash flow."
+        },
+        {
+          "series_key": "eu_natgas_ro",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "EU gas \u2192 NCS gas netbacks (EQNR/V\u00e5r)."
+        },
+        {
+          "series_key": "ncs_focus_oil",
+          "metric": "yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NCS focus-field volumes \u2192 North Sea engine health."
+        },
+        {
+          "series_key": "brazil_santos_oil",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Santos basin oil \u2192 pre-salt/deepwater Brazil trajectory (continuous vs CDP-gated wells)."
+        },
+        {
+          "series_key": "ro_member_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.15,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Member USD revenue \u2192 realized corporate cash engines."
+        },
+        {
+          "series_key": "abicom_fuel_parity_gap",
+          "metric": "level",
+          "weight": 0.1,
+          "polarity": -1.0,
+          "enabled": false,
+          "rationale": "Chart-only until Abicom scrape accumulates history (negative = subsidy drag on PBR)."
+        }
+      ],
+      "notes": "Pre-salt well stacks + Gassco + UKCS + Kalshi + forums + wiki chart-only. Score uses Santos (not field sum) for Brazil continuity post-2023 CDP migration."
     }
   ]
 }

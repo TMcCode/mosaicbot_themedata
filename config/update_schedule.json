@@ -990,6 +990,50 @@
         "local_relative": "data/crypto_brokerages_forums/latest.json"
       },
       "description": "Weekly Arctic Shift crypto brokerage forums (CoinBase/RobinHood/defi)."
+    },
+    {
+      "id": "regional_oil_presalt_ncs",
+      "job": "jobs/regional_oil_presalt_ncs.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/regional_oil_presalt_ncs/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/regional_oil_presalt_ncs/latest.json"
+      },
+      "description": "Weekly regional oil \u2014 NOD/ANP/FRED/Gassco/UK/FMP/wiki/Kalshi."
+    },
+    {
+      "id": "regional_oil_presalt_ncs_forums",
+      "job": "jobs/regional_oil_presalt_ncs_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/regional_oil_presalt_ncs_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/regional_oil_presalt_ncs_forums/latest.json"
+      },
+      "description": "Weekly regional oil forums \u2014 Arctic Shift oil/Norway/investing."
     }
   ]
 }

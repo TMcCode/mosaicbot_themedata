@@ -1,0 +1,174 @@
+{
+  "schema_version": 0,
+  "pack": "regional_oil_presalt_ncs_forums",
+  "description": "Regional Oil Pre-Salt & North Sea Reddit sidecar \u2014 Petrobras/Equinor/Aker BP + FPSO/pre-salt category + community volume (r/oil, r/Norway, r/investing). Not in backdrop scores.",
+  "series": [
+    {
+      "key": "ro_petrobras_mentions",
+      "source": "arctic_shift",
+      "label": "Petrobras mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts mentioning Petrobras",
+      "short_name": "Petrobras",
+      "display_name": "Forum Petrobras mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ro_petrobras_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_equinor_mentions",
+      "source": "arctic_shift",
+      "label": "Equinor mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts mentioning Equinor",
+      "short_name": "Equinor",
+      "display_name": "Forum Equinor mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ro_equinor_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_akerbp_mentions",
+      "source": "arctic_shift",
+      "label": "Aker BP mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts mentioning Aker BP",
+      "short_name": "Aker BP",
+      "display_name": "Forum Aker BP mentions (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 4,
+      "dataset_id": "ro_akerbp_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_fpso_presalt_mentions",
+      "source": "arctic_shift",
+      "label": "FPSO / pre-salt mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly unique posts mentioning FPSO / pre-salt",
+      "short_name": "FPSO / pre-salt",
+      "display_name": "Forum FPSO & pre-salt / NCS talk (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 5,
+      "dataset_id": "ro_fpso_presalt_mentions",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_oil_community_volume",
+      "source": "arctic_shift",
+      "label": "r/oil posts (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly post count in r/oil",
+      "short_name": "r/oil",
+      "display_name": "r/oil community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ro_oil_community_volume",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_norway_community_volume",
+      "source": "arctic_shift",
+      "label": "r/Norway posts (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly post count in r/Norway",
+      "short_name": "r/Norway",
+      "display_name": "r/Norway community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ro_norway_community_volume",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_investing_community_volume",
+      "source": "arctic_shift",
+      "label": "r/investing posts (weekly)",
+      "official_name": "Arctic Shift \u2014 weekly post count in r/investing",
+      "short_name": "r/investing",
+      "display_name": "r/investing community volume (weekly)",
+      "frequency": "weekly",
+      "unit": "posts",
+      "derived": [
+        "wow_pct"
+      ],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ro_investing_community_volume",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_brand_sentiment",
+      "source": "arctic_shift",
+      "label": "Operator brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 mean lexicon polarity over unique posts hitting Petrobras/Equinor/Aker BP",
+      "short_name": "Operator sentiment",
+      "display_name": "Forum operator-tools sentiment",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ro_brand_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    },
+    {
+      "key": "ro_fpso_presalt_sentiment",
+      "source": "arctic_shift",
+      "label": "FPSO / pre-salt talk sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 mean lexicon polarity on FPSO/pre-salt/NCS tagged posts",
+      "short_name": "FPSO/pre-salt sentiment",
+      "display_name": "Forum FPSO & basin talk sentiment",
+      "frequency": "weekly",
+      "unit": "sentiment",
+      "derived": [],
+      "scope_default": "theme",
+      "usefulness": 3,
+      "dataset_id": "ro_fpso_presalt_sentiment",
+      "access": "scrape",
+      "cadence": "weekly",
+      "as_of_semantics": "scrape_as_of"
+    }
+  ]
+}
