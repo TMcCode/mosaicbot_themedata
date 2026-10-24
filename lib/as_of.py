@@ -19,14 +19,23 @@ def freshness_as_of(raw: date, *, today: date | None = None) -> date:
     USASpending (and similar) can emit *future* or incomplete current-month
     ``YYYY-MM-01`` period_end dates. Those must not yield negative age.
 
-    Do **not** clamp true daily vendor_as_of stamps (e.g. Kalshi on the 16th) —
-    only future dates and period_end labels on the 1st of the current month.
+    Weekly scrapes often stamp ``as_of`` as the week-ending Sunday a few days
+    ahead. Those must **not** snap to last complete month (that made every
+    forum pack look ~50d stale mid-week). Near-future non-period stamps clamp
+    to ``today`` (age 0).
+
+    Do **not** clamp true daily vendor_as_of stamps on/before today (e.g. Kalshi
+    on the 16th) — only future dates and period_end labels on the 1st of the
+    current month.
     """
     today = today or datetime.now(timezone.utc).date()
     month_start = date(today.year, today.month, 1)
-    # Future print → treat as last complete month for staleness.
-    if raw > today:
+    # Future period_end / fiscal month labels (…-01) → last complete month.
+    if raw > today and raw.day == 1:
         return last_complete_month_start(today)
+    # Near-future week-ending / annual YTD stamps → treat as current for age.
+    if raw > today:
+        return today
     # Incomplete current month period_end (…-01 while still in that month).
     if raw.day == 1 and raw >= month_start:
         return last_complete_month_start(today)

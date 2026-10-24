@@ -181,6 +181,15 @@ def is_due(
         stale = True
         reasons.append("no prior as_of")
 
+    # Outside the due window, stale catch-up is for *missed runs*, not "source
+    # still on last month's print." If we succeeded recently within max_age,
+    # skip re-fetch until the next scheduled window (or success ages out).
+    if stale and not in_window and max_age is not None and last.get("ok") and last_ok:
+        success_age = (today - last_ok).days
+        if success_age < int(max_age):
+            reasons.append(f"recent success age={success_age}d<{max_age}")
+            return False, "; ".join(reasons) or "recent success"
+
     if in_window or stale:
         return True, "; ".join(reasons) or "due"
     return False, "; ".join(reasons) or "not due"
