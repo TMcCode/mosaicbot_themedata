@@ -60,15 +60,27 @@ class DispatchDueTests(unittest.TestCase):
             "freshness": {},
         }
 
-    def test_week_ending_not_stale_midweek(self):
-        pack = self._pack(weekdays=["Tue"], max_age_days=8)
+    def test_week_ending_as_of_counts_fresh_on_due_day(self):
+        # Near-future week-ending clamps to today → fresh; still due via weekday window.
+        pack = self._pack(weekdays=["Fri"], max_age_days=8)
         status = {"packs": {}}
         today = date(2026, 10, 23)  # Fri
         with patch("jobs.dispatch_due._read_freshness_as_of", return_value=date(2026, 10, 25)):
             due, reason = is_due(pack, today=today, status=status, force=False)
-        self.assertFalse(due)
+        self.assertTrue(due)
         self.assertIn("fresh", reason)
         self.assertNotIn("stale", reason)
+
+    def test_off_weekday_hard_skip(self):
+        pack = self._pack(weekdays=["Tue"], max_age_days=8)
+        status = {"packs": {}}
+        today = date(2026, 10, 23)  # Fri
+        with patch(
+            "jobs.dispatch_due._read_freshness_as_of", return_value=date(2026, 9, 1)
+        ):
+            due, reason = is_due(pack, today=today, status=status, force=False)
+        self.assertFalse(due)
+        self.assertIn("weekday=Fri", reason)
 
     def test_stale_skipped_after_recent_success(self):
         """Monthly print still Sept, but we already refreshed yesterday → skip."""
@@ -138,6 +150,51 @@ class BlsTransientTests(unittest.TestCase):
         self.assertTrue(_is_bls_transient_fail(1, "BLS status='REQUEST_NOT_PROCESSED'"))
         self.assertFalse(_is_bls_transient_fail(0, "BLS HTTP 503"))
         self.assertFalse(_is_bls_transient_fail(1, "Census timeout"))
+
+
+class WeekdayHardGateTests(unittest.TestCase):
+    def test_weekend_skips_even_when_stale(self):
+        """BLS monthlies: Sat outside Mon–Fri must not run via stale catch-up."""
+        pack = {
+            "id": "legal_software",
+            "enabled": True,
+            "due": {
+                "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                "day_of_month_from": 15,
+                "day_of_month_to": 25,
+                "max_age_days": 35,
+            },
+            "freshness": {},
+        }
+        status = {"packs": {}}
+        today = date(2026, 10, 24)  # Sat, day 24 in window, as_of very stale
+        with patch(
+            "jobs.dispatch_due._read_freshness_as_of", return_value=date(2026, 9, 1)
+        ):
+            due, reason = is_due(pack, today=today, status=status, force=False)
+        self.assertFalse(due)
+        self.assertIn("weekday=Sat", reason)
+
+    def test_monday_stale_catchup_still_runs(self):
+        pack = {
+            "id": "legal_software",
+            "enabled": True,
+            "due": {
+                "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                "day_of_month_from": 15,
+                "day_of_month_to": 25,
+                "max_age_days": 35,
+            },
+            "freshness": {},
+        }
+        status = {"packs": {}}
+        today = date(2026, 10, 26)  # Mon, day 26 outside 15-25, stale
+        with patch(
+            "jobs.dispatch_due._read_freshness_as_of", return_value=date(2026, 9, 1)
+        ):
+            due, reason = is_due(pack, today=today, status=status, force=False)
+        self.assertTrue(due)
+        self.assertIn("stale", reason)
 
 
 if __name__ == "__main__":

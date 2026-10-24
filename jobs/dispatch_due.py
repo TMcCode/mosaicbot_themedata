@@ -173,15 +173,15 @@ def is_due(
     if last.get("ok") and last_ok == today:
         return False, "already succeeded today"
 
-    in_window = True
+    # Weekdays are a hard gate when set (no weekend/off-day stale catch-up).
+    # BLS monthlies use Mon–Fri so Contabo Saturday cron does not hammer api.bls.gov.
     if "weekdays" in due:
         wanted = {WEEKDAY_MAP[d] for d in due["weekdays"] if d in WEEKDAY_MAP}
         if today.weekday() not in wanted:
-            in_window = False
-            reasons.append(f"weekday={today.strftime('%a')} not in {due['weekdays']}")
-        else:
-            reasons.append(f"weekday={today.strftime('%a')}")
+            return False, f"weekday={today.strftime('%a')} not in {due['weekdays']}"
+        reasons.append(f"weekday={today.strftime('%a')}")
 
+    in_window = True
     d_from = due.get("day_of_month_from")
     d_to = due.get("day_of_month_to")
     if d_from is not None and d_to is not None:

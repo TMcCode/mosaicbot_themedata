@@ -6,6 +6,7 @@
     "Policy: nothing needs a daily refresh yet. Sources that print daily (Kalshi, TE spots, AISI) refresh weekly. True monthlies (BLS/Census/USASpending/FRED M3) stay monthly.",
     "Stagger due windows so packs do not all fire the same day (API load + easier failure triage).",
     "TEMP: AISI + TE scrapes on VPS weekends until Mac Mini \u2014 then move those hosts to [macmini] and weekdays to [Mon]/[Tue].",
+    "BLS-hitting monthlies (lab_economics, legal_software, romantic_gifts) are Mon\u2013Fri only \u2014 weekdays are a hard gate (no weekend stale catch-up).",
     "VPS owns API packs. Jobs must be idempotent. Dispatcher skips when not due unless --force."
   ],
   "packs": [
@@ -187,6 +188,13 @@
       ],
       "cadence": "monthly",
       "due": {
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
         "day_of_month_from": 12,
         "day_of_month_to": 22,
         "max_age_days": 25
@@ -195,7 +203,7 @@
         "r2_key": "themedata/lab_economics/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "Monthly BLS/QCEW/Census lab pack \u2014 later window for BLS publish lag."
+      "description": "Monthly BLS/QCEW/Census lab pack \u2014 Mon\u2013Fri only; later window for BLS publish lag."
     },
     {
       "id": "legal_software",
@@ -207,6 +215,13 @@
       ],
       "cadence": "monthly",
       "due": {
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
         "day_of_month_from": 15,
         "day_of_month_to": 25,
         "max_age_days": 35
@@ -215,7 +230,7 @@
         "r2_key": "themedata/legal_software/metrics_latest.json",
         "as_of_field": "as_of"
       },
-      "description": "Monthly BLS/FRED legal software backdrop \u2014 later window for BLS publish lag."
+      "description": "Monthly BLS/FRED legal software backdrop \u2014 Mon\u2013Fri only; later window for BLS publish lag."
     },
     {
       "id": "legal_forums",
@@ -539,6 +554,13 @@
       ],
       "cadence": "monthly",
       "due": {
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
         "day_of_month_from": 18,
         "day_of_month_to": 28,
         "max_age_days": 35
@@ -548,7 +570,7 @@
         "as_of_field": "as_of",
         "local_relative": "data/romantic_gifts/latest.json"
       },
-      "description": "Monthly FRED/BLS romantic-gifts backdrop + weekly-refreshable Kalshi Etsy GMS odds."
+      "description": "Monthly FRED/BLS romantic-gifts backdrop + Kalshi Etsy GMS \u2014 Mon\u2013Fri only."
     },
     {
       "id": "romantic_gifts_forums",
@@ -1563,6 +1585,94 @@
         "local_relative": "data/energy_bottleneck_us_refiners_forums/latest.json"
       },
       "description": "Weekly US refiners forums \u2014 Arctic Shift EnergyTrading/oilandgas/investing."
+    },
+    {
+      "id": "restaurants_pubs_bars",
+      "job": "jobs/restaurants_pubs_bars.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/restaurants_pubs_bars/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/restaurants_pubs_bars/latest.json"
+      },
+      "description": "Weekly Pubs & Bars \u2014 ONS/TE/Revolut/FMP/wiki refresh (Mon)."
+    },
+    {
+      "id": "restaurants_pubs_bars_forums",
+      "job": "jobs/restaurants_pubs_bars_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/restaurants_pubs_bars_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/restaurants_pubs_bars_forums/latest.json"
+      },
+      "description": "Weekly Pubs & Bars forums (ukpubs/bartenders/japanresidents)."
+    },
+    {
+      "id": "oil_tankers_mideast",
+      "job": "jobs/oil_tankers_mideast.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/oil_tankers_mideast/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/oil_tankers_mideast/latest.json"
+      },
+      "description": "Weekly oil tankers \u2014 Hormuz/EIA/Brent/FMP/BWET/wiki."
+    },
+    {
+      "id": "oil_tankers_mideast_forums",
+      "job": "jobs/oil_tankers_mideast_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/oil_tankers_mideast_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/oil_tankers_mideast_forums/latest.json"
+      },
+      "description": "Weekly Oil Tankers MidEast forums (r/oilandgas + r/tankers)."
     }
   ]
 }
