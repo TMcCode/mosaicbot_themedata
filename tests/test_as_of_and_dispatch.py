@@ -13,7 +13,10 @@ if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
 from lib.as_of import freshness_as_of, last_complete_month_start  # noqa: E402
-from jobs.dispatch_due import is_due  # noqa: E402
+from jobs.dispatch_due import (  # noqa: E402
+    _is_bls_transient_fail,
+    is_due,
+)
 
 
 class FreshnessAsOfTests(unittest.TestCase):
@@ -125,6 +128,16 @@ class DispatchDueTests(unittest.TestCase):
             due, reason = is_due(pack, today=today, status=status, force=False)
         self.assertTrue(due)
         self.assertIn("weekday=Fri", reason)
+
+
+class BlsTransientTests(unittest.TestCase):
+    def test_detects_busy_html(self):
+        self.assertTrue(
+            _is_bls_transient_fail(1, 'FAILED: BLS HTTP 503: <title>The BLS website is busy</title>')
+        )
+        self.assertTrue(_is_bls_transient_fail(1, "BLS status='REQUEST_NOT_PROCESSED'"))
+        self.assertFalse(_is_bls_transient_fail(0, "BLS HTTP 503"))
+        self.assertFalse(_is_bls_transient_fail(1, "Census timeout"))
 
 
 if __name__ == "__main__":

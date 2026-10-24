@@ -18,6 +18,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -36,6 +37,39 @@ STATUS_LOCAL = _ROOT / "data" / "scheduler" / "last_runs.json"
 STATUS_R2_KEY = "themedata/scheduler/last_runs.json"
 LOCK_PATH = _ROOT / "data" / "scheduler" / "dispatch.lock"
 WEEKDAY_MAP = {"Mon": 0, "Tue": 1, "Wed": 2, "Thu": 3, "Fri": 4, "Sat": 5, "Sun": 6}
+
+# Packs that hit api.bls.gov — cool down between them + end-of-run transient retry.
+_BLS_JOBS = frozenset(
+    {
+        "jobs/lab_economics_bls.py",
+        "jobs/legal_software.py",
+        "jobs/romantic_gifts.py",
+        "jobs/streetwear_sneakers.py",
+        "jobs/restaurants_chicken.py",
+        "jobs/value_sit_down.py",
+    }
+)
+_BLS_COOLDOWN_SEC = 8.0
+_BLS_TRANSIENT_RETRY_SLEEP_SEC = 60.0
+
+
+def _is_bls_pack(pack: dict) -> bool:
+    return str(pack.get("job") or "") in _BLS_JOBS
+
+
+def _is_bls_transient_fail(exit_code: int, output: str) -> bool:
+    """True when pack failed because BLS was busy / 5xx (worth one delayed retry)."""
+    if exit_code == 0:
+        return False
+    t = (output or "").lower()
+    return (
+        "bls http 503" in t
+        or "bls http 429" in t
+        or "bls http 502" in t
+        or "bls http 504" in t
+        or "bls website is busy" in t
+        or "request_not_processed" in t
+    )
 
 
 def _now_tz(tz_name: str) -> datetime:
@@ -231,6 +265,46 @@ def dispatch(
 
     results: list[dict[str, Any]] = []
     exit_code = 0
+    packs_by_id = {str(p.get("id") or ""): p for p in (schedule.get("packs") or [])}
+    last_was_bls = False
+    # (pack_id, reason, result_index) for end-of-run BLS busy retry
+    bls_retry_queue: list[tuple[str, str, int]] = []
+
+    def _record_run(
+        pack: dict,
+        *,
+        reason: str,
+        code: int,
+        output: str,
+        started: str,
+        finished: str,
+    ) -> dict[str, Any]:
+        nonlocal exit_code, last_was_bls
+        pid = pack["id"]
+        as_of = _read_freshness_as_of(pack)
+        row = {
+            "last_attempt_at": finished,
+            "last_started_at": started,
+            "last_exit_code": code,
+            "last_reason": reason,
+            "host": host,
+            "as_of": as_of.isoformat() if as_of else None,
+            "ok": code == 0,
+            "tail": output[-1500:],
+        }
+        if code == 0:
+            row["last_success_at"] = finished
+        status["packs"][pid] = {**(status["packs"].get(pid) or {}), **row}
+        # Keep action=ran so digest / last_dispatch_results stay compatible.
+        result = {
+            "id": pid,
+            "action": "ran",
+            "exit_code": code,
+            "reason": reason,
+            "as_of": row["as_of"],
+        }
+        last_was_bls = _is_bls_pack(pack)
+        return result
 
     for pack in schedule.get("packs") or []:
         pid = pack["id"]
@@ -250,34 +324,63 @@ def dispatch(
             results.append({"id": pid, "action": "would_run", "reason": reason})
             continue
 
+        # Space out BLS-hitting packs so Saturday catch-up doesn't stampede api.bls.gov.
+        if last_was_bls and _is_bls_pack(pack):
+            print(
+                f"INFO: BLS cooldown {_BLS_COOLDOWN_SEC:.0f}s before {pid}",
+                file=sys.stderr,
+            )
+            time.sleep(_BLS_COOLDOWN_SEC)
+
         started = datetime.now(timezone.utc).isoformat()
         code, output = run_pack(pack, python=python)
         finished = datetime.now(timezone.utc).isoformat()
-        as_of = _read_freshness_as_of(pack)
-        row = {
-            "last_attempt_at": finished,
-            "last_started_at": started,
-            "last_exit_code": code,
-            "last_reason": reason,
-            "host": host,
-            "as_of": as_of.isoformat() if as_of else None,
-            "ok": code == 0,
-            "tail": output[-1500:],
-        }
-        if code == 0:
-            row["last_success_at"] = finished
-        else:
-            exit_code = 1
-        status["packs"][pid] = {**(status["packs"].get(pid) or {}), **row}
-        results.append(
-            {
-                "id": pid,
-                "action": "ran",
-                "exit_code": code,
-                "reason": reason,
-                "as_of": row["as_of"],
-            }
+        result = _record_run(
+            pack,
+            reason=reason,
+            code=code,
+            output=output,
+            started=started,
+            finished=finished,
         )
+        results.append(result)
+        if _is_bls_transient_fail(code, output):
+            bls_retry_queue.append((pid, reason, len(results) - 1))
+
+    # One delayed retry for BLS-busy failures after the rest of the day ran.
+    if bls_retry_queue and not dry_run:
+        print(
+            f"INFO: BLS transient retry in {_BLS_TRANSIENT_RETRY_SLEEP_SEC:.0f}s "
+            f"for {[p for p, _, _ in bls_retry_queue]}",
+            file=sys.stderr,
+        )
+        time.sleep(_BLS_TRANSIENT_RETRY_SLEEP_SEC)
+        for pid, orig_reason, idx in bls_retry_queue:
+            pack = packs_by_id.get(pid)
+            if not pack:
+                continue
+            retry_reason = f"{orig_reason}; bls_transient_retry"
+            started = datetime.now(timezone.utc).isoformat()
+            code, output = run_pack(pack, python=python)
+            finished = datetime.now(timezone.utc).isoformat()
+            result = _record_run(
+                pack,
+                reason=retry_reason,
+                code=code,
+                output=output,
+                started=started,
+                finished=finished,
+            )
+            results[idx] = result
+
+    exit_code = (
+        1
+        if any(
+            r.get("action") == "ran" and r.get("exit_code") not in (0, None)
+            for r in results
+        )
+        else 0
+    )
 
     status["last_dispatch_at"] = datetime.now(timezone.utc).isoformat()
     status["last_dispatch_host"] = host

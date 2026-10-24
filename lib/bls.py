@@ -7,6 +7,8 @@ Packs should call ``fetch_series`` instead of posting to api.bls.gov ad hoc.
 from __future__ import annotations
 
 import json
+import random
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -19,6 +21,12 @@ BLS_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 _RETRY_HTTP = frozenset({429, 500, 502, 503, 504})
 
 
+def _backoff_seconds(attempt: int, *, base: float = 3.0, cap: float = 90.0) -> float:
+    """Exponential backoff with jitter. attempt 0 → ~3–4.5s, grows to ``cap``."""
+    raw = min(cap, base * (2**attempt))
+    return raw + random.uniform(0.0, raw * 0.35)
+
+
 def fetch_series(
     series_ids: list[str],
     *,
@@ -26,12 +34,13 @@ def fetch_series(
     end_year: int,
     api_key: str,
     timeout: float = 120,
-    retries: int = 5,
+    retries: int = 8,
     user_agent: str | None = None,
 ) -> dict[str, list[dict[str, Any]]]:
     """POST BLS v2; return ``{series_id: [{year, period, value, ...}, ...]}``.
 
-    Retries on HTTP 429/5xx and network errors with exponential backoff.
+    Retries on HTTP 429/5xx and network errors with exponential backoff + jitter.
+    Default 8 attempts (was 5) — Contabo morning windows often hit BLS "busy".
     """
     if not series_ids:
         return {}
@@ -59,13 +68,25 @@ def fetch_series(
             detail = e.read().decode("utf-8", errors="replace")[:500]
             last = RuntimeError(f"BLS HTTP {e.code}: {detail}")
             if e.code in _RETRY_HTTP and attempt + 1 < retries:
-                time.sleep(2.0 * (2**attempt))  # 2s, 4s, 8s, 16s…
+                delay = _backoff_seconds(attempt)
+                print(
+                    f"WARN: BLS HTTP {e.code} attempt {attempt + 1}/{retries}; "
+                    f"sleep {delay:.1f}s",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
                 continue
             raise last from e
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             last = e
             if attempt + 1 < retries:
-                time.sleep(2.0 * (2**attempt))
+                delay = _backoff_seconds(attempt)
+                print(
+                    f"WARN: BLS network error attempt {attempt + 1}/{retries}; "
+                    f"sleep {delay:.1f}s ({e})",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
                 continue
             raise RuntimeError(f"BLS network error: {e}") from e
 
@@ -82,7 +103,13 @@ def fetch_series(
             )
             last = RuntimeError(f"BLS status={status!r} message={msg!r}")
             if busy and attempt + 1 < retries:
-                time.sleep(2.0 * (2**attempt))
+                delay = _backoff_seconds(attempt)
+                print(
+                    f"WARN: BLS status={status!r} attempt {attempt + 1}/{retries}; "
+                    f"sleep {delay:.1f}s",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
                 continue
             raise last
 
