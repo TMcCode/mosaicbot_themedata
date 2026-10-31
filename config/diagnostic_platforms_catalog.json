@@ -1,70 +1,102 @@
 {
   "schema_version": 0,
   "pack": "diagnostic_platforms",
-  "description": "MedTech Long '25: Diagnostic Platforms — FMP platform segments (ILMN Sequencing, PACB Consumable/Instrument, QTRX Consumables/Instruments, MASS Device/Recurring, EXAS Screening) + member revenue + PubMed monthly counts (p-Tau217, liquid biopsy) + FRED physician employment. Reuses lab_economics + sequencing_platforms via attachments/source_pack. Forums via genomics_forums attachments.",
+  "description": "MedTech Long '25: Diagnostic Platforms \u2014 FMP platform segments (ILMN Sequencing, PACB Consumable/Instrument, QTRX Consumables/Instruments, MASS Device/Recurring, EXAS Screening) + member revenue + PubMed monthly counts (p-Tau217, liquid biopsy) + FRED physician employment. Reuses lab_economics + sequencing_platforms via attachments/source_pack. Forums via genomics_forums attachments.",
   "series": [
     {
       "key": "ilmn_sequencing_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "ILMN",
-      "segment_aliases": ["Sequencing"],
+      "segment_aliases": [
+        "Sequencing"
+      ],
       "label": "Illumina Sequencing segment revenue",
-      "official_name": "FMP product segment — ILMN Sequencing",
+      "official_name": "FMP product segment \u2014 ILMN Sequencing",
       "short_name": "ILMN Sequencing",
       "display_name": "Illumina Sequencing revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "ilmn_sequencing_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Core short-read platform + consumables pulse for the theme."
+      "notes": "Core short-read platform + consumables pulse for the theme.",
+      "serial": "fmp-revenue-0152-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 152,
+      "serial_series_n": 1
     },
     {
       "key": "pacb_consumable_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "PACB",
-      "segment_aliases": ["Consumable", "Consumables"],
+      "segment_aliases": [
+        "Consumable",
+        "Consumables"
+      ],
       "label": "PacBio Consumable segment revenue",
-      "official_name": "FMP product segment — PACB Consumable",
+      "official_name": "FMP product segment \u2014 PACB Consumable",
       "short_name": "PACB Consumable",
       "display_name": "PacBio consumables revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "pacb_consumable_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Utilization / pull-through after instrument installs."
+      "notes": "Utilization / pull-through after instrument installs.",
+      "serial": "fmp-revenue-0213-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 213,
+      "serial_series_n": 1
     },
     {
       "key": "pacb_instrument_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "PACB",
-      "segment_aliases": ["Instrument", "Instruments"],
+      "segment_aliases": [
+        "Instrument",
+        "Instruments"
+      ],
       "label": "PacBio Instrument segment revenue",
-      "official_name": "FMP product segment — PACB Instrument",
+      "official_name": "FMP product segment \u2014 PACB Instrument",
       "short_name": "PACB Instrument",
       "display_name": "PacBio instrument revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "pacb_instrument_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Capex / platform-refresh cycle (Revio etc.)."
+      "notes": "Capex / platform-refresh cycle (Revio etc.).",
+      "serial": "fmp-revenue-0214-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 214,
+      "serial_series_n": 1
     },
     {
       "key": "qtrx_consumables_revenue",
@@ -77,19 +109,27 @@
         "Consumables"
       ],
       "label": "Quanterix Consumables segment revenue",
-      "official_name": "FMP product segment — QTRX Consumable And Other Products",
+      "official_name": "FMP product segment \u2014 QTRX Consumable And Other Products",
       "short_name": "QTRX Consumables",
       "display_name": "Quanterix consumables revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "qtrx_consumables_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Simoa / immunoassay assay pull-through (p-Tau story)."
+      "notes": "Simoa / immunoassay assay pull-through (p-Tau story).",
+      "serial": "fmp-revenue-0237-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 237,
+      "serial_series_n": 1
     },
     {
       "key": "qtrx_instruments_revenue",
@@ -97,41 +137,64 @@
       "fmp_limit": 40,
       "fmp_symbol": "QTRX",
       "skip_segment_sum_guard": true,
-      "segment_aliases": ["Instruments", "Instrument"],
+      "segment_aliases": [
+        "Instruments",
+        "Instrument"
+      ],
       "label": "Quanterix Instruments segment revenue",
-      "official_name": "FMP product segment — QTRX Instruments",
+      "official_name": "FMP product segment \u2014 QTRX Instruments",
       "short_name": "QTRX Instruments",
       "display_name": "Quanterix instruments revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "qtrx_instruments_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0238-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 238,
+      "serial_series_n": 1
     },
     {
       "key": "mass_device_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "MASS",
-      "segment_aliases": ["Device Sales", "Product", "Instruments"],
+      "segment_aliases": [
+        "Device Sales",
+        "Product",
+        "Instruments"
+      ],
       "label": "10x Genomics Device Sales revenue",
-      "official_name": "FMP product segment — MASS Device Sales / Product",
+      "official_name": "FMP product segment \u2014 MASS Device Sales / Product",
       "short_name": "MASS Devices",
       "display_name": "10x Genomics device sales",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "mass_device_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Label churn across prints — aliases cover Device Sales / Product."
+      "notes": "Label churn across prints \u2014 aliases cover Device Sales / Product.",
+      "serial": "fmp-revenue-0174-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 174,
+      "serial_series_n": 1
     },
     {
       "key": "mass_recurring_revenue",
@@ -144,59 +207,93 @@
         "Consumables"
       ],
       "label": "10x Genomics Recurring revenue",
-      "official_name": "FMP product segment — MASS Recurring / Consumables and service",
+      "official_name": "FMP product segment \u2014 MASS Recurring / Consumables and service",
       "short_name": "MASS Recurring",
       "display_name": "10x Genomics recurring revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "mass_recurring_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0176-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 176,
+      "serial_series_n": 1
     },
     {
       "key": "exas_screening_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "EXAS",
-      "segment_aliases": ["Screening"],
+      "segment_aliases": [
+        "Screening"
+      ],
       "label": "Exact Sciences Screening segment revenue",
-      "official_name": "FMP product segment — EXAS Screening",
+      "official_name": "FMP product segment \u2014 EXAS Screening",
       "short_name": "EXAS Screening",
       "display_name": "Exact Sciences screening revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "exas_screening_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Not a theme constituent — blood/screening reimbursement backdrop."
+      "notes": "Not a theme constituent \u2014 blood/screening reimbursement backdrop.",
+      "serial": "fmp-revenue-0112-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 112,
+      "serial_series_n": 1
     },
     {
       "key": "diagnostic_platforms_member_revenue",
       "source": "fmp_revenue",
       "fmp_limit": 40,
-      "fmp_symbols": ["ILMN", "PACB", "QTRX", "MASS", "PSNL", "ICAD", "QDEL"],
+      "fmp_symbols": [
+        "ILMN",
+        "PACB",
+        "QTRX",
+        "MASS",
+        "PSNL",
+        "ICAD",
+        "QDEL"
+      ],
       "require_all": false,
       "label": "Diagnostic platforms member revenue sum",
-      "official_name": "FMP income-statement revenue sum — ILMN+PACB+QTRX+MASS+PSNL+ICAD+QDEL",
+      "official_name": "FMP income-statement revenue sum \u2014 ILMN+PACB+QTRX+MASS+PSNL+ICAD+QDEL",
       "short_name": "Member revenue",
       "display_name": "Diagnostic platforms member revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "diagnostic_platforms_member_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0090-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 90,
+      "serial_series_n": 1
     },
     {
       "key": "ilmn_revenue",
@@ -204,18 +301,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "ILMN",
       "label": "Illumina revenue",
-      "official_name": "FMP income-statement revenue — ILMN",
+      "official_name": "FMP income-statement revenue \u2014 ILMN",
       "short_name": "ILMN revenue",
       "display_name": "Illumina revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "ilmn_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0151-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 151,
+      "serial_series_n": 1
     },
     {
       "key": "pacb_revenue",
@@ -223,18 +328,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "PACB",
       "label": "PacBio revenue",
-      "official_name": "FMP income-statement revenue — PACB",
+      "official_name": "FMP income-statement revenue \u2014 PACB",
       "short_name": "PACB revenue",
       "display_name": "PacBio revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "pacb_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0215-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 215,
+      "serial_series_n": 1
     },
     {
       "key": "qtrx_revenue",
@@ -242,18 +355,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "QTRX",
       "label": "Quanterix revenue",
-      "official_name": "FMP income-statement revenue — QTRX",
+      "official_name": "FMP income-statement revenue \u2014 QTRX",
       "short_name": "QTRX revenue",
       "display_name": "Quanterix revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "qtrx_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0239-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 239,
+      "serial_series_n": 1
     },
     {
       "key": "mass_revenue",
@@ -261,18 +382,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "MASS",
       "label": "10x Genomics revenue",
-      "official_name": "FMP income-statement revenue — MASS",
+      "official_name": "FMP income-statement revenue \u2014 MASS",
       "short_name": "MASS revenue",
       "display_name": "10x Genomics revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "mass_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0177-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 177,
+      "serial_series_n": 1
     },
     {
       "key": "psnl_revenue",
@@ -280,18 +409,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "PSNL",
       "label": "Personalis revenue",
-      "official_name": "FMP income-statement revenue — PSNL",
+      "official_name": "FMP income-statement revenue \u2014 PSNL",
       "short_name": "PSNL revenue",
       "display_name": "Personalis revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "psnl_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0230-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 230,
+      "serial_series_n": 1
     },
     {
       "key": "icad_revenue",
@@ -299,18 +436,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "ICAD",
       "label": "iCAD revenue",
-      "official_name": "FMP income-statement revenue — ICAD",
+      "official_name": "FMP income-statement revenue \u2014 ICAD",
       "short_name": "ICAD revenue",
       "display_name": "iCAD revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 3,
       "dataset_id": "icad_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0150-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 150,
+      "serial_series_n": 1
     },
     {
       "key": "qdel_revenue",
@@ -318,18 +463,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "QDEL",
       "label": "QuidelOrtho revenue",
-      "official_name": "FMP income-statement revenue — QDEL",
+      "official_name": "FMP income-statement revenue \u2014 QDEL",
       "short_name": "QDEL revenue",
       "display_name": "QuidelOrtho revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 3,
       "dataset_id": "qdel_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0235-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 235,
+      "serial_series_n": 1
     },
     {
       "key": "pubmed_ptau217",
@@ -337,20 +490,28 @@
       "pubmed_query_id": "ptau217",
       "pubmed_term": "\"p-Tau217\" OR \"pTau217\" OR \"p-tau217\" OR \"phospho-tau217\" OR \"phospho-tau 217\"",
       "pubmed_start": "2019-01",
-      "label": "PubMed monthly publications — p-Tau217",
-      "official_name": "NCBI PubMed esearch count — p-Tau217 / pTau217 (publication date)",
+      "label": "PubMed monthly publications \u2014 p-Tau217",
+      "official_name": "NCBI PubMed esearch count \u2014 p-Tau217 / pTau217 (publication date)",
       "short_name": "PubMed p-Tau217",
       "display_name": "PubMed publications mentioning p-Tau217",
       "frequency": "monthly",
       "unit": "publications",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "pubmed_ptau217",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Soft scientific-validation signal for Alzheimer blood assays (QTRX thesis). Query-sensitive."
+      "notes": "Soft scientific-validation signal for Alzheimer blood assays (QTRX thesis). Query-sensitive.",
+      "serial": "pubmed-0000-0007-0001",
+      "serial_source": "pubmed",
+      "serial_family": "0000",
+      "serial_dataset_n": 7,
+      "serial_series_n": 1
     },
     {
       "key": "pubmed_liquid_biopsy",
@@ -358,39 +519,55 @@
       "pubmed_query_id": "liquid_biopsy",
       "pubmed_term": "\"liquid biopsy\"",
       "pubmed_start": "2018-01",
-      "label": "PubMed monthly publications — liquid biopsy",
-      "official_name": "NCBI PubMed esearch count — liquid biopsy (publication date)",
+      "label": "PubMed monthly publications \u2014 liquid biopsy",
+      "official_name": "NCBI PubMed esearch count \u2014 liquid biopsy (publication date)",
       "short_name": "PubMed liquid biopsy",
       "display_name": "PubMed publications mentioning liquid biopsy",
       "frequency": "monthly",
       "unit": "publications",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "pubmed_liquid_biopsy",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broader clinical-adoption research pulse (MRD / blood-based diagnostics). Soft lagging signal."
+      "notes": "Broader clinical-adoption research pulse (MRD / blood-based diagnostics). Soft lagging signal.",
+      "serial": "pubmed-0000-0004-0001",
+      "serial_source": "pubmed",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "physician_offices_employment",
       "source": "fred",
       "fred_id": "CES6562110001",
-      "label": "CES — Offices of physicians employment",
+      "label": "CES \u2014 Offices of physicians employment",
       "official_name": "All employees, offices of physicians (NAICS 6211)",
       "short_name": "Physician offices jobs",
       "display_name": "US physician offices employment",
       "frequency": "monthly",
       "unit": "thousands",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "physician_offices_employment",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Hospital/clinic capacity backdrop (capex freeze bear case). Lab employment reused from lab_economics."
+      "notes": "Hospital/clinic capacity backdrop (capex freeze bear case). Lab employment reused from lab_economics.",
+      "serial": "fred-0000-0080-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 80,
+      "serial_series_n": 1
     }
   ]
 }

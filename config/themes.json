@@ -129,6 +129,19 @@
       "notes": "v1: FRED sales/CPI/beef/sentiment + BLS food-services AHE; Arctic Shift forums (Chilis/OliveGarden/serverlife). Skip OpenTable/Trends/Indeed."
     },
     {
+      "theme": "Restaurants '26: Pubs & Bars",
+      "theme_slug": "restaurants-26-pubs-bars",
+      "group": "Restaurants",
+      "group_slug": "restaurants",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "restaurants_pubs_bars",
+        "restaurants_pubs_bars_forums"
+      ],
+      "notes": "v1: ONS IoS F&B + Revolut restaurants + TE JP/AU + FMP company revenue (no segments) + wiki + sports calendar + forums."
+    },
+    {
       "theme": "Genomics '25: Sequencing Platforms & Instruments",
       "theme_slug": "genomics-25-sequencing-platforms-instruments",
       "group": "Genomics",
@@ -140,6 +153,32 @@
         "genomics_forums"
       ],
       "notes": "v1: USASpending NGS/genomics grants + NHGRI CFDA 93.172 + ILMN/PACB/ONT federal award stack + FRED NAICS 3345 instruments employment + genomics_forums. Tickers ILMN, PACB, ONT.LSE (skip TMO/Roche on awards \u2014 conglomerate noise)."
+    },
+    {
+      "theme": "Genomics '25: Clinical Genomics & Genomics Testing",
+      "theme_slug": "genomics-25-clinical-genomics-genomics-testing",
+      "group": "Genomics",
+      "group_slug": "genomics",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "clinical_genomics",
+        "clinical_genomics_forums"
+      ],
+      "notes": "v1: GH Oncology/Screening + clinical assay stack (VCYT/CDNA/WGS) + member totals + MRD/MolDx transcripts + PubMed MRD/MCED/ctDNA + ClinicalTrials + openFDA 510(k) + NIH RePORTER + USASpending screening/MolDx. Reuses diagnostic_platforms/lab_economics via attachments. Forums: r/biotech+medicine. Differentiates from sequencing_platforms (instruments/NHGRI)."
+    },
+    {
+      "theme": "Diagnostics '26: Precision Oncology & Tumor Profiling",
+      "theme_slug": "diagnostics-26-precision-oncology-tumor-profiling",
+      "group": "Diagnostics",
+      "group_slug": "diagnostics",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "precision_oncology",
+        "precision_oncology_forums"
+      ],
+      "notes": "v1: EXAS Precision Oncology + CSTL Dermatologic + NEO Commercial Insurance + TEM Diagnostics + product stack + R&D intensity + oncology transcripts + PubMed CGP/CDx + ClinicalTrials tumor-informed + openFDA CDx PMA. Reuses GH Oncology/Screening/Biopharma, VCYT Testing, PubMed MRD/ctDNA via clinical_genomics attachments; EXAS Screening / CSTL total soft. Forums: r/oncology+pathology. Differentiates from clinical_genomics (MCED/NIPT/transplant) and diagnostic_platforms (instruments/screening)."
     },
     {
       "theme": "Buying a House '26: Home Improvement Retailers",
@@ -491,6 +530,292 @@
         "energy_bottleneck_us_refiners_forums"
       ],
       "notes": "v1: EIA WPSR + TE crack/RBOB/HO + FRED spots + FMP refining/RD + Kalshi. Forums: EnergyTrading/oilandgas/investing."
+    },
+    {
+      "theme": "Supply Shock in MidEast Long '26: Oil Tankers",
+      "theme_slug": "supply-shock-in-mideast-long-26-oil-tankers",
+      "group": "Supply Shock in MidEast Long",
+      "group_slug": "supply-shock-in-mideast-long",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "oil_tankers_mideast",
+        "oil_tankers_mideast_forums"
+      ],
+      "notes": "v1: Hormuz tanker transits + EIA US crude exports + Brent + FMP member revenue + INSW voyage/time/pool + DHT/FRO/NAT voyage vs TC + BWET freight proxy + wiki VLCC. Forums: oilandgas/tankers."
+    },
+    {
+      "theme": "Ocean Freight '26: VLCCs",
+      "theme_slug": "ocean-freight-26-vlccs",
+      "group": "Ocean Freight",
+      "group_slug": "ocean-freight",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "ocean_freight_vlccs",
+        "ocean_freight_vlccs_forums"
+      ],
+      "notes": "v1: PortWatch Cape/Bab reroute + EIA US crude exports + TE China crude imports + BWET + FMP VLCC revenue/spot-TC/dividends + Kalshi export ban. Reuses MidEast Hormuz + Brazil Santos + wiki. Forums: shipping/vitards."
+    },
+    {
+      "theme": "Interconnects '26: Photonics Materials & Substrates",
+      "theme_slug": "interconnects-26-photonics-materials-substrates",
+      "group": "Interconnects",
+      "group_slug": "interconnects",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "photonics_materials",
+        "photonics_materials_forums"
+      ],
+      "notes": "v1 photonics materials / substrates."
+    },
+    {
+      "theme": "Electronic Components '26: MLCCs",
+      "theme_slug": "electronic-components-26-mlccs",
+      "group": "Electronic Components",
+      "group_slug": "electronic-components",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "mlccs",
+        "mlccs_forums"
+      ],
+      "notes": "v1 MLCCs."
+    },
+    {
+      "theme": "Software '26: Seat-based Pricing",
+      "theme_slug": "software-26-seat-based-pricing",
+      "group": "Software",
+      "group_slug": "software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "seat_based_pricing",
+        "seat_based_pricing_forums"
+      ],
+      "notes": "v1: FMP CRM cloud mix + ADBE Digital Media + WDAY/OKTA subscription share + hybrid transcript keywords + Kalshi GTLB/OKTA $100k customers + PAYEMS. Reuses software_ipp / info openings / Ramp AI via ai_resilient_software. Forums: r/SaaS+sysadmin+salesforce. Tickers CRM ADBE TEAM WDAY GTLB MNDY OKTA ZS (+ BOX ASAN DBX FRSH ZM light)."
+    },
+    {
+      "theme": "Global Real Estate '24: Latin America Real Estate",
+      "theme_slug": "global-real-estate-24-latin-america-real-estate",
+      "group": "Global Real Estate",
+      "group_slug": "global-real-estate",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "latam_real_estate",
+        "latam_real_estate_forums"
+      ],
+      "notes": "v1: BTS MX trucks (all+Laredo) + FRED trade/rates/BIS HPI + FMP FX\u2192USD revenue stacks (MX industrial/BR builders/malls/Chile) + MX CapEx + transcripts + Kalshi manucon/BR GDP. Reuses construction_manufacturing. Tickers FIBRAPL VESTA FIBRAMQ FMTY LPA FUNO CYRE MRV DIRR TEND JHSF MULT IGTI LOGG PARAUCO PLAZA IRS VINTE."
+    },
+    {
+      "theme": "Enterprise Software '24: Developer Tools, DevOps & Observability",
+      "theme_slug": "enterprise-software-24-developer-tools-devops-observability",
+      "group": "Enterprise Software",
+      "group_slug": "enterprise-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "devops_observability",
+        "devops_observability_forums"
+      ],
+      "notes": "v1: FMP observability/DevOps/edge stacks + FROG SaaS + FSLY Security + CES 5415 + transcripts + Kalshi GTLB. Reuses software_ipp/info openings/Ramp AI (ai_resilient) + hyperscaler CapEx (optical_fiber). TEAM via seat_based. Forums r/devops+sre+kubernetes."
+    },
+    {
+      "theme": "Enterprise Software '24: Collaboration, Productivity & Work Management Software",
+      "theme_slug": "enterprise-software-24-collaboration-productivity-work-management-software",
+      "group": "Enterprise Software",
+      "group_slug": "enterprise-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "collaboration_work_mgmt",
+        "collaboration_work_mgmt_forums"
+      ],
+      "notes": "v1: FMP work-mgmt/content/meetings + M365 Commercial + transcripts + USASpending. Reuses software_ipp/info openings/Ramp/productivity + CES 5415. Forums r/projectmanagement+asana."
+    },
+    {
+      "theme": "Enterprise Software '24: Cybersecurity Software",
+      "theme_slug": "enterprise-software-24-cybersecurity-software",
+      "group": "Enterprise Software",
+      "group_slug": "enterprise-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "cybersecurity_software",
+        "cybersecurity_software_forums",
+        "ai_resilient_software",
+        "devops_observability",
+        "agent_governance_zt",
+        "vuln_exposure_asm"
+      ],
+      "notes": "v1: platformization sub stack (CRWD+PANW+FTNT) + GEN endpoint/consumer + XDR challenger (S+CRWD) + FFIV mix + software PPI + SEC 1.05 8-K + transcripts + USASpending ZT/SASE/EDR. Reuses software_ipp/CES5415 + cyber-resilience/ZT/identity + soft KEV. Forums platformization lexicon. Differs from vuln ASM (no CTEM/VM) and agent_gov (no NHI-primary)."
+    },
+    {
+      "theme": "MegaTech '26: Anthropic Ecosystem",
+      "theme_slug": "megatech-26-anthropic-ecosystem",
+      "group": "MegaTech",
+      "group_slug": "megatech",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "anthropic_ecosystem",
+        "anthropic_ecosystem_forums",
+        "seat_based_pricing",
+        "ai_resilient_software",
+        "devops_observability",
+        "collaboration_work_mgmt"
+      ],
+      "notes": "Partner stack sum + AE segments/transcripts/OR share. Reuses crm/gtlb/intu + Ramp/OR/IPP (seat_based/ai_resilient) + ClaudeBot Radar + ASAN/ZM via attachments. Forums: Claude homes volume + partner/IT Claude hits."
+    },
+    {
+      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
+      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "group": "Cybersecurity",
+      "group_slug": "cybersecurity",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "vuln_exposure_asm",
+        "vuln_exposure_asm_forums",
+        "ai_resilient_software",
+        "devops_observability"
+      ],
+      "notes": "v1: pure-play VM + platform security FMP + KEV/NVD + transcripts + USASpending. Reuses software_ipp + CES 5415. Forums CTEM lexicon."
+    },
+    {
+      "theme": "Agentic Utilities '26: Agent Governance & Zerotrust",
+      "theme_slug": "agentic-utilities-26-agent-governance-zerotrust",
+      "group": "Agentic Utilities",
+      "group_slug": "agentic-utilities",
+      "packs": [
+        "agent_governance_zt",
+        "agent_governance_zt_forums"
+      ],
+      "notes": "v1: identity (OKTA+SAIL) + cyber-resilience SaaS (RBRK+CVLT+VRNS) + ZT cloud (ZS+NTSK) + NHI transcripts + USASpending ZT/IAM + GitHub MCP/agent-security releases+stars. Reuses OpenRouter/software IPP/Ramp/CES/DDOG+DT/PANW+CRWD sub. Forums r/AI_Agents+cybersecurity. Skip Trends/paid SASE."
+    },
+    {
+      "theme": "Renewable Energy '26: Long-Duration Energy Storage",
+      "theme_slug": "renewable-energy-26-long-duration-energy-storage",
+      "group": "Renewable Energy",
+      "group_slug": "renewable-energy",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "ldes",
+        "ldes_forums"
+      ],
+      "notes": "v1: FMP BE Product/Install + FLNC Product/Americas + EOSE/LGO/STEM + LDES transcripts + EIA-860M battery MW/duration shares + FRED zinc/battery PPI/transformer PPI/DGS10 + USASpending LDES/OCED + Kalshi VA/ratepayer. Forums: r/energy+PowerEngineering+RenewableEnergy."
+    },
+    {
+      "theme": "China Semis '26: Chinese Foundries",
+      "theme_slug": "china-semis-26-chinese-foundries",
+      "group": "China Semis",
+      "group_slug": "china-semis",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "chinese_foundries",
+        "chinese_foundries_forums"
+      ],
+      "notes": "v1: FMP SMIC/HH/Nexchip foundry + Silan/CR Micro specialty stacks + CapEx; TE CHNSEMEXP/IP/FAI/LPR5Y; AMAT+LRCX+KLAC+ACMR China geo; ASML NXE/ArF; Census HS848620 US\u2192CN; chinadata HS848620 soft; Kalshi KXCHINAEUV. Forums: r/semiconductors+hardware. CanSemi map_only (no FMP). Reuses KR/TW exports optionally via attachments later \u2014 not primary."
+    },
+    {
+      "theme": "Autonomous Vehicles '25: Autonomous Trucking & Freight",
+      "theme_slug": "autonomous-vehicles-25-autonomous-trucking-freight",
+      "group": "Autonomous Vehicles",
+      "group_slug": "autonomous-vehicles",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "autonomous_trucking",
+        "autonomous_trucking_forums"
+      ],
+      "notes": "v1: UBER Freight segment + AUR/KDK revenue+R&D + PONY/WRD annual product + DTG/Traton/Volvo OEM stack + FRED truck emp (\u2212)/diesel (+)/tonnage (+)/IP + AV transcripts. Forums: r/Truckers+AURstock+FreightBrokers. Skip AESI/ENRD."
+    },
+    {
+      "theme": "Insurance Services '26: Life & Health Distribution",
+      "theme_slug": "insurance-services-26-life-health-distribution",
+      "group": "Insurance Services",
+      "group_slug": "insurance-services",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "life_health_distribution",
+        "life_health_distribution_forums"
+      ],
+      "notes": "v1: EHTH Medicare + SLQT Service/Pharmacy + PRI Term Life + POLICYBZR + soft WTW HWC/AJG/MRSH + CMS MA enrollment/penetration/contracts + FRED 65+/UNRATE + transcripts. Forums: InsurancePros+medicare. Skip AIFU/BWIN score."
+    },
+    {
+      "theme": "Real Food '26: Plant Proteins & Ingredients",
+      "theme_slug": "real-food-26-plant-proteins-ingredients",
+      "group": "Real Food",
+      "group_slug": "real-food",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "plant_proteins",
+        "plant_proteins_forums"
+      ],
+      "notes": "v1: ADM Nutrition + OTLY/STKL/INGR/BYND + Nutrition share + upstream stack + dry peas/oats/soy/meats/milk FRED + Census HS 210610 + transcripts. Soft AAK/TATE/DSFIR/LSF. Reuses beef_ppi/poultry_ppi via attachments. Forums: r/FoodScience+PlantBasedDiet. Differentiates from chicken/value-sit-down."
+    },
+    {
+      "theme": "Tech Trends '26: Open-Source Commercialization",
+      "theme_slug": "tech-trends-26-open-source-commercialization",
+      "group": "Tech Trends",
+      "group_slug": "tech-trends",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "open_source_commercialization",
+        "open_source_commercialization_forums",
+        "ai_resilient_software",
+        "devops_observability",
+        "optical_fiber"
+      ],
+      "notes": "v1: pure-play open-core (MDB+GTLB+ESTC+FROG) + Atlas/GTLB SaaS/FROG mix + ESTC Sub + IBM Software + hyperscaler cloud pressure (AWS+GCP) + transcripts + USASpending Red Hat/SBOM + GitHub/SO. Reuses IPP/ORCL Cloud + CapEx + CES5415/Kalshi GTLB. Forums: selfhosted+devops+dataengineering open-core lexicon. Differs from devops OTel and seat-based GTLB seats."
+    },
+    {
+      "theme": "Cannabis '24: Cannabinoid Pharmaceuticals & Therapeutics",
+      "theme_slug": "cannabis-24-cannabinoid-pharmaceuticals-therapeutics",
+      "group": "Cannabis",
+      "group_slug": "cannabis",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "cannabinoid_pharma",
+        "cannabinoid_pharma_forums"
+      ],
+      "notes": "v1: Jazz Epidiolex (+ Sativex) revenue + Epidiolex/Jazz share + ClinicalTrials/PubMed/NIH cannabinoid pipeline + openFDA FAERS Epidiolex AEs + clinical-stage R&D stack + FRED DFF + wiki Epidiolex/rescheduling. Kalshi mjreschedule unavailable. Forums: r/CBD+medicalcannabis+biotech. Differentiates from MSO/rec cannabis themes."
+    },
+    {
+      "theme": "AI '26: Neoclouds",
+      "theme_slug": "ai-26-neoclouds",
+      "group": "AI",
+      "group_slug": "ai",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "neoclouds",
+        "neoclouds_forums",
+        "optical_fiber"
+      ],
+      "notes": "v1: CRWV/NBIS/APLD (+ DOCN) revenue + HUT HPC/colo + IREN AI Cloud share + CBRS P/S + CapEx/debt + transcripts + Kalshi CRWV power / ratepayer / ERCOT + DGS10 + wiki. Reuses hyperscaler CapEx (optical_fiber). Forums: r/datacenter+nvidia+LocalLLaMA. Differs from optical/HBM/photonics (rents GPUs / owns MW)."
+    },
+    {
+      "theme": "Energy Services '26: Land Contract Drillers",
+      "theme_slug": "energy-services-26-land-contract-drillers",
+      "group": "Energy Services",
+      "group_slug": "energy-services",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "land_contract_drillers",
+        "land_contract_drillers_forums",
+        "energy_bottleneck_us_refiners"
+      ],
+      "notes": "v1: HP NA/Intl Solutions + Saudi/Argentina geo + NBR DS/Intl/Rig Tech + PTEN Drilling (ex-Completion) + PDS/ESI.TO/TOT.TO/2381.SR + CapEx + drilling PPI/IP + Henry Hub + transcripts + Kalshi TX oil + USASpending. Reuses WTI (refiners). BH land scrape deferred (403). Forums: oilandgasworkers+PetroleumEngineering. Differs from refiners/frac."
     }
   ]
 }

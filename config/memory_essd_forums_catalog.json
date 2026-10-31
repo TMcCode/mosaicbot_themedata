@@ -20,7 +20,12 @@
       "dataset_id": "essd_sandisk_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0208-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 208,
+      "serial_series_n": 1
     },
     {
       "key": "micron_essd_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "micron_essd_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0325-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 325,
+      "serial_series_n": 1
     },
     {
       "key": "phison_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "essd_phison_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0206-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 206,
+      "serial_series_n": 1
     },
     {
       "key": "simo_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "essd_simo_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0210-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 210,
+      "serial_series_n": 1
     },
     {
       "key": "wdc_mentions",
@@ -96,7 +116,12 @@
       "dataset_id": "essd_wdc_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0211-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 211,
+      "serial_series_n": 1
     },
     {
       "key": "seagate_mentions",
@@ -115,7 +140,12 @@
       "dataset_id": "seagate_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0454-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 454,
+      "serial_series_n": 1
     },
     {
       "key": "samsung_ssd_mentions",
@@ -134,7 +164,12 @@
       "dataset_id": "essd_samsung_ssd_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0207-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 207,
+      "serial_series_n": 1
     },
     {
       "key": "kioxia_mentions",
@@ -153,7 +188,12 @@
       "dataset_id": "essd_kioxia_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0204-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 204,
+      "serial_series_n": 1
     },
     {
       "key": "essd_named_brand_mentions",
@@ -172,7 +212,12 @@
       "dataset_id": "essd_named_brand_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0205-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 205,
+      "serial_series_n": 1
     },
     {
       "key": "essd_category_mentions",
@@ -191,7 +236,12 @@
       "dataset_id": "essd_category_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0201-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 201,
+      "serial_series_n": 1
     },
     {
       "key": "hardware_community_posts",
@@ -210,7 +260,12 @@
       "dataset_id": "essd_hardware_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0203-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 203,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductors_community_posts",
@@ -229,7 +284,12 @@
       "dataset_id": "essd_semiconductors_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0209-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 209,
+      "serial_series_n": 1
     },
     {
       "key": "sysadmin_community_posts",
@@ -248,7 +308,12 @@
       "dataset_id": "sysadmin_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0498-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 498,
+      "serial_series_n": 1
     },
     {
       "key": "datahoarder_community_posts",
@@ -267,7 +332,12 @@
       "dataset_id": "essd_datahoarder_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0202-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 202,
+      "serial_series_n": 1
     },
     {
       "key": "essd_brand_sentiment",
@@ -286,7 +356,12 @@
       "dataset_id": "essd_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0200-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 200,
+      "serial_series_n": 1
     }
   ]
 }

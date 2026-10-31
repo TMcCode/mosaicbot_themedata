@@ -23,7 +23,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Hero turnover series \u2014 low sales suppress discretionary renovation. Live FRED EXHOSLUSM495S is a rolling ~13-month NAR license window; deeper history spliced from config/seeds/existing_home_sales_archive.csv (provisional NAR reconstruction \u2014 murky redistribute; FRED wins on overlap). Prefer licensing NAR historical file for production."
+      "notes": "Hero turnover series \u2014 low sales suppress discretionary renovation. Live FRED EXHOSLUSM495S is a rolling ~13-month NAR license window; deeper history spliced from config/seeds/existing_home_sales_archive.csv (provisional NAR reconstruction \u2014 murky redistribute; FRED wins on overlap). Prefer licensing NAR historical file for production.",
+      "serial": "fred-0000-0039-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 39,
+      "serial_series_n": 1
     },
     {
       "key": "nahb_hmi",
@@ -44,7 +49,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Builder confidence lead (0\u2013100). Public Table 2 history XLS from nahb.org; proprietary \u2014 display with attribution, not for bulk redistribution."
+      "notes": "Builder confidence lead (0\u2013100). Public Table 2 history XLS from nahb.org; proprietary \u2014 display with attribution, not for bulk redistribution.",
+      "serial": "nahb-0000-0001-0001",
+      "serial_source": "nahb",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "new_home_sales",
@@ -66,7 +76,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Longer-history housing-activity complement to existing-home turnover (new construction / Pro adjacency)."
+      "notes": "Longer-history housing-activity complement to existing-home turnover (new construction / Pro adjacency).",
+      "serial": "fred-0000-0069-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 69,
+      "serial_series_n": 1
     },
     {
       "key": "mortgage_30y",
@@ -88,7 +103,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Affordability / lock-in driver. Rising rates \u2192 lower turnover (score polarity \u22121)."
+      "notes": "Affordability / lock-in driver. Rising rates \u2192 lower turnover (score polarity \u22121).",
+      "serial": "fred-0000-0068-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 68,
+      "serial_series_n": 1
     },
     {
       "key": "building_materials_retail_sales",
@@ -110,7 +130,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Direct home-improvement retail demand proxy (HD/LOW peer set)."
+      "notes": "Direct home-improvement retail demand proxy (HD/LOW peer set).",
+      "serial": "fred-0000-0012-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 12,
+      "serial_series_n": 1
     },
     {
       "key": "housing_starts",
@@ -132,7 +157,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "New-construction / Pro materials demand."
+      "notes": "New-construction / Pro materials demand.",
+      "serial": "fred-0000-0054-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 54,
+      "serial_series_n": 1
     },
     {
       "key": "building_permits",
@@ -154,7 +184,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Forward construction pipeline; softer than starts for remodelers."
+      "notes": "Forward construction pipeline; softer than starts for remodelers.",
+      "serial": "fred-0000-0013-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 13,
+      "serial_series_n": 1
     },
     {
       "key": "lumber_ppi",
@@ -176,7 +211,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Building-materials COGS proxy. Rising lumber PPI \u2192 margin/pricing headwind (score polarity \u22121)."
+      "notes": "Building-materials COGS proxy. Rising lumber PPI \u2192 margin/pricing headwind (score polarity \u22121).",
+      "serial": "fred-0000-0060-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 60,
+      "serial_series_n": 1
     },
     {
       "key": "case_shiller_national",
@@ -198,7 +238,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Housing-cost level (home prices). Complements mortgage rate + forum cost-talk; lumber PPI stays materials COGS."
+      "notes": "Housing-cost level (home prices). Complements mortgage rate + forum cost-talk; lumber PPI stays materials COGS.",
+      "serial": "fred-0000-0014-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 14,
+      "serial_series_n": 1
     },
     {
       "key": "months_supply_new_homes",
@@ -220,7 +265,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Inventory overhang proxy \u2014 higher supply \u2192 softer housing activity (score polarity \u22121 if used)."
+      "notes": "Inventory overhang proxy \u2014 higher supply \u2192 softer housing activity (score polarity \u22121 if used).",
+      "serial": "fred-0000-0067-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 67,
+      "serial_series_n": 1
     },
     {
       "key": "se_drought_d1_pct",
@@ -241,7 +291,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Seasonal outdoor/lawn/pool demand proxy for TSCO/LESL. Not in theme backdrop score."
+      "notes": "Seasonal outdoor/lawn/pool demand proxy for TSCO/LESL. Not in theme backdrop score.",
+      "serial": "usdm-0000-0001-0001",
+      "serial_source": "usdm",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "home_improvement_revenue",
@@ -270,7 +325,12 @@
         "TSCO"
       ],
       "require_all": false,
-      "notes": "Theme-member top-line sum (FMP)."
+      "notes": "Theme-member top-line sum (FMP).",
+      "serial": "fmp-revenue-0395-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 395,
+      "serial_series_n": 1
     },
     {
       "key": "hd_revenue",
@@ -292,7 +352,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "HD"
+      "fmp_symbol": "HD",
+      "serial": "fmp-revenue-0394-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 394,
+      "serial_series_n": 1
     },
     {
       "key": "low_revenue",
@@ -314,7 +379,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "LOW"
+      "fmp_symbol": "LOW",
+      "serial": "fmp-revenue-0407-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 407,
+      "serial_series_n": 1
     },
     {
       "key": "fnd_revenue",
@@ -336,7 +406,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "FND"
+      "fmp_symbol": "FND",
+      "serial": "fmp-revenue-0386-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 386,
+      "serial_series_n": 1
     },
     {
       "key": "tsco_revenue",
@@ -358,7 +433,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "TSCO"
+      "fmp_symbol": "TSCO",
+      "serial": "fmp-revenue-0446-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 446,
+      "serial_series_n": 1
     }
   ]
 }

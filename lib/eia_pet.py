@@ -66,6 +66,11 @@ EIA_WEEKLY: dict[str, dict[str, str]] = {
         "unit": "kbpd",
         "scale": "1",
     },
+    "WCREXUS2": {
+        "label": "US crude oil exports",
+        "unit": "kbpd",
+        "scale": "1",
+    },
 }
 
 

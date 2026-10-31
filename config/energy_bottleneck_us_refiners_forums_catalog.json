@@ -1,7 +1,7 @@
 {
   "schema_version": 0,
   "pack": "energy_bottleneck_us_refiners_forums",
-  "description": "Forums sidecar for Energy Bottleneck US Refiners \u2014 r/EnergyTrading + r/oilandgas + r/investing; named refiners stack + crack/RIN category + community volume.",
+  "description": "Forums sidecar for Energy Bottleneck US Refiners \u2014 r/EnergyTrading + r/oilandgas + r/oil (month-window forward scrape). Theme board = crack/RIN category + community volume. Named-ticker series digest/debug only.",
   "series": [
     {
       "key": "ur_vlo_mentions",
@@ -21,7 +21,12 @@
       "dataset_id": "ur_vlo_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0529-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 529,
+      "serial_series_n": 1
     },
     {
       "key": "ur_mpc_mentions",
@@ -41,7 +46,12 @@
       "dataset_id": "ur_mpc_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0523-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 523,
+      "serial_series_n": 1
     },
     {
       "key": "ur_psx_mentions",
@@ -61,7 +71,12 @@
       "dataset_id": "ur_psx_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0527-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 527,
+      "serial_series_n": 1
     },
     {
       "key": "ur_dino_mentions",
@@ -81,7 +96,12 @@
       "dataset_id": "ur_dino_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0519-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 519,
+      "serial_series_n": 1
     },
     {
       "key": "ur_pbf_mentions",
@@ -101,7 +121,12 @@
       "dataset_id": "ur_pbf_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0526-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 526,
+      "serial_series_n": 1
     },
     {
       "key": "ur_dk_mentions",
@@ -121,7 +146,12 @@
       "dataset_id": "ur_dk_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0520-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 520,
+      "serial_series_n": 1
     },
     {
       "key": "ur_crack_rin_mentions",
@@ -141,7 +171,12 @@
       "dataset_id": "ur_crack_rin_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0518-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 518,
+      "serial_series_n": 1
     },
     {
       "key": "ur_ai_tools_sentiment",
@@ -160,7 +195,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Combined polarity over unique posts hitting any named refiner or crack/RIN lexicon."
+      "notes": "Combined polarity over unique posts hitting any named refiner or crack/RIN lexicon.",
+      "serial": "arctic_shift-0000-0528-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 528,
+      "serial_series_n": 1
     },
     {
       "key": "ur_energytrading_posts",
@@ -180,7 +220,12 @@
       "dataset_id": "ur_energytrading_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0521-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 521,
+      "serial_series_n": 1
     },
     {
       "key": "ur_oilandgas_posts",
@@ -200,16 +245,21 @@
       "dataset_id": "ur_oilandgas_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0525-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 525,
+      "serial_series_n": 1
     },
     {
-      "key": "ur_investing_posts",
+      "key": "ur_oil_posts",
       "source": "arctic_shift",
-      "subreddit": "investing",
-      "label": "r/investing post volume",
-      "official_name": "Arctic Shift \u2014 r/investing weekly post count",
-      "short_name": "r/investing",
-      "display_name": "r/investing community volume",
+      "subreddit": "oil",
+      "label": "r/oil post volume",
+      "official_name": "Arctic Shift \u2014 r/oil weekly post count (forward month walk)",
+      "short_name": "r/oil",
+      "display_name": "r/oil community volume",
       "frequency": "weekly",
       "unit": "posts",
       "derived": [
@@ -217,10 +267,16 @@
       ],
       "scope_default": "theme",
       "usefulness": 3,
-      "dataset_id": "ur_investing_posts",
+      "dataset_id": "ur_oil_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "notes": "Dense sub \u2014 fetched via after/before month windows (sort=asc), not recent-desc.",
+      "serial": "arctic_shift-0000-0524-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 524,
+      "serial_series_n": 1
     }
   ]
 }

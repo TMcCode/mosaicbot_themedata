@@ -32,6 +32,7 @@ from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import census_trade as census  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
+from lib import kalshi_pack  # noqa: E402
 from lib import fmp_pack as fmp_packlib  # noqa: E402
 from lib.pack_derived import apply_derived_sums  # noqa: E402
 from lib import telegeography_cables as teglib  # noqa: E402
@@ -75,6 +76,7 @@ def build_pack(
     attachments: dict,
     start_year: int,
     end_year: int,
+    out_dir: Path,
 ) -> dict[str, Any]:
     fetched_at = datetime.now(timezone.utc).isoformat()
     start = f"{start_year:04d}-01-01"
@@ -85,8 +87,7 @@ def build_pack(
 
     census_key = ""
     if any(
-        (m.get("source") == "census_trade") for m in (catalog.get("series") or [])
-    ):
+        (m.get("source") == "census_trade") for m in (catalog.get("series") or [])):
         census_key = require_env("CENSUS_API_KEY")["CENSUS_API_KEY"]
 
     # Cache Census HS6 fetches (value+qty share one API call).
@@ -135,19 +136,15 @@ def build_pack(
                     pts = val_pts
                     notes.append(f"{key}: Census HS{hs} value")
             elif src == "kalshi":
-                series_t = str(meta.get("kalshi_series") or "")
-                ticker = str(meta.get("kalshi_ticker") or "")
-                if not series_t or not ticker:
-                    raise RuntimeError("kalshi_series and kalshi_ticker required")
-                pts, mm = kalshilib.fetch_daily_probability(
-                    series_ticker=series_t,
-                    market_ticker=ticker,
+                pts, note = kalshi_pack.fetch_from_meta(
+                    meta,
+                    out_dir=out_dir,
+                    r2_prefix=R2_PREFIX,
+                    catalog_path=_CATALOG,
+                    fetched_at=fetched_at,
+                    start=start,
                 )
-                pts = [p for p in pts if p["date"] >= start]
-                notes.append(
-                    f"{key}: Kalshi {ticker} last={mm.get('last_price')} "
-                    f"oi={mm.get('open_interest')} url={mm.get('url')}"
-                )
+                notes.append(note)
             elif fmp_packlib.is_fmp_source(src):
                 pts, note = fmp_caches.resolve(meta, start=start)
                 for n in fmp_caches.notes:
@@ -330,6 +327,7 @@ def run(
         attachments=attachments,
         start_year=start_year,
         end_year=end_year,
+        out_dir=out_dir,
     )
 
     if dry_run:

@@ -22,7 +22,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Umbrella count of posts matching any legal-software lexicon tag. Category/community volume \u2014 not a named product; stack with r/lawfirm, not with Harvey/Legora/etc."
+      "notes": "Umbrella count of posts matching any legal-software lexicon tag. Category/community volume \u2014 not a named product; stack with r/lawfirm, not with Harvey/Legora/etc.",
+      "serial": "arctic_shift-0000-0308-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 308,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_harvey_mentions",
@@ -42,7 +47,12 @@
       "dataset_id": "legaltech_harvey_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0302-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 302,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_legora_mentions",
@@ -62,7 +72,12 @@
       "dataset_id": "legaltech_legora_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0304-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 304,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_cocounsel_mentions",
@@ -82,7 +97,12 @@
       "dataset_id": "legaltech_cocounsel_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0301-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 301,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_lexis_mentions",
@@ -102,7 +122,12 @@
       "dataset_id": "legaltech_lexis_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0306-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 306,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_westlaw_mentions",
@@ -122,7 +147,12 @@
       "dataset_id": "legaltech_westlaw_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0309-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 309,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_named_product_mentions",
@@ -144,7 +174,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Sum series for stacked-card YoY % (unique posts). Covered by sum_series_key \u2014 not shown as a standalone card."
+      "notes": "Sum series for stacked-card YoY % (unique posts). Covered by sum_series_key \u2014 not shown as a standalone card.",
+      "serial": "arctic_shift-0000-0307-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 307,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_ai_mentions",
@@ -165,7 +200,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Category chatter (ChatGPT/LLM/genAI) \u2014 keep off product-brand stacks."
+      "notes": "Category chatter (ChatGPT/LLM/genAI) \u2014 keep off product-brand stacks.",
+      "serial": "arctic_shift-0000-0298-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 298,
+      "serial_series_n": 1
     },
     {
       "key": "lawfirm_clio_mentions",
@@ -185,7 +225,12 @@
       "dataset_id": "lawfirm_clio_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0286-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 286,
+      "serial_series_n": 1
     },
     {
       "key": "lawfirm_software_mentions",
@@ -206,7 +251,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Umbrella count for r/lawfirm. Category/community volume \u2014 stack with r/legaltech umbrella, not with named-product stacks."
+      "notes": "Umbrella count for r/lawfirm. Category/community volume \u2014 stack with r/legaltech umbrella, not with named-product stacks.",
+      "serial": "arctic_shift-0000-0288-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 288,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_ai_tools_sentiment",
@@ -225,7 +275,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Unique posts hitting any named product (same universe as named_product mentions). Heuristic lexicon on title+body; not an LLM. Null weeks omitted."
+      "notes": "Unique posts hitting any named product (same universe as named_product mentions). Heuristic lexicon on title+body; not an LLM. Null weeks omitted.",
+      "serial": "arctic_shift-0000-0300-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 300,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_harvey_sentiment",
@@ -244,7 +299,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Brand-level detail; theme board uses legaltech_ai_tools_sentiment instead."
+      "notes": "Brand-level detail; theme board uses legaltech_ai_tools_sentiment instead.",
+      "serial": "arctic_shift-0000-0303-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 303,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_legora_sentiment",
@@ -263,7 +323,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Brand-level detail; theme board uses legaltech_ai_tools_sentiment instead."
+      "notes": "Brand-level detail; theme board uses legaltech_ai_tools_sentiment instead.",
+      "serial": "arctic_shift-0000-0305-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 305,
+      "serial_series_n": 1
     },
     {
       "key": "legaltech_ai_sentiment",
@@ -281,7 +346,12 @@
       "dataset_id": "legaltech_ai_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0299-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 299,
+      "serial_series_n": 1
     },
     {
       "key": "lawfirm_clio_sentiment",
@@ -299,7 +369,12 @@
       "dataset_id": "lawfirm_clio_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0287-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 287,
+      "serial_series_n": 1
     }
   ]
 }

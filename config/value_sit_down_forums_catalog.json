@@ -20,7 +20,12 @@
       "dataset_id": "chilis_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0110-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 110,
+      "serial_series_n": 1
     },
     {
       "key": "applebees_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "applebees_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0041-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 41,
+      "serial_series_n": 1
     },
     {
       "key": "olive_garden_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "olive_garden_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0354-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 354,
+      "serial_series_n": 1
     },
     {
       "key": "ihop_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "ihop_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0268-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 268,
+      "serial_series_n": 1
     },
     {
       "key": "texas_roadhouse_mentions",
@@ -96,7 +116,12 @@
       "dataset_id": "texas_roadhouse_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0500-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 500,
+      "serial_series_n": 1
     },
     {
       "key": "dennys_mentions",
@@ -115,7 +140,12 @@
       "dataset_id": "dennys_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0174-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 174,
+      "serial_series_n": 1
     },
     {
       "key": "cracker_barrel_mentions",
@@ -134,7 +164,12 @@
       "dataset_id": "cracker_barrel_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0137-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 137,
+      "serial_series_n": 1
     },
     {
       "key": "red_robin_mentions",
@@ -153,7 +188,12 @@
       "dataset_id": "red_robin_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0432-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 432,
+      "serial_series_n": 1
     },
     {
       "key": "named_brand_mentions",
@@ -173,7 +213,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Sum series for stacked-card YoY %."
+      "notes": "Sum series for stacked-card YoY %.",
+      "serial": "arctic_shift-0000-0336-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 336,
+      "serial_series_n": 1
     },
     {
       "key": "value_deal_mentions",
@@ -193,7 +238,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Category bar \u2014 % of guest brand-sub posts. Do not stack into brand stack."
+      "notes": "Category bar \u2014 % of guest brand-sub posts. Do not stack into brand stack.",
+      "serial": "arctic_shift-0000-0532-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 532,
+      "serial_series_n": 1
     },
     {
       "key": "tip_labor_mentions",
@@ -213,7 +263,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Category bar \u2014 % of r/serverlife + r/KitchenConfidential posts. Not brand stack."
+      "notes": "Category bar \u2014 % of r/serverlife + r/KitchenConfidential posts. Not brand stack.",
+      "serial": "arctic_shift-0000-0501-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 501,
+      "serial_series_n": 1
     },
     {
       "key": "chilis_community_posts",
@@ -233,7 +288,12 @@
       "dataset_id": "chilis_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0109-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 109,
+      "serial_series_n": 1
     },
     {
       "key": "olivegarden_community_posts",
@@ -253,7 +313,12 @@
       "dataset_id": "olivegarden_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0355-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 355,
+      "serial_series_n": 1
     },
     {
       "key": "applebees_community_posts",
@@ -273,7 +338,12 @@
       "dataset_id": "applebees_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0040-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 40,
+      "serial_series_n": 1
     },
     {
       "key": "ihop_community_posts",
@@ -293,7 +363,12 @@
       "dataset_id": "ihop_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0267-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 267,
+      "serial_series_n": 1
     },
     {
       "key": "texas_roadhouse_community_posts",
@@ -313,7 +388,12 @@
       "dataset_id": "texas_roadhouse_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0499-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 499,
+      "serial_series_n": 1
     },
     {
       "key": "cracker_barrel_community_posts",
@@ -333,7 +413,12 @@
       "dataset_id": "cracker_barrel_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0136-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 136,
+      "serial_series_n": 1
     },
     {
       "key": "red_robin_community_posts",
@@ -353,7 +438,12 @@
       "dataset_id": "red_robin_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0431-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 431,
+      "serial_series_n": 1
     },
     {
       "key": "serverlife_community_posts",
@@ -374,7 +464,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Labor/ops stack \u2014 not brand community."
+      "notes": "Labor/ops stack \u2014 not brand community.",
+      "serial": "arctic_shift-0000-0469-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 469,
+      "serial_series_n": 1
     },
     {
       "key": "kitchenconfidential_community_posts",
@@ -395,7 +490,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Labor/ops stack \u2014 not brand community."
+      "notes": "Labor/ops stack \u2014 not brand community.",
+      "serial": "arctic_shift-0000-0279-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 279,
+      "serial_series_n": 1
     },
     {
       "key": "value_sit_down_brand_sentiment",
@@ -415,7 +515,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Mean polarity on named-brand hits in guest brand subs only (not serverlife/KC)."
+      "notes": "Mean polarity on named-brand hits in guest brand subs only (not serverlife/KC).",
+      "serial": "arctic_shift-0000-0533-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 533,
+      "serial_series_n": 1
     }
   ]
 }

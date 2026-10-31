@@ -100,15 +100,84 @@ def write_history(path: Path, by: dict[str, dict[str, Any]]) -> None:
     )
 
 
+def merge_history(
+    *groups: dict[str, dict[str, Any]],
+) -> dict[str, dict[str, Any]]:
+    by: dict[str, dict[str, Any]] = {}
+    for group in groups:
+        for d, row in group.items():
+            if d:
+                by[str(d)] = row
+    return by
+
+
+def load_r2_history(r2_key: str) -> dict[str, dict[str, Any]]:
+    """Pull published jsonl history from R2 (empty on miss / no creds)."""
+    try:
+        from lib import r2 as r2lib  # local import: keep module usable without boto3
+    except Exception:
+        return {}
+    try:
+        raw = r2lib.get_bytes(r2_key)
+    except Exception:
+        return {}
+    if not raw:
+        return {}
+    by: dict[str, dict[str, Any]] = {}
+    for line in raw.decode("utf-8", errors="replace").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        d = row.get("date")
+        if d:
+            by[str(d)] = row
+    return by
+
+
+def ensure_local_history(
+    out_dir: Path,
+    *,
+    r2_key: str | None = None,
+) -> tuple[dict[str, dict[str, Any]], str | None]:
+    """Merge local + R2 history and write local file. Soft-fail on R2 miss.
+
+    Contabo often has an empty out_dir; without this, an OpenTable scrape
+    timeout drops the series even though R2 still has prior weeks.
+    """
+    hist_path = out_dir / HISTORY_NAME
+    local = load_history(hist_path)
+    remote: dict[str, dict[str, Any]] = {}
+    note: str | None = None
+    if r2_key:
+        remote = load_r2_history(r2_key)
+        if remote and not local:
+            note = f"OpenTable history hydrated from R2 ({len(remote)} weeks)"
+        elif remote and local:
+            before = len(local)
+            merged_preview = merge_history(local, remote)
+            gained = len(merged_preview) - before
+            if gained > 0:
+                note = f"OpenTable history merged +{gained} weeks from R2"
+    by = merge_history(local, remote)
+    if by:
+        write_history(hist_path, by)
+    return by, note
+
+
 def scrape_and_upsert(
     out_dir: Path,
     *,
     fetched_at: str | None = None,
+    r2_key: str | None = None,
 ) -> tuple[list[dict[str, float]], str]:
     """Pull SOTI, upsert weekly US YoY history. Returns (weekly_points, note)."""
     fetched_at = fetched_at or datetime.now(timezone.utc).isoformat()
     hist_path = out_dir / HISTORY_NAME
-    by = load_history(hist_path)
+    by, hydrate_note = ensure_local_history(out_dir, r2_key=r2_key)
     payload = fetch_payload()
     daily = us_rolling7_points(payload)
     weekly = weekly_last(daily)
@@ -130,6 +199,8 @@ def scrape_and_upsert(
     ]
     pts.sort(key=lambda p: p["date"])
     note = f"OpenTable US seated YoY weekly ({len(pts)} pts, {len(daily)} daily raw)"
+    if hydrate_note:
+        note = f"{hydrate_note}; {note}"
     return pts, note
 
 

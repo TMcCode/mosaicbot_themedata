@@ -1673,6 +1673,974 @@
         "local_relative": "data/oil_tankers_mideast_forums/latest.json"
       },
       "description": "Weekly Oil Tankers MidEast forums (r/oilandgas + r/tankers)."
+    },
+    {
+      "id": "ocean_freight_vlccs",
+      "job": "jobs/ocean_freight_vlccs.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ocean_freight_vlccs/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ocean_freight_vlccs/latest.json"
+      },
+      "description": "Weekly VLCC ocean freight \u2014 Cape/Bab/EIA/TE/FMP/BWET/Kalshi."
+    },
+    {
+      "id": "ocean_freight_vlccs_forums",
+      "job": "jobs/ocean_freight_vlccs_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ocean_freight_vlccs_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ocean_freight_vlccs_forums/latest.json"
+      },
+      "description": "Weekly VLCC forums (r/shipping + r/vitards)."
+    },
+    {
+      "id": "photonics_materials",
+      "job": "jobs/photonics_materials.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/photonics_materials/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/photonics_materials/latest.json"
+      },
+      "description": "Weekly photonics materials \u2014 FMP segments + HS 3818."
+    },
+    {
+      "id": "photonics_materials_forums",
+      "job": "jobs/photonics_materials_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/photonics_materials_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/photonics_materials_forums/latest.json"
+      },
+      "description": "Weekly photonics materials forums (r/photonics)."
+    },
+    {
+      "id": "mlccs",
+      "job": "jobs/mlccs.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/mlccs/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/mlccs/latest.json"
+      },
+      "description": "Weekly MLCCs \u2014 HS 853224 + FMP + Kalshi DC capacity."
+    },
+    {
+      "id": "mlccs_forums",
+      "job": "jobs/mlccs_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/mlccs_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/mlccs_forums/latest.json"
+      },
+      "description": "Weekly MLCC forums (r/PrintedCircuitBoard)."
+    },
+    {
+      "id": "seat_based_pricing",
+      "job": "jobs/seat_based_pricing.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/seat_based_pricing/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/seat_based_pricing/latest.json"
+      },
+      "description": "Weekly seat-based pricing \u2014 FMP + Kalshi + PAYEMS."
+    },
+    {
+      "id": "seat_based_pricing_forums",
+      "job": "jobs/seat_based_pricing_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/seat_based_pricing_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/seat_based_pricing_forums/latest.json"
+      },
+      "description": "Weekly seat-based pricing forums (Arctic Shift)."
+    },
+    {
+      "id": "latam_real_estate",
+      "job": "jobs/latam_real_estate.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/latam_real_estate/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/latam_real_estate/latest.json"
+      },
+      "description": "Weekly LatAm RE \u2014 BTS trucks + FRED + FMP + Kalshi."
+    },
+    {
+      "id": "latam_real_estate_forums",
+      "job": "jobs/latam_real_estate_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/latam_real_estate_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/latam_real_estate_forums/latest.json"
+      },
+      "description": "Weekly LatAm RE forums (Arctic Shift)."
+    },
+    {
+      "id": "devops_observability",
+      "job": "jobs/devops_observability.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/devops_observability/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/devops_observability/latest.json"
+      },
+      "description": "Weekly DevOps/observability \u2014 FMP + CES + Kalshi."
+    },
+    {
+      "id": "devops_observability_forums",
+      "job": "jobs/devops_observability_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/devops_observability_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/devops_observability_forums/latest.json"
+      },
+      "description": "Weekly DevOps/observability forums (Arctic Shift)."
+    },
+    {
+      "id": "collaboration_work_mgmt",
+      "job": "jobs/collaboration_work_mgmt.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/collaboration_work_mgmt/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/collaboration_work_mgmt/latest.json"
+      },
+      "description": "Weekly CWM \u2014 FMP stacks + M365 + USASpending + transcripts."
+    },
+    {
+      "id": "collaboration_work_mgmt_forums",
+      "job": "jobs/collaboration_work_mgmt_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/collaboration_work_mgmt_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/collaboration_work_mgmt_forums/latest.json"
+      },
+      "description": "Weekly CWM forums (Arctic Shift)."
+    },
+    {
+      "id": "anthropic_ecosystem",
+      "job": "jobs/anthropic_ecosystem.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/anthropic_ecosystem/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/anthropic_ecosystem/latest.json"
+      },
+      "description": "Weekly Anthropic ecosystem \u2014 FMP partners + OpenRouter share."
+    },
+    {
+      "id": "anthropic_ecosystem_forums",
+      "job": "jobs/anthropic_ecosystem_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/anthropic_ecosystem_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/anthropic_ecosystem_forums/latest.json"
+      },
+      "description": "Weekly Anthropic ecosystem forums (Arctic Shift)."
+    },
+    {
+      "id": "vuln_exposure_asm",
+      "job": "jobs/vuln_exposure_asm.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/vuln_exposure_asm/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/vuln_exposure_asm/latest.json"
+      },
+      "description": "Weekly vuln/exposure ASM \u2014 FMP + KEV/NVD + USASpending."
+    },
+    {
+      "id": "vuln_exposure_asm_forums",
+      "job": "jobs/vuln_exposure_asm_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/vuln_exposure_asm_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/vuln_exposure_asm_forums/latest.json"
+      },
+      "description": "Weekly vuln/exposure ASM forums (Arctic Shift)."
+    },
+    {
+      "id": "agent_governance_zt",
+      "job": "jobs/agent_governance_zt.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/agent_governance_zt/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/agent_governance_zt/latest.json"
+      },
+      "description": "Weekly agent governance/ZT \u2014 FMP + USASpending + GitHub MCP."
+    },
+    {
+      "id": "agent_governance_zt_forums",
+      "job": "jobs/agent_governance_zt_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Mon"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/agent_governance_zt_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/agent_governance_zt_forums/latest.json"
+      },
+      "description": "Weekly agent governance/ZT forums (Arctic Shift)."
+    },
+    {
+      "id": "clinical_genomics",
+      "job": "jobs/clinical_genomics.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/clinical_genomics/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/clinical_genomics/latest.json"
+      },
+      "description": "Clinical genomics FMP + PubMed + CT.gov + openFDA + NIH + USASpending."
+    },
+    {
+      "id": "clinical_genomics_forums",
+      "job": "jobs/clinical_genomics_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/clinical_genomics_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/clinical_genomics_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift clinical genomics forums (r/biotech, r/medicine)."
+    },
+    {
+      "id": "ldes",
+      "job": "jobs/ldes.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/ldes/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ldes/latest.json"
+      },
+      "description": "LDES \u2014 FMP OEM segments + EIA-860M duration + FRED zinc/PPI + TE lithium carbonate + PJM BRA RTO + USASpending + Kalshi."
+    },
+    {
+      "id": "ldes_forums",
+      "job": "jobs/ldes_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/ldes_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/ldes_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift LDES forums (r/energy, PowerEngineering, RenewableEnergy)."
+    },
+    {
+      "id": "chinese_foundries",
+      "job": "jobs/chinese_foundries.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/chinese_foundries/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/chinese_foundries/latest.json"
+      },
+      "description": "Chinese foundries \u2014 FMP stacks + TE China + WFE geo + Census/Kalshi."
+    },
+    {
+      "id": "chinese_foundries_forums",
+      "job": "jobs/chinese_foundries_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/chinese_foundries_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/chinese_foundries_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift Chinese foundries forums (r/semiconductors, r/hardware)."
+    },
+    {
+      "id": "autonomous_trucking",
+      "job": "jobs/autonomous_trucking.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/autonomous_trucking/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/autonomous_trucking/latest.json"
+      },
+      "description": "AV trucking \u2014 UBER Freight + AUR/KDK + FRED scissors + OEM."
+    },
+    {
+      "id": "autonomous_trucking_forums",
+      "job": "jobs/autonomous_trucking_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/autonomous_trucking_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/autonomous_trucking_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift AV trucking forums (Truckers/AURstock/FreightBrokers)."
+    },
+    {
+      "id": "life_health_distribution",
+      "job": "jobs/life_health_distribution.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/life_health_distribution/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/life_health_distribution/latest.json"
+      },
+      "description": "Life/health distribution \u2014 EHTH/SLQT/PRI + CMS MA + FRED."
+    },
+    {
+      "id": "life_health_distribution_forums",
+      "job": "jobs/life_health_distribution_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/life_health_distribution_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/life_health_distribution_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift LHD forums (InsurancePros/medicare)."
+    },
+    {
+      "id": "precision_oncology",
+      "job": "jobs/precision_oncology.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/precision_oncology/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/precision_oncology/latest.json"
+      },
+      "description": "Precision oncology \u2014 EXAS PrecOnc/CSTL Derm/NEO Commercial/TEM Dx + science/reg."
+    },
+    {
+      "id": "precision_oncology_forums",
+      "job": "jobs/precision_oncology_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/precision_oncology_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/precision_oncology_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift PO forums (oncology/pathology)."
+    },
+    {
+      "id": "plant_proteins",
+      "job": "jobs/plant_proteins.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/plant_proteins/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/plant_proteins/latest.json"
+      },
+      "description": "Plant proteins \u2014 ADM Nutrition + feedstocks + HS 210610."
+    },
+    {
+      "id": "plant_proteins_forums",
+      "job": "jobs/plant_proteins_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 10
+      },
+      "freshness": {
+        "r2_key": "themedata/plant_proteins_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/plant_proteins_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift plant-protein forums (FoodScience/PlantBasedDiet)."
+    },
+    {
+      "id": "cybersecurity_software",
+      "job": "jobs/cybersecurity_software.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/cybersecurity_software/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cybersecurity_software/latest.json"
+      },
+      "description": "Cybersecurity software \u2014 platformization FMP + PPI + SEC 1.05 + USASpending."
+    },
+    {
+      "id": "cybersecurity_software_forums",
+      "job": "jobs/cybersecurity_software_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/cybersecurity_software_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cybersecurity_software_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift cybersecurity software forums."
+    },
+    {
+      "id": "open_source_commercialization",
+      "job": "jobs/open_source_commercialization.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/open_source_commercialization/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/open_source_commercialization/latest.json"
+      },
+      "description": "Open-source commercialization \u2014 FMP conversion stacks + IBM Software + USASpending + GitHub/SO."
+    },
+    {
+      "id": "open_source_commercialization_forums",
+      "job": "jobs/open_source_commercialization_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/open_source_commercialization_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/open_source_commercialization_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift open-source commercialization forums."
+    },
+    {
+      "id": "cannabinoid_pharma",
+      "job": "jobs/cannabinoid_pharma.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/cannabinoid_pharma/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cannabinoid_pharma/latest.json"
+      },
+      "description": "Weekly cannabinoid pharma \u2014 Epidiolex/FAERS/CT/PubMed/NIH/R&D."
+    },
+    {
+      "id": "cannabinoid_pharma_forums",
+      "job": "jobs/cannabinoid_pharma_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/cannabinoid_pharma_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/cannabinoid_pharma_forums/latest.json"
+      },
+      "description": "Weekly cannabinoid forums (r/CBD + medicalcannabis + biotech)."
+    },
+    {
+      "id": "neoclouds",
+      "job": "jobs/neoclouds.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/neoclouds/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/neoclouds/latest.json"
+      },
+      "description": "Weekly neoclouds \u2014 CRWV/NBIS/APLD/HUT/IREN/CBRS + CapEx/debt + Kalshi power/ratepayer/ERCOT + DGS10."
+    },
+    {
+      "id": "neoclouds_forums",
+      "job": "jobs/neoclouds_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Wed"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/neoclouds_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/neoclouds_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift neoclouds forums (r/datacenter + nvidia + LocalLLaMA)."
+    },
+    {
+      "id": "land_contract_drillers",
+      "job": "jobs/land_contract_drillers.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/land_contract_drillers/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/land_contract_drillers/latest.json"
+      },
+      "description": "Weekly land contract drillers \u2014 HP/NBR/PTEN segments + drilling PPI/IP + CapEx + Kalshi TX oil."
+    },
+    {
+      "id": "land_contract_drillers_forums",
+      "job": "jobs/land_contract_drillers_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/land_contract_drillers_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/land_contract_drillers_forums/latest.json"
+      },
+      "description": "Weekly Arctic Shift land-driller forums (r/oilandgasworkers + PetroleumEngineering)."
     }
   ]
 }

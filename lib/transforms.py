@@ -128,5 +128,22 @@ def series_spread(
     return out
 
 
+def series_ratio(
+    left: list[dict[str, Any]],
+    right: list[dict[str, Any]],
+    *,
+    scale: float = 100.0,
+) -> list[dict[str, Any]]:
+    """``scale * left / right`` on shared dates (e.g. real output index)."""
+    right_by = {str(p["date"]): float(p["value"]) for p in _sorted_points_as_dicts(right)}
+    out: list[dict[str, Any]] = []
+    for d, v in _sorted_points(left):
+        den = right_by.get(d)
+        if den is None or den == 0:
+            continue
+        out.append({"date": d, "value": scale * v / den})
+    return out
+
+
 def _sorted_points_as_dicts(points: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [{"date": d, "value": v} for d, v in _sorted_points(points)]

@@ -22,7 +22,12 @@
       "dataset_id": "ecommerce_retail_sales_cmp",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0036-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 36,
+      "serial_series_n": 1
     },
     {
       "key": "cmp_member_revenue",
@@ -55,7 +60,12 @@
       "dataset_id": "cmp_member_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0058-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 58,
+      "serial_series_n": 1
     },
     {
       "key": "shop_revenue_cmp",
@@ -76,7 +86,12 @@
       "dataset_id": "shop_revenue_cmp",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0248-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 248,
+      "serial_series_n": 1
     },
     {
       "key": "tost_revenue_cmp",
@@ -207,7 +222,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Transaction-heavy mix; margin pressure signal vs subscription."
+      "notes": "Transaction-heavy mix; margin pressure signal vs subscription.",
+      "serial": "fmp-revenue-0249-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 249,
+      "serial_series_n": 1
     },
     {
       "key": "shop_subscription_revenue",
@@ -232,7 +252,12 @@
       "dataset_id": "shop_subscription_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0250-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 250,
+      "serial_series_n": 1
     },
     {
       "key": "xyz_software_data_revenue",
@@ -257,7 +282,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "No Square vs Cash App split in FMP."
+      "notes": "No Square vs Cash App split in FMP.",
+      "serial": "fmp-revenue-0300-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 300,
+      "serial_series_n": 1
     },
     {
       "key": "xyz_transaction_revenue",
@@ -281,7 +311,12 @@
       "dataset_id": "xyz_transaction_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0301-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 301,
+      "serial_series_n": 1
     },
     {
       "key": "tost_technology_service",
@@ -305,7 +340,12 @@
       "dataset_id": "tost_technology_service",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0271-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 271,
+      "serial_series_n": 1
     },
     {
       "key": "tost_license_revenue",
@@ -329,7 +369,12 @@
       "dataset_id": "tost_license_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0270-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 270,
+      "serial_series_n": 1
     },
     {
       "key": "cmrc_subscription_revenue",
@@ -353,7 +398,12 @@
       "dataset_id": "cmrc_subscription_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0059-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 59,
+      "serial_series_n": 1
     },
     {
       "key": "adbe_digital_experience",
@@ -378,7 +428,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Commerce Cloud sits inside DX \u2014 not a clean Adobe Commerce line."
+      "notes": "Commerce Cloud sits inside DX \u2014 not a clean Adobe Commerce line.",
+      "serial": "fmp-revenue-0006-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "gddy_revenue",
@@ -425,7 +480,12 @@
       "dataset_id": "software_like_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "derived-sum-0021-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 21,
+      "serial_series_n": 1
     },
     {
       "key": "transaction_like_revenue",
@@ -450,7 +510,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Mix / margin-pressure lens \u2014 not a GMV proxy."
+      "notes": "Mix / margin-pressure lens \u2014 not a GMV proxy.",
+      "serial": "derived-sum-0022-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 22,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_commerce_pageviews",
@@ -471,7 +536,12 @@
       "dataset_id": "wiki_commerce_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0002-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_shopify_pageviews",
@@ -492,7 +562,12 @@
       "dataset_id": "wiki_shopify_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0008-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "shopify_apps_product_content",
@@ -513,7 +588,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "AI listing / content tooling density proxy."
+      "notes": "AI listing / content tooling density proxy.",
+      "serial": "shopify_app_store-0000-0002-0001",
+      "serial_source": "shopify_app_store",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "shopify_apps_search_filters",
@@ -533,7 +613,12 @@
       "dataset_id": "shopify_apps_search_filters",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "shopify_app_store-0000-0003-0001",
+      "serial_source": "shopify_app_store",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "shopify_apps_category_sum",
@@ -553,7 +638,12 @@
       "dataset_id": "shopify_apps_category_sum",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "shopify_app_store-0000-0001-0001",
+      "serial_source": "shopify_app_store",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "itunes_shop_app_ratings",
@@ -573,7 +663,12 @@
       "dataset_id": "itunes_shop_app_ratings",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "itunes_ratings-0000-0002-0001",
+      "serial_source": "itunes_ratings",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "itunes_ratings_basket",
@@ -593,7 +688,12 @@
       "dataset_id": "itunes_ratings_basket",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "itunes_ratings-0000-0001-0001",
+      "serial_source": "itunes_ratings",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "npm_shopify_api_downloads",
@@ -613,7 +713,12 @@
       "dataset_id": "npm_shopify_api_downloads",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "npm_downloads-0000-0002-0001",
+      "serial_source": "npm_downloads",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "npm_commerce_sdk_basket",
@@ -633,7 +738,12 @@
       "dataset_id": "npm_commerce_sdk_basket",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "npm_downloads-0000-0001-0001",
+      "serial_source": "npm_downloads",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "wix_revenue",

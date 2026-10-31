@@ -20,7 +20,12 @@
       "dataset_id": "ro_petrobras_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0443-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 443,
+      "serial_series_n": 1
     },
     {
       "key": "ro_equinor_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "ro_equinor_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0437-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 437,
+      "serial_series_n": 1
     },
     {
       "key": "ro_akerbp_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "ro_akerbp_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0435-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 435,
+      "serial_series_n": 1
     },
     {
       "key": "ro_fpso_presalt_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "ro_fpso_presalt_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0438-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 438,
+      "serial_series_n": 1
     },
     {
       "key": "ro_oil_community_volume",
@@ -96,7 +116,12 @@
       "dataset_id": "ro_oil_community_volume",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0442-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 442,
+      "serial_series_n": 1
     },
     {
       "key": "ro_norway_community_volume",
@@ -115,7 +140,12 @@
       "dataset_id": "ro_norway_community_volume",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0441-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 441,
+      "serial_series_n": 1
     },
     {
       "key": "ro_investing_community_volume",
@@ -134,7 +164,12 @@
       "dataset_id": "ro_investing_community_volume",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0440-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 440,
+      "serial_series_n": 1
     },
     {
       "key": "ro_brand_sentiment",
@@ -151,7 +186,12 @@
       "dataset_id": "ro_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0436-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 436,
+      "serial_series_n": 1
     },
     {
       "key": "ro_fpso_presalt_sentiment",
@@ -168,7 +208,12 @@
       "dataset_id": "ro_fpso_presalt_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0439-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 439,
+      "serial_series_n": 1
     }
   ]
 }

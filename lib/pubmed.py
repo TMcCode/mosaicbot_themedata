@@ -1,6 +1,9 @@
 """PubMed monthly publication counts via NCBI E-utilities.
 
-Uses esearch ``rettype=count`` with ``datetype=pdat`` per calendar month.
+Uses esearch ``rettype=count`` with ``datetype=edat`` (Entrez/create date)
+per calendar month. Prefer ``edat`` over ``pdat``: year-only publication
+dates dump into January under ``pdat`` and create fake Jan spikes (~2×).
+
 History is append/refresh (like AISI): denser past months win; trailing months
 re-fetched each run. Optional ``NCBI_API_KEY`` raises the rate limit.
 """
@@ -21,6 +24,8 @@ from typing import Any
 UA = "mosaicbot_themedata/0.1 (+lib.pubmed; NCBI E-utilities research use)"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 HISTORY_NAME = "pubmed_history.json"
+# Entrez date — avoids year-only pdat → January-1 pile-up.
+DEFAULT_DATETYPE = "edat"
 
 
 def _api_key() -> str:
@@ -62,7 +67,13 @@ def _month_bounds(ym: str) -> tuple[str, str, str]:
     )
 
 
-def esearch_count(term: str, *, mindate: str, maxdate: str) -> int:
+def esearch_count(
+    term: str,
+    *,
+    mindate: str,
+    maxdate: str,
+    datetype: str = DEFAULT_DATETYPE,
+) -> int:
     params: dict[str, str] = {
         "db": "pubmed",
         "term": term,
@@ -70,7 +81,7 @@ def esearch_count(term: str, *, mindate: str, maxdate: str) -> int:
         "retmode": "json",
         "mindate": mindate,
         "maxdate": maxdate,
-        "datetype": "pdat",
+        "datetype": (datetype or DEFAULT_DATETYPE).strip() or DEFAULT_DATETYPE,
     }
     key = _api_key()
     if key:
@@ -133,14 +144,26 @@ def refresh_query(
     term: str,
     start: str,
     refresh_months: int = 4,
+    datetype: str = DEFAULT_DATETYPE,
 ) -> tuple[list[dict[str, float]], dict[str, Any]]:
     """Merge history with newly fetched months; re-fetch trailing N months.
 
     Returns (points, meta). Points are ``{date, value}`` sorted.
+    If stored ``datetype`` differs from the request (e.g. legacy ``pdat``),
+    history for that query is discarded and fully re-fetched.
     """
+    dtype = (datetype or DEFAULT_DATETYPE).strip() or DEFAULT_DATETYPE
     hist = _load_history(history_path)
     queries = hist.setdefault("queries", {})
     q = queries.get(query_id) or {"term": term, "months": {}}
+    notes: list[str] = []
+    if str(q.get("datetype") or "") != dtype:
+        if q.get("months"):
+            notes.append(
+                f"{query_id}: cleared history (datetype "
+                f"{q.get('datetype')!r} → {dtype!r})"
+            )
+        q = {"term": term, "months": {}, "datetype": dtype}
     months: dict[str, float] = {
         str(k): float(v) for k, v in (q.get("months") or {}).items()
     }
@@ -154,11 +177,10 @@ def refresh_query(
     to_fetch = sorted(set(missing) | trailing)
 
     fetched = 0
-    notes: list[str] = []
     for ym in to_fetch:
-        point_date, mind, maxd = _month_bounds(ym)
+        _point_date, mind, maxd = _month_bounds(ym)
         try:
-            n = esearch_count(term, mindate=mind, maxdate=maxd)
+            n = esearch_count(term, mindate=mind, maxdate=maxd, datetype=dtype)
         except Exception as e:
             notes.append(f"{query_id} {ym}: {e}")
             _sleep()
@@ -168,6 +190,7 @@ def refresh_query(
         _sleep()
 
     q["term"] = term
+    q["datetype"] = dtype
     q["months"] = {k: months[k] for k in sorted(months)}
     q["updated_at"] = datetime.now(timezone.utc).isoformat()
     queries[query_id] = q
@@ -183,6 +206,7 @@ def refresh_query(
     meta = {
         "query_id": query_id,
         "term": term,
+        "datetype": dtype,
         "n_points": len(pts),
         "fetched_months": fetched,
         "notes": notes,

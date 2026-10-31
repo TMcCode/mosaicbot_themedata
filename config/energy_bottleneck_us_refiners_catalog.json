@@ -23,7 +23,12 @@
       "dataset_id": "te_crack_spread",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "trading_economics-0000-0069-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 69,
+      "serial_series_n": 1
     },
     {
       "key": "te_rbob_gasoline",
@@ -45,7 +50,12 @@
       "dataset_id": "te_rbob_gasoline",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "trading_economics-0000-0071-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 71,
+      "serial_series_n": 1
     },
     {
       "key": "te_heating_oil",
@@ -67,7 +77,12 @@
       "dataset_id": "te_heating_oil",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "trading_economics-0000-0070-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 70,
+      "serial_series_n": 1
     },
     {
       "key": "wti_crude_ur",
@@ -89,7 +104,12 @@
       "dataset_id": "wti_crude_ur",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0113-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 113,
+      "serial_series_n": 1
     },
     {
       "key": "nyh_gasoline_spot",
@@ -111,7 +131,12 @@
       "dataset_id": "nyh_gasoline_spot",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0073-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 73,
+      "serial_series_n": 1
     },
     {
       "key": "nyh_heating_oil_spot",
@@ -133,7 +158,12 @@
       "dataset_id": "nyh_heating_oil_spot",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0074-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 74,
+      "serial_series_n": 1
     },
     {
       "key": "retail_gas_price",
@@ -154,7 +184,12 @@
       "dataset_id": "retail_gas_price",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0085-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 85,
+      "serial_series_n": 1
     },
     {
       "key": "eia_distillate_stocks",
@@ -176,7 +211,12 @@
       "dataset_id": "eia_distillate_stocks",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0005-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "eia_gasoline_stocks",
@@ -198,7 +238,12 @@
       "dataset_id": "eia_gasoline_stocks",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0007-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 7,
+      "serial_series_n": 1
     },
     {
       "key": "eia_jet_stocks",
@@ -220,7 +265,12 @@
       "dataset_id": "eia_jet_stocks",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0009-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 9,
+      "serial_series_n": 1
     },
     {
       "key": "eia_crude_stocks",
@@ -242,7 +292,12 @@
       "dataset_id": "eia_crude_stocks",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0002-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "eia_refinery_util",
@@ -264,7 +319,12 @@
       "dataset_id": "eia_refinery_util",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0010-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 10,
+      "serial_series_n": 1
     },
     {
       "key": "eia_crude_inputs",
@@ -286,7 +346,12 @@
       "dataset_id": "eia_crude_inputs",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0001-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "eia_distillate_exports",
@@ -308,7 +373,12 @@
       "dataset_id": "eia_distillate_exports",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0003-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "eia_distillate_supplied",
@@ -330,7 +400,12 @@
       "dataset_id": "eia_distillate_supplied",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0006-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "eia_gasoline_supplied",
@@ -352,7 +427,12 @@
       "dataset_id": "eia_gasoline_supplied",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0008-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "eia_distillate_production",
@@ -374,7 +454,12 @@
       "dataset_id": "eia_distillate_production",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "eia_weekly-0000-0004-0001",
+      "serial_source": "eia_weekly",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "vlo_refining_revenue",
@@ -398,7 +483,12 @@
       "dataset_id": "vlo_refining_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0288-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 288,
+      "serial_series_n": 1
     },
     {
       "key": "mpc_refining_revenue",
@@ -423,7 +513,12 @@
       "dataset_id": "mpc_refining_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0186-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 186,
+      "serial_series_n": 1
     },
     {
       "key": "dino_refining_revenue",
@@ -447,7 +542,12 @@
       "dataset_id": "dino_refining_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0092-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 92,
+      "serial_series_n": 1
     },
     {
       "key": "pbf_refining_revenue",
@@ -472,7 +572,12 @@
       "dataset_id": "pbf_refining_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0220-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 220,
+      "serial_series_n": 1
     },
     {
       "key": "dk_refining_revenue",
@@ -496,7 +601,12 @@
       "dataset_id": "dk_refining_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0096-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 96,
+      "serial_series_n": 1
     },
     {
       "key": "cvi_petroleum_revenue",
@@ -521,7 +631,12 @@
       "dataset_id": "cvi_petroleum_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0078-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 78,
+      "serial_series_n": 1
     },
     {
       "key": "vlo_rd_revenue",
@@ -545,7 +660,12 @@
       "dataset_id": "vlo_rd_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0287-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 287,
+      "serial_series_n": 1
     },
     {
       "key": "mpc_rd_revenue",
@@ -569,7 +689,12 @@
       "dataset_id": "mpc_rd_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0185-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 185,
+      "serial_series_n": 1
     },
     {
       "key": "dino_renewables_revenue",
@@ -594,7 +719,12 @@
       "dataset_id": "dino_renewables_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0093-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 93,
+      "serial_series_n": 1
     },
     {
       "key": "dino_lubes_revenue",
@@ -621,7 +751,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Spin / SOTP catalyst \u2014 ticker chart; not in theme refining stack."
+      "notes": "Spin / SOTP catalyst \u2014 ticker chart; not in theme refining stack.",
+      "serial": "fmp-revenue-0091-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 91,
+      "serial_series_n": 1
     },
     {
       "key": "mpc_midstream_revenue",
@@ -645,7 +780,12 @@
       "dataset_id": "mpc_midstream_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0184-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 184,
+      "serial_series_n": 1
     },
     {
       "key": "dk_logistics_revenue",
@@ -669,7 +809,12 @@
       "dataset_id": "dk_logistics_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0095-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 95,
+      "serial_series_n": 1
     },
     {
       "key": "pbf_logistics_revenue",
@@ -694,7 +839,12 @@
       "dataset_id": "pbf_logistics_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0219-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 219,
+      "serial_series_n": 1
     },
     {
       "key": "ur_member_revenue",
@@ -726,7 +876,12 @@
       "dataset_id": "ur_member_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0283-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 283,
+      "serial_series_n": 1
     },
     {
       "key": "vlo_revenue_ur",
@@ -747,7 +902,12 @@
       "dataset_id": "vlo_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0289-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 289,
+      "serial_series_n": 1
     },
     {
       "key": "mpc_revenue_ur",
@@ -768,7 +928,12 @@
       "dataset_id": "mpc_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0187-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 187,
+      "serial_series_n": 1
     },
     {
       "key": "psx_revenue_ur",
@@ -789,7 +954,12 @@
       "dataset_id": "psx_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0233-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 233,
+      "serial_series_n": 1
     },
     {
       "key": "dino_revenue_ur",
@@ -810,7 +980,12 @@
       "dataset_id": "dino_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0094-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 94,
+      "serial_series_n": 1
     },
     {
       "key": "pbf_revenue_ur",
@@ -831,7 +1006,12 @@
       "dataset_id": "pbf_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0221-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 221,
+      "serial_series_n": 1
     },
     {
       "key": "dk_revenue_ur",
@@ -852,7 +1032,12 @@
       "dataset_id": "dk_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0097-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 97,
+      "serial_series_n": 1
     },
     {
       "key": "sun_revenue_ur",
@@ -873,7 +1058,12 @@
       "dataset_id": "sun_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0259-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 259,
+      "serial_series_n": 1
     },
     {
       "key": "cvi_revenue_ur",
@@ -894,7 +1084,12 @@
       "dataset_id": "cvi_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0079-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 79,
+      "serial_series_n": 1
     },
     {
       "key": "parr_revenue_ur",
@@ -915,7 +1110,12 @@
       "dataset_id": "parr_revenue_ur",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0218-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 218,
+      "serial_series_n": 1
     },
     {
       "key": "psx_refined_products_revenue",
@@ -941,7 +1141,12 @@
       "dataset_id": "psx_refined_products_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0232-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 232,
+      "serial_series_n": 1
     },
     {
       "key": "ur_refining_revenue",
@@ -968,7 +1173,12 @@
       "dataset_id": "ur_refining_revenue",
       "access": "manual",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "derived-sum-0025-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 25,
+      "serial_series_n": 1
     },
     {
       "key": "ur_rd_revenue",
@@ -992,7 +1202,12 @@
       "dataset_id": "ur_rd_revenue",
       "access": "manual",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "derived-sum-0024-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 24,
+      "serial_series_n": 1
     },
     {
       "key": "kalshi_us_crude_export_ban",
@@ -1012,7 +1227,13 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Soft-fail if market ticker drifts; chart-only."
+      "notes": "Soft-fail if market ticker drifts; chart-only.",
+      "serial": "kalshi-0000-0019-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 19,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true
     }
   ]
 }

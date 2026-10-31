@@ -26,6 +26,7 @@ from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import fmp_pack as fmp_packlib  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
+from lib import kalshi_pack  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 from lib import regional_oil_alt as alt  # noqa: E402
 from lib.pack_derived import apply_derived_sums  # noqa: E402
@@ -188,19 +189,15 @@ def build_pack(
                 pts = wiki_basket if field == "basket" else (wiki_brands.get(field) or [])
                 pts = [p for p in pts if str(p["date"]) >= start]
             elif src == "kalshi":
-                series_t = str(meta.get("kalshi_series") or "")
-                ticker = str(meta.get("kalshi_ticker") or "")
-                if not series_t or not ticker:
-                    raise RuntimeError("kalshi_series and kalshi_ticker required")
-                pts, mm = kalshilib.fetch_daily_probability(
-                    series_ticker=series_t,
-                    market_ticker=ticker,
+                pts, note = kalshi_pack.fetch_from_meta(
+                    meta,
+                    out_dir=out_dir,
+                    r2_prefix=R2_PREFIX,
+                    catalog_path=_CATALOG,
+                    fetched_at=fetched_at,
+                    start=start,
                 )
-                pts = [p for p in pts if p["date"] >= start]
-                notes.append(
-                    f"{key}: Kalshi {ticker} last={mm.get('last_price')} "
-                    f"oi={mm.get('open_interest')}"
-                )
+                notes.append(note)
             elif src == "derived_sum":
                 continue
             elif fmp_packlib.is_fmp_source(src):

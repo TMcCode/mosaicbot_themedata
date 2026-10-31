@@ -1,14 +1,14 @@
 {
   "schema_version": 0,
   "pack": "dew_defense",
-  "description": "Directed energy / modern warfare backdrop — US defense spend, GPR, USASpending DEW keywords, Ge/Ga trade, LPTH awards",
+  "description": "Directed energy / modern warfare backdrop \u2014 US defense spend, GPR, USASpending DEW keywords, Ge/Ga trade, LPTH awards",
   "series": [
     {
       "key": "us_defense_spending",
       "source": "fred",
       "fred_id": "FDEFX",
       "label": "Federal national defense consumption expenditures & gross investment",
-      "official_name": "BEA A824RC / FRED FDEFX — Federal national defense CE + GI",
+      "official_name": "BEA A824RC / FRED FDEFX \u2014 Federal national defense CE + GI",
       "short_name": "US defense spending",
       "display_name": "US national defense spending",
       "frequency": "quarterly",
@@ -21,13 +21,18 @@
       "dataset_id": "us_defense_spending",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0105-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 105,
+      "serial_series_n": 1
     },
     {
       "key": "gpr_index",
       "source": "gpr",
       "label": "Geopolitical Risk Index (GPR)",
-      "official_name": "Caldara–Iacoviello Geopolitical Risk Index (monthly GPR)",
+      "official_name": "Caldara\u2013Iacoviello Geopolitical Risk Index (monthly GPR)",
       "short_name": "Geopolitical risk (GPR)",
       "display_name": "Geopolitical risk index",
       "frequency": "monthly",
@@ -40,13 +45,18 @@
       "dataset_id": "gpr_index",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "gpr-0000-0001-0001",
+      "serial_source": "gpr",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_dew_awards",
       "source": "usaspending",
       "label": "USASpending DEW-related contract obligations",
-      "official_name": "USASpending.gov contract obligations — directed energy / laser weapon / counter-UAS / HEL keywords",
+      "official_name": "USASpending.gov contract obligations \u2014 directed energy / laser weapon / counter-UAS / HEL keywords",
       "short_name": "DEW federal contract awards",
       "display_name": "US DEW-related federal contract awards",
       "frequency": "monthly",
@@ -60,14 +70,19 @@
       "dataset_id": "usaspending_dew_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0010-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 10,
+      "serial_series_n": 1
     },
     {
       "key": "gallium_import_value",
       "source": "census_trade",
       "hs6": "811292",
       "label": "US imports HS 811292 (gallium, indium, niobium, etc.)",
-      "official_name": "HS 811292 Gallium, hafnium, indium, niobium, rhenium & articles — US general imports (world)",
+      "official_name": "HS 811292 Gallium, hafnium, indium, niobium, rhenium & articles \u2014 US general imports (world)",
       "short_name": "Gallium-related imports $",
       "display_name": "US gallium-related metal imports (HS 811292)",
       "frequency": "monthly",
@@ -81,15 +96,20 @@
       "dataset_id": "gallium_import_value",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "census_trade-0000-0001-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "germanium_price_usd_kg",
       "source": "usgs_mcs",
       "label": "USGS MCS germanium metal annual average price",
-      "official_name": "USGS Mineral Commodity Summaries — germanium metal annual average price (USD/kg, Europe min 99.999%)",
+      "official_name": "USGS Mineral Commodity Summaries \u2014 germanium metal annual average price (USD/kg, Europe min 99.999%)",
       "short_name": "Germanium metal price (USGS annual)",
-      "display_name": "Germanium metal price — USGS annual (USD/kg)",
+      "display_name": "Germanium metal price \u2014 USGS annual (USD/kg)",
       "frequency": "annual",
       "unit": "usd_per_kg",
       "derived": [
@@ -100,13 +120,18 @@
       "dataset_id": "germanium_price_usd_kg",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usgs_mcs-0000-0001-0001",
+      "serial_source": "usgs_mcs",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "germanium_spot_cny_kg",
       "source": "tradingeconomics",
       "label": "Trading Economics germanium ingot spot (CNY/kg)",
-      "official_name": "Trading Economics GECNYBGQ — Germanium Ingot 50Ohm (CNY/kg, CFD proxy)",
+      "official_name": "Trading Economics GECNYBGQ \u2014 Germanium Ingot 50Ohm (CNY/kg, CFD proxy)",
       "short_name": "Germanium spot (TE)",
       "display_name": "Germanium spot price (CNY/kg)",
       "frequency": "weekly",
@@ -122,13 +147,18 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "te_symbol": "GECNYBGQ:COM"
+      "te_symbol": "GECNYBGQ:COM",
+      "serial": "trading_economics-0000-0067-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 67,
+      "serial_series_n": 1
     },
     {
       "key": "gallium_spot_cny_kg",
       "source": "tradingeconomics",
       "label": "Trading Economics gallium spot (CNY/kg)",
-      "official_name": "Trading Economics GAC:COM — Gallium (CNY/kg, CFD proxy)",
+      "official_name": "Trading Economics GAC:COM \u2014 Gallium (CNY/kg, CFD proxy)",
       "short_name": "Gallium spot (TE)",
       "display_name": "Gallium spot price (CNY/kg)",
       "frequency": "weekly",
@@ -144,14 +174,19 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "te_symbol": "GAC:COM"
+      "te_symbol": "GAC:COM",
+      "serial": "trading_economics-0000-0066-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 66,
+      "serial_series_n": 1
     },
     {
       "key": "pm_china_ga_export_reinstate",
       "source": "manifold",
       "manifold_id": "QLCgECul9d",
       "label": "Manifold: China reinstate gallium export restrictions after Nov 2026 suspension",
-      "official_name": "Manifold QLCgECul9d — Will China reinstate/enforce gallium export restrictions after Nov 2026 suspension?",
+      "official_name": "Manifold QLCgECul9d \u2014 Will China reinstate/enforce gallium export restrictions after Nov 2026 suspension?",
       "short_name": "China Ga export-control risk",
       "display_name": "China gallium export-control reinstatement odds",
       "frequency": "daily",
@@ -163,14 +198,19 @@
       "dataset_id": "pm_china_ga_export_reinstate",
       "access": "api",
       "cadence": "daily",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "manifold-0000-0001-0001",
+      "serial_source": "manifold",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_lpth_awards",
       "source": "usaspending",
       "recipient": "LightPath",
       "label": "USASpending awards to LightPath Technologies",
-      "official_name": "USASpending.gov contract obligations — recipient LightPath",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient LightPath",
       "short_name": "LPTH federal awards",
       "display_name": "LightPath federal contract awards",
       "frequency": "monthly",
@@ -183,14 +223,19 @@
       "dataset_id": "usaspending_lpth_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0019-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 19,
+      "serial_series_n": 1
     },
     {
       "key": "dew_pureplay_revenue",
       "source": "fmp_revenue",
       "fmp_limit": 40,
       "label": "DEW pure-play revenue (IPGP+LASR+COHR+MKSI+AVAV)",
-      "official_name": "FMP income-statement revenue sum — IPGP,LASR,COHR,MKSI,AVAV",
+      "official_name": "FMP income-statement revenue sum \u2014 IPGP,LASR,COHR,MKSI,AVAV",
       "short_name": "Member revenue",
       "display_name": "DEW pure-play revenue (IPGP+LASR+COHR+MKSI+AVAV)",
       "frequency": "quarterly",
@@ -213,14 +258,19 @@
         "AVAV"
       ],
       "require_all": false,
-      "notes": "Theme-member top-line sum (FMP)."
+      "notes": "Theme-member top-line sum (FMP).",
+      "serial": "fmp-revenue-0381-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 381,
+      "serial_series_n": 1
     },
     {
       "key": "ipgp_dew_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "IPG Photonics revenue",
-      "official_name": "FMP income-statement revenue — IPGP",
+      "official_name": "FMP income-statement revenue \u2014 IPGP",
       "short_name": "IPGP revenue",
       "display_name": "IPG Photonics revenue",
       "frequency": "quarterly",
@@ -235,14 +285,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "IPGP"
+      "fmp_symbol": "IPGP",
+      "serial": "fmp-revenue-0401-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 401,
+      "serial_series_n": 1
     },
     {
       "key": "lasr_dew_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "nLIGHT revenue",
-      "official_name": "FMP income-statement revenue — LASR",
+      "official_name": "FMP income-statement revenue \u2014 LASR",
       "short_name": "LASR revenue",
       "display_name": "nLIGHT revenue",
       "frequency": "quarterly",
@@ -257,14 +312,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "LASR"
+      "fmp_symbol": "LASR",
+      "serial": "fmp-revenue-0403-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 403,
+      "serial_series_n": 1
     },
     {
       "key": "cohr_dew_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Coherent revenue",
-      "official_name": "FMP income-statement revenue — COHR",
+      "official_name": "FMP income-statement revenue \u2014 COHR",
       "short_name": "COHR revenue",
       "display_name": "Coherent revenue",
       "frequency": "quarterly",
@@ -279,14 +339,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "COHR"
+      "fmp_symbol": "COHR",
+      "serial": "fmp-revenue-0374-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 374,
+      "serial_series_n": 1
     },
     {
       "key": "mksi_dew_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "MKS Instruments revenue",
-      "official_name": "FMP income-statement revenue — MKSI",
+      "official_name": "FMP income-statement revenue \u2014 MKSI",
       "short_name": "MKSI revenue",
       "display_name": "MKS Instruments revenue",
       "frequency": "quarterly",
@@ -301,14 +366,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "MKSI"
+      "fmp_symbol": "MKSI",
+      "serial": "fmp-revenue-0410-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 410,
+      "serial_series_n": 1
     },
     {
       "key": "avav_dew_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "AeroVironment revenue",
-      "official_name": "FMP income-statement revenue — AVAV",
+      "official_name": "FMP income-statement revenue \u2014 AVAV",
       "short_name": "AVAV revenue",
       "display_name": "AeroVironment revenue",
       "frequency": "quarterly",
@@ -323,7 +393,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "AVAV"
+      "fmp_symbol": "AVAV",
+      "serial": "fmp-revenue-0365-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 365,
+      "serial_series_n": 1
     },
     {
       "key": "dew_transcript_keywords",
@@ -346,7 +421,7 @@
         "fiber laser"
       ],
       "label": "DEW/laser keyword hits in pure-play earnings calls",
-      "official_name": "FMP earning-call-transcript keyword counts — IPGP,LASR,COHR,MKSI,AVAV",
+      "official_name": "FMP earning-call-transcript keyword counts \u2014 IPGP,LASR,COHR,MKSI,AVAV",
       "short_name": "Transcript keywords",
       "display_name": "DEW/laser keyword hits in pure-play earnings calls",
       "frequency": "quarterly",
@@ -360,7 +435,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts.",
+      "serial": "fmp-transcript-0020-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     }
   ]
 }

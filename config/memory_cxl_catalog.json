@@ -24,7 +24,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Public DRAMeXchange board \u2014 latest print only; we append history. Server-module proxy for CXL/memory expansion BOM. Not TrendForce Gold contract."
+      "notes": "Public DRAMeXchange board \u2014 latest print only; we append history. Server-module proxy for CXL/memory expansion BOM. Not TrendForce Gold contract.",
+      "serial": "dramexchange-0000-0003-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "ddr5_16gb_die_spot",
@@ -47,7 +52,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Public die spot \u2014 broad DRAM cycle. Differentiates memory themes vs export/CapEx backdrop."
+      "notes": "Public die spot \u2014 broad DRAM cycle. Differentiates memory themes vs export/CapEx backdrop.",
+      "serial": "dramexchange-0000-0002-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "korea_semiconductor_exports",
@@ -69,7 +79,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Memory-heavy export pulse (Hynix/Samsung cycle). TE country indicator \u2014 not DRAM spot."
+      "notes": "Memory-heavy export pulse (Hynix/Samsung cycle). TE country indicator \u2014 not DRAM spot.",
+      "serial": "trading_economics-0000-0002-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "taiwan_semiconductor_exports",
@@ -91,7 +106,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Foundry/IC export pulse (TSMC ecosystem). Complements Korea memory-heavy exports."
+      "notes": "Foundry/IC export pulse (TSMC ecosystem). Complements Korea memory-heavy exports.",
+      "serial": "trading_economics-0000-0004-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "hyperscaler_capex",
@@ -121,7 +141,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "AI/HPC CapEx proxy for CXL memory-expansion demand. Same recipe as optical_fiber pack."
+      "notes": "AI/HPC CapEx proxy for CXL memory-expansion demand. Same recipe as optical_fiber pack.",
+      "serial": "fmp-capex-0020-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     },
     {
       "key": "memory_ic_import_value",
@@ -144,7 +169,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Closest free trade proxy for DRAM/NAND memory module content flowing into US systems. Not CXL-specific; qty not published at HS6."
+      "notes": "Closest free trade proxy for DRAM/NAND memory module content flowing into US systems. Not CXL-specific; qty not published at HS6.",
+      "serial": "census_trade-0000-0011-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 11,
+      "serial_series_n": 1
     },
     {
       "key": "semi_electronic_components_ip",
@@ -166,7 +196,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broad NAICS 3344 domestic fab volume \u2014 CXL controllers/modules sit inside this umbrella."
+      "notes": "Broad NAICS 3344 domestic fab volume \u2014 CXL controllers/modules sit inside this umbrella.",
+      "serial": "fred-0000-0089-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 89,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductor_ppi",
@@ -188,7 +223,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Pricing power / tightness proxy for memory/semi suppliers. Rising = supplier-friendly, can pressure CXL module BOM."
+      "notes": "Pricing power / tightness proxy for memory/semi suppliers. Rising = supplier-friendly, can pressure CXL module BOM.",
+      "serial": "fred-0000-0091-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 91,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductor_employment",
@@ -210,7 +250,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Labor footprint for NAICS 3344 \u2014 soft confirmation of semi cycle strength."
+      "notes": "Labor footprint for NAICS 3344 \u2014 soft confirmation of semi cycle strength.",
+      "serial": "fred-0000-0090-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 90,
+      "serial_series_n": 1
     },
     {
       "key": "pm_kalshi_ddr5_ye2027_above_95",
@@ -230,7 +275,14 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. Resolves on DRAMeXchange-style DDR5 session average \u2014 same family as our DX spot scrape. Most-liquid strike on KXDRAMAY; retarget ticker if liquidity migrates."
+      "notes": "Chart-only. Resolves on DRAMeXchange-style DDR5 session average \u2014 same family as our DX spot scrape. Most-liquid strike on KXDRAMAY; retarget ticker if liquidity migrates.",
+      "serial": "kalshi-0000-0024-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 24,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true,
+      "kalshi_match": "95.00"
     },
     {
       "key": "pm_manifold_cxmt_hbm3_2026",
@@ -249,7 +301,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. China HBM supply entrant \u2014 relevant to CXL/HBM competitive backdrop."
+      "notes": "Chart-only. China HBM supply entrant \u2014 relevant to CXL/HBM competitive backdrop.",
+      "serial": "manifold-0000-0002-0001",
+      "serial_source": "manifold",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     }
   ]
 }

@@ -22,7 +22,12 @@
       "dataset_id": "toys_cpi",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0100-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 100,
+      "serial_series_n": 1
     },
     {
       "key": "hobby_toy_store_sales",
@@ -43,7 +48,12 @@
       "dataset_id": "hobby_toy_store_sales",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0053-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 53,
+      "serial_series_n": 1
     },
     {
       "key": "plastic_resins_ppi",
@@ -65,7 +75,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Molded-toy COGS proxy."
+      "notes": "Molded-toy COGS proxy.",
+      "serial": "fred-0000-0081-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 81,
+      "serial_series_n": 1
     },
     {
       "key": "dolls_toys_ppi",
@@ -86,7 +101,12 @@
       "dataset_id": "dolls_toys_ppi",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0033-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 33,
+      "serial_series_n": 1
     },
     {
       "key": "hs9503_import_value",
@@ -108,7 +128,12 @@
       "dataset_id": "hs9503_import_value",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "census_trade-0000-0007-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 7,
+      "serial_series_n": 1
     },
     {
       "key": "trad_toys_member_revenue",
@@ -140,7 +165,12 @@
       "dataset_id": "trad_toys_member_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0273-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 273,
+      "serial_series_n": 1
     },
     {
       "key": "mat_revenue",
@@ -162,7 +192,12 @@
       "dataset_id": "mat_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0178-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 178,
+      "serial_series_n": 1
     },
     {
       "key": "has_revenue",
@@ -184,7 +219,12 @@
       "dataset_id": "has_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0142-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 142,
+      "serial_series_n": 1
     },
     {
       "key": "has_consumer_products",
@@ -209,7 +249,12 @@
       "dataset_id": "has_consumer_products",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0141-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 141,
+      "serial_series_n": 1
     },
     {
       "key": "has_wizards",
@@ -235,7 +280,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Tabletop / kidult engine; some prints sparse."
+      "notes": "Tabletop / kidult engine; some prints sparse.",
+      "serial": "fmp-revenue-0143-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 143,
+      "serial_series_n": 1
     },
     {
       "key": "jakk_revenue",
@@ -257,7 +307,12 @@
       "dataset_id": "jakk_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0158-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 158,
+      "serial_series_n": 1
     },
     {
       "key": "bbw_revenue",
@@ -279,7 +334,12 @@
       "dataset_id": "bbw_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0041-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 41,
+      "serial_series_n": 1
     },
     {
       "key": "bbw_retail",
@@ -304,7 +364,12 @@
       "dataset_id": "bbw_retail",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0040-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 40,
+      "serial_series_n": 1
     },
     {
       "key": "gme_collectibles",
@@ -330,7 +395,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Kidult / collectible channel proxy; not core toy OEM."
+      "notes": "Kidult / collectible channel proxy; not core toy OEM.",
+      "serial": "fmp-revenue-0135-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 135,
+      "serial_series_n": 1
     },
     {
       "key": "kidult_channel_revenue",
@@ -355,7 +425,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Sum series for stacked-card YoY % (quarterly \u2014 no 3M avg)."
+      "notes": "Sum series for stacked-card YoY % (quarterly \u2014 no 3M avg).",
+      "serial": "derived-sum-0010-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 10,
+      "serial_series_n": 1
     },
     {
       "key": "toy_to_revenue",
@@ -377,7 +452,12 @@
       "dataset_id": "toy_to_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0272-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 272,
+      "serial_series_n": 1
     },
     {
       "key": "tnie_revenue",
@@ -399,7 +479,12 @@
       "dataset_id": "tnie_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0268-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 268,
+      "serial_series_n": 1
     },
     {
       "key": "pop_mart_revenue",
@@ -421,7 +506,12 @@
       "dataset_id": "pop_mart_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0228-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 228,
+      "serial_series_n": 1
     },
     {
       "key": "tomy_revenue",
@@ -443,7 +533,12 @@
       "dataset_id": "tomy_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0269-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 269,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_toy_brand_pageviews",
@@ -464,7 +559,12 @@
       "dataset_id": "wiki_toy_brand_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0010-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 10,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_barbie_pageviews",
@@ -485,7 +585,12 @@
       "dataset_id": "wiki_barbie_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0001-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_hot_wheels_pageviews",
@@ -506,7 +611,12 @@
       "dataset_id": "wiki_hot_wheels_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0003-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_labubu_pageviews",
@@ -527,7 +637,12 @@
       "dataset_id": "wiki_labubu_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0005-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_tonies_pageviews",
@@ -548,7 +663,12 @@
       "dataset_id": "wiki_tonies_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0009-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 9,
+      "serial_series_n": 1
     },
     {
       "key": "amazon_toys_brand_presence",
@@ -568,7 +688,12 @@
       "dataset_id": "amazon_toys_brand_presence",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "amazon_bestsellers-0000-0001-0001",
+      "serial_source": "amazon_bestsellers",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "tonies_catalog_size",
@@ -588,7 +713,12 @@
       "dataset_id": "tonies_catalog_size",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "tonies_catalog-0000-0001-0001",
+      "serial_source": "tonies_catalog",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "tonies_new_skus_30d",
@@ -608,7 +738,12 @@
       "dataset_id": "tonies_new_skus_30d",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "tonies_catalog-0000-0002-0001",
+      "serial_source": "tonies_catalog",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "bgg_family_own_sum",
@@ -628,7 +763,12 @@
       "dataset_id": "bgg_family_own_sum",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "bgg-0000-0002-0001",
+      "serial_source": "bgg",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "bgg_family_hot_count",
@@ -648,7 +788,12 @@
       "dataset_id": "bgg_family_hot_count",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "bgg-0000-0001-0001",
+      "serial_source": "bgg",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "cpsc_toy_recalls",
@@ -669,7 +814,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "period_end",
-      "notes": "Risk/reputation \u2014 not a demand score input."
+      "notes": "Risk/reputation \u2014 not a demand score input.",
+      "serial": "cpsc_recalls-0000-0001-0001",
+      "serial_source": "cpsc_recalls",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     }
   ]
 }

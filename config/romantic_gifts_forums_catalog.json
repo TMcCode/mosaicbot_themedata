@@ -20,7 +20,12 @@
       "dataset_id": "etsy_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0213-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 213,
+      "serial_series_n": 1
     },
     {
       "key": "moonpig_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "moonpig_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0334-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 334,
+      "serial_series_n": 1
     },
     {
       "key": "funky_pigeon_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "funky_pigeon_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0225-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 225,
+      "serial_series_n": 1
     },
     {
       "key": "card_factory_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "card_factory_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0082-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 82,
+      "serial_series_n": 1
     },
     {
       "key": "vistaprint_mentions",
@@ -96,7 +116,12 @@
       "dataset_id": "vistaprint_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0551-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 551,
+      "serial_series_n": 1
     },
     {
       "key": "cewe_mentions",
@@ -115,7 +140,12 @@
       "dataset_id": "cewe_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0085-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 85,
+      "serial_series_n": 1
     },
     {
       "key": "flowers_mentions",
@@ -134,7 +164,12 @@
       "dataset_id": "flowers_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0220-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 220,
+      "serial_series_n": 1
     },
     {
       "key": "romantic_gifts_named_brand_mentions",
@@ -154,7 +189,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Sum series for stacked-card YoY %."
+      "notes": "Sum series for stacked-card YoY %.",
+      "serial": "arctic_shift-0000-0448-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 448,
+      "serial_series_n": 1
     },
     {
       "key": "personalized_gift_category_mentions",
@@ -174,7 +214,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Category bar \u2014 do not stack into brand stack."
+      "notes": "Category bar \u2014 do not stack into brand stack.",
+      "serial": "arctic_shift-0000-0383-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 383,
+      "serial_series_n": 1
     },
     {
       "key": "etsysellers_community_posts",
@@ -194,7 +239,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "EtsySellers"
+      "subreddit": "EtsySellers",
+      "serial": "arctic_shift-0000-0214-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 214,
+      "serial_series_n": 1
     },
     {
       "key": "weddingplanning_community_posts",
@@ -214,7 +264,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "weddingplanning"
+      "subreddit": "weddingplanning",
+      "serial": "arctic_shift-0000-0553-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 553,
+      "serial_series_n": 1
     },
     {
       "key": "smallbusiness_community_posts",
@@ -234,7 +289,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "smallbusiness"
+      "subreddit": "smallbusiness",
+      "serial": "arctic_shift-0000-0479-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 479,
+      "serial_series_n": 1
     },
     {
       "key": "romantic_gifts_brand_sentiment",
@@ -253,7 +313,12 @@
       "dataset_id": "romantic_gifts_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0447-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 447,
+      "serial_series_n": 1
     }
   ]
 }

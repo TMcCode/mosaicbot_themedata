@@ -76,6 +76,116 @@ def candlestick_mid_prob(stick: dict[str, Any]) -> float | None:
     return None
 
 
+def _norm_strike(strike: str | float | int | None) -> str | None:
+    """Normalize ``5.8`` / ``T5.8`` / ``t5.8`` → ``T5.8``."""
+    if strike is None or strike == "":
+        return None
+    s = str(strike).strip().upper()
+    if not s:
+        return None
+    if not s.startswith("T"):
+        s = f"T{s}"
+    return s
+
+
+def list_series_markets(
+    series_ticker: str,
+    *,
+    status: str | None = "open",
+    limit: int = 100,
+) -> list[dict[str, Any]]:
+    """List markets under a series (status ``open`` ≈ active contracts)."""
+    params: dict[str, Any] = {
+        "series_ticker": str(series_ticker).strip().upper(),
+        "limit": int(limit),
+    }
+    if status:
+        params["status"] = status
+    body = _get_json("/markets", params)
+    return list(body.get("markets") or [])
+
+
+def market_matches_strike(market: dict[str, Any], strike: str) -> bool:
+    want = _norm_strike(strike)
+    if not want:
+        return True
+    ticker = str(market.get("ticker") or "").upper()
+    if ticker.endswith(f"-{want}") or f"-{want}-" in f"-{ticker}-":
+        return True
+    # Subtitle e.g. "Above 5.8 million barrels/day"
+    blob = " ".join(
+        str(market.get(k) or "")
+        for k in ("yes_sub_title", "no_sub_title", "title", "subtitle")
+    ).upper()
+    num = want[1:]  # 5.8
+    return bool(num and re.search(rf"(?:ABOVE|OVER|>)\s*{re.escape(num)}\b", blob))
+
+
+def market_matches_roll(market: dict[str, Any], match: str | None) -> bool:
+    """True if market ticker contains the year-stable ``match`` fragment."""
+    if not match:
+        return True
+    want = str(match).strip().upper()
+    if not want:
+        return True
+    if want.startswith("T") and re.fullmatch(r"T[0-9.]+", want):
+        return market_matches_strike(market, want)
+    ticker = str(market.get("ticker") or "").upper()
+    return want in ticker
+
+
+def resolve_series_market(
+    series_ticker: str,
+    *,
+    strike: str | float | int | None = None,
+    match: str | None = None,
+    preferred_ticker: str | None = None,
+) -> dict[str, Any]:
+    """Pick the live market for an annual/rolling Kalshi series.
+
+    Prefer ``preferred_ticker`` while it is still active and matches
+    ``strike`` / ``match``. Otherwise choose the open market matching the
+    roll fingerprint with the farthest ``close_time``. Raises if none match
+    (caller should omit the series from the pack / page).
+    """
+    series = str(series_ticker or "").strip().upper()
+    if not series:
+        raise RuntimeError("kalshi series_ticker required")
+    want_strike = _norm_strike(strike)
+    want_match = str(match or want_strike or "").strip().upper() or None
+    preferred = str(preferred_ticker or "").strip().upper() or None
+
+    open_mkts = list_series_markets(series, status="open")
+    # API sometimes returns status=active without filtering — keep open-ish.
+    active = [
+        m
+        for m in open_mkts
+        if str(m.get("status") or "").lower() in ("", "open", "active", "initialized")
+    ]
+    if not active:
+        active = open_mkts
+
+    if preferred:
+        for m in active:
+            if str(m.get("ticker") or "").upper() == preferred:
+                if market_matches_roll(m, want_match):
+                    return m
+
+    matched = [m for m in active if market_matches_roll(m, want_match)]
+    if not matched:
+        tickers = [str(m.get("ticker") or "") for m in active[:12]]
+        raise RuntimeError(
+            f"no open Kalshi market for {series} match={want_match or '*'}; "
+            f"open={tickers}"
+        )
+
+    def _close_key(m: dict[str, Any]) -> str:
+        return str(m.get("close_time") or m.get("expiration_time") or "")
+
+    matched.sort(key=_close_key, reverse=True)
+    return matched[0]
+
+
 def fetch_daily_probability(
     *,
     series_ticker: str,
@@ -125,7 +235,70 @@ def fetch_daily_probability(
         "volume": meta.get("volume_fp") or meta.get("volume"),
         "open_interest": meta.get("open_interest_fp") or meta.get("open_interest"),
         "close_time": meta.get("close_time"),
+        "status": meta.get("status"),
         "url": f"https://kalshi.com/markets/{series_ticker.lower()}",
+    }
+    return pts, mm
+
+
+def fetch_daily_probability_auto(
+    *,
+    series_ticker: str,
+    strike: str | float | int | None = None,
+    match: str | None = None,
+    preferred_ticker: str | None = None,
+    lookback_days: int = 400,
+    prior_ticker: str | None = None,
+    prior_points: list[dict[str, Any]] | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Resolve open market for series+strike/match and pull that contract's path.
+
+    On rollover (resolved ticker ≠ prior/preferred), **reset** the published
+    series to the new contract only — do not stitch old-year odds onto the new
+    path (different underlyings). ``prior_points`` are returned in meta as
+    ``archived_points`` for optional offline retention, not merged into the chart.
+
+    If no open successor matches, raises ``RuntimeError`` so the pack omits the
+    series (chart drops from the page) rather than showing a stale path.
+    """
+    prev = str(prior_ticker or preferred_ticker or "").strip().upper() or None
+    resolved = resolve_series_market(
+        series_ticker,
+        strike=strike,
+        match=match,
+        preferred_ticker=preferred_ticker,
+    )
+    ticker = str(resolved.get("ticker") or "").strip()
+    if not ticker:
+        raise RuntimeError(f"Kalshi resolve returned empty ticker for {series_ticker}")
+    pts, mm = fetch_daily_probability(
+        series_ticker=series_ticker,
+        market_ticker=ticker,
+        lookback_days=lookback_days,
+    )
+    rolled = bool(prev and prev != ticker.upper())
+    archived: list[dict[str, Any]] = []
+    if rolled and prior_points:
+        archived = [
+            {"date": str(p.get("date") or "")[:10], "value": float(p["value"])}
+            for p in prior_points
+            if p.get("date") and p.get("value") is not None
+        ]
+    mm = {
+        **mm,
+        "resolved_ticker": ticker,
+        "preferred_ticker": preferred_ticker,
+        "prior_ticker": prior_ticker or preferred_ticker,
+        "strike": _norm_strike(strike),
+        "match": str(match or _norm_strike(strike) or "").strip().upper() or None,
+        "rolled": rolled,
+        "reset_on_roll": True,
+        "archived_points": archived,
+        "title": resolved.get("title")
+        or resolved.get("yes_sub_title")
+        or mm.get("title"),
+        "close_time": resolved.get("close_time") or mm.get("close_time"),
+        "status": resolved.get("status") or mm.get("status"),
     }
     return pts, mm
 

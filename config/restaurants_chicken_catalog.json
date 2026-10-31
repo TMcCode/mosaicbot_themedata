@@ -1,14 +1,14 @@
 {
   "schema_version": 0,
   "pack": "restaurants_chicken",
-  "description": "Restaurants '26: Chicken Buyers backdrop — USDA AMS whole-wing weekly + poultry PPI + food-services AHE/employment + CPI food away + food-services retail sales. Tickers: WING, LOCO, YUM, QSR.",
+  "description": "Restaurants '26: Chicken Buyers backdrop \u2014 USDA AMS whole-wing weekly + poultry PPI + food-services AHE/employment + CPI food away + food-services retail sales. Tickers: WING, LOCO, YUM, QSR.",
   "series": [
     {
       "key": "ams_wings_whole",
       "source": "usda_ams",
       "report_id": "ams_3646",
-      "label": "USDA AMS Wings — Whole (national wtd avg)",
-      "official_name": "USDA AMS Weekly National Chicken Report (ams_3646) — Wings Whole national weighted average, ¢/lb FOB plant",
+      "label": "USDA AMS Wings \u2014 Whole (national wtd avg)",
+      "official_name": "USDA AMS Weekly National Chicken Report (ams_3646) \u2014 Wings Whole national weighted average, \u00a2/lb FOB plant",
       "short_name": "AMS whole wings",
       "display_name": "US wholesale whole-wing price (AMS)",
       "frequency": "weekly",
@@ -23,14 +23,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Free substitute for Urner Barry wing index. AMS latest PDF only — append weekly. Bootstrap seed from meatread (~10w from 2026-08-14); no Wayback."
+      "notes": "Free substitute for Urner Barry wing index. AMS latest PDF only \u2014 append weekly. Bootstrap seed from meatread (~10w from 2026-08-14); no Wayback.",
+      "serial": "usda_ams-0000-0001-0001",
+      "serial_source": "usda_ams",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "poultry_ppi",
       "source": "fred",
       "fred_id": "WPU022104",
       "label": "PPI Commodity: Processed poultry",
-      "official_name": "FRED WPU022104 — Producer Price Index by Commodity: Processed Foods and Feeds: Processed Poultry (BLS)",
+      "official_name": "FRED WPU022104 \u2014 Producer Price Index by Commodity: Processed Foods and Feeds: Processed Poultry (BLS)",
       "short_name": "Processed poultry PPI",
       "display_name": "US processed poultry producer prices",
       "frequency": "monthly",
@@ -45,7 +50,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Core chicken COGS proxy. FRED mirror of BLS WPU022104."
+      "notes": "Core chicken COGS proxy. FRED mirror of BLS WPU022104.",
+      "serial": "fred-0000-0083-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 83,
+      "serial_series_n": 1
     },
     {
       "key": "food_services_ahe",
@@ -54,7 +64,7 @@
       "fallback_source": "fred",
       "fallback_fred_id": "CES7000000003",
       "label": "Average Hourly Earnings: Food Services and Drinking Places",
-      "official_name": "BLS CES7072200003 — Average Hourly Earnings of All Employees, Food Services and Drinking Places (NAICS 722), SA",
+      "official_name": "BLS CES7072200003 \u2014 Average Hourly Earnings of All Employees, Food Services and Drinking Places (NAICS 722), SA",
       "short_name": "Food services AHE",
       "display_name": "US food services average hourly earnings",
       "frequency": "monthly",
@@ -69,14 +79,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Exact NAICS 722 wages via BLS. Fallback: FRED CES7000000003 leisure & hospitality AHE if BLS is down (722 AHE not on FRED)."
+      "notes": "Exact NAICS 722 wages via BLS. Fallback: FRED CES7000000003 leisure & hospitality AHE if BLS is down (722 AHE not on FRED).",
+      "serial": "bls-0000-0002-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "food_services_employment",
       "source": "fred",
       "fred_id": "CES7072200001",
       "label": "All Employees: Food Services and Drinking Places",
-      "official_name": "FRED CES7072200001 — All Employees, Thousands, SA: Food Services and Drinking Places (NAICS 722)",
+      "official_name": "FRED CES7072200001 \u2014 All Employees, Thousands, SA: Food Services and Drinking Places (NAICS 722)",
       "short_name": "Food services employment",
       "display_name": "US food services employment",
       "frequency": "monthly",
@@ -91,14 +106,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Industry staffing backdrop. FRED mirror of BLS CES."
+      "notes": "Industry staffing backdrop. FRED mirror of BLS CES.",
+      "serial": "fred-0000-0045-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 45,
+      "serial_series_n": 1
     },
     {
       "key": "cpi_food_away_from_home",
       "source": "fred",
       "fred_id": "CUSR0000SEFV",
       "label": "CPI: Food Away From Home",
-      "official_name": "FRED CUSR0000SEFV — Consumer Price Index for All Urban Consumers: Food Away From Home, SA",
+      "official_name": "FRED CUSR0000SEFV \u2014 Consumer Price Index for All Urban Consumers: Food Away From Home, SA",
       "short_name": "CPI food away",
       "display_name": "US CPI food away from home",
       "frequency": "monthly",
@@ -113,14 +133,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Menu-price inflation. FRED mirror of BLS CPI."
+      "notes": "Menu-price inflation. FRED mirror of BLS CPI.",
+      "serial": "fred-0000-0031-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 31,
+      "serial_series_n": 1
     },
     {
       "key": "food_services_retail_sales",
       "source": "fred",
       "fred_id": "MRTSSM722USN",
       "label": "Retail Sales: Food Services and Drinking Places",
-      "official_name": "FRED MRTSSM722USN — Retail Sales: Food Services and Drinking Places",
+      "official_name": "FRED MRTSSM722USN \u2014 Retail Sales: Food Services and Drinking Places",
       "short_name": "Food services sales",
       "display_name": "US food services & drinking places retail sales",
       "frequency": "monthly",
@@ -135,7 +160,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Top-line demand / traffic proxy (Census via FRED)."
+      "notes": "Top-line demand / traffic proxy (Census via FRED).",
+      "serial": "fred-0000-0046-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 46,
+      "serial_series_n": 1
     },
     {
       "key": "chicken_buyer_revenue",
@@ -162,7 +192,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "YUM layer is KFC Global Division segment (not total Yum)."
+      "notes": "YUM layer is KFC Global Division segment (not total Yum).",
+      "serial": "fmp-revenue-0371-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 371,
+      "serial_series_n": 1
     },
     {
       "key": "yum_kfc_revenue",
@@ -174,7 +209,7 @@
         "KFC"
       ],
       "label": "Yum KFC revenue",
-      "official_name": "FMP revenue-product-segmentation — YUM KFC Global Division",
+      "official_name": "FMP revenue-product-segmentation \u2014 YUM KFC Global Division",
       "short_name": "YUM KFC",
       "display_name": "Yum KFC revenue",
       "frequency": "quarterly",
@@ -189,14 +224,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chicken-theme layer; total YUM still available as yum_revenue. FMP lacks brand splits for Q4 2017–2020 (Franchise-only rows); inflated segment prints vs income-statement revenue are dropped."
+      "notes": "Chicken-theme layer; total YUM still available as yum_revenue. FMP lacks brand splits for Q4 2017\u20132020 (Franchise-only rows); inflated segment prints vs income-statement revenue are dropped.",
+      "serial": "fmp-revenue-0457-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 457,
+      "serial_series_n": 1
     },
     {
       "key": "yum_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Yum! Brands revenue",
-      "official_name": "FMP income-statement revenue — YUM",
+      "official_name": "FMP income-statement revenue \u2014 YUM",
       "short_name": "YUM revenue",
       "display_name": "Yum! Brands revenue",
       "frequency": "quarterly",
@@ -211,14 +251,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "YUM"
+      "fmp_symbol": "YUM",
+      "serial": "fmp-revenue-0458-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 458,
+      "serial_series_n": 1
     },
     {
       "key": "qsr_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Restaurant Brands revenue",
-      "official_name": "FMP income-statement revenue — QSR",
+      "official_name": "FMP income-statement revenue \u2014 QSR",
       "short_name": "QSR revenue",
       "display_name": "Restaurant Brands revenue",
       "frequency": "quarterly",
@@ -233,14 +278,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "QSR"
+      "fmp_symbol": "QSR",
+      "serial": "fmp-revenue-0427-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 427,
+      "serial_series_n": 1
     },
     {
       "key": "wing_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Wingstop revenue",
-      "official_name": "FMP income-statement revenue — WING",
+      "official_name": "FMP income-statement revenue \u2014 WING",
       "short_name": "WING revenue",
       "display_name": "Wingstop revenue",
       "frequency": "quarterly",
@@ -255,14 +305,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "WING"
+      "fmp_symbol": "WING",
+      "serial": "fmp-revenue-0453-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 453,
+      "serial_series_n": 1
     },
     {
       "key": "loco_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "El Pollo Loco revenue",
-      "official_name": "FMP income-statement revenue — LOCO",
+      "official_name": "FMP income-statement revenue \u2014 LOCO",
       "short_name": "LOCO revenue",
       "display_name": "El Pollo Loco revenue",
       "frequency": "quarterly",
@@ -277,7 +332,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "LOCO"
+      "fmp_symbol": "LOCO",
+      "serial": "fmp-revenue-0405-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 405,
+      "serial_series_n": 1
     },
     {
       "key": "chicken_transcript_keywords",
@@ -299,7 +359,7 @@
         "bone-in"
       ],
       "label": "Chicken/wing keyword hits in buyer earnings calls",
-      "official_name": "FMP earning-call-transcript keyword counts — YUM,QSR,WING,LOCO",
+      "official_name": "FMP earning-call-transcript keyword counts \u2014 YUM,QSR,WING,LOCO",
       "short_name": "Transcript keywords",
       "display_name": "Chicken/wing keyword hits in buyer earnings calls",
       "frequency": "quarterly",
@@ -313,7 +373,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts.",
+      "serial": "fmp-transcript-0016-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 16,
+      "serial_series_n": 1
     }
   ]
 }

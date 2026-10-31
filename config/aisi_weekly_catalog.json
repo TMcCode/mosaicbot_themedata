@@ -7,7 +7,7 @@
       "key": "aisi_production",
       "source": "aisi",
       "label": "AISI domestic raw steel production",
-      "official_name": "American Iron and Steel Institute — weekly domestic raw steel production (net tons)",
+      "official_name": "American Iron and Steel Institute \u2014 weekly domestic raw steel production (net tons)",
       "short_name": "US raw steel production",
       "display_name": "US raw steel production (weekly)",
       "frequency": "weekly",
@@ -21,13 +21,18 @@
       "dataset_id": "aisi_production",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "aisi-0000-0001-0001",
+      "serial_source": "aisi",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "aisi_utilization",
       "source": "aisi",
       "label": "AISI capability utilization rate",
-      "official_name": "American Iron and Steel Institute — weekly capability utilization rate",
+      "official_name": "American Iron and Steel Institute \u2014 weekly capability utilization rate",
       "short_name": "Steel capability utilization",
       "display_name": "Steel mill capability utilization",
       "frequency": "weekly",
@@ -41,7 +46,12 @@
       "dataset_id": "aisi_utilization",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "vendor_as_of"
+      "as_of_semantics": "vendor_as_of",
+      "serial": "aisi-0000-0002-0001",
+      "serial_source": "aisi",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     }
   ]
 }

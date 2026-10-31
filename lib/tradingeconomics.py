@@ -424,6 +424,42 @@ def indicator_to_points(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [{"date": d, "value": by[d]} for d in sorted(by)]
 
 
+def ticker_historical(
+    symbol: str,
+    *,
+    d1: str = "2015-01-01",
+    max_age_hours: float | None = 24.0 * 7,
+    force: bool = False,
+    allow_reserve: bool = True,
+) -> list[dict[str, Any]]:
+    """Weekly/macro ticker history via ``historical/ticker/{symbol}/{d1}``.
+
+    Used for Baker Hughes–style series (``USOILRIGS``, ``USATOTRIG``) that are
+    not commodity ``markets/historical`` OHLC rows. Cache aggressively.
+    """
+    sym = str(symbol or "").strip().upper()
+    if not sym:
+        return []
+    start = str(d1 or "2015-01-01")[:10]
+    path = f"historical/ticker/{quote(sym, safe='')}/{start}"
+    cache_key = f"ticker/hist|{sym}|{start}"
+    data = get_json(
+        path,
+        cache_key=cache_key,
+        max_age_hours=max_age_hours,
+        force=force,
+        allow_reserve=allow_reserve,
+    )
+    if not isinstance(data, list):
+        raise RuntimeError(f"unexpected ticker historical payload: {type(data)}")
+    return data
+
+
+def ticker_to_points(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Map ``historical/ticker`` rows → ``[{date, value}]`` (same shape as indicators)."""
+    return indicator_to_points(rows)
+
+
 def load_indicator_specs(*, pull_only: bool = True) -> list[dict[str, Any]]:
     """Return ``te_symbols.json`` ``indicators`` rows (status=pull by default)."""
     doc = load_symbology()

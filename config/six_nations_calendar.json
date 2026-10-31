@@ -1,0 +1,27 @@
+{
+  "source": "curated_six_nations",
+  "notes": "Monthly Men's Six Nations match counts (15 fixtures/tournament). Curated from published calendars — openfootball has no rugby repo. Update when World Rugby / unions publish the next edition.",
+  "monthly": {
+    "2018-02-01": 9,
+    "2018-03-01": 6,
+    "2019-02-01": 9,
+    "2019-03-01": 6,
+    "2020-02-01": 9,
+    "2020-03-01": 3,
+    "2020-10-01": 3,
+    "2021-02-01": 6,
+    "2021-03-01": 9,
+    "2022-02-01": 9,
+    "2022-03-01": 6,
+    "2023-02-01": 9,
+    "2023-03-01": 6,
+    "2024-02-01": 9,
+    "2024-03-01": 6,
+    "2025-01-01": 3,
+    "2025-02-01": 6,
+    "2025-03-01": 6,
+    "2026-01-01": 3,
+    "2026-02-01": 6,
+    "2026-03-01": 6
+  }
+}

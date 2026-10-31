@@ -1,47 +1,68 @@
 {
   "schema_version": 0,
   "pack": "integrated_pos",
-  "description": "Payments '24: Integrated POS — thin pack: FMP TOST/FOUR/PAR/XYZ revenue + POS transcript keywords + FRED NEWORDER. Reuses agentic_payments retail/fed funds, ai_resilient shop_revenue, value_sit_down food-services + OpenTable via attachments. Forums in integrated_pos_forums. Skip Green Sheet / PAGS/STNE sum (FX).",
+  "description": "Payments '24: Integrated POS \u2014 thin pack: FMP TOST/FOUR/PAR/XYZ revenue + POS transcript keywords + FRED NEWORDER. Reuses agentic_payments retail/fed funds, ai_resilient shop_revenue, value_sit_down food-services + OpenTable via attachments. Forums in integrated_pos_forums. Skip Green Sheet / PAGS/STNE sum (FX).",
   "series": [
     {
       "key": "nondefense_capex_new_orders",
       "source": "fred",
       "fred_id": "NEWORDER",
       "label": "Manufacturers' new orders: nondefense capital goods ex-aircraft (NEWORDER)",
-      "official_name": "FRED NEWORDER — Manufacturers' New Orders: Nondefense Capital Goods Excluding Aircraft",
+      "official_name": "FRED NEWORDER \u2014 Manufacturers' New Orders: Nondefense Capital Goods Excluding Aircraft",
       "short_name": "Core capex new orders",
       "display_name": "US nondefense capex new orders (ex-aircraft)",
       "frequency": "monthly",
       "unit": "usd_millions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "nondefense_capex_new_orders",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broad SMB/hardware investment pulse — soft backdrop for POS terminal / restaurant kit CapEx."
+      "notes": "Broad SMB/hardware investment pulse \u2014 soft backdrop for POS terminal / restaurant kit CapEx.",
+      "serial": "fred-0000-0070-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 70,
+      "serial_series_n": 1
     },
     {
       "key": "pos_member_revenue",
       "source": "fmp_revenue",
-      "fmp_symbols": ["TOST", "FOUR", "PAR", "XYZ"],
+      "fmp_symbols": [
+        "TOST",
+        "FOUR",
+        "PAR",
+        "XYZ"
+      ],
       "fmp_limit": 40,
       "require_all": false,
       "label": "Integrated POS USD member revenue (TOST+FOUR+PAR+XYZ)",
-      "official_name": "FMP income-statement revenue sum — Toast, Shift4, PAR, Block",
+      "official_name": "FMP income-statement revenue sum \u2014 Toast, Shift4, PAR, Block",
       "short_name": "USD member revenue",
       "display_name": "Integrated POS USD member revenue (TOST+FOUR+PAR+XYZ)",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "pos_member_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "USD-listed POS members only. SHOP attached separately (reuse ai_resilient). PAGS/STNE ticker-local (FX)."
+      "notes": "USD-listed POS members only. SHOP attached separately (reuse ai_resilient). PAGS/STNE ticker-local (FX).",
+      "serial": "fmp-revenue-0423-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 423,
+      "serial_series_n": 1
     },
     {
       "key": "tost_revenue",
@@ -49,18 +70,26 @@
       "fmp_symbol": "TOST",
       "fmp_limit": 40,
       "label": "Toast revenue",
-      "official_name": "FMP income-statement revenue — TOST",
+      "official_name": "FMP income-statement revenue \u2014 TOST",
       "short_name": "TOST revenue",
       "display_name": "Toast revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "tost_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0445-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 445,
+      "serial_series_n": 1
     },
     {
       "key": "four_revenue",
@@ -68,18 +97,26 @@
       "fmp_symbol": "FOUR",
       "fmp_limit": 40,
       "label": "Shift4 revenue",
-      "official_name": "FMP income-statement revenue — FOUR",
+      "official_name": "FMP income-statement revenue \u2014 FOUR",
       "short_name": "FOUR revenue",
       "display_name": "Shift4 revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "four_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0388-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 388,
+      "serial_series_n": 1
     },
     {
       "key": "par_revenue",
@@ -87,18 +124,26 @@
       "fmp_symbol": "PAR",
       "fmp_limit": 40,
       "label": "PAR Technology revenue",
-      "official_name": "FMP income-statement revenue — PAR",
+      "official_name": "FMP income-statement revenue \u2014 PAR",
       "short_name": "PAR revenue",
       "display_name": "PAR Technology revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "par_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0421-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 421,
+      "serial_series_n": 1
     },
     {
       "key": "xyz_revenue",
@@ -106,24 +151,37 @@
       "fmp_symbol": "XYZ",
       "fmp_limit": 40,
       "label": "Block revenue",
-      "official_name": "FMP income-statement revenue — XYZ (Block / Square)",
+      "official_name": "FMP income-statement revenue \u2014 XYZ (Block / Square)",
       "short_name": "XYZ revenue",
       "display_name": "Block (Square) revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "xyz_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Ticker XYZ (ex-SQ). Conglomerate (Cash App + Square) — chart + stack layer; light score via sum only."
+      "notes": "Ticker XYZ (ex-SQ). Conglomerate (Cash App + Square) \u2014 chart + stack layer; light score via sum only.",
+      "serial": "fmp-revenue-0456-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 456,
+      "serial_series_n": 1
     },
     {
       "key": "pos_transcript_keywords",
       "source": "fmp_transcript_keywords",
-      "fmp_symbols": ["TOST", "FOUR", "PAR", "XYZ"],
+      "fmp_symbols": [
+        "TOST",
+        "FOUR",
+        "PAR",
+        "XYZ"
+      ],
       "fmp_limit": 16,
       "require_all": false,
       "keywords": [
@@ -148,19 +206,26 @@
         "merchant"
       ],
       "label": "POS / integrated payments keyword hits (TOST+FOUR+PAR+XYZ)",
-      "official_name": "FMP transcript keyword counts — POS/payments/merchant (TOST, FOUR, PAR, XYZ)",
+      "official_name": "FMP transcript keyword counts \u2014 POS/payments/merchant (TOST, FOUR, PAR, XYZ)",
       "short_name": "POS transcript keywords",
       "display_name": "POS keyword hits in TOST+FOUR+PAR+XYZ calls",
       "frequency": "quarterly",
       "unit": "keyword_hits",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 3,
       "dataset_id": "pos_transcript_keywords",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative pulse."
+      "notes": "Chart-only narrative pulse.",
+      "serial": "fmp-transcript-0028-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 28,
+      "serial_series_n": 1
     }
   ]
 }

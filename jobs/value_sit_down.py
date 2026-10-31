@@ -157,15 +157,22 @@ def build_pack(
     except Exception as e:
         errors.append(f"beef_choice_cutout scrape: {e}")
 
-    # OpenTable — soft-fail (Akamai); keep prior history
+    # OpenTable — soft-fail (Akamai/timeout); scrape_and_upsert hydrates R2 first
+    ot_r2_key = f"{R2_PREFIX}/{ot.HISTORY_NAME}"
     try:
-        _ot_pts, ot_note = ot.scrape_and_upsert(out_dir, fetched_at=fetched_at)
+        _ot_pts, ot_note = ot.scrape_and_upsert(
+            out_dir, fetched_at=fetched_at, r2_key=ot_r2_key
+        )
         notes.append(ot_note)
     except Exception as e:
-        errors.append(f"opentable_us_seated_diners_yoy scrape: {e}")
-        notes.append(
-            f"OpenTable scrape failed ({e}); using local history if present"
-        )
+        # Ensure still ran before the failed fetch; only error if nothing to chart.
+        _by, hydrate_note = ot.ensure_local_history(out_dir, r2_key=ot_r2_key)
+        if hydrate_note:
+            notes.append(hydrate_note)
+        has_hist = bool(ot.points_from_history(out_dir))
+        notes.append(f"OpenTable scrape failed ({e}); using prior history")
+        if not has_hist:
+            errors.append(f"opentable_us_seated_diners_yoy scrape: {e}")
 
     for meta in catalog.get("series") or []:
         key = meta.get("key")

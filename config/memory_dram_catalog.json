@@ -1,14 +1,14 @@
 {
   "schema_version": 0,
   "pack": "memory_dram",
-  "description": "Memory '26: DRAM — DRAMeXchange DDR5/DDR4 die + DDR5 UDIMM/RDIMM spot (weekly) + TE Korea/Taiwan semi exports + Census HS 854232 + FMP CapEx + FRED PPI. Forums separate. HBM/TrendForce contract map_only. Kalshi/Manifold PMs chart-only.",
+  "description": "Memory '26: DRAM \u2014 DRAMeXchange DDR5/DDR4 die + DDR5 UDIMM/RDIMM spot (weekly) + TE Korea/Taiwan semi exports + Census HS 854232 + FMP CapEx + FRED PPI. Forums separate. HBM/TrendForce contract map_only. Kalshi/Manifold PMs chart-only.",
   "series": [
     {
       "key": "ddr5_16gb_die_spot",
       "source": "dramexchange",
       "dx_product": "DDR5 16Gb (2Gx8) 4800/5600",
       "label": "DRAMeXchange DDR5 16Gb die session average (USD)",
-      "official_name": "DRAMeXchange DRAM Spot — DDR5 16Gb (2Gx8) 4800/5600 session average (USD)",
+      "official_name": "DRAMeXchange DRAM Spot \u2014 DDR5 16Gb (2Gx8) 4800/5600 session average (USD)",
       "short_name": "DDR5 16Gb die spot",
       "display_name": "DDR5 16Gb die spot price (USD)",
       "frequency": "weekly",
@@ -24,14 +24,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Lead commodity DRAM cycle print. Score auto-joins at 60 weekly prints."
+      "notes": "Lead commodity DRAM cycle print. Score auto-joins at 60 weekly prints.",
+      "serial": "dramexchange-0000-0002-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "ddr4_16gb_die_spot",
       "source": "dramexchange",
       "dx_product": "DDR4 16Gb (2Gx8) 3200",
       "label": "DRAMeXchange DDR4 16Gb die session average (USD)",
-      "official_name": "DRAMeXchange DRAM Spot — DDR4 16Gb (2Gx8) 3200 session average (USD)",
+      "official_name": "DRAMeXchange DRAM Spot \u2014 DDR4 16Gb (2Gx8) 3200 session average (USD)",
       "short_name": "DDR4 16Gb die spot",
       "display_name": "DDR4 16Gb die spot price (USD)",
       "frequency": "weekly",
@@ -47,14 +52,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Legacy density — DDR5 transition / residual cycle."
+      "notes": "Legacy density \u2014 DDR5 transition / residual cycle.",
+      "serial": "dramexchange-0000-0001-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "ddr5_udimm_16gb_spot",
       "source": "dramexchange",
       "dx_product": "DDR5 UDIMM 16GB 4800/5600",
       "label": "DRAMeXchange DDR5 UDIMM 16GB session average (USD)",
-      "official_name": "DRAMeXchange Module Spot — DDR5 UDIMM 16GB 4800/5600 session average (USD)",
+      "official_name": "DRAMeXchange Module Spot \u2014 DDR5 UDIMM 16GB 4800/5600 session average (USD)",
       "short_name": "DDR5 UDIMM 16GB spot",
       "display_name": "DDR5 UDIMM 16GB spot price (USD)",
       "frequency": "weekly",
@@ -70,14 +80,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "PC/client module pulse."
+      "notes": "PC/client module pulse.",
+      "serial": "dramexchange-0000-0004-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "ddr5_rdimm_32gb_spot",
       "source": "dramexchange",
       "dx_product": "DDR5 RDIMM 32GB 4800/5600",
       "label": "DRAMeXchange DDR5 RDIMM 32GB session average (USD)",
-      "official_name": "DRAMeXchange Module Spot — DDR5 RDIMM 32GB 4800/5600 session average (USD)",
+      "official_name": "DRAMeXchange Module Spot \u2014 DDR5 RDIMM 32GB 4800/5600 session average (USD)",
       "short_name": "DDR5 RDIMM 32GB spot",
       "display_name": "DDR5 RDIMM 32GB spot price (USD)",
       "frequency": "weekly",
@@ -93,14 +108,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Server DRAM module — AI/HPC adjacency (also on CXL theme)."
+      "notes": "Server DRAM module \u2014 AI/HPC adjacency (also on CXL theme).",
+      "serial": "dramexchange-0000-0003-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "korea_semiconductor_exports",
       "source": "te_indicator",
       "te_series_key": "korea_semiconductor_exports",
       "label": "South Korea semiconductor exports (USD millions)",
-      "official_name": "Trading Economics — South Korea Semiconductor Exports (KORSEMEXP; HS 8541+8542)",
+      "official_name": "Trading Economics \u2014 South Korea Semiconductor Exports (KORSEMEXP; HS 8541+8542)",
       "short_name": "Korea semi exports",
       "display_name": "South Korea semiconductor exports",
       "frequency": "monthly",
@@ -115,14 +135,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Samsung/Hynix DRAM+HBM export pulse."
+      "notes": "Samsung/Hynix DRAM+HBM export pulse.",
+      "serial": "trading_economics-0000-0002-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "taiwan_semiconductor_exports",
       "source": "te_indicator",
       "te_series_key": "taiwan_semiconductor_exports",
       "label": "Taiwan semiconductor exports (USD millions)",
-      "official_name": "Trading Economics — Taiwan Semiconductor Exports (TWNSEMEXP; HS 8541+8542)",
+      "official_name": "Trading Economics \u2014 Taiwan Semiconductor Exports (TWNSEMEXP; HS 8541+8542)",
       "short_name": "Taiwan semi exports",
       "display_name": "Taiwan semiconductor exports",
       "frequency": "monthly",
@@ -137,7 +162,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broader IC export pulse — softer DRAM signal than Korea."
+      "notes": "Broader IC export pulse \u2014 softer DRAM signal than Korea.",
+      "serial": "trading_economics-0000-0004-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "hyperscaler_capex",
@@ -152,7 +182,7 @@
       "fmp_limit": 40,
       "require_all": true,
       "label": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
-      "official_name": "FMP cash-flow-statement capitalExpenditure sum — MSFT, GOOGL, META, AMZN, ORCL",
+      "official_name": "FMP cash-flow-statement capitalExpenditure sum \u2014 MSFT, GOOGL, META, AMZN, ORCL",
       "short_name": "Hyperscaler CapEx",
       "display_name": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
       "frequency": "quarterly",
@@ -167,15 +197,20 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "AI infra CapEx → HBM/server DRAM demand."
+      "notes": "AI infra CapEx \u2192 HBM/server DRAM demand.",
+      "serial": "fmp-capex-0020-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     },
     {
       "key": "memory_ic_import_value",
       "source": "census_trade",
       "hs6": "854232",
       "field": "value",
-      "label": "US imports: electronic integrated circuits — memories (HS 854232)",
-      "official_name": "Census HS 854232 — Electronic integrated circuits: memories — GEN_VAL_MO",
+      "label": "US imports: electronic integrated circuits \u2014 memories (HS 854232)",
+      "official_name": "Census HS 854232 \u2014 Electronic integrated circuits: memories \u2014 GEN_VAL_MO",
       "short_name": "Memory IC imports ($)",
       "display_name": "US memory IC imports (value)",
       "frequency": "monthly",
@@ -190,7 +225,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "DRAM/NAND IC import value into US systems."
+      "notes": "DRAM/NAND IC import value into US systems.",
+      "serial": "census_trade-0000-0011-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 11,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductor_ppi",
@@ -212,15 +252,20 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only pricing-power proxy."
+      "notes": "Chart-only pricing-power proxy.",
+      "serial": "fred-0000-0091-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 91,
+      "serial_series_n": 1
     },
     {
       "key": "pm_kalshi_ddr5_ye2027_above_95",
       "source": "kalshi",
       "kalshi_series": "KXDRAMAY",
       "kalshi_ticker": "KXDRAMAY-27DEC31-95.00",
-      "label": "Kalshi — DDR5 16Gb session average above $95 by YE 2027",
-      "official_name": "Kalshi KXDRAMAY-27DEC31-95.00 — Will DDR5 16Gb (2Gx8) 4800/5600 session average be above $95 on Dec 31, 2027?",
+      "label": "Kalshi \u2014 DDR5 16Gb session average above $95 by YE 2027",
+      "official_name": "Kalshi KXDRAMAY-27DEC31-95.00 \u2014 Will DDR5 16Gb (2Gx8) 4800/5600 session average be above $95 on Dec 31, 2027?",
       "short_name": "Kalshi DDR5 >$95 YE2027",
       "display_name": "Kalshi: DDR5 above $95 by YE 2027",
       "frequency": "daily",
@@ -232,14 +277,21 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. Resolves on DRAMeXchange-style DDR5 session average — same family as our DX spot scrape. Most-liquid strike on KXDRAMAY; retarget ticker if liquidity migrates."
+      "notes": "Chart-only. Resolves on DRAMeXchange-style DDR5 session average \u2014 same family as our DX spot scrape. Most-liquid strike on KXDRAMAY; retarget ticker if liquidity migrates.",
+      "serial": "kalshi-0000-0024-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 24,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true,
+      "kalshi_match": "95.00"
     },
     {
       "key": "pm_manifold_ram_prices_down_2027",
       "source": "manifold",
       "manifold_id": "yuq0CIPn2l",
-      "label": "Manifold — RAM prices down by end of 2027",
-      "official_name": "Manifold yuq0CIPn2l — will ram prices go down by the end of 2027",
+      "label": "Manifold \u2014 RAM prices down by end of 2027",
+      "official_name": "Manifold yuq0CIPn2l \u2014 will ram prices go down by the end of 2027",
       "short_name": "Manifold RAM prices down by 2027",
       "display_name": "Manifold: RAM prices down by YE 2027",
       "frequency": "daily",
@@ -251,14 +303,19 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only play-money. Crowdsourced consumer/module price relief odds — inverse producer-ASP signal."
+      "notes": "Chart-only play-money. Crowdsourced consumer/module price relief odds \u2014 inverse producer-ASP signal.",
+      "serial": "manifold-0000-0004-0001",
+      "serial_source": "manifold",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "pm_manifold_ddr5_kit_still_500_eoy2026",
       "source": "manifold",
       "manifold_id": "lE29OqPERu",
-      "label": "Manifold — cheapest 32GB DDR5 kit still $500+ at EOY 2026",
-      "official_name": "Manifold lE29OqPERu — Will the cheapest 32GB DDR5 kit still cost $500+ at the end of 2026?",
+      "label": "Manifold \u2014 cheapest 32GB DDR5 kit still $500+ at EOY 2026",
+      "official_name": "Manifold lE29OqPERu \u2014 Will the cheapest 32GB DDR5 kit still cost $500+ at the end of 2026?",
       "short_name": "Manifold DDR5 kit still $500+ EOY2026",
       "display_name": "Manifold: cheapest 32GB DDR5 still $500+ (EOY 2026)",
       "frequency": "daily",
@@ -270,14 +327,19 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. Retail kit floor as consumer DRAM tightness proxy."
+      "notes": "Chart-only. Retail kit floor as consumer DRAM tightness proxy.",
+      "serial": "manifold-0000-0003-0001",
+      "serial_source": "manifold",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "mu_dram_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Micron revenue",
-      "official_name": "FMP income-statement revenue — MU",
+      "official_name": "FMP income-statement revenue \u2014 MU",
       "short_name": "MU revenue",
       "display_name": "Micron revenue",
       "frequency": "quarterly",
@@ -292,7 +354,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "MU"
+      "fmp_symbol": "MU",
+      "serial": "fmp-revenue-0412-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 412,
+      "serial_series_n": 1
     },
     {
       "key": "dram_transcript_keywords",
@@ -311,7 +378,7 @@
         "high bandwidth memory"
       ],
       "label": "DRAM/HBM keyword hits in MU earnings calls",
-      "official_name": "FMP earning-call-transcript keyword counts — MU",
+      "official_name": "FMP earning-call-transcript keyword counts \u2014 MU",
       "short_name": "Transcript keywords",
       "display_name": "DRAM/HBM keyword hits in MU earnings calls",
       "frequency": "quarterly",
@@ -325,7 +392,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts.",
+      "serial": "fmp-transcript-0021-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 21,
+      "serial_series_n": 1
     }
   ]
 }

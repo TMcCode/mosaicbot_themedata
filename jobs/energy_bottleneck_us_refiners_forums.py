@@ -40,21 +40,31 @@ _HISTORY = "weekly_history.jsonl"
 # across shopify+ecommerce+smallbusiness to avoid a community-stack cliff.
 _SERIES_FROM = "2024-01-01"
 
-_WATCHED_SUBS = ("EnergyTrading", "oilandgas", "investing")
+# EnergyTrading / oilandgas: recent-desc is enough. r/oil is denser — use
+# month-window forward scrape (see fetch_subreddit_forward) so the stack does
+# not cliff at ~8 weeks. Skip investing/stocks (still too dense / off-theme).
+_WATCHED_SUBS = ("EnergyTrading", "oilandgas", "oil")
+_FORWARD_SUBS = frozenset({"oil"})
 
 LEXICON: list[tuple[str, re.Pattern[str], str]] = [
+    # Brand keys kept for digest/debug — not on theme board (too sparse).
     ("Valero", re.compile(r"\bvalero\b|\bvlo\b", re.I), "ur_vlo_mentions"),
     ("Marathon", re.compile(r"\bmarathon\s*petroleum\b|\bmpc\b", re.I), "ur_mpc_mentions"),
     ("Phillips 66", re.compile(r"\bphillips\s*66\b|\bpsx\b", re.I), "ur_psx_mentions"),
     ("HF Sinclair", re.compile(r"\bhf\s*sinclair\b|\bdino\b|\bhollyfrontier\b", re.I), "ur_dino_mentions"),
-    ("PBF", re.compile(r"\bpbf\b", re.I), "ur_pbf_mentions"),
-    ("Delek", re.compile(r"\bdelek\b|\bdk\b", re.I), "ur_dk_mentions"),
+    ("PBF", re.compile(r"\bpbf\s*energy\b|\bpbf\b", re.I), "ur_pbf_mentions"),
+    ("Delek", re.compile(r"\bdelek\b", re.I), "ur_dk_mentions"),
     (
         "Crack / RIN / turnaround",
         re.compile(
-            r"crack\s*spread|3\s*[-:]\s*2\s*[-:]\s*1|\brins?\b|\brvo\b|"
-            r"renewable\s*fuel|turnaround|distillate\s*shortage|diesel\s*export|"
-            r"refinery\s*outage|\bfcc\b|\bcoker\b",
+            r"crack\s*spreads?|\bcracks?\b|3\s*[-:]\s*2\s*[-:]\s*1|"
+            r"gasoline\s*crack|diesel\s*crack|refining\s*margin|"
+            r"\brins?\b|\brvo\b|\brfs\b|\bsres?\b|small\s*refinery\s*exemption|"
+            r"renewable\s*fuel|renewable\s*diesel|\bsaf\b|"
+            r"turnaround|refinery\s*outage|unplanned\s*outage|"
+            r"distillate\s*shortage|diesel\s*shortage|diesel\s*export|"
+            r"\bulsd\b|\brbob\b|heating\s*oil|"
+            r"\bfcc\b|\bcoker\b|\bcdu\b|product\s*inventory",
             re.I,
         ),
         "ur_crack_rin_mentions",
@@ -151,6 +161,18 @@ def _arctic_get(params: dict[str, Any], *, retries: int = 4) -> dict[str, Any]:
     raise last
 
 
+def _dedupe_posts(posts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen: set[str] = set()
+    uniq: list[dict[str, Any]] = []
+    for p in posts:
+        pid = str(p.get("id") or "")
+        if not pid or pid in seen:
+            continue
+        seen.add(pid)
+        uniq.append(p)
+    return uniq
+
+
 def fetch_subreddit(sub: str, *, max_posts: int = 600) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     before: float | None = None
@@ -181,15 +203,76 @@ def fetch_subreddit(sub: str, *, max_posts: int = 600) -> list[dict[str, Any]]:
         time.sleep(0.55)
         if len(batch) < 100:
             break
-    seen: set[str] = set()
-    uniq: list[dict[str, Any]] = []
-    for p in out:
-        pid = str(p.get("id") or "")
-        if not pid or pid in seen:
-            continue
-        seen.add(pid)
-        uniq.append(p)
-    return uniq
+    return _dedupe_posts(out)
+
+
+def fetch_subreddit_forward(
+    sub: str,
+    *,
+    start_date: str,
+    max_posts: int = 40000,
+    max_per_month: int = 3000,
+) -> list[dict[str, Any]]:
+    """Deep history for high-volume subs via month-bounded asc pages.
+
+    Recent-only ``sort=desc`` only covers ~1–2 months on dense subs like r/oil.
+    Chunking by calendar month with ``after``/``before`` recovers multi-year history
+    (same pattern as beauty_prestige SkA/MuA).
+    """
+    out: list[dict[str, Any]] = []
+    start = datetime.fromisoformat(start_date).date()
+    today = datetime.now(timezone.utc).date()
+    y, m = start.year, start.month
+    while len(out) < max_posts:
+        month_start = date(y, m, 1)
+        if month_start > today:
+            break
+        if m == 12:
+            month_end = date(y + 1, 1, 1)
+        else:
+            month_end = date(y, m + 1, 1)
+        after = datetime(
+            month_start.year, month_start.month, month_start.day, tzinfo=timezone.utc
+        ).timestamp()
+        before = datetime(
+            month_end.year, month_end.month, month_end.day, tzinfo=timezone.utc
+        ).timestamp()
+        month_n = 0
+        cursor = after
+        while len(out) < max_posts and month_n < max_per_month and cursor < before:
+            params: dict[str, Any] = {
+                "subreddit": sub,
+                "limit": 100,
+                "sort": "asc",
+                "after": str(int(cursor)),
+                "before": str(int(before)),
+            }
+            try:
+                data = _arctic_get(params)
+            except Exception:
+                break
+            batch = data.get("data") or []
+            if not batch:
+                break
+            out.extend(batch)
+            month_n += len(batch)
+            nxt = max(
+                float(p["created_utc"])
+                for p in batch
+                if p.get("created_utc") is not None
+            )
+            if nxt <= cursor:
+                break
+            cursor = nxt + 1
+            time.sleep(0.55)
+            if len(batch) < 100:
+                break
+        time.sleep(0.9)
+        if m == 12:
+            y, m = y + 1, 1
+        else:
+            m += 1
+    return _dedupe_posts(out)
 
 
 def _post_ts(post: dict[str, Any]) -> datetime | None:
@@ -406,7 +489,17 @@ def build_pack(
         for sub in _WATCHED_SUBS:
             n = max(400, int(backfill_posts))
             try:
-                posts = fetch_subreddit(sub, max_posts=n)
+                if sub in _FORWARD_SUBS:
+                    posts = fetch_subreddit_forward(
+                        sub,
+                        start_date=_SERIES_FROM,
+                        max_posts=max(n, 25000),
+                        max_per_month=3000,
+                    )
+                    mode = "forward"
+                else:
+                    posts = fetch_subreddit(sub, max_posts=n)
+                    mode = "desc"
                 weeks = aggregate_weeks(posts, sub=sub)
                 for we, row in weeks.items():
                     key = f"{sub}|{we}"
@@ -425,7 +518,8 @@ def build_pack(
                         continue
                     by[key] = row
                 notes.append(
-                    f"{sub}: fetched {len(posts)} posts, {len(weeks)} week buckets"
+                    f"{sub}: {mode} fetched {len(posts)} posts, "
+                    f"{len(weeks)} week buckets"
                 )
             except Exception as e:
                 errors.append(f"{sub}: {e}")
@@ -445,7 +539,7 @@ def build_pack(
         "ur_crack_rin_mentions": ("*", "crack_rin"),
         "ur_energytrading_posts": ("EnergyTrading", "total_posts"),
         "ur_oilandgas_posts": ("oilandgas", "total_posts"),
-        "ur_investing_posts": ("investing", "total_posts"),
+        "ur_oil_posts": ("oil", "total_posts"),
         "ur_ai_tools_sentiment": ("*", "ur_refiner_sentiment"),
     }
     series_out: dict[str, Any] = {}
@@ -513,8 +607,8 @@ def build_pack(
         "schema_version": SCHEMA_VERSION,
         "pack": PACK,
         "source": (
-            "Arctic Shift — r/EnergyTrading + r/oilandgas + r/investing; "
-            "named refiners + crack/RIN/turnaround talk"
+            "Arctic Shift — r/EnergyTrading + r/oilandgas + r/oil (forward month walk); "
+            "crack/RIN/turnaround category (named tickers sparse / not on theme board)"
         ),
         "fetched_at": fetched_at,
         "as_of": latest_date,

@@ -62,6 +62,42 @@
       "status": "pack",
       "history_name": "te_heating_oil_history.jsonl",
       "latest_name": "te_heating_oil_latest.json"
+    },
+    "lithium_carbonate_cny_t": {
+      "symbol": "LC:COM",
+      "ticker": "LITHIUM",
+      "name": "Lithium",
+      "url": "/commodity/lithium",
+      "unit": "CNY/T",
+      "pack": "ldes",
+      "status": "pack",
+      "history_name": "lithium_carbonate_te_history.jsonl",
+      "latest_name": "lithium_carbonate_te_latest.json",
+      "notes": "China battery-grade lithium carbonate 99.5% Li2CO3 (CNY/t). LFP-creep scissors vs non-Li LDES. No vanadium TE symbol."
+    },
+    "bh_us_oil_rigs": {
+      "symbol": "USOILRIGS",
+      "ticker": "USOILRIGS",
+      "name": "US Crude Oil Rigs (Baker Hughes via TE)",
+      "unit": "rigs",
+      "pack": "land_contract_drillers",
+      "status": "pack",
+      "history_name": "bh_us_oil_rigs_history.jsonl",
+      "latest_name": "bh_us_oil_rigs_latest.json",
+      "notes": "Weekly Baker Hughes US oil rotary rig count republished by Trading Economics. BH IR site is free but Akamai-403 from datacenter IPs.",
+      "access_path": "historical/ticker"
+    },
+    "bh_us_total_rigs": {
+      "symbol": "USATOTRIG",
+      "ticker": "USATOTRIG",
+      "name": "US Total Rigs (Baker Hughes via TE)",
+      "unit": "rigs",
+      "pack": "land_contract_drillers",
+      "status": "pack",
+      "history_name": "bh_us_total_rigs_history.jsonl",
+      "latest_name": "bh_us_total_rigs_latest.json",
+      "notes": "Weekly Baker Hughes US total rotary rig count (oil+gas+misc; land+offshore) via TE.",
+      "access_path": "historical/ticker"
     }
   },
   "indicators": {
@@ -112,6 +148,138 @@
       "pack": "advanced_packaging",
       "status": "pull",
       "notes": "TE Category Industrial Production for Taiwan \u2014 prints as YoY % (HistoricalDataSymbol TaiwanIP). Hub activity proxy for TSMC/ASE/substrate packaging. Resolved 2026-10-21."
+    },
+    "uk_cpi_restaurants_hotels": {
+      "country": "united kingdom",
+      "indicator": "cpi restaurants and hotels",
+      "symbol": "GBRCRAH",
+      "name": "UK CPI Restaurants and Hotels",
+      "url": "/united-kingdom/cpi-restaurants-and-hotels",
+      "unit": "index",
+      "frequency": "monthly",
+      "pack": "restaurants_pubs_bars",
+      "status": "pull",
+      "notes": "ONS CPI restaurants & hotels via TE. Resolved 2026-10-23."
+    },
+    "japan_retail_sales_yoy": {
+      "country": "japan",
+      "indicator": "retail sales yoy",
+      "symbol": "JPNRetailSalesYoY",
+      "name": "Japan Retail Sales YoY",
+      "url": "/japan/retail-sales-annual",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "restaurants_pubs_bars",
+      "status": "pull",
+      "notes": "Resolved 2026-10-23."
+    },
+    "japan_wage_growth": {
+      "country": "japan",
+      "indicator": "wage growth",
+      "symbol": "JAPANWAGGRO",
+      "name": "Japan Wage Growth",
+      "url": "/japan/wage-growth",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "restaurants_pubs_bars",
+      "status": "pull",
+      "notes": "Resolved 2026-10-23."
+    },
+    "australia_household_spending_yoy": {
+      "country": "australia",
+      "indicator": "household spending",
+      "symbol": "AUSHOUSEHOLDSPENDING",
+      "name": "Australia Household Spending YoY",
+      "url": "/australia/household-spending-yoy",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "restaurants_pubs_bars",
+      "status": "pull",
+      "notes": "ABS household spending YoY via TE (hotels/caf\u00e9s/restaurants is a component). Resolved 2026-10-23."
+    },
+    "uk_unemployment_rate": {
+      "country": "united kingdom",
+      "indicator": "unemployment rate",
+      "symbol": "UKUEILOR",
+      "name": "UK Unemployment Rate",
+      "url": "/united-kingdom/unemployment-rate",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "restaurants_pubs_bars",
+      "status": "pull",
+      "notes": "Resolved 2026-10-23."
+    },
+    "mexico_construction_output_yoy": {
+      "country": "mexico",
+      "indicator": "construction output",
+      "symbol": "MEXICOCONOUT",
+      "name": "Mexico Construction Output YoY",
+      "url": "/mexico/construction-output",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "latam_real_estate",
+      "status": "pull",
+      "notes": "INEGI construction output YoY via TE. Replaces FRED MEXPROCONMISMEI (OECD lag). Resolved 2026-10-26."
+    },
+    "china_semiconductor_exports": {
+      "country": "china",
+      "indicator": "semiconductor exports",
+      "symbol": "CHNSEMEXP",
+      "name": "China Semiconductor Exports",
+      "url": "/china/semiconductor-exports",
+      "unit": "usd_millions",
+      "frequency": "monthly",
+      "pack": "chinese_foundries",
+      "status": "pull",
+      "notes": "China IC/semiconductor export value via TE. Foundry/localization pulse \u2014 distinct from KR/TW memory-pack exports."
+    },
+    "china_industrial_production_yoy": {
+      "country": "china",
+      "indicator": "industrial production",
+      "symbol": "CHVAIOY",
+      "name": "China Industrial Production YoY",
+      "url": "/china/industrial-production",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "chinese_foundries",
+      "status": "pull",
+      "notes": "NBS industrial production YoY via TE."
+    },
+    "china_fixed_asset_investment_yoy": {
+      "country": "china",
+      "indicator": "fixed asset investment",
+      "symbol": "CHINAFIXASSINV",
+      "name": "China Fixed Asset Investment YoY",
+      "url": "/china/fixed-asset-investment",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "chinese_foundries",
+      "status": "pull",
+      "notes": "FAI YoY \u2014 fab/industrial build cycle; oversupply risk when CapEx outruns demand."
+    },
+    "china_lpr_5y": {
+      "country": "china",
+      "indicator": "loan prime rate 5y",
+      "symbol": "CHNLPR5",
+      "name": "China Loan Prime Rate 5Y",
+      "url": "/china/loan-prime-rate-5y",
+      "unit": "pct",
+      "frequency": "monthly",
+      "pack": "chinese_foundries",
+      "status": "pull",
+      "notes": "5Y LPR \u2014 mega-fab cost of capital (chart-only light)."
+    },
+    "china_crude_imports": {
+      "country": "china",
+      "indicator": "Crude Oil Imports",
+      "symbol": "CHNCOI",
+      "name": "China Crude Oil Imports",
+      "url": "/china/crude-oil-imports",
+      "unit": "million_tonnes",
+      "frequency": "monthly",
+      "pack": "ocean_freight_vlccs",
+      "status": "pull",
+      "notes": "TE CHNCOI \u2014 Asia VLCC demand sink. Resolved 2026-10-30."
     }
   }
 }

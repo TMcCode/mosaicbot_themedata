@@ -1,104 +1,149 @@
 {
   "schema_version": 0,
   "pack": "billable_hours",
-  "description": "BS Jobs '26: Billable Hours Pyramid — IT services / consulting AI leverage backdrop. FRED NAICS 54 + computer systems design employment + JOLTS openings + nonfarm productivity; FMP USD member revenue (ACN/BAH/CTSH/EPAM/INFY) + CAP.PA/GIB/ERF.PA ticker revenue; ACN consulting vs outsourcing; BAH T&M/fixed/cost-reimbursable mix; SEC/FMP headcount + revenue per employee; USASpending BAH; Kalshi WA professional employment (chart-only). Forums in billable_hours_forums.",
+  "description": "BS Jobs '26: Billable Hours Pyramid \u2014 IT services / consulting AI leverage backdrop. FRED NAICS 54 + computer systems design employment + JOLTS openings + nonfarm productivity; FMP USD member revenue (ACN/BAH/CTSH/EPAM/INFY) + CAP.PA/GIB/ERF.PA ticker revenue; ACN consulting vs outsourcing; BAH T&M/fixed/cost-reimbursable mix; SEC/FMP headcount + revenue per employee; USASpending BAH; Kalshi WA professional employment (chart-only). Forums in billable_hours_forums.",
   "series": [
     {
       "key": "professional_services_employment",
       "source": "fred",
       "fred_id": "CES6054000001",
       "label": "All Employees: Professional and Technical Services",
-      "official_name": "BLS CES6054000001 — Professional, Scientific, and Technical Services (NAICS 54) employment, SA",
+      "official_name": "BLS CES6054000001 \u2014 Professional, Scientific, and Technical Services (NAICS 54) employment, SA",
       "short_name": "NAICS 54 employment",
       "display_name": "US professional & technical services employment",
       "frequency": "monthly",
       "unit": "thousands_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "professional_services_employment",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "White-collar consulting/IT services seat base. Flat/down with rising revenue = thesis."
+      "notes": "White-collar consulting/IT services seat base. Flat/down with rising revenue = thesis.",
+      "serial": "bls-0000-0013-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 13,
+      "serial_series_n": 1
     },
     {
       "key": "computer_systems_design_employment",
       "source": "fred",
       "fred_id": "CES6054150001",
       "label": "All Employees: Computer Systems Design and Related Services",
-      "official_name": "BLS CES6054150001 — Computer Systems Design and Related Services (NAICS 5415) employment, SA",
+      "official_name": "BLS CES6054150001 \u2014 Computer Systems Design and Related Services (NAICS 5415) employment, SA",
       "short_name": "NAICS 5415 employment",
       "display_name": "US computer systems design employment",
       "frequency": "monthly",
       "unit": "thousands_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "computer_systems_design_employment",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Closer IT-services labor proxy than broad NAICS 54."
+      "notes": "Closer IT-services labor proxy than broad NAICS 54.",
+      "serial": "fred-0000-0019-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 19,
+      "serial_series_n": 1
     },
     {
       "key": "professional_services_jolts_openings",
       "source": "fred",
       "fred_id": "JTS540099JOL",
       "label": "Job Openings: Professional and Business Services",
-      "official_name": "BLS JTS540099JOL — Job Openings: Professional and Business Services (JOLTS, thousands, SA)",
+      "official_name": "BLS JTS540099JOL \u2014 Job Openings: Professional and Business Services (JOLTS, thousands, SA)",
       "short_name": "Prof. services JOLTS openings",
       "display_name": "US professional & business services job openings",
       "frequency": "monthly",
       "unit": "thousands_sa",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "professional_services_jolts_openings",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Falling openings + rising productivity supports AI substitution / hiring freezes."
+      "notes": "Falling openings + rising productivity supports AI substitution / hiring freezes.",
+      "serial": "fred-0000-0084-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 84,
+      "serial_series_n": 1
     },
     {
       "key": "nonfarm_productivity",
       "source": "fred",
       "fred_id": "OPHNFB",
       "label": "Nonfarm Business Sector: Real Output Per Hour",
-      "official_name": "FRED OPHNFB — Nonfarm Business Sector real output per hour of all persons",
+      "official_name": "FRED OPHNFB \u2014 Nonfarm Business Sector real output per hour of all persons",
       "short_name": "Nonfarm productivity",
       "display_name": "US nonfarm business productivity (output per hour)",
       "frequency": "quarterly",
       "unit": "index",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "nonfarm_productivity",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Macro AI-efficiency backdrop (reused id from ai_resilient_software registry)."
+      "notes": "Macro AI-efficiency backdrop (reused id from ai_resilient_software registry).",
+      "serial": "fred-0000-0072-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 72,
+      "serial_series_n": 1
     },
     {
       "key": "billable_hours_revenue",
       "source": "fmp_revenue",
       "fmp_limit": 40,
-      "fmp_symbols": ["ACN", "BAH", "CTSH", "EPAM", "INFY"],
+      "fmp_symbols": [
+        "ACN",
+        "BAH",
+        "CTSH",
+        "EPAM",
+        "INFY"
+      ],
       "require_all": false,
       "label": "Billable-hours IT services revenue (ACN+BAH+CTSH+EPAM+INFY)",
-      "official_name": "FMP income-statement revenue sum — ACN,BAH,CTSH,EPAM,INFY (USD)",
+      "official_name": "FMP income-statement revenue sum \u2014 ACN,BAH,CTSH,EPAM,INFY (USD)",
       "short_name": "Member revenue (USD)",
       "display_name": "IT services revenue (ACN+BAH+CTSH+EPAM+INFY)",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "billable_hours_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "USD stack only; CAP.PA/GIB/ERF.PA stay ticker-scoped (EUR/CAD)."
+      "notes": "USD stack only; CAP.PA/GIB/ERF.PA stay ticker-scoped (EUR/CAD).",
+      "serial": "fmp-revenue-0044-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 44,
+      "serial_series_n": 1
     },
     {
       "key": "acn_revenue",
@@ -106,18 +151,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "ACN",
       "label": "Accenture revenue",
-      "official_name": "FMP income-statement revenue — ACN",
+      "official_name": "FMP income-statement revenue \u2014 ACN",
       "short_name": "ACN revenue",
       "display_name": "Accenture revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "acn_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0005-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "bah_revenue",
@@ -125,18 +178,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
       "label": "Booz Allen Hamilton revenue",
-      "official_name": "FMP income-statement revenue — BAH",
+      "official_name": "FMP income-statement revenue \u2014 BAH",
       "short_name": "BAH revenue",
       "display_name": "Booz Allen Hamilton revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "bah_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0038-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 38,
+      "serial_series_n": 1
     },
     {
       "key": "ctsh_revenue",
@@ -144,18 +205,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "CTSH",
       "label": "Cognizant revenue",
-      "official_name": "FMP income-statement revenue — CTSH",
+      "official_name": "FMP income-statement revenue \u2014 CTSH",
       "short_name": "CTSH revenue",
       "display_name": "Cognizant revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "ctsh_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0075-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 75,
+      "serial_series_n": 1
     },
     {
       "key": "epam_revenue",
@@ -163,18 +232,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "EPAM",
       "label": "EPAM Systems revenue",
-      "official_name": "FMP income-statement revenue — EPAM",
+      "official_name": "FMP income-statement revenue \u2014 EPAM",
       "short_name": "EPAM revenue",
       "display_name": "EPAM Systems revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "epam_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0106-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 106,
+      "serial_series_n": 1
     },
     {
       "key": "infy_revenue",
@@ -182,18 +259,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "INFY",
       "label": "Infosys revenue",
-      "official_name": "FMP income-statement revenue — INFY",
+      "official_name": "FMP income-statement revenue \u2014 INFY",
       "short_name": "INFY revenue",
       "display_name": "Infosys revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "infy_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0153-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 153,
+      "serial_series_n": 1
     },
     {
       "key": "cap_revenue",
@@ -201,19 +286,27 @@
       "fmp_limit": 40,
       "fmp_symbol": "CAP.PA",
       "label": "Capgemini revenue",
-      "official_name": "FMP income-statement revenue — CAP.PA (EUR)",
+      "official_name": "FMP income-statement revenue \u2014 CAP.PA (EUR)",
       "short_name": "CAP revenue",
       "display_name": "Capgemini revenue (EUR)",
       "frequency": "quarterly",
       "unit": "eur_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "cap_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "EUR — not in USD theme stack."
+      "notes": "EUR \u2014 not in USD theme stack.",
+      "serial": "fmp-revenue-0049-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 49,
+      "serial_series_n": 1
     },
     {
       "key": "gib_revenue",
@@ -221,19 +314,27 @@
       "fmp_limit": 40,
       "fmp_symbol": "GIB",
       "label": "CGI revenue",
-      "official_name": "FMP income-statement revenue — GIB (CAD)",
+      "official_name": "FMP income-statement revenue \u2014 GIB (CAD)",
       "short_name": "GIB revenue",
       "display_name": "CGI revenue (CAD)",
       "frequency": "quarterly",
       "unit": "cad_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "gib_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "CAD via GIB; stockthemes ticker GIB-A.TO."
+      "notes": "CAD via GIB; stockthemes ticker GIB-A.TO.",
+      "serial": "fmp-revenue-0132-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 132,
+      "serial_series_n": 1
     },
     {
       "key": "erf_revenue",
@@ -241,124 +342,182 @@
       "fmp_limit": 40,
       "fmp_symbol": "ERF.PA",
       "label": "Eurofins Scientific revenue",
-      "official_name": "FMP income-statement revenue — ERF.PA (EUR)",
+      "official_name": "FMP income-statement revenue \u2014 ERF.PA (EUR)",
       "short_name": "ERF revenue",
       "display_name": "Eurofins Scientific revenue (EUR)",
       "frequency": "quarterly",
       "unit": "eur_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 2,
       "dataset_id": "erf_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Theme constituent; lab testing adjacency — ticker-only."
+      "notes": "Theme constituent; lab testing adjacency \u2014 ticker-only.",
+      "serial": "fmp-revenue-0108-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 108,
+      "serial_series_n": 1
     },
     {
       "key": "acn_consulting_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "ACN",
-      "segment_aliases": ["Consulting Revenue"],
+      "segment_aliases": [
+        "Consulting Revenue"
+      ],
       "label": "Accenture consulting revenue",
-      "official_name": "FMP revenue-product-segmentation — ACN Consulting Revenue",
+      "official_name": "FMP revenue-product-segmentation \u2014 ACN Consulting Revenue",
       "short_name": "ACN consulting",
       "display_name": "Accenture consulting revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "acn_consulting_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Billable-pyramid layer. Q4 FMP prints sometimes YTD-inflated — segment guard drops those."
+      "notes": "Billable-pyramid layer. Q4 FMP prints sometimes YTD-inflated \u2014 segment guard drops those.",
+      "serial": "fmp-revenue-0003-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "acn_outsourcing_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "ACN",
-      "segment_aliases": ["Outsourcing Revenue"],
+      "segment_aliases": [
+        "Outsourcing Revenue"
+      ],
       "label": "Accenture outsourcing revenue",
-      "official_name": "FMP revenue-product-segmentation — ACN Outsourcing Revenue",
+      "official_name": "FMP revenue-product-segmentation \u2014 ACN Outsourcing Revenue",
       "short_name": "ACN outsourcing",
       "display_name": "Accenture outsourcing revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "acn_outsourcing_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Industrialized delivery complement to consulting."
+      "notes": "Industrialized delivery complement to consulting.",
+      "serial": "fmp-revenue-0004-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "bah_tm_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
-      "segment_aliases": ["Time-and-materials Contract"],
+      "segment_aliases": [
+        "Time-and-materials Contract"
+      ],
       "label": "Booz Allen time-and-materials revenue",
-      "official_name": "FMP revenue-product-segmentation — BAH Time-and-materials Contract",
+      "official_name": "FMP revenue-product-segmentation \u2014 BAH Time-and-materials Contract",
       "short_name": "BAH T&M",
       "display_name": "Booz Allen time-and-materials revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "bah_tm_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Classic billable-hours contract type — thesis wants this share flat/down vs fixed-price."
+      "notes": "Classic billable-hours contract type \u2014 thesis wants this share flat/down vs fixed-price.",
+      "serial": "fmp-revenue-0039-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 39,
+      "serial_series_n": 1
     },
     {
       "key": "bah_fixed_price_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
-      "segment_aliases": ["Fixed-price Contract"],
+      "segment_aliases": [
+        "Fixed-price Contract"
+      ],
       "label": "Booz Allen fixed-price revenue",
-      "official_name": "FMP revenue-product-segmentation — BAH Fixed-price Contract",
+      "official_name": "FMP revenue-product-segmentation \u2014 BAH Fixed-price Contract",
       "short_name": "BAH fixed-price",
       "display_name": "Booz Allen fixed-price revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "bah_fixed_price_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Outcome/fixed commercial model proxy."
+      "notes": "Outcome/fixed commercial model proxy.",
+      "serial": "fmp-revenue-0037-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 37,
+      "serial_series_n": 1
     },
     {
       "key": "bah_cost_reimbursable_revenue",
       "source": "fmp_revenue_segment",
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
-      "segment_aliases": ["Cost Reimbursable Contract"],
+      "segment_aliases": [
+        "Cost Reimbursable Contract"
+      ],
       "label": "Booz Allen cost-reimbursable revenue",
-      "official_name": "FMP revenue-product-segmentation — BAH Cost Reimbursable Contract",
+      "official_name": "FMP revenue-product-segmentation \u2014 BAH Cost Reimbursable Contract",
       "short_name": "BAH cost-reimbursable",
       "display_name": "Booz Allen cost-reimbursable revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 3,
       "dataset_id": "bah_cost_reimbursable_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Stack layer with T&M + fixed-price."
+      "notes": "Stack layer with T&M + fixed-price.",
+      "serial": "fmp-revenue-0036-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 36,
+      "serial_series_n": 1
     },
     {
       "key": "acn_employees",
@@ -366,18 +525,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "ACN",
       "label": "Accenture employee count (10-K)",
-      "official_name": "FMP historical-employee-count — ACN (SEC 10-K)",
+      "official_name": "FMP historical-employee-count \u2014 ACN (SEC 10-K)",
       "short_name": "ACN headcount",
       "display_name": "Accenture employees",
       "frequency": "annual",
       "unit": "employees",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "acn_employees",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-employees-0001-0001",
+      "serial_source": "fmp",
+      "serial_family": "employees",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "bah_employees",
@@ -385,18 +551,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
       "label": "Booz Allen employee count (10-K)",
-      "official_name": "FMP historical-employee-count — BAH (SEC 10-K)",
+      "official_name": "FMP historical-employee-count \u2014 BAH (SEC 10-K)",
       "short_name": "BAH headcount",
       "display_name": "Booz Allen employees",
       "frequency": "annual",
       "unit": "employees",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "bah_employees",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-employees-0002-0001",
+      "serial_source": "fmp",
+      "serial_family": "employees",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "ctsh_employees",
@@ -404,18 +577,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "CTSH",
       "label": "Cognizant employee count (10-K)",
-      "official_name": "FMP historical-employee-count — CTSH (SEC 10-K)",
+      "official_name": "FMP historical-employee-count \u2014 CTSH (SEC 10-K)",
       "short_name": "CTSH headcount",
       "display_name": "Cognizant employees",
       "frequency": "annual",
       "unit": "employees",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "ctsh_employees",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-employees-0003-0001",
+      "serial_source": "fmp",
+      "serial_family": "employees",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "epam_employees",
@@ -423,18 +603,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "EPAM",
       "label": "EPAM employee count (10-K)",
-      "official_name": "FMP historical-employee-count — EPAM (SEC 10-K)",
+      "official_name": "FMP historical-employee-count \u2014 EPAM (SEC 10-K)",
       "short_name": "EPAM headcount",
       "display_name": "EPAM employees",
       "frequency": "annual",
       "unit": "employees",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "epam_employees",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-employees-0004-0001",
+      "serial_source": "fmp",
+      "serial_family": "employees",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "infy_employees",
@@ -442,18 +629,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "INFY",
       "label": "Infosys employee count (10-K/20-F)",
-      "official_name": "FMP historical-employee-count — INFY",
+      "official_name": "FMP historical-employee-count \u2014 INFY",
       "short_name": "INFY headcount",
       "display_name": "Infosys employees",
       "frequency": "annual",
       "unit": "employees",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "infy_employees",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-employees-0005-0001",
+      "serial_source": "fmp",
+      "serial_family": "employees",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "acn_revenue_per_employee",
@@ -461,19 +655,26 @@
       "fmp_limit": 40,
       "fmp_symbol": "ACN",
       "label": "Accenture revenue per employee",
-      "official_name": "FMP annual revenue / historical-employee-count — ACN",
+      "official_name": "FMP annual revenue / historical-employee-count \u2014 ACN",
       "short_name": "ACN rev/employee",
       "display_name": "Accenture revenue per employee",
       "frequency": "annual",
       "unit": "usd_per_employee",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "acn_revenue_per_employee",
       "access": "api",
       "cadence": "annual",
       "as_of_semantics": "period_end",
-      "notes": "Hero decoupling metric — rising with flat/down headcount validates thesis."
+      "notes": "Hero decoupling metric \u2014 rising with flat/down headcount validates thesis.",
+      "serial": "fmp-revenue_per_employee-0001-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue_per_employee",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "bah_revenue_per_employee",
@@ -481,18 +682,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "BAH",
       "label": "Booz Allen revenue per employee",
-      "official_name": "FMP annual revenue / historical-employee-count — BAH",
+      "official_name": "FMP annual revenue / historical-employee-count \u2014 BAH",
       "short_name": "BAH rev/employee",
       "display_name": "Booz Allen revenue per employee",
       "frequency": "annual",
       "unit": "usd_per_employee",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "bah_revenue_per_employee",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue_per_employee-0002-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue_per_employee",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "ctsh_revenue_per_employee",
@@ -500,18 +708,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "CTSH",
       "label": "Cognizant revenue per employee",
-      "official_name": "FMP annual revenue / historical-employee-count — CTSH",
+      "official_name": "FMP annual revenue / historical-employee-count \u2014 CTSH",
       "short_name": "CTSH rev/employee",
       "display_name": "Cognizant revenue per employee",
       "frequency": "annual",
       "unit": "usd_per_employee",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "ctsh_revenue_per_employee",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue_per_employee-0003-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue_per_employee",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "epam_revenue_per_employee",
@@ -519,18 +734,25 @@
       "fmp_limit": 40,
       "fmp_symbol": "EPAM",
       "label": "EPAM revenue per employee",
-      "official_name": "FMP annual revenue / historical-employee-count — EPAM",
+      "official_name": "FMP annual revenue / historical-employee-count \u2014 EPAM",
       "short_name": "EPAM rev/employee",
       "display_name": "EPAM revenue per employee",
       "frequency": "annual",
       "unit": "usd_per_employee",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "epam_revenue_per_employee",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue_per_employee-0004-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue_per_employee",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "infy_revenue_per_employee",
@@ -538,37 +760,52 @@
       "fmp_limit": 40,
       "fmp_symbol": "INFY",
       "label": "Infosys revenue per employee",
-      "official_name": "FMP annual revenue / historical-employee-count — INFY",
+      "official_name": "FMP annual revenue / historical-employee-count \u2014 INFY",
       "short_name": "INFY rev/employee",
       "display_name": "Infosys revenue per employee",
       "frequency": "annual",
       "unit": "usd_per_employee",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 4,
       "dataset_id": "infy_revenue_per_employee",
       "access": "api",
       "cadence": "annual",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue_per_employee-0005-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue_per_employee",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "bah_federal_obligations",
       "source": "usaspending",
       "recipient": "Booz Allen Hamilton",
       "label": "USASpending obligations to Booz Allen Hamilton",
-      "official_name": "USASpending monthly contract obligations — recipient Booz Allen Hamilton",
+      "official_name": "USASpending monthly contract obligations \u2014 recipient Booz Allen Hamilton",
       "short_name": "BAH federal awards",
       "display_name": "Booz Allen federal contract obligations",
       "frequency": "monthly",
       "unit": "usd",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "bah_federal_obligations",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Defense/gov AI resilience layer. Prefer Level; incomplete month dropped."
+      "notes": "Defense/gov AI resilience layer. Prefer Level; incomplete month dropped.",
+      "serial": "usaspending-0000-0001-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "kalshi_wa_prof_tech_emp_240k",
@@ -576,19 +813,28 @@
       "kalshi_series": "KXWATECHEMP",
       "kalshi_ticker": "KXWATECHEMP-27FEB28-T240000",
       "label": "Kalshi: WA professional/scientific/tech employment above 240k",
-      "official_name": "Kalshi KXWATECHEMP-27FEB28-T240000 — P(yes) Washington prof/scientific/technical employment above 240,000",
+      "official_name": "Kalshi KXWATECHEMP-27FEB28-T240000 \u2014 P(yes) Washington prof/scientific/technical employment above 240,000",
       "short_name": "Kalshi WA prof emp >240k",
       "display_name": "Kalshi: WA professional employment above 240k (yes %)",
       "frequency": "daily",
       "unit": "probability_pct",
-      "derived": ["wow_pct"],
+      "derived": [
+        "wow_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 2,
       "dataset_id": "kalshi_wa_prof_tech_emp_240k",
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only white-collar emp market; thin liquidity. Not in score."
+      "notes": "Chart-only white-collar emp market; thin liquidity. Not in score.",
+      "serial": "kalshi-0000-0022-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 22,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true,
+      "kalshi_strike": "T240000"
     }
   ]
 }

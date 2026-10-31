@@ -9,13 +9,16 @@ from lib import transforms as tx
 
 
 def _yoy_lag(frequency: str) -> int:
-    if frequency == "quarterly":
+    f = (frequency or "").strip().lower()
+    if f == "quarterly":
         return 4
-    if frequency == "weekly":
+    if f in ("semiannual", "semi-annual", "semi_annual", "half", "biannual"):
+        return 2
+    if f == "weekly":
         return 52
-    if frequency == "annual":
+    if f in ("annual", "yearly"):
         return 1
-    if frequency == "daily":
+    if f == "daily":
         # Prefer calendar YoY via yoy_pct_calendar; lag kept as fallback only.
         return 252
     return 12
@@ -66,27 +69,43 @@ def derive_metrics(
                 "latest": tx.latest(series),
             }
         elif name == "m3_avg_yoy_pct":
+            # Monthly (and default): YoY of 3M avg via calendar date, not a fixed
+            # print lag — gappy sources (USASpending) otherwise compare to the
+            # wrong year-ago month and invent ±100% cliffs.
             window = 3
-            series = tx.rolling_mean_yoy_pct(
-                pts_for_growth, window=window, lag=_yoy_lag(frequency)
-            )
+            avg = tx.rolling_mean_levels(pts_for_growth, window=window)
+            freq = (frequency or "").strip().lower()
+            if freq in ("", "monthly", "month"):
+                series = [
+                    {"date": p["date"], "value": round(float(p["value"]), 4)}
+                    for p in tx.yoy_pct_calendar(avg, years=1)
+                ]
+            else:
+                series = tx.rolling_mean_yoy_pct(
+                    pts_for_growth, window=window, lag=_yoy_lag(frequency)
+                )
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
                 "latest": tx.latest(series),
             }
         elif name == "wma4_yoy_pct":
-            # 4W MA of YoY %: daily ≈ 20 sessions; weekly = 4 weeks.
+            # Weekly/other: YoY % of the 4-period average (same idea as m3_avg_yoy_pct).
+            # Daily: calendar YoY then ~20-session MA (irregular sessions).
             if frequency == "daily":
                 yoy = tx.yoy_pct_calendar(pts_for_growth, years=1)
-                window = 20
+                series = [
+                    {"date": p["date"], "value": round(float(p["value"]), 4)}
+                    for p in tx.rolling_mean_of_series(yoy, window=20)
+                ]
             else:
-                yoy = tx.yoy_pct(pts_for_growth, lag=lag)
                 window = 4
-            series = [
-                {"date": p["date"], "value": round(float(p["value"]), 4)}
-                for p in tx.rolling_mean_of_series(yoy, window=window)
-            ]
+                series = [
+                    {"date": p["date"], "value": round(float(p["value"]), 4)}
+                    for p in tx.rolling_mean_yoy_pct(
+                        pts_for_growth, window=window, lag=lag
+                    )
+                ]
             metrics[name] = {
                 "unit": "pct",
                 "points": series,
@@ -191,6 +210,17 @@ def series_shell(
             ),
         },
     }
+    # Frozen chart serial (source-family-dataset-series); see lib/serials.py.
+    if meta.get("serial"):
+        out["serial"] = meta["serial"]
+        for k in (
+            "serial_source",
+            "serial_family",
+            "serial_dataset_n",
+            "serial_series_n",
+        ):
+            if meta.get(k) is not None:
+                out[k] = meta[k]
     if source_id_field and meta.get(source_id_field):
         out[source_id_field] = meta[source_id_field]
     # common id aliases

@@ -24,8 +24,10 @@ from typing import Any, Iterable
 
 from lib import fred as fredlib
 
-# FRED: most Asian crosses are "foreign currency units per 1 USD".
-# EUR uses DEXUSEU = USD per 1 EUR (inverted convention).
+# FRED: most crosses are "foreign currency units per 1 USD".
+# EUR/GBP use DEXUS* = USD per 1 foreign (inverted convention).
+# LatAm: daily DEX where available; ARS/CLP use OECD monthly averages
+# (no FRED DEXARUS / DEXCIUS).
 _FRED_MAP: dict[str, tuple[str, str]] = {
     "JPY": ("DEXJPUS", "foreign_per_usd"),
     "CNY": ("DEXCHUS", "foreign_per_usd"),
@@ -35,6 +37,14 @@ _FRED_MAP: dict[str, tuple[str, str]] = {
     "CHF": ("DEXSZUS", "foreign_per_usd"),
     "EUR": ("DEXUSEU", "usd_per_foreign"),
     "GBP": ("DEXUSUK", "usd_per_foreign"),
+    "SEK": ("DEXSDUS", "foreign_per_usd"),
+    "INR": ("DEXINUS", "foreign_per_usd"),
+    "MXN": ("DEXMXUS", "foreign_per_usd"),
+    "BRL": ("DEXBZUS", "foreign_per_usd"),
+    "ARS": ("ARGCCUSMA02STM", "foreign_per_usd"),  # OECD monthly avg
+    "CLP": ("CCUSMA02CLM618N", "foreign_per_usd"),  # OECD monthly avg
+    "CAD": ("DEXCAUS", "foreign_per_usd"),
+    "SAR": ("SAUCCUSMA02STM", "foreign_per_usd"),  # OECD monthly avg (no DEXSAUS)
 }
 
 _cache: dict[str, "FxRate"] | None = None

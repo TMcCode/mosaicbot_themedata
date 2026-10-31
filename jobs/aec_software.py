@@ -28,6 +28,7 @@ from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import usaspending as usa  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
+from lib import kalshi_pack  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 from lib import fmp_pack as fmp_packlib  # noqa: E402
 
@@ -62,7 +63,8 @@ def build_pack(
     catalog: dict,
     attachments: dict,
     start_year: int,
-) -> dict[str, Any]:
+        out_dir=out_dir,
+    ) -> dict[str, Any]:
     fetched_at = datetime.now(timezone.utc).isoformat()
     start = f"{start_year:04d}-01-01"
     series_out: dict[str, Any] = {}
@@ -100,19 +102,15 @@ def build_pack(
                     f"programs={program_numbers} types={award_types} n={len(pts)}"
                 )
             elif src == "kalshi":
-                series_t = str(meta.get("kalshi_series") or "")
-                ticker = str(meta.get("kalshi_ticker") or "")
-                if not series_t or not ticker:
-                    raise RuntimeError("kalshi_series and kalshi_ticker required")
-                pts, mm = kalshilib.fetch_daily_probability(
-                    series_ticker=series_t,
-                    market_ticker=ticker,
+                pts, note = kalshi_pack.fetch_from_meta(
+                    meta,
+                    out_dir=out_dir,
+                    r2_prefix=R2_PREFIX,
+                    catalog_path=_CATALOG,
+                    fetched_at=fetched_at,
+                    start=start,
                 )
-                pts = [p for p in pts if p["date"] >= start]
-                notes.append(
-                    f"{key}: Kalshi {ticker} last={mm.get('last_price')} "
-                    f"oi={mm.get('open_interest')} n={len(pts)}"
-                )
+                notes.append(note)
             elif fmp_packlib.is_fmp_source(src):
                 pts, note = fmp_caches.resolve(meta, start=start)
                 for n in fmp_caches.notes:
@@ -253,6 +251,7 @@ def run(
         catalog=catalog,
         attachments=attachments,
         start_year=start_year,
+        out_dir=out_dir,
     )
 
     if dry_run:

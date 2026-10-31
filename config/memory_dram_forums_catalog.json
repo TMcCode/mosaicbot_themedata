@@ -20,7 +20,12 @@
       "dataset_id": "micron_dram_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0324-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 324,
+      "serial_series_n": 1
     },
     {
       "key": "samsung_dram_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "samsung_dram_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0451-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 451,
+      "serial_series_n": 1
     },
     {
       "key": "hynix_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "hynix_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0263-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 263,
+      "serial_series_n": 1
     },
     {
       "key": "rambus_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "rambus_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0429-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 429,
+      "serial_series_n": 1
     },
     {
       "key": "montage_mentions",
@@ -96,7 +116,12 @@
       "dataset_id": "montage_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0333-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 333,
+      "serial_series_n": 1
     },
     {
       "key": "dram_named_brand_mentions",
@@ -115,7 +140,12 @@
       "dataset_id": "dram_named_brand_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0191-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 191,
+      "serial_series_n": 1
     },
     {
       "key": "dram_category_mentions",
@@ -134,7 +164,12 @@
       "dataset_id": "dram_category_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0189-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 189,
+      "serial_series_n": 1
     },
     {
       "key": "hardware_community_posts",
@@ -153,7 +188,12 @@
       "dataset_id": "dram_hardware_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0190-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 190,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductors_community_posts",
@@ -172,7 +212,12 @@
       "dataset_id": "dram_semiconductors_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0192-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 192,
+      "serial_series_n": 1
     },
     {
       "key": "dram_brand_sentiment",
@@ -191,7 +236,12 @@
       "dataset_id": "dram_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0188-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 188,
+      "serial_series_n": 1
     }
   ]
 }

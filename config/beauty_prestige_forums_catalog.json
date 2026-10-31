@@ -1,15 +1,15 @@
 {
   "schema_version": 0,
   "pack": "beauty_prestige_forums",
-  "description": "Prestige beauty Reddit sidecar — brand mentions + prestige-category % of mass beauty forums (r/SkincareAddiction, r/AsianBeauty, r/beauty, r/MakeupAddiction) + community volume incl. r/Sephora + r/SkincareAddictionLux + thin digest.",
+  "description": "Prestige beauty Reddit sidecar \u2014 brand mentions + prestige-category % of mass beauty forums (r/SkincareAddiction, r/AsianBeauty, r/beauty, r/MakeupAddiction) + community volume incl. r/Sephora + r/SkincareAddictionLux + thin digest.",
   "series": [
     {
       "key": "estee_lauder_mentions",
       "source": "arctic_shift",
-      "label": "Estée Lauder mentions (weekly)",
-      "official_name": "Arctic Shift — Estée Lauder mentions (weekly)",
-      "short_name": "Estée Lauder",
-      "display_name": "Estée Lauder mentions (weekly)",
+      "label": "Est\u00e9e Lauder mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Est\u00e9e Lauder mentions (weekly)",
+      "short_name": "Est\u00e9e Lauder",
+      "display_name": "Est\u00e9e Lauder mentions (weekly)",
       "frequency": "weekly",
       "unit": "posts",
       "derived": [
@@ -20,15 +20,20 @@
       "dataset_id": "estee_lauder_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0212-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 212,
+      "serial_series_n": 1
     },
     {
       "key": "loreal_mentions",
       "source": "arctic_shift",
-      "label": "L'Oréal mentions (weekly)",
-      "official_name": "Arctic Shift — L'Oréal mentions (weekly)",
-      "short_name": "L'Oréal",
-      "display_name": "L'Oréal mentions (weekly)",
+      "label": "L'Or\u00e9al mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 L'Or\u00e9al mentions (weekly)",
+      "short_name": "L'Or\u00e9al",
+      "display_name": "L'Or\u00e9al mentions (weekly)",
       "frequency": "weekly",
       "unit": "posts",
       "derived": [
@@ -39,13 +44,18 @@
       "dataset_id": "loreal_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0316-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 316,
+      "serial_series_n": 1
     },
     {
       "key": "sephora_mentions",
       "source": "arctic_shift",
       "label": "Sephora mentions (weekly)",
-      "official_name": "Arctic Shift — Sephora mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Sephora mentions (weekly)",
       "short_name": "Sephora",
       "display_name": "Sephora mentions (weekly)",
       "frequency": "weekly",
@@ -58,13 +68,18 @@
       "dataset_id": "sephora_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0468-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 468,
+      "serial_series_n": 1
     },
     {
       "key": "dior_mentions",
       "source": "arctic_shift",
       "label": "Dior mentions (weekly)",
-      "official_name": "Arctic Shift — Dior mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Dior mentions (weekly)",
       "short_name": "Dior",
       "display_name": "Dior mentions (weekly)",
       "frequency": "weekly",
@@ -77,13 +92,18 @@
       "dataset_id": "dior_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0184-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 184,
+      "serial_series_n": 1
     },
     {
       "key": "chanel_mentions",
       "source": "arctic_shift",
       "label": "Chanel mentions (weekly)",
-      "official_name": "Arctic Shift — Chanel mentions (weekly)",
+      "official_name": "Arctic Shift \u2014 Chanel mentions (weekly)",
       "short_name": "Chanel",
       "display_name": "Chanel mentions (weekly)",
       "frequency": "weekly",
@@ -96,13 +116,18 @@
       "dataset_id": "chanel_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0103-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 103,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_named_brand_mentions",
       "source": "arctic_shift",
       "label": "Named brand talk (weekly total)",
-      "official_name": "Arctic Shift — Named brand talk (weekly total)",
+      "official_name": "Arctic Shift \u2014 Named brand talk (weekly total)",
       "short_name": "Named brands",
       "display_name": "Named brand talk (weekly total)",
       "frequency": "weekly",
@@ -116,13 +141,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Sum series for stacked-card YoY %."
+      "notes": "Sum series for stacked-card YoY %.",
+      "serial": "arctic_shift-0000-0420-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 420,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_category_mentions",
       "source": "arctic_shift",
       "label": "% of beauty-forum posts: prestige / luxury talk",
-      "official_name": "Arctic Shift — % of beauty-forum posts: prestige / luxury talk",
+      "official_name": "Arctic Shift \u2014 % of beauty-forum posts: prestige / luxury talk",
       "short_name": "Prestige share of beauty forums",
       "display_name": "% of beauty-forum posts: prestige / luxury talk",
       "frequency": "weekly",
@@ -136,13 +166,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Share of posts hitting prestige/luxury/longevity lexicon across mass + prestige beauty subs. Do not stack into brand stack."
+      "notes": "Share of posts hitting prestige/luxury/longevity lexicon across mass + prestige beauty subs. Do not stack into brand stack.",
+      "serial": "arctic_shift-0000-0419-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 419,
+      "serial_series_n": 1
     },
     {
       "key": "skincareaddiction_community_posts",
       "source": "arctic_shift",
       "label": "r/SkincareAddiction talk (weekly)",
-      "official_name": "Arctic Shift — r/SkincareAddiction talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/SkincareAddiction talk (weekly)",
       "short_name": "r/SkincareAddiction",
       "display_name": "r/SkincareAddiction talk (weekly)",
       "frequency": "weekly",
@@ -156,13 +191,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "SkincareAddiction"
+      "subreddit": "SkincareAddiction",
+      "serial": "arctic_shift-0000-0477-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 477,
+      "serial_series_n": 1
     },
     {
       "key": "asianbeauty_community_posts",
       "source": "arctic_shift",
       "label": "r/AsianBeauty talk (weekly)",
-      "official_name": "Arctic Shift — r/AsianBeauty talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/AsianBeauty talk (weekly)",
       "short_name": "r/AsianBeauty",
       "display_name": "r/AsianBeauty talk (weekly)",
       "frequency": "weekly",
@@ -176,13 +216,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "AsianBeauty"
+      "subreddit": "AsianBeauty",
+      "serial": "arctic_shift-0000-0046-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 46,
+      "serial_series_n": 1
     },
     {
       "key": "makeupaddiction_community_posts",
       "source": "arctic_shift",
       "label": "r/MakeupAddiction talk (weekly)",
-      "official_name": "Arctic Shift — r/MakeupAddiction talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/MakeupAddiction talk (weekly)",
       "short_name": "r/MakeupAddiction",
       "display_name": "r/MakeupAddiction talk (weekly)",
       "frequency": "weekly",
@@ -196,13 +241,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "MakeupAddiction"
+      "subreddit": "MakeupAddiction",
+      "serial": "arctic_shift-0000-0320-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 320,
+      "serial_series_n": 1
     },
     {
       "key": "beauty_community_posts",
       "source": "arctic_shift",
       "label": "r/beauty talk (weekly)",
-      "official_name": "Arctic Shift — r/beauty talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/beauty talk (weekly)",
       "short_name": "r/beauty",
       "display_name": "r/beauty talk (weekly)",
       "frequency": "weekly",
@@ -216,13 +266,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "beauty"
+      "subreddit": "beauty",
+      "serial": "arctic_shift-0000-0056-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 56,
+      "serial_series_n": 1
     },
     {
       "key": "sephora_community_posts",
       "source": "arctic_shift",
       "label": "r/Sephora talk (weekly)",
-      "official_name": "Arctic Shift — r/Sephora talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/Sephora talk (weekly)",
       "short_name": "r/Sephora",
       "display_name": "r/Sephora talk (weekly)",
       "frequency": "weekly",
@@ -236,13 +291,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "Sephora"
+      "subreddit": "Sephora",
+      "serial": "arctic_shift-0000-0467-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 467,
+      "serial_series_n": 1
     },
     {
       "key": "skincareaddictionlux_community_posts",
       "source": "arctic_shift",
       "label": "r/SkincareAddictionLux talk (weekly)",
-      "official_name": "Arctic Shift — r/SkincareAddictionLux talk (weekly)",
+      "official_name": "Arctic Shift \u2014 r/SkincareAddictionLux talk (weekly)",
       "short_name": "r/SkincareAddictionLux",
       "display_name": "r/SkincareAddictionLux talk (weekly)",
       "frequency": "weekly",
@@ -256,13 +316,18 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "SkincareAddictionLux"
+      "subreddit": "SkincareAddictionLux",
+      "serial": "arctic_shift-0000-0478-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 478,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_brand_sentiment",
       "source": "arctic_shift",
       "label": "Prestige brand sentiment (weekly)",
-      "official_name": "Arctic Shift — Prestige brand sentiment (weekly)",
+      "official_name": "Arctic Shift \u2014 Prestige brand sentiment (weekly)",
       "short_name": "Brand sentiment",
       "display_name": "Prestige brand sentiment (weekly)",
       "frequency": "weekly",
@@ -275,7 +340,12 @@
       "dataset_id": "prestige_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0418-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 418,
+      "serial_series_n": 1
     }
   ]
 }

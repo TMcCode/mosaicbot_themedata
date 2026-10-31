@@ -20,7 +20,12 @@
       "dataset_id": "oracle_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0359-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 359,
+      "serial_series_n": 1
     },
     {
       "key": "workday_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "workday_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0557-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 557,
+      "serial_series_n": 1
     },
     {
       "key": "intuit_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "intuit_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0272-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 272,
+      "serial_series_n": 1
     },
     {
       "key": "shopify_mentions",
@@ -78,7 +93,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Brand stack excludes r/ecommerce (Shopify platform noise). Counts from ArtificialInteligence / softwareengineering / cloudcomputing only."
+      "notes": "Brand stack excludes r/ecommerce (Shopify platform noise). Counts from ArtificialInteligence / softwareengineering / cloudcomputing only.",
+      "serial": "arctic_shift-0000-0475-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 475,
+      "serial_series_n": 1
     },
     {
       "key": "cadence_mentions",
@@ -97,7 +117,12 @@
       "dataset_id": "cadence_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0080-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 80,
+      "serial_series_n": 1
     },
     {
       "key": "bentley_mentions",
@@ -116,7 +141,12 @@
       "dataset_id": "bentley_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0057-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 57,
+      "serial_series_n": 1
     },
     {
       "key": "ai_software_named_brand_mentions",
@@ -136,7 +166,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Sum series for stacked-card YoY %."
+      "notes": "Sum series for stacked-card YoY %.",
+      "serial": "arctic_shift-0000-0038-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 38,
+      "serial_series_n": 1
     },
     {
       "key": "agentic_ai_category_mentions",
@@ -156,7 +191,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Category bar \u2014 do not stack into brand stack."
+      "notes": "Category bar \u2014 do not stack into brand stack.",
+      "serial": "arctic_shift-0000-0029-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 29,
+      "serial_series_n": 1
     },
     {
       "key": "artificialinteligence_community_posts",
@@ -177,7 +217,12 @@
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
       "subreddit": "ArtificialInteligence",
-      "notes": "Live sub spelling drops one L (Reddit 21-char name limit)."
+      "notes": "Live sub spelling drops one L (Reddit 21-char name limit).",
+      "serial": "arctic_shift-0000-0045-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 45,
+      "serial_series_n": 1
     },
     {
       "key": "softwareengineering_community_posts",
@@ -197,7 +242,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "softwareengineering"
+      "subreddit": "softwareengineering",
+      "serial": "arctic_shift-0000-0486-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 486,
+      "serial_series_n": 1
     },
     {
       "key": "cloudcomputing_community_posts",
@@ -217,7 +267,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "cloudcomputing"
+      "subreddit": "cloudcomputing",
+      "serial": "arctic_shift-0000-0113-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 113,
+      "serial_series_n": 1
     },
     {
       "key": "ecommerce_community_posts",
@@ -237,7 +292,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "subreddit": "ecommerce"
+      "subreddit": "ecommerce",
+      "serial": "arctic_shift-0000-0194-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 194,
+      "serial_series_n": 1
     },
     {
       "key": "ai_software_brand_sentiment",
@@ -256,7 +316,12 @@
       "dataset_id": "ai_software_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0037-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 37,
+      "serial_series_n": 1
     }
   ]
 }

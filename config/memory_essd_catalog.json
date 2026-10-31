@@ -1,14 +1,14 @@
 {
   "schema_version": 0,
   "pack": "memory_essd",
-  "description": "Memory '26: Enterprise SSD & Managed Storage — DRAMeXchange TLC wafer spot (weekly) + TE Korea/Taiwan semi exports + Census HS 852351 SSD/flash imports + FMP CapEx + FRED PPI. Forums separate. MicroSD chart-only (consumer). TrendForce eSSD market share map_only. Kalshi/Manifold PMs chart-only Polymarket MU earnings odds chart-only.",
+  "description": "Memory '26: Enterprise SSD & Managed Storage \u2014 DRAMeXchange TLC wafer spot (weekly) + TE Korea/Taiwan semi exports + Census HS 852351 SSD/flash imports + FMP CapEx + FRED PPI. Forums separate. MicroSD chart-only (consumer). TrendForce eSSD market share map_only. Kalshi/Manifold PMs chart-only Polymarket MU earnings odds chart-only.",
   "series": [
     {
       "key": "nand_512gb_tlc_spot",
       "source": "dramexchange",
       "dx_product": "512Gb TLC",
       "label": "DRAMeXchange 512Gb TLC session average (USD)",
-      "official_name": "DRAMeXchange NAND Spot — 512Gb TLC session average (USD)",
+      "official_name": "DRAMeXchange NAND Spot \u2014 512Gb TLC session average (USD)",
       "short_name": "512Gb TLC spot",
       "display_name": "NAND 512Gb TLC spot price (USD)",
       "frequency": "weekly",
@@ -24,14 +24,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Public TLC wafer spot — enterprise NAND/SSD pricing pulse. Chart+score after ~60w. Not TrendForce contract."
+      "notes": "Public TLC wafer spot \u2014 enterprise NAND/SSD pricing pulse. Chart+score after ~60w. Not TrendForce contract.",
+      "serial": "dramexchange-0000-0009-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 9,
+      "serial_series_n": 1
     },
     {
       "key": "nand_256gb_tlc_spot",
       "source": "dramexchange",
       "dx_product": "256Gb TLC",
       "label": "DRAMeXchange 256Gb TLC session average (USD)",
-      "official_name": "DRAMeXchange NAND Spot — 256Gb TLC session average (USD)",
+      "official_name": "DRAMeXchange NAND Spot \u2014 256Gb TLC session average (USD)",
       "short_name": "256Gb TLC spot",
       "display_name": "NAND 256Gb TLC spot price (USD)",
       "frequency": "weekly",
@@ -47,14 +52,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Second TLC density for cross-check vs 512Gb."
+      "notes": "Second TLC density for cross-check vs 512Gb.",
+      "serial": "dramexchange-0000-0008-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "microsd_128gb_spot",
       "source": "dramexchange",
       "dx_product": "MicroSD 128GB",
       "label": "DRAMeXchange MicroSD 128GB session average (USD)",
-      "official_name": "DRAMeXchange Card Spot — MicroSD 128GB session average (USD)",
+      "official_name": "DRAMeXchange Card Spot \u2014 MicroSD 128GB session average (USD)",
       "short_name": "MicroSD 128GB spot",
       "display_name": "MicroSD 128GB spot price (USD)",
       "frequency": "weekly",
@@ -70,14 +80,19 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Consumer removable-flash pulse — soft adjacency; chart-only for eSSD theme."
+      "notes": "Consumer removable-flash pulse \u2014 soft adjacency; chart-only for eSSD theme.",
+      "serial": "dramexchange-0000-0007-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 7,
+      "serial_series_n": 1
     },
     {
       "key": "korea_semiconductor_exports",
       "source": "te_indicator",
       "te_series_key": "korea_semiconductor_exports",
       "label": "South Korea semiconductor exports (USD millions)",
-      "official_name": "Trading Economics — South Korea Semiconductor Exports (KORSEMEXP; HS 8541+8542)",
+      "official_name": "Trading Economics \u2014 South Korea Semiconductor Exports (KORSEMEXP; HS 8541+8542)",
       "short_name": "Korea semi exports",
       "display_name": "South Korea semiconductor exports",
       "frequency": "monthly",
@@ -92,14 +107,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Samsung/Hynix NAND+DRAM export pulse."
+      "notes": "Samsung/Hynix NAND+DRAM export pulse.",
+      "serial": "trading_economics-0000-0002-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "taiwan_semiconductor_exports",
       "source": "te_indicator",
       "te_series_key": "taiwan_semiconductor_exports",
       "label": "Taiwan semiconductor exports (USD millions)",
-      "official_name": "Trading Economics — Taiwan Semiconductor Exports (TWNSEMEXP; HS 8541+8542)",
+      "official_name": "Trading Economics \u2014 Taiwan Semiconductor Exports (TWNSEMEXP; HS 8541+8542)",
       "short_name": "Taiwan semi exports",
       "display_name": "Taiwan semiconductor exports",
       "frequency": "monthly",
@@ -114,7 +134,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Controller/IC ecosystem (Phison/SIMO supply chain adjacency)."
+      "notes": "Controller/IC ecosystem (Phison/SIMO supply chain adjacency).",
+      "serial": "trading_economics-0000-0004-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "hyperscaler_capex",
@@ -129,7 +154,7 @@
       "fmp_limit": 40,
       "require_all": true,
       "label": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
-      "official_name": "FMP cash-flow-statement capitalExpenditure sum — MSFT, GOOGL, META, AMZN, ORCL (calendar-quarter aligned)",
+      "official_name": "FMP cash-flow-statement capitalExpenditure sum \u2014 MSFT, GOOGL, META, AMZN, ORCL (calendar-quarter aligned)",
       "short_name": "Hyperscaler CapEx",
       "display_name": "Hyperscaler CapEx (MSFT+GOOGL+META+AMZN+ORCL)",
       "frequency": "quarterly",
@@ -144,7 +169,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "AI/data-center CapEx → enterprise SSD / managed storage demand."
+      "notes": "AI/data-center CapEx \u2192 enterprise SSD / managed storage demand.",
+      "serial": "fmp-capex-0020-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     },
     {
       "key": "solid_state_storage_import_value",
@@ -152,7 +182,7 @@
       "hs6": "852351",
       "field": "value",
       "label": "US imports: solid-state non-volatile storage devices (HS 852351)",
-      "official_name": "Census HS 852351 — Solid-state non-volatile storage devices — GEN_VAL_MO",
+      "official_name": "Census HS 852351 \u2014 Solid-state non-volatile storage devices \u2014 GEN_VAL_MO",
       "short_name": "SSD/flash imports ($)",
       "display_name": "US solid-state storage imports (value)",
       "frequency": "monthly",
@@ -167,14 +197,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Closest free HS6 for enterprise/consumer SSD modules into the US."
+      "notes": "Closest free HS6 for enterprise/consumer SSD modules into the US.",
+      "serial": "census-0000-0006-0001",
+      "serial_source": "census",
+      "serial_family": "0000",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductor_ppi",
       "source": "fred",
       "fred_id": "PCU334413334413",
       "label": "PPI: Semiconductors and Related Device Manufacturing",
-      "official_name": "FRED PCU334413334413 — Producer Price Index by Industry: Semiconductors and Related Device Manufacturing",
+      "official_name": "FRED PCU334413334413 \u2014 Producer Price Index by Industry: Semiconductors and Related Device Manufacturing",
       "short_name": "Semiconductor PPI",
       "display_name": "US semiconductor producer prices",
       "frequency": "monthly",
@@ -189,16 +224,21 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broad pricing-power proxy — chart-only for NAND theme."
+      "notes": "Broad pricing-power proxy \u2014 chart-only for NAND theme.",
+      "serial": "fred-0000-0091-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 91,
+      "serial_series_n": 1
     },
     {
       "key": "pm_manifold_wdc_kioxia_merger_2027",
       "source": "manifold",
       "manifold_id": "5YWAEenq0tgbfbIW7tz1",
-      "label": "Manifold — WDC and Kioxia complete merger before 2027",
-      "official_name": "Manifold 5YWAEenq0tgbfbIW7tz1 — Will Western Digital and Kioxia complete merger before 2027?",
-      "short_name": "Manifold WDC–Kioxia merger before 2027",
-      "display_name": "Manifold: WDC–Kioxia merger before 2027",
+      "label": "Manifold \u2014 WDC and Kioxia complete merger before 2027",
+      "official_name": "Manifold 5YWAEenq0tgbfbIW7tz1 \u2014 Will Western Digital and Kioxia complete merger before 2027?",
+      "short_name": "Manifold WDC\u2013Kioxia merger before 2027",
+      "display_name": "Manifold: WDC\u2013Kioxia merger before 2027",
       "frequency": "daily",
       "unit": "probability_pct",
       "derived": [],
@@ -208,7 +248,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. NAND consolidation catalyst for NAND Flash + Enterprise SSD themes."
+      "notes": "Chart-only. NAND consolidation catalyst for NAND Flash + Enterprise SSD themes.",
+      "serial": "manifold-0000-0005-0001",
+      "serial_source": "manifold",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "pm_polymarket_mu_q1_nand_rev_above_17b",
@@ -216,8 +261,8 @@
       "polymarket_event_slug": "will-micron-q1-nand-revenue-be-above",
       "polymarket_question_contains": "above $17.0B",
       "polymarket_token_id": "80058898248734300599311097776174179802706145286075881524245734398397036612438",
-      "label": "Polymarket — Micron Q1 NAND revenue above $17B",
-      "official_name": "Polymarket — Will Micron Q1 NAND revenue be above $17.0B?",
+      "label": "Polymarket \u2014 Micron Q1 NAND revenue above $17B",
+      "official_name": "Polymarket \u2014 Will Micron Q1 NAND revenue be above $17.0B?",
       "short_name": "Polymarket MU Q1 NAND >$17B",
       "display_name": "Polymarket: Micron Q1 NAND revenue >$17B",
       "frequency": "daily",
@@ -229,7 +274,12 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only. Threshold markets rotate each MU print — retarget slug/token when Q1 resolves. Local jsonl densifies short CLOB history."
+      "notes": "Chart-only. Threshold markets rotate each MU print \u2014 retarget slug/token when Q1 resolves. Local jsonl densifies short CLOB history.",
+      "serial": "polymarket-0000-0002-0001",
+      "serial_source": "polymarket",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "pm_polymarket_mu_q1_gm_85_875",
@@ -237,10 +287,10 @@
       "polymarket_event_slug": "micron-q1-adjusted-gross-margin",
       "polymarket_question_contains": "between 85% and 87.5%",
       "polymarket_token_id": "46854422657431524284435399734048436089702864177454147498685896851073647970479",
-      "label": "Polymarket — Micron Q1 adj. GM between 85% and 87.5%",
-      "official_name": "Polymarket — Will Micron Q1 adjusted gross margin be between 85% and 87.5%?",
-      "short_name": "Polymarket MU Q1 GM 85–87.5%",
-      "display_name": "Polymarket: Micron Q1 GM 85–87.5%",
+      "label": "Polymarket \u2014 Micron Q1 adj. GM between 85% and 87.5%",
+      "official_name": "Polymarket \u2014 Will Micron Q1 adjusted gross margin be between 85% and 87.5%?",
+      "short_name": "Polymarket MU Q1 GM 85\u201387.5%",
+      "display_name": "Polymarket: Micron Q1 GM 85\u201387.5%",
       "frequency": "daily",
       "unit": "pct",
       "derived": [],
@@ -250,14 +300,19 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only modal GM bucket. Retarget when the quarter rolls. Local jsonl densifies short CLOB history."
+      "notes": "Chart-only modal GM bucket. Retarget when the quarter rolls. Local jsonl densifies short CLOB history.",
+      "serial": "polymarket-0000-0001-0001",
+      "serial_source": "polymarket",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "essd_member_revenue",
       "source": "fmp_revenue",
       "fmp_limit": 40,
       "label": "Enterprise storage member revenue (STX+WDC+SNDK+SIMO)",
-      "official_name": "FMP income-statement revenue sum — STX,WDC,SNDK,SIMO",
+      "official_name": "FMP income-statement revenue sum \u2014 STX,WDC,SNDK,SIMO",
       "short_name": "Member revenue",
       "display_name": "Enterprise storage member revenue (STX+WDC+SNDK+SIMO)",
       "frequency": "quarterly",
@@ -279,14 +334,19 @@
         "SIMO"
       ],
       "require_all": false,
-      "notes": "Theme-member top-line sum (FMP)."
+      "notes": "Theme-member top-line sum (FMP).",
+      "serial": "fmp-revenue-0384-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 384,
+      "serial_series_n": 1
     },
     {
       "key": "stx_essd_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Seagate revenue",
-      "official_name": "FMP income-statement revenue — STX",
+      "official_name": "FMP income-statement revenue \u2014 STX",
       "short_name": "STX revenue",
       "display_name": "Seagate revenue",
       "frequency": "quarterly",
@@ -301,14 +361,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "STX"
+      "fmp_symbol": "STX",
+      "serial": "fmp-revenue-0441-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 441,
+      "serial_series_n": 1
     },
     {
       "key": "wdc_essd_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Western Digital revenue",
-      "official_name": "FMP income-statement revenue — WDC",
+      "official_name": "FMP income-statement revenue \u2014 WDC",
       "short_name": "WDC revenue",
       "display_name": "Western Digital revenue",
       "frequency": "quarterly",
@@ -323,14 +388,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "WDC"
+      "fmp_symbol": "WDC",
+      "serial": "fmp-revenue-0451-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 451,
+      "serial_series_n": 1
     },
     {
       "key": "sndk_essd_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Sandisk revenue",
-      "official_name": "FMP income-statement revenue — SNDK",
+      "official_name": "FMP income-statement revenue \u2014 SNDK",
       "short_name": "SNDK revenue",
       "display_name": "Sandisk revenue",
       "frequency": "quarterly",
@@ -345,14 +415,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "SNDK"
+      "fmp_symbol": "SNDK",
+      "serial": "fmp-revenue-0436-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 436,
+      "serial_series_n": 1
     },
     {
       "key": "simo_essd_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Silicon Motion revenue",
-      "official_name": "FMP income-statement revenue — SIMO",
+      "official_name": "FMP income-statement revenue \u2014 SIMO",
       "short_name": "SIMO revenue",
       "display_name": "Silicon Motion revenue",
       "frequency": "quarterly",
@@ -367,7 +442,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "SIMO"
+      "fmp_symbol": "SIMO",
+      "serial": "fmp-revenue-0434-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 434,
+      "serial_series_n": 1
     },
     {
       "key": "essd_transcript_keywords",
@@ -390,7 +470,7 @@
         "cloud storage"
       ],
       "label": "Enterprise SSD keyword hits in member earnings calls",
-      "official_name": "FMP earning-call-transcript keyword counts — STX,WDC,SNDK,SIMO",
+      "official_name": "FMP earning-call-transcript keyword counts \u2014 STX,WDC,SNDK,SIMO",
       "short_name": "Transcript keywords",
       "display_name": "Enterprise SSD keyword hits in member earnings calls",
       "frequency": "quarterly",
@@ -404,7 +484,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts."
+      "notes": "Chart-only narrative intensity from FMP earnings-call transcripts.",
+      "serial": "fmp-transcript-0022-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 22,
+      "serial_series_n": 1
     }
   ]
 }

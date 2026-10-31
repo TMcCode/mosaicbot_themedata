@@ -24,7 +24,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Lead graphics DRAM public print. Score auto-joins at 60 weekly prints. LPDDR stays map_only (login wall)."
+      "notes": "Lead graphics DRAM public print. Score auto-joins at 60 weekly prints. LPDDR stays map_only (login wall).",
+      "serial": "dramexchange-0000-0006-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "gddr5_8gb_spot",
@@ -47,7 +52,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Legacy graphics DRAM \u2014 GDDR6 transition / residual cycle."
+      "notes": "Legacy graphics DRAM \u2014 GDDR6 transition / residual cycle.",
+      "serial": "dramexchange-0000-0005-0001",
+      "serial_source": "dramexchange",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "korea_semiconductor_exports",
@@ -69,7 +79,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Samsung/Hynix DRAM+LPDDR+GDDR export pulse."
+      "notes": "Samsung/Hynix DRAM+LPDDR+GDDR export pulse.",
+      "serial": "trading_economics-0000-0002-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "taiwan_semiconductor_exports",
@@ -91,7 +106,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Nanya / MediaTek adjacency \u2014 soft IC cycle confirm."
+      "notes": "Nanya / MediaTek adjacency \u2014 soft IC cycle confirm.",
+      "serial": "trading_economics-0000-0004-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "hyperscaler_capex",
@@ -121,7 +141,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "AI CapEx \u2192 HBM capacity diversion \u2192 GDDR/LPDDR tightness."
+      "notes": "AI CapEx \u2192 HBM capacity diversion \u2192 GDDR/LPDDR tightness.",
+      "serial": "fmp-capex-0020-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     },
     {
       "key": "amat_capex",
@@ -147,7 +172,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "WFE / memory fab tool demand (theme member)."
+      "notes": "WFE / memory fab tool demand (theme member).",
+      "serial": "fmp-capex-0012-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 12,
+      "serial_series_n": 1
     },
     {
       "key": "memory_ic_import_value",
@@ -170,7 +200,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "DRAM/GDDR/LPDDR IC import value into US systems."
+      "notes": "DRAM/GDDR/LPDDR IC import value into US systems.",
+      "serial": "census_trade-0000-0011-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 11,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductor_ppi",
@@ -192,7 +227,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only pricing-power proxy."
+      "notes": "Chart-only pricing-power proxy.",
+      "serial": "fred-0000-0091-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 91,
+      "serial_series_n": 1
     },
     {
       "key": "graphics_mobile_member_revenue",
@@ -220,7 +260,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "US-listed cores: Micron (bits), Rambus (IP), Qualcomm (mobile/LPDDR demand). NVDA/AMD chart via attach later if needed."
+      "notes": "US-listed cores: Micron (bits), Rambus (IP), Qualcomm (mobile/LPDDR demand). NVDA/AMD chart via attach later if needed.",
+      "serial": "fmp-revenue-0391-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 391,
+      "serial_series_n": 1
     },
     {
       "key": "mu_gm_revenue",
@@ -242,7 +287,12 @@
       "dataset_id": "mu_gm_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0413-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 413,
+      "serial_series_n": 1
     },
     {
       "key": "rmbs_gm_revenue",
@@ -264,7 +314,12 @@
       "dataset_id": "rmbs_gm_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0430-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 430,
+      "serial_series_n": 1
     },
     {
       "key": "qcom_gm_revenue",
@@ -287,7 +342,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Mobile/AI PC SoC demand \u2192 LPDDR content."
+      "notes": "Mobile/AI PC SoC demand \u2192 LPDDR content.",
+      "serial": "fmp-revenue-0426-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 426,
+      "serial_series_n": 1
     },
     {
       "key": "graphics_mobile_transcript_keywords",
@@ -325,7 +385,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity."
+      "notes": "Chart-only narrative intensity.",
+      "serial": "fmp-transcript-0023-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 23,
+      "serial_series_n": 1
     }
   ]
 }

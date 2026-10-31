@@ -70,6 +70,23 @@ def fetch_timeseries(uri: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         except (TypeError, ValueError):
             continue
         points.append({"date": f"{int(year):04d}-{month:02d}-01", "value": v})
+
+    # Quarterly-only series (e.g. workforce jobs JWS5) — map to quarter-start month.
+    if not points:
+        _q_month = {"Q1": 1, "Q2": 4, "Q3": 7, "Q4": 10}
+        for row in raw.get("quarters") or []:
+            year = row.get("year")
+            q = str(row.get("quarter") or "").strip().upper()
+            value = row.get("value")
+            month = _q_month.get(q)
+            if not year or not month or value in (None, "", "-"):
+                continue
+            try:
+                v = float(value)
+            except (TypeError, ValueError):
+                continue
+            points.append({"date": f"{int(year):04d}-{month:02d}-01", "value": v})
+
     points.sort(key=lambda p: p["date"])
     meta = {
         "uri": raw.get("uri") or path,
@@ -77,5 +94,6 @@ def fetch_timeseries(uri: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "title": (raw.get("description") or {}).get("title")
         or (raw.get("description") or {}).get("cdnTitle"),
         "source_datasets": raw.get("sourceDatasets") or [],
+        "frequency": "quarterly" if (raw.get("quarters") and not raw.get("months")) else "monthly",
     }
     return points, meta

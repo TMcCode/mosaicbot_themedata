@@ -1,13 +1,13 @@
 {
   "schema_version": 0,
   "pack": "space_launch",
-  "description": "Space Supply Chain '26: Space Launch & Orbital Logistics — global orbital launch cadence (LL2) + USASpending CLPS/NSSL/launch-logistics keywords + recipient awards for RKLB/LUNR/FLY/MNTS/SpaceX/Avio. Defense spend + GPR from dew_defense. Forums in space_launch_forums.",
+  "description": "Space Supply Chain '26: Space Launch & Orbital Logistics \u2014 global orbital launch cadence (LL2) + USASpending CLPS/NSSL/launch-logistics keywords + recipient awards for RKLB/LUNR/FLY/MNTS/SpaceX/Avio. Defense spend + GPR from dew_defense. Forums in space_launch_forums.",
   "series": [
     {
       "key": "orbital_launches_monthly",
       "source": "launch_library",
       "label": "Global orbital launch attempts (monthly)",
-      "official_name": "Launch Library 2 — monthly count of orbital launch attempts (success + failure + partial failure)",
+      "official_name": "Launch Library 2 \u2014 monthly count of orbital launch attempts (success + failure + partial failure)",
       "short_name": "Global orbital launches",
       "display_name": "Global orbital launches (monthly)",
       "frequency": "monthly",
@@ -22,7 +22,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Hero ops cadence series. Cached locally; routine runs refresh recent quarters only (LL2 rate limits)."
+      "notes": "Hero ops cadence series. Cached locally; routine runs refresh recent quarters only (LL2 rate limits).",
+      "serial": "launch_library-0000-0001-0001",
+      "serial_source": "launch_library",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_launch_logistics_awards",
@@ -36,7 +41,7 @@
         "space tug"
       ],
       "label": "USASpending NSSL / launch services / OTV related contract obligations (ex-CLPS)",
-      "official_name": "USASpending.gov contract obligations — NSSL / launch services / orbital transfer keywords (excludes CLPS)",
+      "official_name": "USASpending.gov contract obligations \u2014 NSSL / launch services / orbital transfer keywords (excludes CLPS)",
       "short_name": "US NSSL/launch awards",
       "display_name": "US NSSL & launch-services federal contract awards",
       "frequency": "monthly",
@@ -51,7 +56,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Ex-CLPS so it can stack with usaspending_clps_awards without double-count. Incomplete current months can appear early."
+      "notes": "Ex-CLPS so it can stack with usaspending_clps_awards without double-count. Incomplete current months can appear early.",
+      "serial": "usaspending-0000-0016-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 16,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_clps_awards",
@@ -63,7 +73,7 @@
         "lunar payload"
       ],
       "label": "USASpending CLPS / lunar-lander related contract obligations",
-      "official_name": "USASpending.gov contract obligations — CLPS / lunar lander / lunar payload keywords",
+      "official_name": "USASpending.gov contract obligations \u2014 CLPS / lunar lander / lunar payload keywords",
       "short_name": "US CLPS awards",
       "display_name": "US CLPS & lunar-lander federal contract awards",
       "frequency": "monthly",
@@ -78,7 +88,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Stack layer with usaspending_launch_logistics_awards (ex-CLPS)."
+      "notes": "Stack layer with usaspending_launch_logistics_awards (ex-CLPS).",
+      "serial": "usaspending-0000-0008-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_launch_and_clps_awards",
@@ -87,7 +102,7 @@
         "usaspending_launch_logistics_awards",
         "usaspending_clps_awards"
       ],
-      "label": "USASpending awards sum — NSSL/launch + CLPS keyword obligations",
+      "label": "USASpending awards sum \u2014 NSSL/launch + CLPS keyword obligations",
       "official_name": "Sum of USASpending NSSL/launch-services and CLPS/lunar keyword obligations",
       "short_name": "US launch+CLPS awards (sum)",
       "display_name": "US launch + CLPS federal contract awards (total)",
@@ -104,14 +119,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "sum_series_key for the launch+CLPS stack. Use YoY on this total — do not stack YoY%."
+      "notes": "sum_series_key for the launch+CLPS stack. Use YoY on this total \u2014 do not stack YoY%.",
+      "serial": "usaspending-0000-0015-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 15,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_rklb_awards",
       "source": "usaspending",
       "recipient": "Rocket Lab",
       "label": "USASpending awards to Rocket Lab",
-      "official_name": "USASpending.gov contract obligations — recipient Rocket Lab",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Rocket Lab",
       "short_name": "RKLB federal awards",
       "display_name": "Rocket Lab federal contract awards",
       "frequency": "monthly",
@@ -124,14 +144,19 @@
       "dataset_id": "usaspending_rklb_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0029-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 29,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_lunr_awards",
       "source": "usaspending",
       "recipient": "Intuitive Machines",
       "label": "USASpending awards to Intuitive Machines",
-      "official_name": "USASpending.gov contract obligations — recipient Intuitive Machines",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Intuitive Machines",
       "short_name": "LUNR federal awards",
       "display_name": "Intuitive Machines federal contract awards",
       "frequency": "monthly",
@@ -144,14 +169,19 @@
       "dataset_id": "usaspending_lunr_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0020-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 20,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_fly_awards",
       "source": "usaspending",
       "recipient": "Firefly",
       "label": "USASpending awards to Firefly",
-      "official_name": "USASpending.gov contract obligations — recipient Firefly",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Firefly",
       "short_name": "FLY federal awards",
       "display_name": "Firefly federal contract awards",
       "frequency": "monthly",
@@ -165,14 +195,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Recipient 'Firefly' can match Firefly Aerospace; review if noisy."
+      "notes": "Recipient 'Firefly' can match Firefly Aerospace; review if noisy.",
+      "serial": "usaspending-0000-0011-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 11,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_mnts_awards",
       "source": "usaspending",
       "recipient": "Momentus",
       "label": "USASpending awards to Momentus",
-      "official_name": "USASpending.gov contract obligations — recipient Momentus",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Momentus",
       "short_name": "MNTS federal awards",
       "display_name": "Momentus federal contract awards",
       "frequency": "monthly",
@@ -185,14 +220,19 @@
       "dataset_id": "usaspending_mnts_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0022-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 22,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_spacex_awards",
       "source": "usaspending",
       "recipient": "Space Exploration Technologies",
       "label": "USASpending awards to SpaceX",
-      "official_name": "USASpending.gov contract obligations — recipient Space Exploration Technologies",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Space Exploration Technologies",
       "short_name": "SpaceX federal awards",
       "display_name": "SpaceX federal contract awards",
       "frequency": "monthly",
@@ -205,14 +245,19 @@
       "dataset_id": "usaspending_spacex_awards",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "usaspending-0000-0033-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 33,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_avio_awards",
       "source": "usaspending",
       "recipient": "Avio",
       "label": "USASpending awards to Avio",
-      "official_name": "USASpending.gov contract obligations — recipient Avio",
+      "official_name": "USASpending.gov contract obligations \u2014 recipient Avio",
       "short_name": "AVIO federal awards",
       "display_name": "Avio federal contract awards (US)",
       "frequency": "monthly",
@@ -226,7 +271,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "US federal only — European ESA awards not in USASpending; series may be sparse."
+      "notes": "US federal only \u2014 European ESA awards not in USASpending; series may be sparse.",
+      "serial": "usaspending-0000-0004-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "usaspending_launch_members_awards",
@@ -239,7 +289,7 @@
         "usaspending_spacex_awards",
         "usaspending_avio_awards"
       ],
-      "label": "USASpending awards sum — Space Launch theme members",
+      "label": "USASpending awards sum \u2014 Space Launch theme members",
       "official_name": "Sum of USASpending recipient obligations for RKLB, LUNR, FLY, MNTS, SpaceX, Avio",
       "short_name": "Theme members federal awards (sum)",
       "display_name": "Theme members US federal contract awards (total)",
@@ -256,14 +306,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Skip NOC (conglomerate). Use YoY on this total — do not stack YoY%."
+      "notes": "Skip NOC (conglomerate). Use YoY on this total \u2014 do not stack YoY%.",
+      "serial": "usaspending-0000-0017-0001",
+      "serial_source": "usaspending",
+      "serial_family": "0000",
+      "serial_dataset_n": 17,
+      "serial_series_n": 1
     },
     {
       "key": "space_launch_pureplay_revenue",
       "source": "fmp_revenue",
       "fmp_limit": 40,
       "label": "Space launch pure-play revenue (RKLB+LUNR+FLY)",
-      "official_name": "FMP income-statement revenue sum — RKLB,LUNR,FLY",
+      "official_name": "FMP income-statement revenue sum \u2014 RKLB,LUNR,FLY",
       "short_name": "Member revenue",
       "display_name": "Space launch pure-play revenue (RKLB+LUNR+FLY)",
       "frequency": "quarterly",
@@ -284,14 +339,19 @@
         "FLY"
       ],
       "require_all": false,
-      "notes": "Theme-member top-line sum (FMP)."
+      "notes": "Theme-member top-line sum (FMP).",
+      "serial": "fmp-revenue-0438-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 438,
+      "serial_series_n": 1
     },
     {
       "key": "rklb_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Rocket Lab revenue",
-      "official_name": "FMP income-statement revenue — RKLB",
+      "official_name": "FMP income-statement revenue \u2014 RKLB",
       "short_name": "RKLB revenue",
       "display_name": "Rocket Lab revenue",
       "frequency": "quarterly",
@@ -306,14 +366,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "RKLB"
+      "fmp_symbol": "RKLB",
+      "serial": "fmp-revenue-0429-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 429,
+      "serial_series_n": 1
     },
     {
       "key": "lunr_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Intuitive Machines revenue",
-      "official_name": "FMP income-statement revenue — LUNR",
+      "official_name": "FMP income-statement revenue \u2014 LUNR",
       "short_name": "LUNR revenue",
       "display_name": "Intuitive Machines revenue",
       "frequency": "quarterly",
@@ -328,14 +393,19 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "LUNR"
+      "fmp_symbol": "LUNR",
+      "serial": "fmp-revenue-0408-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 408,
+      "serial_series_n": 1
     },
     {
       "key": "fly_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_limit": 40,
       "label": "Firefly Aerospace revenue",
-      "official_name": "FMP income-statement revenue — FLY",
+      "official_name": "FMP income-statement revenue \u2014 FLY",
       "short_name": "FLY revenue",
       "display_name": "Firefly Aerospace revenue",
       "frequency": "quarterly",
@@ -350,7 +420,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "fmp_symbol": "FLY"
+      "fmp_symbol": "FLY",
+      "serial": "fmp-revenue-0385-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 385,
+      "serial_series_n": 1
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "schema_version": 0,
   "pack": "beauty_prestige",
-  "description": "Beauty '26: Prestige Beauty — US health/personal-care retail + toilet-prep PPI + cosmetics CPI + sentiment + e-commerce + Census HS 330499/330300 + TE China retail YoY + China GACC HS 3304 beauty imports (chinadata.live) + FMP CapEx/revenue + transcript keywords. Forums separate. NBS cosmetics-only retail still map_only.",
+  "description": "Beauty '26: Prestige Beauty \u2014 US health/personal-care retail + toilet-prep PPI + cosmetics CPI + sentiment + e-commerce + Census HS 330499/330300 + TE China retail YoY + China GACC HS 3304 beauty imports (chinadata.live) + FMP CapEx/revenue + transcript keywords. Forums separate. NBS cosmetics-only retail still map_only.",
   "series": [
     {
       "key": "health_personal_care_retail_sales",
       "source": "fred",
       "fred_id": "MRTSSM446USS",
       "label": "Retail Sales: Health and Personal Care Stores (NAICS 446)",
-      "official_name": "FRED MRTSSM446USS — Retail Sales: Health and Personal Care Stores, SA",
+      "official_name": "FRED MRTSSM446USS \u2014 Retail Sales: Health and Personal Care Stores, SA",
       "short_name": "Health & personal care retail",
       "display_name": "US health & personal care store sales",
       "frequency": "monthly",
@@ -23,14 +23,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Closest free Census MRTS umbrella for US beauty retail demand (includes pharmacies)."
+      "notes": "Closest free Census MRTS umbrella for US beauty retail demand (includes pharmacies).",
+      "serial": "fred-0000-0052-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 52,
+      "serial_series_n": 1
     },
     {
       "key": "toilet_preparations_ppi",
       "source": "fred",
       "fred_id": "PCU325620325620",
       "label": "PPI: Toilet Preparation Manufacturing",
-      "official_name": "FRED PCU325620325620 — PPI by Industry: Toilet Preparation Manufacturing",
+      "official_name": "FRED PCU325620325620 \u2014 PPI by Industry: Toilet Preparation Manufacturing",
       "short_name": "Toilet preparations PPI",
       "display_name": "US cosmetics & toiletries producer prices",
       "frequency": "monthly",
@@ -45,14 +50,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Beauty COGS / pricing-power proxy. Rising PPI → margin pressure if ASPs lag (score polarity −1)."
+      "notes": "Beauty COGS / pricing-power proxy. Rising PPI \u2192 margin pressure if ASPs lag (score polarity \u22121).",
+      "serial": "fred-0000-0099-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 99,
+      "serial_series_n": 1
     },
     {
       "key": "cosmetics_cpi",
       "source": "fred",
       "fred_id": "CUUR0000SEGB",
       "label": "CPI: Cosmetics, perfume, bath, nail preparations and implements",
-      "official_name": "FRED CUUR0000SEGB — CPI Urban Consumers: Cosmetics, perfume, bath, nail preparations and implements",
+      "official_name": "FRED CUUR0000SEGB \u2014 CPI Urban Consumers: Cosmetics, perfume, bath, nail preparations and implements",
       "short_name": "Cosmetics CPI",
       "display_name": "US cosmetics & perfume consumer prices",
       "frequency": "monthly",
@@ -67,14 +77,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Shelf/ASP read for prestige + mass beauty."
+      "notes": "Shelf/ASP read for prestige + mass beauty.",
+      "serial": "fred-0000-0028-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 28,
+      "serial_series_n": 1
     },
     {
       "key": "consumer_sentiment",
       "source": "fred",
       "fred_id": "UMCSENT",
       "label": "University of Michigan: Consumer Sentiment",
-      "official_name": "FRED UMCSENT — University of Michigan Consumer Sentiment",
+      "official_name": "FRED UMCSENT \u2014 University of Michigan Consumer Sentiment",
       "short_name": "Consumer sentiment",
       "display_name": "US consumer sentiment (U. of Michigan)",
       "frequency": "monthly",
@@ -89,14 +104,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Discretionary spending backdrop for prestige beauty."
+      "notes": "Discretionary spending backdrop for prestige beauty.",
+      "serial": "fred-0000-0025-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 25,
+      "serial_series_n": 1
     },
     {
       "key": "ecommerce_mail_order_sales",
       "source": "fred",
       "fred_id": "MRTSSM4541USS",
       "label": "Retail Sales: Electronic Shopping and Mail-Order Houses",
-      "official_name": "FRED MRTSSM4541USS — Retail Sales: Electronic Shopping and Mail-Order Houses, SA",
+      "official_name": "FRED MRTSSM4541USS \u2014 Retail Sales: Electronic Shopping and Mail-Order Houses, SA",
       "short_name": "E-commerce & mail-order sales",
       "display_name": "US e-commerce & mail-order retail sales",
       "frequency": "monthly",
@@ -111,14 +131,19 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Digital channel backdrop (Sephora.com / Cult Beauty adjacency)."
+      "notes": "Digital channel backdrop (Sephora.com / Cult Beauty adjacency).",
+      "serial": "fred-0000-0035-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 35,
+      "serial_series_n": 1
     },
     {
       "key": "china_retail_sales_yoy",
       "source": "te_indicator",
       "te_series_key": "china_retail_sales_yoy",
       "label": "China Retail Sales YoY (NBS via Trading Economics)",
-      "official_name": "Trading Economics — China Retail Sales YoY (CHNRetailSalesYoY; NBS)",
+      "official_name": "Trading Economics \u2014 China Retail Sales YoY (CHNRetailSalesYoY; NBS)",
       "short_name": "China retail YoY",
       "display_name": "China retail sales (YoY %)",
       "frequency": "monthly",
@@ -132,7 +157,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Broad NBS retail YoY via TE. Cosmetics-specific trade = china_beauty_import_value (GACC HS 3304). Domestic cosmetics retail YoY still CEIC/MacroMicro map_only."
+      "notes": "Broad NBS retail YoY via TE. Cosmetics-specific trade = china_beauty_import_value (GACC HS 3304). Domestic cosmetics retail YoY still CEIC/MacroMicro map_only.",
+      "serial": "trading_economics-0000-0001-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "china_beauty_import_value",
@@ -140,7 +170,7 @@
       "hs": "3304",
       "flow": "import",
       "label": "China imports: beauty/makeup preparations (HS 3304)",
-      "official_name": "GACC HS 3304 — Beauty or makeup preparations — China imports (USD, via chinadata.live)",
+      "official_name": "GACC HS 3304 \u2014 Beauty or makeup preparations \u2014 China imports (USD, via chinadata.live)",
       "short_name": "China beauty imports",
       "display_name": "China beauty & makeup imports (HS 3304)",
       "frequency": "monthly",
@@ -155,7 +185,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Cosmetics-specific China demand proxy — prestige foreign brands into CN. Free GACC monthly via chinadata.live. NBS domestic cosmetics retail YoY still paid."
+      "notes": "Cosmetics-specific China demand proxy \u2014 prestige foreign brands into CN. Free GACC monthly via chinadata.live. NBS domestic cosmetics retail YoY still paid.",
+      "serial": "chinadata-0000-0002-0001",
+      "serial_source": "chinadata",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "china_beauty_export_value",
@@ -163,7 +198,7 @@
       "hs": "3304",
       "flow": "export",
       "label": "China exports: beauty/makeup preparations (HS 3304)",
-      "official_name": "GACC HS 3304 — Beauty or makeup preparations — China exports (USD, via chinadata.live)",
+      "official_name": "GACC HS 3304 \u2014 Beauty or makeup preparations \u2014 China exports (USD, via chinadata.live)",
       "short_name": "China beauty exports",
       "display_name": "China beauty & makeup exports (HS 3304)",
       "frequency": "monthly",
@@ -178,7 +213,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "CN beauty manufacturing outbound — secondary to imports for prestige thesis."
+      "notes": "CN beauty manufacturing outbound \u2014 secondary to imports for prestige thesis.",
+      "serial": "chinadata-0000-0001-0001",
+      "serial_source": "chinadata",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "beauty_makeup_import_value",
@@ -186,7 +226,7 @@
       "hs6": "330499",
       "field": "value",
       "label": "US imports: beauty/makeup preparations (HS 330499)",
-      "official_name": "Census HS 330499 — Beauty or make-up preparations nesoi — GEN_VAL_MO",
+      "official_name": "Census HS 330499 \u2014 Beauty or make-up preparations nesoi \u2014 GEN_VAL_MO",
       "short_name": "Beauty/makeup imports ($)",
       "display_name": "US beauty & makeup imports (value)",
       "frequency": "monthly",
@@ -201,7 +241,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Cross-border prestige/mass beauty content into US retail."
+      "notes": "Cross-border prestige/mass beauty content into US retail.",
+      "serial": "census-0000-0001-0001",
+      "serial_source": "census",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "perfume_import_value",
@@ -209,7 +254,7 @@
       "hs6": "330300",
       "field": "value",
       "label": "US imports: perfumes and toilet waters (HS 330300)",
-      "official_name": "Census HS 330300 — Perfumes and toilet waters — GEN_VAL_MO",
+      "official_name": "Census HS 330300 \u2014 Perfumes and toilet waters \u2014 GEN_VAL_MO",
       "short_name": "Perfume imports ($)",
       "display_name": "US perfume & toilet-water imports (value)",
       "frequency": "monthly",
@@ -224,7 +269,12 @@
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Fragrance import pulse (IPAR / Puig / LVMH adjacency)."
+      "notes": "Fragrance import pulse (IPAR / Puig / LVMH adjacency).",
+      "serial": "census-0000-0005-0001",
+      "serial_source": "census",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_member_revenue",
@@ -237,7 +287,7 @@
       "fmp_limit": 40,
       "require_all": false,
       "label": "Prestige beauty USD member revenue (EL+IPAR+WALD)",
-      "official_name": "FMP income-statement revenue sum — Estée Lauder, Inter Parfums, Waldencast",
+      "official_name": "FMP income-statement revenue sum \u2014 Est\u00e9e Lauder, Inter Parfums, Waldencast",
       "short_name": "USD member revenue",
       "display_name": "Prestige beauty USD member revenue (EL+IPAR+WALD)",
       "frequency": "quarterly",
@@ -252,7 +302,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "USD-listed theme members only. MC.PA/OR.PA/etc. stay ticker-local (FX)."
+      "notes": "USD-listed theme members only. MC.PA/OR.PA/etc. stay ticker-local (FX).",
+      "serial": "fmp-revenue-0424-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 424,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_member_capex",
@@ -265,7 +320,7 @@
       "fmp_limit": 40,
       "require_all": false,
       "label": "Prestige beauty USD member CapEx (EL+IPAR+WALD)",
-      "official_name": "FMP CapEx sum — EL, IPAR, WALD",
+      "official_name": "FMP CapEx sum \u2014 EL, IPAR, WALD",
       "short_name": "USD member CapEx",
       "display_name": "Prestige beauty USD member CapEx (EL+IPAR+WALD)",
       "frequency": "quarterly",
@@ -279,17 +334,22 @@
       "dataset_id": "prestige_member_capex",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-capex-0023-0001",
+      "serial_source": "fmp",
+      "serial_family": "capex",
+      "serial_dataset_n": 23,
+      "serial_series_n": 1
     },
     {
       "key": "el_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_symbol": "EL",
       "fmp_limit": 40,
-      "label": "Estée Lauder revenue",
-      "official_name": "FMP income-statement revenue — EL",
+      "label": "Est\u00e9e Lauder revenue",
+      "official_name": "FMP income-statement revenue \u2014 EL",
       "short_name": "EL revenue",
-      "display_name": "Estée Lauder revenue",
+      "display_name": "Est\u00e9e Lauder revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
       "derived": [
@@ -301,7 +361,12 @@
       "dataset_id": "el_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0383-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 383,
+      "serial_series_n": 1
     },
     {
       "key": "ipar_revenue",
@@ -309,7 +374,7 @@
       "fmp_symbol": "IPAR",
       "fmp_limit": 40,
       "label": "Inter Parfums revenue",
-      "official_name": "FMP income-statement revenue — IPAR",
+      "official_name": "FMP income-statement revenue \u2014 IPAR",
       "short_name": "IPAR revenue",
       "display_name": "Inter Parfums revenue",
       "frequency": "quarterly",
@@ -323,7 +388,12 @@
       "dataset_id": "ipar_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0400-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 400,
+      "serial_series_n": 1
     },
     {
       "key": "wald_revenue",
@@ -331,7 +401,7 @@
       "fmp_symbol": "WALD",
       "fmp_limit": 40,
       "label": "Waldencast revenue",
-      "official_name": "FMP income-statement revenue — WALD",
+      "official_name": "FMP income-statement revenue \u2014 WALD",
       "short_name": "WALD revenue",
       "display_name": "Waldencast revenue",
       "frequency": "quarterly",
@@ -345,7 +415,12 @@
       "dataset_id": "wald_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0449-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 449,
+      "serial_series_n": 1
     },
     {
       "key": "lvmh_revenue",
@@ -353,7 +428,7 @@
       "fmp_symbol": "MC.PA",
       "fmp_limit": 40,
       "label": "LVMH revenue (EUR)",
-      "official_name": "FMP income-statement revenue — MC.PA (EUR; ticker-local)",
+      "official_name": "FMP income-statement revenue \u2014 MC.PA (EUR; ticker-local)",
       "short_name": "LVMH revenue",
       "display_name": "LVMH revenue",
       "frequency": "quarterly",
@@ -368,17 +443,22 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Theme anchor (Sephora + perfumes/cosmetics). EUR print — do not stack with USD peers."
+      "notes": "Theme anchor (Sephora + perfumes/cosmetics). EUR print \u2014 do not stack with USD peers.",
+      "serial": "fmp-revenue-0409-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 409,
+      "serial_series_n": 1
     },
     {
       "key": "loreal_revenue",
       "source": "fmp_revenue_ticker",
       "fmp_symbol": "OR.PA",
       "fmp_limit": 40,
-      "label": "L'Oréal revenue (EUR)",
-      "official_name": "FMP income-statement revenue — OR.PA (EUR; ticker-local)",
-      "short_name": "L'Oréal revenue",
-      "display_name": "L'Oréal revenue",
+      "label": "L'Or\u00e9al revenue (EUR)",
+      "official_name": "FMP income-statement revenue \u2014 OR.PA (EUR; ticker-local)",
+      "short_name": "L'Or\u00e9al revenue",
+      "display_name": "L'Or\u00e9al revenue",
       "frequency": "quarterly",
       "unit": "eur_billions",
       "derived": [
@@ -391,7 +471,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "EUR print — ticker-local."
+      "notes": "EUR print \u2014 ticker-local.",
+      "serial": "fmp-revenue-0406-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 406,
+      "serial_series_n": 1
     },
     {
       "key": "puig_revenue",
@@ -399,7 +484,7 @@
       "fmp_symbol": "PUIG.MC",
       "fmp_limit": 40,
       "label": "Puig revenue (EUR)",
-      "official_name": "FMP income-statement revenue — PUIG.MC (EUR; ticker-local)",
+      "official_name": "FMP income-statement revenue \u2014 PUIG.MC (EUR; ticker-local)",
       "short_name": "Puig revenue",
       "display_name": "Puig revenue",
       "frequency": "quarterly",
@@ -413,7 +498,12 @@
       "dataset_id": "puig_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0425-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 425,
+      "serial_series_n": 1
     },
     {
       "key": "givaudan_revenue",
@@ -421,7 +511,7 @@
       "fmp_symbol": "GIVN.SW",
       "fmp_limit": 40,
       "label": "Givaudan revenue (CHF)",
-      "official_name": "FMP income-statement revenue — GIVN.SW (CHF; ticker-local)",
+      "official_name": "FMP income-statement revenue \u2014 GIVN.SW (CHF; ticker-local)",
       "short_name": "Givaudan revenue",
       "display_name": "Givaudan revenue",
       "frequency": "quarterly",
@@ -436,7 +526,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Fragrance/flavor ingredients supplier — upstream to prestige fragrance."
+      "notes": "Fragrance/flavor ingredients supplier \u2014 upstream to prestige fragrance.",
+      "serial": "fmp-revenue-0389-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 389,
+      "serial_series_n": 1
     },
     {
       "key": "thg_revenue",
@@ -444,7 +539,7 @@
       "fmp_symbol": "THG.L",
       "fmp_limit": 40,
       "label": "THG revenue (GBP)",
-      "official_name": "FMP income-statement revenue — THG.L (GBP; ticker-local)",
+      "official_name": "FMP income-statement revenue \u2014 THG.L (GBP; ticker-local)",
       "short_name": "THG revenue",
       "display_name": "THG (Cult Beauty) revenue",
       "frequency": "quarterly",
@@ -458,7 +553,12 @@
       "dataset_id": "thg_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0444-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 444,
+      "serial_series_n": 1
     },
     {
       "key": "shiseido_adr_revenue",
@@ -466,7 +566,7 @@
       "fmp_symbol": "SSDOY",
       "fmp_limit": 40,
       "label": "Shiseido ADR revenue (reported)",
-      "official_name": "FMP income-statement revenue — SSDOY (often JPY-scaled; ticker-local)",
+      "official_name": "FMP income-statement revenue \u2014 SSDOY (often JPY-scaled; ticker-local)",
       "short_name": "Shiseido revenue",
       "display_name": "Shiseido revenue (ADR)",
       "frequency": "quarterly",
@@ -481,7 +581,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Proxy for 4911.T; YoY usable, do not stack with USD."
+      "notes": "Proxy for 4911.T; YoY usable, do not stack with USD.",
+      "serial": "fmp-revenue-0432-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 432,
+      "serial_series_n": 1
     },
     {
       "key": "prestige_transcript_keywords",
@@ -505,7 +610,7 @@
         "perfume"
       ],
       "label": "Prestige theme keyword hits in member earnings calls",
-      "official_name": "FMP transcript keyword counts — prestige / travel retail / fragrance lexicon",
+      "official_name": "FMP transcript keyword counts \u2014 prestige / travel retail / fragrance lexicon",
       "short_name": "Transcript keywords",
       "display_name": "Prestige / travel-retail keyword hits in member earnings calls",
       "frequency": "quarterly",
@@ -519,7 +624,12 @@
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Chart-only narrative intensity. Core = prestige + Asia travel retail (duty-free/Hainan) + fragrance. Dropped longevity (sparse buzzword), Sephora (OR.PA owns it), and bare China/Asia/skincare/makeup."
+      "notes": "Chart-only narrative intensity. Core = prestige + Asia travel retail (duty-free/Hainan) + fragrance. Dropped longevity (sparse buzzword), Sephora (OR.PA owns it), and bare China/Asia/skincare/makeup.",
+      "serial": "fmp-transcript-0029-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 29,
+      "serial_series_n": 1
     }
   ]
 }

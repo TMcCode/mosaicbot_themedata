@@ -29,6 +29,7 @@ from lib import bls as blslib  # noqa: E402
 from lib import pack_series as ps  # noqa: E402
 from lib import fred as fredlib  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
+from lib import kalshi_pack  # noqa: E402
 from lib import ons as onslib  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 
@@ -158,19 +159,15 @@ def build_pack(
                 pts = [p for p in pts if p["date"] >= start]
                 notes.append(f"{key}: BLS {sid}")
             elif src == "kalshi":
-                series_t = str(meta.get("kalshi_series") or "")
-                ticker = str(meta.get("kalshi_ticker") or "")
-                if not series_t or not ticker:
-                    raise RuntimeError("kalshi_series and kalshi_ticker required")
-                pts, mm = kalshilib.fetch_daily_probability(
-                    series_ticker=series_t,
-                    market_ticker=ticker,
+                pts, note = kalshi_pack.fetch_from_meta(
+                    meta,
+                    out_dir=out_dir,
+                    r2_prefix=R2_PREFIX,
+                    catalog_path=_CATALOG,
+                    fetched_at=fetched_at,
+                    start=start,
                 )
-                pts = [p for p in pts if p["date"] >= start]
-                notes.append(
-                    f"{key}: Kalshi {ticker} last={mm.get('last_price')} "
-                    f"oi={mm.get('open_interest')}"
-                )
+                notes.append(note)
             elif src == "ons":
                 uri = str(meta.get("ons_uri") or "")
                 if not uri:

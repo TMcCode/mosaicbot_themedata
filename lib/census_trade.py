@@ -11,15 +11,26 @@ from typing import Any
 
 
 UA = "mosaicbot_themedata/0.1 (+census_trade)"
-BASE = "https://api.census.gov/data/timeseries/intltrade/imports/hs"
+BASE_IMPORTS = "https://api.census.gov/data/timeseries/intltrade/imports/hs"
+BASE_EXPORTS = "https://api.census.gov/data/timeseries/intltrade/exports/hs"
+# Legacy alias
+BASE = BASE_IMPORTS
+
+# China (mainland) country code for intltrade partner filters
+CTY_CHINA = "5700"
 
 
 class CensusApiError(RuntimeError):
     pass
 
 
-def _get_json(params: dict[str, str], *, timeout: int = 120) -> list[list[str]]:
-    url = BASE + "?" + urllib.parse.urlencode(params)
+def _get_json(
+    params: dict[str, str],
+    *,
+    timeout: int = 120,
+    base: str = BASE_IMPORTS,
+) -> list[list[str]]:
+    url = base + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -176,3 +187,44 @@ def unit_value_usd_per_kg(
             continue
         out.append({"date": p["date"], "value": p["value"] / kg})
     return out
+
+
+def fetch_hs6_exports_monthly(
+    hs6: str,
+    *,
+    start_year: int,
+    end_year: int,
+    api_key: str,
+    cty_code: str = "-",
+) -> list[dict[str, float]]:
+    """Monthly US export value (ALL_VAL_MO) for an HS6 code.
+
+    ``cty_code`` ``-`` = world total; ``5700`` = mainland China.
+    """
+    params = {
+        "get": "E_COMMODITY,ALL_VAL_MO,YEAR,MONTH",
+        "time": f"from {start_year:04d}-01 to {end_year:04d}-12",
+        "E_COMMODITY": hs6,
+        "COMM_LVL": "HS6",
+        "CTY_CODE": cty_code,
+        "key": api_key,
+    }
+    rows = _get_json(params, base=BASE_EXPORTS)
+    if not rows:
+        return []
+    header = rows[0]
+    idx = {name: i for i, name in enumerate(header)}
+    for n in ("ALL_VAL_MO", "YEAR", "MONTH"):
+        if n not in idx:
+            raise CensusApiError(f"Census exports missing column {n}: {header}")
+    pts: list[dict[str, float]] = []
+    for row in rows[1:]:
+        try:
+            y = int(row[idx["YEAR"]])
+            m = int(row[idx["MONTH"]])
+            val = float(row[idx["ALL_VAL_MO"]])
+        except (TypeError, ValueError, KeyError, IndexError):
+            continue
+        pts.append({"date": f"{y:04d}-{m:02d}-01", "value": val})
+    pts.sort(key=lambda p: p["date"])
+    return pts

@@ -57,12 +57,53 @@ def _get(endpoint: str, params: dict[str, Any]) -> Any:
     return json.loads(raw.decode("utf-8"))
 
 
+def fiscal_quarter_end(year: int, quarter: int) -> str:
+    """Canonical period-end date for FMP fiscalYear + quarter (1..4).
+
+    Assumes **calendar** fiscal year (Q1=Mar … Q4=Dec). Wrong for June/FYE
+    filers (e.g. SLQT) — use ``transcript_period_end(call_date)`` instead.
+    """
+    q = int(quarter)
+    y = int(year)
+    if q not in (1, 2, 3, 4):
+        raise ValueError(f"quarter must be 1..4, got {quarter!r}")
+    month, day = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}[q]
+    return f"{y:04d}-{month:02d}-{day:02d}"
+
+
+def transcript_period_end(call_date: str) -> str:
+    """Map an earnings-call date → calendar quarter end of the period discussed.
+
+    Picks the latest Mar/Jun/Sep/Dec on or before the call date. Works for
+    non-calendar FY filers (SLQT June FYE: FY2026 Q4 call 2026-08-25 →
+    2026-06-30, not calendar ``fiscal_quarter_end`` 2026-12-31).
+
+    Unlike ``calendar_quarter_end`` (nearest neighbor), never jumps forward
+    past the call into a quarter that has not ended yet.
+    """
+    from datetime import date
+
+    d = date.fromisoformat(str(call_date)[:10])
+    candidates: list[date] = []
+    for y in (d.year - 1, d.year):
+        for month, day in ((3, 31), (6, 30), (9, 30), (12, 31)):
+            c = date(y, month, day)
+            if c <= d:
+                candidates.append(c)
+    if not candidates:
+        return date(d.year - 1, 12, 31).isoformat()
+    return max(candidates).isoformat()
+
+
 def calendar_quarter_end(iso_date: str) -> str:
     """Map any period-end onto the nearest calendar quarter end (Mar/Jun/Sep/Dec).
 
     Month-truncated buckets break 52/53-week filers (e.g. TER Q1 ending 2023-04-02
     used to land in Jun instead of Mar, leaving a hole with only AEHR on the
     stack). Nearest-neighbor keeps fiscal prints aligned for stacked charts.
+
+    For earnings-call transcripts prefer ``transcript_period_end(call_date)``
+    (never maps past the call into a future quarter end).
     """
     from datetime import date
 
@@ -73,6 +114,68 @@ def calendar_quarter_end(iso_date: str) -> str:
             candidates.append(date(y, month, day))
     best = min(candidates, key=lambda c: abs((c - d).days))
     return best.isoformat()
+
+
+def calendar_half_end(iso_date: str) -> str:
+    """Map any period-end onto calendar H1 (Jun 30) or H2 (Dec 31).
+
+    For UK/AU semi-annual filers that land on different quarter months
+    (e.g. Mar/Sep vs Jun/Dec), half-year buckets let a stack sum without
+    alternating single-name sawtooths.
+    """
+    from datetime import date
+
+    d = date.fromisoformat(str(iso_date)[:10])
+    if d.month <= 6:
+        return date(d.year, 6, 30).isoformat()
+    return date(d.year, 12, 31).isoformat()
+
+
+def rebucket_points(
+    points: list[dict[str, Any]],
+    *,
+    bucket: str = "quarter",
+) -> list[dict[str, Any]]:
+    """Re-aggregate points onto calendar quarter or half-year ends."""
+    b = str(bucket or "quarter").strip().lower()
+    if b in ("", "quarter", "quarterly", "q", "true", "1"):
+        key_fn = calendar_quarter_end
+    elif b in ("half", "semiannual", "semi-annual", "semi", "h"):
+        key_fn = calendar_half_end
+    elif b in ("none", "raw", "false", "0"):
+        return [
+            {
+                "date": str(p.get("date") or "")[:10],
+                "value": float(p["value"]),
+                **{
+                    k: v
+                    for k, v in p.items()
+                    if k not in ("date", "value")
+                },
+            }
+            for p in points
+            if p.get("date") is not None and p.get("value") is not None
+        ]
+    else:
+        raise ValueError(f"unknown calendar bucket {bucket!r}")
+
+    by_date: dict[str, float] = defaultdict(float)
+    extras: dict[str, dict[str, Any]] = {}
+    for p in points:
+        d, v = p.get("date"), p.get("value")
+        if d is None or v is None:
+            continue
+        key = key_fn(str(d)[:10])
+        by_date[key] += float(v)
+        # Keep symbol if uniform; drop panel flags (recomputed on sums).
+        if key not in extras and p.get("symbol"):
+            extras[key] = {"symbol": p["symbol"]}
+    out: list[dict[str, Any]] = []
+    for d, v in sorted(by_date.items()):
+        row: dict[str, Any] = {"date": d, "value": round(v, 4)}
+        row.update(extras.get(d) or {})
+        out.append(row)
+    return out
 
 
 def _reported_currency(rows: list[dict[str, Any]]) -> str:
@@ -91,18 +194,30 @@ def fetch_quarterly_capex(
     scale: float = 1.0,
     to_usd: bool = False,
     fx_rates: dict[str, Any] | None = None,
+    period: str = "quarter",
 ) -> list[dict[str, Any]]:
-    """Quarterly CapEx points for one ticker (abs spend).
+    """CapEx points for one ticker (abs spend).
 
-    When calendar_bucket=True, dates are remapped to calendar Q ends and
-    multiple prints in the same bucket are summed (rare).
+    ``period`` is ``quarter`` (default) or ``annual``. Some tickers (e.g.
+    Taiyo Yuden ``6976.T``) have empty quarterly CapEx on FMP but real annual.
+
+    When calendar_bucket=True and period=quarter, dates are remapped to
+    calendar Q ends and multiple prints in the same bucket are summed (rare).
+    Annual leaves the fiscal period-end date as reported.
 
     ``to_usd=True`` converts reported currency → USD at the *latest* FRED
     cross (constant over history) via ``lib.fx_usd`` before ``scale``.
     """
+    period_norm = str(period or "quarter").strip().lower()
+    if period_norm not in ("quarter", "annual"):
+        raise RuntimeError(f"unsupported CapEx period {period!r}")
     rows = _get(
         "cash-flow-statement",
-        {"symbol": symbol.upper(), "period": "quarter", "limit": int(limit)},
+        {
+            "symbol": symbol.upper(),
+            "period": period_norm,
+            "limit": int(limit),
+        },
     )
     if not isinstance(rows, list):
         raise RuntimeError(f"FMP cash-flow unexpected for {symbol}: {type(rows)}")
@@ -113,7 +228,14 @@ def fetch_quarterly_capex(
         cap = row.get("capitalExpenditure")
         if not d or cap is None or cap == "":
             continue
-        key = calendar_quarter_end(str(d)[:10]) if calendar_bucket else str(d)[:10]
+        # Skip explicit zeros so empty FMP quarterly panels don't pollute stacks.
+        if float(cap) == 0.0:
+            continue
+        raw = str(d)[:10]
+        if calendar_bucket and period_norm == "quarter":
+            key = calendar_quarter_end(raw)
+        else:
+            key = raw
         by_date[key] += abs(float(cap))
 
     ccy = _reported_currency(rows) if to_usd else "USD"
@@ -154,8 +276,23 @@ def fetch_capex_by_symbol(
     if to_usd:
         from lib import fx_usd as fxl
 
-        # Prefetch common Asian/EU crosses; per-ticker currency still wins.
-        fx_rates = fxl.latest_rates(["JPY", "TWD", "KRW", "CNY", "EUR", "GBP"])
+        # Prefetch common Asian/EU/LatAm crosses; per-ticker currency still wins.
+        fx_rates = fxl.latest_rates(
+            [
+                "JPY",
+                "TWD",
+                "KRW",
+                "CNY",
+                "EUR",
+                "GBP",
+                "SEK",
+                "INR",
+                "MXN",
+                "BRL",
+                "ARS",
+                "CLP",
+            ]
+        )
     out: dict[str, list[dict[str, Any]]] = {}
     for i, sym in enumerate(tickers):
         out[sym] = fetch_quarterly_capex(
@@ -317,7 +454,24 @@ def fetch_revenue_by_symbol(
     if to_usd:
         from lib import fx_usd as fxl
 
-        fx_rates = fxl.latest_rates(["JPY", "TWD", "KRW", "CNY", "EUR", "GBP"])
+        fx_rates = fxl.latest_rates(
+            [
+                "JPY",
+                "TWD",
+                "KRW",
+                "CNY",
+                "EUR",
+                "GBP",
+                "SEK",
+                "INR",
+                "MXN",
+                "BRL",
+                "ARS",
+                "CLP",
+                "CAD",
+                "SAR",
+            ]
+        )
     out: dict[str, list[dict[str, Any]]] = {}
     for i, sym in enumerate(tickers):
         out[sym] = fetch_quarterly_revenue(
@@ -376,9 +530,12 @@ def _pick_segment_value(
                 return k, float(v)
         # Prefer alias ⊆ key (e.g. "Consumable" → "Consumable And Other Products").
         # Avoid key ⊆ alias for short keys ("Product" ⊆ "... Other Products").
+        # Avoid "China" ⊆ "Taiwan, Province of China" (KLAC geo labels).
         for k in keys:
             kl = str(k).lower()
             if al in kl:
+                if al == "china" and "taiwan" in kl:
+                    continue
                 v = data.get(k)
                 if v is not None and v != "":
                     return k, float(v)
@@ -412,11 +569,19 @@ def _quarterly_revenue_by_date(
     return dict(by_date)
 
 
-def _segment_sum_excluding_rollups(data: dict[str, Any]) -> float:
+def _segment_sum_excluding_rollups(
+    data: dict[str, Any],
+    *,
+    company_revenue: float | None = None,
+) -> float:
     """Sum segment values, dropping parent keys that equal the sum of siblings.
 
     FMP often nests Product = Consumable + Instrument (PACB) alongside the
     leaves; counting both inflates the print vs income-statement revenue.
+
+    When ``company_revenue`` is set, also drop labels larger than company
+    total (GTLB-style garbage parents: Subscription and Software 1.6× total
+    while leaf License+Circ+SaaS already reconcile to revenue).
     """
     items: list[tuple[str, float]] = []
     for k, v in data.items():
@@ -443,7 +608,15 @@ def _segment_sum_excluding_rollups(data: dict[str, Any]) -> float:
                     break
             if k in rollups:
                 break
-    return sum(v for k, v in items if k not in rollups)
+    total_cap = float(company_revenue) if company_revenue and company_revenue > 0 else None
+    out = 0.0
+    for k, v in items:
+        if k in rollups:
+            continue
+        if total_cap is not None and v > total_cap * 1.05:
+            continue
+        out += v
+    return out
 
 
 def fetch_quarterly_segment_revenue(
@@ -458,10 +631,14 @@ def fetch_quarterly_segment_revenue(
     to_usd: bool = False,
     fx_rates: dict[str, Any] | None = None,
     period: str = "quarter",
+    segment_dimension: str = "product",
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    """Product-segment revenue for one ticker (quarterly by default; annual OK).
+    """Segment revenue for one ticker (product or geographic; quarterly/annual).
 
     ``segment_aliases`` is an ordered prefer list (first match wins per print).
+    ``segment_dimension`` is ``product`` (default) or ``geographic`` — picks the
+    FMP endpoint (``revenue-product-segmentation`` vs
+    ``revenue-geographic-segmentation``).
 
     Drops prints where the sum of non-rollup product segments exceeds company
     income-statement revenue by ``max_segment_sum_vs_revenue`` (FMP sometimes
@@ -486,9 +663,18 @@ def fetch_quarterly_segment_revenue(
     period_norm = str(period or "quarter").strip().lower()
     if period_norm not in ("quarter", "annual"):
         raise RuntimeError(f"unsupported segment period {period!r}")
+    dim = str(segment_dimension or "product").strip().lower()
+    if dim in ("geo", "geography", "geographic", "region"):
+        dim = "geographic"
+        endpoint = "revenue-geographic-segmentation"
+    elif dim in ("product", "products", "brand"):
+        dim = "product"
+        endpoint = "revenue-product-segmentation"
+    else:
+        raise RuntimeError(f"unsupported segment_dimension {segment_dimension!r}")
     use_q_bucket = bool(calendar_bucket) and period_norm == "quarter"
     rows = _get(
-        "revenue-product-segmentation",
+        endpoint,
         {
             "symbol": symbol.upper(),
             "structure": "flat",
@@ -497,7 +683,7 @@ def fetch_quarterly_segment_revenue(
     )
     if not isinstance(rows, list):
         raise RuntimeError(
-            f"FMP revenue-product-segmentation unexpected for {symbol}: {type(rows)}"
+            f"FMP {endpoint} unexpected for {symbol}: {type(rows)}"
         )
 
     if period_norm == "annual":
@@ -543,7 +729,6 @@ def fetch_quarterly_segment_revenue(
         if val_f <= 0:
             skipped_nonpositive.append(key)
             continue
-        seg_sum = _segment_sum_excluding_rollups(data)
         total = company_rev.get(key)
         if total is None and period_norm == "annual":
             # Fiscal year-ends can drift a day vs segmentation date.
@@ -552,6 +737,31 @@ def fetch_quarterly_segment_revenue(
                 if ck.startswith(y):
                     total = cv
                     break
+        # Any leaf > company → whole print is unusable (NBR 2025-12: International
+        # Drilling $1.2B vs ~$0.8B company while Rig Tech also prints ~2×). Drop
+        # before rollup stripping can hide the bad sibling and keep a junk leaf.
+        if total and total > 0:
+            leaf_cap = total * float(max_segment_sum_vs_revenue)
+            bad_sibling = False
+            for _lv in data.values():
+                if _lv in (None, ""):
+                    continue
+                try:
+                    if float(_lv) > leaf_cap:
+                        bad_sibling = True
+                        break
+                except (TypeError, ValueError):
+                    continue
+            if bad_sibling:
+                skipped_inflated.append(key)
+                continue
+        # Uncapped sum: detect uniform leaf doubles (MDB/PANW).
+        # Capped sum: ignore labels > company revenue so GTLB garbage parents
+        # (Subscription and Software ≫ total) do not fake inflation.
+        seg_sum = _segment_sum_excluding_rollups(data)
+        seg_sum_guard = _segment_sum_excluding_rollups(
+            data, company_revenue=total if total and total > 0 else None
+        )
         # Single-segment ceiling always applies. Sum-of-leaves guard catches
         # doubled brand splits (YUM) but false-fires on parent+child trees
         # even after rollup stripping (QTRX Product vs Consumable+Instruments
@@ -565,12 +775,40 @@ def fetch_quarterly_segment_revenue(
         inflated_sum = bool(
             total
             and total > 0
-            and seg_sum > total * float(max_segment_sum_vs_revenue)
+            and seg_sum_guard > total * float(max_segment_sum_vs_revenue)
             and not skip_segment_sum_guard
         )
-        if inflated_self or inflated_sum:
+        share = val_f / total if total else 0.0
+        ratio = seg_sum / total if total else 0.0
+        # Uniform leaf-tree double (PANW; MDB FYE) — scale even when the
+        # matched leaf alone is still under company (Other Subscription) or
+        # when capped-guard looks clean because the oversized sibling was
+        # clipped. Share floor keeps GTLB SaaS (~32%) from being crushed
+        # when parents+children fake an uncapped double.
+        can_scale = bool(
+            total and seg_sum > 0 and share >= 0.35 and 1.4 <= ratio <= 2.8
+        )
+        if can_scale and (inflated_self or inflated_sum or ratio >= 1.4):
+            val_f = val_f * (total / seg_sum)
+            if val_f > total * float(max_segment_sum_vs_revenue):
+                skipped_inflated.append(key)
+                continue
+        elif inflated_self:
             skipped_inflated.append(key)
             continue
+        elif inflated_sum:
+            # Parent/rollup noise: uncapped sum ≫ capped (GTLB parents larger
+            # than company while leaves already reconcile). Keep the leaf.
+            # True leaf-tree doubles (YUM brands) have uncapped ≈ capped → drop.
+            parent_noise = bool(
+                seg_sum_guard > 0 and seg_sum > seg_sum_guard * 1.2
+            )
+            if not (
+                parent_noise
+                and val_f <= total * float(max_segment_sum_vs_revenue)
+            ):
+                skipped_inflated.append(key)
+                continue
         by_date[key] += val_f
         labels_used[label] += 1
         matched += 1
@@ -621,11 +859,383 @@ def fetch_quarterly_segment_revenue(
         "matched_prints": matched,
         "skipped_inflated_dates": sorted(set(skipped_inflated)),
         "skipped_nonpositive_dates": sorted(set(skipped_nonpositive)),
-        "source": "fmp_revenue_product_segmentation",
+        "source": f"fmp_revenue_{dim}_segmentation",
+        "segment_dimension": dim,
         "unit": "usd_billions",
         **fx_meta,
     }
     return pts, meta
+
+
+# ---------------------------------------------------------------------------
+# Generic income-statement field (e.g. R&D)
+# ---------------------------------------------------------------------------
+
+
+def fetch_quarterly_income_field(
+    symbol: str,
+    field: str,
+    *,
+    limit: int = 40,
+    calendar_bucket: bool = True,
+    scale: float = 1.0,
+    to_usd: bool = False,
+    fx_rates: dict[str, Any] | None = None,
+    abs_value: bool = True,
+    skip_zeros: bool = True,
+) -> list[dict[str, Any]]:
+    """Quarterly points for one income-statement numeric field.
+
+    Default ``field`` use: ``researchAndDevelopmentExpenses``. Values are
+    taken as absolute spend when ``abs_value`` (FMP sometimes signs expenses).
+    """
+    fname = str(field or "").strip()
+    if not fname:
+        raise RuntimeError("income field name required")
+    rows = _get(
+        "income-statement",
+        {"symbol": symbol.upper(), "period": "quarter", "limit": int(limit)},
+    )
+    if not isinstance(rows, list):
+        raise RuntimeError(
+            f"FMP income-statement unexpected for {symbol}: {type(rows)}"
+        )
+
+    by_date: dict[str, float] = defaultdict(float)
+    for row in rows:
+        d = row.get("date")
+        raw = row.get(fname)
+        if not d or raw is None or raw == "":
+            continue
+        try:
+            v = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if abs_value:
+            v = abs(v)
+        if skip_zeros and v == 0.0:
+            continue
+        key = calendar_quarter_end(str(d)[:10]) if calendar_bucket else str(d)[:10]
+        by_date[key] += v
+
+    ccy = _reported_currency(rows) if to_usd else "USD"
+    if to_usd and ccy != "USD":
+        from lib import fx_usd as fxl
+
+        rates = fx_rates if fx_rates is not None else fxl.latest_rates([ccy])
+        by_date = {
+            d: fxl.to_usd(v, ccy, rates=rates) for d, v in by_date.items()
+        }
+
+    return [
+        {
+            "date": d,
+            "value": round(v / scale, 4) if scale else round(v, 4),
+            "symbol": symbol.upper(),
+        }
+        for d, v in sorted(by_date.items())
+    ]
+
+
+def fetch_income_field_by_symbol(
+    symbols: list[str] | tuple[str, ...] | None,
+    field: str,
+    *,
+    limit: int = 40,
+    scale: float = 1e9,
+    calendar_bucket: bool = True,
+    sleep_s: float = 0.15,
+    to_usd: bool = False,
+    abs_value: bool = True,
+) -> dict[str, list[dict[str, Any]]]:
+    """Fetch one income-statement field for each symbol (usd_billions default)."""
+    tickers = [str(s).upper() for s in (symbols or ())]
+    fx_rates = None
+    if to_usd:
+        from lib import fx_usd as fxl
+
+        fx_rates = fxl.latest_rates(
+            [
+                "JPY",
+                "TWD",
+                "KRW",
+                "CNY",
+                "EUR",
+                "GBP",
+                "SEK",
+                "INR",
+                "MXN",
+                "BRL",
+                "ARS",
+                "CLP",
+            ]
+        )
+    out: dict[str, list[dict[str, Any]]] = {}
+    for i, sym in enumerate(tickers):
+        out[sym] = fetch_quarterly_income_field(
+            sym,
+            field,
+            limit=limit,
+            calendar_bucket=calendar_bucket,
+            scale=scale,
+            to_usd=to_usd,
+            fx_rates=fx_rates,
+            abs_value=abs_value,
+        )
+        if sleep_s and i + 1 < len(tickers):
+            time.sleep(sleep_s)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Generic cash-flow-statement field (e.g. commonDividendsPaid, freeCashFlow)
+# ---------------------------------------------------------------------------
+
+
+def fetch_quarterly_cashflow_field(
+    symbol: str,
+    field: str,
+    *,
+    limit: int = 40,
+    calendar_bucket: bool = True,
+    scale: float = 1.0,
+    to_usd: bool = False,
+    fx_rates: dict[str, Any] | None = None,
+    abs_value: bool = True,
+    skip_zeros: bool = True,
+    period: str = "quarter",
+) -> list[dict[str, Any]]:
+    """Quarterly/annual points for one cash-flow-statement numeric field.
+
+    Default use: ``commonDividendsPaid`` / ``freeCashFlow``. FMP signs
+    dividends as outflows (negative); ``abs_value`` publishes spend magnitude.
+    """
+    fname = str(field or "").strip()
+    if not fname:
+        raise RuntimeError("cash-flow field name required")
+    period_norm = str(period or "quarter").strip().lower()
+    if period_norm not in ("quarter", "annual"):
+        raise RuntimeError(f"unsupported cash-flow period {period!r}")
+    rows = _get(
+        "cash-flow-statement",
+        {
+            "symbol": symbol.upper(),
+            "period": period_norm,
+            "limit": int(limit),
+        },
+    )
+    if not isinstance(rows, list):
+        raise RuntimeError(
+            f"FMP cash-flow-statement unexpected for {symbol}: {type(rows)}"
+        )
+
+    by_date: dict[str, float] = defaultdict(float)
+    for row in rows:
+        d = row.get("date")
+        raw = row.get(fname)
+        if not d or raw is None or raw == "":
+            continue
+        try:
+            v = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if abs_value:
+            v = abs(v)
+        if skip_zeros and v == 0.0:
+            continue
+        key = (
+            calendar_quarter_end(str(d)[:10])
+            if calendar_bucket and period_norm == "quarter"
+            else str(d)[:10]
+        )
+        by_date[key] += v
+
+    ccy = _reported_currency(rows) if to_usd else "USD"
+    if to_usd and ccy != "USD":
+        from lib import fx_usd as fxl
+
+        rates = fx_rates if fx_rates is not None else fxl.latest_rates([ccy])
+        by_date = {
+            d: fxl.to_usd(v, ccy, rates=rates) for d, v in by_date.items()
+        }
+
+    return [
+        {
+            "date": d,
+            "value": round(v / scale, 4) if scale else round(v, 4),
+            "symbol": symbol.upper(),
+        }
+        for d, v in sorted(by_date.items())
+    ]
+
+
+def fetch_cashflow_field_by_symbol(
+    symbols: list[str] | tuple[str, ...] | None,
+    field: str,
+    *,
+    limit: int = 40,
+    scale: float = 1e9,
+    calendar_bucket: bool = True,
+    sleep_s: float = 0.15,
+    to_usd: bool = False,
+    abs_value: bool = True,
+    period: str = "quarter",
+) -> dict[str, list[dict[str, Any]]]:
+    """Fetch one cash-flow field for each symbol (usd_billions default)."""
+    tickers = [str(s).upper() for s in (symbols or ())]
+    fx_rates = None
+    if to_usd:
+        from lib import fx_usd as fxl
+
+        fx_rates = fxl.latest_rates(
+            [
+                "JPY",
+                "TWD",
+                "KRW",
+                "CNY",
+                "EUR",
+                "GBP",
+                "SEK",
+                "INR",
+                "MXN",
+                "BRL",
+                "ARS",
+                "CLP",
+            ]
+        )
+    out: dict[str, list[dict[str, Any]]] = {}
+    for i, sym in enumerate(tickers):
+        out[sym] = fetch_quarterly_cashflow_field(
+            sym,
+            field,
+            limit=limit,
+            calendar_bucket=calendar_bucket,
+            scale=scale,
+            to_usd=to_usd,
+            fx_rates=fx_rates,
+            abs_value=abs_value,
+            period=period,
+        )
+        if sleep_s and i + 1 < len(tickers):
+            time.sleep(sleep_s)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Generic balance-sheet-statement field (e.g. totalDebt)
+# ---------------------------------------------------------------------------
+
+
+def fetch_quarterly_balance_field(
+    symbol: str,
+    field: str,
+    *,
+    limit: int = 40,
+    calendar_bucket: bool = True,
+    scale: float = 1.0,
+    to_usd: bool = False,
+    fx_rates: dict[str, Any] | None = None,
+    abs_value: bool = False,
+    skip_zeros: bool = True,
+    period: str = "quarter",
+) -> list[dict[str, Any]]:
+    """Quarterly/annual points for one balance-sheet-statement numeric field."""
+    fname = str(field or "").strip()
+    if not fname:
+        raise RuntimeError("balance-sheet field name required")
+    period_norm = str(period or "quarter").strip().lower()
+    if period_norm not in ("quarter", "annual"):
+        raise RuntimeError(f"unsupported balance-sheet period {period!r}")
+    rows = _get(
+        "balance-sheet-statement",
+        {
+            "symbol": symbol.upper(),
+            "period": period_norm,
+            "limit": int(limit),
+        },
+    )
+    if not isinstance(rows, list):
+        raise RuntimeError(
+            f"FMP balance-sheet-statement unexpected for {symbol}: {type(rows)}"
+        )
+
+    by_date: dict[str, float] = defaultdict(float)
+    for row in rows:
+        d = row.get("date")
+        raw = row.get(fname)
+        if not d or raw is None or raw == "":
+            continue
+        try:
+            v = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if abs_value:
+            v = abs(v)
+        if skip_zeros and v == 0.0:
+            continue
+        key = (
+            calendar_quarter_end(str(d)[:10])
+            if calendar_bucket and period_norm == "quarter"
+            else str(d)[:10]
+        )
+        by_date[key] = v  # levels — last print wins, don't sum
+
+    ccy = _reported_currency(rows) if to_usd else "USD"
+    if to_usd and ccy != "USD":
+        from lib import fx_usd as fxl
+
+        rates = fx_rates if fx_rates is not None else fxl.latest_rates([ccy])
+        by_date = {
+            d: fxl.to_usd(v, ccy, rates=rates) for d, v in by_date.items()
+        }
+
+    return [
+        {
+            "date": d,
+            "value": round(v / scale, 4) if scale else round(v, 4),
+            "symbol": symbol.upper(),
+        }
+        for d, v in sorted(by_date.items())
+    ]
+
+
+def fetch_balance_field_by_symbol(
+    symbols: list[str] | tuple[str, ...] | None,
+    field: str,
+    *,
+    limit: int = 40,
+    scale: float = 1e9,
+    calendar_bucket: bool = True,
+    sleep_s: float = 0.15,
+    to_usd: bool = False,
+    abs_value: bool = False,
+    period: str = "quarter",
+) -> dict[str, list[dict[str, Any]]]:
+    """Fetch one balance-sheet field for each symbol (usd_billions default)."""
+    tickers = [str(s).upper() for s in (symbols or ())]
+    fx_rates = None
+    if to_usd:
+        from lib import fx_usd as fxl
+
+        fx_rates = fxl.latest_rates(
+            ["JPY", "TWD", "KRW", "CNY", "EUR", "GBP", "SEK", "INR", "MXN", "BRL", "ARS", "CLP"]
+        )
+    out: dict[str, list[dict[str, Any]]] = {}
+    for i, sym in enumerate(tickers):
+        out[sym] = fetch_quarterly_balance_field(
+            sym,
+            field,
+            limit=limit,
+            calendar_bucket=calendar_bucket,
+            scale=scale,
+            to_usd=to_usd,
+            fx_rates=fx_rates,
+            abs_value=abs_value,
+            period=period,
+        )
+        if sleep_s and i + 1 < len(tickers):
+            time.sleep(sleep_s)
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -805,10 +1415,18 @@ def fetch_transcript_keyword_points(
         content = str(tr.get("content") or "")
         hits = count_keyword_hits(content, kws)
         total = float(sum(hits.values()))
-        d_raw = str(tr.get("date") or row.get("date") or "")[:10]
-        if not d_raw:
-            continue
-        key = calendar_quarter_end(d_raw) if calendar_bucket else d_raw
+        # Call date → prior calendar QE. Handles June FYE (SLQT) and keeps
+        # Jan/Feb calendar-FY Q4 calls on Dec (not nearest-neighbor into Mar).
+        call_d = str(row.get("date") or tr.get("date") or "")[:10]
+        if calendar_bucket:
+            if call_d:
+                key = transcript_period_end(call_d)
+            else:
+                key = fiscal_quarter_end(year, quarter)
+        else:
+            if not call_d:
+                continue
+            key = call_d
         by_date[key] += total
     return [
         {"date": d, "value": round(v, 4), "symbol": symbol.upper()}

@@ -1,13 +1,13 @@
 {
   "schema_version": 0,
   "pack": "lab_economics",
-  "description": "Medical laboratories — supplies, wages, headcount, services (BLS) + Census HS 382219 reagent imports + CSTL revenue (FMP). Early-detection thesis series (EXAS Screening, PubMed liquid biopsy, physician emp) attached from diagnostic_platforms.",
+  "description": "Medical laboratories \u2014 supplies, wages, headcount, services (BLS) + Census HS 382219 reagent imports + CSTL revenue (FMP). Early-detection thesis series (EXAS Screening, PubMed liquid biopsy, physician emp) attached from diagnostic_platforms.",
   "series": [
     {
       "key": "lab_supplies_ppi",
       "source": "bls",
       "bls_id": "WPU06371801",
-      "label": "PPI — In-Vitro Diagnostic Substances",
+      "label": "PPI \u2014 In-Vitro Diagnostic Substances",
       "official_name": "In-vitro diagnostic substances",
       "short_name": "IVD reagents and diagnostic supplies prices",
       "display_name": "IVD reagents / diagnostic supplies prices",
@@ -23,13 +23,18 @@
       "dataset_id": "lab_supplies_ppi",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls-0000-0008-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "lab_wages_ahe",
       "source": "bls",
       "bls_id": "CEU6562151108",
-      "label": "CES — Medical Laboratories production & nonsupervisory AHE",
+      "label": "CES \u2014 Medical Laboratories production & nonsupervisory AHE",
       "official_name": "Medical laboratories production and nonsupervisory average hourly earnings",
       "short_name": "Medical laboratories hourly wages",
       "display_name": "Medical laboratories hourly wages",
@@ -45,13 +50,18 @@
       "dataset_id": "lab_wages_ahe",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls-0000-0009-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 9,
+      "serial_series_n": 1
     },
     {
       "key": "lab_comp_eci",
       "source": "bls",
       "bls_id": "CIS2016200000000I",
-      "label": "ECI — private Health Care & Social Assistance total compensation",
+      "label": "ECI \u2014 private Health Care & Social Assistance total compensation",
       "official_name": "Private health care and social assistance total compensation",
       "short_name": "Health care compensation",
       "display_name": "Health care compensation",
@@ -67,13 +77,18 @@
       "dataset_id": "lab_comp_eci",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls-0000-0005-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "lab_headcount",
       "source": "bls",
       "bls_id": "CES6562151101",
-      "label": "CES — Medical Laboratories all employees",
+      "label": "CES \u2014 Medical Laboratories all employees",
       "official_name": "Medical laboratories all employees",
       "short_name": "Medical laboratories employment",
       "display_name": "Medical laboratories employment",
@@ -90,13 +105,18 @@
       "dataset_id": "lab_headcount",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls-0000-0006-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "lab_services_ppi",
       "source": "bls",
       "bls_id": "PCU6215116215112",
-      "label": "PPI — Medical Laboratory Services",
+      "label": "PPI \u2014 Medical Laboratory Services",
       "official_name": "Medical laboratory services",
       "short_name": "Diagnostic lab services prices",
       "display_name": "Diagnostic lab services prices",
@@ -112,7 +132,12 @@
       "dataset_id": "lab_services_ppi",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls-0000-0007-0001",
+      "serial_source": "bls",
+      "serial_family": "0000",
+      "serial_dataset_n": 7,
+      "serial_series_n": 1
     },
     {
       "key": "qcew_621511_us_emp",
@@ -120,7 +145,7 @@
       "bls_id": "QCEW:US000:5:621511:emp",
       "area_fips": "US000",
       "qcew_metric": "employment",
-      "label": "QCEW — US private NAICS 621511 employment (quarterly avg)",
+      "label": "QCEW \u2014 US private NAICS 621511 employment (quarterly avg)",
       "official_name": "NAICS 621511 Medical Laboratories employment",
       "short_name": "US diagnostic labs employment",
       "display_name": "US diagnostic labs employment",
@@ -136,7 +161,12 @@
       "dataset_id": "qcew_621511_us_emp",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls_qcew_open-0000-0004-0001",
+      "serial_source": "bls_qcew_open",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "qcew_621511_us_aww",
@@ -144,7 +174,7 @@
       "bls_id": "QCEW:US000:5:621511:aww",
       "area_fips": "US000",
       "qcew_metric": "avg_weekly_wage",
-      "label": "QCEW — US private NAICS 621511 avg weekly wage",
+      "label": "QCEW \u2014 US private NAICS 621511 avg weekly wage",
       "official_name": "NAICS 621511 Medical Laboratories average weekly wage",
       "short_name": "US diagnostic labs average weekly wage",
       "display_name": "US diagnostic labs average weekly wage",
@@ -160,7 +190,12 @@
       "dataset_id": "qcew_621511_us_aww",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls_qcew_open-0000-0003-0001",
+      "serial_source": "bls_qcew_open",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "qcew_621511_tx_emp",
@@ -168,7 +203,7 @@
       "bls_id": "QCEW:48000:5:621511:emp",
       "area_fips": "48000",
       "qcew_metric": "employment",
-      "label": "QCEW — Texas private NAICS 621511 employment (quarterly avg)",
+      "label": "QCEW \u2014 Texas private NAICS 621511 employment (quarterly avg)",
       "official_name": "NAICS 621511 Medical Laboratories employment",
       "short_name": "Texas diagnostic labs employment",
       "display_name": "Texas diagnostic labs employment",
@@ -184,7 +219,12 @@
       "dataset_id": "qcew_621511_tx_emp",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls_qcew_open-0000-0002-0001",
+      "serial_source": "bls_qcew_open",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "qcew_621511_tx_aww",
@@ -192,7 +232,7 @@
       "bls_id": "QCEW:48000:5:621511:aww",
       "area_fips": "48000",
       "qcew_metric": "avg_weekly_wage",
-      "label": "QCEW — Texas private NAICS 621511 avg weekly wage",
+      "label": "QCEW \u2014 Texas private NAICS 621511 avg weekly wage",
       "official_name": "NAICS 621511 Medical Laboratories average weekly wage",
       "short_name": "Texas diagnostic labs average weekly wage",
       "display_name": "Texas diagnostic labs average weekly wage",
@@ -208,7 +248,12 @@
       "dataset_id": "qcew_621511_tx_aww",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "bls_qcew_open-0000-0001-0001",
+      "serial_source": "bls_qcew_open",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "lab_supplies_import_value",
@@ -216,7 +261,7 @@
       "series_id": "CENSUS:HS6:382219:GEN_VAL_MO",
       "census_metric": "import_value_usd",
       "hs_code": "382219",
-      "label": "Census trade — HS 382219 import value (world, general imports)",
+      "label": "Census trade \u2014 HS 382219 import value (world, general imports)",
       "official_name": "HS 382219 diagnostic or laboratory reagents, other",
       "short_name": "Diagnostic/lab reagents imports",
       "display_name": "Diagnostic/lab reagents imports",
@@ -232,7 +277,12 @@
       "dataset_id": "lab_supplies_import_value",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "census_trade-0000-0010-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 10,
+      "serial_series_n": 1
     },
     {
       "key": "lab_supplies_import_kg",
@@ -240,7 +290,7 @@
       "series_id": "CENSUS:HS:382219:KG",
       "census_metric": "import_kg",
       "hs_code": "382219",
-      "label": "Census trade — HS 382219 import quantity (kg)",
+      "label": "Census trade \u2014 HS 382219 import quantity (kg)",
       "official_name": "HS 382219 diagnostic or laboratory reagents, other",
       "short_name": "Diagnostic/lab reagents import volume",
       "display_name": "Diagnostic/lab reagents import volume",
@@ -256,7 +306,12 @@
       "dataset_id": "lab_supplies_import_kg",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "census_trade-0000-0008-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 8,
+      "serial_series_n": 1
     },
     {
       "key": "lab_supplies_import_unit_value",
@@ -264,7 +319,7 @@
       "series_id": "CENSUS:HS:382219:USD_PER_KG",
       "census_metric": "import_unit_value_usd_per_kg",
       "hs_code": "382219",
-      "label": "Census trade — HS 382219 import unit value ($/kg)",
+      "label": "Census trade \u2014 HS 382219 import unit value ($/kg)",
       "official_name": "HS 382219 diagnostic or laboratory reagents, other",
       "short_name": "Diagnostic/lab reagents import price per kg",
       "display_name": "Diagnostic/lab reagents import price per kg",
@@ -280,7 +335,12 @@
       "dataset_id": "lab_supplies_import_unit_value",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "census_trade-0000-0009-0001",
+      "serial_source": "census_trade",
+      "serial_family": "0000",
+      "serial_dataset_n": 9,
+      "serial_series_n": 1
     },
     {
       "key": "cstl_revenue",
@@ -288,19 +348,27 @@
       "fmp_limit": 40,
       "fmp_symbol": "CSTL",
       "label": "Castle Biosciences revenue",
-      "official_name": "FMP income-statement revenue — CSTL",
+      "official_name": "FMP income-statement revenue \u2014 CSTL",
       "short_name": "CSTL revenue",
       "display_name": "Castle Biosciences revenue",
       "frequency": "quarterly",
       "unit": "usd_billions",
-      "derived": ["yoy_pct", "m3_avg_yoy_pct"],
+      "derived": [
+        "yoy_pct",
+        "m3_avg_yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "cstl_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Theme-member lab / early-detection operator revenue."
+      "notes": "Theme-member lab / early-detection operator revenue.",
+      "serial": "fmp-revenue-0074-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 74,
+      "serial_series_n": 1
     }
   ]
 }

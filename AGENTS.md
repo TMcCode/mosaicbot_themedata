@@ -125,8 +125,20 @@ Every series should carry:
 | `official_name` | Code or official taxonomy (e.g. `NAICS 621511 Medical Laboratories`, `HS 382219 …`) |
 | `short_name` | Compact colloquial name |
 | `display_name` | **UI default** — plain English chart title |
+| `serial` | Frozen chart id `{source}-{family}-{dataset:04d}-{series:04d}` (see below) |
 
 Web and boards prefer: `display_name` → `short_name` → `label`.
+
+### Chart serials (matching)
+
+Stable crosswalk so every chart ties back to source → optional family → dataset → series leaf.
+
+- **Format:** `fmp-revenue-0074-0001` or flat `fred-0000-0105-0001` (`0000` = no mid-node).
+- **Join keys:** boards / attachments keep using `series_key`. `serial` is stamped alongside on `datasets.json`, pack catalogs, and published pack series (`series_shell`).
+- **Registry:** `config/serial_registry.json` (`by_series_key` ↔ `by_dataset_id`). **Never renumber**; new rows take the next free `dataset_n` under `(source, family)`.
+- **Assign / stamp:** `python scripts/assign_serials.py` (optional `--pack lab_economics --stamp-latest`, or `--all-packs --stamp-latest` for every catalog + local latest). Fills missing dataset `source` from pack catalogs when needed. Explicit FMP adapters (`fmp_revenue*`, …) and bare `source=fmp` rows (id/description heuristics) collapse to `fmp` + family `revenue` | `capex` | `transcript` | ….
+- **UI:** web shows the serial tiny in the bottom-right of each chart shell. Stacked composites use `sum_series_key` serial when present; otherwise omit in v1.
+- **Lib:** `lib/serials.py` (format / parse / source-family rules).
 
 Colloquial examples already in use:
 

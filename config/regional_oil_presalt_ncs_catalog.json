@@ -22,7 +22,12 @@
       "dataset_id": "brent_crude_ro",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0011-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 11,
+      "serial_series_n": 1
     },
     {
       "key": "eu_natgas_ro",
@@ -43,7 +48,12 @@
       "dataset_id": "eu_natgas_ro",
       "access": "api",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fred-0000-0038-0001",
+      "serial_source": "fred",
+      "serial_family": "0000",
+      "serial_dataset_n": 38,
+      "serial_series_n": 1
     },
     {
       "key": "nod_johan_sverdrup_oil",
@@ -64,7 +74,12 @@
       "dataset_id": "nod_johan_sverdrup_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "nod_field-0000-0004-0001",
+      "serial_source": "nod_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "nod_johan_castberg_oil",
@@ -85,7 +100,12 @@
       "dataset_id": "nod_johan_castberg_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "nod_field-0000-0003-0001",
+      "serial_source": "nod_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "nod_alvheim_oil",
@@ -106,7 +126,12 @@
       "dataset_id": "nod_alvheim_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "nod_field-0000-0001-0001",
+      "serial_source": "nod_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "nod_balder_oil",
@@ -127,7 +152,12 @@
       "dataset_id": "nod_balder_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "nod_field-0000-0002-0001",
+      "serial_source": "nod_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "ncs_focus_oil",
@@ -153,7 +183,12 @@
       "dataset_id": "ncs_focus_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "derived-sum-0013-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 13,
+      "serial_series_n": 1
     },
     {
       "key": "anp_buzios_oil",
@@ -175,7 +210,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "anp_presalt_field-0000-0002-0001",
+      "serial_source": "anp_presalt_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 2,
+      "serial_series_n": 1
     },
     {
       "key": "anp_tupi_oil",
@@ -197,7 +237,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "anp_presalt_field-0000-0005-0001",
+      "serial_source": "anp_presalt_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 5,
+      "serial_series_n": 1
     },
     {
       "key": "anp_mero_oil",
@@ -219,7 +264,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "anp_presalt_field-0000-0003-0001",
+      "serial_source": "anp_presalt_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "anp_atapu_oil",
@@ -241,7 +291,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "anp_presalt_field-0000-0001-0001",
+      "serial_source": "anp_presalt_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "anp_sepia_oil",
@@ -263,7 +318,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "anp_presalt_field-0000-0004-0001",
+      "serial_source": "anp_presalt_field",
+      "serial_family": "0000",
+      "serial_dataset_n": 4,
+      "serial_series_n": 1
     },
     {
       "key": "presalt_focus_oil",
@@ -291,7 +351,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months."
+      "notes": "Well-level PreSal zips through ~2023; extended with bulletin Tabela 10 through ~mid-2025, then ANP open-data offshore (producao-mar) CSVs for later months.",
+      "serial": "derived-sum-0019-0001",
+      "serial_source": "derived",
+      "serial_family": "sum",
+      "serial_dataset_n": 19,
+      "serial_series_n": 1
     },
     {
       "key": "brazil_santos_oil",
@@ -312,7 +377,12 @@
       "access": "scrape",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "Bulletin Table 6 \u2014 continuous through 2024/25 when well zips moved to CDP."
+      "notes": "Bulletin Table 6 \u2014 continuous through 2024/25 when well zips moved to CDP.",
+      "serial": "anp_santos_bulletin-0000-0001-0001",
+      "serial_source": "anp_santos_bulletin",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "gassco_ncs_exit",
@@ -332,7 +402,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Daily scrape append \u2192 weekly average. Point-in-time history grows going forward."
+      "notes": "Daily scrape append \u2192 weekly average. Point-in-time history grows going forward.",
+      "serial": "gassco_exit-0000-0001-0001",
+      "serial_source": "gassco_exit",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "uk_indigenous_oil",
@@ -351,7 +426,12 @@
       "dataset_id": "uk_indigenous_oil",
       "access": "scrape",
       "cadence": "monthly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "uk_et31-0000-0001-0001",
+      "serial_source": "uk_et31",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "abicom_fuel_parity_gap",
@@ -371,7 +451,12 @@
       "access": "scrape",
       "cadence": "weekly",
       "as_of_semantics": "scrape_as_of",
-      "notes": "Soft-fail if Abicom blocks scrapes; chart-only until history accumulates."
+      "notes": "Soft-fail if Abicom blocks scrapes; chart-only until history accumulates.",
+      "serial": "abicom_parity-0000-0001-0001",
+      "serial_source": "abicom_parity",
+      "serial_family": "0000",
+      "serial_dataset_n": 1,
+      "serial_series_n": 1
     },
     {
       "key": "eqnr_revenue_ro",
@@ -392,7 +477,12 @@
       "dataset_id": "eqnr_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0107-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 107,
+      "serial_series_n": 1
     },
     {
       "key": "pbr_revenue_ro",
@@ -413,7 +503,12 @@
       "dataset_id": "pbr_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0222-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 222,
+      "serial_series_n": 1
     },
     {
       "key": "akrbp_revenue_ro",
@@ -434,7 +529,12 @@
       "dataset_id": "akrbp_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0025-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 25,
+      "serial_series_n": 1
     },
     {
       "key": "galp_revenue_ro",
@@ -455,7 +555,12 @@
       "dataset_id": "galp_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0124-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 124,
+      "serial_series_n": 1
     },
     {
       "key": "hbr_revenue_ro",
@@ -476,7 +581,12 @@
       "dataset_id": "hbr_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0144-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 144,
+      "serial_series_n": 1
     },
     {
       "key": "var_revenue_ro",
@@ -497,7 +607,12 @@
       "dataset_id": "var_revenue_ro",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0284-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 284,
+      "serial_series_n": 1
     },
     {
       "key": "ro_member_revenue",
@@ -526,7 +641,12 @@
       "dataset_id": "ro_member_revenue",
       "access": "api",
       "cadence": "quarterly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "fmp-revenue-0241-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 241,
+      "serial_series_n": 1
     },
     {
       "key": "wiki_oil_pageviews",
@@ -547,7 +667,12 @@
       "dataset_id": "wiki_oil_pageviews",
       "access": "api",
       "cadence": "weekly",
-      "as_of_semantics": "period_end"
+      "as_of_semantics": "period_end",
+      "serial": "wikipedia_pageviews-0000-0006-0001",
+      "serial_source": "wikipedia_pageviews",
+      "serial_family": "0000",
+      "serial_dataset_n": 6,
+      "serial_series_n": 1
     },
     {
       "key": "kalshi_pbr_q3_production",
@@ -567,7 +692,14 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only prediction market."
+      "notes": "Chart-only prediction market.",
+      "serial": "kalshi-0000-0017-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 17,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true,
+      "kalshi_match": "PROD-3250"
     },
     {
       "key": "kalshi_pbr_fy_production",
@@ -587,7 +719,14 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "vendor_as_of",
-      "notes": "Chart-only prediction market."
+      "notes": "Chart-only prediction market.",
+      "serial": "kalshi-0000-0016-0001",
+      "serial_source": "kalshi",
+      "serial_family": "0000",
+      "serial_dataset_n": 16,
+      "serial_series_n": 1,
+      "kalshi_auto_roll": true,
+      "kalshi_match": "PROD-3250"
     }
   ]
 }

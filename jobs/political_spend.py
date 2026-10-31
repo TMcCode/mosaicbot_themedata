@@ -29,6 +29,7 @@ from lib import fred as fredlib  # noqa: E402
 from lib import fec_ie as feclib  # noqa: E402
 from lib import google_political_ads as gpalib  # noqa: E402
 from lib import kalshi as kalshilib  # noqa: E402
+from lib import kalshi_pack  # noqa: E402
 from lib import theme_score as scores  # noqa: E402
 
 SCHEMA_VERSION = 0
@@ -212,18 +213,15 @@ def build_pack(
                 pts = [p for p in google_points if p["date"] >= start]
                 notes.append(f"{key}: Google weekly Spend_USD n={len(pts)}")
             elif src == "kalshi":
-                series_t = str(meta.get("kalshi_series") or "")
-                ticker = str(meta.get("kalshi_ticker") or "")
-                if not series_t or not ticker:
-                    raise RuntimeError("kalshi_series and kalshi_ticker required")
-                pts, mm = kalshilib.fetch_daily_probability(
-                    series_ticker=series_t,
-                    market_ticker=ticker,
+                pts, note = kalshi_pack.fetch_from_meta(
+                    meta,
+                    out_dir=out_dir,
+                    r2_prefix=R2_PREFIX,
+                    catalog_path=_CATALOG,
+                    fetched_at=fetched_at,
+                    start=start,
                 )
-                pts = [p for p in pts if p["date"] >= start]
-                notes.append(
-                    f"{key}: Kalshi {ticker} n={len(pts)} last={mm.get('last_price')}"
-                )
+                notes.append(note)
             elif src == "kalshi_close_races":
                 field = str(meta.get("close_field") or "federal_close")
                 pts = _close_race_points(close_by, field=field)

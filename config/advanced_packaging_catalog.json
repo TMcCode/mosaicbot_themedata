@@ -1,26 +1,33 @@
 {
   "schema_version": 0,
   "pack": "advanced_packaging",
-  "description": "AI '25: Advanced Packaging — thin pack: TSM ADR revenue + CoWoS/packaging transcript keywords (TSM/ASX/AMKR) + TE Taiwan industrial production YoY. Reuses memory_hbm_packaging CapEx/revenue/exports/metrology + memory_hbm_testing FORM + forums category/community via attachments. TrendForce/Yole/DigiTimes map_only.",
+  "description": "AI '25: Advanced Packaging \u2014 thin pack: TSM ADR revenue + CoWoS/packaging transcript keywords (TSM/ASX/AMKR) + TE Taiwan industrial production YoY. Reuses memory_hbm_packaging CapEx/revenue/exports/metrology + memory_hbm_testing FORM + forums category/community via attachments. TrendForce/Yole/DigiTimes map_only.",
   "series": [
     {
       "key": "taiwan_industrial_production_yoy",
       "source": "te_indicator",
       "te_series_key": "taiwan_industrial_production_yoy",
       "label": "Taiwan Industrial Production YoY (via Trading Economics)",
-      "official_name": "Trading Economics — Taiwan Industrial Production YoY (TaiwanIP)",
+      "official_name": "Trading Economics \u2014 Taiwan Industrial Production YoY (TaiwanIP)",
       "short_name": "Taiwan IP YoY",
       "display_name": "Taiwan industrial production (YoY %)",
       "frequency": "monthly",
       "unit": "pct",
-      "derived": ["m3_avg"],
+      "derived": [
+        "m3_avg"
+      ],
       "scope_default": "theme",
       "usefulness": 5,
       "dataset_id": "taiwan_industrial_production_yoy",
       "access": "api",
       "cadence": "monthly",
       "as_of_semantics": "period_end",
-      "notes": "TE prints YoY % (not index level). Hub manufacturing proxy for TSMC/ASE/substrates. Use m3_avg — do not stack another YoY."
+      "notes": "TE prints YoY % (not index level). Hub manufacturing proxy for TSMC/ASE/substrates. Use m3_avg \u2014 do not stack another YoY.",
+      "serial": "trading_economics-0000-0003-0001",
+      "serial_source": "trading_economics",
+      "serial_family": "0000",
+      "serial_dataset_n": 3,
+      "serial_series_n": 1
     },
     {
       "key": "tsm_revenue",
@@ -28,24 +35,35 @@
       "fmp_symbol": "TSM",
       "fmp_limit": 40,
       "label": "TSMC ADR revenue",
-      "official_name": "FMP income-statement revenue — TSM (ADR)",
+      "official_name": "FMP income-statement revenue \u2014 TSM (ADR)",
       "short_name": "TSM revenue",
       "display_name": "TSMC ADR revenue",
       "frequency": "quarterly",
       "unit": "usd",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "ticker",
       "usefulness": 5,
       "dataset_id": "tsm_revenue",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Foundry + CoWoS anchor. Conglomerate — chart + light score weight only."
+      "notes": "Foundry + CoWoS anchor. Conglomerate \u2014 chart + light score weight only.",
+      "serial": "fmp-revenue-0447-0001",
+      "serial_source": "fmp",
+      "serial_family": "revenue",
+      "serial_dataset_n": 447,
+      "serial_series_n": 1
     },
     {
       "key": "cowos_transcript_keywords",
       "source": "fmp_transcript_keywords",
-      "fmp_symbols": ["TSM", "ASX", "AMKR"],
+      "fmp_symbols": [
+        "TSM",
+        "ASX",
+        "AMKR"
+      ],
       "fmp_limit": 16,
       "require_all": false,
       "keywords": [
@@ -69,19 +87,26 @@
         "3D IC"
       ],
       "label": "CoWoS / advanced packaging keyword hits (TSM+ASX+AMKR)",
-      "official_name": "FMP transcript keyword counts — CoWoS/SoIC/EMIB/hybrid bonding/ABF/panel (TSM, ASX, AMKR)",
+      "official_name": "FMP transcript keyword counts \u2014 CoWoS/SoIC/EMIB/hybrid bonding/ABF/panel (TSM, ASX, AMKR)",
       "short_name": "CoWoS transcript keywords",
       "display_name": "CoWoS / packaging keyword hits in TSM+ASX+AMKR calls",
       "frequency": "quarterly",
       "unit": "keyword_hits",
-      "derived": ["yoy_pct"],
+      "derived": [
+        "yoy_pct"
+      ],
       "scope_default": "theme",
       "usefulness": 4,
       "dataset_id": "cowos_transcript_keywords",
       "access": "api",
       "cadence": "quarterly",
       "as_of_semantics": "period_end",
-      "notes": "Foundry/OSAT CoWoS narrative. Broader HBM-tool lexicon reused via hbm_pkg_transcript_keywords. Chart-only."
+      "notes": "Foundry/OSAT CoWoS narrative. Broader HBM-tool lexicon reused via hbm_pkg_transcript_keywords. Chart-only.",
+      "serial": "fmp-transcript-0018-0001",
+      "serial_source": "fmp",
+      "serial_family": "transcript",
+      "serial_dataset_n": 18,
+      "serial_series_n": 1
     }
   ]
 }

@@ -20,7 +20,12 @@
       "dataset_id": "hbm_teradyne_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0250-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 250,
+      "serial_series_n": 1
     },
     {
       "key": "formfactor_mentions",
@@ -39,7 +44,12 @@
       "dataset_id": "hbm_formfactor_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0246-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 246,
+      "serial_series_n": 1
     },
     {
       "key": "cohu_mentions",
@@ -58,7 +68,12 @@
       "dataset_id": "hbm_cohu_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0245-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 245,
+      "serial_series_n": 1
     },
     {
       "key": "aehr_mentions",
@@ -77,7 +92,12 @@
       "dataset_id": "hbm_aehr_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0242-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 242,
+      "serial_series_n": 1
     },
     {
       "key": "advantest_mentions",
@@ -96,7 +116,12 @@
       "dataset_id": "hbm_advantest_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0241-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 241,
+      "serial_series_n": 1
     },
     {
       "key": "hbm_named_brand_mentions",
@@ -115,7 +140,12 @@
       "dataset_id": "hbm_named_brand_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0248-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 248,
+      "serial_series_n": 1
     },
     {
       "key": "hbm_category_mentions",
@@ -134,7 +164,12 @@
       "dataset_id": "hbm_category_mentions",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0244-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 244,
+      "serial_series_n": 1
     },
     {
       "key": "semiconductors_community_posts",
@@ -153,7 +188,12 @@
       "dataset_id": "hbm_semiconductors_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0249-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 249,
+      "serial_series_n": 1
     },
     {
       "key": "hardware_community_posts",
@@ -172,7 +212,12 @@
       "dataset_id": "hbm_hardware_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0247-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 247,
+      "serial_series_n": 1
     },
     {
       "key": "chipdesign_community_posts",
@@ -191,7 +236,12 @@
       "dataset_id": "chipdesign_community_posts",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0111-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 111,
+      "serial_series_n": 1
     },
     {
       "key": "hbm_brand_sentiment",
@@ -210,7 +260,12 @@
       "dataset_id": "hbm_brand_sentiment",
       "access": "scrape",
       "cadence": "weekly",
-      "as_of_semantics": "scrape_as_of"
+      "as_of_semantics": "scrape_as_of",
+      "serial": "arctic_shift-0000-0243-0001",
+      "serial_source": "arctic_shift",
+      "serial_family": "0000",
+      "serial_dataset_n": 243,
+      "serial_series_n": 1
     }
   ]
 }
