@@ -376,12 +376,20 @@ class FmpCaches:
                     f"labels={mm.get('labels_used')} matched={mm.get('matched_prints')} "
                     f"(history from {rev_start})"
                 )
+            exclude = {
+                str(d)[:10]
+                for d in (meta.get("exclude_dates") or [])
+                if d
+            }
             pts = [
                 {"date": p["date"], "value": p["value"]}
                 for p in self.seg_by_key[cache_key]
-                if p["date"] >= rev_start
+                if p["date"] >= rev_start and p["date"] not in exclude
             ]
-            return pts, f"{key}: FMP segment revenue {sym} n={len(pts)}"
+            note = f"{key}: FMP segment revenue {sym} n={len(pts)}"
+            if exclude:
+                note += f" excluded={sorted(exclude)}"
+            return pts, note
 
         if src in _TX:
             kws = [

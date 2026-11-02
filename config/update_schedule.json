@@ -2641,6 +2641,226 @@
         "local_relative": "data/land_contract_drillers_forums/latest.json"
       },
       "description": "Weekly Arctic Shift land-driller forums (r/oilandgasworkers + PetroleumEngineering)."
+    },
+    {
+      "id": "vaccine_makers",
+      "job": "jobs/vaccine_makers.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/vaccine_makers/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/vaccine_makers/latest.json"
+      },
+      "description": "Weekly vaccine makers \u2014 FMP pure-plays + CDC NIS + CT.gov + USASpending + Census HS + Kalshi."
+    },
+    {
+      "id": "vaccine_makers_forums",
+      "job": "jobs/vaccine_makers_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Thu"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/vaccine_makers_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/vaccine_makers_forums/latest.json"
+      },
+      "description": "Weekly vaccine makers forums (Arctic Shift pharmacy+biotech)."
+    },
+    {
+      "id": "data_analytics_bi",
+      "job": "jobs/data_analytics_bi.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/data_analytics_bi/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/data_analytics_bi/latest.json"
+      },
+      "description": "Weekly data analytics/BI \u2014 FMP PLTR/SAP/pure-plays + SO + USASpending + Kalshi."
+    },
+    {
+      "id": "data_analytics_bi_forums",
+      "job": "jobs/data_analytics_bi_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Fri"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/data_analytics_bi_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/data_analytics_bi_forums/latest.json"
+      },
+      "description": "Weekly data analytics/BI forums (Arctic Shift dataeng+BI+PowerBI)."
+    },
+    {
+      "id": "upstream_ai_materials",
+      "job": "jobs/upstream_ai_materials.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/upstream_ai_materials/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/upstream_ai_materials/latest.json"
+      },
+      "description": "Weekly upstream AI materials \u2014 FMP ROG/TW CCL/foil + Census HS + USASpending CHIPS."
+    },
+    {
+      "id": "upstream_ai_materials_forums",
+      "job": "jobs/upstream_ai_materials_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sat"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/upstream_ai_materials_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/upstream_ai_materials_forums/latest.json"
+      },
+      "description": "Weekly upstream AI materials forums (Arctic Shift semiconductors+chemicalengineering)."
+    },
+    {
+      "id": "identity_access_security",
+      "job": "jobs/identity_access_security.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/identity_access_security/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/identity_access_security/latest.json"
+      },
+      "description": "Weekly identity & access \u2014 FMP OKTA/SAIL/Yubico/OSPN + USASpending."
+    },
+    {
+      "id": "identity_access_security_forums",
+      "job": "jobs/identity_access_security_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Sun"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/identity_access_security_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/identity_access_security_forums/latest.json"
+      },
+      "description": "Weekly identity forums (Arctic Shift cybersecurity+identitymanagement+sysadmin)."
+    },
+    {
+      "id": "data_security_recovery",
+      "job": "jobs/data_security_recovery.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/data_security_recovery/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/data_security_recovery/latest.json"
+      },
+      "description": "Weekly data security & recovery \u2014 FMP MSP/storage + ransomware.live + ransomware KEV + USASpending."
+    },
+    {
+      "id": "data_security_recovery_forums",
+      "job": "jobs/data_security_recovery_forums.py",
+      "enabled": true,
+      "hosts": [
+        "vps",
+        "any"
+      ],
+      "cadence": "weekly",
+      "due": {
+        "weekdays": [
+          "Tue"
+        ],
+        "max_age_days": 8
+      },
+      "freshness": {
+        "r2_key": "themedata/data_security_recovery_forums/metrics_latest.json",
+        "as_of_field": "as_of",
+        "local_relative": "data/data_security_recovery_forums/latest.json"
+      },
+      "description": "Weekly data-security forums (Arctic Shift cybersecurity+sysadmin+msp)."
     }
   ]
 }

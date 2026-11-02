@@ -211,6 +211,16 @@ def persist_catalog_ticker(
         catalog_path.write_text(json.dumps(cat, indent=2) + "\n", encoding="utf-8")
 
 
+def stamp_contract_close(meta: dict[str, Any], mm: dict[str, Any]) -> None:
+    """Copy Kalshi close onto catalog meta for ``series_shell`` / chart caption."""
+    ct = mm.get("close_time") or mm.get("expiration_time")
+    if not ct:
+        return
+    day = str(ct)[:10]
+    if len(day) == 10 and day[4] == "-" and day[7] == "-":
+        meta["contract_close"] = day
+
+
 def fetch_from_meta(
     meta: dict[str, Any],
     *,
@@ -238,6 +248,7 @@ def fetch_from_meta(
         pts, mm = kalshilib.fetch_daily_probability(
             series_ticker=series_t, market_ticker=ticker
         )
+        stamp_contract_close(meta, mm)
         if start:
             pts = [p for p in pts if p["date"] >= start]
         note = (
@@ -277,6 +288,7 @@ def fetch_from_meta(
         mm["fetched_at"] = fetched_at
     mm["match"] = match
     write_meta(out_dir, key, r2_prefix, mm)
+    stamp_contract_close(meta, mm)
     if resolved:
         meta["kalshi_ticker"] = resolved
         if mm.get("rolled"):

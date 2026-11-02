@@ -433,8 +433,8 @@
       "notes": "Multi-pack: space_launch + dew_defense source_pack. Forums not in score. Skip NOC awards. Awards 0.20+0.15; defense/GPR 0.20+0.15 so federal lumpiness does not dominate."
     },
     {
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "score_id": "optical_fiber_backdrop",
       "label": "Optical & fiber backdrop",
       "pack": "optical_fiber",
@@ -685,8 +685,8 @@
       "notes": "Forums not in score. USASpending incomplete months excluded from as_of."
     },
     {
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "score_id": "home_improvement_backdrop",
       "label": "Home improvement backdrop",
       "pack": "home_improvement",
@@ -1007,8 +1007,8 @@
       "notes": "v1: FRED + Ramp page scrape. Vendor/Census overlays chart-only. Forums not in score."
     },
     {
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "score_id": "political_spend_backdrop",
       "label": "Political spend backdrop",
       "pack": "political_spend",
@@ -3238,8 +3238,8 @@
       "notes": "Transcripts + forums + ClaudeBot Radar + OpenAI overlay chart-only. CRM cloud via seat_based attach."
     },
     {
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "score_id": "vuln_exposure_asm_backdrop",
       "label": "Vuln / exposure ASM backdrop",
       "pack": "vuln_exposure_asm",
@@ -4578,6 +4578,504 @@
         }
       ],
       "notes": "Kalshi/forums/wiki/HH/machinery PPI chart-only. CapEx negative = reinvestment pressure. Sparse FMP segments (HP Intl, NBR Intl, Rig Tech) disabled in score \u2014 keep on boards. WTI kept (real oil rally). Excludes PTEN Completion."
+    },
+    {
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "score_id": "vaccine_makers_backdrop",
+      "label": "Vaccine makers backdrop",
+      "pack": "vaccine_makers",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Avoid COVID-cliff mash (pure-play sum / BNTX+NVAX YoY). Prefer MRNA + EBS product + CT.gov + USASpending; NIS coverage when YoY exists. Transcripts/contracts chart-leaning."
+      },
+      "components": [
+        {
+          "series_key": "cdc_nis_flu_coverage",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Adult flu coverage \u2014 seasonal franchise uptake (activates once ~52w history)."
+        },
+        {
+          "series_key": "cdc_nis_rsv_coverage",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Adult RSV coverage \u2014 Arexvy/Abrysvo/mRESVIA pulse."
+        },
+        {
+          "series_key": "cdc_nis_flu_refusal",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": -1.0,
+          "enabled": true,
+          "rationale": "Rising refusal intent \u2192 hesitancy / Bear1."
+        },
+        {
+          "series_key": "mrna_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Moderna company revenue \u2014 cleaner than BNTX/NVAX pandemic hangover."
+        },
+        {
+          "series_key": "ebs_product_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Emergent product (biodefense commercial) \u2014 not grants cliff."
+        },
+        {
+          "series_key": "clinicaltrials_infectious_vaccines",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "New infectious-disease vaccine trial posts \u2014 pipeline breadth."
+        },
+        {
+          "series_key": "usaspending_vaccine_biodefense",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal vaccine/biodefense obligations."
+        },
+        {
+          "series_key": "vaccine_pureplay_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "DISABLED \u2014 BNTX/NVAX COVID-cliff YoY floors the blend; keep as chart stack."
+        },
+        {
+          "series_key": "nvax_nuvaxovid_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.06,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "DISABLED \u2014 only 2 prints; no stable YoY yet."
+        },
+        {
+          "series_key": "ebs_contracts_grants",
+          "metric": "yoy_pct",
+          "weight": 0.06,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "DISABLED for now \u2014 lumpy tiny $ grants YoY; prefer product + USASpending."
+        },
+        {
+          "series_key": "vaccine_franchise_transcripts",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": false,
+          "rationale": "DISABLED \u2014 YoY still comparing to peak COVID-call intensity; chart-only."
+        },
+        {
+          "series_key": "kalshi_cdc_flu_rec_ended",
+          "metric": "yoy_pct",
+          "weight": 0.06,
+          "polarity": -1.0,
+          "enabled": false,
+          "rationale": "DISABLED until Kalshi has ~1y path for YoY \u2014 keep chart-only (raw odds are not YoY-clipped signals)."
+        }
+      ],
+      "notes": "v2: drop pure-play/transcript/contracts cliff legs from score. NIS YoY activates ~52w. MRNA annual COVID/RSV chart-only until multi-year prints."
+    },
+    {
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "score_id": "data_analytics_bi_backdrop",
+      "label": "Data analytics & BI backdrop",
+      "pack": "data_analytics_bi",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "PLTR Commercial + CRM Integration & Analytics + SAP Cloud + pure-play sum + software IPP + Ramp AI; USASpending soft. Kalshi/forums/wiki/transcripts/SO chart-only."
+      },
+      "components": [
+        {
+          "series_key": "pltr_commercial_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "PLTR Commercial rising \u2192 enterprise Foundry/AIP demand."
+        },
+        {
+          "series_key": "crm_integration_analytics_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "seat_based_pricing",
+          "rationale": "CRM Integration & Analytics rising \u2192 Tableau franchise."
+        },
+        {
+          "series_key": "sap_cloud_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "SAP Cloud rising \u2192 Joule / Business Data Cloud pulse."
+        },
+        {
+          "series_key": "bi_pureplay_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "AMPL+SMWB+DOMO revenue rising \u2192 pure-play analytics demand."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise analytics CapEx."
+        },
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "Ramp AI adoption rising \u2192 agentic analytics demand."
+        },
+        {
+          "series_key": "usaspending_palantir_analytics",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal Palantir/analytics obligations rising \u2192 gov demand."
+        }
+      ],
+      "notes": "Kalshi AI bill + transcripts + SO tags + forums + wiki + JP adjacency chart-only. MSFT Power BI via transcripts only (no FMP BI segment). CRM Sales/Service stay on seat-based."
+    },
+    {
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "score_id": "upstream_ai_materials_backdrop",
+      "label": "Upstream AI materials backdrop",
+      "pack": "upstream_ai_materials",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "ROG AES + TW CCL + ENTG MS + Fulltech/Co-Tech + foil imports + GLW OptComm + CC Thermal soft + ESI soft + CapEx + TW/KR; glass soft. Shengyi/Shin-Etsu/DD/ABF/named forums/Kalshi chart-only."
+      },
+      "components": [
+        {
+          "series_key": "rog_aes_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ROG AES rising \u2192 high-end laminate / AI board materials demand."
+        },
+        {
+          "series_key": "tw_ccl_laminate_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Elite+ITEQ+TUC rising \u2192 TW CCL/laminate pure-play demand."
+        },
+        {
+          "series_key": "entg_materials_solutions_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ENTG Materials Solutions rising \u2192 advanced packaging / specialty chem demand."
+        },
+        {
+          "series_key": "fulltech_1815_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Fulltech rising \u2192 electronic fiberglass / T-glass adjacency."
+        },
+        {
+          "series_key": "cotech_8358_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Co-Tech rising \u2192 electronic copper foil scarcity pulse."
+        },
+        {
+          "series_key": "hs7410_copper_foil_imports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "HS copper foil imports rising \u2192 foil trade / scarcity pulse."
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "optical_fiber",
+          "rationale": "Hyperscaler CapEx rising \u2192 AI server materials demand envelope."
+        },
+        {
+          "series_key": "glw_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "optical_fiber",
+          "rationale": "GLW Optical Communications rising \u2192 AI optical/glass interconnect materials."
+        },
+        {
+          "series_key": "esi_electronics_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ESI Electronics rising \u2192 plating / interconnect chemistry demand (soft)."
+        },
+        {
+          "series_key": "cc_thermal_specialized_solutions_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.04,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Chemours Thermal & Specialized rising \u2192 AI liquid-cooling fluorochem demand (soft)."
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_cxl",
+          "rationale": "TW semi exports rising \u2192 electronics BOM for CCL/foil."
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.03,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_cxl",
+          "rationale": "KR semi exports rising \u2192 regional electronics cycle."
+        },
+        {
+          "series_key": "hs701912_glass_fiber_imports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.03,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Glass fiber imports rising \u2192 fiberglass yarn feedstock (soft)."
+        }
+      ],
+      "notes": "Shengyi/Shin-Etsu company totals + DD E&I + semis_abf_mentions + named forum brands + Kalshi/transcripts/wiki/USASpending chart-only. Same-theme relevance wins over cross-theme uniqueness \u2014 GLW OptComm reused from optical_fiber on purpose."
+    },
+    {
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "score_id": "identity_access_security_backdrop",
+      "label": "Identity & access security backdrop",
+      "pack": "identity_access_security",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "OKTA+SAIL+CYBR IAM/IGA/PAM + Yubico + OneSpan + TENB soft + PANW/CRWD sub reuse + software IPP; USASpending soft. Kalshi/forums/wiki/transcripts/GitHub chart-only."
+      },
+      "components": [
+        {
+          "series_key": "okta_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Okta revenue rising \u2192 workforce/customer IdP demand."
+        },
+        {
+          "series_key": "sail_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "SailPoint revenue rising \u2192 IGA / Agentic Fabric demand."
+        },
+        {
+          "series_key": "cybr_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "CyberArk revenue rising \u2192 PAM / privilege demand."
+        },
+        {
+          "series_key": "yubico_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Yubico rising \u2192 phishing-resistant FIDO2/passkey hardware."
+        },
+        {
+          "series_key": "ospn_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "OneSpan revenue rising \u2192 Digipass / auth demand (continuous totals)."
+        },
+        {
+          "series_key": "panw_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "PANW subscription rising \u2192 platform + CyberArk identity."
+        },
+        {
+          "series_key": "crwd_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "CRWD subscription rising \u2192 Falcon Identity adjacency."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise identity CapEx."
+        },
+        {
+          "series_key": "tenb_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Tenable subscription rising \u2192 Identity Exposure adjacency (soft)."
+        },
+        {
+          "series_key": "usaspending_identity_access",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal IAM/ZT obligations rising \u2192 compliance demand (soft)."
+        }
+      ],
+      "notes": "Kalshi Okta + transcripts + forums + wiki + GitHub chart-only. MSFT Entra via transcripts only. Differs from agent_gov NHI/ZT-cloud score and seat_based seat SaaS score."
+    },
+    {
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "score_id": "data_security_recovery_backdrop",
+      "label": "Data security & recovery backdrop",
+      "pack": "data_security_recovery",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Resilience SaaS (reuse) + MSP SaaS + storage cyber recovery + ransomware.live + ransomware KEV; soft USASpending + IPP + Item 1.05. Forums/wiki/transcripts chart-only."
+      },
+      "components": [
+        {
+          "series_key": "cyber_resilience_saas",
+          "metric": "yoy_pct",
+          "weight": 1.5,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "agent_governance_zt",
+          "rationale": "RBRK+CVLT+VRNS SaaS rising \u2192 cyber resilience / DSPM demand."
+        },
+        {
+          "series_key": "msp_data_security_saas",
+          "metric": "yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "AVPT+NABL rising \u2192 MSP / M365 data-security recovery path."
+        },
+        {
+          "series_key": "storage_cyber_recovery",
+          "metric": "yoy_pct",
+          "weight": 0.8,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NTAP Public Cloud + PSTG Product rising \u2192 immutable storage."
+        },
+        {
+          "series_key": "ransomware_live_weekly_victims",
+          "metric": "wma4",
+          "weight": 0.6,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Leak-site victim claims rising \u2192 recovery urgency / demand."
+        },
+        {
+          "series_key": "cisa_kev_ransomware_weekly_adds",
+          "metric": "wma4",
+          "weight": 0.4,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Ransomware-tagged KEV adds rising \u2192 exploit-driven recovery."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.35,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise security CapEx."
+        },
+        {
+          "series_key": "sec_item105_8k_count",
+          "metric": "m3_avg",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "Item 1.05 filings rising \u2192 disclosure / resilience spend."
+        },
+        {
+          "series_key": "usaspending_cyber_recovery",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal cyber recovery awards rising \u2192 compliance demand (soft)."
+        }
+      ],
+      "notes": "Forums + wiki + transcripts chart-only. Differs from vuln all-KEV, identity IdP/PAM, and agent_gov NHI/ZT-cloud primary scores."
     }
   ],
   "scores": [
@@ -5007,8 +5505,8 @@
       "notes": "Multi-pack: space_launch + dew_defense source_pack. Forums not in score. Skip NOC awards. Awards 0.20+0.15; defense/GPR 0.20+0.15 so federal lumpiness does not dominate."
     },
     {
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "score_id": "optical_fiber_backdrop",
       "label": "Optical & fiber backdrop",
       "pack": "optical_fiber",
@@ -5259,8 +5757,8 @@
       "notes": "Forums not in score. USASpending incomplete months excluded from as_of."
     },
     {
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "score_id": "home_improvement_backdrop",
       "label": "Home improvement backdrop",
       "pack": "home_improvement",
@@ -5581,8 +6079,8 @@
       "notes": "v1: FRED + Ramp page scrape. Vendor/Census overlays chart-only. Forums not in score."
     },
     {
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "score_id": "political_spend_backdrop",
       "label": "Political spend backdrop",
       "pack": "political_spend",
@@ -7812,8 +8310,8 @@
       "notes": "Transcripts + forums + ClaudeBot Radar + OpenAI overlay chart-only. CRM cloud via seat_based attach."
     },
     {
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "score_id": "vuln_exposure_asm_backdrop",
       "label": "Vuln / exposure ASM backdrop",
       "pack": "vuln_exposure_asm",
@@ -8017,6 +8515,391 @@
         }
       ],
       "notes": "Forums + openFDA + USASpending + NIH chart-only. Reuse PubMed liquid biopsy attach optional."
+    },
+    {
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "score_id": "data_analytics_bi_backdrop",
+      "label": "Data analytics & BI backdrop",
+      "pack": "data_analytics_bi",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "PLTR Commercial + CRM Integration & Analytics + SAP Cloud + pure-play sum + software IPP + Ramp AI; USASpending soft. Kalshi/forums/wiki/transcripts/SO chart-only."
+      },
+      "components": [
+        {
+          "series_key": "pltr_commercial_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.2,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "PLTR Commercial rising \u2192 enterprise Foundry/AIP demand."
+        },
+        {
+          "series_key": "crm_integration_analytics_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "seat_based_pricing",
+          "rationale": "CRM Integration & Analytics rising \u2192 Tableau franchise."
+        },
+        {
+          "series_key": "sap_cloud_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.14,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "SAP Cloud rising \u2192 Joule / Business Data Cloud pulse."
+        },
+        {
+          "series_key": "bi_pureplay_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "AMPL+SMWB+DOMO revenue rising \u2192 pure-play analytics demand."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise analytics CapEx."
+        },
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "Ramp AI adoption rising \u2192 agentic analytics demand."
+        },
+        {
+          "series_key": "usaspending_palantir_analytics",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal Palantir/analytics obligations rising \u2192 gov demand."
+        }
+      ],
+      "notes": "Kalshi AI bill + transcripts + SO tags + forums + wiki + JP adjacency chart-only. MSFT Power BI via transcripts only (no FMP BI segment). CRM Sales/Service stay on seat-based."
+    },
+    {
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "score_id": "upstream_ai_materials_backdrop",
+      "label": "Upstream AI materials backdrop",
+      "pack": "upstream_ai_materials",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 25.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "ROG AES + TW CCL + ENTG MS + Fulltech/Co-Tech + foil imports + GLW OptComm + CC Thermal soft + ESI soft + CapEx + TW/KR; glass soft. Shengyi/Shin-Etsu/DD/ABF/named forums/Kalshi chart-only."
+      },
+      "components": [
+        {
+          "series_key": "rog_aes_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ROG AES rising \u2192 high-end laminate / AI board materials demand."
+        },
+        {
+          "series_key": "tw_ccl_laminate_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Elite+ITEQ+TUC rising \u2192 TW CCL/laminate pure-play demand."
+        },
+        {
+          "series_key": "entg_materials_solutions_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ENTG Materials Solutions rising \u2192 advanced packaging / specialty chem demand."
+        },
+        {
+          "series_key": "fulltech_1815_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Fulltech rising \u2192 electronic fiberglass / T-glass adjacency."
+        },
+        {
+          "series_key": "cotech_8358_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Co-Tech rising \u2192 electronic copper foil scarcity pulse."
+        },
+        {
+          "series_key": "hs7410_copper_foil_imports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.09,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "HS copper foil imports rising \u2192 foil trade / scarcity pulse."
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "optical_fiber",
+          "rationale": "Hyperscaler CapEx rising \u2192 AI server materials demand envelope."
+        },
+        {
+          "series_key": "glw_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "optical_fiber",
+          "rationale": "GLW Optical Communications rising \u2192 AI optical/glass interconnect materials."
+        },
+        {
+          "series_key": "esi_electronics_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "ESI Electronics rising \u2192 plating / interconnect chemistry demand (soft)."
+        },
+        {
+          "series_key": "cc_thermal_specialized_solutions_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.04,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Chemours Thermal & Specialized rising \u2192 AI liquid-cooling fluorochem demand (soft)."
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_cxl",
+          "rationale": "TW semi exports rising \u2192 electronics BOM for CCL/foil."
+        },
+        {
+          "series_key": "korea_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.03,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "memory_cxl",
+          "rationale": "KR semi exports rising \u2192 regional electronics cycle."
+        },
+        {
+          "series_key": "hs701912_glass_fiber_imports",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.03,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Glass fiber imports rising \u2192 fiberglass yarn feedstock (soft)."
+        }
+      ],
+      "notes": "Shengyi/Shin-Etsu company totals + DD E&I + semis_abf_mentions + named forum brands + Kalshi/transcripts/wiki/USASpending chart-only. Same-theme relevance wins over cross-theme uniqueness \u2014 GLW OptComm reused from optical_fiber on purpose."
+    },
+    {
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "score_id": "identity_access_security_backdrop",
+      "label": "Identity & access security backdrop",
+      "pack": "identity_access_security",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "OKTA+SAIL+CYBR IAM/IGA/PAM + Yubico + OneSpan + TENB soft + PANW/CRWD sub reuse + software IPP; USASpending soft. Kalshi/forums/wiki/transcripts/GitHub chart-only."
+      },
+      "components": [
+        {
+          "series_key": "okta_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.18,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Okta revenue rising \u2192 workforce/customer IdP demand."
+        },
+        {
+          "series_key": "sail_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.16,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "SailPoint revenue rising \u2192 IGA / Agentic Fabric demand."
+        },
+        {
+          "series_key": "cybr_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "CyberArk revenue rising \u2192 PAM / privilege demand."
+        },
+        {
+          "series_key": "yubico_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.12,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Yubico rising \u2192 phishing-resistant FIDO2/passkey hardware."
+        },
+        {
+          "series_key": "ospn_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "OneSpan revenue rising \u2192 Digipass / auth demand (continuous totals)."
+        },
+        {
+          "series_key": "panw_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.1,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "PANW subscription rising \u2192 platform + CyberArk identity."
+        },
+        {
+          "series_key": "crwd_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "CRWD subscription rising \u2192 Falcon Identity adjacency."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.08,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise identity CapEx."
+        },
+        {
+          "series_key": "tenb_subscription_revenue",
+          "metric": "yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Tenable subscription rising \u2192 Identity Exposure adjacency (soft)."
+        },
+        {
+          "series_key": "usaspending_identity_access",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.05,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal IAM/ZT obligations rising \u2192 compliance demand (soft)."
+        }
+      ],
+      "notes": "Kalshi Okta + transcripts + forums + wiki + GitHub chart-only. MSFT Entra via transcripts only. Differs from agent_gov NHI/ZT-cloud score and seat_based seat SaaS score."
+    },
+    {
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "score_id": "data_security_recovery_backdrop",
+      "label": "Data security & recovery backdrop",
+      "pack": "data_security_recovery",
+      "status": "active",
+      "signal": {
+        "yoy_clip_pct": 20.0,
+        "exclude_incomplete_month": true,
+        "history_smooth_months": 3,
+        "note": "Resilience SaaS (reuse) + MSP SaaS + storage cyber recovery + ransomware.live + ransomware KEV; soft USASpending + IPP + Item 1.05. Forums/wiki/transcripts chart-only."
+      },
+      "components": [
+        {
+          "series_key": "cyber_resilience_saas",
+          "metric": "yoy_pct",
+          "weight": 1.5,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "agent_governance_zt",
+          "rationale": "RBRK+CVLT+VRNS SaaS rising \u2192 cyber resilience / DSPM demand."
+        },
+        {
+          "series_key": "msp_data_security_saas",
+          "metric": "yoy_pct",
+          "weight": 1.0,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "AVPT+NABL rising \u2192 MSP / M365 data-security recovery path."
+        },
+        {
+          "series_key": "storage_cyber_recovery",
+          "metric": "yoy_pct",
+          "weight": 0.8,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "NTAP Public Cloud + PSTG Product rising \u2192 immutable storage."
+        },
+        {
+          "series_key": "ransomware_live_weekly_victims",
+          "metric": "wma4",
+          "weight": 0.6,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Leak-site victim claims rising \u2192 recovery urgency / demand."
+        },
+        {
+          "series_key": "cisa_kev_ransomware_weekly_adds",
+          "metric": "wma4",
+          "weight": 0.4,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Ransomware-tagged KEV adds rising \u2192 exploit-driven recovery."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "weight": 0.35,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "ai_resilient_software",
+          "rationale": "US software IPP rising \u2192 enterprise security CapEx."
+        },
+        {
+          "series_key": "sec_item105_8k_count",
+          "metric": "m3_avg",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "source_pack": "cybersecurity_software",
+          "rationale": "Item 1.05 filings rising \u2192 disclosure / resilience spend."
+        },
+        {
+          "series_key": "usaspending_cyber_recovery",
+          "metric": "m3_avg_yoy_pct",
+          "weight": 0.25,
+          "polarity": 1.0,
+          "enabled": true,
+          "rationale": "Federal cyber recovery awards rising \u2192 compliance demand (soft)."
+        }
+      ],
+      "notes": "Forums + wiki + transcripts chart-only. Differs from vuln all-KEV, identity IdP/PAM, and agent_gov NHI/ZT-cloud primary scores."
     }
   ]
 }

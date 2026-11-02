@@ -543,8 +543,8 @@
     },
     {
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "recipes": [
         {
@@ -650,8 +650,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "COHR",
       "recipes": [
         {
@@ -683,8 +683,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "LITE",
       "recipes": [
         {
@@ -716,8 +716,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "CIEN",
       "recipes": [
         {
@@ -749,8 +749,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "GLW",
       "recipes": [
         {
@@ -782,8 +782,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "PRYMY",
       "recipes": [
         {
@@ -1504,8 +1504,8 @@
     },
     {
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null,
       "recipes": [
         {
@@ -1633,8 +1633,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "HD",
       "recipes": [
         {
@@ -1681,8 +1681,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LOW",
       "recipes": [
         {
@@ -1729,8 +1729,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "FND",
       "recipes": [
         {
@@ -1772,8 +1772,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "TSCO",
       "recipes": [
         {
@@ -1820,8 +1820,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LESL",
       "recipes": [
         {
@@ -3237,8 +3237,8 @@
     },
     {
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null,
       "recipes": [
         {
@@ -3335,8 +3335,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "STGW",
       "recipes": [
         {
@@ -3353,8 +3353,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "IPS.PA",
       "recipes": [
         {
@@ -3371,8 +3371,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "OMC",
       "recipes": [
         {
@@ -3389,8 +3389,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "PUB.PA",
       "recipes": [
         {
@@ -3407,8 +3407,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "WPP.LSE",
       "recipes": [
         {
@@ -4283,8 +4283,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "INFN",
       "recipes": [
         {
@@ -13009,8 +13009,8 @@
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "recipes": [
         {
@@ -13152,8 +13152,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "recipes": [
         {
@@ -13175,8 +13175,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "QLYS",
       "recipes": [
         {
@@ -13193,8 +13193,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "recipes": [
         {
@@ -13216,8 +13216,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CRWD",
       "recipes": [
         {
@@ -13234,8 +13234,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "PANW",
       "recipes": [
         {
@@ -13252,8 +13252,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "FTNT",
       "recipes": [
         {
@@ -13270,8 +13270,8 @@
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CHKP",
       "recipes": [
         {
@@ -17149,6 +17149,1442 @@
       "recipes": [
         {
           "series_key": "adro_sr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "cdc_nis_flu_coverage",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "CDC adult flu coverage is the free weekly uptake pulse for seasonal respiratory franchises."
+        },
+        {
+          "series_key": "cdc_nis_rsv_coverage",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Adult RSV coverage (50+) tracks Arexvy / Abrysvo / mRESVIA eligible-population absorption."
+        },
+        {
+          "series_key": "cdc_nis_covid_coverage",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "COVID booster coverage is the demand backdrop for Spikevax / Comirnaty / Nuvaxovid."
+        },
+        {
+          "series_key": "cdc_nis_flu_refusal",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Flu refusal intent is the free hesitancy / confidence bear proxy (Bear1)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Vaccine pure-play revenue",
+          "series_keys": [
+            "mrna_revenue",
+            "bntx_revenue",
+            "nvax_revenue",
+            "ebs_revenue"
+          ],
+          "sum_series_key": "vaccine_pureplay_revenue",
+          "section": "primary",
+          "why_it_matters": "Pure-play vaccine revenue (ex-MRK/PFE mega-blobs) is the commercial proof of theme trajectory."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Moderna COVID + RSV",
+          "series_keys": [
+            "mrna_covid_revenue",
+            "mrna_rsv_revenue"
+          ],
+          "sum_series_key": "mrna_respiratory_franchise",
+          "section": "primary",
+          "why_it_matters": "MRNA annual COVID vs RSV splits the post-pandemic franchise mix (Bull1 adult RSV)."
+        },
+        {
+          "series_key": "nvax_nuvaxovid_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Nuvaxovid is the protein COVID commercial print \u2014 differentiates from mRNA peers."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Emergent product + contracts",
+          "series_keys": [
+            "ebs_product_revenue",
+            "ebs_contracts_grants"
+          ],
+          "section": "primary",
+          "why_it_matters": "EBS Product + Contracts/Grants is the biodefense / BARDA stockpile franchise (Bull3)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Valneva travel vaccines",
+          "series_keys": [
+            "valn_ixiaro_revenue",
+            "valn_dukoral_revenue"
+          ],
+          "sum_series_key": "valn_travel_vaccine_revenue",
+          "section": "primary",
+          "why_it_matters": "IXIARO + DUKORAL are rare public travel / vector-borne vaccine prints."
+        },
+        {
+          "series_key": "vaccine_franchise_transcripts",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Earnings-call hits on Gardasil / Shingrix / Arexvy / Prevnar / Spikevax / ACIP proxy big-pharma vaccine narrative where FMP segments fail."
+        },
+        {
+          "series_key": "clinicaltrials_infectious_vaccines",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "New infectious-disease vaccine trial posts track pipeline breadth (ex-oncology cancer vaccines)."
+        },
+        {
+          "series_key": "usaspending_vaccine_biodefense",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Federal vaccine/biodefense obligations are the free procurement pulse for EBS / stockpile names."
+        },
+        {
+          "series_key": "census_vaccine_imports_hs300220",
+          "metric": "m3_avg",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "HS 300220 human vaccine imports are a soft supply / trade backdrop."
+        },
+        {
+          "series_key": "kalshi_cdc_flu_rec_ended",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Kalshi odds that CDC ends the flu recommendation price ACIP / policy risk (Bear1)."
+        },
+        {
+          "series_key": "kalshi_mpox_cases_2026",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Elevated mpox case odds are optional demand for JYNNEOS / BAVA-class biodefense."
+        },
+        {
+          "series_key": "vm_vaccine_talk_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "display_name": "Forum adult vaccine talk",
+          "why_it_matters": "Pharmacy/biotech forum talk on adult immunization tracks field sentiment ahead of lagged quarterlies."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum named franchise mentions",
+          "series_keys": [
+            "vm_shingrix_arexvy_mentions",
+            "vm_pneumococcal_mentions",
+            "vm_mrna_covid_mentions"
+          ],
+          "section": "primary",
+          "why_it_matters": "Named franchise chatter separates RSV/shingles vs pneumo vs mRNA COVID attention."
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRNA",
+      "recipes": [
+        {
+          "series_key": "mrna_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mrna_covid_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "mrna_rsv_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "BNTX",
+      "recipes": [
+        {
+          "series_key": "bntx_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "NVAX",
+      "recipes": [
+        {
+          "series_key": "nvax_nuvaxovid_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "nvax_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "EBS",
+      "recipes": [
+        {
+          "series_key": "ebs_product_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ebs_contracts_grants",
+          "metric": "raw",
+          "chart_type": "line"
+        },
+        {
+          "series_key": "ebs_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN",
+      "recipes": [
+        {
+          "series_key": "valn_ixiaro_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "valn_dukoral_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN.PA",
+      "recipes": [
+        {
+          "series_key": "valn_ixiaro_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "valn_dukoral_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Palantir Commercial + Government",
+          "series_keys": [
+            "pltr_commercial_revenue",
+            "pltr_government_revenue"
+          ],
+          "sum_series_key": "pltr_segment_stack",
+          "section": "primary",
+          "why_it_matters": "Commercial vs Government splits the sovereignty / Foundry enterprise expansion story from USG Gotham concentration."
+        },
+        {
+          "series_key": "crm_integration_analytics_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Salesforce Integration & Analytics is the cleanest public Tableau / MuleSoft-adjacent franchise print (reused from seat-based)."
+        },
+        {
+          "series_key": "sap_cloud_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "SAP Cloud is the Joule / Business Data Cloud monetization proxy where FMP has no BI-only cut."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Analytics pure-play revenue",
+          "series_keys": [
+            "ampl_revenue",
+            "smwb_revenue",
+            "domo_revenue"
+          ],
+          "sum_series_key": "bi_pureplay_revenue",
+          "section": "primary",
+          "why_it_matters": "AMPL + SMWB + DOMO are the public product-analytics / digital-intel / BI pure-plays (ex CRM/MSFT/SAP mega-blobs)."
+        },
+        {
+          "series_key": "pltr_commercial_share",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Rising Commercial share of Palantir revenue confirms enterprise expansion beyond government concentration."
+        },
+        {
+          "series_key": "analytics_bi_transcripts",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Earnings-call hits on Tableau / Power BI / Fabric / Foundry / Agentforce / Joule proxy MSFT and CRM analytics narrative where FMP segments fail."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Stack Overflow BI/analytics questions",
+          "series_keys": [
+            "so_tableau_questions",
+            "so_powerbi_questions",
+            "so_amplitude_questions",
+            "so_microsoft_fabric_questions"
+          ],
+          "sum_series_key": "so_bi_tag_stack",
+          "section": "primary",
+          "why_it_matters": "Practitioner question volume on Tableau / Power BI / Amplitude / Microsoft Fabric is the free developer-adoption pulse (not OTel)."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "US software IPP investment is the macro budget envelope for analytics platforms (reused from ai_resilient)."
+        },
+        {
+          "series_key": "ramp_ai_adoption",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Ramp AI adoption is a high-frequency read on agentic tooling demand that lifts analytics / outcome pricing."
+        },
+        {
+          "series_key": "information_job_openings",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Information-sector job openings proxy analytics / knowledge-worker buyer labor (reused from ai_resilient)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Open-source BI releases (Superset+Metabase)",
+          "series_keys": [
+            "github_releases_apache_superset",
+            "github_releases_metabase"
+          ],
+          "sum_series_key": "github_releases_open_bi",
+          "section": "primary",
+          "why_it_matters": "Apache Superset + Metabase release cadence is free open-BI competitive pressure on commercial Tableau / Power BI franchises."
+        },
+        {
+          "series_key": "usaspending_palantir_analytics",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Federal Palantir / Foundry / analytics obligations are the free gov demand pulse for the sovereignty thesis."
+        },
+        {
+          "series_key": "kalshi_federal_ai_legislation",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Kalshi odds of federal AI legislation price compliance / sovereignty policy risk for analytics platforms."
+        },
+        {
+          "series_key": "bi_talk_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "display_name": "Forum BI/analytics talk",
+          "why_it_matters": "Reddit BI/analytics talk on dataeng / BI / PowerBI tracks practitioner attention ahead of lagged quarterlies."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum named product mentions",
+          "series_keys": [
+            "bi_tableau_mentions",
+            "bi_powerbi_mentions",
+            "bi_amplitude_mentions",
+            "bi_palantir_mentions"
+          ],
+          "section": "primary",
+          "why_it_matters": "Named Tableau / Power BI / Amplitude / Palantir chatter separates franchise attention in practitioner forums."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum community volume",
+          "series_keys": [
+            "bi_dataengineering_sub_posts",
+            "bi_businessintelligence_sub_posts",
+            "bi_powerbi_sub_posts"
+          ],
+          "section": "primary",
+          "why_it_matters": "Community volume across dataeng / BI / PowerBI is the umbrella practitioner traffic backdrop."
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "PLTR",
+      "recipes": [
+        {
+          "series_key": "pltr_commercial_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pltr_government_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "pltr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "SAP",
+      "recipes": [
+        {
+          "series_key": "sap_cloud_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "AMPL",
+      "recipes": [
+        {
+          "series_key": "ampl_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "SMWB",
+      "recipes": [
+        {
+          "series_key": "smwb_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "DOMO",
+      "recipes": [
+        {
+          "series_key": "domo_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "domo_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "HUCK",
+      "recipes": [
+        {
+          "series_key": "domo_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "domo_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "CRM",
+      "recipes": [
+        {
+          "series_key": "crm_integration_analytics_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "3655.T",
+      "recipes": [
+        {
+          "series_key": "brainpad_3655_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "4422.T",
+      "recipes": [
+        {
+          "series_key": "valuenex_4422_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "4432.T",
+      "recipes": [
+        {
+          "series_key": "wingarc_4432_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "recipes": [
+        {
+          "series_key": "rog_aes_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Rogers Advanced Electronics Solutions is the cleanest public high-frequency laminate / AI-board materials cut."
+        },
+        {
+          "series_key": "tw_ccl_laminate_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Elite + ITEQ + TUC sum is the TW high-end CCL/laminate pure-play stack (ex Taiflex FPC)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "TW CCL/laminate revenue by name",
+          "series_keys": [
+            "elite_material_2383_revenue",
+            "iteq_6213_revenue",
+            "tuc_6274_revenue"
+          ],
+          "sum_series_key": "tw_ccl_laminate_revenue",
+          "section": "primary",
+          "why_it_matters": "Named Elite / ITEQ / TUC layers show who is absorbing AI server board materials demand."
+        },
+        {
+          "series_key": "entg_materials_solutions_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Entegris Materials Solutions is the cleanest public advanced packaging / specialty chem franchise pulse on the theme."
+        },
+        {
+          "series_key": "esi_electronics_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Element Solutions Electronics tracks plating / interconnect chemistry demand into AI boards and packaging."
+        },
+        {
+          "series_key": "glw_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Corning Optical Communications (reused) is the public glass/optical interconnect pulse pulled by AI networking densification."
+        },
+        {
+          "series_key": "cc_thermal_specialized_solutions_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Chemours Thermal & Specialized Solutions tracks AI liquid-cooling / Opteon fluorochemical demand."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "CN/JP materials conglomerate revenue",
+          "series_keys": [
+            "shengyi_600183_revenue",
+            "shin_etsu_4063_revenue"
+          ],
+          "section": "primary",
+          "why_it_matters": "Shengyi CCL + Shin-Etsu materials company totals \u2014 conglomerate but on-theme constituents without clean segment cuts."
+        },
+        {
+          "series_key": "dd_electronics_industrial_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "DuPont Electronics & Industrial is a soft conglomerate backdrop for electronics materials (incl. ABF-adjacent chemistry)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Fiberglass + copper foil pure-plays",
+          "series_keys": [
+            "fulltech_1815_revenue",
+            "cotech_8358_revenue"
+          ],
+          "section": "primary",
+          "why_it_matters": "Fulltech electronic fiberglass + Co-Tech copper foil are the scarce-input pure-plays behind laminates."
+        },
+        {
+          "series_key": "hs7410_copper_foil_imports",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "US copper foil imports (HS 7410xx) are the free trade pulse for electronic foil scarcity."
+        },
+        {
+          "series_key": "hs701912_glass_fiber_imports",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "US glass fiber rovings imports proxy low-CTE / electronic yarn feedstock into laminates."
+        },
+        {
+          "series_key": "hyperscaler_capex",
+          "metric": "yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Hyperscaler CapEx is the AI server demand envelope that pulls specialized board materials (reused)."
+        },
+        {
+          "series_key": "taiwan_semiconductor_exports",
+          "metric": "m3_avg_yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Taiwan semi exports are the regional electronics BOM pulse for CCL/foil demand (reused)."
+        },
+        {
+          "series_key": "upstream_materials_transcripts",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Earnings-call hits on copper foil / CCL / T-glass / ABF track materials narrative intensity at ROG + buyers."
+        },
+        {
+          "series_key": "usaspending_chips_materials",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Federal CHIPS / materials obligations are the free domestic fab-build spillover pulse."
+        },
+        {
+          "series_key": "kalshi_americas_dc_capacity_57_5gw",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Kalshi Americas DC capacity odds price AI infra build risk that pulls upstream materials (reused)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum community volume",
+          "series_keys": [
+            "uam_semiconductors_sub_posts",
+            "uam_chemicalengineering_sub_posts",
+            "uam_hardware_sub_posts"
+          ],
+          "section": "primary",
+          "why_it_matters": "Community volume across semiconductors / chemeng is the umbrella practitioner traffic backdrop."
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ROG",
+      "recipes": [
+        {
+          "series_key": "rog_aes_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "rog_ems_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "rog_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "2383.TW",
+      "recipes": [
+        {
+          "series_key": "elite_material_2383_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "6213.TW",
+      "recipes": [
+        {
+          "series_key": "iteq_6213_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "6274.TWO",
+      "recipes": [
+        {
+          "series_key": "tuc_6274_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "8039.TW",
+      "recipes": [
+        {
+          "series_key": "taiflex_8039_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "1815.TWO",
+      "recipes": [
+        {
+          "series_key": "fulltech_1815_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "1802.TW",
+      "recipes": [
+        {
+          "series_key": "taiwan_glass_1802_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "8358.TWO",
+      "recipes": [
+        {
+          "series_key": "cotech_8358_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "3110.T",
+      "recipes": [
+        {
+          "series_key": "nitto_boseki_3110_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "5384.T",
+      "recipes": [
+        {
+          "series_key": "fujimi_5384_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "4203.T",
+      "recipes": [
+        {
+          "series_key": "sumitomo_bakelite_4203_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ENTG",
+      "recipes": [
+        {
+          "series_key": "entg_materials_solutions_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ESI",
+      "recipes": [
+        {
+          "series_key": "esi_electronics_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "DD",
+      "recipes": [
+        {
+          "series_key": "dd_electronics_industrial_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "CC",
+      "recipes": [
+        {
+          "series_key": "cc_thermal_specialized_solutions_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "600183.SS",
+      "recipes": [
+        {
+          "series_key": "shengyi_600183_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "4063.T",
+      "recipes": [
+        {
+          "series_key": "shin_etsu_4063_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "GLW",
+      "recipes": [
+        {
+          "series_key": "glw_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "IAM/IGA/PAM revenue by name",
+          "series_keys": [
+            "okta_revenue",
+            "sail_revenue",
+            "cybr_revenue"
+          ],
+          "sum_series_key": "identity_iam_iga_revenue",
+          "section": "primary",
+          "why_it_matters": "Okta + SailPoint + CyberArk are the public IdP / IGA / PAM pure-plays at the center of the Agentic Era identity story."
+        },
+        {
+          "series_key": "yubico_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Yubico is the cleanest public phishing-resistant FIDO2 / passkey hardware franchise."
+        },
+        {
+          "series_key": "ospn_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "OneSpan company revenue is the continuous Digipass / auth software pulse \u2014 FMP Subscription segment has a 2022\u201324 hole."
+        },
+        {
+          "series_key": "tenb_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Tenable subscription is a soft Identity Exposure / exposure-management adjacency to the IAM core."
+        },
+        {
+          "series_key": "panw_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "PANW subscription (reused) captures platformization including CyberArk / identity after M&A."
+        },
+        {
+          "series_key": "crwd_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "CRWD subscription (reused) includes Falcon Identity platform adjacency."
+        },
+        {
+          "series_key": "identity_access_transcripts",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Earnings-call hits on IAM / PAM / passkeys / NHI / ITDR track narrative intensity ahead of lagged ARR."
+        },
+        {
+          "series_key": "usaspending_identity_access",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Federal IAM / PAM / Zero Trust obligations are the free compliance-driven demand pulse."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "US software IPP investment is the macro budget envelope for identity platforms (reused)."
+        },
+        {
+          "series_key": "kalshi_okta_cust_100k_acv",
+          "metric": "raw",
+          "chart_type": "line",
+          "section": "primary",
+          "why_it_matters": "Kalshi Okta $100k ACV customer odds price IdP expansion risk (reused, chart-only)."
+        },
+        {
+          "series_key": "ias_iam_talk_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "display_name": "Forum IAM/passkey/NHI talk",
+          "why_it_matters": "Practitioner IAM / PAM / passkey / NHI talk on cyber / identitymanagement / sysadmin."
+        },
+        {
+          "series_key": "ag_nhi_talk_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "display_name": "Forum NHI/agent talk (reused)",
+          "why_it_matters": "NHI / agent-identity talk reused from agent_gov forums \u2014 Agentic Era backdrop."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum named identity mentions",
+          "series_keys": [
+            "ias_okta_mentions",
+            "ias_sailpoint_mentions",
+            "ias_yubikey_mentions",
+            "ias_entra_mentions",
+            "ias_cyberark_mentions"
+          ],
+          "section": "primary",
+          "why_it_matters": "Named Okta / SailPoint / YubiKey / Entra / CyberArk chatter separates franchise attention."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum community volume",
+          "series_keys": [
+            "ias_cybersecurity_sub_posts",
+            "ias_identitymanagement_sub_posts",
+            "ias_sysadmin_sub_posts"
+          ],
+          "section": "primary",
+          "why_it_matters": "Community volume across cybersecurity / identitymanagement / sysadmin is the umbrella practitioner traffic backdrop."
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "OKTA",
+      "recipes": [
+        {
+          "series_key": "okta_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "SAIL",
+      "recipes": [
+        {
+          "series_key": "sail_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "CYBR",
+      "recipes": [
+        {
+          "series_key": "cybr_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "OSPN",
+      "recipes": [
+        {
+          "series_key": "ospn_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        },
+        {
+          "series_key": "ospn_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "YUBICO.ST",
+      "recipes": [
+        {
+          "series_key": "yubico_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "TENB",
+      "recipes": [
+        {
+          "series_key": "tenb_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "recipes": [
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Cyber resilience SaaS (RBRK+CVLT+VRNS)",
+          "series_keys": [
+            "rbrk_subscription_revenue",
+            "cvlt_subscription_revenue",
+            "vrns_saas_revenue"
+          ],
+          "sum_series_key": "cyber_resilience_saas",
+          "section": "primary",
+          "why_it_matters": "Rubrik + Commvault + Varonis are the public cyber-resilience / DSPM SaaS core of the theme (reused from agent_gov)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "MSP / data-security SaaS (AVPT+NABL)",
+          "series_keys": [
+            "avpt_revenue",
+            "nabl_subscription_revenue"
+          ],
+          "sum_series_key": "msp_data_security_saas",
+          "section": "primary",
+          "why_it_matters": "AvePoint + N-able Cove extend the resilience story into Microsoft 365 / SMB-MSP recovery."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Immutable storage / cyber recovery",
+          "series_keys": [
+            "ntap_public_cloud_revenue",
+            "pstg_product_revenue"
+          ],
+          "sum_series_key": "storage_cyber_recovery",
+          "section": "primary",
+          "why_it_matters": "NetApp Public Cloud + Pure Product track hardware-enforced immutability / SafeMode adjacency under CapEx constraints."
+        },
+        {
+          "series_key": "ransomware_live_weekly_victims",
+          "metric": "wma4",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Rising ransomware leak-site claims are the free demand pulse for recovery / immutable backup spend."
+        },
+        {
+          "series_key": "cisa_kev_ransomware_weekly_adds",
+          "metric": "wma4",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "CISA KEV adds tagged Known for ransomware campaign use signal exploit urgency that drives recovery budgets (not all-KEV \u2014 that is the vuln theme)."
+        },
+        {
+          "series_key": "sec_item105_8k_count",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "SEC Item 1.05 cyber incident 8-Ks (reused) push boards toward resilience and disclosure readiness."
+        },
+        {
+          "series_key": "usaspending_cyber_recovery",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Federal cyber recovery / data-protection awards are the compliance-driven demand pulse."
+        },
+        {
+          "series_key": "dsr_transcript_keywords",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Earnings-call hits on DSPM / cleanroom / immutable / ransomware recovery track narrative intensity."
+        },
+        {
+          "series_key": "software_ipp_investment",
+          "metric": "yoy_pct",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "US software IPP (reused) is the macro budget envelope for cyber resilience platforms."
+        },
+        {
+          "series_key": "panw_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "PANW subscription (reused, soft) shows platforms absorbing data-security modules."
+        },
+        {
+          "series_key": "zs_revenue",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Zscaler revenue (reused, soft) tracks Zero Trust / AI Protect adjacency to data security."
+        },
+        {
+          "series_key": "dsr_recovery_talk_mentions",
+          "metric": "raw",
+          "chart_type": "bar",
+          "section": "primary",
+          "display_name": "Forum recovery / DSPM talk",
+          "why_it_matters": "Practitioner recovery / DSPM / cleanroom talk on cyber / sysadmin / msp."
+        },
+        {
+          "chart_type": "multi_line",
+          "metric": "raw",
+          "display_name": "Forum recovery vs named-product sentiment",
+          "series_keys": [
+            "dsr_recovery_talk_sentiment",
+            "dsr_named_sentiment"
+          ],
+          "section": "primary",
+          "why_it_matters": "Sentiment on recovery talk vs named resilience brands (same unit)."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum named resilience mentions",
+          "series_keys": [
+            "dsr_rubrik_mentions",
+            "dsr_commvault_mentions",
+            "dsr_varonis_mentions",
+            "dsr_avepoint_mentions",
+            "dsr_nable_mentions",
+            "dsr_netapp_mentions"
+          ],
+          "section": "primary",
+          "why_it_matters": "Named Rubrik / Commvault / Varonis / AvePoint / N-able / NetApp chatter separates franchise attention."
+        },
+        {
+          "chart_type": "stacked_bar",
+          "metric": "raw",
+          "display_name": "Forum community volume",
+          "series_keys": [
+            "dsr_cybersecurity_sub_posts",
+            "dsr_sysadmin_sub_posts",
+            "dsr_msp_sub_posts"
+          ],
+          "section": "primary",
+          "why_it_matters": "Community volume across cybersecurity / sysadmin / msp is the umbrella practitioner traffic backdrop."
+        },
+        {
+          "series_key": "wiki_ransomware_pageviews",
+          "metric": "m3_avg",
+          "chart_type": "bar",
+          "section": "primary",
+          "why_it_matters": "Wikipedia Ransomware interest is a soft awareness pulse."
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "AVPT",
+      "recipes": [
+        {
+          "series_key": "avpt_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "NABL",
+      "recipes": [
+        {
+          "series_key": "nabl_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "NTAP",
+      "recipes": [
+        {
+          "series_key": "ntap_public_cloud_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "PSTG",
+      "recipes": [
+        {
+          "series_key": "pstg_product_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "DELL",
+      "recipes": [
+        {
+          "series_key": "dell_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "RBRK",
+      "recipes": [
+        {
+          "series_key": "rbrk_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "CVLT",
+      "recipes": [
+        {
+          "series_key": "cvlt_subscription_revenue",
+          "metric": "raw",
+          "chart_type": "bar"
+        }
+      ]
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "VRNS",
+      "recipes": [
+        {
+          "series_key": "vrns_saas_revenue",
           "metric": "raw",
           "chart_type": "bar"
         }

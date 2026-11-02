@@ -434,195 +434,195 @@
     {
       "series_key": "communications_equipment_new_orders",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "fiber_optic_cable_ppi",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "semi_electronic_components_ip",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "optical_fiber_cable_import_value",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "optical_transceiver_import_value",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "hyperscaler_capex",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "FMP CapEx sum MSFT+GOOGL+META+AMZN+ORCL \u2014 YoY growth chart"
     },
     {
       "series_key": "capex_msft",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 hyperscaler CapEx by company"
     },
     {
       "series_key": "capex_googl",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 hyperscaler CapEx by company"
     },
     {
       "series_key": "capex_meta",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 hyperscaler CapEx by company"
     },
     {
       "series_key": "capex_amzn",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 hyperscaler CapEx by company"
     },
     {
       "series_key": "capex_orcl",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 Oracle OCI CapEx"
     },
     {
       "series_key": "hyperscaler_subsea_rfs_km",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member + score \u2014 hyperscaler-owned subsea RFS km"
     },
     {
       "series_key": "subsea_other_rfs_km",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Stack member \u2014 non-hyperscaler subsea RFS km"
     },
     {
       "series_key": "subsea_cable_rfs_km",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Sum-of-members for subsea stack YoY"
     },
     {
       "series_key": "germanium_spot_cny_kg",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Reuse dew_defense TE Ge spot \u2014 InP / laser feedstock stress"
     },
     {
       "series_key": "gallium_spot_cny_kg",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Reuse dew_defense TE Ga spot \u2014 compound-semi feedstock stress"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "COHR",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "GLW",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "LITE",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "CIEN",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "PRYMY",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "5715.T",
       "note": "stockthemes constituent"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "INFN",
       "note": "stockthemes constituent"
     },
     {
       "series_key": "pm_kalshi_tariff_critical_minerals",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Kalshi critical-minerals tariff odds \u2014 InP / laser feedstock policy risk"
     },
     {
       "series_key": "pm_kalshi_copper_cable_sec232",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null,
       "note": "Kalshi Sec 232 copper-cable odds \u2014 copper\u2192fiber substitution catalyst"
     },
@@ -1262,270 +1262,270 @@
     {
       "series_key": "existing_home_sales",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null,
       "note": "Hero housing-turnover series"
     },
     {
       "series_key": "mortgage_30y",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "building_materials_retail_sales",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "housing_starts",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "building_permits",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "new_home_sales",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "lumber_ppi",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "months_supply_new_homes",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "HD",
       "note": "Home Depot \u2014 inherits theme housing/retail backdrop"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LOW",
       "note": "Lowe's \u2014 inherits theme housing/retail backdrop"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "FND",
       "note": "Floor & Decor \u2014 inherits theme housing/retail backdrop"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "TSCO",
       "note": "Tractor Supply \u2014 inherits theme housing/retail backdrop"
     },
     {
       "series_key": null,
       "scope": "membership",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LESL",
       "note": "Leslie's \u2014 inherits theme housing/retail backdrop"
     },
     {
       "series_key": "se_drought_d1_pct",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "TSCO",
       "note": "SE drought seasonal outdoor demand \u2014 ticker only, not theme score"
     },
     {
       "series_key": "se_drought_d1_pct",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LESL",
       "note": "SE drought seasonal outdoor/pool demand \u2014 ticker only, not theme score"
     },
     {
       "series_key": "home_depot_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "lowes_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "floor_decor_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "tractor_supply_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "leslies_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "named_product_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null,
       "note": "Stack sum for YoY %"
     },
     {
       "series_key": "remodel_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "maintenance_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "cost_talk_mentions",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "case_shiller_national",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null,
       "note": "Housing-cost level (home prices)"
     },
     {
       "series_key": "homeimprovement_community_posts",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "homeowners_community_posts",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "diy_community_posts",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "brand_sentiment",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "remodel_sentiment",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "maintenance_sentiment",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "cost_talk_sentiment",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "home_depot_mentions",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "HD"
     },
     {
       "series_key": "lowes_mentions",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LOW"
     },
     {
       "series_key": "floor_decor_mentions",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "FND"
     },
     {
       "series_key": "tractor_supply_mentions",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "TSCO"
     },
     {
       "series_key": "leslies_mentions",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LESL"
     },
     {
@@ -2856,211 +2856,211 @@
     {
       "series_key": "fec_independent_expenditures",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "google_political_ads_weekly_spend",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "advertising_agency_ppi",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "advertising_pr_revenue",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "consumer_sentiment",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "stagwell_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "omnicom_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "publicis_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "wpp_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "ipsos_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "agency_named_brand_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "political_ads_category_mentions",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "politicalscience_community_posts",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "advertising_community_posts",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "marketing_community_posts",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "agency_brand_sentiment",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "stagwell_mentions",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "STGW"
     },
     {
       "series_key": "fec_independent_expenditures",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "STGW"
     },
     {
       "series_key": "omnicom_mentions",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "OMC"
     },
     {
       "series_key": "fec_independent_expenditures",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "OMC"
     },
     {
       "series_key": "publicis_mentions",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "PUB.PA"
     },
     {
       "series_key": "fec_independent_expenditures",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "PUB.PA"
     },
     {
       "series_key": "wpp_mentions",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "WPP.LSE"
     },
     {
       "series_key": "fec_independent_expenditures",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "WPP.LSE"
     },
     {
       "series_key": "ipsos_mentions",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "IPS.PA"
     },
     {
       "series_key": "fec_independent_expenditures",
       "scope": "ticker",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": "IPS.PA"
     },
     {
       "series_key": "kalshi_senate_control_d",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "kalshi_house_control_d",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "kalshi_close_senate_races",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
       "series_key": "kalshi_close_house_races",
       "scope": "theme",
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "ticker": null
     },
     {
@@ -4008,85 +4008,85 @@
     {
       "series_key": "optical_vendor_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "cien_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "cien_revenue",
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "CIEN"
     },
     {
       "series_key": "cohr_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "cohr_revenue",
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "COHR"
     },
     {
       "series_key": "glw_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "glw_revenue",
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "GLW"
     },
     {
       "series_key": "infn_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "infn_revenue",
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "INFN"
     },
     {
       "series_key": "lite_revenue",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
       "series_key": "lite_revenue",
       "scope": "ticker",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": "LITE"
     },
     {
       "series_key": "optical_transcript_keywords",
       "scope": "theme",
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "ticker": null
     },
     {
@@ -4253,64 +4253,64 @@
     {
       "series_key": "home_improvement_revenue",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "hd_revenue",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "hd_revenue",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "HD"
     },
     {
       "series_key": "low_revenue",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "low_revenue",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "LOW"
     },
     {
       "series_key": "fnd_revenue",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "fnd_revenue",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "FND"
     },
     {
       "series_key": "tsco_revenue",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
       "series_key": "tsco_revenue",
       "scope": "ticker",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": "TSCO"
     },
     {
@@ -5033,8 +5033,8 @@
     {
       "series_key": "nahb_hmi",
       "scope": "theme",
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
       "ticker": null
     },
     {
@@ -13769,386 +13769,386 @@
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "pureplay_vm_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "platform_security_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "tenb_subscription_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "rpd_product_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ftnt_security_subscription_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "crwd_subscription_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "panw_subscription_revenue"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_transcript_keywords"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "cisa_kev_weekly_adds"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "nvd_critical_weekly"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "usaspending_cyber_awards"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_ctem_talk_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_tenable_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_qualys_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_rapid7_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_crowdstrike_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_paloalto_mentions"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_cybersecurity_sub_posts"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_netsec_sub_posts"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_sysadmin_sub_posts"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "ve_ctem_talk_sentiment"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "software_ipp_investment"
     },
     {
       "scope": "theme",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": null,
       "series_key": "computer_systems_design_emp"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "series_key": "tenb_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "series_key": "tenb_subscription_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "series_key": "pureplay_vm_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "TENB",
       "series_key": "cisa_kev_weekly_adds"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "QLYS",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "QLYS",
       "series_key": "qlys_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "QLYS",
       "series_key": "pureplay_vm_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "QLYS",
       "series_key": "cisa_kev_weekly_adds"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "series_key": "rpd_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "series_key": "rpd_product_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "series_key": "pureplay_vm_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "RPD",
       "series_key": "cisa_kev_weekly_adds"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CRWD",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CRWD",
       "series_key": "crwd_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CRWD",
       "series_key": "crwd_subscription_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CRWD",
       "series_key": "platform_security_revenue"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "PANW",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "PANW",
       "series_key": "panw_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "PANW",
       "series_key": "panw_subscription_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "PANW",
       "series_key": "platform_security_revenue"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "FTNT",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "FTNT",
       "series_key": "ftnt_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "FTNT",
       "series_key": "ftnt_security_subscription_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "FTNT",
       "series_key": "platform_security_revenue"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CHKP",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CHKP",
       "series_key": "chkp_revenue"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "CHKP",
       "series_key": "platform_security_revenue"
     },
     {
       "scope": "membership",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "MSFT",
       "series_key": null
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "MSFT",
       "series_key": "cisa_kev_weekly_adds"
     },
     {
       "scope": "ticker",
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "ticker": "MSFT",
       "series_key": "ve_transcript_keywords"
     },
@@ -19698,6 +19698,2194 @@
       "ticker": null,
       "series_key": "bh_us_total_rigs",
       "pack": "land_contract_drillers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "kalshi_cdc_flu_rec_ended",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "valn_travel_vaccine_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "cdc_nis_flu_coverage",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "cdc_nis_flu_refusal",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "ebs_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "mrna_rsv_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "wiki_shingrix_pageviews",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "valn_dukoral_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "census_vaccine_imports_hs300220",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "mrna_covid_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "nvax_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "cdc_nis_covid_coverage",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "mrna_respiratory_franchise",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vaccine_franchise_transcripts",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "wiki_arexvy_pageviews",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "valn_ixiaro_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "wiki_gardasil_pageviews",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "bntx_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "clinicaltrials_infectious_vaccines",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "ebs_contracts_grants",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "mrna_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "ebs_product_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "usaspending_vaccine_biodefense",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "cdc_nis_rsv_coverage",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "nvax_nuvaxovid_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "kalshi_mpox_cases_2026",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vaccine_pureplay_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_vaccine_talk_mentions",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_biotech_posts",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_pneumococcal_mentions",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_shingrix_arexvy_mentions",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_mrna_covid_mentions",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_pharmacy_posts",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": null,
+      "series_key": "vm_vaccine_talk_sentiment",
+      "pack": "vaccine_makers_forums"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRNA",
+      "series_key": "mrna_covid_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRNA",
+      "series_key": "mrna_rsv_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRNA",
+      "series_key": "mrna_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRNA",
+      "series_key": "mrna_respiratory_franchise",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "BNTX",
+      "series_key": "bntx_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "NVAX",
+      "series_key": "nvax_nuvaxovid_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "NVAX",
+      "series_key": "nvax_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "EBS",
+      "series_key": "ebs_product_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "EBS",
+      "series_key": "ebs_contracts_grants",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "EBS",
+      "series_key": "ebs_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN",
+      "series_key": "valn_ixiaro_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN",
+      "series_key": "valn_dukoral_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN",
+      "series_key": "valn_travel_vaccine_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN.PA",
+      "series_key": "valn_ixiaro_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN.PA",
+      "series_key": "valn_dukoral_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "VALN.PA",
+      "series_key": "valn_travel_vaccine_revenue",
+      "pack": "vaccine_makers"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "MRK",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "PFE",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "GSK",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "SNY",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "PCVX",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "BAVA.CO",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "ticker": "CSL.AU",
+      "series_key": null,
+      "pack": "vaccine_makers",
+      "note": "Theme membership \u2014 vaccine franchise via transcripts / theme charts"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "wiki_palantir_foundry_pageviews",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "sap_cloud_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "ampl_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "so_tableau_questions",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_pureplay_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "pltr_commercial_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "brainpad_3655_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "domo_subscription_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "pltr_government_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "pltr_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "analytics_bi_transcripts",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "pltr_segment_stack",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "wingarc_4432_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "wiki_tableau_pageviews",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "domo_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "usaspending_palantir_analytics",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "so_amplitude_questions",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "kalshi_federal_ai_legislation",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "so_bi_tag_stack",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "smwb_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "wiki_power_bi_pageviews",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "valuenex_4422_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "pltr_commercial_share",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "so_powerbi_questions",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_palantir_mentions",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_amplitude_mentions",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_powerbi_sub_posts",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_talk_sentiment",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_talk_mentions",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_powerbi_mentions",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_tableau_mentions",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_businessintelligence_sub_posts",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "bi_dataengineering_sub_posts",
+      "pack": "data_analytics_bi_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "crm_integration_analytics_revenue",
+      "pack": "seat_based_pricing",
+      "note": "Reuse seat_based CRM Integration & Analytics \u2014 Tableau/analytics franchise"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "software_ipp_investment",
+      "pack": "ai_resilient_software",
+      "note": "Reuse ai_resilient software IPP investment"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "ramp_ai_adoption",
+      "pack": "ai_resilient_software",
+      "note": "Reuse ai_resilient Ramp AI adoption"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "PLTR",
+      "series_key": "pltr_commercial_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "PLTR",
+      "series_key": "pltr_government_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "PLTR",
+      "series_key": "pltr_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "PLTR",
+      "series_key": "pltr_commercial_share",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "SAP",
+      "series_key": "sap_cloud_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "AMPL",
+      "series_key": "ampl_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "SMWB",
+      "series_key": "smwb_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "DOMO",
+      "series_key": "domo_subscription_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "DOMO",
+      "series_key": "domo_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "HUCK",
+      "series_key": "domo_subscription_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "HUCK",
+      "series_key": "domo_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "3655.T",
+      "series_key": "brainpad_3655_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "4422.T",
+      "series_key": "valuenex_4422_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "4432.T",
+      "series_key": "wingarc_4432_revenue",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "CRM",
+      "series_key": "crm_integration_analytics_revenue",
+      "pack": "seat_based_pricing"
+    },
+    {
+      "scope": "membership",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": "MSFT",
+      "series_key": null,
+      "pack": "data_analytics_bi",
+      "note": "Theme membership \u2014 Power BI/Fabric via transcripts / theme charts"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "so_microsoft_fabric_questions",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "github_releases_apache_superset",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "github_releases_metabase",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "github_releases_open_bi",
+      "pack": "data_analytics_bi"
+    },
+    {
+      "scope": "theme",
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "ticker": null,
+      "series_key": "information_job_openings",
+      "pack": "ai_resilient_software",
+      "note": "Reuse ai_resilient information-sector job openings \u2014 analytics buyer labor"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "elite_material_2383_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "upstream_materials_transcripts",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "wiki_pcb_pageviews",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "hs390730_epoxy_resin_imports",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "sumitomo_bakelite_4203_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "usaspending_chips_materials",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "rog_aes_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "iteq_6213_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "tuc_6274_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "hs701912_glass_fiber_imports",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "rog_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "fujimi_5384_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "fulltech_1815_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "tw_ccl_laminate_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "cotech_8358_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "rog_ems_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "wiki_fiberglass_pageviews",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "taiflex_8039_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "taiwan_glass_1802_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "nitto_boseki_3110_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "hs7410_copper_foil_imports",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_fulltech_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_semiconductors_sub_posts",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_iteq_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_elite_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_chemicalengineering_sub_posts",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_materials_talk_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_materials_talk_sentiment",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_rogers_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_cotech_mentions",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "hyperscaler_capex",
+      "pack": "optical_fiber",
+      "note": "Reuse optical_fiber hyperscaler CapEx \u2014 AI server materials demand envelope"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "taiwan_semiconductor_exports",
+      "pack": "memory_cxl",
+      "note": "Reuse memory_cxl Taiwan semiconductor exports \u2014 TW electronics BOM pulse"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "korea_semiconductor_exports",
+      "pack": "memory_cxl",
+      "note": "Reuse memory_cxl Korea semiconductor exports \u2014 KR electronics cycle"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "kalshi_americas_dc_capacity_57_5gw",
+      "pack": "photonics_materials",
+      "note": "Reuse photonics Kalshi Americas DC capacity \u2014 AI infra build pulse (chart-only)"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ROG",
+      "series_key": "rog_aes_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ROG",
+      "series_key": "rog_ems_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ROG",
+      "series_key": "rog_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "2383.TW",
+      "series_key": "elite_material_2383_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "6213.TW",
+      "series_key": "iteq_6213_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "6274.TWO",
+      "series_key": "tuc_6274_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "8039.TW",
+      "series_key": "taiflex_8039_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "1815.TWO",
+      "series_key": "fulltech_1815_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "1802.TW",
+      "series_key": "taiwan_glass_1802_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "8358.TWO",
+      "series_key": "cotech_8358_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "3110.T",
+      "series_key": "nitto_boseki_3110_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "5384.T",
+      "series_key": "fujimi_5384_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "4203.T",
+      "series_key": "sumitomo_bakelite_4203_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "membership",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ENTG",
+      "series_key": null,
+      "pack": "upstream_ai_materials",
+      "note": "Theme membership \u2014 materials transcripts / CHIPS adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "GLW",
+      "series_key": null,
+      "pack": "upstream_ai_materials",
+      "note": "Theme membership \u2014 optical glass adjacency (pack is CCL/foil)"
+    },
+    {
+      "scope": "membership",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "MMM",
+      "series_key": null,
+      "pack": "upstream_ai_materials",
+      "note": "Theme membership \u2014 advanced materials adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ESI",
+      "series_key": null,
+      "pack": "upstream_ai_materials",
+      "note": "Theme membership \u2014 electronics chemistry adjacency"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "entg_materials_solutions_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "esi_electronics_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "dd_electronics_industrial_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ENTG",
+      "series_key": "entg_materials_solutions_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "ESI",
+      "series_key": "esi_electronics_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "DD",
+      "series_key": "dd_electronics_industrial_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "cc_thermal_specialized_solutions_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "shengyi_600183_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "shin_etsu_4063_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "glw_revenue",
+      "pack": "optical_fiber",
+      "note": "Reuse optical_fiber GLW Optical Communications \u2014 AI interconnect / glass materials demand"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "CC",
+      "series_key": "cc_thermal_specialized_solutions_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "600183.SS",
+      "series_key": "shengyi_600183_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "4063.T",
+      "series_key": "shin_etsu_4063_revenue",
+      "pack": "upstream_ai_materials"
+    },
+    {
+      "scope": "ticker",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": "GLW",
+      "series_key": "glw_revenue",
+      "pack": "optical_fiber"
+    },
+    {
+      "scope": "theme",
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "ticker": null,
+      "series_key": "uam_hardware_sub_posts",
+      "pack": "upstream_ai_materials_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "wiki_mfa_pageviews",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "usaspending_identity_access",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "okta_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ospn_subscription_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "tenb_subscription_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "yubico_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "wiki_passkey_pageviews",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "github_releases_yubikey_manager",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "sail_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "wiki_zero_trust_pageviews",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "identity_iam_iga_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "identity_access_transcripts",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_sailpoint_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_iam_talk_sentiment",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_cyberark_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_yubikey_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_cybersecurity_sub_posts",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_sysadmin_sub_posts",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_okta_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_identitymanagement_sub_posts",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_entra_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ias_iam_talk_mentions",
+      "pack": "identity_access_security_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "kalshi_okta_cust_100k_acv",
+      "pack": "seat_based_pricing",
+      "note": "Reuse seat_based Kalshi Okta $100k ACV customers \u2014 IdP expansion pulse (chart-only)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "panw_subscription_revenue",
+      "pack": "cybersecurity_software",
+      "note": "Reuse cybersecurity_software PANW subscription \u2014 platform identity adjacency"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "crwd_subscription_revenue",
+      "pack": "cybersecurity_software",
+      "note": "Reuse cybersecurity_software CRWD subscription \u2014 Falcon Identity adjacency"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "software_ipp_investment",
+      "pack": "ai_resilient_software",
+      "note": "Reuse ai_resilient software IPP investment \u2014 enterprise security budget envelope"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ag_nhi_talk_mentions",
+      "pack": "agent_governance_zt_forums",
+      "note": "Reuse agent_gov NHI/agent identity forum talk \u2014 Agentic Era backdrop (chart-only)"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "OKTA",
+      "series_key": "okta_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "SAIL",
+      "series_key": "sail_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "OSPN",
+      "series_key": "ospn_subscription_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "YUBICO.ST",
+      "series_key": "yubico_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "TENB",
+      "series_key": "tenb_subscription_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "MSFT",
+      "series_key": null,
+      "pack": "identity_access_security",
+      "note": "Theme membership \u2014 Entra / passkeys via transcripts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "PANW",
+      "series_key": null,
+      "pack": "identity_access_security",
+      "note": "Theme membership \u2014 CyberArk / identity platform adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "CRWD",
+      "series_key": null,
+      "pack": "identity_access_security",
+      "note": "Theme membership \u2014 Falcon Identity adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "S",
+      "series_key": null,
+      "pack": "identity_access_security",
+      "note": "Theme membership \u2014 Singularity Identity adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "HO.PA",
+      "series_key": null,
+      "pack": "identity_access_security",
+      "note": "Theme membership \u2014 Thales auth adjacency (no clean FMP cut)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "ospn_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "OSPN",
+      "series_key": "ospn_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": null,
+      "series_key": "cybr_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "ticker": "CYBR",
+      "series_key": "cybr_revenue",
+      "pack": "identity_access_security"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "pstg_product_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "ntap_public_cloud_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "wiki_ransomware_pageviews",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "cisa_kev_ransomware_weekly_adds",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "wiki_rubrik_pageviews",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "msp_data_security_saas",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "wiki_commvault_pageviews",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_transcript_keywords",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "usaspending_cyber_recovery",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dell_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "storage_cyber_recovery",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "avpt_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "ransomware_live_weekly_victims",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "nabl_subscription_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_recovery_talk_sentiment",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_netapp_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_cybersecurity_sub_posts",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_msp_sub_posts",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_recovery_talk_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_commvault_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_avepoint_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_rubrik_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_named_sentiment",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_sysadmin_sub_posts",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_varonis_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "dsr_nable_mentions",
+      "pack": "data_security_recovery_forums"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "cyber_resilience_saas",
+      "pack": "agent_governance_zt",
+      "note": "Reuse agent_gov RBRK+CVLT+VRNS cyber-resilience SaaS \u2014 theme hero stack"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "rbrk_subscription_revenue",
+      "pack": "agent_governance_zt",
+      "note": "Reuse Rubrik subscription (Security Cloud / Agent Cloud)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "cvlt_subscription_revenue",
+      "pack": "agent_governance_zt",
+      "note": "Reuse Commvault subscription (SaaS / cyber resilience migration)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "vrns_saas_revenue",
+      "pack": "agent_governance_zt",
+      "note": "Reuse Varonis SaaS (DSPM / data security)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "sec_item105_8k_count",
+      "pack": "cybersecurity_software",
+      "note": "Reuse SEC Item 1.05 8-K counts \u2014 disclosure \u2192 recovery budgets"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "software_ipp_investment",
+      "pack": "ai_resilient_software",
+      "note": "Reuse software IPP \u2014 enterprise security budget envelope"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "panw_subscription_revenue",
+      "pack": "cybersecurity_software",
+      "note": "Reuse PANW subscription \u2014 platform absorbing data security (soft)"
+    },
+    {
+      "scope": "theme",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": null,
+      "series_key": "zs_revenue",
+      "pack": "cybersecurity_software",
+      "note": "Reuse Zscaler revenue \u2014 Zero Trust / AI Protect adjacency (soft)"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "AVPT",
+      "series_key": "avpt_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "NABL",
+      "series_key": "nabl_subscription_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "NTAP",
+      "series_key": "ntap_public_cloud_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "PSTG",
+      "series_key": "pstg_product_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "DELL",
+      "series_key": "dell_revenue",
+      "pack": "data_security_recovery"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "RBRK",
+      "series_key": "rbrk_subscription_revenue",
+      "pack": "agent_governance_zt"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "CVLT",
+      "series_key": "cvlt_subscription_revenue",
+      "pack": "agent_governance_zt"
+    },
+    {
+      "scope": "ticker",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "VRNS",
+      "series_key": "vrns_saas_revenue",
+      "pack": "agent_governance_zt"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "MSFT",
+      "series_key": null,
+      "pack": "data_security_recovery",
+      "note": "Theme membership \u2014 Purview / M365 data security via transcripts"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "IBM",
+      "series_key": null,
+      "pack": "data_security_recovery",
+      "note": "Theme membership \u2014 Guardium / cyber recovery adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "PANW",
+      "series_key": null,
+      "pack": "data_security_recovery",
+      "note": "Theme membership \u2014 Prisma / Cortex data security adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "ZS",
+      "series_key": null,
+      "pack": "data_security_recovery",
+      "note": "Theme membership \u2014 Zero Trust / AI Protect adjacency"
+    },
+    {
+      "scope": "membership",
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "ticker": "FTNT",
+      "series_key": null,
+      "pack": "data_security_recovery",
+      "note": "Theme membership \u2014 FortiDLP adjacency"
     }
   ]
 }

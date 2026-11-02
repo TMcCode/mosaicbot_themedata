@@ -227,4 +227,7 @@ def series_shell(
     for k in ("fred_id", "bls_id", "manifold_id", "hs6", "hs_code"):
         if meta.get(k):
             out[k] = meta[k]
+    # Prediction-market contract end (Kalshi); chart caption only.
+    if meta.get("contract_close"):
+        out["contract_close"] = str(meta["contract_close"])[:10]
     return out

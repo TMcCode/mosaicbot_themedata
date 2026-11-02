@@ -78,8 +78,8 @@
       "notes": "v1: orbital launch cadence (LL2) + USASpending CLPS/NSSL/launch + member awards (RKLB/LUNR/FLY/MNTS/SpaceX/Avio; skip NOC) + forums. Defense/GPR via dew_defense source_pack."
     },
     {
-      "theme": "Data Centers '25: Optical & Fiber Systems",
-      "theme_slug": "data-centers-25-optical-fiber-systems",
+      "theme": "Data Centers '25: Optical, Copper & Fiber Interconnects",
+      "theme_slug": "data-centers-25-optical-copper-fiber-interconnects",
       "group": "Data Centers",
       "group_slug": "data-centers",
       "status": "active",
@@ -181,10 +181,10 @@
       "notes": "v1: EXAS Precision Oncology + CSTL Dermatologic + NEO Commercial Insurance + TEM Diagnostics + product stack + R&D intensity + oncology transcripts + PubMed CGP/CDx + ClinicalTrials tumor-informed + openFDA CDx PMA. Reuses GH Oncology/Screening/Biopharma, VCYT Testing, PubMed MRD/ctDNA via clinical_genomics attachments; EXAS Screening / CSTL total soft. Forums: r/oncology+pathology. Differentiates from clinical_genomics (MCED/NIPT/transplant) and diagnostic_platforms (instruments/screening)."
     },
     {
-      "theme": "Buying a House '26: Home Improvement Retailers",
-      "theme_slug": "buying-a-house-26-home-improvement-retailers",
-      "group": "Buying a House",
-      "group_slug": "buying-a-house",
+      "theme": "Home Improvement '26: Home Improvement Retailers",
+      "theme_slug": "home-improvement-26-home-improvement-retailers",
+      "group": "Home Improvement",
+      "group_slug": "home-improvement",
       "status": "active",
       "stockthemes": true,
       "packs": [
@@ -233,8 +233,8 @@
       "notes": "v2: FRED software IPP + IT/software + productivity + Info JOLTS + Ramp AI Index (adoption/spend/vendors; free page scrape) + OpenRouter rankings-daily (weekly total + OpenAI/Anthropic/other stack; OPENROUTER_API_KEY). Forums: ArtificialInteligence/softwareengineering/cloudcomputing/ecommerce \u2014 brand stack excludes ecommerce. Tickers ORCL CDNS INTU SHOP WDAY BSY. Skip Trends / Polymarket / inventories."
     },
     {
-      "theme": "Political Spend '26: Ad Agencies & Polling",
-      "theme_slug": "political-spend-26-ad-agencies-polling",
+      "theme": "Political Spend '26: Campaign Services, Polling & Public Affairs",
+      "theme_slug": "political-spend-26-campaign-services-polling-public-affairs",
       "group": "Political Spend",
       "group_slug": "political-spend",
       "status": "active",
@@ -670,8 +670,8 @@
       "notes": "Partner stack sum + AE segments/transcripts/OR share. Reuses crm/gtlb/intu + Ramp/OR/IPP (seat_based/ai_resilient) + ClaudeBot Radar + ASAN/ZM via attachments. Forums: Claude homes volume + partner/IT Claude hits."
     },
     {
-      "theme": "Cybersecurity '26: Vulnerability, Exposure & Attack Surface Management",
-      "theme_slug": "cybersecurity-26-vulnerability-exposure-attack-surface-management",
+      "theme": "Cybersecurity '26: Exposure Management",
+      "theme_slug": "cybersecurity-26-exposure-management",
       "group": "Cybersecurity",
       "group_slug": "cybersecurity",
       "status": "active",
@@ -816,6 +816,74 @@
         "energy_bottleneck_us_refiners"
       ],
       "notes": "v1: HP NA/Intl Solutions + Saudi/Argentina geo + NBR DS/Intl/Rig Tech + PTEN Drilling (ex-Completion) + PDS/ESI.TO/TOT.TO/2381.SR + CapEx + drilling PPI/IP + Henry Hub + transcripts + Kalshi TX oil + USASpending. Reuses WTI (refiners). BH land scrape deferred (403). Forums: oilandgasworkers+PetroleumEngineering. Differs from refiners/frac."
+    },
+    {
+      "theme": "Biotech '24: Vaccine Makers",
+      "theme_slug": "biotech-24-vaccine-makers",
+      "group": "Biotech",
+      "group_slug": "biotech",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "vaccine_makers",
+        "vaccine_makers_forums"
+      ],
+      "notes": "v1: MRNA COVID/RSV + NVAX Nuvaxovid + EBS Product/Contracts + VALN travel (IXIARO/DUKORAL) + pure-play revenue sum + franchise transcripts (MRK/PFE/GSK/SNY/MRNA/BNTX) + CDC NIS flu/COVID/RSV coverage + flu refusal + ClinicalTrials ID vaccines + USASpending biodefense + Census HS 300220 + Kalshi ACIP-rec/mpox + wiki. No MRK/PFE mega-segment scoring. Forums: pharmacy+biotech."
+    },
+    {
+      "theme": "Enterprise Software '24: Data Analytics & BI Software",
+      "theme_slug": "enterprise-software-24-data-analytics-bi-software",
+      "group": "Enterprise Software",
+      "group_slug": "enterprise-software",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "data_analytics_bi",
+        "data_analytics_bi_forums"
+      ],
+      "notes": "v1: PLTR Commercial/Government + SAP Cloud + AMPL/SMWB/DOMO pure-plays + JP BI adjacency + analytics/agentic transcripts + SO Tableau/Power BI/Amplitude + USASpending Palantir/analytics + Kalshi KXAIBILL + wiki. Reuses CRM Integration & Analytics (seat_based) + software IPP / Ramp AI (ai_resilient). Forums: dataengineering+businessintelligence+PowerBI. Differs from seat-based seats and devops OTel/K8s."
+    },
+    {
+      "theme": "AI Bottleneck '26: Upstream AI Materials",
+      "theme_slug": "ai-bottleneck-26-upstream-ai-materials",
+      "group": "AI Bottleneck",
+      "group_slug": "ai-bottleneck",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "upstream_ai_materials",
+        "upstream_ai_materials_forums"
+      ],
+      "notes": "v1: ROG AES + TW CCL/laminate (Elite/ITEQ/TUC) + Fulltech/Co-Tech + Census copper foil/glass fiber/epoxy + materials transcripts + USASpending CHIPS + wiki. Reuses hyperscaler CapEx (optical_fiber) + TW/KR semi exports (memory_cxl) + Kalshi Americas DC (photonics). Forums: semiconductors+chemicalengineering. Differs from IC substrates (Unimicron/Ibiden), photonics (InP/SOI), optical fiber, HBM."
+    },
+    {
+      "theme": "Cybersecurity '26: Identity & Access Security",
+      "theme_slug": "cybersecurity-26-identity-access-security",
+      "group": "Cybersecurity",
+      "group_slug": "cybersecurity",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "identity_access_security",
+        "identity_access_security_forums"
+      ],
+      "notes": "v1: OKTA+SAIL IAM/IGA + OneSpan Digipass sub + Yubico + TENB sub adjacency + identity/PAM/passkey transcripts + USASpending IAM + wiki. Reuses Kalshi Okta (seat_based) + PANW/CRWD sub (cyber software) + software IPP (ai_resilient) + NHI forum talk (agent_gov). Forums: cybersecurity+identitymanagement+sysadmin. Differs from agent_gov (NHI/ZT cloud/MCP) and seat_based (seats)."
+    },
+    {
+      "theme": "Cybersecurity '26: Data Security & Recovery",
+      "theme_slug": "cybersecurity-26-data-security-recovery",
+      "group": "Cybersecurity",
+      "group_slug": "cybersecurity",
+      "status": "active",
+      "stockthemes": true,
+      "packs": [
+        "data_security_recovery",
+        "data_security_recovery_forums",
+        "agent_governance_zt",
+        "cybersecurity_software",
+        "ai_resilient_software"
+      ],
+      "notes": "v1: MSP/data-security SaaS (AVPT+NABL) + NTAP Public Cloud / PSTG Product storage + ransomware.live victims + ransomware KEV + cyber-recovery USASpending + recovery/DSPM transcripts + wiki. Reuses cyber_resilience_saas (agent_gov) + Item 1.05 + software IPP + PANW/ZS soft. Forums: cybersecurity+sysadmin+msp. Differs from vuln (CTEM/KEV-all), identity (IdP/PAM), agent_gov (NHI/ZT-cloud primary)."
     }
   ]
 }

@@ -54,18 +54,28 @@ def _dense_weekly(
     return pts
 
 
+def _is_known_ransomware(row: dict[str, Any]) -> bool:
+    """CISA ``knownRansomwareCampaignUse`` is typically Known / Unknown."""
+    return str(row.get("knownRansomwareCampaignUse") or "").strip().lower() == "known"
+
+
 def weekly_net_new(
     *,
     start: str = "2021-11-01",
     catalog: dict[str, Any] | None = None,
+    ransomware_only: bool = False,
 ) -> tuple[list[dict[str, float]], dict[str, Any]]:
     """Weekly count of KEV entries by ``dateAdded`` (week-ending Sunday).
 
     Dense spine (zeros for quiet weeks) so weekly YoY lag-52 matches calendar.
+    Set ``ransomware_only`` to keep rows with ``knownRansomwareCampaignUse=Known``.
     """
     cat = catalog or fetch_catalog()
     counts: Counter[str] = Counter()
+    kept = 0
     for v in cat.get("vulnerabilities") or []:
+        if ransomware_only and not _is_known_ransomware(v):
+            continue
         raw = str(v.get("dateAdded") or "")[:10]
         if len(raw) < 10 or raw < start:
             continue
@@ -74,12 +84,15 @@ def weekly_net_new(
         except ValueError:
             continue
         counts[_week_ending_sunday(d)] += 1
+        kept += 1
     today = datetime.now(timezone.utc).date()
     pts = _dense_weekly(counts, today=today)
     meta = {
         "catalog_version": cat.get("catalogVersion"),
         "date_released": cat.get("dateReleased"),
         "catalog_count": cat.get("count"),
+        "ransomware_only": bool(ransomware_only),
+        "matched_cves": kept,
         "points": len(pts),
         "nonzero_weeks": sum(1 for p in pts if p["value"] > 0),
     }
@@ -90,15 +103,20 @@ def monthly_net_new(
     *,
     start: str = "2021-11-01",
     catalog: dict[str, Any] | None = None,
+    ransomware_only: bool = False,
 ) -> tuple[list[dict[str, float]], dict[str, Any]]:
     """Monthly count of KEV adds (``YYYY-MM-01``)."""
     cat = catalog or fetch_catalog()
     counts: Counter[str] = Counter()
+    kept = 0
     for v in cat.get("vulnerabilities") or []:
+        if ransomware_only and not _is_known_ransomware(v):
+            continue
         raw = str(v.get("dateAdded") or "")[:10]
         if len(raw) < 10 or raw < start:
             continue
         counts[raw[:7] + "-01"] += 1
+        kept += 1
     today = datetime.now(timezone.utc).date()
     month_cap = f"{today.year:04d}-{today.month:02d}-01"
     pts = [
@@ -110,6 +128,8 @@ def monthly_net_new(
         "catalog_version": cat.get("catalogVersion"),
         "date_released": cat.get("dateReleased"),
         "catalog_count": cat.get("count"),
+        "ransomware_only": bool(ransomware_only),
+        "matched_cves": kept,
         "points": len(pts),
     }
     return pts, meta

@@ -392,6 +392,10 @@
       "access": "api",
       "cadence": "weekly",
       "as_of_semantics": "period_end",
+      "exclude_dates": [
+        "2021-12-31"
+      ],
+      "notes": "Drop 2021-12-31 (FMP FY2022 Q4) — 2.883B is FY residual with Q3 0.9B (0.9+2.883=3.783 annual), not a real quarter.",
       "serial": "fmp-revenue-0064-0001",
       "serial_source": "fmp",
       "serial_family": "revenue",
