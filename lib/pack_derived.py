@@ -49,13 +49,6 @@ def apply_derived_sums(
             # lag YoY does not compare a 1-of-N print to a full-panel prior year.
             require_all = bool(meta.get("require_all", False))
             dates_sorted = sorted(by_date)
-            peak = max((counts[d] for d in dates_sorted), default=0)
-            latest_d = dates_sorted[-1] if dates_sorted else None
-            latest_incomplete = bool(
-                latest_d
-                and peak > 0
-                and 0 < counts.get(latest_d, 0) < peak
-            )
             pts: list[dict] = []
             for d in dates_sorted:
                 n_hit = counts.get(d, 0)
@@ -67,7 +60,9 @@ def apply_derived_sums(
                     "n_contributors": n_hit,
                     "n_expected": n_expected,
                 }
-                if latest_incomplete and d == latest_d:
+                # Any thin panel (vendor gap or earnings lag) — keep on charts,
+                # but YoY / theme scores ignore via incomplete (not tip-only).
+                if 0 < n_hit < n_expected:
                     row["incomplete"] = True
                 pts.append(row)
             if not pts:
