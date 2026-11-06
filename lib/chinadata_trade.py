@@ -1,22 +1,28 @@
-"""ChinaData.live public trade API (GACC monthly HS totals).
+"""ChinaData.live GACC monthly HS totals.
 
-Free, no key. Browser-like UA required (bot UA → 403).
-Docs: https://chinadata.live/api-docs/
+Free, no key. The ``/api/v2/trade/hs`` route 404s; the product page embeds the
+same monthly JSON in ``#hs-runtime-bootstrap``. Browser-like UA required
+(bot UA → 403).
 """
 
 from __future__ import annotations
 
 import json
+import re
 from calendar import monthrange
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-API = "https://chinadata.live/api/v2/trade/hs"
+PAGE = "https://chinadata.live/china-trade/hs"
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+)
+_BOOTSTRAP_RE = re.compile(
+    r'<script[^>]*\bid="hs-runtime-bootstrap"[^>]*>(.*?)</script>',
+    re.DOTALL,
 )
 
 
@@ -26,6 +32,16 @@ def _month_end(ym: str) -> str:
     yi, mi = int(y), int(m)
     last = monthrange(yi, mi)[1]
     return f"{yi:04d}-{mi:02d}-{last:02d}"
+
+
+def _bootstrap_payload(html: str) -> dict[str, Any]:
+    match = _BOOTSTRAP_RE.search(html)
+    if not match:
+        raise RuntimeError("hs-runtime-bootstrap missing")
+    data = json.loads(match.group(1))
+    if not isinstance(data, dict):
+        raise RuntimeError("hs-runtime-bootstrap is not an object")
+    return data
 
 
 def fetch_hs_monthly(
@@ -43,24 +59,36 @@ def fetch_hs_monthly(
     if flow not in ("import", "export"):
         raise ValueError(f"flow must be import|export, got {flow!r}")
     qs = urlencode({"flow": flow})
-    url = f"{API}/{hs}?{qs}"
+    url = f"{PAGE}/{hs}/?{qs}"
     req = Request(
         url,
         headers={
             "User-Agent": UA,
-            "Accept": "application/json",
+            "Accept": "text/html,application/json",
         },
     )
     try:
         with urlopen(req, timeout=timeout) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
+            html = resp.read().decode("utf-8")
+            final_url = resp.geturl()
     except HTTPError as e:
         raise RuntimeError(f"chinadata HS{hs} {flow}: HTTP {e.code}") from e
     except URLError as e:
         raise RuntimeError(f"chinadata HS{hs} {flow}: {e}") from e
 
-    if not isinstance(data, dict) or not data.get("success"):
+    try:
+        data = _bootstrap_payload(html)
+    except (RuntimeError, json.JSONDecodeError) as e:
+        raise RuntimeError(f"chinadata HS{hs} {flow}: {e}") from e
+
+    if not data.get("success"):
         raise RuntimeError(f"chinadata HS{hs} {flow}: unexpected payload")
+    got_hs = str(data.get("hs_code") or "").strip()
+    got_flow = str(data.get("flow") or "").strip().lower()
+    if got_hs != hs or got_flow != flow:
+        raise RuntimeError(
+            f"chinadata HS{hs} {flow}: page returned HS{got_hs or '?'} {got_flow or '?'} ({final_url})"
+        )
 
     monthly = data.get("monthly") or []
     pts: list[dict[str, Any]] = []
@@ -76,4 +104,6 @@ def fetch_hs_monthly(
         except (TypeError, ValueError):
             continue
     pts.sort(key=lambda p: p["date"])
+    if not pts:
+        raise RuntimeError(f"chinadata HS{hs} {flow}: no monthly points")
     return pts
